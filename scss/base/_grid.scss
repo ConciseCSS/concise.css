@@ -1,0 +1,65 @@
+@if $use-grid == true {
+    //------------------------------------//
+    //  $GRID
+    //------------------------------------//
+    .row {
+        width: 100%;
+        
+        &:after {
+            clear: both;
+            content: " ";
+            display: table;
+        }
+    }
+
+    [class*='#{$column-prefix}'] {
+        @include vendor(background-clip, padding-box !important);
+        
+		&.right { float: right; }
+		
+        img { max-width: 100%; }
+    }
+
+    @include breakpoint(small) {
+        [class*='#{$column-prefix}'] { float: left; }
+        
+        .gutters [class*='#{$column-prefix}'] {
+            margin-left: $gutters;
+            
+            &:first-child { margin-left: 0; }
+        }
+        
+        
+        // Row columns        
+		@include grid-setup();
+        
+        @if $use-push == true {
+			// Push
+			[class*='push-'] { position: relative; }
+			
+			@include push-setup(); 
+		}
+        
+        @if $use-pull == true {
+			// Pull
+			[class*='pull-'] { position: relative; }
+			
+			@include pull-setup();
+		}
+    }
+
+
+    // Non-responsive grid
+    .non-responsive {
+        [class*='#{$column-prefix}'] {
+            float: left;
+            width: auto !important; 
+        }
+        
+        .gutters [class*='#{$column-prefix}'], 
+		&.gutters [class*='#{$column-prefix}'] { margin-left: $gutters; }
+        
+        .gutters [class*='#{$column-prefix}']:first-child, 
+		&.gutters [class*='#{$column-prefix}']:first-child { margin-left: 0; }
+    }
+}

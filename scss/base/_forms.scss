@@ -1,0 +1,255 @@
+@if $use-forms == true {
+    //------------------------------------//
+    //  $FORMS
+    //------------------------------------//
+    label { display: block; }
+
+    input, 
+    select, 
+    textarea {
+        border: 1px solid #ddd;
+        height: 37px;
+        padding: 5px;
+        width: 100%;
+        
+        @include vendor(box-sizing, border-box);
+    }
+
+    .pure-form select[multiple] { height: auto; }
+
+    @include breakpoint(extra-small) { 
+        input, 
+        select, 
+        textarea { width: 90%; } 
+    }
+
+    @include breakpoint(small) { 
+        input, 
+        select { width: 300px; } 
+    }
+
+    input:focus, 
+    select:focus, 
+    textarea:focus, 
+    button:focus, 
+    [contenteditable="true"]:focus { 
+        outline: none; 
+        outline: thin dotted \9;
+    }
+
+    textarea { height: auto; }
+
+    input {
+        &[type="checkbox"], 
+        &[type="file"], 
+        &[type="image"], 
+        &[type="radio"] {
+            background: auto !important;
+            border: auto !important;
+            height: auto !important;
+            width: auto !important;
+        }
+        
+        &[disabled] { 
+            cursor: not-allowed;
+            background-color: #f6f6f6; 
+        }
+    }
+
+    @include breakpoint(small) {	
+        input[type="submit"] { width: auto; }
+        
+        textarea { width: 400px; }
+    }
+
+    select[disabled], 
+    textarea[disabled] { background-color: #f6f6f6; }
+
+    fieldset {
+        border: 1px solid #ededed;
+        padding: 10px 25px;
+        
+        legend {
+            font-weight: bold;
+            @include font-size(13px);
+            padding: 0 10px;
+        }
+    }
+
+
+    // Validation
+    input.required:required, 
+    textarea.required:required { background: white url(../images/icons/red_asterisk.png) no-repeat 98% center; }
+
+    input.required:required:valid, 
+    textarea.required:required:valid { border-color: #2ecc71; }
+
+    input.required:focus:invalid, 
+    textarea.required:focus:invalid { border-color: #e74c3c; }
+
+
+    // Block-level form items
+    .form-item {
+        display: block;
+        padding: 14px 0;
+    }
+
+
+    // Rounded corners
+    form.border-radius {
+        input, 
+        select, 
+        textarea, 
+        fieldset { border-radius: $border-radius; }
+    }
+
+
+    // Inline Form
+    .form-inline label { width: auto; }
+
+    @include breakpoint(small) {
+        .form-inline {
+            label {
+                display: inline-block;
+                width: 100px;
+            }
+            
+            textarea { width: auto; }
+        }
+    }
+
+
+    // Prepend and append
+    .prepend, 
+	.append { white-space: nowrap; }
+
+    .prepend {
+        input, 
+		select {
+            display: inline-block;
+            width: 90%;
+        }
+    }
+
+    .append {
+        input, 
+		select {
+            display: inline-block;
+            width: 90%;
+        }
+    }
+
+    @include breakpoint(small) {
+        .prepend {
+            input, 
+			select { width: 300px; }
+        }
+        
+        .append {
+            input, 
+			select { width: 300px; }
+        }
+    }
+
+    .prepend .adjoined, 
+	.append .adjoined, 
+	.prepend .btn, 
+	.append .btn {
+        display: inline-block;
+        margin-bottom: 0;
+        position: relative;
+    }
+
+    .prepend .btn {
+        a, 
+		input, 
+		button { padding: 0 12px; }
+    }
+
+    .append .btn {
+        a, 
+		input, 
+		button { padding: 0 12px; }
+    }
+
+    .prepend .adjoined, 
+	.append .adjoined, 
+	.prepend.transparent .adjoined, 
+	.append.transparent .adjoined {
+        background-color: #f3f3f3;
+        border: 1px solid #ddd;
+        color: #666;
+        height: 37px;
+        padding: 6px 11px;
+    }
+
+    .prepend.transparent .adjoined {
+        background: transparent;
+        border-right: none;
+    }
+
+    .append.transparent .adjoined {
+        background: transparent;
+        border-left: none;
+    }
+
+    .prepend.transparent {
+        input, 
+		select { border-left: none; }
+    }
+
+    .append.transparent {
+        input, 
+		select { border-right: none; }
+    }
+
+    .prepend {
+        input:focus:invalid, 
+		textarea:focus:invalid { border: 1px solid #e74c3c; }
+    }
+
+    .append {
+        input:focus:invalid, 
+		textarea:focus:invalid { border: 1px solid #e74c3c; }
+    }
+
+    .prepend .adjoined { border-right: 0px; }
+
+    .append .adjoined { border-left: 0px; }
+
+    .prepend {
+        .adjoined, 
+		.btn { margin-right: -4px; }
+    }
+
+    .append {
+        .adjoined, 
+		.btn { margin-left: -4px; }
+    }
+
+    form.border-radius .prepend input, 
+	.border-radius.prepend input, 
+	form.border-radius .prepend select, 
+	.border-radius.prepend select { border-radius: 0px $border-radius $border-radius 0; }
+
+    form.border-radius .append input, 
+	.border-radius.append input, 
+	form.border-radius .append select, 
+	.border-radius.append select { border-radius: $border-radius 0 0 $border-radius; }
+
+    form.border-radius .append .adjoined, 
+	.border-radius.append .adjoined { border-radius: 0px $border-radius $border-radius 0; }
+
+    form.border-radius .prepend .adjoined, 
+	.border-radius.prepend .adjoined { border-radius: $border-radius 0 0 $border-radius; }
+
+
+    // Placeholder text
+    ::-webkit-input-placeholder { color: $placeholder-color; }
+
+    :-ms-input-placeholder { color: $placeholder-color; }
+
+    ::-moz-placeholder { color: $placeholder-color; }
+
+    :-moz-placeholder { color: $placeholder-color; }
+}

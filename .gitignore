@@ -1,0 +1,9 @@
+# Files to ignore
+*.html
+koala-config.json
+
+# Directories to ignore
+/add-ons
+/fonts
+/less
+/stylus

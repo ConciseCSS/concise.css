@@ -1,0 +1,14 @@
+@if $use-container == true {
+    //------------------------------------//
+    //  $CONTAINER
+    //------------------------------------//
+    .container { width: 90%; }
+
+    @include breakpoint(small) { .container { width: 620px; } }
+
+    @include breakpoint(medium) { .container { width: 768px; } }
+
+    @include breakpoint(large) { .container { width: 960px; } }
+
+    @include breakpoint(extra-large) { .container { width: 1140px; } }
+}

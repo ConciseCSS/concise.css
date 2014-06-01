@@ -1,0 +1,70 @@
+@if $use-conditional == true {
+    //------------------------------------//
+    //  $CONDITIONAL
+    //------------------------------------//
+    .show-small, 
+	.hide-medium, 
+	.hide-large, 
+	.hide-print, 
+	.hide-hd {
+        display: block;
+        visibility: visible;
+    }
+
+    .show-medium, 
+	.show-large, 
+	.show-print, 
+	.show-hd, 
+	.hide-small {
+        display: none;
+        visibility: hidden;
+    }
+
+    @include breakpoint(small) {
+        .show-medium, 
+		.hide-small, 
+		.hide-large {
+            display: block;
+            visibility: visible;
+        }
+        
+        .show-small, 
+		.show-large, 
+		.hide-medium {
+            display: none;
+            visibility: hidden;
+        }
+    }
+
+    @include breakpoint(large) {
+        .show-large, 
+		.hide-small, 
+		.hide-medium {
+            display: block;
+            visibility: visible;
+        }
+        
+        .show-small, 
+		.show-medium, 
+		.hide-large {
+            display: none;
+            visibility: hidden;
+        }
+    }
+
+    // HiDPI and retina 
+    @media only screen and (-moz-min-device-pixel-ratio: 1.5), 
+		   only screen and (-o-min-device-pixel-ratio: 3 / 2), 
+		   only screen and (-webkit-min-device-pixel-ratio: 1.5), 
+		   only screen and (min-device-pixel-ratio: 1.5) {
+        .show-hd {
+            display: block;
+            visibility: visible;
+        }
+        
+        .hide-hd {
+            display: none;
+            visibility: hidden;
+        }
+    }
+}

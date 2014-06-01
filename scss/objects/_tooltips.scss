@@ -1,0 +1,226 @@
+@if $use-tooltips == true {
+    //------------------------------------//
+    //  $TOOLTIPS
+    //------------------------------------//
+    .tooltip, 
+	[data-hint] {
+        display: inline-block;
+        position: relative;
+    }
+
+    .tooltip {
+        &:before, &:after {
+            opacity: 0;
+            position: absolute;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 1000000;
+            
+            @include vendor(transition, 0.3s ease);
+            
+            @include vendor(transform, translate3d(0, 0, 0));
+        }
+    }
+
+    [data-hint] {
+        &:before, 
+		&:after {
+            opacity: 0;
+            position: absolute;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 1000000;
+            
+            @include vendor(transition, 0.3s ease);
+            
+            @include vendor(transform, translate3d(0, 0, 0));
+        }
+    }
+
+    .tooltip {
+        &:hover {
+            &:before, 
+			&:after {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        
+        &:focus {
+            &:before, 
+			&:after {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    [data-hint] {
+        &:hover {
+            &:before, 
+			&:after {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        
+        &:focus {
+            &:before, 
+			&:after {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    .tooltip:before, 
+	[data-hint]:before {
+        background: transparent;
+        border: 6px solid transparent;
+        content: '';
+        position: absolute;
+        z-index: 1000001;
+    }
+
+    .tooltip:after, 
+	[data-hint]:after {
+        background: #383838;
+        color: #fff;
+        content: attr(data-hint);
+        @include font-size(12px); 
+        padding: 8px 10px;
+        white-space: nowrap;
+    }
+
+    .tooltip-top:before { border-top-color: #383838; }
+
+    .tooltip-bottom:before { border-bottom-color: #383838; }
+
+    .tooltip-left:before { border-left-color: #383838; }
+
+    .tooltip-right:before { border-right-color: #383838; }
+
+
+    // Top 
+    .tooltip-top {
+        &:before { margin-bottom: -12px; }
+        
+        &:after { margin-left: -18px; }
+        
+        &:before, 
+		&:after {
+            bottom: 100%;
+            left: 50%;
+        }
+        
+        &:hover {
+            &:after, 
+			&:before {            
+                @include vendor(transform, translateY(-8px));
+            }
+        }
+        
+        &:focus {
+            &:after, 
+			&:before {
+                @include vendor(transform, translateY(-8px));
+                
+                @include vendor(transition, 0.3s ease);
+            }
+        }
+    }
+
+
+    // Bottom 
+    .tooltip-bottom {
+        &:before { margin-top: -12px; }
+        
+        &:after { margin-left: -18px; }
+        
+        &:before, 
+		&:after {
+            left: 50%;
+            top: 100%;
+        }
+        
+        &:hover {
+            &:after, 
+			&:before {            
+                @include vendor(transform, translateY(8px));
+            }
+        }
+        
+        &:focus {
+            &:after, 
+			&:before {
+                @include vendor(transform, translateY(8px));
+            }
+        }
+    }
+
+
+    // Right 
+    .tooltip-right {
+        &:before {
+            margin-bottom: -6px;
+            margin-left: -12px;
+        }
+        
+        &:after { margin-bottom: -14px; }
+        
+        &:before, 
+		&:after {
+            bottom: 50%;
+            left: 100%;
+        }
+        
+        &:hover {
+            &:after, 
+			&:before {
+                @include vendor(transform, translateX(8px));
+            }
+        }
+        
+        &:focus {
+            &:after, 
+			&:before {
+                @include vendor(transform, translateX(8px));
+            }
+        }
+    }
+
+
+    // Left 
+    .tooltip-left {
+        &:before {
+            margin-bottom: -6px;
+            margin-right: -12px;
+        }
+        
+        &:after { margin-bottom: -14px; }
+        
+        &:before, 
+		&:after {
+            bottom: 50%;
+            right: 100%;
+        }
+        
+        &:hover {
+            &:after, 
+			&:before {
+                @include vendor(transform, translateX(-8px));
+            }
+        }
+        
+        &:focus {
+            &:after, 
+			&:before {
+                @include vendor(transform, translateX(-8px));
+            }
+        }
+    }
+
+
+    // Rounded corners
+    [class*='hint-'].border-radius:after { border-radius: $border-radius; }
+}

@@ -1,0 +1,30 @@
+@if $use-main == true {
+    //------------------------------------//
+    //  $MAIN
+    //------------------------------------//
+    @if $global-border-box == true {
+        *{
+            &,
+            &:before,
+            &:after {
+                @include vendor(box-sizing, border-box);
+            }
+        }
+    }
+
+    html, 
+	body {
+        background-color: #fff;
+        color: $base-font-color;
+        font: normal normal #{($base-font-size/16px)*1em}/#{$line-height-ratio} $base-font-family;
+        margin: 0;
+        
+        text-rendering: optimizeLegibility;
+        font-smooth: always;
+        
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: antialiased;
+    }
+
+    html[dir="rtl"] { direction: rtl; }
+}
