@@ -33,15 +33,17 @@
         // Row columns        
 		@include grid-setup();
         
+		
+		// Push
         @if $use-push == true {
-			// Push
 			[class*='push-'] { position: relative; }
 			
 			@include push-setup(); 
 		}
         
+		
+		// Pull
         @if $use-pull == true {
-			// Pull
 			[class*='pull-'] { position: relative; }
 			
 			@include pull-setup();
