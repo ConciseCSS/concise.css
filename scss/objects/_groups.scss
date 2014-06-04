@@ -77,9 +77,9 @@
 
     .group {
         &.border-radius .group-item.dropdown {
-            .dropdown-menu { border-radius: 0px 0px 4px 4px; }
+            .dropdown-menu { border-radius: 0px 0px $border-radius $border-radius; }
             
-            &.up .dropdown-menu { border-radius: 4px 4px 0px 0px; }
+            &.up .dropdown-menu { border-radius: $border-radius $border-radius 0px 0px; }
         }
         
         
