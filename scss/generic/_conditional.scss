@@ -2,51 +2,103 @@
     //------------------------------------//
     //  $CONDITIONAL
     //------------------------------------//
-    .show-small, 
+    .show-extra-small, 
+    .hide-small, 
 	.hide-medium, 
 	.hide-large, 
+	.hide-extra-large, 
 	.hide-print, 
 	.hide-hd {
         display: block;
         visibility: visible;
     }
-
+    
+    .hide-extra-small,
+    .show-small,
     .show-medium, 
 	.show-large, 
+	.show-extra-large, 
 	.show-print, 
-	.show-hd, 
-	.hide-small {
+	.show-hd {
         display: none;
         visibility: hidden;
     }
 
     @include breakpoint(small) {
-        .show-medium, 
-		.hide-small, 
-		.hide-large {
+        .show-small,
+		.hide-extra-small, 
+        .hide-medium,
+		.hide-large,
+        .hide-extra-large {
             display: block;
             visibility: visible;
         }
         
-        .show-small, 
+        .hide-small,
+        .show-extra-small,
+        .show-medium,
 		.show-large, 
-		.hide-medium {
+		.show-extra-large {
+            display: none;
+            visibility: hidden;
+        }
+    }
+    
+    @include breakpoint(medium) {
+        .show-medium,
+        .hide-small,
+		.hide-extra-small, 
+		.hide-large,
+        .hide-extra-large {
+            display: block;
+            visibility: visible;
+        }
+        
+        .hide-medium,
+        .show-small,
+        .show-extra-small,
+		.show-large, 
+		.show-extra-large {
             display: none;
             visibility: hidden;
         }
     }
 
     @include breakpoint(large) {
-        .show-large, 
+        .show-large,
+        .hide-extra-small,
 		.hide-small, 
-		.hide-medium {
+		.hide-medium,
+        .hide-extra-large {
             display: block;
             visibility: visible;
         }
         
+        .hide-large,
+        .show-extra-small,
         .show-small, 
 		.show-medium, 
-		.hide-large {
+		.show-extra-large {
+            display: none;
+            visibility: hidden;
+        }
+    }
+    
+    @include breakpoint(extra-large) {
+        .show-extra-large,
+        .hide-extra-small,
+		.hide-small, 
+		.hide-medium,
+        .hide-large {
+            display: block;
+            visibility: visible;
+        }
+        
+        .hide-extra-large,
+        .show-extra-small,
+        .show-small, 
+		.show-medium, 
+		.show-large {
             display: none;
             visibility: hidden;
         }
