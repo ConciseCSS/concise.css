@@ -2043,7 +2043,7 @@ img.full {
   text-transform: uppercase; }
 
 .amp {
-  font: italic 110% Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", serif; }
+  font: italic 110% Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", serif !important; }
 
 .text-hide {
   border: 0;
