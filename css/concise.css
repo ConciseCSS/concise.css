@@ -1972,7 +1972,7 @@ a.badge:hover, a.badge:focus {
   float: right !important; }
 
 .float-none {
-  float: none; }
+  float: none !important; }
 
 .align-center {
   display: block;
