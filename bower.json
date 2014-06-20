@@ -3,7 +3,6 @@
     "version": "1.0.0",
     "ignore": [
         ".gitignore",
-        "CHANGELOG.md",
         "LICENSE",
         "README.md"
     ],
