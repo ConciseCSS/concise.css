@@ -11,15 +11,13 @@ Quickstart
 
 It's easy to get started with Concise:
 
-[Download the latest release](https://github.com/ConciseCSS/concise.css/archive/master.zip)
-
-[Install with Bower](http://bower.io) `bower install ConciseCSS/Concise`
+- [Download the latest release](https://github.com/ConciseCSS/concise.css/archive/master.zip)
+- [Install with Bower](http://bower.io) `bower install ConciseCSS/Concise`
 
 Pre-Processors
 -------------
 
 Concise was originally written in [SASS](http://sass-lang.com/) but has up-to-date ports for both [LESS](http://lesscss.org/) and [Stylus](http://learnboost.github.io/stylus/). If you would like to view either:
 
-[Concise-LESS](https://github.com/ConciseCSS/concise.css-less)
-
-[Concise-Stylus](https://github.com/ConciseCSS/concise.css-stylus)
+- [Concise-LESS](https://github.com/ConciseCSS/concise.css-less)
+- [Concise-Stylus](https://github.com/ConciseCSS/concise.css-stylus)
