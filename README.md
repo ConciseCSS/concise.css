@@ -12,7 +12,6 @@ Quickstart
 It's easy to get started with Concise:
 
 - [Download the latest release](https://github.com/ConciseCSS/concise.css/archive/master.zip)
-- [Install with Bower](http://bower.io) `bower install ConciseCSS/Concise`
 
 Pre-Processors
 -------------
