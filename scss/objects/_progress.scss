@@ -5,8 +5,9 @@
     .progress {
         background-color: #f9f9f9;
         color: #fff;
-        @include font-size(11px); 
+        @include font-size(11px, false); 
         height: 12px;
+        line-height: 1.182;
         margin: 6px 0;
         position: relative;
         text-align: center;
@@ -18,13 +19,15 @@
     }
 
     .progress-small {
-        @include font-size(9px); 
+        @include font-size(9px, false); 
         height: 6px;
+        line-height: 0.875;
     }
 
     .progress-large {
-        @include font-size($base-font-size); 
+        @include font-size($base-font-size, false); 
         height: 25px;
+        line-height: 1.7;
     }
 
     .progress {

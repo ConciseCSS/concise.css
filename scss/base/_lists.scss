@@ -7,9 +7,10 @@
         padding-left: 0px;
     }
 
-    ol { padding-left: 15px; }
-
-    @include breakpoint(extra-small) { ol { padding-left: 20px; } }
+    ol {
+        margin-left: 0px;
+        padding-left: 20px;
+    }
 
     ul li, 
 	ol li {

@@ -20,9 +20,10 @@
         background-color: #fff;
         border: 1px solid #ddd;
         color: #666;
-        @include font-size(12px); 
         padding: 4px 7px;
         width: auto;
+        
+        &.icon { @include font-size(14px); }
     }
 
     @include breakpoint(small) {

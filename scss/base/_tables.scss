@@ -36,7 +36,8 @@
         
         
         // Full-width table
-        &.table-full { width: 100%; }
+        &.table-full,
+        &.table.table-full { width: 100%; }
         
         
         // Borders
