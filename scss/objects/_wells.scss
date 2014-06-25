@@ -11,13 +11,13 @@
         padding: 0px 15px;
         
         h1, h2, h3, h4, h5, h6,
-		.h1, .h2, .h3, .h4, .h5, .h6,
-		.giga, .mega, .kilo { color: inherit; }
+        .h1, .h2, .h3, .h4, .h5, .h6,
+        .giga, .mega, .kilo { color: inherit; }
         
         p { margin: 10px 0; }
         
         pre, 
-		.pre.well {
+        .pre.well {
             @include font-size(14px); 
             padding: 10px 15px;
         }
@@ -31,7 +31,7 @@
             .giga, .mega, .kilo { margin: 20px 0 10px; }
             
             .label, 
-			.badge { margin-top: 10px; }
+            .badge { margin-top: 10px; }
         }
         
         

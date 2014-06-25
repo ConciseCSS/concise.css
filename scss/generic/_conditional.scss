@@ -4,11 +4,11 @@
     //------------------------------------//
     .show-extra-small, 
     .hide-small, 
-	.hide-medium, 
-	.hide-large, 
-	.hide-extra-large, 
-	.hide-print, 
-	.hide-hd {
+    .hide-medium, 
+    .hide-large, 
+    .hide-extra-large, 
+    .hide-print, 
+    .hide-hd {
         display: block;
         visibility: visible;
     }
@@ -16,19 +16,19 @@
     .hide-extra-small,
     .show-small,
     .show-medium, 
-	.show-large, 
-	.show-extra-large, 
-	.show-print, 
-	.show-hd {
+    .show-large, 
+    .show-extra-large, 
+    .show-print, 
+    .show-hd {
         display: none;
         visibility: hidden;
     }
 
     @include breakpoint(small) {
         .show-small,
-		.hide-extra-small, 
+        .hide-extra-small, 
         .hide-medium,
-		.hide-large,
+        .hide-large,
         .hide-extra-large {
             display: block;
             visibility: visible;
@@ -37,8 +37,8 @@
         .hide-small,
         .show-extra-small,
         .show-medium,
-		.show-large, 
-		.show-extra-large {
+        .show-large, 
+        .show-extra-large {
             display: none;
             visibility: hidden;
         }
@@ -47,8 +47,8 @@
     @include breakpoint(medium) {
         .show-medium,
         .hide-small,
-		.hide-extra-small, 
-		.hide-large,
+        .hide-extra-small, 
+        .hide-large,
         .hide-extra-large {
             display: block;
             visibility: visible;
@@ -57,8 +57,8 @@
         .hide-medium,
         .show-small,
         .show-extra-small,
-		.show-large, 
-		.show-extra-large {
+        .show-large, 
+        .show-extra-large {
             display: none;
             visibility: hidden;
         }
@@ -67,8 +67,8 @@
     @include breakpoint(large) {
         .show-large,
         .hide-extra-small,
-		.hide-small, 
-		.hide-medium,
+        .hide-small, 
+        .hide-medium,
         .hide-extra-large {
             display: block;
             visibility: visible;
@@ -77,8 +77,8 @@
         .hide-large,
         .show-extra-small,
         .show-small, 
-		.show-medium, 
-		.show-extra-large {
+        .show-medium, 
+        .show-extra-large {
             display: none;
             visibility: hidden;
         }
@@ -87,8 +87,8 @@
     @include breakpoint(extra-large) {
         .show-extra-large,
         .hide-extra-small,
-		.hide-small, 
-		.hide-medium,
+        .hide-small, 
+        .hide-medium,
         .hide-large {
             display: block;
             visibility: visible;
@@ -97,8 +97,8 @@
         .hide-extra-large,
         .show-extra-small,
         .show-small, 
-		.show-medium, 
-		.show-large {
+        .show-medium, 
+        .show-large {
             display: none;
             visibility: hidden;
         }
@@ -106,9 +106,9 @@
 
     // HiDPI and retina 
     @media only screen and (-moz-min-device-pixel-ratio: 1.5), 
-		   only screen and (-o-min-device-pixel-ratio: 3 / 2), 
-		   only screen and (-webkit-min-device-pixel-ratio: 1.5), 
-		   only screen and (min-device-pixel-ratio: 1.5) {
+           only screen and (-o-min-device-pixel-ratio: 3 / 2), 
+           only screen and (-webkit-min-device-pixel-ratio: 1.5), 
+           only screen and (min-device-pixel-ratio: 1.5) {
         .show-hd {
             display: block;
             visibility: visible;

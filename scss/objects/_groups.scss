@@ -16,7 +16,7 @@
     }
 
     .group-item, 
-	p.group-item {
+    p.group-item {
         background-color: #fff;
         border: 1px solid #ddd;
         color: #666;
@@ -41,7 +41,7 @@
         }
         
         &.active, 
-		.active { background-color: #f2f2f2; }
+        .active { background-color: #f2f2f2; }
     }
 
     .group > .group-item {

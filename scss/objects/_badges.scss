@@ -3,7 +3,7 @@
     //  $BADGES
     //------------------------------------//
     .label, 
-	.badge {
+    .badge {
         background-color: #b5b5b5;
         color: #fff;
         @include font-size(12px); 
@@ -42,12 +42,12 @@
     }
 
     .label a, 
-	.badge a {
+    .badge a {
         color: #fff;
         cursor: pointer;
         text-decoration: none;
     }
 
     .label:empty, 
-	.badge:empty { display: none; }
+    .badge:empty { display: none; }
 }

@@ -35,26 +35,26 @@
         }
         
         .hide-print, 
-		video, 
-		audio, 
-		object, 
-		embed, 
-		nav, 
-		footer, 
-		a[href^="#"]:after {
+        video, 
+        audio, 
+        object, 
+        embed, 
+        nav, 
+        footer, 
+        a[href^="#"]:after {
             display: none;
             visibility: hidden;
         }
         
         p, 
-		h2, 
-		h3 {
+        h2, 
+        h3 {
             orphans: 3;
             widows: 3;
         }
         
         h2, 
-		h3 { page-break-after: avoid; }
+        h3 { page-break-after: avoid; }
         
         a {
             color: #000;
@@ -79,12 +79,12 @@
         
         a {
             &:after, 
-			&[href^="javascript:"]:after, 
-			&[href^="#"]:after { content: ""; }
+            &[href^="javascript:"]:after, 
+            &[href^="#"]:after { content: ""; }
         }
         
         pre,
-		blockquote {
+        blockquote {
             border: 1px solid #ededed;
             page-break-inside: avoid;
         }
@@ -92,7 +92,7 @@
         thead { display: table-header-group; }
         
         tr, 
-		img { page-break-inside: avoid; }
+        img { page-break-inside: avoid; }
         
         ul {
             list-style: none;
@@ -101,7 +101,7 @@
         }
         
         .label, 
-		.badge {
+        .badge {
             border: 1px solid #000;
             color: #000;
         }

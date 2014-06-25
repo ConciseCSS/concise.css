@@ -8,7 +8,7 @@
         text-decoration: none;
         
         &:hover, 
-		&:visited {
+        &:visited {
             color: lighten($base-link-color, 10%);
             cursor: pointer;
             text-decoration: underline;
@@ -24,7 +24,7 @@
 
     // Sizing
     small, 
-	.small {
+    .small {
         @include font-size($small-size); 
     }
 

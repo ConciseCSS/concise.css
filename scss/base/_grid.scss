@@ -15,8 +15,8 @@
     [class*='#{$column-prefix}'] {
         @include vendor(background-clip, padding-box !important);
         
-		&.right { float: right; }
-		
+        &.right { float: right; }
+        
         img { max-width: 100%; }
     }
 
@@ -31,23 +31,23 @@
         
         
         // Row columns        
-		@include grid-setup();
+        @include grid-setup();
         
-		
-		// Push
+        
+        // Push
         @if $use-push == true {
-			[class*='push-'] { position: relative; }
-			
-			@include push-setup(); 
-		}
+            [class*='push-'] { position: relative; }
+            
+            @include push-setup(); 
+        }
         
-		
-		// Pull
+        
+        // Pull
         @if $use-pull == true {
-			[class*='pull-'] { position: relative; }
-			
-			@include pull-setup();
-		}
+            [class*='pull-'] { position: relative; }
+            
+            @include pull-setup();
+        }
     }
 
 
@@ -59,9 +59,9 @@
         }
         
         .gutters [class*='#{$column-prefix}'], 
-		&.gutters [class*='#{$column-prefix}'] { margin-left: $gutters; }
+        &.gutters [class*='#{$column-prefix}'] { margin-left: $gutters; }
         
         .gutters [class*='#{$column-prefix}']:first-child, 
-		&.gutters [class*='#{$column-prefix}']:first-child { margin-left: 0; }
+        &.gutters [class*='#{$column-prefix}']:first-child { margin-left: 0; }
     }
 }

@@ -13,7 +13,7 @@
     }
 
     ul li, 
-	ol li {
+    ol li {
         line-height: 1.75em;
         position: relative;
     }
@@ -54,7 +54,7 @@
         padding: 5px 0;
         
         &:last-child, 
-		li { border-bottom: none; }
+        li { border-bottom: none; }
     }
 
 
@@ -94,10 +94,10 @@
 
     // Fills
     .fill-even li, 
-	.fill-odd li { padding-left: 5px; }
+    .fill-odd li { padding-left: 5px; }
 
     .fill-even li:nth-child(even), 
-	.fill-odd li:nth-child(odd) { background-color: #f9f9f9; }
+    .fill-odd li:nth-child(odd) { background-color: #f9f9f9; }
 
 
     // Definition Lists

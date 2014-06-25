@@ -29,8 +29,8 @@
 
     // Left margin for lists
     ul, 
-	ol, 
-	dd {
+    ol, 
+    dd {
         margin-left: 2 * $base-spacing-unit;
         margin-left: (2 * $base-spacing-unit / $base-font-size) * 1rem;
     }

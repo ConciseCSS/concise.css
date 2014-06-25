@@ -86,30 +86,30 @@
         }
         
         .btn-extra-small, 
-		a.btn-extra-small, 
-		p.btn-extra-small, 
-		input.btn-extra-small {
+        a.btn-extra-small, 
+        p.btn-extra-small, 
+        input.btn-extra-small {
             @include font-size(11px); 
             padding: 5px 16px;
         }
         
         .btn-small, 
-		a.btn-small, 
-		p.btn-small, 
-		input.btn-small {
+        a.btn-small, 
+        p.btn-small, 
+        input.btn-small {
             @include font-size(12px); 
             padding: 10px 32px;
         }
         
         .btn-large, 
-		a.btn-large, 
-		p.btn-large, 
-		input.btn-large { padding: 20px 64px; }
+        a.btn-large, 
+        p.btn-large, 
+        input.btn-large { padding: 20px 64px; }
         
         .btn-extra-large, 
-		a.btn-extra-large, 
-		p.btn-extra-large, 
-		input.btn-extra-large { padding: 25px 80px; }
+        a.btn-extra-large, 
+        p.btn-extra-large, 
+        input.btn-extra-large { padding: 25px 80px; }
     }
 
     a.btn {
@@ -167,7 +167,7 @@
     }
 
     .btn.border.white, 
-	a.btn.border.white { color: $color-white; }
+    a.btn.border.white { color: $color-white; }
 
     .btn.border {
         &.white {
@@ -267,7 +267,7 @@
 
     @include breakpoint(small) {
         .btn-extra-small .caret, 
-		.btn-small .caret {
+        .btn-small .caret {
             border-top: 4px solid;
             border-right: 4px solid transparent;
             border-left: 4px solid transparent;
