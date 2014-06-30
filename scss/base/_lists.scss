@@ -49,7 +49,7 @@
 
 
     // Line
-    .line li {
+    .list-line li {
         border-bottom: 1px solid #eee;
         padding: 5px 0;
         
@@ -78,7 +78,7 @@
             &:last-child { margin-right: 0px; }
         }
         
-        .line.list-inline li {
+        .list-line.list-inline li {
             margin-right: 15px;
             
             &:after {

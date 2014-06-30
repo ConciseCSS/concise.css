@@ -136,7 +136,7 @@
         
         
         // Bordered 
-        &.border {
+        &.btn-border {
             background: transparent;
             border-color: #ddd;
             border-style: solid;
@@ -161,15 +161,15 @@
 
 
     // Bordered white 
-    a.btn.border.white:hover {
+    a.btn.btn-border.white:hover {
         background: $bg-white;
         color: $color-black !important;
     }
 
-    .btn.border.white, 
-    a.btn.border.white { color: $color-white; }
+    .btn.btn-border.white, 
+    a.btn.btn-border.white { color: $color-white; }
 
-    .btn.border {
+    .btn.btn-border {
         &.white {
             &:active, &:focus { background-color: #f9f9f9; }
         }

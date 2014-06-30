@@ -46,7 +46,7 @@
         
         
         // Stacked
-        &.stacked {
+        &.progress-stacked {
             > span {
                 display: inline-block;
                 float: left;
@@ -64,7 +64,7 @@
 
 
     // Striped
-    .striped {
+    .progress-striped {
         > span {
             &:after, > span {
                 bottom: 0;
@@ -87,7 +87,7 @@
         
         
         // Animated 
-        &.animate > span {
+        &.progress-animate > span {
             &:after, > span {             
                 @include vendor(animation, move 2s linear infinite);
             }

@@ -15,8 +15,6 @@
         @include vendor(box-sizing, border-box);
     }
 
-    .pure-form select[multiple] { height: auto; }
-
     @include breakpoint(extra-small) { 
         input, 
         select, 
