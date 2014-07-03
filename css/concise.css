@@ -515,7 +515,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
 .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small,
 .giga small, .mega small, .kilo small {
-  font-size: 65%;
+  font-size: 65% !important;
   line-height: 1;
 }
 
