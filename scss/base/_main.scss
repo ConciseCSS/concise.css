@@ -19,7 +19,6 @@
         font: normal normal #{($base-font-size/16px)*1em}/#{$line-height-ratio} $base-font-family;
         margin: 0;
         
-        text-rendering: optimizeLegibility;
         font-smooth: always;
         
         -webkit-font-smoothing: antialiased;

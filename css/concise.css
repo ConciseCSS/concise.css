@@ -287,7 +287,6 @@ body {
   color: #333333;
   font: normal normal 1em/1.5 "Droid Sans", Helvetica, Arial, sans-serif;
   margin: 0;
-  text-rendering: optimizeLegibility;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
@@ -394,6 +393,7 @@ h1, h2, h3, h4, h5, h6,
 .giga, .mega, .kilo {
   color: #181818;
   font-weight: normal;
+  text-rendering: optimizeLegibility;
 }
 
 h1, .h1 {
