@@ -4,7 +4,7 @@
 
 Concise is a lightweight front-end framework that provides a number of great features without the bloat. Concise is built based on Object-Oriented CSS principles and keeps semantics in mind to provide a small learning curve but high level of customization.
 
-To get started, check out the [http://concisecss.com/documentation](http://concisecss.com/documentation)
+To get started, check out the [http://concisecss.com/documentation](http://concisecss.com/documentation/layout/container.php)
 
 Quickstart
 -------------
