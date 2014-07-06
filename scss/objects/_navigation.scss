@@ -273,7 +273,10 @@
             @include vendor(user-select, none);
         }
         
-        .naver-wrapper { height: auto; }
+        .naver-wrapper { 
+            height: auto; 
+            width: 100%;
+        }
         
         &.enabled {
             .naver-handle { display: block; }

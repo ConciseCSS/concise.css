@@ -2088,6 +2088,7 @@ nav .dropdown li {
 }
 .naver .naver-wrapper {
   height: auto;
+  width: 100%;
 }
 .naver.enabled .naver-handle {
   display: block;
