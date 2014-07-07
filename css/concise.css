@@ -2097,13 +2097,13 @@ nav .dropdown li {
   height: 0px;
   overflow: hidden;
 }
-.naver.enabled .naver-wrapper ul li {
+.naver.enabled .naver-wrapper li {
   display: block;
   padding: 8px;
   text-align: left;
   width: 100%;
 }
-.naver.enabled .naver-wrapper ul li:hover {
+.naver.enabled .naver-wrapper li:hover {
   background: #f9f9f9;
 }
 
