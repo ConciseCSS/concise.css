@@ -253,7 +253,7 @@
             width: 100%;
         }
         
-        &[class*='arrow-'] .dropdown-menu { margin-top: 10px; }
+        &[class*='dropdown-arrow-'] .dropdown-menu { margin-top: 10px; }
         
         &.up {
             .dropdown-menu {
@@ -261,7 +261,7 @@
                 top: auto;
             }
             
-            &[class*='arrow-'] .dropdown-menu { margin-bottom: 10px; }
+            &[class*='dropdown-arrow-'] .dropdown-menu { margin-bottom: 10px; }
         }
     }
 

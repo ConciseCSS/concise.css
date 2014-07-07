@@ -1,4 +1,4 @@
-@if $use-navigation == true {
+ @if $use-navigation == true {
     //------------------------------------//
     //  $NAVIGATION
     //------------------------------------//
@@ -238,13 +238,13 @@
             &.right, &.text-right { margin-right: 0px; }
         }
         
-        &.bordered {
+        &.nav-bordered {
             border: 1px solid #eee;
             
             li:hover { background-color: #f6f6f6; }
         }
         
-        &.line li:hover { background-color: #f6f6f6; }
+        &.nav-line li:hover { background-color: #f6f6f6; }
         
         .badge, 
         .label { margin-top: 5px; }

@@ -106,7 +106,7 @@
     dd { margin-left: 0px; }
 
     @include breakpoint(small) {
-        dl.horizontal {
+        dl.dl-horizontal {
             overflow: hidden;
             > {
                 dt {

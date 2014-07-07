@@ -733,10 +733,10 @@ dd {
 }
 
 @media (min-width: 48em) {
-  dl.horizontal {
+  dl.dl-horizontal {
     overflow: hidden;
   }
-  dl.horizontal > dt {
+  dl.dl-horizontal > dt {
     width: 160px;
     float: left;
     clear: both;
@@ -744,7 +744,7 @@ dd {
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  dl.horizontal > dd {
+  dl.dl-horizontal > dd {
     margin-left: 180px;
   }
 }
@@ -1574,14 +1574,14 @@ a.btn.btn-border.white {
   top: 100%;
   width: 100%;
 }
-.btn.dropdown[class*='arrow-'] .dropdown-menu {
+.btn.dropdown[class*='dropdown-arrow-'] .dropdown-menu {
   margin-top: 10px;
 }
 .btn.dropdown.up .dropdown-menu {
   margin-bottom: 0px;
   top: auto;
 }
-.btn.dropdown.up[class*='arrow-'] .dropdown-menu {
+.btn.dropdown.up[class*='dropdown-arrow-'] .dropdown-menu {
   margin-bottom: 10px;
 }
 
@@ -2048,13 +2048,13 @@ nav .dropdown li {
 .nav-vertical .icon.right, .nav-vertical .icon.text-right {
   margin-right: 0px;
 }
-.nav-vertical.bordered {
+.nav-vertical.nav-bordered {
   border: 1px solid #eee;
 }
-.nav-vertical.bordered li:hover {
+.nav-vertical.nav-bordered li:hover {
   background-color: #f6f6f6;
 }
-.nav-vertical.line li:hover {
+.nav-vertical.nav-line li:hover {
   background-color: #f6f6f6;
 }
 .nav-vertical .badge,
