@@ -16,7 +16,7 @@ It's easy to get started with Concise:
 Pre-Processors
 -------------
 
-Concise was originally written in [SASS](http://sass-lang.com/) but has work-in-progress ports for both [LESS](http://lesscss.org/) and [Stylus](http://learnboost.github.io/stylus/).
+Concise was originally written in [SASS](http://sass-lang.com/) but has a port for [LESS](http://lesscss.org/) and a work-in-progress port for [Stylus](http://learnboost.github.io/stylus/).
 
 - [Concise-SASS](https://github.com/ConciseCSS/concise.css)
 - [Concise-LESS](https://github.com/ConciseCSS/concise.css-less)
