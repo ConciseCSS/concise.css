@@ -98,7 +98,6 @@
     pre, 
     samp {
         font-family: monospace, monospace;
-        _font-family: 'courier new', monospace;
         @include font-size($base-font-size);
     }
 
@@ -123,7 +122,6 @@
         font: inherit;
         margin: 0;
         vertical-align: baseline;
-        *vertical-align: middle;
     }
 
     button { overflow: visible; }
@@ -137,7 +135,6 @@
     input[type="submit"] {
         -webkit-appearance: button;
         cursor: pointer;
-        *overflow: visible;
     }
 
     button[disabled], 
@@ -178,7 +175,6 @@
         border: 0;
         padding: 0;
         white-space: normal;
-        *margin-left: -7px;
     }
 
     textarea { overflow: auto; }
