@@ -130,7 +130,6 @@ kbd,
 pre,
 samp {
   font-family: monospace, monospace;
-  _font-family: 'courier new', monospace;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
@@ -157,7 +156,6 @@ textarea {
   font: inherit;
   margin: 0;
   vertical-align: baseline;
-  *vertical-align: middle;
 }
 
 button {
@@ -175,7 +173,6 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
-  *overflow: visible;
 }
 
 button[disabled],
@@ -219,7 +216,6 @@ legend {
   border: 0;
   padding: 0;
   white-space: normal;
-  *margin-left: -7px;
 }
 
 textarea {
