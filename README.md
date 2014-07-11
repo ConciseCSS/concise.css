@@ -18,6 +18,10 @@ What would a project be without gread documentation? Concise has documentation f
 
 Check out our documentation here: [http://concisecss.com/documentation](http://concisecss.com/documentation)
 
+### Changelog
+
+You can view an up-to-date changelog in our GitHub wiki: [https://github.com/ConciseCSS/concise.css/wiki/Changelog](https://github.com/ConciseCSS/concise.css/wiki/Changelog)
+
 Pre-Processors
 -------------
 
