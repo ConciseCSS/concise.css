@@ -32,7 +32,7 @@ Members of the Concise team are subscribed to specific tags via [Stack Exchange 
 
 Ideally we would like to keep it to just one tag for Concise questions, but we are subscribed to multiple varients to make sure nothing passes by us. However, for everybody asking a question, please use: 
 
-- [Copncise](http://stackoverflow.com/questions/tagged/concise)
+- [Concise](http://stackoverflow.com/questions/tagged/concise)
 
 **Where do I post this?**
 
