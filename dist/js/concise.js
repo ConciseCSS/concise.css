@@ -1,5 +1,5 @@
 /**
- * # Concise.JS
+ * # Concise.js
  * http://github.com/ConciseCSS/concise.css
  *
  *
