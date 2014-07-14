@@ -21,6 +21,6 @@
     "homepage": "http://concisecss.com",
     "main": [
         "dist/css/concise.css",
-        "dist/scripts/concise.js"
+        "dist/js/concise.js"
     ]
 }
