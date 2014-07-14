@@ -10,7 +10,10 @@ Quickstart
 It's easy to get started with Concise:
 
 - [Download the latest release](https://github.com/ConciseCSS/concise.css/archive/master.zip)
-- [Read our quickstart guide](http://concisecss.com/get-started/getting-started.php)
+- Clone the repo: `git clone https://github.com/ConciseCSS/concise.css.git`
+- Install with [Bower](http://bower.io/): `bower install concise`
+
+[Read our quickstart guide](http://concisecss.com/get-started/getting-started.php)
 
 Documentation
 -------------
