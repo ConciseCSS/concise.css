@@ -13,7 +13,7 @@ It's easy to get started with Concise:
 - Clone the repo: `git clone https://github.com/ConciseCSS/concise.css.git`
 - Install with [Bower](http://bower.io/): `bower install concise`
 
-[Read our quickstart guide](http://concisecss.com/get-started/getting-started.php)
+After you download or install the package, [read our quickstart guide](http://concisecss.com/get-started/getting-started.php) to get up and running.
 
 Documentation
 -------------
