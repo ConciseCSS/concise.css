@@ -9,7 +9,7 @@ Quickstart
 
 It's easy to get started with Concise:
 
-- [Download the latest release](https://github.com/ConciseCSS/concise.css/archive/master.zip)
+- [Download the latest release](https://github.com/ConciseCSS/concise.css/archive/v1.0.0.zip)
 - Clone the repo: `git clone https://github.com/ConciseCSS/concise.css.git`
 - Install with [Bower](http://bower.io/): `bower install concise`
 
