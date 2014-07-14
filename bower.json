@@ -18,5 +18,9 @@
         "framework",
         "web"
     ],
-    "homepage": "http://concisecss.com"
+    "homepage": "http://concisecss.com",
+    "main": [
+        "dist/css/concise.css",
+        "dist/scripts/concise.js"
+    ]
 }
