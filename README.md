@@ -23,7 +23,7 @@ Check out our documentation here: [http://concisecss.com/documentation](http://c
 
 ### Changelog
 
-You can view an up-to-date changelog in our GitHub wiki: [https://github.com/ConciseCSS/concise.css/wiki/Changelog](https://github.com/ConciseCSS/concise.css/wiki/Changelog)
+You can keep up-to-date with the changes that we have made via our [releases page](https://github.com/ConciseCSS/concise.css/releases).
 
 ### Specific Questions
 
