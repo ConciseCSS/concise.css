@@ -1045,67 +1045,83 @@ form.border-radius fieldset {
   }
 
   .gutters .column-1 {
-    width: 4.25%;
+    width: 4.375%;
+    content: 0%;
   }
 
   .gutters .column-2 {
-    width: 10.5%;
+    width: 10.75%;
+    content: 2%;
   }
 
   .gutters .column-3 {
-    width: 16.75%;
+    width: 17.125%;
+    content: 4%;
   }
 
   .gutters .column-4 {
-    width: 23%;
+    width: 23.5%;
+    content: 6%;
   }
 
   .gutters .column-5 {
-    width: 29.25%;
+    width: 29.875%;
+    content: 8%;
   }
 
   .gutters .column-6 {
-    width: 35.5%;
+    width: 36.25%;
+    content: 10%;
   }
 
   .gutters .column-7 {
-    width: 41.75%;
+    width: 42.625%;
+    content: 12%;
   }
 
   .gutters .column-8 {
-    width: 48%;
+    width: 49%;
+    content: 14%;
   }
 
   .gutters .column-9 {
-    width: 54.25%;
+    width: 55.375%;
+    content: 16%;
   }
 
   .gutters .column-10 {
-    width: 60.5%;
+    width: 61.75%;
+    content: 18%;
   }
 
   .gutters .column-11 {
-    width: 66.75%;
+    width: 68.125%;
+    content: 20%;
   }
 
   .gutters .column-12 {
-    width: 73%;
+    width: 74.5%;
+    content: 22%;
   }
 
   .gutters .column-13 {
-    width: 79.25%;
+    width: 80.875%;
+    content: 24%;
   }
 
   .gutters .column-14 {
-    width: 85.5%;
+    width: 87.25%;
+    content: 26%;
   }
 
   .gutters .column-15 {
-    width: 91.75%;
+    width: 93.625%;
+    content: 28%;
   }
 
   .gutters .column-16 {
     width: 100%;
+    content: 30%;
   }
 }
 .non-responsive [class*='column-'] {

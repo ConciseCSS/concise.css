@@ -1,122 +1,122 @@
 //
-// Passing in a single value will create font-sizing in 
+// Passing in a single value will create font-sizing in
 // pixels, rems as well as a proper line-height.
-// 
+//
 //    `@include font-size(24px);`
-// 
-// 
+//
+//
 @mixin font-size($font-size, $line-height:true) {
-    font-size: $font-size;
-    font-size: ($font-size / $base-font-size) * 1rem;
-    
-    @if $line-height == true {
-        line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
-    }
-}
+		font-size: $font-size;
+		font-size: ($font-size / $base-font-size) * 1rem;
 
-
-// 
-// Proper vendor prefixes are created just by 
-// passing a property value and size value.
-// 
-//    `@include vendor(border-radius, 4px);`
-// 
-// 
-@mixin vendor($property, $value...) {
-    -webkit-#{$property}: $value;
-    -moz-#{$property}: $value;
-    -ms-#{$property}: $value;
-    -o-#{$property}: $value;
-    #{$property}: $value;
+		@if $line-height == true {
+				line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+		}
 }
 
 
 //
-// By passing in one of the pre-defined media queries that 
-// are packaged with Concise by default, you can easily 
-// create styles that are built from the ground-up to be 
+// Proper vendor prefixes are created just by
+// passing a property value and size value.
+//
+//    `@include vendor(border-radius, 4px);`
+//
+//
+@mixin vendor($property, $value...) {
+		-webkit-#{$property}: $value;
+		-moz-#{$property}: $value;
+		-ms-#{$property}: $value;
+		-o-#{$property}: $value;
+		#{$property}: $value;
+}
+
+
+//
+// By passing in one of the pre-defined media queries that
+// are packaged with Concise by default, you can easily
+// create styles that are built from the ground-up to be
 // mobile friendly.
-// 
+//
 //    `@include breakpoint(extra-small) { [styles here] }`
-// 
-// 
+//
+//
 @mixin breakpoint($point) {
-    @if $point == extra-small {
-        @media (min-width: $extra-small-start)  { @content; }
-    }
-    
-    @else if $point == small {
-        @media (min-width: $small-start)  { @content; }
-    }
-    
-    @else if $point == medium {
-        @media (min-width: $medium-start) { @content; }
-    }
-    
-    @else if $point == large {
-        @media (min-width: $large-start) { @content; }
-    }
-    
-    @else if $point == extra-large {
-        @media (min-width: $extra-large-start) { @content; }
-    }
-    
-    @else if $point == high-density { 
-        @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-               only screen and (min--moz-device-pixel-ratio: 1.5),
-               only screen and (-o-min-device-pixel-ratio: 3/2),
-               only screen and (min-device-pixel-ratio: 1.5) { @content; }
-    }
+		@if $point == extra-small {
+				@media (min-width: $extra-small-start)  { @content; }
+		}
+
+		@else if $point == small {
+				@media (min-width: $small-start)  { @content; }
+		}
+
+		@else if $point == medium {
+				@media (min-width: $medium-start) { @content; }
+		}
+
+		@else if $point == large {
+				@media (min-width: $large-start) { @content; }
+		}
+
+		@else if $point == extra-large {
+				@media (min-width: $extra-large-start) { @content; }
+		}
+
+		@else if $point == high-density {
+				@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+							 only screen and (min--moz-device-pixel-ratio: 1.5),
+							 only screen and (-o-min-device-pixel-ratio: 3/2),
+							 only screen and (min-device-pixel-ratio: 1.5) { @content; }
+		}
 }
 
 
 //
 // Create variable-number grid columns given the value
-// for variable `$column-number` 
-// 
+// for variable `$column-number`
+//
 @mixin grid-setup($number: $column-number) {
-    // Assign percentage-based widths for columns
-    @for $i from 1 through $number {
-        .#{$column-prefix + $i} { width: 100% / $number * $i; }
-    }
-    
-    @for $i from 1 through $number { 
-        // Style all but the last column
-        @if $i != $column-number {
-            .gutters .#{$column-prefix + $i} { width: 100% / $number * $i - $gutters; }
-        } @else {
-        // Ensure the last column has a width of 100%
-            .gutters .#{$column-prefix + $i} { width: 100% }
-        }
-    }
+		// Assign percentage-based widths for columns
+		@for $i from 1 through $number {
+				.#{$column-prefix + $i} { width: 100% / $number * $i; }
+		}
+
+		@for $i from 1 through $number {
+				// Style all but the last column
+				$width-of-column: (100% - $gutters * ($number - 1)) / $number;
+
+				.gutters .#{$column-prefix + $i} {
+						width: $width-of-column * $i + $gutters * ($i - 1);
+				    content: $gutters * ($i - 1);
+				}
+		}
 }
 
 
 //
 // Create proper `.push-` classes given the value
 // for variable `$column-number`
-// 
+//
 @mixin push-setup($number: $column-number) {
-    @for $i from 1 to $number {
-        .push-#{$i} { left: 100% / $number * $i; }
-    }
-    
-    @for $i from 1 to $number { 
-        .gutters .push-#{$i} { left: 100% / $number * $i - $gutters; }
-    }
+		@for $i from 1 to $number {
+				.push-#{$i} { left: 100% / $number * $i; }
+		}
+
+		@for $i from 1 to $number {
+				.gutters .push-#{$i} { left: 100% / $number * $i - $gutters; }
+		}
 }
 
 
 //
 // Create proper `.pull-` classes given the value
 // for variable `$column-number`
-// 
+//
 @mixin pull-setup($number: $column-number) {
-    @for $i from 1 to $number {
-        .pull-#{$i} { right: 100% / $number * $i; }
-    }
-    
-    @for $i from 1 to $number { 
-        .gutters .pull-#{$i} { right: 100% / $number * $i - $gutters; }
-    }
+		@for $i from 1 to $number {
+				.pull-#{$i} { right: 100% / $number * $i; }
+		}
+
+		@for $i from 1 to $number {
+				.gutters .pull-#{$i} { right: 100% / $number * $i - $gutters; }
+		}
 }
