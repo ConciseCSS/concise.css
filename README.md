@@ -51,6 +51,8 @@ There are lots of different things that people will want to post regarding the C
 
 If you wish to contribute to the Concise project, please read through our [contributing guidelines](https://github.com/ConciseCSS/concise.css/blob/master/CONTRIBUTING.md) first. This will ensure that you are posting things in the proper areas and you are following our coding standards. 
 
+Are you interested in contributing monetarily to the project? If so, check out our [Gittip page](https://www.gittip.com/keenanpayne/). All tips that I receive from Gittip will go straight to maintaining and building upon Concise.
+
 ## Pre-Processors
 
 Concise was originally written in [SASS](http://sass-lang.com/) but has a port for [LESS](http://lesscss.org/) and a work-in-progress port for [Stylus](http://learnboost.github.io/stylus/).
