@@ -1,125 +1,125 @@
 @if $use-lists == true {
-    //------------------------------------//
-    //  $LISTS
-    //------------------------------------//   
-    ul {
-        margin-left: 20px;
-        padding-left: 0px;
+  //------------------------------------//
+  //  $LISTS
+  //------------------------------------//   
+  ul {
+    margin-left: 20px;
+    padding-left: 0px;
+  }
+
+  ol {
+    margin-left: 0px;
+    padding-left: 20px;
+  }
+
+  ul li, 
+  ol li {
+    line-height: 1.75em;
+    position: relative;
+  }
+
+  ul ul {
+    list-style-type: circle;
+    margin-bottom: auto;
+    
+    ul { list-style-type: square; }
+  }
+
+  ol ol {
+    list-style-type: lower-latin;
+    margin-bottom: auto;
+    
+    ol { list-style-type: lower-roman; }
+  }
+
+  @include breakpoint(small) { ul li ul { margin-left: 20px; } }
+
+
+  // Unstyled
+  .list-unstyled {
+    margin-left: 0px;
+    list-style: none;
+    
+    li ul {
+      list-style: none;
+      
+      li ul { list-style: none; }
     }
+  }
 
-    ol {
-        margin-left: 0px;
-        padding-left: 20px;
+
+  // Line
+  .list-line li {
+    border-bottom: 1px solid #eee;
+    padding: 5px 0;
+    
+    &:last-child, 
+    li { border-bottom: none; }
+  }
+
+
+  // Inline
+  .list-inline {
+    display: block;
+    margin-left: 0px;
+    
+    li {
+      border-bottom: none;
+      
+      &:last-child { margin-right: 0px; }
     }
+  }
 
-    ul li, 
-    ol li {
-        line-height: 1.75em;
-        position: relative;
+  @include breakpoint(extra-small) {
+    .list-inline li {
+      display: inline;
+      margin-right: 25px;
+      
+      &:last-child { margin-right: 0px; }
     }
-
-    ul ul {
-        list-style-type: circle;
-        margin-bottom: auto;
-        
-        ul { list-style-type: square; }
+    
+    .list-line.list-inline li {
+      margin-right: 15px;
+      
+      &:after {
+        color: #e6e8ea;
+        content: "|";
+        margin-left: 15px;
+      }
+      
+      &:last-child:after { content: ""; }
     }
-
-    ol ol {
-        list-style-type: lower-latin;
-        margin-bottom: auto;
-        
-        ol { list-style-type: lower-roman; }
-    }
-
-    @include breakpoint(small) { ul li ul { margin-left: 20px; } }
+  }
 
 
-    // Unstyled
-    .list-unstyled {
-        margin-left: 0px;
-        list-style: none;
-        
-        li ul {
-            list-style: none;
-            
-            li ul { list-style: none; }
+  // Fills
+  .list-fill-even li, 
+  .list-fill-odd li { padding-left: 5px; }
+
+  .list-fill-even li:nth-child(even), 
+  .list-fill-odd li:nth-child(odd) { background-color: #f9f9f9; }
+
+
+  // Definition Lists
+  dt { font-weight: bold; }
+
+  dd { margin-left: 0px; }
+
+  @include breakpoint(small) {
+    dl.dl-horizontal {
+      overflow: hidden;
+      > {
+        dt {
+          width: 160px;
+          float: left;
+          clear: both;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
-    }
-
-
-    // Line
-    .list-line li {
-        border-bottom: 1px solid #eee;
-        padding: 5px 0;
         
-        &:last-child, 
-        li { border-bottom: none; }
+        dd { margin-left: 180px; }
+      }
     }
-
-
-    // Inline
-    .list-inline {
-        display: block;
-        margin-left: 0px;
-        
-        li {
-            border-bottom: none;
-            
-            &:last-child { margin-right: 0px; }
-        }
-    }
-
-    @include breakpoint(extra-small) {
-        .list-inline li {
-            display: inline;
-            margin-right: 25px;
-            
-            &:last-child { margin-right: 0px; }
-        }
-        
-        .list-line.list-inline li {
-            margin-right: 15px;
-            
-            &:after {
-                color: #e6e8ea;
-                content: "|";
-                margin-left: 15px;
-            }
-            
-            &:last-child:after { content: ""; }
-        }
-    }
-
-
-    // Fills
-    .list-fill-even li, 
-    .list-fill-odd li { padding-left: 5px; }
-
-    .list-fill-even li:nth-child(even), 
-    .list-fill-odd li:nth-child(odd) { background-color: #f9f9f9; }
-
-
-    // Definition Lists
-    dt { font-weight: bold; }
-
-    dd { margin-left: 0px; }
-
-    @include breakpoint(small) {
-        dl.dl-horizontal {
-            overflow: hidden;
-            > {
-                dt {
-                    width: 160px;
-                    float: left;
-                    clear: both;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                }
-                
-                dd { margin-left: 180px; }
-            }
-        }
-    }
+  }
 }

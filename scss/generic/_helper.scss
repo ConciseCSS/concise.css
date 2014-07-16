@@ -1,117 +1,117 @@
 @if $use-helper == true {
-    //------------------------------------//
-    //  $HELPER
-    //------------------------------------//
-    // Add/remove floats
-    .float-left { float: left !important; }
+  //------------------------------------//
+  //  $HELPER
+  //------------------------------------//
+  // Add/remove floats
+  .float-left { float: left !important; }
 
-    .float-right { float: right !important; }
+  .float-right { float: right !important; }
 
-    .float-none { float: none !important; }
-
-
-    // Position elements
-    .align-center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .no-margin { margin: 0 !important; }
-
-    .icon-alone { display: inline-block; }
+  .float-none { float: none !important; }
 
 
-    // Displaying content
-    .inline { display: block; }
+  // Position elements
+  .align-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    @include breakpoint(extra-small) { .inline { display: inline; } }
+  .no-margin { margin: 0 !important; }
 
-    .show {
-        display: block;
-        visibility: visible;
-    }
-
-    .hide {
-        display: none;
-        visibility: hidden;
-    }
-
-    .screen-reader {
-        border: 0;
-        clip: rect(0 0 0 0);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
-    }
+  .icon-alone { display: inline-block; }
 
 
-    // Full-width elements
-    .full { width: 100%; }
+  // Displaying content
+  .inline { display: block; }
 
-    img.full { 
-        max-width: 100%;
-        height: auto;
-        display: block;
-        width: auto;
-    }
+  @include breakpoint(extra-small) { .inline { display: inline; } }
 
+  .show {
+    display: block;
+    visibility: visible;
+  }
 
-    // Text alignment
-    .text-left { text-align: left; }
+  .hide {
+    display: none;
+    visibility: hidden;
+  }
 
-    .text-right { text-align: right; }
-
-    .text-center { text-align: center; }
-
-    .text-justify { text-align: justify; }
-
-
-    // Font weights
-    .weight-light { font-weight: 300 !important; }
-
-    .weight-normal { font-weight: 400 !important; }
-
-    .weight-semibold { font-weight: 600 !important; }
+  .screen-reader {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
 
 
-    // All-caps text
-    .text-uppercase { text-transform: uppercase; }
+  // Full-width elements
+  .full { width: 100%; }
+
+  img.full { 
+    max-width: 100%;
+    height: auto;
+    display: block;
+    width: auto;
+  }
 
 
-    // Stylized ampersand
-    .amp { font: italic 110% Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", serif !important; }
+  // Text alignment
+  .text-left { text-align: left; }
+
+  .text-right { text-align: right; }
+
+  .text-center { text-align: center; }
+
+  .text-justify { text-align: justify; }
 
 
-    // Hide text 
-    .text-hide {
-        border: 0;
-        background-color: transparent;
-        color: transparent;
-        font: 0 / 0 a;
-        text-shadow: none;
-    }
+  // Font weights
+  .weight-light { font-weight: 300 !important; }
+
+  .weight-normal { font-weight: 400 !important; }
+
+  .weight-semibold { font-weight: 600 !important; }
 
 
-    // Caret icon
-    .caret {
-        border-top: 5px solid;
-        border-right: 5px solid transparent;
-        border-left: 5px solid transparent;
-        display: inline-block;
-        margin: 0 0 3px 4px;
-        vertical-align: middle;
-        width: 0;
-    }
+  // All-caps text
+  .text-uppercase { text-transform: uppercase; }
 
 
-    // Border radius
-    .border-radius { border-radius: $border-radius; }
-    
-    
-    // Pill style
-    .pill { border-radius: 25px; }
+  // Stylized ampersand
+  .amp { font: italic 110% Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", serif !important; }
+
+
+  // Hide text 
+  .text-hide {
+    border: 0;
+    background-color: transparent;
+    color: transparent;
+    font: 0 / 0 a;
+    text-shadow: none;
+  }
+
+
+  // Caret icon
+  .caret {
+    border-top: 5px solid;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    display: inline-block;
+    margin: 0 0 3px 4px;
+    vertical-align: middle;
+    width: 0;
+  }
+
+
+  // Border radius
+  .border-radius { border-radius: $border-radius; }
+  
+  
+  // Pill style
+  .pill { border-radius: 25px; }
 }
