@@ -2,7 +2,7 @@
 
 Welcome to the Concise! We are not only here to make it as simple as possible to build websites but also to contribute to the project. 
 
-By following this guide to contributing, we can make sure that everything is up-to-code (pun intended), everything is formatted properly, and we are posting bug reports, feature requests and questions in the proper area.
+By following this guide to contributing, we can make sure that everything is up-to-code (pun intended), everything is formatted properly and we are posting bug reports, feature requests and questions in the proper area.
 
 Sound good? **Let's move on...**
 
@@ -33,6 +33,16 @@ There are lots of different things that people will want to post regarding the C
 Do you think that there should be something in Concise that isn't already included? Before you start writing code and implementing a feature, make sure that it is something that fits into the idea and scope of the project. We are a lightweight, bloat-free framework that focuses on removing the unnecessary. 
 
 If you are unsure of whether or not your feature would be a good fit for the framework, posting in [GitHub Issues](http://github.com/ConciseCSS/concise.css/issues) and tagging it `info:feedback-needed` or `type:idea` will help us filter your feature request and evaluate the idea. 
+
+# Contributing
+
+1. [Fork us](https://github.com/ConciseCSS/concise.css/fork)
+2. Create a [feature branch](http://nvie.com/posts/a-successful-git-branching-model/) (`git checkout -b my-feature`)
+3. Test any and all changes you make or implement. 
+4. Commit changes (`git commit -am `My new feature`)
+5. Push to your feature branch (`git push origin my-feature)
+6. Create a new [Pull Request](https://help.github.com/articles/creating-a-pull-request)
+7. Wait for a response from us (we promise to be semi-prompt)
 
 # License
 
