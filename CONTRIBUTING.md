@@ -38,11 +38,34 @@ If you are unsure of whether or not your feature would be a good fit for the fra
 
 1. [Fork us](https://github.com/ConciseCSS/concise.css/fork)
 2. Create a [feature branch](http://nvie.com/posts/a-successful-git-branching-model/) (`git checkout -b my-feature`)
+3. Follow the [coding style guide](#coding-style-guide)
 3. Test any and all changes you make or implement. 
 4. Commit changes (`git commit -am `My new feature`)
 5. Push to your feature branch (`git push origin my-feature)
 6. Create a new [Pull Request](https://help.github.com/articles/creating-a-pull-request)
 7. Wait for a response from us (we promise to be semi-prompt)
+
+# Coding Style Guide
+
+Concistency is great, especially when writing code. Here we have a few simple guidelines to follow if you are going to be contributing to Concise. 
+
+## HTML
+
+[Follow @mdo's Code Guide](http://codeguide.co/#html)
+
+- Use [WAI-ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) attributes when necessary for proper accessibility.
+
+## CSS
+
+[Follow @mdo's Code Guide](http://codeguide.co/#css)
+
+- Try to follow the [WCAG color contrast guidelines](http://www.w3.org/TR/WCAG20/#visual-audio-contrast) for proper accessibility.
+
+## JavaScript
+
+- Avoid adding if at all possible
+- 2 spaces (no tabs)
+- Proper indentation
 
 # License
 
