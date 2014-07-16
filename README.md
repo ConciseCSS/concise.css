@@ -1,11 +1,10 @@
-[<img src="http://i.imgur.com/ihzCgEr.png">](http://concisecss.com/)
-===========
+# [<img src="http://i.imgur.com/ihzCgEr.png">](http://concisecss.com/)
+
 [![Gitter chat](https://badges.gitter.im/concisecss.png)](https://gitter.im/concisecss) [![Bower version](https://badge.fury.io/bo/concise.svg)](http://badge.fury.io/bo/concise)
 
 Concise is a lightweight front-end framework that provides a number of great features without the bloat. Concise is built based on Object-Oriented CSS principles and keeps semantics in mind to provide a small learning curve but high level of customization.
 
-Quickstart
--------------
+## Quickstart
 
 It's easy to get started with Concise:
 
@@ -16,8 +15,8 @@ It's easy to get started with Concise:
 
 After you download or install the package, [read our quickstart guide](http://concisecss.com/get-started/getting-started.php) to get up and running.
 
-Documentation
--------------
+## Documentation
+
 What would a project be without gread documentation? Concise has documentation for everything that is included in the framework. If you see something that is missing or incorrect, don't hesitate to open up an issue on our GitHub repo.
 
 Check out our documentation here: [http://concisecss.com/documentation](http://concisecss.com/documentation)
@@ -48,8 +47,11 @@ There are lots of different things that people will want to post regarding the C
 - Use [GitHub Issues](http://github.com/ConciseCSS/concise.css/issues) if you want to **ask a general question**
 - Submit a [pull request](https://help.github.com/articles/creating-a-pull-request) if you **want to contribute**
 
-Pre-Processors
--------------
+## Contributing
+
+If you wish to contribute to the Concise project, please read through our [contributing guidelines](https://github.com/ConciseCSS/concise.css/blob/master/CONTRIBUTING.md) first. This will ensure that you are posting things in the proper areas and you are following our coding standards. 
+
+## Pre-Processors
 
 Concise was originally written in [SASS](http://sass-lang.com/) but has a port for [LESS](http://lesscss.org/) and a work-in-progress port for [Stylus](http://learnboost.github.io/stylus/).
 
@@ -57,28 +59,24 @@ Concise was originally written in [SASS](http://sass-lang.com/) but has a port f
 - [Concise-LESS](https://github.com/ConciseCSS/concise.css-less)
 - [Concise-Stylus](https://github.com/ConciseCSS/concise.css-stylus)
 
-Versioning
--------------
+## Versioning
 
 Concise is currently maintained under the [Semantic Versioning guidelines](http://semver.org/).
 
-Creator
--------------
+## Creator
 
 **Keenan Payne**
 - [Website](http://keenanpayne.com)
 - [GitHub](http://github.com/keenanpayne)
 - [Twitter](http://twitter.com/keenan_payne)
 
-Elsewhere
--------------
+## Elsewhere
 
 [![Like Concise on Facebook](http://i.imgur.com/4dy5UUK.png)](https://facebook.com/ConciseCSS)
 [![Follow Concise on Twitter](http://i.imgur.com/4AkKsMx.png)](https://twitter.com/ConciseCSS)
 [![Follow Concise on Google+](http://i.imgur.com/gdFNEMe.png)](https://plus.google.com/103423710089455112688)
 
-License
--------------
+## License
 
 Code released under the [MIT license](https://github.com/ConciseCSS/concise.css/blob/master/LICENSE). Documentation released under [Creative Commons](http://creativecommons.org/licenses/by-sa/4.0/).
 
