@@ -1,20 +1,20 @@
 # Contributing to Concise
 
-Welcome to the Concise! We are not only here to make it as simple as possible to build websites but also to contribute to the project. 
+Welcome to Concise! We are not only here to make it as simple as possible to build websites, but also to contribute to the project.
 
-By following this guide to contributing, we can make sure that everything is up-to-code (pun intended), everything is formatted properly and we are posting bug reports, feature requests and questions in the proper area.
+By following this guide to contributing, we can make sure that everything is up to code (pun intended), everything is formatted properly, and we are posting bug reports, feature requests, and questions in the proper area.
 
 Sound good? **Let's move on...**
 
-# Bug reports, feature requests and questions
+# Bug reports, feature requests, and questions
 
-In lieu of a mailing list, we are going to manage all specific questions through [Stack Overflow](http://stackoverflow.com/). This way we can leverage the entire community for help, and also not worry about wading through loads of spam.
+In lieu of a mailing list, we are going to manage all specific questions through [Stack Overflow](http://stackoverflow.com/). This way we can leverage the entire community for help, and not worry about wading through loads of spam.
 
 Members of the Concise team are subscribed to specific tags via [Stack Exchange Filters](http://stackexchange.com/filters) so that if a question is properly tagged, we can respond in a timely manner and help. 
 
 **Which tags?**
 
-Ideally we would like to keep it to just one tag for Concise questions, but we are subscribed to multiple varients to make sure nothing passes by us. However, for everybody asking a question, please use: 
+Ideally, we would like to keep it to just one tag for Concise questions, but we are subscribed to multiple variants to make sure nothing passes by us. However, for everybody asking a question, please use:
 
 - [Concise](http://stackoverflow.com/questions/tagged/concise)
 
@@ -47,7 +47,7 @@ If you are unsure of whether or not your feature would be a good fit for the fra
 
 # Coding Style Guide
 
-Concistency is great, especially when writing code. Here we have a few simple guidelines to follow if you are going to be contributing to Concise. 
+Consistency is great, especially when writing code. Here we have a few simple guidelines to follow if you are going to be contributing to Concise.
 
 ## HTML
 
@@ -64,9 +64,9 @@ Concistency is great, especially when writing code. Here we have a few simple gu
 ## JavaScript
 
 - Avoid adding if at all possible
-- 2 spaces (no tabs)
+- Two spaces (no tabs)
 - Proper indentation
 
 # License
 
-By contributing to Concise, you agree that your code be released under the [MIT license](https://github.com/ConciseCSS/concise.css/blob/master/LICENSE)
+By contributing to Concise, you agree that your code can be released under the [MIT license](https://github.com/ConciseCSS/concise.css/blob/master/LICENSE)
