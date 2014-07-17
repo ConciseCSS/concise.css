@@ -1,7 +1,7 @@
 {
     "name": "concise",
     "description": "A lightweight front-end framework that provides functionality without the bloat.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "ignore": [
         ".gitignore",
         "LICENSE",
