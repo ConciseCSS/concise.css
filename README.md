@@ -2,7 +2,7 @@
 
 [![Gitter chat](https://badges.gitter.im/concisecss.png)](https://gitter.im/concisecss) [![Bower version](https://badge.fury.io/bo/concise.svg)](http://badge.fury.io/bo/concise)
 
-Concise is a lightweight front-end framework that provides a number of great features without the bloat. Concise is built based on Object-Oriented CSS principles and keeps semantics in mind to provide a small learning curve but high level of customization.
+Concise is a lightweight, front-end framework that provides a number of great features without the bloat. Concise is built based on Object-Oriented CSS principles and keeps semantics in mind to provide a small learning curve, but a high level of customization.
 
 ## Quickstart
 
@@ -17,7 +17,7 @@ After you download or install the package, [read our quickstart guide](http://co
 
 ## Documentation
 
-What would a project be without gread documentation? Concise has documentation for everything that is included in the framework. If you see something that is missing or incorrect, don't hesitate to open up an issue on our GitHub repo.
+What would a project be without great documentation? Concise has documentation for everything that is included in the framework. If you see something that is missing or incorrect, don't hesitate to open up an issue on our GitHub repo.
 
 Check out our documentation here: [http://concisecss.com/documentation](http://concisecss.com/documentation)
 
@@ -27,19 +27,19 @@ You can keep up-to-date with the changes that we have made via our [releases pag
 
 ### Specific Questions
 
-In lieu of a mailing list, we are going to manage all specific questions through [Stack Overflow](http://stackoverflow.com/). This way we can leverage the entire community for help, and also not worry about wading through loads of spam.
+In lieu of a mailing list, we are going to manage all specific questions through [Stack Overflow](http://stackoverflow.com/). This way we can leverage the entire community for help, and not worry about wading through loads of spam.
 
-Members of the Concise team are subscribed to specific tags via [Stack Exchange Filters](http://stackexchange.com/filters) so that if a question is properly tagged, we can respond in a timely manner and help. 
+Members of the Concise team are subscribed to specific tags via [Stack Exchange Filters](http://stackexchange.com/filters), so that if a question is properly tagged, we can respond in a timely manner and help.
 
 **Which tags?**
 
-Ideally we would like to keep it to just one tag for Concise questions, but we are subscribed to multiple varients to make sure nothing passes by us. However, for everybody asking a question, please use: 
+Ideally, we would like to keep it to just one tag for Concise questions, but we are subscribed to multiple variants to make sure nothing passes by us. However, for everybody asking a question, please use:
 
 - [Concise](http://stackoverflow.com/questions/tagged/concise)
 
 **Where do I post this?**
 
-There are lots of different things that people will want to post regarding the Concise framework. Here is a rough outline of where you should post any given issue, question or contribution: 
+There are lots of different things that people will want to post regarding the Concise framework. Here is a rough outline of where you should post any given issue, question or contribution:
 
 - Use [Stack Overflow](http://stackoverflow.com) if you **need help**
 - Use [GitHub Issues](http://github.com/ConciseCSS/concise.css/issues) if you **found a bug**
@@ -49,9 +49,9 @@ There are lots of different things that people will want to post regarding the C
 
 ## Contributing
 
-If you wish to contribute to the Concise project, please read through our [contributing guidelines](https://github.com/ConciseCSS/concise.css/blob/master/CONTRIBUTING.md) first. This will ensure that you are posting things in the proper areas and you are following our coding standards. 
+If you wish to contribute to the Concise project, please read through our [contributing guidelines](https://github.com/ConciseCSS/concise.css/blob/master/CONTRIBUTING.md) first. This will ensure that you are posting things in the proper areas, and that you are following our coding standards.
 
-Are you interested in contributing monetarily to the project? If so, check out our [Gittip page](https://www.gittip.com/keenanpayne/). All tips that I receive from Gittip will go straight to maintaining and building upon Concise.
+Are you interested in contributing monetarily to the project? If so, check out our [Gittip page](https://www.gittip.com/keenanpayne/). All tips that we receive from Gittip will go straight to maintaining and building upon Concise.
 
 ## Pre-Processors
 
