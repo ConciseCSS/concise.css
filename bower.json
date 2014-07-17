@@ -5,7 +5,8 @@
     "ignore": [
         ".gitignore",
         "LICENSE",
-        "README.md"
+        "README.md",
+        "package.json"
     ],
     "keywords": [
         "css",
