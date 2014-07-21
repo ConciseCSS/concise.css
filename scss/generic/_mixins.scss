@@ -5,6 +5,8 @@
 //  `@include font-size(24px);`
 //
 //
+// Big thanks to inuitcss for this hunk of code
+// (https://github.com/csswizardry/inuit.css/blob/master/generic/_mixins.scss)
 @mixin font-size($font-size, $line-height:true) {
   font-size: $font-size;
   font-size: ($font-size / $base-font-size) * 1rem;
@@ -22,6 +24,8 @@
 //  `@include vendor(border-radius, 4px);`
 //
 //
+// Thanks to inuitcss for this handy mixin
+// (https://github.com/csswizardry/inuit.css/blob/master/generic/_mixins.scss)
 @mixin vendor($property, $value...) {
   -webkit-#{$property}: $value;
   -moz-#{$property}: $value;
