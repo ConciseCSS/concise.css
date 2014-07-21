@@ -1,7 +1,7 @@
 @if $use-print == true {
-  //------------------------------------//
-  //  $PRINT
-  //------------------------------------//
+  //------------------------------------
+  //  PRINT
+  //------------------------------------
   @media print {
     @page { margin: 0.5cm; }
 
@@ -12,7 +12,8 @@
       
       @include vendor(filter, none !important);
       
-      &:before, &:after {
+      &:before, 
+      &:after {
         background: transparent !important;
         color: black !important;
         text-shadow: none !important;

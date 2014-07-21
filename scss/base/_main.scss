@@ -1,17 +1,15 @@
 @if $use-main == true {
-  //------------------------------------//
-  //  $MAIN
-  //------------------------------------//
-  @if $global-border-box == true {
-    *{
-      &,
-      &:before,
-      &:after {
-        @include vendor(box-sizing, border-box);
-      }
+  //------------------------------------
+  //  MAIN
+  //------------------------------------
+  *{
+    &,
+    &:before,
+    &:after {
+      @include vendor(box-sizing, border-box);
     }
   }
-
+  
   html, 
   body {
     background-color: #fff;

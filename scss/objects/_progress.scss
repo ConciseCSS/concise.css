@@ -1,7 +1,11 @@
 @if $use-progress == true {
-  //------------------------------------//
-  //  $PROGRESS
-  //------------------------------------//
+  //------------------------------------
+  //  PROGRESS
+  //------------------------------------
+  
+  // Thanks to Chris Coyier's article on 
+  // CSS3 Progress Bars which helped me create
+  // these (http://css-tricks.com/css3-progress-bars/)
   .progress {
     background-color: #f9f9f9;
     color: #fff;

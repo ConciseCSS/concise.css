@@ -5,14 +5,17 @@
 //  `@include font-size(24px);`
 //
 //
-// Big thanks to inuitcss for this hunk of code
+// Big thanks to inuitcss for inspiration behind this
 // (https://github.com/csswizardry/inuit.css/blob/master/generic/_mixins.scss)
-@mixin font-size($font-size, $line-height:true) {
+@mixin font-size($font-size, $line-height: true) {
+  $rem-size: ($font-size / $base-font-size) * 1rem;
+  $line-height-size: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+  
   font-size: $font-size;
-  font-size: ($font-size / $base-font-size) * 1rem;
+  font-size: $rem-size;
 
   @if $line-height == true {
-      line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+    line-height: $line-height-size;
   }
 }
 
@@ -26,7 +29,7 @@
 //
 // Thanks to inuitcss for this handy mixin
 // (https://github.com/csswizardry/inuit.css/blob/master/generic/_mixins.scss)
-@mixin vendor($property, $value...) {
+@mixin vendor($property, $value) {
   -webkit-#{$property}: $value;
   -moz-#{$property}: $value;
   -ms-#{$property}: $value;
@@ -41,35 +44,35 @@
 // create styles that are built from the ground-up to be
 // mobile friendly.
 //
-//  `@include breakpoint(extra-small) { [styles here] }`
+//  `@include breakpoint(extra-small) { ... }`
 //
 //
 @mixin breakpoint($point) {
   @if $point == extra-small {
-      @media (min-width: $extra-small-start)  { @content; }
+    @media (min-width: $extra-small-start)  { @content; }
   }
 
   @else if $point == small {
-      @media (min-width: $small-start)  { @content; }
+    @media (min-width: $small-start)  { @content; }
   }
 
   @else if $point == medium {
-      @media (min-width: $medium-start) { @content; }
+    @media (min-width: $medium-start) { @content; }
   }
 
   @else if $point == large {
-      @media (min-width: $large-start) { @content; }
+    @media (min-width: $large-start) { @content; }
   }
 
   @else if $point == extra-large {
-      @media (min-width: $extra-large-start) { @content; }
+    @media (min-width: $extra-large-start) { @content; }
   }
 
   @else if $point == high-density {
-      @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-             only screen and (min--moz-device-pixel-ratio: 1.5),
-             only screen and (-o-min-device-pixel-ratio: 3/2),
-             only screen and (min-device-pixel-ratio: 1.5) { @content; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+           only screen and (min--moz-device-pixel-ratio: 1.5),
+           only screen and (-o-min-device-pixel-ratio: 3/2),
+           only screen and (min-device-pixel-ratio: 1.5) { @content; }
   }
 }
 
@@ -81,7 +84,7 @@
 @mixin grid-setup($number: $column-number) {
   // Assign percentage-based widths for columns
   @for $i from 1 through $number {
-      .#{$column-prefix + $i} { width: 100% / $number * $i; }
+    .#{$column-prefix + $i} { width: 100% / $number * $i; }
   }
 
   @for $i from 1 through $number {
@@ -89,8 +92,8 @@
     $width-of-column: (100% - $gutters * ($number - 1)) / $number;
 
     .gutters .#{$column-prefix + $i} {
-       width: $width-of-column * $i + $gutters * ($i - 1);
-       content: $gutters * ($i - 1);
+      width: $width-of-column * $i + $gutters * ($i - 1);
+      content: $gutters * ($i - 1);
     }
   }
 }
