@@ -27,7 +27,9 @@ You can keep up-to-date with the changes that we have made via our [releases pag
 
 ### Specific Questions
 
-In lieu of a mailing list, we are going to manage all specific questions through [Stack Overflow](http://stackoverflow.com/). This way we can leverage the entire community for help, and not worry about wading through loads of spam.
+** *Thanks to [thoughtbot](http://robots.thoughtbot.com/moving-open-source-project-mailing-lists-to-stack-overflow) for this great way to handling questions for an open source project.*
+
+In lieu of a mailing list, we are going to manage all specific questions through [Stack Overflow](http://stackoverflow.com/).
 
 Members of the Concise team are subscribed to specific tags via [Stack Exchange Filters](http://stackexchange.com/filters), so that if a question is properly tagged, we can respond in a timely manner and help.
 
@@ -44,7 +46,7 @@ There are lots of different things that people will want to post regarding the C
 - Use [Stack Overflow](http://stackoverflow.com) if you **need help**
 - Use [GitHub Issues](http://github.com/ConciseCSS/concise.css/issues) if you **found a bug**
 - Use [GitHub Issues](http://github.com/ConciseCSS/concise.css/issues) if you **have an idea**
-- Use [GitHub Issues](http://github.com/ConciseCSS/concise.css/issues) if you want to **ask a general question**
+- Use [GitHub Issues](http://github.com/ConciseCSS/concise.css/issues) if you want to **ask a question**
 - Submit a [pull request](https://help.github.com/articles/creating-a-pull-request) if you **want to contribute**
 
 ## Contributing
