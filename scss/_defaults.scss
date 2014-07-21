@@ -1,19 +1,15 @@
+// Thanks to inuitcss (https://github.com/csswizardry/inuit.css/blob/master/_defaults.scss) for the inspiration to create a default file for variables
+
+
 //------------------------------------//
 //  $BORDER-BOX
 //------------------------------------//
 // Set to `false` if you do not wish to adopt 
 // global `box-sizing: border-box;`
+// 
+// Thanks to inuitcss (https://github.com/csswizardry/inuit.css/blob/master/_defaults.scss) 
+// for this nifty trick.
 $global-border-box: true !default;
-
-
-
-
-//------------------------------------//
-//  $DEBUG
-//------------------------------------//
-// Enabling debug mode allows for potential issues 
-// to be visually displayed in the browser. 
-$debug-mode: false !default;
 
 
 
@@ -146,6 +142,10 @@ $border-radius: 4px !default;
 // Set whatever components you want included
 // in your project to `true` and any components
 // you do not wish to be included to `false`
+// 
+// Thanks to inuitcss (https://github.com/csswizardry/inuit.css/blob/master/_defaults.scss) for 
+// the idea to use feature switches in a framework. It's an absolutely brilliant idea that
+// makes customization so much easier.
 
 
 // Utility
