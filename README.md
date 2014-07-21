@@ -65,6 +65,10 @@ Concise was originally written in [SASS](http://sass-lang.com/) but has a port f
 
 Concise is currently maintained under the [Semantic Versioning guidelines](http://semver.org/).
 
+## Attribution
+
+A lot of inspiration for Concise came from [Harry Roberts'](http://csswizardry.com/) own front-end framework, [inuitcss](https://github.com/csswizardry/inuit.css). We thank him for his sensible approach to crafting modular and customizable front-end frameworks, and for guidelines on [writing and maitaining beautiful CSS](https://github.com/csswizardry/CSS-Guidelines). You will see comments throughout the code in Concise where we've either borrowed inspiration or code from his framework.
+
 ## Creator
 
 **Keenan Payne**
