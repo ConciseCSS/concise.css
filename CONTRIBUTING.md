@@ -57,18 +57,14 @@ Consistency is great, especially when writing code. Here we have a few simple gu
 
 [Follow @mdo's Code Guide](http://codeguide.co/#html)
 
-- Use [WAI-ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) attributes when necessary for proper accessibility.
-
 ## CSS
 
 [Follow @mdo's Code Guide](http://codeguide.co/#css)
 
-- Try to follow the [WCAG color contrast guidelines](http://www.w3.org/TR/WCAG20/#visual-audio-contrast) for proper accessibility.
-
 ## JavaScript
 
 - Avoid adding if at all possible
-- Two spaces (no tabs)
+- No tabs, use two spaces
 - Proper indentation
 
 # License
