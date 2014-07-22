@@ -2,6 +2,11 @@
   //------------------------------------
   //  MAIN
   //------------------------------------
+  
+  // Variables
+  $font-size: #{($base-font-size/16px)*1em};
+  $line-height-integer: #{$line-height-ratio};
+  
   *{
     &,
     &:before,
@@ -14,7 +19,7 @@
   body {
     background-color: #fff;
     color: $base-font-color;
-    font: normal normal #{($base-font-size/16px)*1em}/#{$line-height-ratio} $base-font-family;
+    font: normal normal $font-size/$line-height-integer $base-font-family;
     margin: 0;
     
     font-smooth: always;
