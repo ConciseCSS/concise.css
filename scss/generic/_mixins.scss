@@ -29,7 +29,7 @@
 //
 // Thanks to inuitcss for this handy mixin
 // (https://github.com/csswizardry/inuit.css/blob/master/generic/_mixins.scss)
-@mixin vendor($property, $value) {
+@mixin vendor($property, $value...) {
   -webkit-#{$property}: $value;
   -moz-#{$property}: $value;
   -ms-#{$property}: $value;
