@@ -151,34 +151,34 @@ $use-shared:      true !default;
 
 
 // Base
-$use-main:        true !default;
-$use-selection:   true !default;
-$use-container:   true !default;
-$use-typography:  true !default;
-$use-headings:    true !default;
-$use-blockquotes: true !default;
-$use-lists:       true !default;
-$use-tables:      true !default;
+$use-main:           true !default;
+$use-selection:      true !default;
+$use-container:      true !default;
+$use-typography:     true !default;
+$use-headings:       true !default;
+$use-blockquotes:    true !default;
+$use-lists:          true !default;
+$use-tables:         true !default;
   $use-table-styles: true !default;
-$use-forms:       true !default;
+$use-forms:          true !default;
   $use-form-styles:  true !default;
-$use-grid:        true !default;
-  $use-push:	  false !default;
-  $use-pull:	  false !default;
+$use-grid:           true !default;
+  $use-push:	       false !default;
+  $use-pull:	       false !default;
 
   
 // Objects
-$use-type-colors: true !default;
-$use-bg-colors:   true !default;
-$use-buttons:     true !default;
-$use-groups:      true !default;
-$use-dropdowns:   true !default;
-$use-navigation:  true !default;
+$use-type-colors:             true !default;
+$use-bg-colors:               true !default;
+$use-buttons:                 true !default;
+$use-groups:                  true !default;
+$use-dropdowns:               true !default;
+$use-navigation:              true !default;
   $use-responsive-navigation: true !default;
-$use-breadcrumbs: true !default;
-$use-wells:       true !default;
-$use-badges:      true !default;
-$use-progress:    true !default;
+$use-breadcrumbs:             true !default;
+$use-wells:                   true !default;
+$use-badges:                  true !default;
+$use-progress:                true !default;
 
 
 // Helpers
