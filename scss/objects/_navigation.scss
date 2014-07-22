@@ -262,6 +262,9 @@
 
   @if $use-responsive-navigation == true {
     // Responsive navigation 
+    // 
+    // Thanks to Ben Plum for the great work on his
+    // Naver plugin (https://github.com/benplum/Naver/)
     .naver {
       .naver-handle {
         color: inherit;
