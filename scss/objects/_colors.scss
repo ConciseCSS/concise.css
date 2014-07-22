@@ -1,7 +1,8 @@
-@if $use-colors == true {
-  //------------------------------------
-  //  COLORS
-  //------------------------------------
+//------------------------------------
+//  COLORS
+//------------------------------------
+
+@if $use-bg-colors == true {
   // Background colors
   .bg-white { background-color: $bg-white !important; }
 
@@ -26,8 +27,10 @@
   .bg-light-red { background-color: $bg-light-red !important; }
 
   .bg-red { background-color: $bg-red !important; }
+}
 
 
+@if $use-type-colors == true {
   // Type colors 
   .color-white { color: $color-white; }
 

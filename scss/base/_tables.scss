@@ -24,44 +24,46 @@
       }
     }
     
-    
-    // Background colors
-    .bg-light-green { color: $color-green; }
-    
-    .bg-light-blue { color: $color-blue; }
-    
-    .bg-light-yellow { color: $color-yellow; }
-    
-    .bg-light-red { color: $color-red; }
-    
-    
-    // Full-width table
-    &.table-full,
-    &.table.table-full { width: 100%; }
-    
-    
-    // Borders
-    &.table-border-all, &.table-border-outer { border: 1px solid #ededed; }
-    
-    &.table-border-all {
-      th, 
-      td { border-right: 1px solid #ededed; }
+
+    @if $use-table-styles == true {
+      // Background colors
+      .bg-light-green { color: $color-green; }
+      
+      .bg-light-blue { color: $color-blue; }
+      
+      .bg-light-yellow { color: $color-yellow; }
+      
+      .bg-light-red { color: $color-red; }
+      
+      
+      // Full-width table
+      &.table-full,
+      &.table.table-full { width: 100%; }
+      
+      
+      // Borders
+      &.table-border-all, &.table-border-outer { border: 1px solid #ededed; }
+      
+      &.table-border-all {
+        th, 
+        td { border-right: 1px solid #ededed; }
+      }
+      
+      &.table-border-inner {
+        th, 
+        td { border-right: 1px solid #ededed; }
+      }
+      
+      
+      // Hovers
+      &.table-hover-row tr:hover td, 
+      &.table-hover-cell td:hover { background-color: #f9f9f9; }
+      
+      
+      // Striped
+      &.table-fill-even tbody tr:nth-child(even), 
+      &.table-fill-odd tbody tr:nth-child(odd) { background-color: #f9f9f9; }
     }
-    
-    &.table-border-inner {
-      th, 
-      td { border-right: 1px solid #ededed; }
-    }
-    
-    
-    // Hovers
-    &.table-hover-row tr:hover td, 
-    &.table-hover-cell td:hover { background-color: #f9f9f9; }
-    
-    
-    // Striped
-    &.table-fill-even tbody tr:nth-child(even), 
-    &.table-fill-odd tbody tr:nth-child(odd) { background-color: #f9f9f9; }
   }
 
   @include breakpoint(extra-small) {

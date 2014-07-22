@@ -260,117 +260,119 @@
   }
 
 
-  // Responsive navigation 
-  .naver {
-    .naver-handle {
-      color: inherit;
-      cursor: pointer;
-      display: none;
-      @include font-size(24px); 
-      text-align: right;
-      text-transform: uppercase;
-      
-      @include vendor(user-select, none);
-    }
-    
-    .naver-wrapper { 
-      height: auto; 
-      width: 100%;
-    }
-    
-    &.enabled {
-      .naver-handle { display: block; }
-      
-      .naver-wrapper {
-        height: 0px;
-        overflow: hidden;
+  @if $use-responsive-navigation == true {
+    // Responsive navigation 
+    .naver {
+      .naver-handle {
+        color: inherit;
+        cursor: pointer;
+        display: none;
+        @include font-size(24px); 
+        text-align: right;
+        text-transform: uppercase;
         
-        li {
-          display: block;
-          padding: 8px;
-          text-align: left;
-          width: 100%;
+        @include vendor(user-select, none);
+      }
+      
+      .naver-wrapper { 
+        height: auto; 
+        width: 100%;
+      }
+      
+      &.enabled {
+        .naver-handle { display: block; }
+        
+        .naver-wrapper {
+          height: 0px;
+          overflow: hidden;
           
-          &:hover { background: #f9f9f9; }
+          li {
+            display: block;
+            padding: 8px;
+            text-align: left;
+            width: 100%;
+            
+            &:hover { background: #f9f9f9; }
+          }
         }
       }
     }
-  }
 
-  .nav-responsive {
-    &.naver .naver-handle:after {
-      content: "\f0c9";
-      font-family: FontAwesome;
-      text-align: right;
-    }
-    
-    &.nav-responsive-text.naver {
-      .naver-handle:after { content: "\00a0 \f0c9"; }
-      
-      .naver-container:before {
-        clear: both;
-        content: ".";
-        display: block;
-        height: 0;
-        line-height: 0;
+    .nav-responsive {
+      &.naver .naver-handle:after {
+        content: "\f0c9";
+        font-family: FontAwesome;
         text-align: right;
-        visibility: hidden;
+      }
+      
+      &.nav-responsive-text.naver {
+        .naver-handle:after { content: "\00a0 \f0c9"; }
+        
+        .naver-container:before {
+          clear: both;
+          content: ".";
+          display: block;
+          height: 0;
+          line-height: 0;
+          text-align: right;
+          visibility: hidden;
+        }
       }
     }
-  }
 
 
-  // Left-aligned responsive navigation
-  .nav-responsive-left {
-    &.naver .naver-handle {
-      text-align: left;
-      
-      &:before {
-        content: "\f0c9";
-        font-family: FontAwesome;
+    // Left-aligned responsive navigation
+    .nav-responsive-left {
+      &.naver .naver-handle {
         text-align: left;
+        
+        &:before {
+          content: "\f0c9";
+          font-family: FontAwesome;
+          text-align: left;
+        }
       }
-    }
-    
-    &.nav-responsive-text.naver {
-      .naver-handle:before { content: "\f0c9 \00a0"; }
       
-      .naver-container:after {
-        clear: both;
-        content: ".";
-        display: block;
-        height: 0;
-        line-height: 0;
-        text-align: left;
-        visibility: hidden;
+      &.nav-responsive-text.naver {
+        .naver-handle:before { content: "\f0c9 \00a0"; }
+        
+        .naver-container:after {
+          clear: both;
+          content: ".";
+          display: block;
+          height: 0;
+          line-height: 0;
+          text-align: left;
+          visibility: hidden;
+        }
       }
     }
-  }
 
 
-  // Centered responsive navigation
-  .nav-responsive-center {
-    &.naver .naver-handle {
-      text-align: center;
-      
-      &:before {
-        content: "\f0c9";
-        font-family: FontAwesome;
+    // Centered responsive navigation
+    .nav-responsive-center {
+      &.naver .naver-handle {
         text-align: center;
+        
+        &:before {
+          content: "\f0c9";
+          font-family: FontAwesome;
+          text-align: center;
+        }
       }
-    }
-    
-    &.nav-responsive-text.naver {
-      .naver-handle:before { content: "\f0c9 \00a0"; }
       
-      .naver-container:after {
-        clear: both;
-        content: ".";
-        display: block;
-        height: 0;
-        line-height: 0;
-        text-align: center;
-        visibility: hidden;
+      &.nav-responsive-text.naver {
+        .naver-handle:before { content: "\f0c9 \00a0"; }
+        
+        .naver-container:after {
+          clear: both;
+          content: ".";
+          display: block;
+          height: 0;
+          line-height: 0;
+          text-align: center;
+          visibility: hidden;
+        }
       }
     }
   }

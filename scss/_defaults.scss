@@ -159,21 +159,22 @@ $use-headings:    true !default;
 $use-blockquotes: true !default;
 $use-lists:       true !default;
 $use-tables:      true !default;
+  $use-table-styles: true !default;
 $use-forms:       true !default;
+  $use-form-styles:  true !default;
 $use-grid:        true !default;
-  // Using push and pull classes for grid
-  // columns takes a lot of code. Set to
-  // `true` if needed.
   $use-push:	  false !default;
   $use-pull:	  false !default;
 
   
 // Objects
-$use-colors:      true !default;
+$use-type-colors: true !default;
+$use-bg-colors:   true !default;
 $use-buttons:     true !default;
 $use-groups:      true !default;
 $use-dropdowns:   true !default;
 $use-navigation:  true !default;
+  $use-responsive-navigation: true !default;
 $use-breadcrumbs: true !default;
 $use-wells:       true !default;
 $use-badges:      true !default;
