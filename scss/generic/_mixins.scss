@@ -1,6 +1,37 @@
+//------------------------------------
+//  FUNCTIONS
+//------------------------------------
+
 //
-// Passing in a single value will create font-sizing in
-// pixels, rems as well as a proper line-height.
+// Calculates proper rem font-size given
+// a pixel amount.
+//
+@function calculate-rem($font-size) {
+  $rem-size: ($font-size / $base-font-size) * 1rem;
+  @return $rem-size;
+}
+
+
+//
+// Calculates proper line-height given a
+// font-size to maintain vertical rhythm.
+//
+@function calculate-line-height($font-size) {
+  $line-height-size: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+  @return $line-height-size;
+}
+
+
+
+
+//------------------------------------
+//  MIXINS
+//------------------------------------
+
+//
+// Uses `calculate-rem()` to calculate rem font-size and px
+// fallback. line-height is calculated with `calculate-line-height()`
+// but passing `false` will prevent that.
 //
 //  `@include font-size(24px);`
 //
@@ -8,14 +39,11 @@
 // Big thanks to inuitcss for inspiration behind this
 // (https://github.com/csswizardry/inuit.css/blob/master/generic/_mixins.scss)
 @mixin font-size($font-size, $line-height: true) {
-  $rem-size: ($font-size / $base-font-size) * 1rem;
-  $line-height-size: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
-  
   font-size: $font-size;
-  font-size: $rem-size;
+  font-size: calculate-rem($font-size);
 
   @if $line-height == true {
-    line-height: $line-height-size;
+    line-height: calculate-line-height($font-size);
   }
 }
 
