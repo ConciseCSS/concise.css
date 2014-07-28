@@ -7,3 +7,9 @@ koala-config.json
 /fonts
 /less
 /stylus
+
+# Dependencies
+/node_modules
+
+# Sass cache
+/.sass-cache
