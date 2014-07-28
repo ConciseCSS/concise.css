@@ -1,14 +1,16 @@
 /**
- * Gulpfile.js - concise.css builder.
+ * Gulpfile.js - Concise builder
  *
  * (c) 2014 Contributors.
  * Released under the MIT license.
  */
 
+
 'use strict';
 
+
 /**
- * Dependencies.
+ * Dependencies
  */
 
 var gulp = require('gulp');
@@ -16,8 +18,9 @@ var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
+
 /**
- * Const.
+ * Constants
  */
 
 var AUTOPREFIXER_BROWSERS = [
@@ -46,16 +49,17 @@ var BANNER = [
 var pkg = require('./package');
 var BANNER_SETTINGS = { pkg: pkg, date: new Date().getFullYear() };
 
+
 /**
- * Distribute SCSS and js files.
+ * Distribute SCSS and JS files
  */
 
-// css
+// CSS
 gulp.task('dist:css', function () {
   return gulp.src('scss/concise.scss')
     .pipe($.rubySass({
       style: 'expanded',
-      precision: 10, // I don't know what does it mean, taken from web-starter-kit :D
+      precision: 10, // I don't know what it means; taken from web-starter-kit :D
       loadPath: ['scss']
     }))
     .on('error', function (e) { console.error(e.message) })
@@ -66,9 +70,9 @@ gulp.task('dist:css', function () {
     .pipe($.size({ title: 'dist:css' }))
 });
 
-//js
+// JS
 gulp.task('dist:js', function () {
-  return gulp.src('js/*.js') // Set array of files in order U need.
+  return gulp.src('js/*.js') // Set array of files in the order you need
     .pipe($.concat('concise.js'))
     .pipe($.header(BANNER, BANNER_SETTINGS))
     .pipe(reload({ stream: true }))
@@ -78,11 +82,12 @@ gulp.task('dist:js', function () {
 
 gulp.task('dist', ['dist:css', 'dist:js']);
 
+
 /**
- * Minify.
+ * Minify
  */
 
-// css
+// CSS
 gulp.task('minify:css', function () {
   return gulp.src('dist/css/concise.css')
     .pipe($.csso())
@@ -92,7 +97,7 @@ gulp.task('minify:css', function () {
     .pipe($.size({ title: 'dist:min:css' }))
 });
 
-// js
+// JS
 gulp.task('minify:js', function () {
   return gulp.src('dist/js/concise.js')
     .pipe($.uglify())
@@ -103,11 +108,12 @@ gulp.task('minify:js', function () {
 
 gulp.task('minify', ['minify:css', 'minify:js']);
 
+
 /**
- * Linting.
+ * Linting
  */
 
-// js
+// JS
 gulp.task('lint:js', function () {
   return gulp.src('js/*.js')
     .pipe($.cached('lint'))
@@ -118,8 +124,9 @@ gulp.task('lint:js', function () {
 
 gulp.task('lint', ['lint:js']);
 
+
 /**
- * Check js style.
+ * Check JS style
  */
 
 gulp.task('jscs', function () {
@@ -128,8 +135,9 @@ gulp.task('jscs', function () {
     .pipe($.jscs())
 });
 
+
 /**
- * Watch for changes.
+ * Watch for changes
  */
 
 gulp.task('watch', function () {
@@ -137,9 +145,10 @@ gulp.task('watch', function () {
   gulp.watch('js/**/*.js', ['lint:js', 'jscs', 'dist:js']);
 });
 
+
 /**
- * Serve.
- * Creating autoreload page.
+ * Serve
+ * Creating autoreload page
  */
 
 gulp.task('serve', ['watch'], function () {
@@ -151,8 +160,9 @@ gulp.task('serve', ['watch'], function () {
   });
 });
 
+
 /**
- * Default.
+ * Default
  */
 
 gulp.task('default', ['lint', 'jscs', 'dist', 'minify']);
