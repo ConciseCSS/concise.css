@@ -47,24 +47,35 @@
   }
 }
 
-
 //
 // Proper vendor prefixes are created just by
 // passing a property value and size value.
 //
-//  `@include vendor(border-radius, 4px);`
+//  `@include vendor(border-radius, 4px, webkit moz official)`
 //
-//
-// Thanks to inuitcss for this handy mixin
-// (https://github.com/csswizardry/inuit.css/blob/master/generic/_mixins.scss)
-@mixin vendor($property, $value...) {
-  -webkit-#{$property}: $value;
-  -moz-#{$property}: $value;
-  -ms-#{$property}: $value;
-  -o-#{$property}: $value;
-  #{$property}: $value;
-}
+@mixin vendor($property, $value, $vendors) {
+  @each $vendor in $vendors {
+    @if ($vendor == 'webkit') {
+      -webkit-#{$property}: $value;
+    }
 
+    @if ($vendor == 'moz') {
+      -moz-#{$property}: $value;
+    }
+
+    @if ($vendor == 'ms') {
+      -ms-#{$property}: $value;
+    }
+
+    @if ($vendor == 'o') {
+      -o-#{$property}: $value;
+    }
+
+    @if ($vendor == 'official') {
+      $property: $value;
+    }
+  }
+}
 
 //
 // By passing in one of the pre-defined media queries that
@@ -104,7 +115,6 @@
   }
 }
 
-
 //
 // Create variable-number grid columns given the value
 // for variable `$column-number`
@@ -125,7 +135,6 @@
     }
   }
 }
-
 
 //
 // Create proper `.push-` classes given the value
