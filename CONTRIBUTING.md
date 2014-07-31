@@ -53,6 +53,10 @@ If you are unsure of whether or not your feature would be a good fit for the fra
 
 Consistency is great, especially when writing code. Here we have a few simple guidelines to follow if you are going to be contributing to Concise.
 
+## Editorconfig
+
+Concise.CSS project has a `.editorconfig` file, you can install [Editorconfig](http://editorconfig.org/) plugin in your code editor and It will help You to keep your editor configured with our code style.
+
 ## HTML
 
 [Follow @mdo's Code Guide](http://codeguide.co/#html)
