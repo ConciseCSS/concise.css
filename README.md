@@ -8,11 +8,11 @@ Concise is a lightweight, front-end framework that provides a number of great fe
 
 It's easy to get started with Concise:
 
-- Use [Concise Generator](https://github.com/ConciseCSS/concise-generator) - _Experimental version_
 - [Download the latest release](https://github.com/ConciseCSS/concise.css/archive/v1.0.0.zip)
 - Clone the repo: `git clone https://github.com/ConciseCSS/concise.css.git`
 - Install with [Bower](http://bower.io/): `bower install concise`
 - Install the [gem](https://github.com/ConciseCSS/concise.css-gem): `$ gem install concisecss`
+- Use [Concise Generator](https://github.com/ConciseCSS/concise-generator) - _Experimental version_
 
 After you download or install the package, [read our quickstart guide](http://concisecss.com/get-started/getting-started.php) to get up and running.
 
