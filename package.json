@@ -5,14 +5,14 @@
   "keywords": [ "css", "js", "scss", "sass", "mobile-first", "responsive", "front-end", "framework", "web" ],
   "license": {
     "type": "MIT",
-    "url": "https://github.com/conciseCSS/concise.css/blob/master/LICENSE"
+    "url": "https://github.com/ConciseCSS/concise.css/blob/master/LICENSE"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/conciseCSS/concise.css.git"
+    "url": "git://github.com/ConciseCSS/concise.css.git"
   },
-  "bugs": "https://github.com/conciseCSS/concise.css/issues",
-  "homepage": "https://github.com/conciseCSS/concise.css",
+  "bugs": "https://github.com/ConciseCSS/concise.css/issues",
+  "homepage": "http://concisecss.com",
   "devDependencies": {
     "browser-sync": "^1.3.0",
     "jshint-stylish": "^0.4.0",
