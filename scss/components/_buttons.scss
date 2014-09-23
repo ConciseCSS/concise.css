@@ -1,0 +1,281 @@
+@if $use-buttons == true {
+  //------------------------------------
+  //  BUTTONS
+  //------------------------------------
+  .btn {
+    background-color: darken($object-ui-color, 15%);
+    border: 0;
+    color: $button-font-color;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1;
+    padding: 0.5em 1em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: baseline;
+    white-space: nowrap;
+
+    -webkit-touch-callout: none;
+
+    @include vendor(user-select, none, webkit ms o official);
+
+    @include vendor(user-drag, none, webkit);
+
+    &::-moz-focus-inner {
+      padding: 0;
+      border: 0;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+    }
+
+    &:hover { background-color: $object-ui-color; }
+
+    &:active { background-color: darken($object-ui-color, 10%); }
+
+    &[disabled] {
+      background: #dededc !important;
+      border: none;
+      color: #b3b3b1;
+      cursor: not-allowed;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: #dededc !important;
+        border: none;
+        color: #b3b3b1;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  a.btn {
+    color: $button-font-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $button-hover-font-color;
+      text-decoration: none;
+    }
+
+    &:active { outline: 0; }
+  }
+
+  input[type="submit"].btn {
+    color: $button-font-color;
+    height: auto;
+  }
+
+  button.btn { color: $button-font-color; }
+
+
+  @if $use-button-colors == true {
+    // Bordered buttons
+    .btn {
+      &.bg-white { color: #333; }
+
+
+      // Bordered
+      &.btn-border {
+        background: transparent;
+        border-color: $object-ui-color;
+        border-style: solid;
+        border-width: 1px;
+        color: #aaa;
+
+        &:hover {
+          background: $object-ui-color;
+          color: #fff !important;
+        }
+
+        &.white {
+          border-color: $bg-white;
+
+          &:hover {
+            background: $bg-white;
+            color: $color-black !important;
+          }
+        }
+      }
+    }
+
+
+    // Bordered white
+    a.btn.btn-border.white:hover {
+      background: $bg-white;
+      color: $color-black !important;
+    }
+
+    .btn.btn-border.white,
+    a.btn.btn-border.white { color: $color-white; }
+
+    .btn.btn-border {
+      &.white {
+        &:active, &:focus { background-color: $object-ui-color; }
+      }
+
+
+      // Bordered black
+      &.black {
+        border-color: $bg-black;
+        color: $color-black;
+
+        &:hover { background-color: $bg-black; }
+
+        &:active, &:focus { background-color: $bg-black; }
+      }
+
+
+      // Bordered gray
+      &.gray {
+        border-color: $bg-gray;
+        color: $color-gray;
+
+        &:hover { background-color: $bg-gray; }
+
+        &:active, &:focus { background-color: darken($bg-gray, 15%); }
+      }
+
+
+      // Bordered green
+      &.green {
+        border-color: $bg-green;
+        color: $color-green;
+
+        &:hover { background-color: $bg-green; }
+
+        &:active, &:focus { background-color: darken($bg-green, 15%); }
+      }
+
+
+      // Bordered blue
+      &.blue {
+        border-color: $bg-blue;
+        color: $color-blue;
+
+        &:hover { background-color: $bg-blue; }
+
+        &:active, &:focus { background-color: darken($bg-blue, 15%); }
+      }
+
+
+      // Bordered yellow
+      &.yellow {
+        border-color: $bg-yellow;
+        color: $color-yellow;
+
+        &:hover { background-color: $bg-yellow; }
+
+        &:active, &:focus { background-color: darken($bg-yellow, 15%); }
+      }
+
+
+      // Bordered red
+      &.red {
+        border-color: $bg-red;
+        color: $color-red;
+
+        &:hover { background-color: $bg-red; }
+
+        &:active, &:focus { background-color: darken($bg-red, 15%); }
+      }
+    }
+  }
+
+
+  @if $use-button-styles == true {
+    // Full-width collapsed button
+    .btn-collapse-full {
+      display: block;
+      margin: 12px 0;
+      width: 100%;
+    }
+
+    @include breakpoint(extra-small) {
+      .btn-collapse-full {
+        display: inline-block;
+        margin: 0;
+        width: auto;
+      }
+    }
+
+
+    // Button sizes
+    @include breakpoint(small) {
+      .btn-extra-small,
+      a.btn-extra-small,
+      p.btn-extra-small,
+      input.btn-extra-small { @include font-size(11px); }
+
+      .btn-small,
+      a.btn-small,
+      p.btn-small,
+      input.btn-small { @include font-size(12px); }
+
+      .btn-large,
+      a.btn-large,
+      p.btn-large,
+      input.btn-large {
+        @include font-size(18px);
+        padding: 1em 2em;
+      }
+
+      .btn-extra-large,
+      a.btn-extra-large,
+      p.btn-extra-large,
+      input.btn-extra-large {
+        @include font-size(24px);
+        padding: 1em 2em;
+      }
+    }
+
+    // Dropdowns
+    .btn.dropdown {
+      width: 100%;
+
+      .dropdown-menu {
+        margin-top: auto;
+        text-align: left;
+        top: 100%;
+        width: 100%;
+      }
+
+      &[class*='dropdown-arrow-'] .dropdown-menu { margin-top: 10px; }
+
+      &.up {
+        .dropdown-menu {
+          margin-bottom: 0px;
+          top: auto;
+        }
+
+        &[class*='dropdown-arrow-'] .dropdown-menu { margin-bottom: 10px; }
+      }
+    }
+
+    @include breakpoint(small) {
+      .btn-extra-small .caret,
+      .btn-small .caret {
+        border-top: 4px solid;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+      }
+
+      .btn.dropdown {
+        width: auto;
+
+        &.extra-small .dropdown-menu { margin-top: 6px; }
+
+        &.dropdown-small .dropdown-menu { margin-top: 11px; }
+
+        &.dropdown-large .dropdown-menu { margin-top: 21px; }
+      }
+    }
+  }
+}

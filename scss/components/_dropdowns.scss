@@ -9,8 +9,8 @@
     width: auto;
     
     .dropdown-menu {
-      background-color: #fff;
-      border: 1px solid #eee;
+      background-color: $dropdown-bg-color;
+      border: 1px solid $dropdown-border-color;
       border-radius: inherit;
       font-weight: inherit;
       left: 0;
@@ -22,7 +22,7 @@
       text-transform: none;
       z-index: 99999;
       
-      @include vendor(transition, all 0.3s ease-in);
+      @include vendor(transition, all 0.3s ease-in, ms official);
       
       a { text-decoration: none; }
       
@@ -56,7 +56,7 @@
         display: block;
         padding: 5px 10px;
         
-        @include vendor(transition, all 0.3s ease-out);
+        @include vendor(transition, all 0.3s ease-out, ms official);
       }
       
       
@@ -67,7 +67,7 @@
         &:last-of-type { border-radius: 0 0 $border-radius $border-radius; }
       }
       
-      li:hover { background-color: #f3f8f8; }
+      li:hover { background-color: $dropdown-hover-color; }
     }
     
     &.dropdown-active .dropdown-menu {
@@ -76,7 +76,7 @@
     }
     
     .header {
-      color: #aaa;
+      color: $dropdown-header-color;
       cursor: default;
       font-size: 14px;
       font-size: 0.9rem;
@@ -114,7 +114,7 @@
       margin-top: 10px;
       
       &:after {
-        border-color: #fff transparent;
+        border-color: $dropdown-bg-color transparent;
         border-style: solid;
         bottom: 100%;
         border-width: 0 6px 6px 6px;

@@ -1,22 +1,27 @@
-// Thanks to inuitcss (https://github.com/csswizardry/inuit.css/blob/master/_defaults.scss) 
-// for the inspiration to create a default file for variables
-
-
-
-
 //------------------------------------
 //  BASE
 //------------------------------------
 
+// Website background (can use color or image)
+$website-bg-color: #ffffff !default;
+
+
+// Enable font smoothing?
+$enable-font-smoothing: true !default;
+
+
 // Base font sizes and colors
-$base-font-size:    16px !default;
-$base-line-height:  24px !default;
-$base-font-color:   #333333 !default;
-$base-link-color:   #62b3e7 !default;
+$base-font-size:     16px !default;
+$base-line-height:   24px !default;
+$base-font-color:    #333333 !default;
+$base-link-color:    #62b3e7 !default;
+$base-heading-color: #181818 !default;
 
 
 // Base font-family
 $base-font-family: "Droid Sans", Helvetica, Arial, sans-serif !default;
+$base-heading-font-family: "Droid Sans", Helvetica, Arial, sans-serif !default;
+$base-print-font-family: Georgia, "Times New Roman", Times, serif !default;
 
 
 // Element spacing and line-height ratio
@@ -24,7 +29,7 @@ $base-spacing-unit: $base-line-height !default;
 $half-spacing-unit: $base-spacing-unit / 2 !default;
 $line-height-ratio: $base-line-height / $base-font-size;
 
- 
+
 
 
 //------------------------------------
@@ -93,25 +98,38 @@ $color-yellow: #c09853 !default;
 
 
 // Selection colors
-$selection-background: #666666 !default;
-$selection-color:      #ffffff !default;
+$selection-background:  #666666 !default;
+$selection-color:       #ffffff !default;
 
 
 // Form placeholder colors
-$placeholder-color: #bbbbbb !default;
+$placeholder-color:     #bbbbbb !default;
 
 
 // Colors used for our objects' borders, etc
-$object-ui-color: #ededed !default;
- 
+$object-ui-color:       #ededed !default;
+
+
+// Dropdown colors
+$dropdown-bg-color:     #ffffff !default;
+$dropdown-border-color: #ededed !default;
+$dropdown-hover-color:  #f3f8f8 !default;
+$dropdown-header-color: #aaaaaa !default;
+
+
+
+// Button font color
+$button-font-color:       #ffffff !default;
+$button-hover-font-color: #ffffff !default;
+
 
 
 
 //------------------------------------
-//  OBJECTS
+//  Components
 //------------------------------------
 
-// Gutter size 
+// Gutter size
 $gutters: 2% !default;
 
 
@@ -120,13 +138,17 @@ $gutters: 2% !default;
 $column-prefix: 'column-' !default;
 
 
-// Dictate how many columns you would like your 
+// Dictate how many columns you would like your
 // grid system to use. Default is 16.
-$column-number:  16 !default; 
+$column-number:  16 !default;
 
 
 // Border radius value for `.border-radius` class
 $border-radius: 4px !default;
+
+
+// Border radius value for `.pill` class
+$pill-border-radius: 25px !default;
 
 
 
@@ -138,16 +160,16 @@ $border-radius: 4px !default;
 // Set whatever components you want included
 // in your project to `true` and any components
 // you do not wish to be included to `false`
-// 
-// Thanks to inuitcss (https://github.com/csswizardry/inuit.css/blob/master/_defaults.scss) 
+//
+// Thanks to inuitcss (https://github.com/csswizardry/inuit.css/blob/master/_defaults.scss)
 // for the idea to use feature switches in a framework. It's an absolutely brilliant idea
 // that makes customization so much easier.
 
 
 // Utility
-$use-normalize:   true !default;
-$use-clearfix:    true !default;
-$use-shared:      true !default;
+$use-normalize:       true !default;
+$use-clearfix:        true !default;
+$use-vertical-rhythm: true !default;
 
 
 // Base
@@ -156,8 +178,8 @@ $use-selection:      true !default;
 $use-container:      true !default;
 $use-typography:     true !default;
 $use-headings:       true !default;
-$use-blockquotes:    true !default;
 $use-lists:          true !default;
+  $use-list-styles:  true !default;
 $use-tables:         true !default;
   $use-table-styles: true !default;
 $use-forms:          true !default;
@@ -166,19 +188,17 @@ $use-grid:           true !default;
   $use-push:	       false !default;
   $use-pull:	       false !default;
 
-  
-// Objects
+
+// Components
 $use-type-colors:             true !default;
 $use-bg-colors:               true !default;
 $use-buttons:                 true !default;
-$use-groups:                  true !default;
+  $use-button-colors:         true !default;
+  $use-button-styles:         true !default;
 $use-dropdowns:               true !default;
 $use-navigation:              true !default;
+  $use-navigation-styles:     true !default;
   $use-responsive-navigation: true !default;
-$use-breadcrumbs:             true !default;
-$use-wells:                   true !default;
-$use-badges:                  true !default;
-$use-progress:                true !default;
 
 
 // Helpers

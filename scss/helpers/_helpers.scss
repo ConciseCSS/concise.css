@@ -2,6 +2,7 @@
   //------------------------------------
   //  HELPER
   //------------------------------------
+  
   // Add/remove floats
   .float-left { float: left !important; }
 
@@ -23,9 +24,7 @@
 
 
   // Displaying content
-  .inline { display: block; }
-
-  @include breakpoint(extra-small) { .inline { display: inline; } }
+  .inline { display: inline; }
 
   .show {
     display: block;
@@ -50,9 +49,9 @@
 
 
   // Full-width elements
-  .full { width: 100%; }
+  .full-width { width: 100%; }
 
-  img.full { 
+  img.full-width {
     max-width: 100%;
     height: auto;
     display: block;
@@ -86,7 +85,7 @@
   .amp { font: italic 110% Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", serif !important; }
 
 
-  // Hide text 
+  // Hide text
   .text-hide {
     border: 0;
     background-color: transparent;
@@ -110,8 +109,8 @@
 
   // Border radius
   .border-radius { border-radius: $border-radius; }
-  
-  
+
+
   // Pill style
-  .pill { border-radius: 25px; }
+  .pill { border-radius: $pill-border-radius; }
 }

@@ -7,12 +7,12 @@
   input, 
   select, 
   textarea {
-    border: 1px solid #ddd;
+    border: 1px solid $object-ui-color;
     height: 37px;
     padding: 5px;
     width: 100%;
     
-    @include vendor(box-sizing, border-box);
+    @include vendor(box-sizing, border-box, official);
   }
 
   @include breakpoint(extra-small) { 
@@ -64,7 +64,7 @@
   textarea[disabled] { background-color: #f6f6f6; }
 
   fieldset {
-    border: 1px solid #ededed;
+    border: 1px solid $object-ui-color;
     padding: 10px 25px;
     
     legend {
@@ -76,14 +76,6 @@
 
 
   @if $use-form-styles == true {
-    // Validation
-    input.required:required:valid, 
-    textarea.required:required:valid { border-color: #2ecc71; }
-
-    input.required:focus:invalid, 
-    textarea.required:focus:invalid { border-color: #e74c3c; }
-
-
     // Block-level form items
     .form-item {
       display: block;

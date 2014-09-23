@@ -8,13 +8,13 @@ Concise is a lightweight, front-end framework that provides a number of great fe
 
 It's easy to get started with Concise:
 
-- [Download the latest release](https://github.com/ConciseCSS/concise.css/archive/v1.0.0.zip)
+- [Download the latest release](https://github.com/ConciseCSS/concise.css/archive/v2.0.0.zip)
 - Clone the repo: `git clone https://github.com/ConciseCSS/concise.css.git`
 - Install with [Bower](http://bower.io/): `bower install concise`
 - Install the [gem](https://github.com/ConciseCSS/concise.css-gem): `$ gem install concisecss`
 - Use [Concise Generator](https://github.com/ConciseCSS/concise-generator) - _Experimental version_
 
-After you download or install the package, [read our quickstart guide](http://concisecss.com/get-started/getting-started.php) to get up and running.
+After you download or install the package, [read our quickstart guide](http://concisecss.com/get-started/getting-started) to get up and running.
 
 ## Documentation
 
@@ -73,12 +73,22 @@ Concise is currently maintained under the [Semantic Versioning guidelines](http:
 - Inspiration for some of the features in Concise came from [Harry Roberts'](http://csswizardry.com/) own front-end framework, [inuitcss](https://github.com/csswizardry/inuit.css).
 - Jonathan Snook's book on [Scalable and Modular CSS](https://smacss.com/) (SMACSS) is a great read and offered insight into writing modular CSS, which helped in the development of Concise.
 
-## Creator
+## Contributors
 
 **Keenan Payne**
 - [Website](http://keenanpayne.com)
 - [GitHub](http://github.com/keenanpayne)
 - [Twitter](http://twitter.com/keenan_payne)
+
+**Filipe**
+- [Website]()
+- [GitHub]()
+- [Twitter]()
+
+**Benjamin **
+- [Website]()
+- [GitHub]()
+- [Twitter]()
 
 ## Elsewhere
 
@@ -89,5 +99,3 @@ Concise is currently maintained under the [Semantic Versioning guidelines](http:
 ## License
 
 Code released under the [MIT license](https://github.com/ConciseCSS/concise.css/blob/master/LICENSE). Documentation released under [Creative Commons](http://creativecommons.org/licenses/by-sa/4.0/).
-
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/47ac30b8ba5ef2abdcef2f2f855c5f7c "githalytics.com")](http://githalytics.com/ConciseCSS/concise.css)

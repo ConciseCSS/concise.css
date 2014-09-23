@@ -2,30 +2,32 @@
   //------------------------------------
   //  MAIN
   //------------------------------------
-  
+
   // Variables
-  $font-size: #{($base-font-size/16px)*1em};
+  $font-size: #{($base-font-size / 16px) * 1em};
   $line-height-integer: #{$line-height-ratio};
-  
+
   *{
     &,
     &:before,
     &:after {
-      @include vendor(box-sizing, border-box);
+      @include vendor(box-sizing, border-box, official);
     }
   }
-  
-  html, 
+
+  html,
   body {
-    background-color: #fff;
+    background-color: $website-bg-color;
     color: $base-font-color;
     font: normal normal $font-size/$line-height-integer $base-font-family;
     margin: 0;
-    
-    font-smooth: always;
-    
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
+
+    @if $enable-font-smoothing == true {
+      font-smooth: always;
+
+      -webkit-font-smoothing: antialiased;
+      -moz-font-smoothing: antialiased;
+    }
   }
 
   html[dir="rtl"] { direction: rtl; }

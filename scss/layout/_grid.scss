@@ -13,7 +13,7 @@
   }
 
   [class*='#{$column-prefix}'] {
-    @include vendor(background-clip, padding-box !important);
+    @include vendor(background-clip, padding-box !important, official);
     
     &.right { float: right; }
     

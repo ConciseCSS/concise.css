@@ -1,0 +1,8 @@
+@if $use-container == true {
+  //------------------------------------
+  //  CONTAINER
+  //------------------------------------
+  .container {
+    @include container();
+  }
+}

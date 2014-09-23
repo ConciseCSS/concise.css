@@ -4,7 +4,7 @@
   //------------------------------------ 
   html {
     font-size: 100%;
-    @include vendor(text-size-adjust, 100%);
+    @include vendor(text-size-adjust, 100%, webkit moz ms o official);
   }
 
   article,
@@ -84,7 +84,7 @@
     clear: both;
     height: 0;
     
-    @include vendor(box-sizing, content-box);
+    @include vendor(box-sizing, content-box, official);
   }
 
   pre {
@@ -162,7 +162,7 @@
     
     &[type="search"] {
       -webkit-appearance: textfield;    
-      @include vendor(box-sizing, content-box);
+      @include vendor(box-sizing, content-box, official);
       
       &::-webkit-search-cancel-button, 
       &::-webkit-search-decoration { -webkit-appearance: none; }

@@ -8,53 +8,53 @@
  * http://opensource.org/licenses/MIT
  *
  */
- 
- 
- 
+
+
+
 
 //------------------------------------
-//  IMPORTS  
-//------------------------------------ 
-// Generic utility styles
-@import "defaults";
-@import "generic/mixins";
-@import "generic/normalize";
-@import "generic/clearfix";
-@import "generic/shared";
+//  IMPORTS
+//------------------------------------
+// Utility helpers
+@import "helpers/variables";
+@import "helpers/functions";
+@import "helpers/mixins";
+@import "helpers/normalize";
+@import "helpers/clearfix";
 
 
 
 
 // Base styles
 @import "base/main";
+@import "base/vertical-rhythm";
 @import "base/selection";
-@import "base/container";
 @import "base/type";
 @import "base/headings";
-@import "base/blockquotes";
-@import "base/lists";
-@import "base/tables";
-@import "base/forms";
-@import "base/grid";
 
 
 
 
-// Objects and abstractions
-@import "objects/colors";
-@import "objects/buttons";
-@import "objects/groups";
-@import "objects/dropdowns";
-@import "objects/navigation";
-@import "objects/breadcrumbs";
-@import "objects/wells";
-@import "objects/badges";
-@import "objects/progress";
+// Layout styles
+@import "layout/container";
+@import "layout/grid";
+@import "layout/lists";
+@import "layout/forms";
+@import "layout/tables";
 
 
 
 
-// Helper classes
-@import "generic/helper";
-@import "generic/conditional";
-@import "generic/print";
+// Component styles
+@import "components/colors";
+@import "components/buttons";
+@import "components/dropdowns";
+@import "components/navigation";
+
+
+
+
+// Helpers
+@import "helpers/helpers";
+@import "helpers/conditional";
+@import "base/print";

@@ -1,0 +1,275 @@
+//------------------------------------
+//  MIXINS
+//------------------------------------
+
+//
+// Uses `calculate-rem()` to calculate rem font-size and px
+// fallback. line-height is calculated with `calculate-line-height()`
+// but passing `false` will prevent that.
+//
+//  `@include font-size(24px);`
+//
+//
+// Big thanks to inuitcss for inspiration behind this
+// (https://github.com/csswizardry/inuit.css/blob/master/generic/_mixins.scss)
+@mixin font-size($font-size, $line-height: true) {
+  font-size: $font-size;
+  font-size: calculate-rem($font-size);
+
+  @if $line-height == true {
+    line-height: calculate-line-height($font-size);
+  }
+}
+
+
+//
+// Proper vendor prefixes are created by passing
+// a property, property value, and browser
+// vendor (webkit, moz, ms, o, etc).
+//
+//  `@include vendor(border-radius, 4px, webkit moz ms)`
+//
+//
+@mixin vendor($property, $value, $vendors: "") {
+  @each $vendor in $vendors {
+    @if $vendor != "" {
+      -#{$vendor}-#{$property}: $value;
+    }
+  }
+
+  #{$property}: $value;
+}
+
+
+//
+// By passing in one of the pre-defined media queries that
+// are packaged with Concise by default, you can easily
+// create styles that are built from the ground-up to be
+// mobile friendly.
+//
+//  `@include breakpoint(extra-small) { ... }`
+//
+//
+@mixin breakpoint($point) {
+  @if $point == extra-small {
+    @media (min-width: $extra-small-start)  { @content; }
+  }
+
+  @else if $point == small {
+    @media (min-width: $small-start)  { @content; }
+  }
+
+  @else if $point == medium {
+    @media (min-width: $medium-start) { @content; }
+  }
+
+  @else if $point == large {
+    @media (min-width: $large-start) { @content; }
+  }
+
+  @else if $point == extra-large {
+    @media (min-width: $extra-large-start) { @content; }
+  }
+
+  @else if $point == high-density {
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+           only screen and (min--moz-device-pixel-ratio: 1.5),
+           only screen and (-o-min-device-pixel-ratio: 3/2),
+           only screen and (min-device-pixel-ratio: 1.5) { @content; }
+  } @else {
+    @media (min-width: $point) { @content; }
+  }
+}
+
+
+//
+// Create variable-number grid columns given the value
+// for variable `$column-number`
+//
+@mixin grid-setup($number: $column-number) {
+  // Assign percentage-based widths for columns
+  @for $i from 1 through $number {
+    .#{$column-prefix + $i} { width: 100% / $number * $i; }
+  }
+
+  @for $i from 1 through $number {
+    // Style all but the last column
+    $width-of-column: (100% - $gutters * ($number - 1)) / $number;
+
+    .gutters .#{$column-prefix + $i} {
+      width: $width-of-column * $i + $gutters * ($i - 1);
+    }
+  }
+}
+
+
+//
+// Create `.push-` classes given the value
+// for variable `$column-number`
+//
+@mixin push-setup($number: $column-number) {
+  @for $i from 1 to $number {
+    .push-#{$i} { left: 100% / $number * $i; }
+  }
+
+  @for $i from 1 to $number {
+    .gutters .push-#{$i} { left: 100% / $number * $i - $gutters; }
+  }
+}
+
+
+//
+// Create `.pull-` classes given the value
+// for variable `$column-number`
+//
+@mixin pull-setup($number: $column-number) {
+  @for $i from 1 to $number {
+    .pull-#{$i} { right: 100% / $number * $i; }
+  }
+
+  @for $i from 1 to $number {
+    .gutters .pull-#{$i} { right: 100% / $number * $i - $gutters; }
+  }
+}
+
+
+//
+// Generates CSS to wrap semantic columns
+// in a row.
+//
+//  `@include row()`
+//
+//
+@mixin row() {
+  width: 100%;
+
+  &:after {
+    clear: both;
+    content: " ";
+    display: table;
+  }
+}
+
+
+//
+// Generates CSS for semantic columns.
+// Mixin parameters are as follows:
+//
+//   $column: the number of this particular column (determines width)
+//   $number-columns: number of columns in the row (default is `$column-number`)
+//   $use-gutters: set to `true` if you want column gutters (default is false)
+//   $gutter-value: percentage value of the gutters to be applied (default is `$gutters` variable)
+//
+//  `@include column(16, 4, true, 4)`
+//
+//
+@mixin column($column, $number-columns: $column-number, $use-gutters: false, $gutter-value: strip-units($gutters)) {
+  @include vendor(background-clip, padding-box !important, webkit);
+
+  @include breakpoint(small) {
+    @if $use-gutters == true {
+      // Gutter size
+      $gutter-size: percentage($gutter-value) * 0.01;
+
+      // Column width
+      $width-of-column: (100% - $gutter-size * ($number-columns - 1)) / $number-columns;
+
+      float: left;
+      margin-left: $gutter-size;
+      width: $width-of-column * $column + $gutter-size * ($column - 1);
+
+      &:first-child { margin-left: 0; }
+
+      &:first-of-type { margin-left: 0; }
+    } @else {
+      float: left;
+      width: percentage(100 / $number-columns * $column) * .01;
+    }
+  }
+}
+
+
+//
+// Generates CSS for pushing a semantic
+// column left.
+//
+//   $column-width: the width of the column
+//   $use-gutters: set to `true` if your column has gutters (default is false)
+//   $gutter-value: percentage value of the gutters to be applied (default is `$gutters` variable)
+//
+//  `@include push(16, true)`
+//
+//
+@mixin push($column-width: $column-number, $use-gutters: false, $gutter-value: strip-units($gutters)) {
+  @if $use-gutters == true {
+    left: 100% / $column-width * $i - $gutters;
+  } @else {
+    left: 100% / $column-width * $i;
+  }
+}
+
+
+//
+// Generates CSS for pushing a semantic
+// column right.
+//
+//   $column-width: the number of this particular column (determines width)
+//   $use-gutters: set to `true` if your column has gutters (default is false)
+//   $gutter-value: percentage value of the gutters to be applied (default is `$gutters` variable)
+//
+//  `@include pull(16, true)`
+//
+//
+@mixin pull($column-width: $column-number, $use-gutters: false, $gutter-value: strip-units($gutters)) {
+  @if $use-gutters == true {
+    right: 100% / $column-width * $i - $gutters;
+  } @else {
+    right: 100% / $column-width * $i;
+  }
+}
+
+
+//
+// Generates CSS for a responsive content container.
+//
+//   $extra-small-size:  (default is 90%)
+//   $small-size:  (default is 620px)
+//   $medium-size:  (default is 768px)
+//   $large-size:  (default is 960px)
+//   $extra-large-size:  (default is 1140px)
+//
+//  `@include container()`
+//
+//
+@mixin container($extra-small-size: 90%, $small-size: 620px, $medium-size: 768px, $large-size: 960px, $extra-large-size: 1140px) {
+  & {
+    margin: 0 auto;
+    width: $extra-small-size;
+
+    @include breakpoint(small) { & { width: $small-size; } }
+
+    @include breakpoint(medium) { & { width: $medium-size; } }
+
+    @include breakpoint(large) { & { width: $large-size; } }
+
+    @include breakpoint(extra-large) { & { width: $extra-large-size; } }
+  }
+}
+
+
+//
+// Generates CSS that will clear both left
+// and right floats.
+//
+//  `@include clearfix()`
+//
+//
+@mixin clearfix() {
+  & {
+    &:after{
+     content: "";
+     display: table;
+     clear: both;
+    }
+  }
+}
