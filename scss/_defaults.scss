@@ -1,4 +1,4 @@
-// Thanks to inuitcss (https://github.com/csswizardry/inuit.css/blob/master/_defaults.scss) 
+// Thanks to inuitcss (https://github.com/csswizardry/inuit.css/blob/master/_defaults.scss)
 // for the inspiration to create a default file for variables
 
 
@@ -24,7 +24,7 @@ $base-spacing-unit: $base-line-height !default;
 $half-spacing-unit: $base-spacing-unit / 2 !default;
 $line-height-ratio: $base-line-height / $base-font-size;
 
- 
+
 
 
 //------------------------------------
@@ -103,7 +103,7 @@ $placeholder-color: #bbbbbb !default;
 
 // Colors used for our objects' borders, etc
 $object-ui-color: #ededed !default;
- 
+
 
 
 
@@ -111,7 +111,7 @@ $object-ui-color: #ededed !default;
 //  OBJECTS
 //------------------------------------
 
-// Gutter size 
+// Gutter size
 $gutters: 2% !default;
 
 
@@ -120,9 +120,9 @@ $gutters: 2% !default;
 $column-prefix: 'column-' !default;
 
 
-// Dictate how many columns you would like your 
+// Dictate how many columns you would like your
 // grid system to use. Default is 16.
-$column-number:  16 !default; 
+$column-number:  16 !default;
 
 
 // Border radius value for `.border-radius` class
@@ -138,8 +138,8 @@ $border-radius: 4px !default;
 // Set whatever components you want included
 // in your project to `true` and any components
 // you do not wish to be included to `false`
-// 
-// Thanks to inuitcss (https://github.com/csswizardry/inuit.css/blob/master/_defaults.scss) 
+//
+// Thanks to inuitcss (https://github.com/csswizardry/inuit.css/blob/master/_defaults.scss)
 // for the idea to use feature switches in a framework. It's an absolutely brilliant idea
 // that makes customization so much easier.
 
@@ -166,7 +166,7 @@ $use-grid:           true !default;
   $use-push:	       false !default;
   $use-pull:	       false !default;
 
-  
+
 // Objects
 $use-type-colors:             true !default;
 $use-bg-colors:               true !default;
