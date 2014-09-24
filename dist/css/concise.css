@@ -1356,6 +1356,8 @@ a.btn.btn-border.white {
   background-color: white;
   border: 1px solid #ededed;
   border-radius: inherit;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
   font-weight: inherit;
   left: 0;
   margin-left: 0px;
@@ -1414,14 +1416,14 @@ a.btn.btn-border.white {
   background-color: #f3f8f8;
 }
 .dropdown.dropdown-active .dropdown-menu {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
   opacity: 1;
   pointer-events: auto;
 }
-.dropdown .header {
+.dropdown .dropdown-header {
   color: #aaaaaa;
   cursor: default;
-  font-size: 14px;
-  font-size: 0.9rem;
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.71429;
@@ -1443,12 +1445,12 @@ a.btn.btn-border.white {
     width: 100%;
   }
 }
-.dropdown-menu > .header {
+.dropdown-menu > .dropdown-header {
   margin: 0;
 }
 
-.dropdown .header:hover,
-.dropdown li.header:hover {
+.dropdown .dropdown-header:hover,
+.dropdown li.dropdown-header:hover {
   background: none;
 }
 .dropdown .dropdown-menu.border-radius {

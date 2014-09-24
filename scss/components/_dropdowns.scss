@@ -12,8 +12,8 @@
       background-color: $dropdown-bg-color;
       border: 1px solid $dropdown-border-color;
       border-radius: inherit;
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
-      filter: alpha(opacity=0)
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      filter: alpha(opacity=0);
       font-weight: inherit;
       left: 0;
       margin-left: 0px;
@@ -79,11 +79,9 @@
       pointer-events: auto;
     }
 
-    .header {
+    .dropdown-header {
       color: $dropdown-header-color;
       cursor: default;
-      font-size: 14px;
-      font-size: 0.9rem;
       @include font-size(14px);
       margin: 12px 0 0;
       padding: 0 0 0 9px;
@@ -104,11 +102,11 @@
 
 
   // Headers
-  .dropdown-menu > .header { margin: 0; }
+  .dropdown-menu > .dropdown-header { margin: 0; }
 
   .dropdown {
-    .header:hover,
-    li.header:hover { background: none; }
+    .dropdown-header:hover,
+    li.dropdown-header:hover { background: none; }
 
     .dropdown-menu.border-radius { border-radius: $border-radius; }
 
