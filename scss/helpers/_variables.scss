@@ -37,11 +37,13 @@ $line-height-ratio: $base-line-height / $base-font-size;
 //------------------------------------
 
 // Breakpoints
-$extra-small-start: 30em !default;
-$small-start:       48em !default;
-$medium-start:      60em !default;
-$large-start:       70em !default;
-$extra-large-start: 80em !default;
+$breakpoints: (
+  "extra-small": 30em,
+  "small":       48em,
+  "medium":      60em,
+  "large":       70em,
+  "extra-large": 80em
+);
 
 
 
@@ -164,7 +166,6 @@ $pill-border-radius: 25px !default;
 // Thanks to inuitcss (https://github.com/csswizardry/inuit.css/blob/master/_defaults.scss)
 // for the idea to use feature switches in a framework. It's an absolutely brilliant idea
 // that makes customization so much easier.
-
 
 // Utility
 $use-normalize:       true !default;
