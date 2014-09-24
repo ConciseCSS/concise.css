@@ -839,39 +839,6 @@ label {
   display: block;
 }
 
-input,
-select,
-textarea {
-  border: 1px solid #ededed;
-  height: 37px;
-  padding: 5px;
-  width: 100%;
-  -official-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-@media (min-width: 30em) {
-  input,
-  select,
-  textarea {
-    width: 90%;
-  }
-}
-@media (min-width: 48em) {
-  input,
-  select {
-    width: 300px;
-  }
-}
-input:focus,
-select:focus,
-textarea:focus,
-button:focus,
-[contenteditable="true"]:focus {
-  outline: none;
-  outline: thin dotted \9;
-}
-
 textarea {
   height: auto;
 }
@@ -887,25 +854,53 @@ input[disabled] {
   background-color: #f6f6f6;
 }
 
-@media (min-width: 48em) {
-  input[type="submit"] {
-    width: auto;
-  }
-
-  textarea {
-    width: 400px;
-  }
-}
 select[disabled],
 textarea[disabled] {
   background-color: #f6f6f6;
 }
 
-fieldset {
+.form input,
+.form select,
+.form textarea {
+  border: 1px solid #ededed;
+  height: 37px;
+  padding: 5px;
+  width: 100%;
+  -official-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media (min-width: 30em) {
+  .form input,
+  .form select,
+  .form textarea {
+    width: 90%;
+  }
+}
+@media (min-width: 48em) {
+  .form input,
+  .form select {
+    width: 300px;
+  }
+  .form input[type="submit"] {
+    width: auto;
+  }
+  .form textarea {
+    width: 400px;
+  }
+}
+.form input:focus,
+.form select:focus,
+.form textarea:focus,
+.form button:focus,
+.form [contenteditable="true"]:focus {
+  outline: none;
+  outline: thin dotted \9;
+}
+.form fieldset {
   border: 1px solid #ededed;
   padding: 10px 25px;
 }
-fieldset legend {
+.form fieldset legend {
   font-weight: bold;
   font-size: 13px;
   font-size: 0.8125rem;

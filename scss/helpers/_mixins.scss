@@ -7,6 +7,11 @@
 // fallback. line-height is calculated with `calculate-line-height()`
 // but passing `false` will prevent that.
 //
+// Parameters:
+//  $font-size: the font size (in pixels) to be converted to rem
+//  $line-height: set to false if you wish not to output a calculated line-height (defalt is true)
+//
+// Example:
 //  `@include font-size(24px);`
 //
 //
@@ -27,6 +32,12 @@
 // a property, property value, and browser
 // vendor (webkit, moz, ms, o, etc).
 //
+// Parameters:
+//  $property: what CSS property to generate vendor prefixes for
+//  $value: the value of what was defined in `$property`
+//  $vendors: what vendor prefixes to generate (default is none)
+//
+// Example:
 //  `@include vendor(border-radius, 4px, webkit moz ms)`
 //
 //
@@ -42,42 +53,100 @@
 
 
 //
-// By passing in one of the pre-defined media queries that
-// are packaged with Concise by default, you can easily
-// create styles that are built from the ground-up to be
-// mobile friendly.
+// Loops through all of the values in the `$breakpoints`
+// map and outputs conditional statements used to generate
+// media query code.
 //
+// When calling the mixin, if the parameter matches a key
+// from the `breakpoints` map, a media query is output with
+// that key's value. If an explicit value is set (ex: 360px)
+// then a media query is output with that value.
+//
+// Parameters:
+//  $point: the breakpoint value for the media query output.
+//
+// Example:
 //  `@include breakpoint(extra-small) { ... }`
+//
+//  `@include breakpoint(360px) { ... }`
 //
 //
 @mixin breakpoint($point) {
-  @if $point == extra-small {
-    @media (min-width: $extra-small-start)  { @content; }
-  }
-
-  @else if $point == small {
-    @media (min-width: $small-start)  { @content; }
-  }
-
-  @else if $point == medium {
-    @media (min-width: $medium-start) { @content; }
-  }
-
-  @else if $point == large {
-    @media (min-width: $large-start) { @content; }
-  }
-
-  @else if $point == extra-large {
-    @media (min-width: $extra-large-start) { @content; }
-  }
-
-  @else if $point == high-density {
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-           only screen and (min--moz-device-pixel-ratio: 1.5),
-           only screen and (-o-min-device-pixel-ratio: 3/2),
-           only screen and (min-device-pixel-ratio: 1.5) { @content; }
+  @if type-of($point) == string {
+    @each $breakpoint-name, $breakpoint-value in $breakpoints {
+      @if $point == $breakpoint-name {
+        @media (min-width: $breakpoint-value) {
+          @content;
+        }
+      }
+    }
   } @else {
-    @media (min-width: $point) { @content; }
+    @media (min-width: $point) {
+      @content;
+    }
+  }
+}
+
+
+//
+// Generates property media queries for any CSS property,
+// value, and set of breakpoints. Allows you to easily change
+// property values based a set of breakpoints.
+//
+// Parameters:
+//  $properties: what CSS property to output inside of the media queries (can have multiple).
+//  $values: the value for each property (can have multiple).
+//  $responsive-values: what breakpoints to generate media queries for.
+//  $use-available-mixins: whether or not to use mixin outputs for properties like `font-size` or `line-height` (default is true)
+//
+// Example:
+//  @include responsive("font-size", 11px,
+//    (
+//      "small" : 12px,
+//        450px : 13px,
+//       1100px : 14px,
+//      "large" : 15px,
+//       1600px : 16px,
+//    )
+//  );
+//
+//
+@mixin responsive($properties, $values, $responsive-values, $use-available-mixins: true) {
+  @each $property in $properties {
+    @if $property == "font-size" and $use-available-mixins == true {
+      #{$property}: $values;
+      #{$property}: ($values / $base-font-size) * 1rem;
+    } @else if $property == "line-height" and $use-available-mixins == true {
+      #{$property}: ceil($values / $base-line-height) * ($base-line-height / $values);
+    } @else {
+      #{$property}: $values;
+    }
+  }
+
+  @each $breakpoint, $value in $responsive-values {
+    @if type-of($breakpoint) == string {
+      @if(map-has-key($named-breakpoints, $breakpoint)) {
+        $breakpoint: map-get($named-breakpoints, $breakpoint);
+      } @else {
+        $breakpoint: "null";
+        @warn "Couldn't find named breakpoint: " + $breakpoint;
+      }
+    }
+
+    @if $breakpoint != "null" {
+      @media screen and (min-width: $breakpoint) {
+        @each $property in $properties {
+          @if $property == "font-size" and $use-available-mixins == true {
+            #{$property}: #{$value};
+            #{$property}: ($value / $base-font-size) * 1rem;
+          } @else if $property == "line-height" and $use-available-mixins == true {
+            #{$property}: ceil($value / $base-line-height) * ($base-line-height / $value);
+          } @else {
+            #{$property}: #{$value};
+          }
+        }
+      }
+    }
   }
 }
 
@@ -137,6 +206,7 @@
 // Generates CSS to wrap semantic columns
 // in a row.
 //
+// Example:
 //  `@include row()`
 //
 //
@@ -153,13 +223,14 @@
 
 //
 // Generates CSS for semantic columns.
-// Mixin parameters are as follows:
 //
+// Parameters:
 //   $column: the number of this particular column (determines width)
 //   $number-columns: number of columns in the row (default is `$column-number`)
 //   $use-gutters: set to `true` if you want column gutters (default is false)
 //   $gutter-value: percentage value of the gutters to be applied (default is `$gutters` variable)
 //
+// Example:
 //  `@include column(16, 4, true, 4)`
 //
 //
@@ -193,10 +264,12 @@
 // Generates CSS for pushing a semantic
 // column left.
 //
+// Parameters:
 //   $column-width: the width of the column
 //   $use-gutters: set to `true` if your column has gutters (default is false)
 //   $gutter-value: percentage value of the gutters to be applied (default is `$gutters` variable)
 //
+// Example:
 //  `@include push(16, true)`
 //
 //
@@ -213,10 +286,12 @@
 // Generates CSS for pushing a semantic
 // column right.
 //
+// Parameters:
 //   $column-width: the number of this particular column (determines width)
 //   $use-gutters: set to `true` if your column has gutters (default is false)
 //   $gutter-value: percentage value of the gutters to be applied (default is `$gutters` variable)
 //
+// Example:
 //  `@include pull(16, true)`
 //
 //
@@ -232,12 +307,14 @@
 //
 // Generates CSS for a responsive content container.
 //
+// Parameters:
 //   $extra-small-size:  (default is 90%)
 //   $small-size:  (default is 620px)
 //   $medium-size:  (default is 768px)
 //   $large-size:  (default is 960px)
 //   $extra-large-size:  (default is 1140px)
 //
+// Example:
 //  `@include container()`
 //
 //
@@ -261,6 +338,7 @@
 // Generates CSS that will clear both left
 // and right floats.
 //
+// Example:
 //  `@include clearfix()`
 //
 //
