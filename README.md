@@ -81,9 +81,9 @@ Concise is currently maintained under the [Semantic Versioning guidelines](http:
 - [Twitter](http://twitter.com/keenan_payne)
 
 **Filipe**
-- [Website]()
-- [GitHub]()
-- [Twitter]()
+- [Website](http://filipelinhares.com)
+- [GitHub](http://github.com/filipelinhares)
+- [Twitter](http://twitter.com/ofilipelinhares)
 
 **Benjamin **
 - [Website]()
