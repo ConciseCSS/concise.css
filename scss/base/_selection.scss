@@ -7,12 +7,12 @@
       background-color: $selection-background;
       color: $selection-color;
     }
-    
+
     &::-moz-selection {
       background-color: $selection-background;
       color: $selection-color;
     }
-    
+
     &::selection {
       background-color: $selection-background;
       color: $selection-color;
