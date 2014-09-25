@@ -556,6 +556,9 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
   }
 }
 .container {
+  right: 25%;
+}
+.container {
   margin: 0 auto;
   width: 90%;
 }

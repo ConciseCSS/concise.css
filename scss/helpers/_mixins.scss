@@ -265,19 +265,20 @@
 // column left.
 //
 // Parameters:
-//   $column-width: the width of the column
+//   $column: the column number
+//   $number-columns: the number of columns in the row (default is $column-number)
 //   $use-gutters: set to `true` if your column has gutters (default is false)
 //   $gutter-value: percentage value of the gutters to be applied (default is `$gutters` variable)
 //
 // Example:
-//  `@include push(16, true)`
+//  `@include push(4, 16, true)`
 //
 //
-@mixin push($column-width: $column-number, $use-gutters: false, $gutter-value: strip-units($gutters)) {
+@mixin push($column, $number-columns: $column-number, $use-gutters: false, $gutter-value: strip-units($gutters)) {
   @if $use-gutters == true {
-    left: 100% / $column-width * $i - $gutters;
+    left: 100% / $number-columns * $column - $gutter-value;
   } @else {
-    left: 100% / $column-width * $i;
+    left: 100% / $number-columns * $column;
   }
 }
 
@@ -287,19 +288,20 @@
 // column right.
 //
 // Parameters:
-//   $column-width: the number of this particular column (determines width)
+//   $column: the column number
+//   $number-columns: the number of columns in the row (default is $column-number)
 //   $use-gutters: set to `true` if your column has gutters (default is false)
 //   $gutter-value: percentage value of the gutters to be applied (default is `$gutters` variable)
 //
 // Example:
-//  `@include pull(16, true)`
+//  `@include pull(4, 16, true)`
 //
 //
-@mixin pull($column-width: $column-number, $use-gutters: false, $gutter-value: strip-units($gutters)) {
+@mixin pull($column, $number-columns: $column-number, $use-gutters: false, $gutter-value: strip-units($gutters)) {
   @if $use-gutters == true {
-    right: 100% / $column-width * $i - $gutters;
+    right: 100% / $number-columns * $column - $gutter-value;
   } @else {
-    right: 100% / $column-width * $i;
+    right: 100% / $number-columns * $column;
   }
 }
 
