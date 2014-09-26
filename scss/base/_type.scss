@@ -4,10 +4,10 @@
   //------------------------------------
   // Links
   a {
-    color: $base-link-color; 
+    color: $base-link-color;
     text-decoration: none;
-    
-    &:hover, 
+
+    &:hover,
     &:visited {
       color: lighten($base-link-color, 10%);
       cursor: pointer;
@@ -17,19 +17,19 @@
 
   p a {
     line-height: inherit;
-    
+
     &:visited { line-height: inherit; }
   }
 
 
   // Sizing
-  small, 
+  small,
   .small {
-    @include font-size($small-size); 
+    @include font-size($small-size);
   }
 
-  .micro { 
-    @include font-size($micro-size); 
+  .micro {
+    @include font-size($micro-size);
   }
 
 
