@@ -8,6 +8,7 @@
 //
 @function calculate-rem($font-size) {
   $rem-size: ($font-size / $base-font-size) * 1rem;
+
   @return $rem-size;
 }
 
@@ -18,6 +19,7 @@
 //
 @function calculate-line-height($font-size) {
   $line-height-size: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+  
   @return $line-height-size;
 }
 
