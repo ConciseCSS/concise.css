@@ -2,29 +2,28 @@
   //------------------------------------
   //  FORMS
   //------------------------------------
-  label { display: block; }
-
-  textarea { height: auto; }
-
   input {
     &[type="checkbox"],
     &[type="file"],
     &[type="image"],
     &[type="radio"] {
-      background: auto !important;
-      border: auto !important;
-      height: auto !important;
-      width: auto !important;
-    }
-
-    &[disabled] {
-      cursor: not-allowed;
-      background-color: #f6f6f6;
+      background: auto;
+      border: auto;
+      height: auto;
+      width: auto;
     }
   }
 
+  input[disabled],
   select[disabled],
-  textarea[disabled] { background-color: #f6f6f6; }
+  textarea[disabled] {
+    background-color: #f6f6f6;
+    cursor: not-allowed;
+  }
+
+  label { display: block; }
+
+  textarea { height: auto; }
 
 
   @if $use-form-styles == true {
@@ -41,29 +40,24 @@
         @include vendor(box-sizing, border-box, official);
       }
 
+      textarea { height: auto; }
+
       @include breakpoint(extra-small) {
         input,
         select,
-        textarea { width: 90%; }
-      }
+        textarea { width: 300px; }
 
-      @include breakpoint(small) {
-        input,
-        select { width: 300px; }
-
-        input[type="submit"] { width: auto; }
-
-        textarea { width: 400px; }
+        input[type="submit"] {
+          display: block;
+          width: auto;
+        }
       }
 
       input:focus,
       select:focus,
       textarea:focus,
       button:focus,
-      [contenteditable="true"]:focus {
-        outline: none;
-        outline: thin dotted \9;
-      }
+      [contenteditable="true"]:focus { outline: 1px solid darken($object-ui-color, 15%); }
 
       fieldset {
         border: 1px solid $object-ui-color;
