@@ -3,7 +3,7 @@
   //  BUTTONS
   //------------------------------------
   .btn {
-    background-color: darken($object-ui-color, 15%);
+    background-color: $object-ui-color;
     border: 0;
     color: $button-font-color;
     cursor: pointer;
@@ -29,22 +29,12 @@
       border: 0;
     }
 
-    &:after {
-      content: "";
-      position: absolute;
-      z-index: -1;
-    }
+    &:hover { background-color: darken($object-ui-color, 10%); }
 
-    &:hover { background-color: $object-ui-color; }
-
-    &:active { background-color: darken($object-ui-color, 10%); }
+    &:active { background-color: darken($object-ui-color, 5%); }
 
     &[disabled] {
-      background: #dededc !important;
-      border: none;
-      color: #b3b3b1;
-      cursor: not-allowed;
-
+      &,
       &:hover,
       &:active,
       &:focus {
@@ -57,9 +47,7 @@
   }
 
   a.btn {
-    color: $button-font-color;
-    text-decoration: none;
-
+    &,
     &:hover {
       color: $button-hover-font-color;
       text-decoration: none;
@@ -71,123 +59,10 @@
   input[type="submit"].btn {
     color: $button-font-color;
     height: auto;
+    padding: 0.5em 1em;
   }
 
   button.btn { color: $button-font-color; }
-
-
-  @if $use-button-colors == true {
-    // Bordered buttons
-    .btn {
-      &.bg-white { color: #333; }
-
-
-      // Bordered
-      &.btn-border {
-        background: transparent;
-        border-color: $object-ui-color;
-        border-style: solid;
-        border-width: 1px;
-        color: #aaa;
-
-        &:hover {
-          background: $object-ui-color;
-          color: #fff !important;
-        }
-
-        &.white {
-          border-color: $bg-white;
-
-          &:hover {
-            background: $bg-white;
-            color: $color-black !important;
-          }
-        }
-      }
-    }
-
-
-    // Bordered white
-    a.btn.btn-border.white:hover {
-      background: $bg-white;
-      color: $color-black !important;
-    }
-
-    .btn.btn-border.white,
-    a.btn.btn-border.white { color: $color-white; }
-
-    .btn.btn-border {
-      &.white {
-        &:active, &:focus { background-color: $object-ui-color; }
-      }
-
-
-      // Bordered black
-      &.black {
-        border-color: $bg-black;
-        color: $color-black;
-
-        &:hover { background-color: $bg-black; }
-
-        &:active, &:focus { background-color: $bg-black; }
-      }
-
-
-      // Bordered gray
-      &.gray {
-        border-color: $bg-gray;
-        color: $color-gray;
-
-        &:hover { background-color: $bg-gray; }
-
-        &:active, &:focus { background-color: darken($bg-gray, 15%); }
-      }
-
-
-      // Bordered green
-      &.green {
-        border-color: $bg-green;
-        color: $color-green;
-
-        &:hover { background-color: $bg-green; }
-
-        &:active, &:focus { background-color: darken($bg-green, 15%); }
-      }
-
-
-      // Bordered blue
-      &.blue {
-        border-color: $bg-blue;
-        color: $color-blue;
-
-        &:hover { background-color: $bg-blue; }
-
-        &:active, &:focus { background-color: darken($bg-blue, 15%); }
-      }
-
-
-      // Bordered yellow
-      &.yellow {
-        border-color: $bg-yellow;
-        color: $color-yellow;
-
-        &:hover { background-color: $bg-yellow; }
-
-        &:active, &:focus { background-color: darken($bg-yellow, 15%); }
-      }
-
-
-      // Bordered red
-      &.red {
-        border-color: $bg-red;
-        color: $color-red;
-
-        &:hover { background-color: $bg-red; }
-
-        &:active, &:focus { background-color: darken($bg-red, 15%); }
-      }
-    }
-  }
 
 
   @if $use-button-styles == true {
@@ -208,33 +83,35 @@
 
 
     // Button sizes
-    @include breakpoint(small) {
-      .btn-extra-small,
-      a.btn-extra-small,
-      p.btn-extra-small,
-      input.btn-extra-small { @include font-size(11px); }
-
-      .btn-small,
-      a.btn-small,
-      p.btn-small,
-      input.btn-small { @include font-size(12px); }
-
-      .btn-large,
-      a.btn-large,
-      p.btn-large,
-      input.btn-large {
-        @include font-size(18px);
-        padding: 1em 2em;
-      }
-
-      .btn-extra-large,
-      a.btn-extra-large,
-      p.btn-extra-large,
-      input.btn-extra-large {
-        @include font-size(24px);
-        padding: 1em 2em;
-      }
+    .btn-extra-small,
+    a.btn-extra-small,
+    p.btn-extra-small,
+    input.btn-extra-small {
+      @include font-size(10px);
+      padding: 0.25em 0.75em;
     }
+
+    .btn-small,
+    a.btn-small,
+    p.btn-small,
+    input.btn-small { @include font-size(12px); }
+
+    .btn-large,
+    a.btn-large,
+    p.btn-large,
+    input.btn-large {
+      @include font-size(18px);
+      padding: 1em 2em;
+    }
+
+    .btn-extra-large,
+    a.btn-extra-large,
+    p.btn-extra-large,
+    input.btn-extra-large {
+      @include font-size(24px);
+      padding: 1em 2em;
+    }
+
 
     // Dropdowns
     .btn.dropdown {
