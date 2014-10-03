@@ -4,11 +4,11 @@
   //------------------------------------
 
   // Add/remove floats
-  .float-left { float: left !important; }
+  .float-left { float: left; }
 
-  .float-right { float: right !important; }
+  .float-right { float: right; }
 
-  .float-none { float: none !important; }
+  .float-none { float: none; }
 
 
   // Position elements
@@ -18,7 +18,7 @@
     margin-right: auto;
   }
 
-  .no-margin { margin: 0 !important; }
+  .no-margin { margin: 0; }
 
   .icon-alone { display: inline-block; }
 
@@ -70,11 +70,11 @@
 
 
   // Font weights
-  .weight-light { font-weight: 300 !important; }
+  .weight-light { font-weight: 300; }
 
-  .weight-normal { font-weight: 400 !important; }
+  .weight-normal { font-weight: 400; }
 
-  .weight-semibold { font-weight: 600 !important; }
+  .weight-semibold { font-weight: 600; }
 
 
   // All-caps text
@@ -82,7 +82,7 @@
 
 
   // Stylized ampersand
-  .amp { font: italic 110% Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", serif !important; }
+  .amp { font: italic 110% Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", serif; }
 
 
   // Hide text
