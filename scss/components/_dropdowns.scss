@@ -115,6 +115,7 @@
     &[class*='dropdown-arrow-'] .dropdown-menu {
       margin-top: 10px;
 
+      &:before,
       &:after {
         border-color: $dropdown-bg-color transparent;
         border-style: solid;
@@ -128,13 +129,7 @@
 
       &:before {
         border-color: rgba(0, 0, 0, 0.1) transparent;
-        border-style: solid;
-        bottom: 100%;
         border-width: 0 8px 8px 8px;
-        content: "";
-        height: 0;
-        position: absolute;
-        width: 0;
       }
     }
 
