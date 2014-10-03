@@ -17,12 +17,10 @@
 
       thead { border-bottom: 2px solid $object-ui-color; }
 
-      th { padding: 12px 15px; }
+      th,
+      td { padding: 12px 15px; }
 
-      td {
-        padding: 12px 15px;
-        border-top: 1px solid $object-ui-color;
-      }
+      td { border-top: 1px solid $object-ui-color; }
 
       @include breakpoint(extra-small) {
         & {
@@ -48,18 +46,27 @@
       // Full-width table
       &.table-full,
       &.table.table-full { width: 100%; }
+    }
+  }
 
+  // Responsive tables
+  .table-responsive {
+    overflow: auto;
+    width: 100%;
 
-      // Responsive tables
-      .table-responsive {
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-        -ms-overflow-style: -ms-autohiding-scrollbar;
-        width: 100%;
+    table { margin-bottom: 0; }
 
-        table { margin-bottom: 0; }
-      }
+    &::-webkit-scrollbar {
+      height: 14px;
+      width: 14px;
+
+      -webkit-appearance: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(50, 50, 50, 0.2);
+      border: 3px solid #fff;
+      border-radius: 8px;
     }
   }
 }
