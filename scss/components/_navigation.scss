@@ -23,30 +23,8 @@
     // Nested dropdown
     .nav-dropdown {
       ul {
-        ul {
-          display: none;
-          left: 0;
-          margin: 0;
-          opacity: 0;
-          padding: 0;
-          position: absolute;
-          visibility: hidden;
-          width: 150px;
-          z-index: 99999;
-
-          ul {
-            display: none;
-            left: 0;
-            margin: 0;
-            opacity: 0;
-            padding: 0;
-            position: absolute;
-            visibility: hidden;
-            width: 150px;
-            z-index: 99999;
-          }
-        }
-
+        ul,
+        ul ul,
         ol ul,
         ul ol,
         ol ol {
@@ -64,7 +42,9 @@
 
       ol {
         ol,
-        ul {
+        ul,
+        ul ul,
+        ul ol {
           display: none;
           left: 0;
           margin: 0;
@@ -74,21 +54,6 @@
           visibility: hidden;
           width: 150px;
           z-index: 99999;
-        }
-
-        ul {
-          ul,
-          ol {
-            display: none;
-            left: 0;
-            margin: 0;
-            opacity: 0;
-            padding: 0;
-            position: absolute;
-            visibility: hidden;
-            width: 150px;
-            z-index: 99999;
-          }
         }
       }
 
@@ -100,29 +65,15 @@
         display: block;
       }
 
-      ul {
+      ul,
+      ol {
         ul ul,
         ol ul,
         ul ol,
         ol ol { display: block; }
       }
 
-      ol {
-        ul ul,
-        ol ul,
-        ul ol { display: block; }
-      }
-
-      ul li:hover {
-        ul,
-        ol {
-          display: block;
-          opacity: 1;
-          top: 100%;
-          visibility: visible;
-        }
-      }
-
+      ul li:hover,
       ol li:hover {
         ul,
         ol {
@@ -131,9 +82,7 @@
           top: 100%;
           visibility: visible;
         }
-      }
 
-      ul li:hover {
         ul ul,
         ol ul,
         ul ol,
@@ -144,45 +93,10 @@
         }
       }
 
-      ol li:hover {
-        ul ul,
-        ol ul,
-        ul ol,
-        ol ol {
-          display: none;
-          opacity: 0;
-          visibility: hidden;
-        }
-      }
-
-      ul {
-        ul li:hover {
-          ul,
-          ol {
-            display: block;
-            left: 100%;
-            opacity: 1;
-            position: absolute;
-            top: 0;
-            visibility: visible;
-          }
-        }
-
-        ol li:hover {
-          ol,
-          ul {
-            display: block;
-            left: 100%;
-            opacity: 1;
-            position: absolute;
-            top: 0;
-            visibility: visible;
-          }
-        }
-      }
-
+      ul,
       ol {
-        ul li:hover {
+        ul li:hover,
+        ol li:hover {
           ul,
           ol {
             display: block;
@@ -193,37 +107,6 @@
             visibility: visible;
           }
         }
-
-        ol li:hover {
-          ol,
-          ul {
-            display: block;
-            left: 100%;
-            opacity: 1;
-            position: absolute;
-            top: 0;
-            visibility: visible;
-          }
-        }
-      }
-    }
-
-
-    // Vertical
-    .nav-vertical {
-      li {
-        display: block;
-        margin-right: 0px;
-        padding: 10px;
-      }
-
-      .dropdown .dropdown-menu { top: 100%; }
-    }
-
-    @include breakpoint(small) {
-      .nav-vertical .dropdown .dropdown-menu {
-        left: 100%;
-        top: 0;
       }
     }
   }
