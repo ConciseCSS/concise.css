@@ -38,15 +38,15 @@
         width: 100%;
 
         @include vendor(box-sizing, border-box, official);
+
+        @include breakpoint(extra-small) {
+          & { width: 300px; }
+        }
       }
 
       textarea { height: auto; }
 
       @include breakpoint(extra-small) {
-        input,
-        select,
-        textarea { width: 300px; }
-
         input[type="submit"] {
           display: block;
           width: auto;
@@ -79,20 +79,11 @@
     }
 
 
-    // Rounded corners
-    form.border-radius {
-      input,
-      select,
-      textarea,
-      fieldset { border-radius: $border-radius; }
-    }
-
-
     // Inline Form
-    .form-inline label { width: auto; }
+    .form-inline {
+      label { width: auto; }
 
-    @include breakpoint(small) {
-      .form-inline {
+      @include breakpoint(small) {
         label {
           display: inline-block;
           width: 100px;
