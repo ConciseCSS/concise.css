@@ -17,6 +17,12 @@
         $(this).toggleClass('dropdown-active');
         event.stopPropagation();
       });
+
+      // Toggle .dropdown-active on hover
+      $(".dropdown-hover").mouseenter(function(event) {
+        $(this).addClass("dropdown-active");
+        event.stopPropagation();
+      });
     }
   };
 
@@ -26,8 +32,11 @@
     new DropDown(dropdown);
 
     $(document).click(function() {
-      // Remove class from all dropdowns
       dropdown.removeClass('dropdown-active');
+    });
+
+    $(".dropdown-menu").mouseleave(function() {
+      dropdown.removeClass("dropdown-active");
     });
   });
 }(jQuery));
