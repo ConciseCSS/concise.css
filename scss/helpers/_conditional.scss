@@ -1,8 +1,22 @@
-@if $use-conditional == true {
-  //------------------------------------
-  //  CONDITIONAL
-  //------------------------------------
+//------------------------------------
+//  CONDITIONAL
+//------------------------------------
 
+// Silent Classes
+// (mixins have to be used instead of proper silent classes
+//  because of the scope of `@include` inside of media queries.)
+@mixin show-conditional {
+  display: block;
+  visibility: visible;
+}
+
+@mixin hide-conditional {
+  display: none;
+  visibility: hidden;
+}
+
+
+@if $use-conditional == true {
   // Thanks to Bootstrap for having a good method of
   // showing/hiding content via breakpoints
   // (http://getbootstrap.com/css/#responsive-utilities)
@@ -13,8 +27,7 @@
   .hide-extra-large,
   .hide-print,
   .hide-hd {
-    display: block;
-    visibility: visible;
+    @include show-conditional;
   }
 
   .hide-extra-small,
@@ -24,8 +37,7 @@
   .show-extra-large,
   .show-print,
   .show-hd {
-    display: none;
-    visibility: hidden;
+    @include hide-conditional;
   }
 
   @include breakpoint(small) {
@@ -34,8 +46,7 @@
     .hide-medium,
     .hide-large,
     .hide-extra-large {
-      display: block;
-      visibility: visible;
+      @include show-conditional;
     }
 
     .hide-small,
@@ -43,8 +54,7 @@
     .show-medium,
     .show-large,
     .show-extra-large {
-      display: none;
-      visibility: hidden;
+      @include hide-conditional;
     }
   }
 
@@ -54,8 +64,7 @@
     .hide-extra-small,
     .hide-large,
     .hide-extra-large {
-      display: block;
-      visibility: visible;
+      @include show-conditional;
     }
 
     .hide-medium,
@@ -63,8 +72,7 @@
     .show-extra-small,
     .show-large,
     .show-extra-large {
-      display: none;
-      visibility: hidden;
+      @include hide-conditional;
     }
   }
 
@@ -74,8 +82,7 @@
     .hide-small,
     .hide-medium,
     .hide-extra-large {
-      display: block;
-      visibility: visible;
+      @include show-conditional;
     }
 
     .hide-large,
@@ -83,8 +90,7 @@
     .show-small,
     .show-medium,
     .show-extra-large {
-      display: none;
-      visibility: hidden;
+      @include hide-conditional;
     }
   }
 
@@ -94,8 +100,7 @@
     .hide-small,
     .hide-medium,
     .hide-large {
-      display: block;
-      visibility: visible;
+      @include show-conditional;
     }
 
     .hide-extra-large,
@@ -103,8 +108,7 @@
     .show-small,
     .show-medium,
     .show-large {
-      display: none;
-      visibility: hidden;
+      @include hide-conditional;
     }
   }
 
@@ -114,13 +118,11 @@
          only screen and (-webkit-min-device-pixel-ratio: 1.5),
          only screen and (min-device-pixel-ratio: 1.5) {
     .show-hd {
-      display: block;
-      visibility: visible;
+      @include show-conditional;
     }
 
     .hide-hd {
-      display: none;
-      visibility: hidden;
+      @include hide-conditional;
     }
   }
 }
