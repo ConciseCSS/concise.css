@@ -53,28 +53,27 @@ $breakpoint-map: (
 //------------------------------------
 
 // Background colors
-$bg-white:        #ffffff !default;
-$bg-black:        #222222 !default;
-$bg-light-gray:   #f9f9f9 !default;
-$bg-gray:         #999999 !default;
-$bg-light-green:  #dff0d8 !default;
-$bg-green:        #5cb85c !default;
-$bg-light-blue:   #d9edf7 !default;
-$bg-blue:         #5bc0de !default;
-$bg-light-yellow: #fcf8e3 !default;
-$bg-yellow:       #ed9c28 !default;
-$bg-light-red:    #f2dede !default;
-$bg-red:          #d9534f !default;
+$bg-colors: (
+  "white":  #ffffff,
+  "black":  #222222,
+  "gray":   #999999,
+  "green":  #5cb85c,
+  "blue":   #5bc0de,
+  "yellow": #ed9c28,
+  "red":    #d9534f
+);
 
 
 // Type colors
-$color-white:  #ffffff !default;
-$color-black:  #222222 !default;
-$color-gray:   #999999 !default;
-$color-green:  #468847 !default;
-$color-blue:   #3a87ad !default;
-$color-red:    #d2322d !default;
-$color-yellow: #c09853 !default;
+$type-colors: (
+  "white":  #ffffff,
+  "black":  #222222,
+  "gray":   #999999,
+  "green":  #468847,
+  "blue":   #3a87ad,
+  "yellow": #c09853,
+  "red":    #d2322d
+);
 
 
 // Selection colors
@@ -123,14 +122,6 @@ $column-prefix: 'column-' !default;
 $column-number:  16 !default;
 
 
-// Border radius value for `.border-radius` class
-$border-radius: 4px !default;
-
-
-// Border radius value for `.pill` class
-$pill-border-radius: 25px !default;
-
-
 
 
 //------------------------------------
@@ -164,8 +155,8 @@ $use-tables:         true !default;
 $use-forms:          true !default;
   $use-form-styles:  true !default;
 $use-grid:           true !default;
-  $use-push:	       false !default;
-  $use-pull:	       false !default;
+  $use-push:	       true !default;
+  $use-pull:	       true !default;
 
 
 // Components
@@ -175,7 +166,6 @@ $use-buttons:                 true !default;
   $use-button-styles:         true !default;
 $use-dropdowns:               true !default;
 $use-navigation:              true !default;
-  $use-navigation-styles:     true !default;
   $use-responsive-navigation: true !default;
 
 
