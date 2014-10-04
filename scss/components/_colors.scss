@@ -4,45 +4,22 @@
 
 @if $use-bg-colors == true {
   // Background colors
-  .bg-white { background-color: $bg-white; }
+  @each $bg-color, $color in $bg-colors {
+    .bg-#{$bg-color},
+    %bg-#{$bg-color} { background-color: $color; }
 
-  .bg-black { background-color: $bg-black; }
-
-  .bg-light-gray { background-color: $bg-light-gray; }
-
-  .bg-gray { background-color: $bg-gray; }
-
-  .bg-light-green { background-color: $bg-light-green; }
-
-  .bg-green { background-color: $bg-green; }
-
-  .bg-light-blue { background-color: $bg-light-blue; }
-
-  .bg-blue { background-color: $bg-blue; }
-
-  .bg-light-yellow { background-color: $bg-light-yellow; }
-
-  .bg-yellow { background-color: $bg-yellow; }
-
-  .bg-light-red { background-color: $bg-light-red; }
-
-  .bg-red { background-color: $bg-red; }
+    @if $bg-color != "white" {
+      .bg-light-#{$bg-color},
+      %bg-light-#{$bg-color} { background-color: lighten($color, 32.5%); }
+    }
+  }
 }
 
 
 @if $use-type-colors == true {
   // Type colors
-  .color-white { color: $color-white; }
-
-  .color-black { color: $color-black; }
-
-  .color-gray { color: $color-gray; }
-
-  .color-green { color: $color-green; }
-
-  .color-blue { color: $color-blue; }
-
-  .color-yellow { color: $color-yellow; }
-
-  .color-red { color: $color-red; }
+  @each $type-color, $color in $type-colors {
+    .color-#{$type-color},
+    %color-#{$type-color} { color: $color; }
+  }
 }
