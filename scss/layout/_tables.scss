@@ -2,52 +2,42 @@
   //------------------------------------
   //  TABLES
   //------------------------------------
-  table {
-    // Table styling
-    &.table {
-      empty-cells: show;
-      width: 100%;
 
-      caption {
-        color: #000;
-        font: italic 85%/1 arial, sans-serif;
-        padding: 1em 0;
-        text-align: center;
-      }
+  @if $use-table-styles == true {
+    table {
+      // Table styling
+      &.table {
+        empty-cells: show;
+        width: 100%;
 
-      thead { border-bottom: 2px solid $object-ui-color; }
+        caption {
+          color: #000;
+          font: italic 85%/1 arial, sans-serif;
+          padding: 1em 0;
+          text-align: center;
+        }
 
-      th,
-      td { padding: 12px 15px; }
+        thead { border-bottom: 2px solid $object-ui-color; }
 
-      td { border-top: 1px solid $object-ui-color; }
+        th,
+        td { padding: 12px 15px; }
 
-      @include breakpoint(extra-small) {
-        & {
-          width: auto;
+        td { border-top: 1px solid $object-ui-color; }
 
-          th, td { padding: 10px 50px 10px 25px; }
+        @include breakpoint(extra-small) {
+          & {
+            width: auto;
+
+            th, td { padding: 10px 50px 10px 25px; }
+          }
         }
       }
-    }
 
-
-    @if $use-table-styles == true {
-      // Background colors
-      .bg-light-green { color: $color-green; }
-
-      .bg-light-blue { color: $color-blue; }
-
-      .bg-light-yellow { color: $color-yellow; }
-
-      .bg-light-red { color: $color-red; }
-
-
-      // Full-width table
       &.table-full,
       &.table.table-full { width: 100%; }
     }
   }
+
 
   // Responsive tables
   .table-responsive {
