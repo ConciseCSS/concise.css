@@ -7,6 +7,7 @@
   $small-size: 12px !default;
   $micro-size: 10px !default;
 
+
   // Links
   a {
     color: $base-link-color;
@@ -18,12 +19,11 @@
       cursor: pointer;
       text-decoration: underline;
     }
-  }
 
-  p a {
-    line-height: inherit;
-
-    &:visited { line-height: inherit; }
+    p & {
+      &,
+      &:visited { line-height: inherit; }
+    }
   }
 
 
