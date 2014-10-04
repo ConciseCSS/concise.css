@@ -2,8 +2,23 @@
   //------------------------------------
   //  NAVIGATION
   //------------------------------------
+
+  // Silent Class
+  %before-responsive-icon {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    text-align: center;
+    visibility: hidden;
+  }
+
+
+  // Navigation Styles
   nav {
-    ul {
+    ul,
+    ol {
       list-style: none;
       margin: 0;
     }
@@ -11,103 +26,8 @@
     li {
       cursor: pointer;
       position: relative;
-    }
 
-
-    // Dropdown
-    .dropdown li { margin-right: 0px; }
-  }
-
-
-  @if $use-navigation-styles == true {
-    // Nested dropdown
-    .nav-dropdown {
-      ul {
-        ul,
-        ul ul,
-        ol ul,
-        ul ol,
-        ol ol {
-          display: none;
-          left: 0;
-          margin: 0;
-          opacity: 0;
-          padding: 0;
-          position: absolute;
-          visibility: hidden;
-          width: 150px;
-          z-index: 99999;
-        }
-      }
-
-      ol {
-        ol,
-        ul,
-        ul ul,
-        ul ol {
-          display: none;
-          left: 0;
-          margin: 0;
-          opacity: 0;
-          padding: 0;
-          position: absolute;
-          visibility: hidden;
-          width: 150px;
-          z-index: 99999;
-        }
-      }
-
-      .list-inline li li,
-      &.list-inline li li { margin-right: 0px; }
-
-      li li {
-        background: #fff;
-        display: block;
-      }
-
-      ul,
-      ol {
-        ul ul,
-        ol ul,
-        ul ol,
-        ol ol { display: block; }
-      }
-
-      ul li:hover,
-      ol li:hover {
-        ul,
-        ol {
-          display: block;
-          opacity: 1;
-          top: 100%;
-          visibility: visible;
-        }
-
-        ul ul,
-        ol ul,
-        ul ol,
-        ol ol {
-          display: none;
-          opacity: 0;
-          visibility: hidden;
-        }
-      }
-
-      ul,
-      ol {
-        ul li:hover,
-        ol li:hover {
-          ul,
-          ol {
-            display: block;
-            left: 100%;
-            opacity: 1;
-            position: absolute;
-            top: 0;
-            visibility: visible;
-          }
-        }
-      }
+      .dropdown & { margin-right: 0px; }
     }
   }
 
@@ -163,13 +83,7 @@
         .naver-handle:after { content: "\00a0 \2261"; }
 
         .naver-container:before {
-          clear: both;
-          content: ".";
-          display: block;
-          height: 0;
-          line-height: 0;
-          text-align: right;
-          visibility: hidden;
+          @extend %before-responsive-icon;
         }
       }
     }
@@ -190,13 +104,7 @@
         .naver-handle:before { content: "\2261 \00a0"; }
 
         .naver-container:after {
-          clear: both;
-          content: ".";
-          display: block;
-          height: 0;
-          line-height: 0;
-          text-align: left;
-          visibility: hidden;
+          @extend %before-responsive-icon;
         }
       }
     }
@@ -217,13 +125,7 @@
         .naver-handle:before { content: "\2261 \00a0"; }
 
         .naver-container:after {
-          clear: both;
-          content: ".";
-          display: block;
-          height: 0;
-          line-height: 0;
-          text-align: center;
-          visibility: hidden;
+          @extend %before-responsive-icon;
         }
       }
     }
