@@ -12,7 +12,8 @@
 
 
   // Position elements
-  .align-center {
+  .align-center,
+  %align-center {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -20,23 +21,24 @@
 
   .no-margin { margin: 0; }
 
-  .icon-alone { display: inline-block; }
-
 
   // Displaying content
   .inline { display: inline; }
 
-  .show {
+  .show,
+  %show {
     display: block;
     visibility: visible;
   }
 
-  .hide {
+  .hide,
+  %hide {
     display: none;
     visibility: hidden;
   }
 
-  .screen-reader {
+  .screen-reader,
+  %screen-reader {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -51,7 +53,8 @@
   // Full-width elements
   .full-width { width: 100%; }
 
-  img.full-width {
+  img.full-width,
+  img%full-width {
     max-width: 100%;
     height: auto;
     display: block;
@@ -70,11 +73,14 @@
 
 
   // Font weights
-  .weight-light { font-weight: 300; }
+  .weight-light,
+  %weight-light { font-weight: 300; }
 
-  .weight-normal { font-weight: 400; }
+  .weight-normal,
+  %weight-normal { font-weight: 400; }
 
-  .weight-semibold { font-weight: 600; }
+  .weight-semibold,
+  %weight-semibold { font-weight: 600; }
 
 
   // All-caps text
@@ -86,7 +92,8 @@
 
 
   // Hide text
-  .text-hide {
+  .text-hide,
+  %text-hide {
     border: 0;
     background-color: transparent;
     color: transparent;
@@ -105,12 +112,4 @@
     vertical-align: middle;
     width: 0;
   }
-
-
-  // Border radius
-  .border-radius { border-radius: $border-radius; }
-
-
-  // Pill style
-  .pill { border-radius: $pill-border-radius; }
 }
