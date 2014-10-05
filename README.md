@@ -80,15 +80,14 @@ Concise is currently maintained under the [Semantic Versioning guidelines](http:
 - [GitHub](http://github.com/keenanpayne)
 - [Twitter](http://twitter.com/keenan_payne)
 
-**Filipe**
+**Filipe Linhares**
 - [Website](http://filipelinhares.com)
 - [GitHub](http://github.com/filipelinhares)
 - [Twitter](http://twitter.com/ofilipelinhares)
 
-**Benjamin **
-- [Website]()
-- [GitHub]()
-- [Twitter]()
+**Benjamin Sigidi**
+- [Website](https://moozen.com/)
+- [GitHub](https://github.com/vezu)
 
 ## Elsewhere
 
