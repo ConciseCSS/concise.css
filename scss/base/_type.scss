@@ -44,7 +44,8 @@
 
   // Other elements
   abbr {
-    &[title], &[data-original-title] {
+    &[title],
+    &[data-original-title] {
       cursor: help;
       border-bottom: 1px dotted #999;
     }
