@@ -228,7 +228,11 @@
     li {
       display: block;
       margin-right: 0px;
-      padding: 10px;
+
+      a {
+        display: block;
+        padding: 10px;
+      }
     }
     
     .icon {
