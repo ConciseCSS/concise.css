@@ -161,54 +161,40 @@
 //
 @mixin grid-setup($number: $column-number) {
   @for $i from 1 through $number {
+    $column-width-gutters: (100% - $gutters * ($number - 1)) / $number;
+
     .#{$column-prefix + $i} {
       width: 100% / $number * $i;
-    }
-  }
 
-  @for $i from 1 through $number {
-    $width-of-column: (100% - $gutters * ($number - 1)) / $number;
-
-    .gutters .#{$column-prefix + $i} {
-      width: $width-of-column * $i + $gutters * ($i - 1);
+      .gutters & {
+        width: $column-width-gutters * $i + $gutters * ($i - 1);
+      }
     }
   }
 }
 
 
 //
-// Create `.push-` classes given the value
-// for variable `$column-number`.
+// Create `.push-` and `.pull-` classes given
+// the value for variabls `$option` and
+// `$column-number`.
 //
-@mixin push-setup($number: $column-number) {
-  @for $i from 1 to $number {
-    .push-#{$i} {
-      left: 100% / $number * $i;
-    }
+@mixin push-pull-setup($option, $number: $column-number) {
+  $property: "";
+
+  @if $option == "push" {
+    $property: "left";
+  } @else {
+    $property: "right";
   }
 
   @for $i from 1 to $number {
-    .gutters .push-#{$i} {
-      left: 100% / $number * $i - $gutters;
-    }
-  }
-}
+    .#{$option}-#{$i} {
+      #{$property}: 100% / $number * $i;
 
-
-//
-// Create `.pull-` classes given the value
-// for variable `$column-number`.
-//
-@mixin pull-setup($number: $column-number) {
-  @for $i from 1 to $number {
-    .pull-#{$i} {
-      right: 100% / $number * $i;
-    }
-  }
-
-  @for $i from 1 to $number {
-    .gutters .pull-#{$i} {
-      right: 100% / $number * $i - $gutters;
+      .gutters & {
+        #{$property}: 100% / $number * $i - $gutters;
+      }
     }
   }
 }
@@ -239,15 +225,16 @@
 // Parameters:
 //   $column: the number of this particular column (determines width)
 //   $number-columns: number of columns in the row (default is `$column-number`)
+//   $first-column: set to `true` if it's the first column in a row (default is false)
 //   $use-gutters: set to `true` if you want column gutters (default is false)
 //   $gutter-value: percentage value of the gutters to be applied (default is `$gutters` variable)
 //
 // Example:
-//  `@include column(16, 4, true, 4)`
+//  `@include column(16, 4, false, true, 4)`
 //
 //
-@mixin column($column, $number-columns: $column-number, $use-gutters: false, $gutter-value: strip-units($gutters)) {
-  @include vendor(background-clip, padding-box !important, webkit);
+@mixin column($column, $number-columns: $column-number, $first-column: false, $use-gutters: false, $gutter-value: strip-units($gutters)) {
+  @include vendor(background-clip, padding-box, webkit);
 
   @include breakpoint(small) {
     @if $use-gutters == true {
@@ -255,12 +242,10 @@
       $width-of-column: (100% - $gutter-size * ($number-columns - 1)) / $number-columns;
 
       float: left;
-      margin-left: $gutter-size;
+      @if $first-column == false {
+        margin-left: $gutter-size;
+      }
       width: $width-of-column * $column + $gutter-size * ($column - 1);
-
-      &:first-child { margin-left: 0; }
-
-      &:first-of-type { margin-left: 0; }
     } @else {
       float: left;
       width: percentage(100 / $number-columns * $column) * .01;
@@ -270,45 +255,32 @@
 
 
 //
-// Generates CSS for pushing a semantic column left.
+// Generates CSS for pushing a semantic column left or right.
 //
 // Parameters:
+//   $option: set to `push` or `pull` to generate proper styles
 //   $column: the column number
 //   $number-columns: the number of columns in the row (default is $column-number)
 //   $use-gutters: set to `true` if your column has gutters (default is false)
 //   $gutter-value: percentage value of the gutters to be applied (default is `$gutters` variable)
 //
 // Example:
-//  `@include push(4, 16, true)`
+//  `@include push-pull(push, 4, 16, true)`
 //
 //
-@mixin push($column, $number-columns: $column-number, $use-gutters: false, $gutter-value: strip-units($gutters)) {
-  @if $use-gutters == true {
-    left: 100% / $number-columns * $column - $gutter-value;
+@mixin push-pull($option, $column, $number-columns: $column-number, $use-gutters: false, $gutter-value: strip-units($gutters)) {
+  $property: "";
+
+  @if $option == "push" {
+    $property: "left";
   } @else {
-    left: 100% / $number-columns * $column;
+    $property: "right";
   }
-}
 
-
-//
-// Generates CSS for pushing a semantic column right.
-//
-// Parameters:
-//   $column: the column number
-//   $number-columns: the number of columns in the row (default is $column-number)
-//   $use-gutters: set to `true` if your column has gutters (default is false)
-//   $gutter-value: percentage value of the gutters to be applied (default is `$gutters` variable)
-//
-// Example:
-//  `@include pull(4, 16, true)`
-//
-//
-@mixin pull($column, $number-columns: $column-number, $use-gutters: false, $gutter-value: strip-units($gutters)) {
   @if $use-gutters == true {
-    right: 100% / $number-columns * $column - $gutter-value;
+    #{$property}: 100% / $number-columns * $column - $gutter-value;
   } @else {
-    right: 100% / $number-columns * $column;
+    #{$property}: 100% / $number-columns * $column;
   }
 }
 
