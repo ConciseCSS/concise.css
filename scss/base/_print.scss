@@ -5,21 +5,14 @@
   @media print {
     @page { margin: 0.5cm; }
 
-    * {
+    *,
+    *:before,
+    *:after {
       background: transparent !important;
       color: black !important;
       text-shadow: none !important;
 
       @include vendor(filter, none !important, webkit moz ms official);
-
-      &:before,
-      &:after {
-        background: transparent !important;
-        color: black !important;
-        text-shadow: none !important;
-
-        @include vendor(filter, none !important, webkit moz ms official);
-      }
     }
 
     body {
@@ -57,16 +50,11 @@
     h2,
     h3 { page-break-after: avoid; }
 
-    a {
+    a,
+    a:visited {
       color: #000;
       text-decoration: underline;
       word-wrap: break-word;
-
-      &:visited {
-        color: #000;
-        text-decoration: underline;
-        word-wrap: break-word;
-      }
 
       &[href]:after {
         content: " (" attr(href) ")";

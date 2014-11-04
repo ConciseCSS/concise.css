@@ -37,8 +37,12 @@
     visibility: hidden;
   }
 
+
+  // Hide text
   .screen-reader,
-  %screen-reader {
+  %screen-reader,
+  .text-hide,
+  %text-hide {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -54,7 +58,7 @@
   .full-width { width: 100%; }
 
   img.full-width,
-  img%full-width {
+  %full-width-image {
     max-width: 100%;
     height: auto;
     display: block;
@@ -89,17 +93,6 @@
 
   // Stylized ampersand
   .amp { font: italic 110% Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", serif; }
-
-
-  // Hide text
-  .text-hide,
-  %text-hide {
-    border: 0;
-    background-color: transparent;
-    color: transparent;
-    font: 0 / 0 a;
-    text-shadow: none;
-  }
 
 
   // Caret icon
