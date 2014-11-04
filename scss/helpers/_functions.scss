@@ -19,7 +19,7 @@
 //
 @function calculate-line-height($font-size) {
   $line-height-size: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
-  
+
   @return $line-height-size;
 }
 
@@ -28,5 +28,5 @@
 // Strips the units from a value (px, em, etc).
 //
 @function strip-units($value) {
-    @return $value / ($value * 0 + 1);
+  @return $value / ($value * 0 + 1);
 }
