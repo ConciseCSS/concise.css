@@ -118,11 +118,6 @@
 jQuery(document).ready(function() {
   jQuery(".nav-responsive, .nav-responsive-left, .nav-responsive-center").responsiveNav();
   jQuery("body, .row").nonResponsive();
-
-  $(document).on('click', '.close', function () {
-    // Get .close parent div, fade out
-    $(this).parents('.close-this').fadeOut('slow');
-  });
 });
 
 /*
