@@ -156,51 +156,6 @@
 
 
 //
-// Create variable-number grid columns given the value
-// for variable `$column-number`.
-//
-@mixin grid-setup($number: $column-number) {
-  @for $i from 1 through $number {
-    $column-width-gutters: (100% - $gutters * ($number - 1)) / $number;
-
-    .#{$column-prefix + $i} {
-      width: 100% / $number * $i;
-
-      .gutters & {
-        width: $column-width-gutters * $i + $gutters * ($i - 1);
-      }
-    }
-  }
-}
-
-
-//
-// Create `.push-` and `.pull-` classes given
-// the value for variabls `$option` and
-// `$column-number`.
-//
-@mixin push-pull-setup($option, $number: $column-number) {
-  $property: "";
-
-  @if $option == "push" {
-    $property: "left";
-  } @else {
-    $property: "right";
-  }
-
-  @for $i from 1 to $number {
-    .#{$option}-#{$i} {
-      #{$property}: 100% / $number * $i;
-
-      .gutters & {
-        #{$property}: 100% / $number * $i - $gutters;
-      }
-    }
-  }
-}
-
-
-//
 // Generates CSS to wrap semantic columns
 // in a row.
 //
@@ -299,6 +254,62 @@
      content: "";
      display: table;
      clear: both;
+    }
+  }
+}
+
+
+//
+// Create variable-number grid columns given the value
+// for variable `$column-number`.
+//
+// NOTE:
+//   This is a setup mixin for the Concise grid. If you
+//   wish to set up a grid, please use the `row()` and
+//   `column()` mixins.
+//
+@mixin grid-setup($number: $column-number) {
+  @for $i from 1 through $number {
+    $column-width-gutters: (100% - $gutters * ($number - 1)) / $number;
+
+    .#{$column-prefix + $i} {
+      width: 100% / $number * $i;
+
+      .gutters & {
+        width: $column-width-gutters * $i + $gutters * ($i - 1);
+      }
+    }
+  }
+}
+
+
+//
+// Create `.push-` and `.pull-` classes given
+// the value for variabls `$option` and
+// `$column-number`.
+//
+// NOTE:
+//   This is a setup mixin for the push and pull
+//   functionality in the Concise grid. If you wish
+//   to use that functionality, please use the
+//   `push-pull()` mixin.
+//
+@mixin push-pull-setup($option, $number: $column-number) {
+  $property: "";
+
+  @if $option == "push" {
+    $property: "left";
+  } @else {
+    $property: "right";
+  }
+
+  @for $i from 1 to $number {
+    .#{$option}-#{$i} {
+      #{$property}: 100% / $number * $i;
+
+      .gutters & {
+        #{$property}: 100% / $number * $i - $gutters;
+      }
     }
   }
 }
