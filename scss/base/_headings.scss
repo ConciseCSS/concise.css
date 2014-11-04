@@ -74,7 +74,8 @@
     a { font-weight: inherit; }
 
     small {
-      font-size: 65% !important;
+      color: $base-sub-heading-color;
+      font-size: 60%;
       line-height: 1;
     }
   }
