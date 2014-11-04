@@ -20,7 +20,9 @@
 
       ol { list-style-type: lower-roman; }
 
-      @include breakpoint(small) { & { margin-left: 20px; } }
+      @include breakpoint(small) {
+        & { margin-left: 20px; }
+      }
     }
 
     ol {
