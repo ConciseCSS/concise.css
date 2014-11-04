@@ -45,7 +45,21 @@
       }
     }
 
-    &[class*='bg-'] { background-color: inherit; }
+
+    // Background colors
+    @if $use-button-bg-colors == true {
+      @each $bg-color, $color in $bg-colors {
+        &.bg-#{$bg-color} { background-color: $color; }
+
+        &.bg-#{$bg-color}:hover { background-color: darken($color, 10%); }
+
+        &.bg-#{$bg-color}:active { background-color: darken($color, 5%); }
+
+        @if $bg-color != "white" {
+          &.bg-light-#{$bg-color} { background-color: lighten($color, 32.5%); }
+        }
+      }
+    }
   }
 
   a.btn {
