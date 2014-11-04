@@ -1,5 +1,9 @@
 # Files to ignore
 *.html
+test.css
+test.scss
+.DS_Store
+prepros.cfg
 
 # Dependencies
 /node_modules
