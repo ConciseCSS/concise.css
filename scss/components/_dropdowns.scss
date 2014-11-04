@@ -82,6 +82,8 @@
       padding: 0 0 0 9px;
     }
 
+    &.dropdown-collapse-full .dropdown-menu { width: 100%; }
+
     @include breakpoint(small) {
       & {
         .dropdown-menu { width: 200px; }
@@ -91,6 +93,8 @@
         &.dropdown-large .dropdown-menu { width: 350px; }
 
         &.dropdown-full .dropdown-menu { width: 100%; }
+
+        &.dropdown-collapse-full .dropdown-menu { width: auto; }
       }
     }
 
