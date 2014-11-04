@@ -44,6 +44,8 @@
         cursor: not-allowed;
       }
     }
+
+    &[class*='bg-'] { background-color: inherit; }
   }
 
   a.btn {
