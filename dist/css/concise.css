@@ -617,127 +617,111 @@ h6, .h6 {
   .column-1 {
     width: 6.25%;
   }
+  .gutters .column-1 {
+    width: 4.375%;
+  }
 
   .column-2 {
     width: 12.5%;
+  }
+  .gutters .column-2 {
+    width: 10.75%;
   }
 
   .column-3 {
     width: 18.75%;
   }
+  .gutters .column-3 {
+    width: 17.125%;
+  }
 
   .column-4 {
     width: 25%;
+  }
+  .gutters .column-4 {
+    width: 23.5%;
   }
 
   .column-5 {
     width: 31.25%;
   }
+  .gutters .column-5 {
+    width: 29.875%;
+  }
 
   .column-6 {
     width: 37.5%;
+  }
+  .gutters .column-6 {
+    width: 36.25%;
   }
 
   .column-7 {
     width: 43.75%;
   }
+  .gutters .column-7 {
+    width: 42.625%;
+  }
 
   .column-8 {
     width: 50%;
+  }
+  .gutters .column-8 {
+    width: 49%;
   }
 
   .column-9 {
     width: 56.25%;
   }
+  .gutters .column-9 {
+    width: 55.375%;
+  }
 
   .column-10 {
     width: 62.5%;
+  }
+  .gutters .column-10 {
+    width: 61.75%;
   }
 
   .column-11 {
     width: 68.75%;
   }
+  .gutters .column-11 {
+    width: 68.125%;
+  }
 
   .column-12 {
     width: 75%;
+  }
+  .gutters .column-12 {
+    width: 74.5%;
   }
 
   .column-13 {
     width: 81.25%;
   }
+  .gutters .column-13 {
+    width: 80.875%;
+  }
 
   .column-14 {
     width: 87.5%;
+  }
+  .gutters .column-14 {
+    width: 87.25%;
   }
 
   .column-15 {
     width: 93.75%;
   }
-
-  .column-16 {
-    width: 100%;
-  }
-
-  .gutters .column-1 {
-    width: 4.375%;
-  }
-
-  .gutters .column-2 {
-    width: 10.75%;
-  }
-
-  .gutters .column-3 {
-    width: 17.125%;
-  }
-
-  .gutters .column-4 {
-    width: 23.5%;
-  }
-
-  .gutters .column-5 {
-    width: 29.875%;
-  }
-
-  .gutters .column-6 {
-    width: 36.25%;
-  }
-
-  .gutters .column-7 {
-    width: 42.625%;
-  }
-
-  .gutters .column-8 {
-    width: 49%;
-  }
-
-  .gutters .column-9 {
-    width: 55.375%;
-  }
-
-  .gutters .column-10 {
-    width: 61.75%;
-  }
-
-  .gutters .column-11 {
-    width: 68.125%;
-  }
-
-  .gutters .column-12 {
-    width: 74.5%;
-  }
-
-  .gutters .column-13 {
-    width: 80.875%;
-  }
-
-  .gutters .column-14 {
-    width: 87.25%;
-  }
-
   .gutters .column-15 {
     width: 93.625%;
   }
 
+  .column-16 {
+    width: 100%;
+  }
   .gutters .column-16 {
     width: 100%;
   }
@@ -749,119 +733,104 @@ h6, .h6 {
   .push-1 {
     left: 6.25%;
   }
+  .gutters .push-1 {
+    left: 4.25%;
+  }
 
   .push-2 {
     left: 12.5%;
+  }
+  .gutters .push-2 {
+    left: 10.5%;
   }
 
   .push-3 {
     left: 18.75%;
   }
+  .gutters .push-3 {
+    left: 16.75%;
+  }
 
   .push-4 {
     left: 25%;
+  }
+  .gutters .push-4 {
+    left: 23%;
   }
 
   .push-5 {
     left: 31.25%;
   }
+  .gutters .push-5 {
+    left: 29.25%;
+  }
 
   .push-6 {
     left: 37.5%;
+  }
+  .gutters .push-6 {
+    left: 35.5%;
   }
 
   .push-7 {
     left: 43.75%;
   }
+  .gutters .push-7 {
+    left: 41.75%;
+  }
 
   .push-8 {
     left: 50%;
+  }
+  .gutters .push-8 {
+    left: 48%;
   }
 
   .push-9 {
     left: 56.25%;
   }
+  .gutters .push-9 {
+    left: 54.25%;
+  }
 
   .push-10 {
     left: 62.5%;
+  }
+  .gutters .push-10 {
+    left: 60.5%;
   }
 
   .push-11 {
     left: 68.75%;
   }
+  .gutters .push-11 {
+    left: 66.75%;
+  }
 
   .push-12 {
     left: 75%;
+  }
+  .gutters .push-12 {
+    left: 73%;
   }
 
   .push-13 {
     left: 81.25%;
   }
+  .gutters .push-13 {
+    left: 79.25%;
+  }
 
   .push-14 {
     left: 87.5%;
+  }
+  .gutters .push-14 {
+    left: 85.5%;
   }
 
   .push-15 {
     left: 93.75%;
   }
-
-  .gutters .push-1 {
-    left: 4.25%;
-  }
-
-  .gutters .push-2 {
-    left: 10.5%;
-  }
-
-  .gutters .push-3 {
-    left: 16.75%;
-  }
-
-  .gutters .push-4 {
-    left: 23%;
-  }
-
-  .gutters .push-5 {
-    left: 29.25%;
-  }
-
-  .gutters .push-6 {
-    left: 35.5%;
-  }
-
-  .gutters .push-7 {
-    left: 41.75%;
-  }
-
-  .gutters .push-8 {
-    left: 48%;
-  }
-
-  .gutters .push-9 {
-    left: 54.25%;
-  }
-
-  .gutters .push-10 {
-    left: 60.5%;
-  }
-
-  .gutters .push-11 {
-    left: 66.75%;
-  }
-
-  .gutters .push-12 {
-    left: 73%;
-  }
-
-  .gutters .push-13 {
-    left: 79.25%;
-  }
-
-  .gutters .push-14 {
-    left: 85.5%;
-  }
-
   .gutters .push-15 {
     left: 91.75%;
   }
@@ -873,119 +842,104 @@ h6, .h6 {
   .pull-1 {
     right: 6.25%;
   }
+  .gutters .pull-1 {
+    right: 4.25%;
+  }
 
   .pull-2 {
     right: 12.5%;
+  }
+  .gutters .pull-2 {
+    right: 10.5%;
   }
 
   .pull-3 {
     right: 18.75%;
   }
+  .gutters .pull-3 {
+    right: 16.75%;
+  }
 
   .pull-4 {
     right: 25%;
+  }
+  .gutters .pull-4 {
+    right: 23%;
   }
 
   .pull-5 {
     right: 31.25%;
   }
+  .gutters .pull-5 {
+    right: 29.25%;
+  }
 
   .pull-6 {
     right: 37.5%;
+  }
+  .gutters .pull-6 {
+    right: 35.5%;
   }
 
   .pull-7 {
     right: 43.75%;
   }
+  .gutters .pull-7 {
+    right: 41.75%;
+  }
 
   .pull-8 {
     right: 50%;
+  }
+  .gutters .pull-8 {
+    right: 48%;
   }
 
   .pull-9 {
     right: 56.25%;
   }
+  .gutters .pull-9 {
+    right: 54.25%;
+  }
 
   .pull-10 {
     right: 62.5%;
+  }
+  .gutters .pull-10 {
+    right: 60.5%;
   }
 
   .pull-11 {
     right: 68.75%;
   }
+  .gutters .pull-11 {
+    right: 66.75%;
+  }
 
   .pull-12 {
     right: 75%;
+  }
+  .gutters .pull-12 {
+    right: 73%;
   }
 
   .pull-13 {
     right: 81.25%;
   }
+  .gutters .pull-13 {
+    right: 79.25%;
+  }
 
   .pull-14 {
     right: 87.5%;
+  }
+  .gutters .pull-14 {
+    right: 85.5%;
   }
 
   .pull-15 {
     right: 93.75%;
   }
-
-  .gutters .pull-1 {
-    right: 4.25%;
-  }
-
-  .gutters .pull-2 {
-    right: 10.5%;
-  }
-
-  .gutters .pull-3 {
-    right: 16.75%;
-  }
-
-  .gutters .pull-4 {
-    right: 23%;
-  }
-
-  .gutters .pull-5 {
-    right: 29.25%;
-  }
-
-  .gutters .pull-6 {
-    right: 35.5%;
-  }
-
-  .gutters .pull-7 {
-    right: 41.75%;
-  }
-
-  .gutters .pull-8 {
-    right: 48%;
-  }
-
-  .gutters .pull-9 {
-    right: 54.25%;
-  }
-
-  .gutters .pull-10 {
-    right: 60.5%;
-  }
-
-  .gutters .pull-11 {
-    right: 66.75%;
-  }
-
-  .gutters .pull-12 {
-    right: 73%;
-  }
-
-  .gutters .pull-13 {
-    right: 79.25%;
-  }
-
-  .gutters .pull-14 {
-    right: 85.5%;
-  }
-
   .gutters .pull-15 {
     right: 91.75%;
   }
@@ -1361,6 +1315,9 @@ table.table-full, table.table.table-full {
   border: none;
   color: #b3b3b1;
   cursor: not-allowed;
+}
+.btn[class*='bg-'] {
+  background-color: inherit;
 }
 
 a.btn, a.btn:hover {
@@ -1742,7 +1699,8 @@ nav li {
   visibility: hidden;
 }
 
-.screen-reader {
+.screen-reader,
+.text-hide {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -1798,14 +1756,6 @@ img.full-width {
 
 .amp {
   font: italic 110% Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", serif;
-}
-
-.text-hide {
-  border: 0;
-  background-color: transparent;
-  color: transparent;
-  font: 0 / 0 a;
-  text-shadow: none;
 }
 
 .caret {

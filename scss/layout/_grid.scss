@@ -35,14 +35,14 @@
 
 
     // Push
-    
+
     // Thanks to inuitcss (https://github.com/csswizardry/inuit.css) for the idea to
     // abstract 'push' and 'pull' into their own mixins. This makes adding/removing
     // them to projects absolutely painless.
     @if $use-push == true {
       [class*='push-'] { position: relative; }
 
-      @include push-setup();
+      @include push-pull-setup(push, $column-number);
     }
 
 
@@ -50,7 +50,7 @@
     @if $use-pull == true {
       [class*='pull-'] { position: relative; }
 
-      @include pull-setup();
+      @include push-pull-setup(pull, $column-number);
     }
   }
 
