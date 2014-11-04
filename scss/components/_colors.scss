@@ -2,8 +2,8 @@
 //  COLORS
 //------------------------------------
 
+// Background colors
 @if $use-bg-colors == true {
-  // Background colors
   @each $bg-color, $color in $bg-colors {
     .bg-#{$bg-color},
     %bg-#{$bg-color} { background-color: $color; }
@@ -16,8 +16,8 @@
 }
 
 
+// Type colors
 @if $use-type-colors == true {
-  // Type colors
   @each $type-color, $color in $type-colors {
     .color-#{$type-color},
     %color-#{$type-color} { color: $color; }
