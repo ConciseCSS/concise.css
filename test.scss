@@ -1,0 +1,7 @@
+@import "scss/concise";
+
+.content { @include row(); }
+
+.sidebar { @include column(5, 16, true, true); }
+
+.article { @include column(11, 16, false, true); }
