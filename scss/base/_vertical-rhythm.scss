@@ -17,7 +17,7 @@
   table,
   fieldset, figure,
   pre,
-  .row {
+  .row, .form-item {
     margin-bottom: $base-spacing-unit;
     margin-bottom: ($base-spacing-unit / $base-font-size) * 1rem;
   }
