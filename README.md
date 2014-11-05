@@ -78,7 +78,7 @@ There are acknowledgements spread throughout the source code if you look around,
 
 **Benjamin Sigidi**
 - [Website](https://moozen.com/)
-- [GitHub](https://github.com/vezu)
+- [GitHub](https://github.com/benjaminsigidi)
 
 ## Elsewhere
 
