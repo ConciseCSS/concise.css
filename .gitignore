@@ -1,5 +1,6 @@
 # Files to ignore
 *.html
+prepros.cfg
 
 # Dependencies
 /node_modules
