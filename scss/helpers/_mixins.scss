@@ -1,0 +1,315 @@
+//------------------------------------
+//  MIXINS
+//------------------------------------
+
+//
+// Uses `calculate-rem()` to calculate rem font-size and px
+// fallback. line-height is calculated with `calculate-line-height()`
+// but passing `false` will prevent that.
+//
+// Parameters:
+//  $font-size: the font size (in pixels) to be converted to rem
+//  $rem-sizing: if you want to convert the font-size to rem or not (default is true)
+//  $line-height: set to false if you wish not to output a calculated line-height (defalt is true)
+//
+// Example:
+//  `@include font-size(24px);`
+//
+//
+// Big thanks to inuitcss for inspiration behind this
+// (https://github.com/csswizardry/inuit.css/blob/master/generic/_mixins.scss)
+@mixin font-size($font-size, $rem-sizing: true, $line-height: true) {
+  font-size: $font-size;
+
+  @if $rem-sizing == true {
+    font-size: calculate-rem($font-size);
+  }
+
+  @if $line-height == true {
+    line-height: calculate-line-height($font-size);
+  }
+}
+
+
+//
+// Proper vendor prefixes are created by passing
+// a property, property value, and browser
+// vendor (webkit, moz, ms, o, etc).
+//
+// Parameters:
+//  $property: what CSS property to generate vendor prefixes for
+//  $value: the value of what was defined in `$property`
+//  $vendors: what vendor prefixes to generate (default is none)
+//
+// Example:
+//  `@include vendor(border-radius, 4px, webkit moz ms)`
+//
+//
+@mixin vendor($property, $value, $vendors: "") {
+  @each $vendor in $vendors {
+    @if $vendor != "" {
+      -#{$vendor}-#{$property}: $value;
+    }
+  }
+
+  #{$property}: $value;
+}
+
+
+//
+// Loops through all of the values in the `$breakpoints`
+// map and outputs conditional statements used to generate
+// media query code.
+//
+// When calling the mixin, if the parameter matches a key
+// from the `breakpoints` map, a media query is output with
+// that key's value. If an explicit value is set (ex: 360px)
+// then a media query is output with that value.
+//
+// Parameters:
+//  $point: the breakpoint value for the media query output
+//
+// Example:
+//  `@include breakpoint(extra-small) { ... }`
+//
+//  `@include breakpoint(360px) { ... }`
+//
+//
+@mixin breakpoint($point) {
+  @if type-of($point) == string {
+    @each $breakpoint-name, $breakpoint-value in $breakpoint-map {
+      @if $point == $breakpoint-name {
+        @media (min-width: $breakpoint-value) {
+          @content;
+        }
+      }
+    }
+  } @else {
+    @media (min-width: $point) {
+      @content;
+    }
+  }
+}
+
+
+//
+// Generates property media queries for any CSS property,
+// value, and set of breakpoints. Allows you to easily change
+// property values based a set of breakpoints.
+//
+// Parameters:
+//  $properties: what CSS property to output inside of the media queries (can have multiple)
+//  $values: the value for each property (can have multiple)
+//  $responsive-values: what breakpoints to generate media queries for
+//  $use-available-mixins: whether or not to use mixin outputs for properties like `font-size` or `line-height` (default is true)
+//
+// Example:
+//  @include responsive("font-size", 11px,
+//    (
+//      "small" : 12px,
+//        450px : 13px,
+//       1100px : 14px,
+//      "large" : 15px,
+//       1600px : 16px,
+//    )
+//  );
+//
+//
+@mixin responsive($properties, $values, $responsive-values, $use-available-mixins: true) {
+  @each $property in $properties {
+    @if $property == "font-size" and $use-available-mixins == true {
+      #{$property}: $values;
+      #{$property}: ($values / $base-font-size) * 1rem;
+    } @else if $property == "line-height" and $use-available-mixins == true {
+      #{$property}: ceil($values / $base-line-height) * ($base-line-height / $values);
+    } @else {
+      #{$property}: $values;
+    }
+  }
+
+  @each $breakpoint, $value in $responsive-values {
+    @if type-of($breakpoint) == string {
+      @if(map-has-key($breakpoint-map, $breakpoint)) {
+        $breakpoint: map-get($breakpoint-map, $breakpoint);
+      } @else {
+        $breakpoint: "null";
+        @warn "Couldn't find breakpoint: " + $breakpoint;
+      }
+    }
+
+    @if $breakpoint != "null" {
+      @media (min-width: $breakpoint) {
+        @each $property in $properties {
+          @if $property == "font-size" and $use-available-mixins == true {
+            #{$property}: #{$value};
+            #{$property}: ($value / $base-font-size) * 1rem;
+          } @else if $property == "line-height" and $use-available-mixins == true {
+            #{$property}: ceil($value / $base-line-height) * ($base-line-height / $value);
+          } @else {
+            #{$property}: #{$value};
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//
+// Generates CSS to wrap semantic columns
+// in a row.
+//
+// Example:
+//  `@include row()`
+//
+//
+@mixin row() {
+  width: 100%;
+
+  &:after {
+    clear: both;
+    content: " ";
+    display: table;
+  }
+}
+
+
+//
+// Generates CSS for semantic columns.
+//
+// Parameters:
+//   $column: the number of this particular column (determines width)
+//   $number-columns: number of columns in the row (default is `$column-number`)
+//   $first-column: set to `true` if it's the first column in a row (default is false)
+//   $use-gutters: set to `true` if you want column gutters (default is false)
+//   $gutter-value: percentage value of the gutters to be applied (default is `$gutters` variable)
+//
+// Example:
+//  `@include column(16, 4, false, true, 4)`
+//
+//
+@mixin column($column, $number-columns: $column-number, $first-column: false, $use-gutters: false, $gutter-value: strip-units($gutters)) {
+  @include vendor(background-clip, padding-box, webkit);
+
+  @include breakpoint(small) {
+    @if $use-gutters == true {
+      $gutter-size: percentage($gutter-value) * 0.01;
+      $width-of-column: (100% - $gutter-size * ($number-columns - 1)) / $number-columns;
+
+      float: left;
+      @if $first-column == false {
+        margin-left: $gutter-size;
+      }
+      width: $width-of-column * $column + $gutter-size * ($column - 1);
+    } @else {
+      float: left;
+      width: percentage(100 / $number-columns * $column) * .01;
+    }
+  }
+}
+
+
+//
+// Generates CSS for pushing a semantic column left or right.
+//
+// Parameters:
+//   $option: set to `push` or `pull` to generate proper styles
+//   $column: the column number
+//   $number-columns: the number of columns in the row (default is $column-number)
+//   $use-gutters: set to `true` if your column has gutters (default is false)
+//   $gutter-value: percentage value of the gutters to be applied (default is `$gutters` variable)
+//
+// Example:
+//  `@include push-pull(push, 4, 16, true)`
+//
+//
+@mixin push-pull($option, $column, $number-columns: $column-number, $use-gutters: false, $gutter-value: strip-units($gutters)) {
+  $property: "";
+
+  @if $option == "push" {
+    $property: "left";
+  } @else {
+    $property: "right";
+  }
+
+  @if $use-gutters == true {
+    #{$property}: 100% / $number-columns * $column - $gutter-value;
+  } @else {
+    #{$property}: 100% / $number-columns * $column;
+  }
+}
+
+
+//
+// Generates CSS that will clear both left
+// and right floats.
+//
+// Example:
+//  `@include clearfix()`
+//
+//
+@mixin clearfix() {
+  & {
+    &:after{
+     content: "";
+     display: table;
+     clear: both;
+    }
+  }
+}
+
+
+//
+// Create variable-number grid columns given the value
+// for variable `$column-number`.
+//
+// NOTE:
+//   This is a setup mixin for the Concise grid. If you
+//   wish to set up a grid, please use the `row()` and
+//   `column()` mixins.
+//
+@mixin grid-setup($number: $column-number) {
+  @for $i from 1 through $number {
+    $column-width-gutters: (100% - $gutters * ($number - 1)) / $number;
+
+    .#{$column-prefix + $i} {
+      width: 100% / $number * $i;
+
+      .gutters & {
+        width: $column-width-gutters * $i + $gutters * ($i - 1);
+      }
+    }
+  }
+}
+
+
+//
+// Create `.push-` and `.pull-` classes given
+// the value for variabls `$option` and
+// `$column-number`.
+//
+// NOTE:
+//   This is a setup mixin for the push and pull
+//   functionality in the Concise grid. If you wish
+//   to use that functionality, please use the
+//   `push-pull()` mixin.
+//
+@mixin push-pull-setup($option, $number: $column-number) {
+  $property: "";
+
+  @if $option == "push" {
+    $property: "left";
+  } @else {
+    $property: "right";
+  }
+
+  @for $i from 1 to $number {
+    .#{$option}-#{$i} {
+      #{$property}: 100% / $number * $i;
+
+      .gutters & {
+        #{$property}: 100% / $number * $i - $gutters;
+      }
+    }
+  }
+}

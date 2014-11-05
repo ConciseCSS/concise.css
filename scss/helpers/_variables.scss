@@ -1,0 +1,177 @@
+//------------------------------------
+//  BASE
+//------------------------------------
+
+// Website background (can use color or image)
+$website-bg-color: #ffffff !default;
+
+
+// Enable font smoothing?
+$enable-font-smoothing: true !default;
+
+
+// Base font sizes and colors
+$base-font-size:     16px !default;
+$base-line-height:   24px !default;
+$base-font-color:    #333333 !default;
+$base-link-color:    #62b3e7 !default;
+$base-heading-color: #181818 !default;
+$base-sub-heading-color: #808080 !default;
+
+
+// Base font-family
+$base-font-family: "Droid Sans", Helvetica, Arial, sans-serif !default;
+$base-heading-font-family: "Droid Sans", Helvetica, Arial, sans-serif !default;
+$base-print-font-family: Georgia, "Times New Roman", Times, serif !default;
+
+
+// Element spacing and line-height ratio
+$base-spacing-unit: $base-line-height !default;
+$half-spacing-unit: $base-spacing-unit / 2 !default;
+$line-height-ratio: $base-line-height / $base-font-size;
+
+
+
+
+//------------------------------------
+//  RESPONSIVE
+//------------------------------------
+
+// Breakpoints
+$breakpoint-map: (
+  "extra-small": 30em,
+  "small":       48em,
+  "medium":      60em,
+  "large":       70em,
+  "extra-large": 80em
+);
+
+
+
+
+//------------------------------------
+//  COLORS
+//------------------------------------
+
+// Background colors
+$bg-colors: (
+  "white":  #ffffff,
+  "black":  #222222,
+  "gray":   #999999,
+  "green":  #5cb85c,
+  "blue":   #5bc0de,
+  "yellow": #ed9c28,
+  "red":    #d9534f
+);
+
+
+// Type colors
+$type-colors: (
+  "white":  #ffffff,
+  "black":  #222222,
+  "gray":   #999999,
+  "green":  #468847,
+  "blue":   #3a87ad,
+  "yellow": #c09853,
+  "red":    #d2322d
+);
+
+
+// Selection colors
+$selection-background:  #666666 !default;
+$selection-color:       #ffffff !default;
+
+
+// Form placeholder colors
+$placeholder-color:     #bbbbbb !default;
+
+
+// Colors used for our objects' borders, etc
+$object-ui-color:       #cccccc !default;
+
+
+// Dropdown colors
+$dropdown-bg-color:     #ffffff !default;
+$dropdown-border-color: #ededed !default;
+$dropdown-hover-color:  #f3f8f8 !default;
+$dropdown-header-color: #aaaaaa !default;
+
+
+
+// Button font color
+$button-font-color:       #ffffff !default;
+$button-hover-font-color: #ffffff !default;
+
+
+
+
+//------------------------------------
+//  Components
+//------------------------------------
+
+// Gutter size
+$gutters: 2% !default;
+
+
+// Prefix for grid columns. By default columns
+// are formatted as `.column-8`
+$column-prefix: 'column-' !default;
+
+
+// Dictate how many columns you would like your
+// grid system to use. Default is 16.
+$column-number: 16 !default;
+
+
+
+
+//------------------------------------
+//  INCLUDE
+//------------------------------------
+
+// Set whatever components you want included
+// in your project to `true` and any components
+// you do not wish to be included to `false`
+//
+// Thanks to inuitcss (https://github.com/csswizardry/inuit.css/blob/master/_defaults.scss)
+// for the idea to use feature switches in a framework. It's an absolutely brilliant idea
+// that makes customization so much easier.
+
+// Utility
+$use-normalize:       true !default;
+$use-clearfix:        true !default;
+$use-vertical-rhythm: true !default;
+
+
+// Base
+$use-main:           true !default;
+$use-selection:      true !default;
+$use-container:      true !default;
+$use-typography:     true !default;
+$use-headings:       true !default;
+$use-lists:          true !default;
+  $use-list-styles:  true !default;
+$use-tables:         true !default;
+  $use-table-styles: true !default;
+$use-forms:          true !default;
+  $use-form-styles:  true !default;
+$use-grid:           true !default;
+  $use-push:	       true !default;
+  $use-pull:	       true !default;
+
+
+// Components
+$use-type-colors:             true !default;
+$use-bg-colors:               true !default;
+$use-buttons:                 true !default;
+  $use-button-bg-colors:      true !default;  
+  $use-button-styles:         true !default;
+$use-dropdowns:               true !default;
+$use-navigation:              true !default;
+  $use-responsive-navigation: true !default;
+
+
+// Helpers
+$use-helper:      true !default;
+$use-conditional: true !default;
+$use-print:       true !default;

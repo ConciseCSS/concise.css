@@ -1,24 +1,23 @@
-@if $use-shared == true {
+@if $use-vertical-rhythm == true {
   //------------------------------------
   //  SHARED
   //------------------------------------
-  
+
   // Thanks to inuitcss for some simple ways to help maintain
   // vertical rhythm (https://github.com/csswizardry/inuit.css/edit/master/generic/_shared.scss)
-  
-  // Declare a common bottom margin for most elements 
+
+  // Declare a common bottom margin for most elements
   // to maintain a consistent vertical rhythm.
-  h1, h2, h3, h4, h5, h6, 
+  h1, h2, h3, h4, h5, h6,
   .h1, .h2, .h3, .h4, .h5, .h6,
-  .giga, .mega, .kilo, 
+  .giga, .mega, .kilo,
   hgroup,
   ul, ol, dl,
   blockquote, p, address,
   table,
   fieldset, figure,
   pre,
-  .row,
-  .well {
+  .row, .form-item {
     margin-bottom: $base-spacing-unit;
     margin-bottom: ($base-spacing-unit / $base-font-size) * 1rem;
   }
@@ -32,8 +31,8 @@
 
 
   // Left margin for lists
-  ul, 
-  ol, 
+  ul,
+  ol,
   dd {
     margin-left: 2 * $base-spacing-unit;
     margin-left: (2 * $base-spacing-unit / $base-font-size) * 1rem;

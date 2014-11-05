@@ -5,106 +5,88 @@
   @media print {
     @page { margin: 0.5cm; }
 
-    * {
+    *,
+    *:before,
+    *:after {
       background: transparent !important;
       color: black !important;
       text-shadow: none !important;
-      
-      @include vendor(filter, none !important);
-      
-      &:before, 
-      &:after {
-        background: transparent !important;
-        color: black !important;
-        text-shadow: none !important;
-        
-        @include vendor(filter, none !important);
-      }
+
+      @include vendor(filter, none !important, webkit moz ms official);
     }
-    
+
     body {
       background-color: #fff;
       color: #000;
-      font: 0.57em / 1.3 Georgia, "Times New Roman", Times, serif;
+      font: 0.57em / 1.3 $base-print-font-family;
     }
-    
+
     img { max-width: 100% !important; }
-    
+
     .show-print {
       display: block;
       visibility: visible;
     }
-    
-    .hide-print, 
-    video, 
-    audio, 
-    object, 
-    embed, 
-    nav, 
-    footer, 
+
+    .hide-print,
+    video,
+    audio,
+    object,
+    embed,
+    nav,
+    footer,
     a[href^="#"]:after {
       display: none;
       visibility: hidden;
     }
-    
-    p, 
-    h2, 
+
+    p,
+    h2,
     h3 {
       orphans: 3;
       widows: 3;
     }
-    
-    h2, 
+
+    h2,
     h3 { page-break-after: avoid; }
-    
-    a {
+
+    a,
+    a:visited {
       color: #000;
       text-decoration: underline;
       word-wrap: break-word;
-      
-      &:visited {
-        color: #000;
-        text-decoration: underline;
-        word-wrap: break-word;
-      }
-      
+
       &[href]:after {
         content: " (" attr(href) ")";
         font-size: smaller;
       }
     }
-    
+
     q:after { content: " (Source: " attr(cite) ")"; }
-    
+
     abbr[title]:after { content: " (" attr(title) ")"; }
-    
+
     a {
-      &:after, 
-      &[href^="javascript:"]:after, 
+      &:after,
+      &[href^="javascript:"]:after,
       &[href^="#"]:after { content: ""; }
     }
-    
+
     pre,
     blockquote {
       border: 1px solid #ededed;
       page-break-inside: avoid;
     }
-    
+
     thead { display: table-header-group; }
-    
-    tr, 
+
+    tr,
     img { page-break-inside: avoid; }
-    
+
     ul {
       list-style: none;
-      
+
       li { content: "&raquo; "; }
-    }
-    
-    .label, 
-    .badge {
-      border: 1px solid #000;
-      color: #000;
     }
   }
 }

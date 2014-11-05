@@ -3,10 +3,6 @@
   //  CLEARFIX
   //------------------------------------
   .clearfix {
-     &:after{
-      content: "";
-      display: table;
-      clear: both;
-    }
+     @include clearfix();
   }
 }

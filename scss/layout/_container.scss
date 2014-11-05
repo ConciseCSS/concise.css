@@ -1,0 +1,17 @@
+@if $use-container == true {
+  //------------------------------------
+  //  CONTAINER
+  //------------------------------------
+  .container {
+    margin: 0 auto;
+
+    @include responsive("width", 90%,
+      (
+        "small"       : 620px,
+        "medium"      : 768px,
+        "large"       : 960px,
+        "extra-large" : 1140px
+      )
+    );
+  }
+}

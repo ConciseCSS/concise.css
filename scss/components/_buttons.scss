@@ -1,0 +1,174 @@
+@if $use-buttons == true {
+  //------------------------------------
+  //  BUTTONS
+  //------------------------------------
+  .btn {
+    background-color: $object-ui-color;
+    border: 0;
+    color: $button-font-color;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1;
+    padding: 0.5em 1em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: baseline;
+    white-space: nowrap;
+
+    -webkit-touch-callout: none;
+
+    @include vendor(user-select, none, webkit ms o official);
+
+    @include vendor(user-drag, none, webkit);
+
+    &::-moz-focus-inner {
+      padding: 0;
+      border: 0;
+    }
+
+    &:hover { background-color: darken($object-ui-color, 10%); }
+
+    &:active { background-color: darken($object-ui-color, 5%); }
+
+    &[disabled] {
+      &,
+      &:hover,
+      &:active,
+      &:focus {
+        background: #dededc !important;
+        border: none;
+        color: #b3b3b1;
+        cursor: not-allowed;
+      }
+    }
+
+
+    // Background colors
+    @if $use-button-bg-colors == true {
+      @each $bg-color, $color in $bg-colors {
+        &.bg-#{$bg-color} { background-color: $color; }
+
+        &.bg-#{$bg-color}:hover { background-color: darken($color, 10%); }
+
+        &.bg-#{$bg-color}:active { background-color: darken($color, 5%); }
+
+        @if $bg-color != "white" {
+          &.bg-light-#{$bg-color} { background-color: lighten($color, 32.5%); }
+        }
+      }
+    }
+  }
+
+  a.btn {
+    &,
+    &:hover {
+      color: $button-hover-font-color;
+      text-decoration: none;
+    }
+
+    &:active { outline: 0; }
+  }
+
+  input[type="submit"].btn {
+    color: $button-font-color;
+    height: auto;
+    padding: 0.5em 1em;
+  }
+
+  button.btn { color: $button-font-color; }
+
+
+  @if $use-button-styles == true {
+    // Full-width collapsed button
+    .btn-collapse-full {
+      display: block;
+      margin: 12px 0;
+      width: 100%;
+
+      @include breakpoint(extra-small) {
+        & {
+          display: inline-block;
+          margin: 0;
+          width: auto;
+        }
+      }
+    }
+
+
+    // Button sizes
+    .btn-extra-small,
+    a.btn-extra-small,
+    p.btn-extra-small,
+    input.btn-extra-small {
+      @include font-size(10px);
+      padding: 0.25em 0.75em;
+    }
+
+    .btn-small,
+    a.btn-small,
+    p.btn-small,
+    input.btn-small { @include font-size(12px); }
+
+    .btn-large,
+    a.btn-large,
+    p.btn-large,
+    input.btn-large {
+      @include font-size(18px);
+      padding: 1em 2em;
+    }
+
+    .btn-extra-large,
+    a.btn-extra-large,
+    p.btn-extra-large,
+    input.btn-extra-large {
+      @include font-size(24px);
+      padding: 1em 2em;
+    }
+
+
+    // Dropdowns
+    .btn.dropdown {
+      width: 100%;
+
+      .dropdown-menu {
+        margin-top: auto;
+        text-align: left;
+        top: 100%;
+        width: 100%;
+      }
+
+      &[class*='dropdown-arrow-'] .dropdown-menu { margin-top: 10px; }
+
+      &.up {
+        .dropdown-menu {
+          margin-bottom: 0px;
+          top: auto;
+        }
+
+        &[class*='dropdown-arrow-'] .dropdown-menu { margin-bottom: 10px; }
+      }
+    }
+
+    @include breakpoint(small) {
+      .btn-extra-small .caret,
+      .btn-small .caret {
+        border-top: 4px solid;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+      }
+
+      .btn.dropdown {
+        width: auto;
+
+        &.extra-small .dropdown-menu { margin-top: 6px; }
+
+        &.dropdown-small .dropdown-menu { margin-top: 11px; }
+
+        &.dropdown-large .dropdown-menu { margin-top: 21px; }
+      }
+    }
+  }
+}

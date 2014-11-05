@@ -1,0 +1,128 @@
+//------------------------------------
+//  CONDITIONAL
+//------------------------------------
+
+// Silent Classes
+// (mixins have to be used instead of proper silent classes
+//  because of the scope of `@include` inside of media queries.)
+@mixin show-conditional {
+  display: block;
+  visibility: visible;
+}
+
+@mixin hide-conditional {
+  display: none;
+  visibility: hidden;
+}
+
+
+@if $use-conditional == true {
+  // Thanks to Bootstrap for having a good method of
+  // showing/hiding content via breakpoints
+  // (http://getbootstrap.com/css/#responsive-utilities)
+  .show-extra-small,
+  .hide-small,
+  .hide-medium,
+  .hide-large,
+  .hide-extra-large,
+  .hide-print,
+  .hide-hd {
+    @include show-conditional;
+  }
+
+  .hide-extra-small,
+  .show-small,
+  .show-medium,
+  .show-large,
+  .show-extra-large,
+  .show-print,
+  .show-hd {
+    @include hide-conditional;
+  }
+
+  @include breakpoint(small) {
+    .show-small,
+    .hide-extra-small,
+    .hide-medium,
+    .hide-large,
+    .hide-extra-large {
+      @include show-conditional;
+    }
+
+    .hide-small,
+    .show-extra-small,
+    .show-medium,
+    .show-large,
+    .show-extra-large {
+      @include hide-conditional;
+    }
+  }
+
+  @include breakpoint(medium) {
+    .show-medium,
+    .hide-small,
+    .hide-extra-small,
+    .hide-large,
+    .hide-extra-large {
+      @include show-conditional;
+    }
+
+    .hide-medium,
+    .show-small,
+    .show-extra-small,
+    .show-large,
+    .show-extra-large {
+      @include hide-conditional;
+    }
+  }
+
+  @include breakpoint(large) {
+    .show-large,
+    .hide-extra-small,
+    .hide-small,
+    .hide-medium,
+    .hide-extra-large {
+      @include show-conditional;
+    }
+
+    .hide-large,
+    .show-extra-small,
+    .show-small,
+    .show-medium,
+    .show-extra-large {
+      @include hide-conditional;
+    }
+  }
+
+  @include breakpoint(extra-large) {
+    .show-extra-large,
+    .hide-extra-small,
+    .hide-small,
+    .hide-medium,
+    .hide-large {
+      @include show-conditional;
+    }
+
+    .hide-extra-large,
+    .show-extra-small,
+    .show-small,
+    .show-medium,
+    .show-large {
+      @include hide-conditional;
+    }
+  }
+
+  // HiDPI and retina
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5),
+         only screen and (-o-min-device-pixel-ratio: 3 / 2),
+         only screen and (-webkit-min-device-pixel-ratio: 1.5),
+         only screen and (min-device-pixel-ratio: 1.5) {
+    .show-hd {
+      @include show-conditional;
+    }
+
+    .hide-hd {
+      @include hide-conditional;
+    }
+  }
+}

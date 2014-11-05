@@ -1,5 +1,6 @@
 # Files to ignore
 *.html
+.DS_Store
 prepros.cfg
 
 # Dependencies

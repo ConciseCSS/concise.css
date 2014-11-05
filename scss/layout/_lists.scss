@@ -1,0 +1,88 @@
+@if $use-lists == true {
+  //------------------------------------
+  //  LISTS
+  //------------------------------------
+  ul,
+  ol {
+    margin-left: 20px;
+    padding-left: 0px;
+
+    li {
+      line-height: 1.75em;
+      position: relative;
+    }
+
+    ul {
+      list-style-type: circle;
+      margin-bottom: auto;
+
+      ul { list-style-type: square; }
+
+      ol { list-style-type: lower-roman; }
+
+      @include breakpoint(small) {
+        & { margin-left: 20px; }
+      }
+    }
+
+    ol {
+      list-style-type: lower-latin;
+      margin-bottom: auto;
+
+      ol { list-style-type: lower-roman; }
+
+      ul { list-style-type: square; }
+    }
+  }
+
+
+  @if $use-list-styles == true {
+    // Unstyled
+    .list-unstyled {
+      margin-left: 0px;
+      list-style: none;
+
+      ul {
+        list-style: none;
+
+        ul { list-style: none; }
+      }
+    }
+
+
+    // Inline
+    .list-inline {
+      margin-left: 0px;
+
+      li {
+        border-bottom: none;
+        display: inline;
+        margin-right: 15px;
+
+        &:last-child { margin-right: 0px; }
+
+        @include breakpoint(small) {
+          & {
+            margin-right: 15px;
+
+            &:last-child { margin-right: 0px; }
+          }
+        }
+
+        @include breakpoint(medium) {
+          & {
+            margin-right: 30px;
+
+            &:last-child { margin-right: 0px; }
+          }
+        }
+      }
+    }
+  }
+
+
+  // Definition Lists
+  dt { font-weight: bold; }
+
+  dd { margin-left: 0px; }
+}

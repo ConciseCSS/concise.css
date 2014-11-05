@@ -1,0 +1,32 @@
+//------------------------------------
+//  FUNCTIONS
+//------------------------------------
+
+//
+// Calculates proper rem font-size given
+// a pixel amount.
+//
+@function calculate-rem($font-size) {
+  $rem-size: ($font-size / $base-font-size) * 1rem;
+
+  @return $rem-size;
+}
+
+
+//
+// Calculates proper line-height given a
+// font-size to maintain vertical rhythm.
+//
+@function calculate-line-height($font-size) {
+  $line-height-size: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+
+  @return $line-height-size;
+}
+
+
+//
+// Strips the units from a value (px, em, etc).
+//
+@function strip-units($value) {
+  @return $value / ($value * 0 + 1);
+}

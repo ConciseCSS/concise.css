@@ -1,0 +1,63 @@
+@if $use-tables == true {
+  //------------------------------------
+  //  TABLES
+  //------------------------------------
+
+  @if $use-table-styles == true {
+    table {
+      // Table styling
+      &.table {
+        empty-cells: show;
+        width: 100%;
+
+        caption {
+          color: #000;
+          font: italic 85%/1 arial, sans-serif;
+          padding: 1em 0;
+          text-align: center;
+        }
+
+        thead { border-bottom: 2px solid $object-ui-color; }
+
+        th,
+        td { padding: 12px 15px; }
+
+        td { border-top: 1px solid $object-ui-color; }
+
+        @include breakpoint(extra-small) {
+          & {
+            width: auto;
+
+            th,
+            td { padding: 10px 50px 10px 25px; }
+          }
+        }
+      }
+
+      &.table-full,
+      &.table.table-full { width: 100%; }
+    }
+  }
+
+
+  // Responsive tables
+  .table-responsive {
+    overflow: auto;
+    width: 100%;
+
+    table { margin-bottom: 0; }
+
+    &::-webkit-scrollbar {
+      height: 14px;
+      width: 14px;
+
+      -webkit-appearance: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(50, 50, 50, 0.2);
+      border: 3px solid #fff;
+      border-radius: 8px;
+    }
+  }
+}

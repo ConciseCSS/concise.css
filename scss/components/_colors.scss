@@ -1,0 +1,25 @@
+//------------------------------------
+//  COLORS
+//------------------------------------
+
+// Background colors
+@if $use-bg-colors == true {
+  @each $bg-color, $color in $bg-colors {
+    .bg-#{$bg-color},
+    %bg-#{$bg-color} { background-color: $color; }
+
+    @if $bg-color != "white" {
+      .bg-light-#{$bg-color},
+      %bg-light-#{$bg-color} { background-color: lighten($color, 32.5%); }
+    }
+  }
+}
+
+
+// Type colors
+@if $use-type-colors == true {
+  @each $type-color, $color in $type-colors {
+    .color-#{$type-color},
+    %color-#{$type-color} { color: $color; }
+  }
+}

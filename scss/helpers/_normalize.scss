@@ -1,10 +1,10 @@
 @if $use-normalize == true {
   //------------------------------------
-  //  NORMALIZE  
-  //------------------------------------ 
+  //  NORMALIZE
+  //------------------------------------
   html {
     font-size: 100%;
-    @include vendor(text-size-adjust, 100%);
+    @include vendor(text-size-adjust, 100%, webkit moz ms o official);
   }
 
   article,
@@ -20,9 +20,9 @@
   section,
   summary { display: block; }
 
-  audio, 
-  canvas, 
-  progress, 
+  audio,
+  canvas,
+  progress,
   video {
     display: inline-block;
     vertical-align: baseline;
@@ -33,21 +33,21 @@
     height: 0;
   }
 
-  [hidden], 
+  [hidden],
   template { display: none; }
 
   a {
     background: transparent;
-    
+
     &:focus { outline: thin dotted; }
-    
-    &:active, 
+
+    &:active,
     &:hover { outline: 0; }
   }
 
   abbr[title] { border-bottom: 1px dotted; }
 
-  b, 
+  b,
   strong { font-weight: bold; }
 
   dfn { font-style: italic; }
@@ -69,8 +69,8 @@
 
   sub { bottom: -0.25em; }
 
-  img { 
-    border: 0; 
+  img {
+    border: 0;
     -ms-interpolation-mode: bicubic;
   }
 
@@ -83,8 +83,8 @@
     border-width: 1px 0 0;
     clear: both;
     height: 0;
-    
-    @include vendor(box-sizing, content-box);
+
+    @include vendor(box-sizing, content-box, official);
   }
 
   pre {
@@ -93,9 +93,9 @@
     word-wrap: break-word;
   }
 
-  code, 
-  kbd, 
-  pre, 
+  code,
+  kbd,
+  pre,
   samp {
     font-family: monospace, monospace;
     @include font-size($base-font-size);
@@ -103,7 +103,7 @@
 
   q {
     quotes: none;
-    
+
     &:before,
     &:after {
       content: '';
@@ -113,10 +113,10 @@
 
   form { margin: 0; }
 
-  button, 
-  input, 
-  optgroup, 
-  select, 
+  button,
+  input,
+  optgroup,
+  select,
   textarea {
     color: inherit;
     font: inherit;
@@ -137,7 +137,7 @@
     cursor: pointer;
   }
 
-  button[disabled], 
+  button[disabled],
   html input[disabled] { cursor: default; }
 
   button::-moz-focus-inner,
@@ -148,23 +148,23 @@
 
   input {
     line-height: normal;
-    
-    &[type="checkbox"], 
+
+    &[type="checkbox"],
     &[type="radio"] {
       box-sizing: border-box;
       padding: 0;
     }
-    
+
     &[type="number"] {
-      &::-webkit-inner-spin-button, 
+      &::-webkit-inner-spin-button,
       &::-webkit-outer-spin-button { height: auto; }
     }
-    
+
     &[type="search"] {
-      -webkit-appearance: textfield;    
-      @include vendor(box-sizing, content-box);
-      
-      &::-webkit-search-cancel-button, 
+      -webkit-appearance: textfield;
+      @include vendor(box-sizing, content-box, official);
+
+      &::-webkit-search-cancel-button,
       &::-webkit-search-decoration { -webkit-appearance: none; }
     }
   }
@@ -186,6 +186,6 @@
     border-spacing: 0;
   }
 
-  td, 
+  td,
   th { padding: 0; }
 }

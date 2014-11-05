@@ -1,0 +1,103 @@
+@if $use-forms == true {
+  //------------------------------------
+  //  FORMS
+  //------------------------------------
+  input {
+    &[type="checkbox"],
+    &[type="file"],
+    &[type="image"],
+    &[type="radio"] {
+      background: auto;
+      border: auto;
+      height: auto;
+      width: auto;
+    }
+  }
+
+  input[disabled],
+  select[disabled],
+  textarea[disabled] {
+    background-color: #f6f6f6;
+    cursor: not-allowed;
+  }
+
+  label { display: block; }
+
+  textarea { height: auto; }
+
+
+  @if $use-form-styles == true {
+    // Form styling
+    .form {
+      input,
+      select,
+      textarea {
+        border: 1px solid $object-ui-color;
+        height: 37px;
+        padding: 5px;
+        width: 100%;
+
+        @include vendor(box-sizing, border-box, official);
+
+        @include breakpoint(extra-small) {
+          & { width: 300px; }
+        }
+      }
+
+      textarea { height: auto; }
+
+      @include breakpoint(extra-small) {
+        input[type="submit"] {
+          display: block;
+          width: auto;
+        }
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus,
+      button:focus,
+      [contenteditable="true"]:focus { outline: 1px solid darken($object-ui-color, 15%); }
+
+      fieldset {
+        border: 1px solid $object-ui-color;
+        padding: 10px 25px;
+
+        legend {
+          font-weight: bold;
+          @include font-size(13px);
+          padding: 0 10px;
+        }
+      }
+    }
+
+
+    // Block-level form items
+    .form-item { display: block; }
+
+
+    // Inline Form
+    .form-inline {
+      label { width: auto; }
+
+      @include breakpoint(small) {
+        label {
+          display: inline-block;
+          width: 100px;
+        }
+
+        textarea { width: auto; }
+      }
+    }
+
+
+    // Placeholder text
+    ::-webkit-input-placeholder { color: $placeholder-color; }
+
+    :-ms-input-placeholder { color: $placeholder-color; }
+
+    ::-moz-placeholder { color: $placeholder-color; }
+
+    :-moz-placeholder { color: $placeholder-color; }
+  }
+}

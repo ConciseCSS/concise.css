@@ -1,9 +1,9 @@
-(function($){  
+(function($){
   /**
    * Calculate object width
    *
    */
-  $.fn.calculateWidth = function() { 
+  $.fn.calculateWidth = function() {
     return $(this).width();
   };
 
@@ -14,7 +14,7 @@
    * @note Only necessary for non-responsive websites.
    */
   $.fn.nonResponsive = function() {
-    
+
     // Loop through each instance of the `.non-responsive` class
     this.each(function(index) {
       if ($(this).hasClass("non-responsive")) {
@@ -22,11 +22,11 @@
         var containerWidth = $(".container").width(),
         i = 1,
         max = 24;
-        
+
         // Set pixel-based alternatives for grid styles
         // But first we need to know if our row has class `gutters`
         if($(this).hasClass("gutters")) {
-          for (; i <= max; i++ ) {      
+          for (; i <= max; i++ ) {
             // Column width for row with gutters
             var columnWidth = ($('.column-'+i).calculateWidth()),
             gutterWidth = columnWidth * 0.02;
@@ -37,7 +37,7 @@
           for (; i <= max ; i++ ) {
             // Column width for normal row
             var columnWidth = ($('.column-'+i).calculateWidth() - 1);
-            
+
             $('.column-'+i).css("width", columnWidth + "px");
           }
         }
@@ -46,6 +46,6 @@
   };
 }(jQuery));
 
-jQuery(document).ready(function() {  
+jQuery(document).ready(function() {
   jQuery("body, .row").nonResponsive();
 });

@@ -15,8 +15,6 @@
 
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
 
 
 /**
@@ -35,21 +33,6 @@ var AUTOPREFIXER_BROWSERS = [
   'ie_mob >= 9'
 ];
 
-var BANNER = [
-  '/*!',
-  ' * <%= pkg.name %> v<%= pkg.version %>',
-  ' * <%= pkg.homepage %>',
-  ' *',
-  ' * Copyright <%= date %> Contributors',
-  ' * Released under the <%= pkg.license.type %> license',
-  ' * <%= pkg.license.url %>',
-  ' */',
-  ''
-].join('\n');
-var pkg = require('./package');
-var BANNER_SETTINGS = { pkg: pkg, date: new Date().getFullYear() };
-
-
 /**
  * Distribute SCSS and JS files
  */
@@ -59,23 +42,19 @@ gulp.task('dist:css', function () {
   return gulp.src('scss/concise.scss')
     .pipe($.rubySass({
       style: 'expanded',
-      precision: 10, // I don't know what it means; taken from web-starter-kit :D
+      precision: 5,
       loadPath: ['scss']
     }))
     .on('error', function (e) { console.error(e.message) })
     .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
-    .pipe($.header(BANNER, BANNER_SETTINGS))
-    .pipe(reload({ stream: true }))
     .pipe(gulp.dest('dist/css'))
     .pipe($.size({ title: 'dist:css' }))
 });
 
 // JS
 gulp.task('dist:js', function () {
-  return gulp.src('js/*.js') // Set array of files in the order you need
+  return gulp.src('js/*.js')
     .pipe($.concat('concise.js'))
-    .pipe($.header(BANNER, BANNER_SETTINGS))
-    .pipe(reload({ stream: true }))
     .pipe(gulp.dest('dist/js'))
     .pipe($.size({ title: 'dist:js' }))
 });
@@ -91,7 +70,6 @@ gulp.task('dist', ['dist:css', 'dist:js']);
 gulp.task('minify:css', function () {
   return gulp.src('dist/css/concise.css')
     .pipe($.csso())
-    .pipe($.header(BANNER, BANNER_SETTINGS))
     .pipe($.rename({ suffix: '.min' }))
     .pipe(gulp.dest('dist/css'))
     .pipe($.size({ title: 'dist:min:css' }))
@@ -144,22 +122,6 @@ gulp.task('watch', function () {
   gulp.watch('scss/**/*.scss', ['dist:css']);
   gulp.watch('js/**/*.js', ['lint:js', 'jscs', 'dist:js']);
 });
-
-
-/**
- * Serve
- * Creating autoreload page
- */
-
-gulp.task('serve', ['watch'], function () {
-  browserSync({
-    notify: false,
-    server: {
-      baseDir: './'
-    }
-  });
-});
-
 
 /**
  * Default

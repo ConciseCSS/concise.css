@@ -1,0 +1,133 @@
+ @if $use-navigation == true {
+  //------------------------------------
+  //  NAVIGATION
+  //------------------------------------
+
+  // Silent Class
+  %before-responsive-icon {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    text-align: center;
+    visibility: hidden;
+  }
+
+
+  // Navigation Styles
+  nav {
+    ul,
+    ol {
+      list-style: none;
+      margin: 0;
+    }
+
+    li {
+      cursor: pointer;
+      position: relative;
+
+      .dropdown & { margin-right: 0px; }
+    }
+  }
+
+
+  @if $use-responsive-navigation == true {
+    // Responsive navigation
+    //
+    // Thanks to Ben Plum for the great work on his
+    // Naver plugin (https://github.com/benplum/Naver/)
+    .naver {
+      .naver-handle {
+        color: inherit;
+        cursor: pointer;
+        display: none;
+        @include font-size(24px);
+        text-align: right;
+        text-transform: uppercase;
+
+        @include vendor(user-select, none, ms official);
+      }
+
+      .naver-wrapper {
+        height: auto;
+        width: 100%;
+      }
+
+      &.enabled {
+        .naver-handle { display: block; }
+
+        .naver-wrapper {
+          height: 0px;
+          overflow: hidden;
+
+          li {
+            display: block;
+            padding: 8px;
+            text-align: left;
+            width: 100%;
+
+            &:hover { background: #f9f9f9; }
+          }
+        }
+      }
+    }
+
+    .nav-responsive {
+      &.naver .naver-handle:after {
+        content: "\2261";
+        text-align: right;
+      }
+
+      &.nav-responsive-text.naver {
+        .naver-handle:after { content: "\00a0 \2261"; }
+
+        .naver-container:before {
+          @extend %before-responsive-icon;
+        }
+      }
+    }
+
+
+    // Left-aligned responsive navigation
+    .nav-responsive-left {
+      &.naver .naver-handle {
+        text-align: left;
+
+        &:before {
+          content: "\2261";
+          text-align: left;
+        }
+      }
+
+      &.nav-responsive-text.naver {
+        .naver-handle:before { content: "\2261 \00a0"; }
+
+        .naver-container:after {
+          @extend %before-responsive-icon;
+        }
+      }
+    }
+
+
+    // Centered responsive navigation
+    .nav-responsive-center {
+      &.naver .naver-handle {
+        text-align: center;
+
+        &:before {
+          content: "\2261";
+          text-align: center;
+        }
+      }
+
+      &.nav-responsive-text.naver {
+        .naver-handle:before { content: "\2261 \00a0"; }
+
+        .naver-container:after {
+          @extend %before-responsive-icon;
+        }
+      }
+    }
+  }
+}

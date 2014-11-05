@@ -2,19 +2,19 @@
 
 [![Gitter chat](https://badges.gitter.im/concisecss.png)](https://gitter.im/concisecss) [![Bower version](https://badge.fury.io/bo/concise.svg)](http://badge.fury.io/bo/concise)
 
-Concise is a lightweight, front-end framework that provides a number of great features without the bloat. Concise is built based on Object-Oriented CSS principles and keeps semantics in mind to provide a small learning curve, but a high level of customization.
+Concise is a lightweight, front-end framework that provides a number of great features without the bloat. Concise is built based on Object-Oriented CSS principles and keeps semantics in mind to provide a small learning curve, and a high level of customization.
 
 ## Quickstart
 
 It's easy to get started with Concise:
 
-- [Download the latest release](https://github.com/ConciseCSS/concise.css/archive/v1.0.0.zip)
+- [Download the latest release](https://github.com/ConciseCSS/concise.css/archive/v2.0.0.zip)
 - Clone the repo: `git clone https://github.com/ConciseCSS/concise.css.git`
 - Install with [Bower](http://bower.io/): `bower install concise`
 - Install the [gem](https://github.com/ConciseCSS/concise.css-gem): `$ gem install concisecss`
 - Use [Concise Generator](https://github.com/ConciseCSS/concise-generator) - _Experimental version_
 
-After you download or install the package, [read our quickstart guide](http://concisecss.com/get-started/getting-started.php) to get up and running.
+After you download or install the package, [read our quickstart guide](http://concisecss.com/get-started/getting-started) to get up and running.
 
 ## Documentation
 
@@ -56,29 +56,29 @@ If you wish to contribute to the Concise project, please read through our [contr
 
 Are you interested in contributing monetarily to the project? If so, check out our [Gittip page](https://www.gittip.com/keenanpayne/). All tips that we receive from Gittip will go straight to maintaining and building upon Concise.
 
-## Pre-Processors
-
-Concise was originally written in [SASS](http://sass-lang.com/) but has a port for [LESS](http://lesscss.org/) and a work-in-progress port for [Stylus](http://learnboost.github.io/stylus/).
-
-- [Concise-SASS](https://github.com/ConciseCSS/concise.css)
-- [Concise-LESS](https://github.com/ConciseCSS/concise.css-less)
-- [Concise-Stylus](https://github.com/ConciseCSS/concise.css-stylus)
-
 ## Versioning
 
 Concise is currently maintained under the [Semantic Versioning guidelines](http://semver.org/).
 
 ## Acknowledgments
 
-- Inspiration for some of the features in Concise came from [Harry Roberts'](http://csswizardry.com/) own front-end framework, [inuitcss](https://github.com/csswizardry/inuit.css).
-- Jonathan Snook's book on [Scalable and Modular CSS](https://smacss.com/) (SMACSS) is a great read and offered insight into writing modular CSS, which helped in the development of Concise.
+There are acknowledgements spread throughout the source code if you look around, and you can also view a list of credits [here](http://concisecss.com/credits/).
 
-## Creator
+## Contributors
 
 **Keenan Payne**
 - [Website](http://keenanpayne.com)
 - [GitHub](http://github.com/keenanpayne)
 - [Twitter](http://twitter.com/keenan_payne)
+
+**Filipe Linhares**
+- [Website](http://filipelinhares.com)
+- [GitHub](http://github.com/filipelinhares)
+- [Twitter](http://twitter.com/ofilipelinhares)
+
+**Benjamin Sigidi**
+- [Website](https://moozen.com/)
+- [GitHub](https://github.com/vezu)
 
 ## Elsewhere
 
@@ -89,5 +89,3 @@ Concise is currently maintained under the [Semantic Versioning guidelines](http:
 ## License
 
 Code released under the [MIT license](https://github.com/ConciseCSS/concise.css/blob/master/LICENSE). Documentation released under [Creative Commons](http://creativecommons.org/licenses/by-sa/4.0/).
-
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/47ac30b8ba5ef2abdcef2f2f855c5f7c "githalytics.com")](http://githalytics.com/ConciseCSS/concise.css)
