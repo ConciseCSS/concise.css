@@ -1,6 +1,7 @@
 # [<img src="http://i.imgur.com/ihzCgEr.png">](http://concisecss.com/)
 
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/ConciseCSS/concise.css?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Bower version](https://badge.fury.io/bo/concise.svg)](http://badge.fury.io/bo/concise)
 
 Concise is a lightweight, front-end framework that provides a number of great features without the bloat. Concise is built based on Object-Oriented CSS principles and keeps semantics in mind to provide a small learning curve, and a high level of customization.
 
