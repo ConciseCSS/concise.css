@@ -55,25 +55,25 @@ $breakpoint-map: (
 
 // Background colors
 $bg-colors: (
-  "white":  #ffffff,
-  "black":  #222222,
-  "gray":   #999999,
-  "green":  #5cb85c,
-  "blue":   #5bc0de,
-  "yellow": #ed9c28,
-  "red":    #d9534f
+  white:  #ffffff,
+  black:  #222222,
+  gray:   #999999,
+  green:  #5cb85c,
+  blue:   #5bc0de,
+  yellow: #ed9c28,
+  red:    #d9534f
 );
 
 
 // Type colors
 $type-colors: (
-  "white":  #ffffff,
-  "black":  #222222,
-  "gray":   #999999,
-  "green":  #468847,
-  "blue":   #3a87ad,
-  "yellow": #c09853,
-  "red":    #d2322d
+  white:  #ffffff,
+  black:  #222222,
+  gray:   #999999,
+  green:  #468847,
+  blue:   #3a87ad,
+  yellow: #c09853,
+  red:    #d2322d
 );
 
 
@@ -164,7 +164,7 @@ $use-grid:           true !default;
 $use-type-colors:             true !default;
 $use-bg-colors:               true !default;
 $use-buttons:                 true !default;
-  $use-button-bg-colors:      true !default;  
+  $use-button-bg-colors:      true !default;
   $use-button-styles:         true !default;
 $use-dropdowns:               true !default;
 $use-navigation:              true !default;
