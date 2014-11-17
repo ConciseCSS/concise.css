@@ -43,7 +43,7 @@ If you are unsure of whether or not your feature would be a good fit for the fra
 3. Follow the [coding style guide](#coding-style-guide)
 3. Test any and all changes you make or implement. 
 4. Commit changes (`git commit -am `My new feature`)
-  - **Note:** If you're referencing a GitHub issue in your commit, please preface the commit with `[ref: #000]` where "000" is the issue number.
+  - **Note:** If you're referencing a GitHub issue in your commit, please preface the commit with `[ref: #000]` where `000` is the issue number.
 5. Push to your feature branch (`git push origin my-feature`)
 6. Create a new [Pull Request](https://help.github.com/articles/creating-a-pull-request)
 7. Wait for a response from us (we promise to be semi-prompt)
