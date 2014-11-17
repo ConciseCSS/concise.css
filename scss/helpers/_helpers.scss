@@ -105,4 +105,11 @@
     vertical-align: middle;
     width: 0;
   }
+  
+  // Fluid container (ideal for img, embed object & iframe )
+  .fluid {
+    max-width: 100%;
+    height: auto;
+	}
+	
 }
