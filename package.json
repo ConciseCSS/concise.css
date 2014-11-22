@@ -2,7 +2,17 @@
   "name": "Concise.css",
   "version": "2.0.0",
   "description": "A lightweight front-end framework that provides functionality without the bloat.",
-  "keywords": [ "css", "js", "scss", "sass", "mobile-first", "responsive", "front-end", "framework", "web" ],
+  "keywords": [
+    "css",
+    "js",
+    "scss",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
   "license": {
     "type": "MIT",
     "url": "https://github.com/ConciseCSS/concise.css/blob/master/LICENSE"
@@ -14,18 +24,18 @@
   "bugs": "https://github.com/ConciseCSS/concise.css/issues",
   "homepage": "http://concisecss.com",
   "devDependencies": {
-    "jshint-stylish": "^0.4.0",
     "gulp": "^3.8.6",
-    "gulp-load-plugins": "~0.5.3",
-    "gulp-rename": "^1.2.0",
-    "gulp-size": "^1.0.0",
+    "gulp-autoprefixer": "^0.0.8",
     "gulp-cached": "~1.0.1",
     "gulp-concat": "^2.3.4",
-    "gulp-ruby-sass": "^0.7.1",
-    "gulp-autoprefixer": "^0.0.8",
     "gulp-csso": "^0.2.9",
-    "gulp-jshint": "^1.8.0",
     "gulp-jscs": "^1.0.0",
-    "gulp-uglify": "~0.3.1"
+    "gulp-jshint": "^1.8.0",
+    "gulp-load-plugins": "~0.5.3",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^1.2.0",
+    "gulp-size": "^1.0.0",
+    "gulp-uglify": "~0.3.1",
+    "jshint-stylish": "^0.4.0"
   }
 }
