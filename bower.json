@@ -4,9 +4,9 @@
   "version": "2.0.0",
   "ignore": [
     ".gitignore",
-    "LICENSE",
     "README.md",
-    "package.json"
+    "package.json",
+    "Gulpfile.js"
   ],
   "keywords": [
     "css",
