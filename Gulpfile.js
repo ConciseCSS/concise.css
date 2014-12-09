@@ -40,12 +40,11 @@ var AUTOPREFIXER_BROWSERS = [
 // CSS
 gulp.task('dist:css', function () {
   return gulp.src('scss/concise.scss')
-    .pipe($.rubySass({
-      style: 'expanded',
+    .pipe($.sass({
+      errLogToConsole: true,
+      outputStyle: 'expanded',
       precision: 5,
-      loadPath: ['scss']
     }))
-    .on('error', function (e) { console.error(e.message) })
     .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
     .pipe(gulp.dest('dist/css'))
     .pipe($.size({ title: 'dist:css' }))
