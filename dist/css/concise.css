@@ -277,19 +277,25 @@ dd {
   margin-left: 3rem;
 }
 
-*::-webkit-selection, *::-moz-selection, *::selection {
+*::-webkit-selection {
+  background-color: #666666;
+  color: #ffffff;
+}
+*::-moz-selection {
+  background-color: #666666;
+  color: #ffffff;
+}
+*::selection {
   background-color: #666666;
   color: #ffffff;
 }
 
 a {
   color: #62b3e7;
-  text-decoration: none;
 }
 a:hover, a:visited {
   color: #8ec8ee;
   cursor: pointer;
-  text-decoration: underline;
 }
 p a, p a:visited {
   line-height: inherit;
@@ -320,14 +326,6 @@ abbr[title], abbr[data-original-title] {
 acronym {
   cursor: help;
   border-bottom: 1px dashed #62b3e7;
-}
-
-kbd {
-  background-color: #333;
-  border-radius: 4px;
-  color: #fff;
-  font-size: 90%;
-  padding: 1px 4px;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -1321,14 +1319,12 @@ table.table-full, table.table.table-full {
   position: relative;
   text-align: center;
   text-decoration: none;
-  user-drag: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   vertical-align: baseline;
   white-space: nowrap;
-  -webkit-touch-callout: none;
 }
 .btn::-moz-focus-inner {
   padding: 0;
@@ -1345,6 +1341,21 @@ table.table-full, table.table.table-full {
   border: none;
   color: #b3b3b1;
   cursor: not-allowed;
+}
+.btn a.btn, .btn a.btn:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+.btn a.btn:active {
+  outline: 0;
+}
+.btn input[type="submit"].btn {
+  color: #ffffff;
+  height: auto;
+  padding: 0.5em 1em;
+}
+.btn button.btn {
+  color: #ffffff;
 }
 .btn.bg-white {
   background-color: #ffffff;
@@ -1429,24 +1440,6 @@ table.table-full, table.table.table-full {
 }
 .btn.bg-light-red {
   background-color: #f6d8d7;
-}
-
-a.btn, a.btn:hover {
-  color: #ffffff;
-  text-decoration: none;
-}
-a.btn:active {
-  outline: 0;
-}
-
-input[type="submit"].btn {
-  color: #ffffff;
-  height: auto;
-  padding: 0.5em 1em;
-}
-
-button.btn {
-  color: #ffffff;
 }
 
 .btn-collapse-full {
