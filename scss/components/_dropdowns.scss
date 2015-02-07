@@ -119,8 +119,10 @@
       }
 
       &:before {
-        border-color: rgba(0, 0, 0, 0.1) transparent;
-        border-width: 0 8px 8px 8px;
+        border: 8px rgba(0, 0, 0, 0.1);
+        border-right-color: transparent;
+        border-left-color: transparent;
+        border-top-width: 0;
       }
     }
 
