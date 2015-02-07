@@ -963,7 +963,6 @@ ol {
 ul li,
 ol li {
   line-height: 1.75em;
-  position: relative;
 }
 ul ul,
 ol ul {
