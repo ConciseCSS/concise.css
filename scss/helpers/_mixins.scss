@@ -122,6 +122,9 @@
 //  );
 //
 //
+// Big thanks to Max Luster for a great article about chained media
+// queries that created the majority of this mixin.
+// (https://bugsnag.com/blog/responsive-typography-with-chained-media-queries)
 @mixin responsive($properties, $values, $responsive-values, $use-available-mixins: true) {
   @each $property in $properties {
     @if $property == "font-size" and $use-available-mixins == true {
