@@ -614,114 +614,150 @@ h6, .h6 {
     margin-left: 0;
   }
 
-  .column-1 {
+  .gutters-off [class*='column-'] {
+    margin-left: 0;
+  }
+
+  .column-1,
+  .gutters .gutters-off .column-1 {
     width: 6.25%;
   }
+
   .gutters .column-1 {
     width: 4.375%;
   }
 
-  .column-2 {
+  .column-2,
+  .gutters .gutters-off .column-2 {
     width: 12.5%;
   }
+
   .gutters .column-2 {
     width: 10.75%;
   }
 
-  .column-3 {
+  .column-3,
+  .gutters .gutters-off .column-3 {
     width: 18.75%;
   }
+
   .gutters .column-3 {
     width: 17.125%;
   }
 
-  .column-4 {
+  .column-4,
+  .gutters .gutters-off .column-4 {
     width: 25%;
   }
+
   .gutters .column-4 {
     width: 23.5%;
   }
 
-  .column-5 {
+  .column-5,
+  .gutters .gutters-off .column-5 {
     width: 31.25%;
   }
+
   .gutters .column-5 {
     width: 29.875%;
   }
 
-  .column-6 {
+  .column-6,
+  .gutters .gutters-off .column-6 {
     width: 37.5%;
   }
+
   .gutters .column-6 {
     width: 36.25%;
   }
 
-  .column-7 {
+  .column-7,
+  .gutters .gutters-off .column-7 {
     width: 43.75%;
   }
+
   .gutters .column-7 {
     width: 42.625%;
   }
 
-  .column-8 {
+  .column-8,
+  .gutters .gutters-off .column-8 {
     width: 50%;
   }
+
   .gutters .column-8 {
     width: 49%;
   }
 
-  .column-9 {
+  .column-9,
+  .gutters .gutters-off .column-9 {
     width: 56.25%;
   }
+
   .gutters .column-9 {
     width: 55.375%;
   }
 
-  .column-10 {
+  .column-10,
+  .gutters .gutters-off .column-10 {
     width: 62.5%;
   }
+
   .gutters .column-10 {
     width: 61.75%;
   }
 
-  .column-11 {
+  .column-11,
+  .gutters .gutters-off .column-11 {
     width: 68.75%;
   }
+
   .gutters .column-11 {
     width: 68.125%;
   }
 
-  .column-12 {
+  .column-12,
+  .gutters .gutters-off .column-12 {
     width: 75%;
   }
+
   .gutters .column-12 {
     width: 74.5%;
   }
 
-  .column-13 {
+  .column-13,
+  .gutters .gutters-off .column-13 {
     width: 81.25%;
   }
+
   .gutters .column-13 {
     width: 80.875%;
   }
 
-  .column-14 {
+  .column-14,
+  .gutters .gutters-off .column-14 {
     width: 87.5%;
   }
+
   .gutters .column-14 {
     width: 87.25%;
   }
 
-  .column-15 {
+  .column-15,
+  .gutters .gutters-off .column-15 {
     width: 93.75%;
   }
+
   .gutters .column-15 {
     width: 93.625%;
   }
 
-  .column-16 {
+  .column-16,
+  .gutters .gutters-off .column-16 {
     width: 100%;
   }
+
   .gutters .column-16 {
     width: 100%;
   }

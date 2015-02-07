@@ -282,12 +282,13 @@
   @for $i from 1 through $number {
     $column-width-gutters: (100% - $gutters * ($number - 1)) / $number;
 
-    .#{$column-prefix + $i} {
+    .#{$column-prefix + $i},
+    .gutters .gutters-off .#{$column-prefix + $i} {
       width: 100% / $number * $i;
+    }
 
-      .gutters & {
-        width: $column-width-gutters * $i + $gutters * ($i - 1);
-      }
+    .gutters .#{$column-prefix + $i} {
+      width: $column-width-gutters * $i + $gutters * ($i - 1);
     }
   }
 }
