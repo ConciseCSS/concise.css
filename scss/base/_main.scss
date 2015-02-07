@@ -11,7 +11,7 @@
     &,
     &:before,
     &:after {
-      @include vendor(box-sizing, border-box, official);
+      box-sizing: border-box;
     }
   }
 

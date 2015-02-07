@@ -10,9 +10,8 @@
     *:after {
       background: transparent !important;
       color: black !important;
+      filter: none !important;
       text-shadow: none !important;
-
-      @include vendor(filter, none !important, webkit moz ms official);
     }
 
     body {

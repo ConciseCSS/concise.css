@@ -199,7 +199,7 @@
 //
 //
 @mixin column($column, $number-columns: $column-number, $first-column: false, $use-gutters: false, $gutter-value: strip-units($gutters)) {
-  @include vendor(background-clip, padding-box, webkit);
+  background-clip: padding-box;
 
   @include breakpoint(small) {
     @if $use-gutters == true {

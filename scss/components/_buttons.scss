@@ -15,14 +15,12 @@
     position: relative;
     text-align: center;
     text-decoration: none;
+    user-drag: none;
+    user-select: none;
     vertical-align: baseline;
     white-space: nowrap;
 
     -webkit-touch-callout: none;
-
-    @include vendor(user-select, none, webkit ms o official);
-
-    @include vendor(user-drag, none, webkit);
 
     &::-moz-focus-inner {
       padding: 0;

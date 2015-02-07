@@ -22,9 +22,8 @@
       position: absolute;
       right: 0;
       text-transform: none;
+      transition: all 0.3s ease-in;
       z-index: 99999;
-
-      @include vendor(transition, all 0.3s ease-in, ms official);
 
       a { text-decoration: none; }
 
@@ -54,8 +53,7 @@
       li {
         display: block;
         padding: 5px 10px;
-
-        @include vendor(transition, all 0.3s ease-out, ms official);
+        transition: all 0.3s ease-out;
       }
 
       li:hover { background-color: $dropdown-hover-color; }

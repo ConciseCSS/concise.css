@@ -13,7 +13,7 @@
   }
 
   [class*='#{$column-prefix}'] {
-    @include vendor(background-clip, padding-box !important, official);
+    background-clip: padding-box !important;
 
     &.right { float: right; }
 
@@ -28,7 +28,7 @@
 
       &:first-child { margin-left: 0; }
     }
-    
+
     .gutters-off [class*='#{$column-prefix}'] { margin-left: 0; }
 
 
