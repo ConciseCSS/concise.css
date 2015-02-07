@@ -3,25 +3,21 @@
   //  SELECTION
   //------------------------------------
 
-  // Silent Class
-  %selection-style {
-    background-color: $selection-background;
-    color: $selection-color;
-  }
-
-
   // Selection Style
   * {
     &::-webkit-selection {
-      @extend %selection-style;
+      background-color: $selection-background;
+      color: $selection-color;
     }
 
     &::-moz-selection {
-      @extend %selection-style;
+      background-color: $selection-background;
+      color: $selection-color;
     }
 
     &::selection {
-      @extend %selection-style;
+      background-color: $selection-background;
+      color: $selection-color;
     }
   }
 }
