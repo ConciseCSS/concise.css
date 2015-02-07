@@ -7,6 +7,7 @@
     return $(this).width();
   };
 
+
   /**
    * Calculates proper widths for non-responsive websites.
    *

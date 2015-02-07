@@ -36,6 +36,7 @@
     }
   }
 
+
   /**
    * Determine if responsive navigation text needs to be added.
    *
@@ -54,13 +55,14 @@
     });
   };
 
+
   /**
    * Calculate object width
-   *
    */
   $.fn.calculateWidth = function() {
     return $(this).width();
   };
+
 
   /**
    * Calculates proper widths for non-responsive websites.
@@ -119,6 +121,7 @@ jQuery(document).ready(function() {
   jQuery(".nav-responsive, .nav-responsive-left, .nav-responsive-center").responsiveNav();
   jQuery("body, .row").nonResponsive();
 });
+
 
 /*
  * Naver v3.0.8 - 2014-05-06
