@@ -10,9 +10,7 @@
  */
 html {
   font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-          text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 article,
@@ -320,12 +318,12 @@ address {
 
 abbr[title], abbr[data-original-title] {
   cursor: help;
-  border-bottom: 1px dotted #999;
+  border-bottom: 1px dotted #333333;
 }
 
 acronym {
   cursor: help;
-  border-bottom: 1px dashed #62b3e7;
+  border-bottom: 1px dashed #333333;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -1315,10 +1313,7 @@ table.table-full, table.table.table-full {
   position: relative;
   text-align: center;
   text-decoration: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   vertical-align: baseline;
   white-space: nowrap;
 }
@@ -1709,10 +1704,7 @@ nav li {
   line-height: 1;
   text-align: right;
   text-transform: uppercase;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 .naver .naver-wrapper {
   height: auto;
@@ -1993,8 +1985,7 @@ img.full-width {
   *:after {
     background: transparent !important;
     color: black !important;
-    -webkit-filter: none !important;
-            filter: none !important;
+    filter: none !important;
     text-shadow: none !important;
   }
 

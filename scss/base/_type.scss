@@ -45,12 +45,12 @@
     &[title],
     &[data-original-title] {
       cursor: help;
-      border-bottom: 1px dotted #999;
+      border-bottom: 1px dotted $base-font-color;
     }
   }
 
   acronym {
     cursor: help;
-    border-bottom: 1px dashed $base-link-color;
+    border-bottom: 1px dashed $base-font-color;
   }
 }
