@@ -1,7 +1,7 @@
 {
   "name": "concise",
   "description": "A lightweight front-end framework that provides functionality without the bloat.",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "ignore": [
     ".gitignore",
     "README.md",
