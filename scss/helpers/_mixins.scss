@@ -68,21 +68,15 @@
 //
 // Parameters:
 //  $point: the breakpoint value for the media query output
-//  $min-max: set whether `min-width` or `max-width` is used (default is `min-width`)
+//  $min-max: set whether `min` or `max` is used (default is `min`)
 //
 // Example:
 //  `@include breakpoint(extra-small) { ... }`
 //
-//  `@include breakpoint(360px) { ... }`
+//  `@include breakpoint(360px, max) { ... }`
 //
 //
-@mixin breakpoint($point, $use-max-width: false) {
-  $min-max: "min";
-
-  @if $use-max-width == true {
-    $min-max: "max";
-  }
-
+@mixin breakpoint($point, $min-max: "min") {
   @if type-of($point) == string {
     @each $breakpoint-name, $breakpoint-value in $breakpoint-map {
       @if $point == $breakpoint-name {

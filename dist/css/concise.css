@@ -1226,10 +1226,6 @@ table.table-full, table.table.table-full {
   background-color: #ffffff;
 }
 
-.bg-light-white {
-  background-color: white;
-}
-
 .bg-black {
   background-color: #222222;
 }
@@ -1365,9 +1361,6 @@ table.table-full, table.table.table-full {
 }
 .btn.bg-white:active {
   background-color: #f2f2f2;
-}
-.btn.bg-light-white {
-  background-color: white;
 }
 .btn.bg-black {
   background-color: #222222;
