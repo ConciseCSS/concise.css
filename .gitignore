@@ -1,3 +1,6 @@
+# Folders to ignore
+__MACOSX/
+
 # Files to ignore
 *.html
 .DS_Store
