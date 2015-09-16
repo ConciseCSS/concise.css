@@ -14,6 +14,10 @@ It's easy to get started with Concise:
 
 After you download or install the package, [check out our documentation](http://concisecss.com/documentation) to get up and running.
 
+### Building the project
+
+Please refer to our [Contributing](https://github.com/ConciseCSS/concise.css/blob/master/CONTRIBUTING.md#building-the-project) page for instructions on compiling the SASS in the project.
+
 ### Changelog
 
 You can keep up-to-date with the changes that we have made via our [releases page](https://github.com/ConciseCSS/concise.css/releases).
