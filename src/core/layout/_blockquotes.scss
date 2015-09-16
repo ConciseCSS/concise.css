@@ -1,0 +1,32 @@
+//
+// Blockquotes
+// =============================================================================
+
+blockquote {
+  border-left: 1px solid getColor(base, lines);
+  color: getColor(text, secondary);
+  margin-bottom: unitSize(3, -4);
+  padding: 0 1em;
+
+  cite,
+  footer {
+    display: block;
+    font-size: 80%;
+    font-style: italic;
+    margin-top: unitSize(1, 2);
+  }
+
+  cite:before,
+  footer:before { content: "\2014 \00A0"; }
+}
+
+
+//
+// Modifiers
+// ---------
+
+.blockquote--reverse {
+  border-left: none;
+  border-right: 1px solid getColor(base, lines);
+  text-align: right;
+}

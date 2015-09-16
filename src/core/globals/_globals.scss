@@ -1,0 +1,98 @@
+//
+// Global Variables
+// =============================================================================
+
+//
+// Base
+// ----
+
+// Transition duration
+$transition-duration: 150ms !default;
+
+// Breakpoints
+$bp-extra-small: 30em !default;
+$bp-small:       48em !default;
+$bp-medium:      60em !default;
+$bp-large:       70em !default;
+$bp-extra-large: 80em !default;
+
+// Spacing
+$spacing-xs: unitSize(1) !default;
+$spacing-s:  unitSize(2) !default;
+$spacing-m:  unitSize(3) !default;
+$spacing-l:  unitSize(4) !default;
+$spacing-xl: unitSize(5) !default;
+
+
+//
+// Color Palette
+// -------------
+
+// Colors
+$colors: (
+  base: (
+    "primary":   #4591aa,
+    "selection": #d6d6d6,
+    "lines":     #e0e0e0
+  ),
+
+  text: (
+    "primary":   #555,
+    "secondary": #666,
+    "heading":   #222
+  ),
+
+  background: (
+    "dark":  #282E31,
+    "light": #f5f5f5,
+    "body":  white
+  ),
+
+  state: (
+    "muted":   #aaa,
+    "primary": #4591aa,
+    "success": #45ca69,
+    "warning": #ffb800,
+    "error":   #ca4829
+  ),
+
+  blue: (
+    "darker":  #495b61,
+    "dark":    #447281,
+    "base":    #4591aa,
+    "light":   #5ab0cc,
+    "lighter": #74cbe8
+  ),
+
+  green: (
+    "darker":  #3b6e6e,
+    "dark":    #3b8686,
+    "base":    #37a1a1,
+    "light":   #2dbaba,
+    "lighter": #69d1d1
+  ),
+
+  cream: (
+    "darker":  #c47858,
+    "dark":    #e29372,
+    "base":    #ecac91,
+    "light":   #f9c2ab,
+    "lighter": #fdd5c3
+  ),
+
+  red: (
+    "darker":  #653131,
+    "dark":    #b73333,
+    "base":    #da3c3c,
+    "light":   #f25a5a,
+    "lighter": #fa8181
+  ),
+
+  gray: (
+    "darker":  #333333,
+    "dark":    #4d4d4d,
+    "base":    #666666,
+    "light":   #808080,
+    "lighter": #999999
+  )
+) !default;

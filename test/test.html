@@ -1,0 +1,815 @@
+<!doctype html>
+
+<!--
+  NOTE: This is a test file to view all components and styles in Concise so we
+  can view changes as they are made to the framework.
+-->
+
+<head>
+  <link rel="stylesheet" media="all" href="../dist/concise.css">
+
+  <title>Concise CSS</title>
+</head>
+
+<body container>
+  <h1 class="giga">Giga <small>Helper text</small></h1>
+  <h1 class="mega">Mega <small>Helper text</small></h1>
+  <h1 class="kilo">Kilo <small>Helper text</small></h1>
+
+  <h1>Heading 1 <small><a href="">Helper link</a></small></h1>
+  <h2>Heading 2 <small>Helper text</small></h2>
+  <h3>Heading 3 <small>Helper text</small></h3>
+  <h4>Heading 4 <small>Helper text</small></h4>
+  <h5>Heading 5 <small>Helper text</small></h5>
+  <h6>Heading 6 <small>Helper text</small></h6>
+
+  <p>Lorem <strong>ipsum</strong> <em>dolor</em> sit <abbr title="Abbreviation">amet</abbr>, <code>sadipscing</code> <kbd>elitr</kbd>, sed diam <a href="">nonumy</a> eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+
+  <p class="text--justify">At <b>vero</b> <i>eos</i> et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+  <p class="text--left">Left text</p>
+
+  <p class="text--center">Center text</p>
+
+  <p class="text--right">Right text</p>
+
+  <hr>
+
+  <blockquote>
+    <p>This is a blockquote.</p>
+
+    <footer>John Doe</footer>
+  </blockquote>
+
+  <blockquote class="blockquote--reverse">
+    <p>This is a reverse blockquote.</p>
+
+    <cite>John Doe</cite>
+  </blockquote>
+
+  <pre><code>.class {
+    background-color: #ccc;
+}</code></pre>
+
+  <pre class="pre--flat">.class {
+    background-color: #ccc;
+}</pre>
+
+  <ul>
+    <li>List Item</li>
+    <li>List Item</li>
+    <li>List Item</li>
+    <li>List Item
+      <ul>
+        <li>List Item</li>
+        <li>List Item
+          <ul>
+            <li>List Item</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>List Item</li>
+  </ul>
+
+  <ol>
+    <li>List Item</li>
+    <li>List Item
+      <ol>
+        <li>List Item
+          <ol>
+            <li>List Item</li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li>List Item</li>
+  </ol>
+
+  <ul class="list--unstyled">
+    <li>List item</li>
+    <li>List item</li>
+    <li>List item</li>
+  </ul>
+
+  <ul class="list--inline">
+    <li>List item</li>
+    <li>List item</li>
+    <li>List item</li>
+  </ul>
+
+  <dl>
+    <dt>Definition</dt>
+    <dd>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </dd>
+
+    <dt>List</dt>
+    <dd>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </dd>
+  </dl>
+
+  <dl class="dl--horizontal">
+    <dt>Definition</dt>
+    <dd>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </dd>
+
+    <dt>List</dt>
+    <dd>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </dd>
+  </dl>
+
+  <button class="button--xsm">Extra Small Button</button>
+  <button class="button--sm">Small Button</button>
+  <button>Default Button</button>
+  <button class="button--lg">Large Button</button>
+  <button class="button--xlg">Extra Large Button</button>
+
+  <button class="button--success">Success Button</button>
+  <button class="button--muted">Muted Button</button>
+  <button class="button--error">Error Button</button>
+  <button class="button--warning">Warning Button</button>
+  <button class="button--collapse">Collapsible Button</button>
+
+  <button class="button--bordered button--pill">Bordered Button</button>
+  <button class="button--bordered border--success">Bordered Success Button</button>
+  <button class="button--bordered border--muted">Bordered Muted Button</button>
+  <button class="button--bordered border--error">Bordered Error Button</button>
+  <button class="button--bordered border--warning">Bordered Warning Button</button>
+
+  <button class="button--bordered button--prefix">
+    <span class="prefix"><span class="icon-facebook"></span></span>
+    Prefix Button
+  </button>
+
+  <button class="button--bordered button--affix">
+    Affix Button
+    <span class="affix"><span class="icon-facebook"></span></span>
+  </button>
+
+  <button class="button--prefix">
+    <span class="prefix"><span class="icon-facebook"></span></span>
+    Prefix Button
+  </button>
+
+  <button class="button--affix">
+    Affix Button
+    <span class="affix"><span class="icon-facebook"></span></span>
+  </button>
+
+  <button class="button--flat">Flat Button</button>
+  <button class="button--flat" disabled>Disabled Flat Button</button>
+  <button disabled>Disabled Button</button>
+
+  <button class="button--full">Full-width Button</button>
+
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>John</td>
+        <td>Doe</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>Jane</td>
+        <td>Doe</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="table--responsive">
+    <table class="table--full">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>John</td>
+          <td>Doe</td>
+        </tr>
+
+        <tr>
+          <td>2</td>
+          <td>Jane</td>
+          <td>Doe</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <table class="table--full table--border table--hoverCell">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>John</td>
+        <td>Doe</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>Jane</td>
+        <td>Doe</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table--full table--borderOuter">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>John</td>
+        <td>Doe</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>Jane</td>
+        <td>Doe</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table--full table--borderHorizontal table--hoverRow">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>John</td>
+        <td>Doe</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>Jane</td>
+        <td>Doe</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table--full table--flat">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>John</td>
+        <td>Doe</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>Jane</td>
+        <td>Doe</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table--full table--fillEven">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>John</td>
+        <td>Doe</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>Jane</td>
+        <td>Doe</td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td>John</td>
+        <td>Doe</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table--full table--fillOdd">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>John</td>
+        <td>Doe</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>Jane</td>
+        <td>Doe</td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td>John</td>
+        <td>Doe</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <form>
+    <p>
+      <label for="firstname">First Name:</label>
+      <input type="text" id="firstname" placeholder="John">
+      <span class="input--help">Here is some help text</span>
+    </p>
+
+    <p>
+      <label for="lastname">Last Name:</label>
+      <input type="text" id="lastname" placeholder="Doe (readonly)" class="input--small" readonly>
+    </p>
+
+    <p>
+      <label for="success">Success Input:</label>
+      <input type="text" id="success" placeholder="Success" class="input--success">
+    </p>
+
+    <p>
+      <label for="warning">Warning Input:</label>
+      <input type="text" id="warning" placeholder="Warning" class="input--warning">
+    </p>
+
+    <p>
+      <label for="error">Error Input:</label>
+      <input type="text" id="error" placeholder="Error" class="input--error">
+    </p>
+
+    <p>
+      <label for="email">Email:</label>
+      <input id="email" type="email" name="email" class="input--flat" placeholder="john_doe@example.com">
+    </p>
+
+    <p>
+      <label for="website">Website:</label>
+      <input id="website" type="text" name="website" class="input--large" placeholder="http://example.com" disabled>
+    </p>
+
+    <p>
+      <label>Gender:</label>
+      <input id="male" type="radio" name="gender" value="Male"> <label for="male">Male</label> <br>
+      <input id="female" type="radio" name="gender" value="Female"> <label for="female">Female</label>
+    </p>
+
+    <p>
+      <label>Reason for contact:</label>
+      <input id="message" type="checkbox" name="gender" value="Male"> <label for="message">Message</label> <br>
+      <input id="quote" type="checkbox" name="gender" value="Female"> <label for="quote">Quote</label>
+    </p>
+
+    <p>
+      <select>
+        <option id="inquiry">Inquiry</option>
+        <option id="inquiry2">Inquiry</option>
+        <option id="inquiry3">Inquiry</option>
+      </select>
+    </p>
+
+    <p>
+      <select multiple>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </p>
+
+    <p>
+      <input type="range" min="0" max="100">
+    </p>
+
+    <p>
+      <input type="date" class="datepicker">
+    </p>
+
+    <p>
+      <label for="message2">Message:</label>
+      <textarea id="message2" name="message2" rows="6"></textarea>
+    </p>
+
+    <fieldset>
+      <legend>Files</legend>
+
+      <input type="file">
+    </fieldset>
+
+    <p>
+      <input type="submit" value="Submit">
+    </p>
+  </form>
+
+  <form class="form--inline">
+    <label for="username1">Username:</label>
+    <input type="text" placeholder="Username" id="username1" />
+    <label for="password1">Password:</label>
+    <input id="password1" type="password" placeholder="Password" />
+    <input class="button" type="submit" value="Login" />
+  </form>
+
+  <form>
+    <div row>
+      <div column="1">
+        <label for="name1">Name:</label>
+      </div>
+
+      <div column="3">
+        <input type="text" id="name1" placeholder="John Doe" />
+
+        <p class="input--help">Here is some help text</p>
+      </div>
+    </div>
+
+    <div row>
+      <div column="1">
+        <label for="email1">Email:</label>
+      </div>
+
+      <div column="3">
+        <input id="email1" type="email" name="email" placeholder="john_doe@example.com" />
+      </div>
+    </div>
+  </form>
+
+  <div class="spinner"></div>
+
+  <div id="modal" class="modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        Modal Header
+
+        <a href="#close" class="modal-close">&times;</a>
+      </div>
+
+      <div class="modal-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget bibendum eros. Integer rhoncus pretium orci ut sagittis. Proin sollicitudin sapien eu dui imperdiet, et viverra enim dignissim.</p>
+      </div>
+
+      <div class="modal-footer">
+        <p>Copyright &copy; 2015</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal modal--small">
+    <div class="modal-container">
+      <div class="modal-header">
+        Modal Header
+
+        <a href="#close" class="modal-close">&times;</a>
+      </div>
+
+      <div class="modal-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget bibendum eros. Integer rhoncus pretium orci ut sagittis. Proin sollicitudin sapien eu dui imperdiet, et viverra enim dignissim.</p>
+      </div>
+
+      <div class="modal-footer">
+        <p>Copyright &copy; 2015</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal modal--large">
+    <div class="modal-container">
+      <div class="modal-header">
+        Modal Header
+
+        <a href="#close" class="modal-close">&times;</a>
+      </div>
+
+      <div class="modal-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget bibendum eros. Integer rhoncus pretium orci ut sagittis. Proin sollicitudin sapien eu dui imperdiet, et viverra enim dignissim.</p>
+      </div>
+
+      <div class="modal-footer">
+        <p>Copyright &copy; 2015</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal modal--full">
+    <div class="modal-container">
+      <div class="modal-header">
+        Modal Header
+
+        <a href="#close" class="modal-close">&times;</a>
+      </div>
+
+      <div class="modal-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget bibendum eros. Integer rhoncus pretium orci ut sagittis. Proin sollicitudin sapien eu dui imperdiet, et viverra enim dignissim.</p>
+      </div>
+
+      <div class="modal-footer">
+        <p>Copyright &copy; 2015</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal5" class="modal modal--flat">
+    <div class="modal-container">
+      <div class="modal-header">
+        Modal Header
+
+        <a href="#close" class="modal-close">&times;</a>
+      </div>
+
+      <div class="modal-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget bibendum eros. Integer rhoncus pretium orci ut sagittis. Proin sollicitudin sapien eu dui imperdiet, et viverra enim dignissim.</p>
+      </div>
+
+      <div class="modal-footer">
+        <p>Copyright &copy; 2015</p>
+      </div>
+    </div>
+  </div>
+
+  <p><a href="#modal">Open Modal</a></p>
+
+  <p><a href="#modal2">Open Small Modal</a></p>
+
+  <p><a href="#modal3">Open Large Modal</a></p>
+
+  <p><a href="#modal4">Open Full Modal</a></p>
+
+  <p><a href="#modal5">Open Flat Modal</a></p>
+
+  <p><span class="label">Label</span></p>
+  <p><span class="badge">25</span></p>
+
+  <p><a href="#" class="tooltip--top" data-hint="Left tooltip">Top tooltip</a></p>
+
+  <p><a href="#" class="tooltip--right" data-hint="Right tooltip">Right tooltip</a></p>
+
+  <p><a href="#" class="tooltip--bottom" data-hint="Bottom tooltip">Bottom tooltip</a></p>
+
+  <p><a href="#" class="tooltip--left" data-hint="Left tooltip">Left tooltip</a></p>
+
+  <p><a href="#" class="tooltip--right tooltip--always" data-hint="Persistent tooltip">Persistent Tooltip</a></p>
+
+  <div class="alert">
+    <a href="#close" class="alert-close">&times;</a>
+
+    <p><strong>Alert!</strong> This is a <a href="">standard message</a> for your application.</p>
+  </div>
+
+  <div class="alert alert--success">
+    <a href="#close" class="alert-close">&times;</a>
+
+    <p><strong>Success!</strong> This is a <a href="">success message</a> for your application.</p>
+  </div>
+
+  <div class="alert alert--warning">
+    <a href="#close" class="alert-close">&times;</a>
+
+    <p><strong>Warning!</strong> This is a <a href="">warning</a> for your application.</p>
+  </div>
+
+  <div class="alert alert--error">
+    <a href="#close" class="alert-close">&times;</a>
+
+    <p><strong>Error!</strong> This is an <a href="">error</a> for your application.</p>
+  </div>
+
+  <div row>
+    <div column="6">
+      <div class="card">
+        <div class="card-content">
+          <h3 class="card-title">Card Title</h3>
+
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+        </div>
+
+        <div class="card-footer">
+          <a href="">Leave a comment?</a>
+        </div>
+      </div>
+    </div>
+
+    <div column="6">
+      <div class="card">
+        <div class="card-image">
+          <img src="http://concisecss.com/images/bg.jpg" alt="Card with image">
+          <h3 class="card-title">Card Title</h3>
+        </div>
+
+        <div class="card-content">
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+        </div>
+
+        <div class="card-footer">
+          <a href="">Read More &raquo;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="collection">
+    <div class="collection-header">
+      <h3>Collection Header</h3>
+    </div>
+
+    <div class="collection-item">
+      Collection Item
+    </div>
+
+    <div class="collection-item is-active">
+      Active Collection Item
+    </div>
+
+    <div class="collection-item">
+      Collection Item
+    </div>
+  </div>
+
+  <div class="collection">
+    <a href="#" class="collection-item">Collection Item</a>
+
+    <a href="#" class="collection-item is-active">Active Collection Item</a>
+
+    <a href="#" class="collection-item">Collection Item</a>
+  </div>
+
+  <ul class="group">
+    <li class="group-item"><a href="#">Left</a></li>
+    <li class="group-item"><a href="#">Center</a></li>
+    <li class="group-item"><a href="#">Right</a></li>
+  </ul>
+
+  <ul class="group">
+    <li class="group-item"><a href="#"><span class="icon-chevron-small-left"></span> First</a></li>
+    <li class="group-item"><a href="#">1</a></li>
+    <li class="group-item"><a href="#">2</a></li>
+    <li class="group-item is-active"><a href="#">3</a></li>
+    <li class="group-item"><a href="#">4</a></li>
+    <li class="group-item"><a href="#">Last <span class="icon-chevron-small-right"></span></a></li>
+  </ul>
+
+  <div class="progress progress--small">
+    <span style="width: 25%" class="bg-blue">50%</span>
+  </div>
+
+  <div class="progress">
+    <span style="width: 50%">25%</span>
+  </div>
+
+  <div class="progress progress--large">
+    <span style="width: 75%">75%</span>
+  </div>
+
+  <div class="progress progress--striped">
+    <span class="bg-red" style="width: 90%"></span>
+  </div>
+
+  <div class="progress progress--striped progress--animate">
+    <span class="bg-red" style="width: 90%"></span>
+  </div>
+
+  <div class="progress progress--stacked">
+    <span style="width: 25%"></span>
+    <span style="width: 25%" class="bg--success"></span>
+    <span style="width: 25%" class="bg--error"></span>
+    <span style="width: 20%" class="bg--warning"></span>
+  </div>
+
+  <ul class="breadcrumbs">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Product</a></li>
+    <li><a href="#">Features</a></li>
+    <li class="is-active"><a href="#">Feature</a></li>
+  </ul>
+
+  <ul class="breadcrumbs breadcrumbs--flat">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Product</a></li>
+    <li><a href="#">Features</a></li>
+    <li class="is-active"><a href="#">Feature</a></li>
+  </ul>
+
+  <div tabindex="0" class="dropdown button">
+    Dropdown Button &raquo;
+    <ul class="dropdown-content">
+      <li>Home</li>
+      <li>Account</li>
+      <li>Settings</li>
+    </ul>
+  </div>
+
+  <br>
+
+  <div tabindex="0" class="dropdown">
+    Dropdown
+    <ul class="dropdown-content">
+      <li>Home</li>
+      <li>Account</li>
+      <li>Settings</li>
+    </ul>
+  </div>
+
+  <br>
+
+  <div tabindex="0" class="dropdown dropdown--small">
+    Dropdown Small
+    <ul class="dropdown-content">
+      <li>Home</li>
+      <li>Account</li>
+      <li>Settings</li>
+    </ul>
+  </div>
+
+  <br>
+
+  <div tabindex="0" class="dropdown dropdown--large">
+    Dropdown Large
+    <ul class="dropdown-content">
+      <li>Home</li>
+      <li>Account</li>
+      <li>Settings</li>
+    </ul>
+  </div>
+
+  <br>
+
+  <div tabindex="0" class="dropdown dropdown--top">
+    Dropdown Top
+    <ul class="dropdown-content">
+      <li>Home</li>
+      <li>Account</li>
+      <li>Settings</li>
+    </ul>
+  </div>
+
+  <br>
+
+  <div tabindex="0" class="dropdown">
+    Dropdown Content
+    <div class="dropdown-content">
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</p>
+    </div>
+  </div>
+
+  <br>
+
+  <div tabindex="0" class="dropdown dropdown--hover">
+    Dropdown Hover
+    <div class="dropdown-content">
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+//
+// Print
+// =============================================================================
+
+//
+// Variables
+// ---------
+
+$font-family-print: "Georgia", "Times New Roman", "Times", serif !default;
+
+
+//
+// Styles
+// ---------
+
+@media print {
+  @page { margin: .5cm; }
+
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: black !important;
+    filter: none !important;
+    text-shadow: none !important;
+  }
+
+  :root {
+    background-color: white;
+    color: black;
+    font: 11pt / 1.3 $font-family-print;
+  }
+
+  img {
+    max-width: 100% !important;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  .show--print {
+    display: block;
+    visibility: visible;
+  }
+
+  .hide--print,
+  video,
+  audio,
+  object,
+  embed,
+  nav,
+  footer,
+  a[href^="#"]:after {
+    display: none;
+    visibility: hidden;
+  }
+
+  p,
+  h2, h3,
+  .h2, .h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2, h3,
+  .h2, .h3 { page-break-after: avoid; }
+
+  a,
+  a:visited {
+    color: black;
+    font-size: .57em;
+    text-decoration: underline;
+    word-wrap: break-word;
+
+   &[href]:after {
+     content: " (" attr(href) ")";
+     font-size: smaller;
+   }
+  }
+
+  q:after { content: " (Source: " attr(cite) ")"; }
+
+  abbr[title]:after { content: " (" attr(title) ")"; }
+
+  a {
+   &:after,
+   &[href^="javascript:"]:after,
+   &[href^="#"]:after { content: ""; }
+  }
+
+  pre,
+  code {
+    background-color: none;
+    border: 1px solid getColor(base, lines);
+    page-break-inside: avoid;
+  }
+
+  blockquote {
+    border: none;
+    page-break-inside: avoid;
+  }
+
+  thead { display: table-header-group; }
+
+  tr,
+  img { page-break-inside: avoid; }
+
+  ol { padding-left: 1.25em; }
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+
+    ul,
+    ul ul { padding-left: 1.5em; }
+  }
+
+  ul,
+  ol {
+   li { content: "&raquo; "; }
+  }
+
+  table {
+    @media (min-width: $bp-extra-small) {
+      & {
+        page-break-inside: avoid;
+        width: 100% !important;
+
+        th,
+        td { line-height: unitSize(5) !important; }
+      }
+    }
+  }
+
+
+  //
+  // Components
+  //
+  // TODO: conditional to check if Concise UI is being included
+
+  // Base
+  .badge,
+  .label,
+  .spinner,
+  .tooltip,
+  [data-hint],
+  .progress,
+  .breadcrumbs,
+  .modal,
+  .alert {
+    &,
+    &:before,
+    *:after {
+      display: none;
+      visibility: hidden;
+    }
+  }
+}

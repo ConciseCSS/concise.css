@@ -1,0 +1,85 @@
+//
+// Lists
+// =============================================================================
+
+li { line-height: unitSize(3); }
+
+ul,
+ol {
+  padding-left: 1.5em;
+  margin-bottom: unitSize(1, 2);
+
+  ul,
+  ol { margin-bottom: 0; }
+}
+
+ul {
+  ul { list-style-type: square; }
+
+  ol { list-style-type: lower-roman; }
+}
+
+ol {
+ ol { list-style-type: lower-roman; }
+
+ ul { list-style-type: square; }
+}
+
+
+//
+// Modifiers
+// ---------
+
+// Unstyled
+.list--unstyled {
+  list-style: none;
+  padding-left: 0;
+
+  li { padding-left: 0; }
+}
+
+// Inline
+.list--inline {
+  padding-left: 0;
+
+  li {
+    display: inline;
+    list-style: none;
+    padding-left: 1.5em;
+
+    &:first-child { padding-left: 0; }
+  }
+}
+
+
+//
+// Definition Lists
+// ----------------
+
+dl { margin-bottom: unitSize(3); }
+
+dt { font-weight: bold; }
+
+dt,
+dd { margin-bottom: unitSize(1, 2); }
+
+// Horizontal definition list
+.dl--horizontal {
+  @media (min-width: $bp-medium) {
+    dt {
+      clear: left;
+      float: left;
+      overflow: hidden;
+      text-align: right;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 150px;
+    }
+
+    dd {
+      @include clearfix();
+
+      margin-left: 165px;
+    }
+  }
+}

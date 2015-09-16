@@ -1,0 +1,129 @@
+//
+// Base styles
+// =============================================================================
+
+//
+// Variables
+// ---------
+
+// Font families
+$font-family:          "Helvetica", "Arial", sans-serif !default;
+$font-family-mono:     "Consolas", monospace !default;
+$font-base-size:       16 !default;
+
+
+//
+// Normalization
+// -------------
+// Courtesy of sanitize.css
+// (http://jonathantneal.github.io/sanitize.css/)
+
+:root {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-y: scroll;
+  text-size-adjust: 100%;
+}
+
+audio:not([controls]) { display: none; }
+
+details { display: block; }
+
+input {
+  &[type="number"] { width: auto; }
+
+  &[type="search"] {
+    -webkit-appearance: textfield;
+
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-decoration { -webkit-appearance: none; }
+  }
+}
+
+main,
+summary { display: block; }
+
+pre { overflow: auto; }
+
+progress { display: inline-block; }
+
+textarea { overflow: auto; }
+
+template,
+[hidden] { display: none; }
+
+[unselectable] { user-select: none }
+
+
+//
+// Universal Inheritance
+// ---------------------
+
+// Specify default styles in the document
+:root {
+  box-sizing: border-box;
+  color: getColor(text, primary);
+  cursor: default;
+  font-family: $font-family;
+  font-size: ($font-base-size * .875) + px;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  vertical-align: top;
+
+  @media (min-width: $bp-extra-small) {
+    font-size: $font-base-size + px;
+  }
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+* {
+  cursor: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+
+//
+// Misc
+// ----
+
+body { background-color: getColor(background, body); }
+
+a,
+button,
+input,
+select,
+textarea { cursor: initial; }
+
+// Horizontal rule
+hr {
+  border: 0;
+  border-top: 1px solid getColor(base, lines);
+  display: block;
+  height: 1px;
+  margin: unitSize(3, -4) 0;
+}
+
+// Figures
+figure { margin: unitSize(3) 1em; }
+
+figcaption {
+  color: getColor(text, secondary);
+  font-style: italic;
+  text-align: center;
+}
+
+// Selection
+::selection { background-color: getColor(base, selection); }
+
+::-moz-selection { background-color: getColor(base, selection); }

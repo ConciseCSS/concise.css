@@ -1,0 +1,67 @@
+//
+// Functions
+// =============================================================================
+
+//
+// Variables
+// ---------
+
+// Base Size
+$base-unit: 8 !default;
+
+
+//
+// unitSize
+// --------
+// Use this function to set sizes with proportions.
+//
+// @access public
+//
+// @param {String} $multiplier - times the base unit ($base-unit by default)
+// @param {Number} $offset - A value in pixels which will be added to the
+//                  result, can be positive for addition or negative for
+//                  subtraction
+//
+// @return {Number} Value in px, equal to the number of times the base unit
+//                  plus the offset
+//
+
+@function unitSize($multiplier, $offset: 0) {
+  @return ($base-unit * $multiplier + $offset) + px;
+}
+
+
+//
+// pxToEm
+// ------
+// Converts a Px value into a Em value
+//
+// @access public
+//
+// @param {Number} $px - value in pixels
+// @param {Number} $base - Base font size
+//
+// @return {Number} Value in Ems
+//
+
+@function pxToEm($px, $base: $font-base-size) {
+  @return ($px / $base) + em;
+}
+
+
+//
+// getColor
+// --------
+// Easily retrieve colors for use.
+//
+// @access public
+//
+// @param {String} $color - Name of the color
+// @param {Color}  $value - The color value to grab (default is "base")
+//
+// @return {Color} Value of the color
+//
+
+@function getColor($color, $value: "base") {
+  @return map-get(map-get($colors, $color), $value);
+}

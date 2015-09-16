@@ -1,0 +1,291 @@
+//
+// Forms
+// =============================================================================
+
+form,
+form [row] {
+  @media (min-width: $bp-extra-small) {
+    margin-bottom: unitSize(3);
+  }
+}
+
+input,
+select,
+textarea {
+  border: 1px solid getColor(base, lines);
+  border-radius: 3px;
+  font-size: pxToEm(14);
+  height: unitSize(4);
+  padding: 0 .75em;
+  transition: $transition-duration;
+  width: 100%;
+
+  &:focus {
+    border-color: getColor(blue, lighter);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075),
+                      0 0 6px rgba(getColor(blue, base), .5);
+    outline: none;
+  }
+
+  &[disabled] {
+    background-color: getColor(background, light);
+    cursor: not-allowed;
+  }
+}
+
+input {
+  line-height: normal;
+  min-height: unitSize(3);
+
+  // Remove focus styles
+  &[type="checkbox"],
+  &[type="radio"],
+  &[type="range"],
+  &[type="file"],
+  &[type="color"],
+  &[type="submit"] {
+    &:focus {
+      border-color: transparent;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  &[type="submit"] {
+    @extend button;
+
+    line-height: normal;
+
+    &.button { border-radius: 0; }
+  }
+}
+
+label {
+  display: block;
+  font-size: pxToEm(14);
+}
+
+fieldset {
+  border: 1px solid getColor(base, lines);
+  border-radius: 3px;
+  padding: unitSize(3) 1em;
+  margin-bottom: unitSize(3);
+}
+
+legend {
+  font-size: pxToEm(14);
+  font-weight: bold;
+  padding: 0 1em;
+}
+
+// Keep the original size for this small inputs
+input[type="checkbox"],
+input[type="file"],
+input[type="image"],
+input[type="radio"] {
+  height: auto;
+  width: auto;
+}
+
+// Checkbox & radio
+input[type="checkbox"],
+input[type="radio"] {
+  line-height: normal;
+  padding: 0;
+  vertical-align: middle;
+}
+
+// Checkbox & radio elements are inline with their label
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: inline-block;
+  margin: 0 0 0 .5em;
+  line-height: unitSize(4, -2);
+  vertical-align: middle;
+}
+
+// File upload
+input[type="file"] {
+  border: none;
+  line-height: 100%;
+  padding: 0;
+}
+
+// Textarea
+textarea {
+  height: auto;
+  padding: unitSize(1) 1em;
+  resize: vertical;
+}
+
+// Style select like a standard input - Internet Explorer 11+
+select {
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 0;
+
+  &[disabled] { color: getColor(text, secondary); }
+
+  &[multiple] { height: auto; }
+
+  &::-ms-expand { display: none; }
+
+  &::-ms-value { color: currentColor; }
+
+  option { padding: 0 .75em }
+}
+
+// Range input
+input[type="range"] {
+  border: none;
+  padding: 0;
+  width: 100%;
+  -webkit-appearance: none;
+
+  &:focus { outline: none; }
+
+  &::-webkit-slider-runnable-track {
+    background-color: darken(getColor(background, light), 10%);
+    border: none;
+    border-radius: 3px;
+    height: 5px;
+  }
+
+  &::-webkit-slider-thumb {
+    border: none;
+    border-radius: 50%;
+    background-color: getColor(base, primary);
+    height: 16px;
+    margin-top: -5px;
+    width: 16px;
+    -webkit-appearance: none;
+  }
+
+  &::-moz-range-track {
+    background-color: darken(getColor(background, light), 10%);
+    border: none;
+    border-radius: 3px;
+    height: 5px;
+  }
+
+  &::-moz-range-thumb {
+    border: none;
+    border-radius: 50%;
+    background-color: getColor(base, primary);
+    height: 16px;
+    margin-top: -5px;
+    width: 16px;
+  }
+
+  &::-ms-track {
+    background-color: darken(getColor(background, light), 10%);
+    border: none;
+    border-radius: 3px;
+    color: transparent;
+    height: 5px;
+  }
+
+  &::-ms-thumb {
+    border: none;
+    border-radius: 50%;
+    background-color: getColor(base, primary);
+    height: 16px;
+    margin-top: -5px;
+    width: 16px;
+  }
+}
+
+
+//
+// Descendents
+// -----------
+
+// Help text
+.input--help {
+  color: getColor(text, secondary);
+  display: block;
+  font-size: pxToEm(12);
+  font-weight: bold;
+  margin-top: unitSize(1);
+}
+
+
+//
+// Form Modifiers
+// --------------
+
+// Inline Form
+.form--inline {
+  input,
+  select,
+  textarea { margin-bottom: unitSize(3, -4); }
+
+  @media (min-width: $bp-extra-small) {
+    input,
+    select,
+    textarea {
+      display: inline-block;
+      margin-bottom: 0;
+      vertical-align: middle;
+      width: auto;
+    }
+
+    label {
+      display: inline;
+      margin-right: .5em;
+      vertical-align: middle;
+    }
+
+    input + label { margin-left: 1em; }
+  }
+}
+
+
+//
+// Input Modifiers
+// ---------------
+
+// Small
+.input--small {
+  font-size: pxToEm(12);
+  height: unitSize(3);
+}
+
+// Large
+.input--large {
+  height: unitSize(6);
+  font-size: pxToEm(16);
+}
+
+// Flat
+.input--flat {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+
+  &:focus { border-color: getColor(blue, lighter); }
+}
+
+// Success
+.input--success {
+  background-color: rgba(getColor(state, success), .15);
+  border-color: getColor(state, success);
+
+  &:focus { border-color: getColor(state, success); }
+}
+
+// Warning
+.input--warning {
+  background-color: rgba(getColor(state, warning), .15);
+  border-color: getColor(state, warning);
+
+  &:focus { border-color: getColor(state, warning); }
+}
+
+// Warning
+.input--error {
+  background-color: rgba(getColor(state, error), .15);
+  border-color: getColor(state, error);
+
+  &:focus { border-color: getColor(state, error); }
+}

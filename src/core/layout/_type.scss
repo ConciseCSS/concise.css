@@ -1,0 +1,132 @@
+//
+// Type Styles
+// =============================================================================
+
+//
+// Defaults
+// --------
+
+i,
+em,
+.italic { font-style: italic; }
+
+b,
+strong,
+.bold { font-weight: bold; }
+
+small,
+.small { 
+  font-size: 75%; 
+  vertical-align: text-bottom;
+}
+
+
+//
+// Paragraphs
+// --------
+
+p { margin-bottom: unitSize(3, -4); }
+
+
+//
+// Links
+// -----
+
+a {
+  background-color: transparent;
+  color: getColor(base, primary);
+  cursor: pointer;
+  text-decoration: none;
+  transition: $transition-duration;
+
+  &:hover,
+  &:focus { color: darken(getColor(base, primary), 15%); }
+}
+
+h1, h2, h3,
+.h1, .h2, .h3 {
+  a {
+    color: getColor(text, primary);
+
+    &:hover,
+    &:focus {
+      color: getColor(base, primary);
+      text-decoration: none;
+    }
+  }
+}
+
+
+//
+// Abbreviations
+// -------------
+
+abbr[title] {
+  border-bottom: 1px dotted getColor(base, lines);
+  cursor: help;
+}
+
+
+//
+// Pre, Code, and User Input
+// -------------------------
+
+code,
+pre,
+kbd,
+samp {
+  font-family: $font-family-mono;
+  font-size: pxToEm(14);
+}
+
+pre { padding: unitSize(2) 1.5em; }
+
+code {
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+code,
+pre {
+  background-color: getColor(background, light);
+  border: 1px solid getColor(base, lines);
+  border-radius: 3px;
+  color: darken(getColor(text, primary), 5%);
+  margin-bottom: unitSize(3);
+}
+
+code { padding: 2px 3px; }
+
+pre code {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  vertical-align: inherit;
+  white-space: pre;
+}
+
+.pre--flat {
+  background-color: transparent;
+  border: 0;
+  border-radius: none;
+  padding: 0;
+}
+
+kbd {
+  background-color: transparent;
+  border: 1px solid getColor(base, lines);
+  border-radius: 3px;
+  box-shadow: 0 2px 0 -1px white,0 2px 0 darken(getColor(base, lines), 1.5%);
+  display: inline-block;
+  line-height: 1.75;
+  margin: -3px 2px 0;
+  padding: 2px 6px 0;
+  white-space: nowrap;
+}
+
+
+//
+// Addresses
+// ---------
+
+address { font-style: normal; }

@@ -1,0 +1,19 @@
+//
+// Spinner
+// =============================================================================
+
+.spinner {
+  animation: rotate .8s infinite linear;
+  border: 3px solid darken(getColor(background, light), 25%);
+  border-radius: 50%;
+  border-right-color: transparent;
+  height: 30px;
+  margin: unitSize(3) auto;
+  width: 30px;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+
+  100% { transform: rotate(360deg); }
+}

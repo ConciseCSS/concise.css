@@ -2,9 +2,7 @@
 __MACOSX/
 
 # Files to ignore
-*.html
 .DS_Store
-prepros.cfg
 
 # Dependencies
 /node_modules

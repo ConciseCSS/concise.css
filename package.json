@@ -1,41 +1,36 @@
 {
-  "name": "Concise.css",
-  "version": "2.1.0",
+  "name": "concise.css",
+  "version": "3.0.0",
   "description": "A lightweight front-end framework that provides functionality without the bloat.",
+  "license": "MIT",
   "keywords": [
     "css",
-    "js",
-    "scss",
     "sass",
+    "scss",
     "mobile-first",
     "responsive",
     "front-end",
     "framework",
-    "web"
+    "web",
+    "lightweight"
   ],
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/ConciseCSS/concise.css/blob/master/LICENSE"
-  },
+  "homepage": "http://concisecss.com",
+  "bugs": "https://github.com/ConciseCSS/concise.css/issues",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ConciseCSS/concise.css.git"
+    "url": "https://github.com/ConciseCSS/concise.css"
   },
-  "bugs": "https://github.com/ConciseCSS/concise.css/issues",
-  "homepage": "http://concisecss.com",
   "devDependencies": {
-    "gulp": "^3.8.6",
-    "gulp-autoprefixer": "^0.0.8",
-    "gulp-cached": "~1.0.1",
-    "gulp-concat": "^2.3.4",
-    "gulp-csso": "^0.2.9",
-    "gulp-jscs": "^1.0.0",
-    "gulp-jshint": "^1.8.0",
-    "gulp-load-plugins": "~0.5.3",
-    "gulp-rename": "^1.2.0",
-    "gulp-sass": "^1.2.0",
-    "gulp-size": "^1.0.0",
-    "gulp-uglify": "~0.3.1",
-    "jshint-stylish": "^0.4.0"
+    "autoprefixer": "^5.2.0",
+    "cssmin": "^0.4.3",
+    "node-sass": "^3.2.0",
+    "postcss-cli": "^1.4.0",
+    "stylestats": "^5.4.1",
+    "watch": "^0.16.0"
+  },
+  "scripts": {
+    "build": "node-sass src/concise.scss dist/concise.css | postcss --use autoprefixer < dist/concise.css -b \"last 2 versions\" | cssmin > dist/concise.min.css",
+    "build:watch": "watch \"npm run build\" src",
+    "stats": "stylestats dist/concise.css"
   }
 }

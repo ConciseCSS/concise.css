@@ -1,0 +1,169 @@
+//
+// atGrid.css - CSS Grid System with HTML Attributes
+// =============================================================================
+// https://github.com/jameskolce/atGrid
+//
+// Copyright 2014 James Kolce <contact@jameskolce.com>
+// Licensed under MIT License
+// (https://github.com/jameskolce/atGrid/blob/master/LICENSE)
+//
+
+//
+// Variables
+// ---------
+
+// Attribute prefix
+$prefix: "" !default;
+
+// Max width for container
+$container-width: 1200px !default;
+
+// Gutter size in pixels (without the unit we can do math easily)
+$gutter: 30 !default;
+
+// Number of columns in a row
+$num-columns: 12 !default;
+
+// If you only want to use the mixins for "semantic grids" set this to true
+$only-semantic: false !default;
+
+
+
+
+//
+// Mixins
+// =============================================================================
+// You can use this to create "semantic grids"
+//
+
+//
+// Container
+// ---------
+// Use this mixin to create a row. Rows should be contained in a
+// "container" element
+//
+
+@mixin container() {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: $container-width;
+  padding-left: ($gutter / 2) + px;
+  padding-right: ($gutter / 2) + px;
+  width: 100%;
+}
+
+
+//
+// Rows
+// ----
+// Use this mixin to create a row. Columns should be contained in rows
+//
+// @clear-gutter: Set true to contain columns with gutter
+//
+
+@mixin row($clear-gutter: true) {
+  @if $clear-gutter {
+    margin-left: ($gutter / -2) + px;
+    margin-right: ($gutter / -2) + px;
+  }
+
+  margin-bottom: 0;
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after { clear: both; }
+}
+
+
+//
+// Columns
+// -------
+// Use this mixin to create a column
+//
+// @size: The size of the column, should be a number between 0-1. Example: 1/2
+// @add-gutter: Set this to true if you want to create padding for the column
+//
+
+@mixin column($size, $add-gutter: true) {
+  box-sizing: border-box;
+  float: left;
+  margin-bottom: 0;
+  width: ($size * 100%);
+
+  @if $add-gutter {
+    padding-left: ($gutter / 2) + px;
+    padding-right: ($gutter / 2) + px;
+  }
+}
+
+
+
+
+//
+// Semantic Styles
+// =============================================================================
+
+@if not $only-semantic {
+  //
+  // General Styles
+  // --------------
+  // Basic styles for the container, rows and columns
+  //
+  // Put the columns inside the rows, and the rows inside a container.
+  //
+
+  [#{$prefix}container] {
+    @include container();
+  }
+
+  [#{$prefix}row] {
+    @include row();
+  }
+
+  [#{$prefix}column] {
+    @include column(1);
+  }
+
+
+  //
+  // Column Styles
+  // -------------
+  // Creates the width of the columns and their offset
+  //
+  // To use this grid system you need to use the following syntax in your
+  // HTML files (This example uses default configuration):
+  //
+  // <main container>
+  //   <div row>
+  //     <section column="6">
+  //       <!-- Column with a width of 6 columns -->
+  //     </section>
+  //
+  //     <section column="4 +2">
+  //       <!-- Column with a width of 4 columns and an offset of 2 columns -->
+  //     </section>
+  //   </div>
+  // </main>
+  //
+
+  // Create columns on devices larger than 48em
+  @media (min-width: $bp-small) {
+    // Create columns
+    @for $i from 1 through $num-columns {
+      [#{$prefix}column~="#{$i}"] {
+        width: (($i / $num-columns) * 100%);
+      }
+    }
+
+    // Offset for columns
+    @for $i from 1 through ($num-columns - 1) {
+      [#{$prefix}column~="+#{$i}"] {
+        margin-left: (($i / $num-columns) * 100%);
+      }
+    }
+  }
+}

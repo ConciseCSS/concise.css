@@ -1,0 +1,139 @@
+//
+// Tables
+// =============================================================================
+
+table {
+  border: 1px solid getColor(base, lines);
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  margin-bottom: unitSize(3);
+  width: 100%;
+
+  caption {
+    color: getColor(text, primary);
+    font-size: 85%;
+    font-style: italic;
+    line-height: unitSize(6);
+    text-align: center;
+  }
+
+  thead {
+    background-color: getColor(background, light);
+    text-align: left;
+  }
+
+  th,
+  td {
+    border-right: 1px solid getColor(base, lines);
+    line-height: unitSize(3);
+    overflow: visible;
+    padding: unitSize(1) 1em;
+
+    @media (min-width: $bp-extra-small) {
+      line-height: unitSize(6);
+    }
+
+    &:last-child { border-right: none; }
+  }
+
+  tr,
+  td { transition: background-color $transition-duration; }
+
+  @media (min-width: $bp-extra-small) {
+    & {
+      width: auto;
+
+      th,
+      td { padding: 0 2.5em; }
+    }
+  }
+}
+
+
+//
+// Responsive
+// ----------
+
+.table--responsive {
+  overflow: auto;
+  width: 100%;
+
+  &::-webkit-scrollbar {
+    height: 14px;
+    width: 14px;
+
+    -webkit-appearance: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(50, 50, 50, .2);
+    border: 3px solid white;
+    border-radius: 8px;
+  }
+  
+  table { margin-bottom: 0; }
+}
+
+
+//
+// Modifiers
+// ---------
+
+// Full-width
+.table--full { width: 100%; }
+
+// Border all
+.table--border {
+  border: 1px solid getColor(base, lines);
+
+  thead,
+  td { border-bottom: 1px solid getColor(base, lines); }
+}
+
+// Border outer
+.table--borderOuter {
+  border: 1px solid getColor(base, lines);
+
+  th,
+  td { border-right: none; }
+}
+
+// Border horizontal
+.table--borderHorizontal {
+  thead,
+  td { border-bottom: 1px solid getColor(base, lines); }
+
+  th,
+  td { border-right: none; }
+}
+
+// Flat
+.table--flat {
+  border: none;
+
+  td { border-bottom: none; }
+
+  th,
+  td { border-right: none; }
+}
+
+// Fill even
+.table--fillEven {
+  tbody tr:nth-child(even) { background-color: getColor(background, light); }
+}
+
+// Fill odd
+.table--fillOdd {
+  tbody tr:nth-child(odd) { background-color: getColor(background, light); }
+}
+
+// Row hover
+.table--hoverRow {
+  tbody tr:hover { background-color: getColor(background, light); }
+}
+
+// Cell hover
+.table--hoverCell {
+  tbody td:hover { background-color: getColor(background, light); }
+}

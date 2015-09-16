@@ -1,0 +1,126 @@
+//
+// Buttons
+// =============================================================================
+
+button,
+.button {
+  background-color: getColor(base, primary);
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  line-height: unitSize(6);
+  overflow: visible;
+  padding: 0 2.5em;
+  text-align: center;
+  text-decoration: none;
+  transition: $transition-duration;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    background-color: lighten(getColor(base, primary), 15%);
+    color: white;
+    text-decoration: none;
+  }
+
+  &:focus,
+  &:active { outline: none; }
+
+  &:active { background-color: lighten(getColor(base, primary), 10%); }
+
+  &[disabled] {
+    background-color: darken(getColor(background, light), 10%);
+    color: white;
+    cursor: not-allowed;
+  }
+}
+
+
+//
+// States
+// ------
+
+@each $color-name, $color in $colors {
+  @each $color-type, $color-value in $color {
+    @if $color-name == "state" {
+      .button--#{$color-type} {
+        background-color: $color-value;
+
+        &:hover,
+        &:focus { background-color: lighten($color-value, 15%); }
+
+        &:active { background-color: lighten($color-value, 10%); }
+      }
+    }
+  }
+}
+
+
+//
+// Sizes
+// -----
+
+// Extra small
+.button--xsm {
+  font-size: pxToEm(12);
+  line-height: unitSize(4);
+  padding: 0 1.5em;
+}
+
+// Small
+.button--sm {
+  font-size: pxToEm(14);
+  line-height: unitSize(5);
+  padding: 0 2em;
+}
+
+// Large
+.button--lg {
+  font-size: pxToEm(18);
+  line-height: unitSize(7);
+  padding: 0 3em;
+}
+
+// Extra large
+.button--xlg {
+  font-size: pxToEm(18);
+  line-height: unitSize(8);
+  padding: 0 3.5em;
+}
+
+// Full-width
+.button--full { width: 100%; }
+
+
+//
+// Modifiers
+// ---------
+
+// Pill
+.button--pill { border-radius: 25px; }
+
+// Flat
+.button--flat {
+  background-color: transparent;
+  color: getColor(text, primary);
+
+  &:hover {
+    background-color: rgba(0, 0, 0, .1);
+    color: getColor(text, primary);
+  }
+
+  &[disabled] {
+    background-color: transparent;
+    color: getColor(text, secondary);
+  }
+}
+
+// Collapsible
+.button--collapse {
+  width: 100%;
+
+  @media (min-width: $bp-extra-small) { width: auto; }
+}

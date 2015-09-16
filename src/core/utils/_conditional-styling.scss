@@ -1,0 +1,152 @@
+//
+// Conditional Styling
+// =============================================================================
+
+//
+// Mixins
+// ------
+
+@mixin show-conditional {
+  display: block;
+  visibility: visible;
+}
+
+@mixin hide-conditional {
+  display: none;
+  visibility: hidden;
+}
+
+
+//
+// Extra-Small Devices
+// -------------------
+
+.show--xsm,
+.hide--sm,
+.hide--md,
+.hide--lg,
+.hide--xlg,
+.hide--print,
+.hide--hd {
+  @include show-conditional;
+}
+
+.hide--xsm,
+.show--sm,
+.show--md,
+.show--lg,
+.show--xlg,
+.show--print,
+.show--hd {
+  @include hide-conditional;
+}
+
+
+//
+// Small Devices
+// -------------
+
+@media (min-width: $bp-small) {
+  .show--sm,
+  .hide--xsm,
+  .hide--md,
+  .hide--lg,
+  .hide--xlg {
+    @include show-conditional;
+  }
+
+  .hide--sm,
+  .show--xsm,
+  .show--md,
+  .show--lg,
+  .show--xlg {
+    @include hide-conditional;
+  }
+}
+
+
+//
+// Medium Devices
+// --------------
+
+@media (min-width: $bp-medium) {
+  .show--md,
+  .hide--sm,
+  .hide--xsm,
+  .hide--lg,
+  .hide--xlg {
+    @include show-conditional;
+  }
+
+  .hide--md,
+  .show--sm,
+  .show--xsm,
+  .show--lg,
+  .show--xlg {
+    @include hide-conditional;
+  }
+}
+
+
+//
+// Large Devices
+// -------------
+
+@media (min-width: $bp-large) {
+  .show--lg,
+  .hide--xsm,
+  .hide--sm,
+  .hide--md,
+  .hide--xlg {
+    @include show-conditional;
+  }
+
+  .hide--lg,
+  .show--xsm,
+  .show--sm,
+  .show--md,
+  .show--xlg {
+    @include hide-conditional;
+  }
+}
+
+
+//
+// Extra-Large Devices
+// -------------------
+
+@media (min-width: $bp-extra-large) {
+  .show--xlg,
+  .hide--xsm,
+  .hide--sm,
+  .hide--md,
+  .hide--lg {
+    @include show-conditional;
+  }
+
+  .hide--xlg,
+  .show--xsm,
+  .show--sm,
+  .show--md,
+  .show--lg {
+    @include hide-conditional;
+  }
+}
+
+
+//
+// HiDPI and Retina
+// ----------------
+
+@media only screen and (-moz-min-device-pixel-ratio: 1.5),
+       only screen and (-o-min-device-pixel-ratio: 3 / 2),
+       only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+  .show--hd {
+    @include show-conditional;
+  }
+
+  .hide--hd {
+    @include hide-conditional;
+  }
+}
