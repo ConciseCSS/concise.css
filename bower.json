@@ -1,16 +1,16 @@
 {
   "name": "concise",
   "description": "A lightweight front-end framework that provides functionality without the bloat.",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "ignore": [
     ".gitignore",
+    ".editorconfig",
     "README.md",
-    "package.json",
-    "Gulpfile.js"
+    "LICENSE",
+    "package.json"
   ],
   "keywords": [
     "css",
-    "js",
     "scss",
     "sass",
     "mobile-first",
@@ -21,7 +21,6 @@
   ],
   "homepage": "http://concisecss.com",
   "main": [
-    "dist/css/concise.css",
-    "dist/js/concise.js"
+    "dist/concise.css"
   ]
 }
