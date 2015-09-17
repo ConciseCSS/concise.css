@@ -1,6 +1,6 @@
 {
   "name": "concise",
-  "description": "A lightweight front-end framework that provides functionality without the bloat.",
+  "description": "A front-end framework written in SASS that's lightweight, and easy-to-use.",
   "version": "3.0.0",
   "ignore": [
     ".gitignore",
