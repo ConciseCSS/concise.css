@@ -11,6 +11,7 @@ It's easy to get started with Concise:
 - [Download the latest release](https://github.com/ConciseCSS/concise.css/archive/v3.0.0.zip)
 - Clone the repo: `git clone https://github.com/ConciseCSS/concise.css.git`
 - Install with [Bower](http://bower.io/): `bower install concise`
+- Install with [NPM](https://www.npmjs.com/): `npm install concise.css`
 
 After you download or install the package, [check out our documentation](http://concisecss.com/documentation) to get up and running.
 
