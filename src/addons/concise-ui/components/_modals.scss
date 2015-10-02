@@ -47,19 +47,19 @@
 .modal-footer {
   background-color: white;
   margin-top: 0;
-  padding: unitSize(3) 2.5em;
 }
 
 .modal-body {
-  p { margin-bottom: 0; }
+  padding: unitSize(4) 2.5em unitSize(1);
 
-  p + p { margin-bottom: unitSize(3, -4); }
+  p { margin-bottom: unitSize(3); }
 }
 
 .modal-footer {
   border-top: 1px solid getColor(base, lines);
   font-size: pxToEm(14);
   margin: 0;
+  padding: unitSize(3) 2.5em;
 
   p { margin-bottom: 0; }
 }
