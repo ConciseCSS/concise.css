@@ -5,7 +5,7 @@
 .label {
   background-color: getColor(base, primary);
   border-radius: 3px;
-  color: white;
+  color: getColor(text, ui);
   display: inline-block;
   font-size: pxToEm(12);
   line-height: unitSize(3);

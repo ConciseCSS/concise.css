@@ -31,7 +31,7 @@
 
   &:after {
     background-color: getColor(background, dark);
-    color: white;
+    color: getColor(text, ui);
     content: attr(data-hint);
     font-size: pxToEm(12);
     padding: .25em .5em;

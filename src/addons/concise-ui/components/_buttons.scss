@@ -14,7 +14,7 @@
   &:hover,
   &:focus {
     background-color: getColor(base, primary);
-    color: white;
+    color: getColor(text, ui);
   }
 }
 
@@ -28,7 +28,7 @@
         &:hover,
         &:focus {
           background-color: $color-value;
-          color: white;
+          color: getColor(text, ui);
         }
 
         &:active { background-color: lighten($color-value, 10%); }
