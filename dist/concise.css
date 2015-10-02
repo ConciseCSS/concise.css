@@ -1648,19 +1648,18 @@ ol.dropdown-content {
 .modal-body,
 .modal-footer {
   background-color: white;
-  margin-top: 0;
-  padding: 24px 2.5em; }
+  margin-top: 0; }
 
-.modal-body p {
-  margin-bottom: 0; }
-
-.modal-body p + p {
-  margin-bottom: 20px; }
+.modal-body {
+  padding: 32px 2.5em 8px; }
+  .modal-body p {
+    margin-bottom: 24px; }
 
 .modal-footer {
   border-top: 1px solid #e0e0e0;
   font-size: 0.875em;
-  margin: 0; }
+  margin: 0;
+  padding: 24px 2.5em; }
   .modal-footer p {
     margin-bottom: 0; }
 
