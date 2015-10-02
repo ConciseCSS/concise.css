@@ -32,13 +32,13 @@
 
 .modal-header {
   background-color: getColor(base, primary);
-  color: white;
+  color: getColor(text, ui);
   padding: unitSize(2) 1.5em;
 
   h1, h2, h3, h4, h5, h6,
   .h1, .h2, .h3, .h4, .h5, .h6,
   .giga, .mega, .kilo {
-    color: white;
+    color: inherit;
     display: inline;
   }
 }
@@ -65,7 +65,7 @@
 }
 
 .modal-close {
-  color: white;
+  color: getColor(text, ui);
   float: right;
   margin: 0;
   opacity: .5;
@@ -111,7 +111,7 @@
     padding: 1.5em 2.5em 0;
 
     h1, h2, h3, h4, h5, h6,
-    .h1, .h2, .h3, .h4, .h5, .h6 { color: getColor(text, primary); }
+    .h1, .h2, .h3, .h4, .h5, .h6 { color: inherit; }
   }
 
   .modal-close {

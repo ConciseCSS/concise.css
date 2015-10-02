@@ -6,7 +6,7 @@ button,
 .button {
   background-color: getColor(base, primary);
   border: none;
-  color: white;
+  color: getColor(text, ui);
   cursor: pointer;
   display: inline-block;
   line-height: unitSize(6);
@@ -22,7 +22,7 @@ button,
   &:hover,
   &:focus {
     background-color: lighten(getColor(base, primary), 15%);
-    color: white;
+    color: inherit;
     text-decoration: none;
   }
 
@@ -33,7 +33,7 @@ button,
 
   &[disabled] {
     background-color: darken(getColor(background, light), 10%);
-    color: white;
+    color: getColor(text, ui);
     cursor: not-allowed;
   }
 }

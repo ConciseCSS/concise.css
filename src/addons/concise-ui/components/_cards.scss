@@ -48,7 +48,7 @@
 
   .card-title {
     bottom: 0;
-    color: white;
+    color: getColor(text, ui);
     left: 0;
     padding: 0 1em;
     position: absolute;
