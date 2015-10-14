@@ -17,20 +17,15 @@
 // $bp-large:       70em;
 // $bp-extra-large: 80em;
 
+// Base Size (used in unitSize() for proportions)
+// $base-unit: 8;
+
 // Spacing
 // $spacing-xs: unitSize(1);
 // $spacing-s:  unitSize(2);
 // $spacing-m:  unitSize(3);
 // $spacing-l:  unitSize(4);
 // $spacing-xl: unitSize(5);
-
-
-//
-// Base Size
-// ---------
-// Allows sizes in proportions
-
-// $base-unit: 8;
 
 
 //
