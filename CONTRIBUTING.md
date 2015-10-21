@@ -76,15 +76,18 @@ If you are unsure of whether or not your feature would be a good fit for the fra
 
 # Contributing Code
 
+Our contributing guidelines are based on this article: http://endoflineblog.com/gitflow-considered-harmful
+
 1. [Fork us](https://github.com/ConciseCSS/concise.css/fork)
-2. Create a [feature branch](http://nvie.com/posts/a-successful-git-branching-model/) (`git checkout -b my-feature`)
+2. Create a new branch (feature, release, hotfix, etc) (`git checkout -b my-feature`)
 3. Follow the [coding style guide](#coding-style-guide)
 4. Test any and all changes you make or implement.
-5. Commit changes (`git commit -am "My new feature"`)
-  - **Note:** If you're referencing a GitHub issue in your commit, please preface the commit with `[ref: #000]` where `000` is the issue number.
+5. Commit changes (`git commit -am "Commit description here"`)
+  - **Note:** If you're referencing a GitHub issue in your commit, please preface the commit with `[ref: #XXX]` where `XXX` is the issue number.
 6. Push to your feature branch (`git push origin my-feature`)
 7. Create a new [Pull Request](https://help.github.com/articles/creating-a-pull-request)
 8. Wait for a response from us (we promise to be semi-prompt)
+9. Once Your changes have been merged in, you can delete the branch that you've created. 
 
 # Coding Style Guide
 
