@@ -20,12 +20,15 @@
     "type": "git",
     "url": "https://github.com/ConciseCSS/concise.css"
   },
+  "engines": {
+    "node": "<=4.2.1"
+  },
   "devDependencies": {
-    "autoprefixer": "^5.2.0",
+    "autoprefixer": "^6.0.3",
     "cssmin": "^0.4.3",
-    "node-sass": "^3.2.0",
-    "postcss-cli": "^1.4.0",
-    "stylestats": "^5.4.1",
+    "node-sass": "^3.3.3",
+    "postcss-cli": "^2.2.0",
+    "stylestats": "^6.0.0",
     "watch": "^0.16.0"
   },
   "scripts": {
