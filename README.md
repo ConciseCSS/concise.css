@@ -59,7 +59,6 @@ Concise is currently maintained under the [Semantic Versioning guidelines](http:
 
 [![Like Concise on Facebook](http://i.imgur.com/4dy5UUK.png)](https://facebook.com/ConciseCSS)
 [![Follow Concise on Twitter](http://i.imgur.com/4AkKsMx.png)](https://twitter.com/ConciseCSS)
-[![Follow Concise on Google+](http://i.imgur.com/gdFNEMe.png)](https://plus.google.com/103423710089455112688)
 
 ## License
 
