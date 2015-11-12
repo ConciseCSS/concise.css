@@ -779,6 +779,9 @@ table {
   table thead {
     background-color: #f5f5f5;
     text-align: left; }
+  table tfoot {
+    background-color: #fbfbfb;
+    border-top: 1px solid #e0e0e0; }
   table th,
   table td {
     border-right: 1px solid #e0e0e0;
