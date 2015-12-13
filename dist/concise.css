@@ -86,6 +86,20 @@ select,
 textarea {
   cursor: initial; }
 
+*[dir="rl;"] {
+  direction: rtl;
+  unicode-bidi: embed; }
+
+bdo[dir="ltr"],
+bdo[dir="rtl"] {
+  unicode-bidi: bidi-override; }
+
+bdo[dir="ltr"] {
+  direction: ltr; }
+
+bdo[dir="rtl"] {
+  direction: rtl; }
+
 hr {
   border: 0;
   border-top: 1px solid #e0e0e0;
