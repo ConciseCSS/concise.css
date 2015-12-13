@@ -9,3 +9,7 @@ __MACOSX/
 
 # Sass cache
 /.sass-cache
+
+# Log files
+*.log
+*.log.*
