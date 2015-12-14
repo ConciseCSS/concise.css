@@ -1641,6 +1641,16 @@ ol.dropdown-content {
   .modal-close:hover, .modal-close:focus {
     text-decoration: none; }
 
+.modal:target .modal-close--background {
+  display: block;
+  height: 100%;
+  pointer-events: all;
+  position: absolute;
+  width: 100%; }
+  .modal:target .modal-close--background:hover {
+    border-bottom: none;
+    text-decoration: none; }
+
 @media (min-width: 48em) {
   .modal--small .modal-container {
     width: 360px; } }
