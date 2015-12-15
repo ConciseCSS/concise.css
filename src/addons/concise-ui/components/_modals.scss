@@ -77,6 +77,19 @@
   &:focus { text-decoration: none; }
 }
 
+.modal:target .modal-close--background {
+  display: block;
+  height: 100%;
+  pointer-events: all;
+  position: absolute;
+  width: 100%;
+
+  &:hover {
+    border-bottom: none;
+    text-decoration: none;
+  }
+}
+
 
 //
 // Modifiers

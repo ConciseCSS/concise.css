@@ -86,6 +86,20 @@ select,
 textarea {
   cursor: initial; }
 
+*[dir="rl;"] {
+  direction: rtl;
+  unicode-bidi: embed; }
+
+bdo[dir="ltr"],
+bdo[dir="rtl"] {
+  unicode-bidi: bidi-override; }
+
+bdo[dir="ltr"] {
+  direction: ltr; }
+
+bdo[dir="rtl"] {
+  direction: rtl; }
+
 hr {
   border: 0;
   border-top: 1px solid #e0e0e0;
@@ -244,7 +258,7 @@ button, input[type="submit"],
   form [row] {
     margin-bottom: 24px; } }
 
-input,
+input:not([type="submit"]),
 select,
 textarea {
   border: 1px solid #e0e0e0;
@@ -254,29 +268,25 @@ textarea {
   padding: 0 .75em;
   transition: 150ms;
   width: 100%; }
-  input:focus,
+  input:not([type="submit"]):focus,
   select:focus,
   textarea:focus {
     border-color: #74cbe8;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px rgba(69, 145, 170, 0.5);
     outline: none; }
-  input[disabled],
+  input:not([type="submit"])[disabled],
   select[disabled],
   textarea[disabled] {
     background-color: #f5f5f5;
     cursor: not-allowed; }
 
-input {
+input:not([type="submit"]) {
   line-height: normal;
   min-height: 24px; }
-  input[type="checkbox"]:focus, input[type="radio"]:focus, input[type="range"]:focus, input[type="file"]:focus, input[type="color"]:focus, input[type="submit"]:focus {
+  input:not([type="submit"])[type="checkbox"]:focus, input:not([type="submit"])[type="radio"]:focus, input:not([type="submit"])[type="range"]:focus, input:not([type="submit"])[type="file"]:focus, input:not([type="submit"])[type="color"]:focus, input:not([type="submit"])[type="submit"]:focus {
     border-color: transparent;
     box-shadow: none;
     outline: none; }
-  input[type="submit"] {
-    line-height: normal; }
-    input[type="submit"].button {
-      border-radius: 0; }
 
 label {
   display: block;
@@ -1651,6 +1661,16 @@ ol.dropdown-content {
   .modal-close:hover {
     opacity: 1; }
   .modal-close:hover, .modal-close:focus {
+    text-decoration: none; }
+
+.modal:target .modal-close--background {
+  display: block;
+  height: 100%;
+  pointer-events: all;
+  position: absolute;
+  width: 100%; }
+  .modal:target .modal-close--background:hover {
+    border-bottom: none;
     text-decoration: none; }
 
 @media (min-width: 48em) {

@@ -9,7 +9,7 @@ form [row] {
   }
 }
 
-input,
+input:not([type="submit"]),
 select,
 textarea {
   border: 1px solid getColor(base, lines);
@@ -33,7 +33,7 @@ textarea {
   }
 }
 
-input {
+input:not([type="submit"]) {
   line-height: normal;
   min-height: unitSize(3);
 
@@ -50,14 +50,10 @@ input {
       outline: none;
     }
   }
+}
 
-  &[type="submit"] {
-    @extend button;
-
-    line-height: normal;
-
-    &.button { border-radius: 0; }
-  }
+input[type="submit"] {
+  @extend button;
 }
 
 label {

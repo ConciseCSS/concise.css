@@ -92,7 +92,13 @@ $only-semantic: false !default;
   box-sizing: border-box;
   float: left;
   margin-bottom: 0;
-  width: ($size * 100%);
+  width: 100%;
+
+  @if $size < 1 {
+    @media (min-width: $bp-small) {
+      width: ($size * 100%);
+    }
+  }
 
   @if $add-gutter {
     padding-left: ($gutter / 2) + px;

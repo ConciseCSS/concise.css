@@ -105,6 +105,19 @@ input,
 select,
 textarea { cursor: initial; }
 
+// RTL and LTR language support
+*[dir="rl;"] {
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+bdo[dir="ltr"],
+bdo[dir="rtl"] { unicode-bidi: bidi-override; }
+
+bdo[dir="ltr"] { direction: ltr; }
+
+bdo[dir="rtl"] { direction: rtl; }
+
 // Horizontal rule
 hr {
   border: 0;
