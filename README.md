@@ -8,10 +8,12 @@ Concise is a lightweight, front-end framework that provides a number of great fe
 
 It's easy to get started with Concise:
 
-- [Download the latest release](https://github.com/ConciseCSS/concise.css/archive/v3.0.0.zip)
+- [Download the latest release (SASS Included)](https://github.com/ConciseCSS/concise.css/releases/download/v3.1.1/concise-v3.1.1-source.zip)
 - Clone the repo: `git clone https://github.com/ConciseCSS/concise.css.git`
 - Install with [Bower](http://bower.io/): `bower install concise`
 - Install with [NPM](https://www.npmjs.com/): `npm install concise.css`
+
+**Note:** If you just want the CSS files, please refer to the downloads section for each release: [https://github.com/ConciseCSS/concise.css/releases](https://github.com/ConciseCSS/concise.css/releases)
 
 After you download or install the package, [check out our documentation](http://concisecss.com/documentation) to get up and running.
 
