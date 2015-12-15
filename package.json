@@ -21,13 +21,13 @@
     "url": "https://github.com/ConciseCSS/concise.css"
   },
   "engines": {
-    "node": "<=4.2.1"
+    "node": "<=4.2.3"
   },
   "devDependencies": {
-    "autoprefixer": "^6.0.3",
+    "autoprefixer": "^6.1.2",
     "cssmin": "^0.4.3",
-    "node-sass": "^3.3.3",
-    "postcss-cli": "^2.2.0",
+    "node-sass": "^3.4.2",
+    "postcss-cli": "^2.3.2",
     "stylestats": "^6.0.0",
     "watch": "^0.16.0"
   },
