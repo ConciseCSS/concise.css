@@ -23,6 +23,11 @@ table {
     text-align: left;
   }
 
+  tfoot {
+    background-color: lighten(getColor(background, light), 2.5%);
+    border-top: 1px solid getColor(base, lines);
+  }
+
   th,
   td {
     border-right: 1px solid getColor(base, lines);
@@ -71,7 +76,7 @@ table {
     border: 3px solid white;
     border-radius: 8px;
   }
-  
+
   table { margin-bottom: 0; }
 }
 
