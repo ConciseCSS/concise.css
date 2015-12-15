@@ -15,7 +15,12 @@
   "authors": [
     {
       "name": "Keenan Payne",
-      "email": "contact@keenanpayne.com"
+      "email": "contact@keenanpayne.com",
+      "homepage": "http://keenanpayne.com"
+    },
+    {
+      "name": "James Kolce",
+      "homepage": "http://jameskolce.com"
     }
   ],
   "support": {
