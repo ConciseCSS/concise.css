@@ -7,6 +7,8 @@ form [row] {
   @media (min-width: $bp-extra-small) {
     margin-bottom: unitSize(3);
   }
+
+  .nonresponsive & { margin-bottom: unitSize(3); }
 }
 
 input:not([type="submit"]),
@@ -34,6 +36,7 @@ textarea {
 }
 
 input:not([type="submit"]) {
+
   line-height: normal;
   min-height: unitSize(3);
 
@@ -217,6 +220,27 @@ input[type="range"] {
   textarea { margin-bottom: unitSize(3, -4); }
 
   @media (min-width: $bp-extra-small) {
+    input,
+    select,
+    textarea {
+      display: inline-block;
+      margin-bottom: 0;
+      vertical-align: middle;
+      width: auto;
+    }
+
+    label {
+      display: inline;
+      margin-right: .5em;
+      vertical-align: middle;
+    }
+
+    input + label { margin-left: 1em; }
+  }
+}
+
+.nonresponsive {
+  .form--inline {
     input,
     select,
     textarea {

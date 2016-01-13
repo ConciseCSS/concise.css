@@ -72,6 +72,8 @@ template,
   @media (min-width: $bp-extra-small) {
     font-size: $font-base-size + px;
   }
+
+  .nonresponsive { font-size: $font-base-size + px; }
 }
 
 *,

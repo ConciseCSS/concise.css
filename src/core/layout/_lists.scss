@@ -81,3 +81,23 @@ dd { margin-bottom: unitSize(1, 2); }
     }
   }
 }
+
+.nonresponsive {
+  .dl--horizontal {
+    dt {
+      clear: left;
+      float: left;
+      overflow: hidden;
+      text-align: right;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 150px;
+    }
+
+    dd {
+      @include clearfix();
+
+      margin-left: 165px;
+    }
+  }
+}

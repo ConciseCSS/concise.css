@@ -172,4 +172,21 @@ $only-semantic: false !default;
       }
     }
   }
+
+  // Non-responsive grid
+  .nonresponsive {
+    // Create columns
+    @for $i from 1 through $num-columns {
+      [#{$prefix}column~="#{$i}"] {
+        width: (($i / $num-columns) * 100%);
+      }
+    }
+
+    // Offset for columns
+    @for $i from 1 through ($num-columns - 1) {
+      [#{$prefix}column~="+#{$i}"] {
+        margin-left: (($i / $num-columns) * 100%);
+      }
+    }
+  }
 }
