@@ -1605,6 +1605,7 @@ ol.dropdown-content {
   left: 0;
   margin: 0;
   opacity: 0;
+  overflow: scroll;
   pointer-events: none;
   position: fixed;
   right: 0;
@@ -1617,12 +1618,18 @@ ol.dropdown-content {
 
 .modal-container {
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
-  margin: 15% auto;
+  margin: 16px auto;
   position: relative;
   width: 90%; }
   @media (min-width: 48em) {
     .modal-container {
       width: 526px; } }
+  @media (min-height: 30em) {
+    .modal-container {
+      margin: 10% auto; } }
+  @media (min-height: 48em) {
+    .modal-container {
+      margin: 15% auto; } }
 
 .modal-header {
   background-color: #4591aa;
