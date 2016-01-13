@@ -1,6 +1,6 @@
 # [<img src="http://i.imgur.com/ihzCgEr.png">](http://concisecss.com/)
 
-[![Bower version](https://badge.fury.io/bo/concise.svg)](http://badge.fury.io/bo/concise)
+[![Bower version](https://badge.fury.io/bo/concise.svg)](http://badge.fury.io/bo/concise) [![npm version](https://badge.fury.io/js/concise.css.svg)](https://badge.fury.io/js/concise.css)
 
 Concise is a lightweight, front-end framework that provides a number of great features without the bloat. Concise is built based on Object-Oriented CSS principles and keeps semantics in mind to provide a small learning curve, and a high level of customization.
 
