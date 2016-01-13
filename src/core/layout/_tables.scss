@@ -55,16 +55,18 @@ table {
   }
 }
 
-.nonresponsive {
-  & {
-    width: auto;
+@if $non-responsive == true {
+  .nonresponsive {
+    & {
+      width: auto;
+
+      th,
+      td { padding: 0 2.5em; }
+    }
 
     th,
-    td { padding: 0 2.5em; }
+    td { line-height: unitSize(6); }
   }
-
-  th,
-  td { line-height: unitSize(6); }
 }
 
 

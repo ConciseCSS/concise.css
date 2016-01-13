@@ -73,7 +73,9 @@ template,
     font-size: $font-base-size + px;
   }
 
-  .nonresponsive { font-size: $font-base-size + px; }
+  @if $non-responsive == true {
+    .nonresponsive { font-size: $font-base-size + px; }
+  }
 }
 
 *,

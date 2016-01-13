@@ -131,19 +131,21 @@ h6,
 // Non-Responsive
 // --------------
 
-.nonresponsive {
-  h1,
-  .h1 { font-size: pxToEm($h1-size); }
+@if $non-responsive == true {
+  .nonresponsive {
+    h1,
+    .h1 { font-size: pxToEm($h1-size); }
 
-  h2,
-  .h2 { font-size: pxToEm($h2-size); }
+    h2,
+    .h2 { font-size: pxToEm($h2-size); }
 
-  h3,
-  .h3 { font-size: pxToEm($h3-size); }
+    h3,
+    .h3 { font-size: pxToEm($h3-size); }
 
-  .giga { font-size: pxToEm($giga-size); }
+    .giga { font-size: pxToEm($giga-size); }
 
-  .mega { font-size: pxToEm($mega-size); }
+    .mega { font-size: pxToEm($mega-size); }
 
-  .kilo { font-size: pxToEm($kilo-size); }
+    .kilo { font-size: pxToEm($kilo-size); }
+  }
 }

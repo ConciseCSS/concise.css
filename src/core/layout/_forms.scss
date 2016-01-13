@@ -8,7 +8,9 @@ form [row] {
     margin-bottom: unitSize(3);
   }
 
-  .nonresponsive & { margin-bottom: unitSize(3); }
+  @if $non-responsive == true {
+    .nonresponsive & { margin-bottom: unitSize(3); }
+  }
 }
 
 input:not([type="submit"]),
@@ -239,24 +241,26 @@ input[type="range"] {
   }
 }
 
-.nonresponsive {
-  .form--inline {
-    input,
-    select,
-    textarea {
-      display: inline-block;
-      margin-bottom: 0;
-      vertical-align: middle;
-      width: auto;
-    }
+@if $non-responsive == true {
+  .nonresponsive {
+    .form--inline {
+      input,
+      select,
+      textarea {
+        display: inline-block;
+        margin-bottom: 0;
+        vertical-align: middle;
+        width: auto;
+      }
 
-    label {
-      display: inline;
-      margin-right: .5em;
-      vertical-align: middle;
-    }
+      label {
+        display: inline;
+        margin-right: .5em;
+        vertical-align: middle;
+      }
 
-    input + label { margin-left: 1em; }
+      input + label { margin-left: 1em; }
+    }
   }
 }
 
