@@ -879,7 +879,7 @@ sub {
 s {
   text-decoration: line-through; }
 
-p {
+p:not(:last-child) {
   margin-bottom: 20px; }
 
 a {
@@ -1229,8 +1229,6 @@ address {
   margin: 20px 0;
   padding: 8px 1em;
   position: relative; }
-  .alert p {
-    margin: 0; }
   .alert a {
     color: #222222; }
     .alert a:hover {
@@ -1411,12 +1409,6 @@ a.alert-close:hover {
 .card-title {
   display: block;
   margin-top: 10px; }
-
-.card-content p {
-  margin-bottom: 0; }
-
-.card-content p + p {
-  margin-bottom: 20px; }
 
 .card-footer {
   border-top: 1px solid #e0e0e0;
@@ -1647,17 +1639,13 @@ ol.dropdown-content {
   margin-top: 0; }
 
 .modal-body {
-  padding: 32px 2.5em 8px; }
-  .modal-body p {
-    margin-bottom: 24px; }
+  padding: 32px 2.5em; }
 
 .modal-footer {
   border-top: 1px solid #e0e0e0;
   font-size: 0.875em;
   margin: 0;
   padding: 24px 2.5em; }
-  .modal-footer p {
-    margin-bottom: 0; }
 
 .modal-close {
   color: white;

@@ -17,12 +17,6 @@
   margin-top: unitSize(1, 2);
 }
 
-.card-content {
-  p { margin-bottom: 0; }
-
-  p + p { margin-bottom: unitSize(3, -4); }
-}
-
 .card-footer {
   border-top: 1px solid getColor(base, lines);
   font-size: pxToEm(14);
