@@ -107,6 +107,17 @@ $only-semantic: false !default;
 }
 
 
+//
+// Column offset
+// -------
+// Use this mixin to move a column
+//
+// @offset: The size of the offset, should be a number between 0-1. Example: 1/2
+//
+
+@mixin columnOffset($offset) {
+  margin-left: $offset * 100%;
+}
 
 
 //
