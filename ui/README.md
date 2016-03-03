@@ -33,3 +33,7 @@ or
 ## Reference
 
 `TODO`
+
+## License
+
+MIT
