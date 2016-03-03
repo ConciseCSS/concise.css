@@ -1,0 +1,111 @@
+//
+// Progress Bars
+// =============================================================================
+// Courtesy of Chris Coyier (http://css-tricks.com/css3-progress-bars/)
+
+.progress {
+  background-color: getColor(background, light);
+  border-radius: 3px;
+  box-shadow: inset 0 1px 1px rgba(getColor(base, lines), .25);
+  box-sizing: initial;
+  color: getColor(text, ui);
+  font-size: pxToEm(11);
+  height: 14px;
+  line-height: 1.2;
+  margin-bottom: unitSize(3);
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.progress {
+  > span {
+    background-color: getColor(base, primary);
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+  }
+}
+
+.progress--small {
+  font-size: pxToEm(9);
+  height: 10px;
+  line-height: 1.2;
+}
+
+.progress--large {
+  font-size: pxToEm($font-base-size);
+  height: 25px;
+  line-height: 1.7;
+}
+
+.progress--stacked {
+  > span {
+    border-radius: 0;
+    display: inline-block;
+    float: left;
+    margin-top: 0;
+
+    &:first-of-type { border-radius: 3px 0 0 3px; }
+
+    &:last-of-type { border-radius: 0 3px 3px 0; }
+  }
+}
+
+// Striped
+.progress--striped {
+  > span {
+    &:after, > span {
+      background-image:
+        -webkit-gradient(
+          linear, 0 0, 100% 100%,
+          color-stop(.25, rgba(255, 255, 255, .2)),
+          color-stop(.25, transparent),
+          color-stop(.5, transparent),
+          color-stop(.5, rgba(255, 255, 255, .2)),
+          color-stop(.75, rgba(255, 255, 255, .2)),
+          color-stop(.75, transparent), to(transparent));
+      background-image:
+        -moz-linear-gradient(-45deg,
+          rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%,
+          rgba(255, 255, 255, .2) 50%,
+          rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+      background-size: 50px 50px;
+      bottom: 0;
+      content: "";
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+    }
+  }
+
+  // Animated
+  &.progress--animate > span {
+    &:after, > span { animation: move 2s linear infinite; }
+  }
+}
+
+@keyframes move {
+  0% { background-position: 0 0; }
+
+  100% { background-position: 50px 50px; }
+}
+
+@-moz-keyframes move {
+  0% { background-position: 0 0; }
+
+  100% { background-position: 50px 50px; }
+}
+
+@-webkit-keyframes move {
+  0% { background-position: 0 0; }
+
+  100% { background-position: 50px 50px; }
+}

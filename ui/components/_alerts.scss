@@ -1,0 +1,55 @@
+//
+// Alerts
+// =============================================================================
+
+.alert {
+  background-color: getColor(background, light);
+  border: 1px solid getColor(base, lines);
+  border-radius: 3px;
+  color: inherit;
+  font-size: pxToEm(14);
+  margin: unitSize(3, -4) 0;
+  padding: unitSize(1) 1em;
+  position: relative;
+
+  a {
+    color: darken(getColor(text, primary), 20%);
+
+    &:hover { text-decoration: underline; }
+  }
+}
+
+.alert-close {
+  color: inherit;
+  float: right;
+  opacity: .5;
+  transition: opacity $transition-duration;
+
+  &:hover { opacity: 1; }
+
+  &:hover,
+  &:focus { text-decoration: none; }
+}
+
+a.alert-close {
+  &:hover { text-decoration: none; }
+}
+
+
+//
+// States
+// ------
+
+@each $color-name, $color in $colors {
+  @each $color-type, $color-value in $color {
+    @if $color-name == "state" {
+      .alert--#{$color-type} {
+        background-color: rgba($color-value, .15);
+        border-color: rgba($color-value, .2);
+        color: darken($color-value, 10%);
+
+        a { color: darken($color-value, 20%); }
+      }
+    }
+  }
+}

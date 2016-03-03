@@ -1,0 +1,13 @@
+//
+// Badges
+// =============================================================================
+
+.badge {
+  background-color: getColor(base, primary);
+  border-radius: 25px;
+  color: getColor(text, ui);
+  display: inline-block;
+  font-size: pxToEm(12);
+  line-height: unitSize(3);
+  padding: 0 .75em;
+}

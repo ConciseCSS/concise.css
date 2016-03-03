@@ -1,0 +1,144 @@
+//
+// Dropdowns
+// =============================================================================
+
+.dropdown {
+  cursor: auto;
+  display: inline-block;
+  outline: none;
+	position: relative;
+
+  &:focus {
+    pointer-events: none;
+
+    .dropdown-content {
+    	opacity: 1;
+    	visibility: visible;
+    }
+  }
+
+  &.no-pointer-events { pointer-events: auto !important; }
+
+  &.no-visibility .dropdown-content {
+    display: none;
+  	visibility: visible !important;
+  }
+
+  &.no-visibility:focus .dropdown-content { display: block; }
+
+  &.no-opacity .dropdown-content { opacity: 1 !important; }
+}
+
+// Dropdown content
+.dropdown-content {
+	background-color: white;
+  border: 1px solid getColor(base, lines);
+  color: getColor(text, primary);
+  left: 0;
+  margin-top: unitSize(1);
+  opacity: 0;
+  padding: unitSize(1) 1em;
+  pointer-events: auto;
+	position: absolute;
+  text-align: left;
+	transition: all $transition-duration;
+  visibility: hidden;
+  width: 200px;
+  z-index: 1;
+
+  &:before,
+  &:after {
+    border: solid transparent;
+  	bottom: 100%;
+    content: "";
+    height: 0;
+  	left: 1.5em;
+    pointer-events: none;
+  	position: absolute;
+    width: 0;
+  }
+
+  &:before {
+  	border-color: rgba(255, 255, 255, 0);
+  	border-bottom-color: getColor(base, lines);
+  	border-width: 7px;
+  	margin-left: -7px;
+  }
+
+  &:after {
+  	border-color: rgba(255, 255, 255, 0);
+  	border-bottom-color: white;
+  	border-width: 6px;
+  	margin-left: -6px;
+  }
+
+  li {
+    font-size: pxToEm(14);
+  	list-style-type: none;
+    margin: 0;
+    padding: unitSize(1) 1em;
+    transition: background-color $transition-duration;
+  	white-space: nowrap;
+
+    &:hover { background-color: getColor(background, light); }
+  }
+}
+
+// Dropdown lists
+ul,
+ol {
+  &.dropdown-content { padding: 0; }
+}
+
+
+//
+// Hoverable
+// ---------
+
+.dropdown--hover {
+  &:hover {
+    pointer-events: none;
+
+    .dropdown-content {
+    	opacity: 1;
+    	visibility: visible;
+    }
+  }
+}
+
+
+//
+// Modifiers
+// ---------
+
+// Small
+.dropdown--small {
+  .dropdown-content { width: 150px; }
+}
+
+// Large
+.dropdown--large {
+  .dropdown-content { width: 300px; }
+}
+
+// Top
+.dropdown--top {
+  .dropdown-content {
+    bottom: 100%;
+    margin-top: 0;
+    margin-bottom: unitSize(1);
+
+    &:before,
+    &:after { top: 100%; }
+
+    &:after {
+    	border-color: rgba(255, 255, 255, 0);
+    	border-top-color: white;
+    }
+
+    &:before {
+    	border-color: rgba(255, 255, 255, 0);
+    	border-top-color: getColor(base, lines);
+    }
+  }
+}

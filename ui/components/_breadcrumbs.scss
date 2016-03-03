@@ -1,0 +1,47 @@
+//
+// Breadcrumbs
+// =============================================================================
+
+.breadcrumbs {
+  background-color: getColor(background, light);
+  border: 1px solid getColor(base, lines);
+  border-radius: 3px;
+  font-size: pxToEm(12);
+  margin-bottom: unitSize(3);
+  padding: unitSize(1) .5em;
+
+  li {
+    display: inline;
+    list-style: none;
+    padding-left: .75em;
+
+    &:after {
+      color: darken(getColor(base, lines), 10%);
+      content: "\002f";
+      padding-left: .75em;
+    }
+
+    &:last-child {
+      &:after {
+        content: "";
+        padding-left: 0;
+      }
+    }
+
+    &.is-active,
+    &.is-active a  { color: darken(getColor(text, secondary), 10%); }
+  }
+}
+
+
+//
+// Modifiers
+// ---------
+
+// Flat
+.breadcrumbs--flat {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}

@@ -1,0 +1,191 @@
+//
+// Tooltips
+// =============================================================================
+// Courtesy of Hint.css (http://kushagragour.in/lab/hint/)
+
+.tooltip,
+[data-hint] {
+  display: inline-block;
+  position: relative;
+
+  &:before,
+  &:after {
+    border-radius: 2px;
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+    transform: translate3d(0, 0, 0);
+    transition: ($transition-duration / 1.5);
+    transition-delay: 0ms;
+    visibility: hidden;
+    z-index: 1000000;
+  }
+
+  &:before {
+    background-color: transparent;
+    border: 8px solid transparent;
+    content: "";
+    position: absolute;
+    z-index: 1000001;
+  }
+
+  &:after {
+    background-color: getColor(background, dark);
+    color: getColor(text, ui);
+    content: attr(data-hint);
+    font-size: pxToEm(12);
+    padding: .25em .5em;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  &:hover,
+  &:focus {
+    &:before,
+    &:after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &:hover {
+    &:before,
+    &:after { transition-delay: 100ms; }
+  }
+}
+
+
+//
+// Positioning
+// -----------
+
+// Top
+.tooltip--top {
+  &:before {
+    border-top-color: getColor(background, dark);
+    margin-bottom: -12px;
+  }
+
+  &:after { margin-left: -18px; }
+
+  &:before,
+  &:after {
+    bottom: 100%;
+    left: 50%;
+  }
+
+  &:hover {
+    &:after,
+    &:before { transform: translateY(-8px); }
+  }
+
+  &:focus {
+    &:after,
+    &:before {
+      transform: translateY(-8px);
+      transition: $transition-duration;
+    }
+  }
+}
+
+// Bottom
+.tooltip--bottom {
+  &:before {
+    border-bottom-color: getColor(background, dark);
+    margin-top: -12px;
+  }
+
+  &:after { margin-left: -18px; }
+
+  &:before,
+  &:after {
+    left: 50%;
+    top: 100%;
+  }
+
+  &:hover,
+  &:focus {
+    &:after,
+    &:before { transform: translateY(8px); }
+  }
+}
+
+// Right
+.tooltip--right {
+  &:before {
+    border-right-color: getColor(background, dark);
+    margin-bottom: -8px;
+    margin-left: -12px;
+  }
+
+  &:after { margin-bottom: -12px; }
+
+  &:before,
+  &:after {
+    bottom: 50%;
+    left: 105%;
+  }
+
+  &:hover,
+  &:focus {
+    &:after,
+    &:before { transform: translateX(8px); }
+  }
+}
+
+// Left
+.tooltip--left {
+  &:before {
+    border-left-color: getColor(background, dark);
+    margin-bottom: -8px;
+    margin-right: -12px;
+  }
+
+  &:after { margin-bottom: -12px; }
+
+  &:before,
+  &:after {
+    bottom: 50%;
+    right: 100%;
+  }
+
+  &:hover,
+  &:focus {
+    &:after,
+    &:before { transform: translateX(-8px); }
+  }
+}
+
+
+//
+// Modifiers
+// ---------
+
+// Persistent tooltips
+.tooltip--always {
+  &:before,
+  &:after {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .tooltip--top {
+    &:before,
+    &:after { transform: translateY(-8px); }
+  }
+
+  .tooltip--right {
+    &:before,
+    &:after { transform: translateY(8px); }
+  }
+
+  .tooltip--bottom {
+    &:before,
+    &:after { transform: translateX(-8px); }
+  }
+
+  .tooltip--left {
+    &:before,
+    &:after { transform: translateX(8px); }
+  }
+}

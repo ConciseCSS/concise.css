@@ -1,0 +1,85 @@
+//
+// Buttons
+// =============================================================================
+
+//
+// Bordered
+// --------
+
+.button--bordered {
+  background-color: transparent;
+  border: 1px solid getColor(base, primary);
+  color: getColor(base, primary);
+
+  &:hover,
+  &:focus {
+    background-color: getColor(base, primary);
+    color: getColor(text, ui);
+  }
+}
+
+@each $color-name, $color in $colors {
+  @each $color-type, $color-value in $color {
+    @if $color-name == "state" {
+      .border--#{$color-type} {
+        border-color: $color-value;
+        color: $color-value;
+
+        &:hover,
+        &:focus {
+          background-color: $color-value;
+          color: getColor(text, ui);
+        }
+
+        &:active { background-color: lighten($color-value, 10%); }
+      }
+    }
+  }
+}
+
+
+//
+// Prefix/Affix
+// ------------
+
+.button--prefix {
+  padding-left: 0;
+
+  .prefix {
+    background-image: linear-gradient(to bottom,
+      rgba(0, 0, 0, .15),
+      rgba(0, 0, 0, .15));
+    display: inline-block;
+    margin-right: 1.25em;
+    padding: 0 1em;
+    vertical-align: 0;
+  }
+
+  &.button--bordered {
+    .prefix {
+      background-image: none;
+      border-right: 1px solid currentColor;
+    }
+  }
+}
+
+.button--affix {
+  padding-right: 0;
+
+  .affix {
+    background-image: linear-gradient(to bottom,
+      rgba(0, 0, 0, .15),
+      rgba(0, 0, 0, .15));
+    display: inline-block;
+    margin-left: 1.25em;
+    padding: 0 1em;
+    vertical-align: 0;
+  }
+
+  &.button--bordered {
+    .affix {
+      background-image: none;
+      border-left: 1px solid currentColor;
+    }
+  }
+}

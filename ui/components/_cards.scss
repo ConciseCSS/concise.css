@@ -1,0 +1,50 @@
+//
+// Cards
+// =============================================================================
+
+.card {
+  background-color: white;
+  border: 1px solid getColor(base, lines);
+  margin-bottom: unitSize(3);
+  overflow: hidden;
+  position: relative;
+}
+
+.card-content { padding: unitSize(3) 1.5em; }
+
+.card-title {
+  display: block;
+  margin-top: unitSize(1, 2);
+}
+
+.card-footer {
+  border-top: 1px solid getColor(base, lines);
+  font-size: pxToEm(14);
+  padding: unitSize(2) 1.5em;
+}
+
+
+//
+// Images
+// ------
+
+.card-image {
+  position: relative;
+
+  img {
+    bottom: 0;
+    left: 0;
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .card-title {
+    bottom: 0;
+    color: getColor(text, ui);
+    left: 0;
+    padding: 0 1em;
+    position: absolute;
+  }
+}
