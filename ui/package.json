@@ -1,0 +1,38 @@
+{
+  "name": "concise-ui",
+  "version": "0.1.0",
+  "description": "Basic user interface kit for Concise Framework",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConciseCSS/concise-ui.git"
+  },
+  "keywords": [
+    "css",
+    "concise",
+    "ui",
+    "user",
+    "interface",
+    "kit",
+    "framework",
+    "add-on"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ConciseCSS/concise-ui/issues"
+  },
+  "homepage": "https://github.com/ConciseCSS/concise-ui#readme",
+  "scripts": {
+    "build": "node-sass dist.scss dist/concise-ui.css | postcss --use autoprefixer < dist/concise-ui.css -b \"last 2 versions\" | cssmin > dist/concise-ui.min.css",
+    "build:watch": "watch \"npm run build\" src",
+    "stats": "stylestats dist/concise-ui.css"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.3",
+    "concise.css": "^3.3.0",
+    "cssmin": "^0.4.3",
+    "node-sass": "^3.4.2",
+    "postcss-cli": "^2.5.1",
+    "stylestats": "^6.3.0",
+    "watch": "^0.17.1"
+  }
+}
