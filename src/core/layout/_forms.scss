@@ -271,14 +271,14 @@ input[type="range"] {
 
 // Small
 .input--small {
-  font-size: pxToEm(12);
-  height: unitSize(3);
+  font-size: pxToEm(12) !important;
+  height: unitSize(3) !important;
 }
 
 // Large
 .input--large {
-  height: unitSize(6);
-  font-size: pxToEm(16);
+  font-size: pxToEm(16) !important;
+  height: unitSize(6) !important;
 }
 
 // Flat

@@ -444,12 +444,12 @@ input[type="range"] {
   margin-left: 1em; }
 
 .input--small {
-  font-size: 0.75em;
-  height: 24px; }
+  font-size: 0.75em !important;
+  height: 24px !important; }
 
 .input--large {
-  height: 48px;
-  font-size: 1em; }
+  font-size: 1em !important;
+  height: 48px !important; }
 
 .input--flat {
   background-color: transparent;
