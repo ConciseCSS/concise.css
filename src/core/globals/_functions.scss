@@ -50,6 +50,23 @@ $base-unit: 8 !default;
 
 
 //
+// pxToRem
+// ------
+// Converts a Px value into a Rem value
+//
+// @access public
+//
+// @param {Number} $px - value in pixels
+//
+// @return {Number} Value in Rems
+//
+
+@function pxToRem($px) {
+  @return ($px / $font-base-size) + rem;
+}
+
+
+//
 // getColor
 // --------
 // Easily retrieve colors for use.
