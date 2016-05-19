@@ -6,8 +6,7 @@
     ".gitignore",
     ".editorconfig",
     "README.md",
-    "LICENSE",
-    "package.json"
+    "LICENSE"
   ],
   "keywords": [
     "css",
