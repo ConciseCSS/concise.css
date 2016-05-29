@@ -156,3 +156,14 @@ table {
 .table--hoverCell {
   tbody td:hover { background-color: getColor(background, light); }
 }
+
+// Truncate table
+.table--truncate {
+  table-layout: fixed;
+
+  td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

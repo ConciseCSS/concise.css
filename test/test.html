@@ -19,6 +19,11 @@
       text-align: center;
       width: 100%;
     }
+
+    .table--truncate,
+    .table--truncate td {
+      width: 500px;
+    }
   </style>
 </head>
 
@@ -334,6 +339,38 @@
       <tr>
         <td>1</td>
         <td>John</td>
+        <td>Doe</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>Jane</td>
+        <td>Doe</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table--truncate">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+      </tr>
+    </thead>
+
+    <tfoot>
+      <tr>
+        <td><strong>Total Users:</strong></td>
+        <td>2</td>
+        <td></td>
+      </tr>
+    </tfoot>
+
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td title="This is a long long long long long long long long text">This is a long long long long long long long long text</td>
         <td>Doe</td>
       </tr>
 

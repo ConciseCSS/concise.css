@@ -918,6 +918,13 @@ table {
 .table--hoverCell tbody td:hover {
   background-color: #f5f5f5; }
 
+.table--truncate {
+  table-layout: fixed; }
+  .table--truncate td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+
 i,
 em,
 .italic {
