@@ -632,20 +632,24 @@ ol ol {
 ol ul {
   list-style-type: square; }
 
+nav ul {
+  padding-left: 0; }
+
+nav li {
+  list-style: none; }
+
 .list--unstyled {
   list-style: none;
   padding-left: 0; }
   .list--unstyled li {
     padding-left: 0; }
 
-.list--inline {
-  padding-left: 0; }
-  .list--inline li {
-    display: inline;
-    list-style: none;
-    padding-left: 1.5em; }
-    .list--inline li:first-child {
-      padding-left: 0; }
+.list--inline li {
+  display: inline;
+  list-style: none;
+  padding-left: 1.5em; }
+  .list--inline li:first-child {
+    padding-left: 0; }
 
 dl {
   margin-bottom: 24px; }

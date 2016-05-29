@@ -23,6 +23,15 @@ ol {
  ul { list-style-type: square; }
 }
 
+//
+// Navigation lists
+// ----------------
+
+nav {
+  ul { padding-left: 0; }
+  li { list-style: none; }
+}
+
 
 //
 // Modifiers
@@ -37,16 +46,12 @@ ol {
 }
 
 // Inline
-.list--inline {
-  padding-left: 0;
+.list--inline li {
+  display: inline;
+  list-style: none;
+  padding-left: 1.5em;
 
-  li {
-    display: inline;
-    list-style: none;
-    padding-left: 1.5em;
-
-    &:first-child { padding-left: 0; }
-  }
+  &:first-child { padding-left: 0; }
 }
 
 
