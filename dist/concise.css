@@ -537,31 +537,31 @@ h4, h5, h6,
 
 h1,
 .h1 {
-  font-size: 2.25em; }
+  font-size: 2.368em; }
   @media (min-width: 48em) {
     h1,
     .h1 {
-      font-size: 3em; } }
+      font-size: 3.15733em; } }
 
 h2,
 .h2 {
-  font-size: 1.6875em; }
+  font-size: 1.77644em; }
   @media (min-width: 48em) {
     h2,
     .h2 {
-      font-size: 2.25em; } }
+      font-size: 2.36859em; } }
 
 h3,
 .h3 {
-  font-size: 1.3125em; }
+  font-size: 1.33267em; }
   @media (min-width: 48em) {
     h3,
     .h3 {
-      font-size: 1.75em; } }
+      font-size: 1.77689em; } }
 
 h4,
 .h4 {
-  font-size: 1.125em; }
+  font-size: 1.333em; }
 
 h5,
 .h5 {
@@ -569,46 +569,46 @@ h5,
 
 h6,
 .h6 {
-  font-size: 0.875em; }
+  font-size: 0.75019em; }
 
 .giga {
-  font-size: 3.75em; }
+  font-size: 5.60883em; }
   @media (min-width: 48em) {
     .giga {
-      font-size: 5em; } }
+      font-size: 7.47844em; } }
 
 .mega {
-  font-size: 3em; }
+  font-size: 4.20767em; }
   @media (min-width: 48em) {
     .mega {
-      font-size: 4em; } }
+      font-size: 5.61023em; } }
 
 .kilo {
-  font-size: 2.4375em; }
+  font-size: 3.15655em; }
   @media (min-width: 48em) {
     .kilo {
-      font-size: 3.25em; } }
+      font-size: 4.20873em; } }
 
 .nonresponsive h1,
 .nonresponsive .h1 {
-  font-size: 3em; }
+  font-size: 3.15733em; }
 
 .nonresponsive h2,
 .nonresponsive .h2 {
-  font-size: 2.25em; }
+  font-size: 2.36859em; }
 
 .nonresponsive h3,
 .nonresponsive .h3 {
-  font-size: 1.75em; }
+  font-size: 1.77689em; }
 
 .nonresponsive .giga {
-  font-size: 5em; }
+  font-size: 7.47844em; }
 
 .nonresponsive .mega {
-  font-size: 4em; }
+  font-size: 5.61023em; }
 
 .nonresponsive .kilo {
-  font-size: 3.25em; }
+  font-size: 4.20873em; }
 
 ul,
 ol {
