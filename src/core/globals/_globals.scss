@@ -8,7 +8,7 @@
 
 // Automatic margins
 $automargin: false !default;
-$block-margin: unitSize(3);
+$block-margin: unitSize(3) !default;
 
 // Non-responsive website
 $non-responsive: true !default;
