@@ -109,14 +109,6 @@ hr {
   height: 1px;
   margin: 20px 0; }
 
-figure {
-  margin: 24px 1em; }
-
-figcaption {
-  color: #666;
-  font-style: italic;
-  text-align: center; }
-
 ::selection {
   background-color: #d6d6d6; }
 

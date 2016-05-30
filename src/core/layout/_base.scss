@@ -131,15 +131,6 @@ hr {
   margin: unitSize(3, -4) 0;
 }
 
-// Figures
-figure { margin: unitSize(3) 1em; }
-
-figcaption {
-  color: getColor(text, secondary);
-  font-style: italic;
-  text-align: center;
-}
-
 // Selection
 ::selection { background-color: getColor(base, selection); }
 
