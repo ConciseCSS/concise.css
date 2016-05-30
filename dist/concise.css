@@ -7,27 +7,60 @@
  * http://opensource.org/licenses/MIT
  *
  */
-:root {
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  overflow-y: scroll;
-  text-size-adjust: 100%; }
+abbr[title] {
+  text-decoration: underline;
+  text-decoration: underline dotted; }
 
 audio:not([controls]) {
   display: none; }
 
+b,
+strong {
+  font-weight: bolder; }
+
+button, input[type="submit"] {
+  -webkit-appearance: button;
+  overflow: visible; }
+
+button::-moz-focus-inner, input[type="submit"]::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+button:-moz-focusring, input[type="submit"]:-moz-focusring,
+input:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+button, input[type="submit"],
+select {
+  text-transform: none; }
+
 details {
   display: block; }
 
-input[type="number"] {
-  width: auto; }
+hr {
+  overflow: visible;
+  margin: 24px 0;
+  background-color: #e0e0e0;
+  height: 1px; }
 
-input[type="search"] {
-  -webkit-appearance: textfield; }
-  input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none; }
+html {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%; }
 
-main,
-summary {
+input {
+  -webkit-border-radius: 0; }
+  input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button; }
+  input[type="number"] {
+    width: auto; }
+  input[type="search"] {
+    -webkit-appearance: textfield; }
+    input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+      -webkit-appearance: none; }
+
+main {
   display: block; }
 
 pre {
@@ -36,84 +69,120 @@ pre {
 progress {
   display: inline-block; }
 
+summary {
+  display: block; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+template {
+  display: none; }
+
 textarea {
   overflow: auto; }
 
-template,
 [hidden] {
   display: none; }
 
-[unselectable] {
-  user-select: none; }
+*,
+::before,
+::after {
+  box-sizing: inherit; }
+
+* {
+  font-size: inherit;
+  line-height: inherit; }
+
+::before,
+::after {
+  text-decoration: inherit;
+  vertical-align: inherit; }
+
+button, input[type="submit"],
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit; }
 
 :root {
+  background-color: white;
   box-sizing: border-box;
   color: #555;
   cursor: default;
   font-family: "Helvetica", "Arial", sans-serif;
   font-size: 14px;
   line-height: 1.5;
-  text-rendering: optimizeLegibility;
-  vertical-align: top; }
+  text-rendering: optimizeLegibility; }
   @media (min-width: 30em) {
     :root {
       font-size: 16px; } }
-  :root .nonresponsive {
-    font-size: 16px; }
-
-*,
-::after,
-::before {
-  box-sizing: inherit;
-  color: inherit;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  text-decoration: inherit;
-  vertical-align: inherit; }
 
 * {
-  cursor: inherit;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background-repeat: no-repeat; }
 
-body {
-  background-color: white; }
+*,
+::before,
+::after {
+  border-style: solid;
+  border-width: 0; }
 
 a,
+area,
 button,
 input[type="submit"],
 input,
+label,
 select,
-textarea {
-  cursor: initial; }
+textarea,
+[tabindex] {
+  touch-action: manipulation; }
 
-*[dir="rl;"] {
-  direction: rtl;
-  unicode-bidi: embed; }
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none; }
+  select::-ms-expand {
+    display: none; }
+  select::-ms-value {
+    color: currentColor; }
 
-bdo[dir="ltr"],
-bdo[dir="rtl"] {
-  unicode-bidi: bidi-override; }
+svg {
+  fill: currentColor; }
 
-bdo[dir="ltr"] {
-  direction: ltr; }
+[aria-busy="true"] {
+  cursor: progress; }
 
-bdo[dir="rtl"] {
-  direction: rtl; }
+[aria-controls] {
+  cursor: pointer; }
 
-hr {
-  border: 0;
-  border-top: 1px solid #e0e0e0;
-  display: block;
-  height: 1px;
-  margin: 20px 0; }
+[aria-disabled] {
+  cursor: default; }
 
-::selection {
-  background-color: #d6d6d6; }
+[hidden][aria-hidden="false"] {
+  clip: rect(0 0 0 0);
+  display: inherit;
+  position: absolute; }
+  [hidden][aria-hidden="false"]:focus {
+    clip: auto; }
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
 
 ::-moz-selection {
-  background-color: #d6d6d6; }
+  background-color: #d6d6d6;
+  text-shadow: none; }
+
+::selection {
+  background-color: #d6d6d6;
+  text-shadow: none; }
 
 blockquote {
   border-left: 1px solid #e0e0e0;
@@ -921,18 +990,7 @@ table {
     text-overflow: ellipsis;
     white-space: nowrap; }
 
-i,
-em,
-.italic {
-  font-style: italic; }
-
-b,
-strong,
-.bold {
-  font-weight: bold; }
-
-small,
-.small {
+small {
   font-size: 75%;
   vertical-align: text-bottom; }
 
