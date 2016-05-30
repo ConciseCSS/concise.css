@@ -24,12 +24,12 @@
     "node": "<=4.2.3"
   },
   "devDependencies": {
-    "autoprefixer": "^6.1.2",
+    "autoprefixer": "^6.3.6",
     "cssmin": "^0.4.3",
-    "node-sass": "^3.4.2",
-    "postcss-cli": "^2.3.2",
-    "stylestats": "^6.0.0",
-    "watch": "^0.16.0"
+    "node-sass": "^3.7.0",
+    "postcss-cli": "^2.5.2",
+    "stylestats": "^6.3.0",
+    "watch": "^0.18.0"
   },
   "scripts": {
     "build": "node-sass src/concise.scss dist/concise.css | postcss --use autoprefixer < dist/concise.css -b \"last 2 versions\" | cssmin > dist/concise.min.css",
