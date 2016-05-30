@@ -6,6 +6,10 @@
 // Base
 // ----
 
+// Automatic margins
+$automargin: false !default;
+$block-margin: unitSize(3);
+
 // Non-responsive website
 $non-responsive: true !default;
 
