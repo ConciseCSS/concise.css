@@ -24,15 +24,14 @@
     "node": "<=4.2.3"
   },
   "devDependencies": {
-    "autoprefixer": "^6.3.6",
-    "cssnano": "^3.6.2",
+    "concise-cli": "github:concisecss/concise-cli",
+    "cssnano-cli": "^1.0.4",
     "node-sass": "^3.7.0",
-    "postcss-cli": "^2.5.2",
     "stylestats": "^6.3.0",
     "watch": "^0.18.0"
   },
   "scripts": {
-    "build": "node-sass src/concise.scss dist/concise.css | postcss --use autoprefixer < dist/concise.css -b \"last 2 versions\" | postcss --use cssnano > dist/concise.min.css",
+    "build": "concise compile src/concise.scss dist/concise.css && cssnano dist/concise.css dist/concise.min.css",
     "build:watch": "watch \"npm run build\" src",
     "stats": "stylestats dist/concise.css",
     "stats:min": "stylestats dist/concise.css"
