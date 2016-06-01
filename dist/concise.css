@@ -139,7 +139,8 @@ label,
 select,
 textarea,
 [tabindex] {
-  touch-action: manipulation; }
+  -ms-touch-action: manipulation;
+      touch-action: manipulation; }
 
 select {
   -moz-appearance: none;
@@ -216,8 +217,12 @@ button, input[type="submit"],
   padding: 0 2.5em;
   text-align: center;
   text-decoration: none;
+  -webkit-transition: 150ms;
   transition: 150ms;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   vertical-align: middle;
   white-space: nowrap; }
   button:hover, input[type="submit"]:hover, button:focus, input[type="submit"]:focus,
@@ -333,6 +338,7 @@ textarea {
   font-size: 0.875em;
   height: 32px;
   padding: 0 .75em;
+  -webkit-transition: 150ms;
   transition: 150ms;
   width: 100%; }
   input:not([type="submit"]):focus,
@@ -764,7 +770,8 @@ dd {
   *:after {
     background: transparent !important;
     color: black !important;
-    filter: none !important;
+    -webkit-filter: none !important;
+            filter: none !important;
     text-shadow: none !important; }
   :root {
     background-color: white;
@@ -908,6 +915,7 @@ table {
       border-right: none; }
   table tr,
   table td {
+    -webkit-transition: background-color 150ms;
     transition: background-color 150ms; }
   @media (min-width: 480px) {
     table {
@@ -1018,6 +1026,7 @@ a {
   color: #4591aa;
   cursor: pointer;
   text-decoration: none;
+  -webkit-transition: 150ms;
   transition: 150ms; }
   a:hover, a:focus {
     color: #2f6374; }
@@ -1388,7 +1397,8 @@ address {
   position: absolute;
   text-align: center;
   top: 50%;
-  transform: translate(-50%, -50%); }
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
 
 .media--fluid {
   max-width: 100%;
