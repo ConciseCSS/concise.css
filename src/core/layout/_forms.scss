@@ -4,7 +4,7 @@
 
 form,
 form [row] {
-  @media (min-width: $bp-extra-small) {
+  @media (--small) {
     margin-bottom: unitSize(3);
   }
 
@@ -221,7 +221,7 @@ input[type="range"] {
   select,
   textarea { margin-bottom: unitSize(3, -4); }
 
-  @media (min-width: $bp-extra-small) {
+  @media (--small) {
     input,
     select,
     textarea {

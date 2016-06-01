@@ -46,7 +46,7 @@
 // Small Devices
 // -------------
 
-@media (min-width: $bp-small) {
+@media (--small) {
   .show--sm,
   .hide--xsm,
   .hide--md,
@@ -69,7 +69,7 @@
 // Medium Devices
 // --------------
 
-@media (min-width: $bp-medium) {
+@media (--medium) {
   .show--md,
   .hide--sm,
   .hide--xsm,
@@ -92,7 +92,7 @@
 // Large Devices
 // -------------
 
-@media (min-width: $bp-large) {
+@media (--large) {
   .show--lg,
   .hide--xsm,
   .hide--sm,
@@ -115,7 +115,7 @@
 // Extra-Large Devices
 // -------------------
 
-@media (min-width: $bp-extra-large) {
+@media (--extra-large) {
   .show--xlg,
   .hide--xsm,
   .hide--sm,

@@ -35,7 +35,7 @@ table {
     overflow: visible;
     padding: unitSize(1) 1em;
 
-    @media (min-width: $bp-extra-small) {
+    @media (--small) {
       line-height: unitSize(6);
     }
 
@@ -45,7 +45,7 @@ table {
   tr,
   td { transition: background-color $transition-duration; }
 
-  @media (min-width: $bp-extra-small) {
+  @media (--small) {
     & {
       width: auto;
 

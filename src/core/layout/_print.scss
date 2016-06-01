@@ -120,7 +120,7 @@ $font-family-print: "Georgia", "Times New Roman", "Times", serif !default;
   }
 
   table {
-    @media (min-width: $bp-extra-small) {
+    @media (--small) {
       & {
         page-break-inside: avoid;
         width: 100% !important;

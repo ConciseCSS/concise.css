@@ -122,5 +122,5 @@ button,
 .button--collapse {
   width: 100%;
 
-  @media (min-width: $bp-extra-small) { width: auto; }
+  @media (--small) { width: auto; }
 }

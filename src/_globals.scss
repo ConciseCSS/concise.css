@@ -19,12 +19,15 @@ $non-responsive: true !default;
 // Transition duration
 $transition-duration: 150ms !default;
 
-// Breakpoints
-$bp-extra-small: 30em !default;
-$bp-small:       48em !default;
-$bp-medium:      60em !default;
-$bp-large:       70em !default;
-$bp-extra-large: 80em !default;
+// Custom media queries
+@custom-media --extra-small (width <= 480px);
+@custom-media --small (width >= 480px);
+@custom-media --medium (width >= 768px);
+@custom-media --large (width >= 960px);
+@custom-media --extra-large (width >= 1100px);
+@custom-media --only-small (480px < width <= 768px);
+@custom-media --only-medium (768px < width <= 980px);
+@custom-media --only-large (980px < width <= 1100px);
 
 // Spacing
 $spacing-xs: unitSize(1) !default;

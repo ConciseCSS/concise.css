@@ -157,7 +157,7 @@ textarea {
   line-height: 1.5;
   text-rendering: optimizeLegibility;
 
-  @media (min-width: $bp-extra-small) {
+  @media (--small) {
     font-size: $font-base-size + px;
   }
 }
