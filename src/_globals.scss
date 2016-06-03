@@ -38,6 +38,35 @@ $spacing-xl: 1.5lh !default;
 
 
 //
+// Type Scale Ratio
+// -------------
+
+// Suggested ratios
+// Source: http://type-scale.com/
+$minor-second:    1.067;
+$major-second:    1.125;
+$minor-third:     1.200;
+$major-third:     1.250;
+$perfect-fourth:  1.333;
+$augmented-fourth:1.414;
+$perfect-fifth:   1.500;
+$golden-ratio:    1.618;
+
+// Ratio
+$font-ratio-size: $perfect-fourth !default;
+
+// Scale
+$h5-size:   $font-base-size !default;
+$h6-size:   $h5-size / $font-ratio-size !default;
+$h4-size:   $h5-size * $font-ratio-size !default;
+$h3-size:   $h4-size * $font-ratio-size !default;
+$h2-size:   $h3-size * $font-ratio-size !default;
+$h1-size:   $h2-size * $font-ratio-size !default;
+$kilo-size: $h1-size * $font-ratio-size !default;
+$mega-size: $kilo-size * $font-ratio-size !default;
+$giga-size: $mega-size * $font-ratio-size !default;
+
+//
 // Color Palette
 // -------------
 
