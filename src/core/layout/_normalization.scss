@@ -55,7 +55,7 @@ details { display: block; }
 
 hr {
   overflow: visible; // Internet Explorer 11-, Edge 12+
-  margin: unitSize(3) 0;
+  margin: 1lh 0;
   background-color: getColor(base, lines);
   height: 1px;
 }
@@ -152,9 +152,7 @@ textarea {
   box-sizing: border-box;
   color: getColor(text, primary);
   cursor: default;
-  font-family: $font-family;
-  font-size: ($font-base-size * .875) + px;
-  line-height: 1.5;
+  font: (($font-base-size * .875) + px) / 1.5 $font-family;
   text-rendering: optimizeLegibility;
 
   @media (--small) {

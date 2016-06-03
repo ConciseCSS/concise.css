@@ -126,7 +126,7 @@ $font-family-print: "Georgia", "Times New Roman", "Times", serif !default;
         width: 100% !important;
 
         th,
-        td { line-height: unitSize(5) !important; }
+        td { line-height: 1.5lh !important; }
       }
     }
   }

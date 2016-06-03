@@ -2,34 +2,6 @@
 // Functions
 // =============================================================================
 
-//
-// Variables
-// ---------
-
-// Base Size
-$base-unit: 8 !default;
-
-
-//
-// unitSize
-// --------
-// Use this function to set sizes with proportions.
-//
-// @access public
-//
-// @param {String} $multiplier - times the base unit ($base-unit by default)
-// @param {Number} $offset - A value in pixels which will be added to the
-//                  result, can be positive for addition or negative for
-//                  subtraction
-//
-// @return {Number} Value in px, equal to the number of times the base unit
-//                  plus the offset
-//
-
-@function unitSize($multiplier, $offset: 0) {
-  @return ($base-unit * $multiplier + $offset) + px;
-}
-
 
 //
 // pxToEm

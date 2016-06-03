@@ -11,7 +11,7 @@
 
 // Automatic margins
 $automargin: false !default;
-$block-margin: unitSize(3) !default;
+$block-margin: 1lh !default;
 
 // Non-responsive website
 $non-responsive: true !default;
@@ -30,11 +30,11 @@ $transition-duration: 150ms !default;
 @custom-media --only-large (980px < width <= 1100px);
 
 // Spacing
-$spacing-xs: unitSize(1) !default;
-$spacing-s:  unitSize(2) !default;
-$spacing-m:  unitSize(3) !default;
-$spacing-l:  unitSize(4) !default;
-$spacing-xl: unitSize(5) !default;
+$spacing-xs: 0.25lh !default;
+$spacing-s:  0.5lh !default;
+$spacing-m:  1lh !default;
+$spacing-l:  1.25lh !default;
+$spacing-xl: 1.5lh !default;
 
 
 //

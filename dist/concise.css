@@ -40,7 +40,7 @@ details {
 
 hr {
   overflow: visible;
-  margin: 24px 0;
+  margin: 1rem 0;
   background-color: #e0e0e0;
   height: 1px; }
 
@@ -111,9 +111,7 @@ textarea {
   box-sizing: border-box;
   color: #555;
   cursor: default;
-  font-family: "Helvetica", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
+  font: 14px/1.5 "Helvetica", "Arial", sans-serif;
   text-rendering: optimizeLegibility; }
   @media (min-width: 480px) {
     :root {
@@ -188,14 +186,14 @@ video {
 blockquote {
   border-left: 1px solid #e0e0e0;
   color: #666;
-  margin-bottom: 20px;
+  margin-bottom: unitSize(3, -4);
   padding: 0 1em; }
   blockquote cite,
   blockquote footer {
     display: block;
     font-size: 80%;
     font-style: italic;
-    margin-top: 10px; }
+    margin-top: unitSize(1, 2); }
   blockquote cite:before,
   blockquote footer:before {
     content: "\2014 \00A0"; }
@@ -212,7 +210,7 @@ button, input[type="submit"],
   color: white;
   cursor: pointer;
   display: inline-block;
-  line-height: 48px;
+  line-height: 3rem;
   overflow: visible;
   padding: 0 2.5em;
   text-align: center;
@@ -281,22 +279,22 @@ button, input[type="submit"],
 
 .button--xsm {
   font-size: 0.75em;
-  line-height: 32px;
+  line-height: 1.875rem;
   padding: 0 1.5em; }
 
 .button--sm {
   font-size: 0.875em;
-  line-height: 40px;
+  line-height: 2.25rem;
   padding: 0 2em; }
 
 .button--lg {
   font-size: 1.125em;
-  line-height: 56px;
+  line-height: 3.375rem;
   padding: 0 3em; }
 
 .button--xlg {
   font-size: 1.125em;
-  line-height: 64px;
+  line-height: 3.75rem;
   padding: 0 3.5em; }
 
 .button--full {
@@ -324,11 +322,11 @@ button, input[type="submit"],
 @media (min-width: 480px) {
   form,
   form [row] {
-    margin-bottom: 24px; } }
+    margin-bottom: 1.5rem; } }
 
 .nonresponsive form, .nonresponsive
 form [row] {
-  margin-bottom: 24px; }
+  margin-bottom: 1.5rem; }
 
 input:not([type="submit"]),
 select,
@@ -336,7 +334,7 @@ textarea {
   border: 1px solid #e0e0e0;
   border-radius: 3px;
   font-size: 0.875em;
-  height: 32px;
+  height: 1.875rem;
   padding: 0 .75em;
   -webkit-transition: 150ms;
   transition: 150ms;
@@ -355,7 +353,7 @@ textarea {
 
 input:not([type="submit"]) {
   line-height: normal;
-  min-height: 24px; }
+  min-height: 1.5rem; }
   input:not([type="submit"])[type="checkbox"]:focus, input:not([type="submit"])[type="radio"]:focus, input:not([type="submit"])[type="range"]:focus, input:not([type="submit"])[type="file"]:focus, input:not([type="submit"])[type="color"]:focus, input:not([type="submit"])[type="submit"]:focus {
     border-color: transparent;
     box-shadow: none;
@@ -368,8 +366,8 @@ label {
 fieldset {
   border: 1px solid #e0e0e0;
   border-radius: 3px;
-  padding: 24px 1em;
-  margin-bottom: 24px; }
+  padding: 1.5rem 1em;
+  margin-bottom: 1.5rem; }
 
 legend {
   font-size: 0.875em;
@@ -393,7 +391,7 @@ input[type="checkbox"] + label,
 input[type="radio"] + label {
   display: inline-block;
   margin: 0 0 0 .5em;
-  line-height: 30px;
+  line-height: unitSize(4, -2);
   vertical-align: middle; }
 
 input[type="file"] {
@@ -403,7 +401,7 @@ input[type="file"] {
 
 textarea {
   height: auto;
-  padding: 8px 1em;
+  padding: 0.375rem 1em;
   resize: vertical; }
 
 select {
@@ -472,12 +470,12 @@ input[type="range"] {
   display: block;
   font-size: 0.75em;
   font-weight: bold;
-  margin-top: 8px; }
+  margin-top: 0.375rem; }
 
 .form--inline input,
 .form--inline select,
 .form--inline textarea {
-  margin-bottom: 20px; }
+  margin-bottom: unitSize(3, -4); }
 
 @media (min-width: 480px) {
   .form--inline input,
@@ -512,11 +510,11 @@ input[type="range"] {
 
 .input--small {
   font-size: 0.75em !important;
-  height: 24px !important; }
+  height: 1.5rem !important; }
 
 .input--large {
   font-size: 1em !important;
-  height: 48px !important; }
+  height: 3rem !important; }
 
 .input--flat {
   background-color: transparent;
@@ -574,7 +572,7 @@ h1, h2, h3, h4, h5, h6,
 h1, h2, h3,
 .h1, .h2, .h3,
 .giga, .mega, .kilo {
-  margin: 20px 0 10px; }
+  margin: unitSize(3, -4) 0 unitSize(1, 2); }
   h1 small,
   h1 .small, h2 small,
   h2 .small, h3 small,
@@ -591,7 +589,7 @@ h1, h2, h3,
 
 h4, h5, h6,
 .h4, .h5, .h6 {
-  margin: 10px 0; }
+  margin: unitSize(1, 2) 0; }
   h4 small,
   h4 .small, h5 small,
   h5 .small, h6 small,
@@ -680,7 +678,7 @@ h6,
 ul,
 ol {
   padding-left: 1.5em;
-  margin-bottom: 10px; }
+  margin-bottom: unitSize(1, 2); }
   ul ul,
   ul ol,
   ol ul,
@@ -719,14 +717,14 @@ nav li {
     padding-left: 0; }
 
 dl {
-  margin-bottom: 24px; }
+  margin-bottom: 1.5rem; }
 
 dt {
   font-weight: bold; }
 
 dt,
 dd {
-  margin-bottom: 10px; }
+  margin-bottom: unitSize(1, 2); }
 
 @media (min-width: 960px) {
   .dl--horizontal dt {
@@ -849,7 +847,7 @@ dd {
     width: 100% !important; }
     table th,
     table td {
-      line-height: 40px !important; } }
+      line-height: 2.25rem !important; } }
 
 @media print {
   .badge, .badge:before,
@@ -886,13 +884,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   empty-cells: show;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   width: 100%; }
   table caption {
     color: #555;
     font-size: 85%;
     font-style: italic;
-    line-height: 48px;
+    line-height: 3rem;
     text-align: center; }
   table thead {
     background-color: #f5f5f5;
@@ -903,13 +901,13 @@ table {
   table th,
   table td {
     border-right: 1px solid #e0e0e0;
-    line-height: 24px;
+    line-height: 1.5rem;
     overflow: visible;
-    padding: 8px 1em; }
+    padding: 0.375rem 1em; }
     @media (min-width: 480px) {
       table th,
       table td {
-        line-height: 48px; } }
+        line-height: 3rem; } }
     table th:last-child,
     table td:last-child {
       border-right: none; }
@@ -932,7 +930,7 @@ table {
 
 .nonresponsive th,
 .nonresponsive td {
-  line-height: 48px; }
+  line-height: 3rem; }
 
 .table--responsive {
   overflow: auto;
@@ -1019,7 +1017,7 @@ s {
   text-decoration: line-through; }
 
 p:not(:last-child) {
-  margin-bottom: 20px; }
+  margin-bottom: unitSize(3, -4); }
 
 a {
   background-color: transparent;
@@ -1052,7 +1050,7 @@ samp {
   font-size: 0.875em; }
 
 pre {
-  padding: 16px 1.5em; }
+  padding: 0.75rem 1.5em; }
 
 code {
   vertical-align: middle;
@@ -1064,7 +1062,7 @@ pre {
   border: 1px solid #e0e0e0;
   border-radius: 3px;
   color: #484848;
-  margin-bottom: 24px; }
+  margin-bottom: 1.5rem; }
 
 code {
   padding: 2px 3px; }

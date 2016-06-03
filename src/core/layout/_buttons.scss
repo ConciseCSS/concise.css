@@ -9,7 +9,7 @@ button,
   color: getColor(text, ui);
   cursor: pointer;
   display: inline-block;
-  line-height: unitSize(6);
+  line-height: 2lh;
   overflow: visible;
   padding: 0 2.5em;
   text-align: center;
@@ -66,28 +66,28 @@ button,
 // Extra small
 .button--xsm {
   font-size: pxToEm(12);
-  line-height: unitSize(4);
+  line-height: 1.25lh;
   padding: 0 1.5em;
 }
 
 // Small
 .button--sm {
   font-size: pxToEm(14);
-  line-height: unitSize(5);
+  line-height: 1.5lh;
   padding: 0 2em;
 }
 
 // Large
 .button--lg {
   font-size: pxToEm(18);
-  line-height: unitSize(7);
+  line-height: 2.25lh;
   padding: 0 3em;
 }
 
 // Extra large
 .button--xlg {
   font-size: pxToEm(18);
-  line-height: unitSize(8);
+  line-height: 2.5lh;
   padding: 0 3.5em;
 }
 

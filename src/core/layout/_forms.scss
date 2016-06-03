@@ -5,11 +5,11 @@
 form,
 form [row] {
   @media (--small) {
-    margin-bottom: unitSize(3);
+    margin-bottom: 1lh;
   }
 
   @if $non-responsive == true {
-    .nonresponsive & { margin-bottom: unitSize(3); }
+    .nonresponsive & { margin-bottom: 1lh; }
   }
 }
 
@@ -19,7 +19,7 @@ textarea {
   border: 1px solid getColor(base, lines);
   border-radius: 3px;
   font-size: pxToEm(14);
-  height: unitSize(4);
+  height: 1.25lh;
   padding: 0 .75em;
   transition: $transition-duration;
   width: 100%;
@@ -40,7 +40,7 @@ textarea {
 input:not([type="submit"]) {
 
   line-height: normal;
-  min-height: unitSize(3);
+  min-height: 1lh;
 
   // Remove focus styles
   &[type="checkbox"],
@@ -69,8 +69,8 @@ label {
 fieldset {
   border: 1px solid getColor(base, lines);
   border-radius: 3px;
-  padding: unitSize(3) 1em;
-  margin-bottom: unitSize(3);
+  padding: 1lh 1em;
+  margin-bottom: 1lh;
 }
 
 legend {
@@ -115,7 +115,7 @@ input[type="file"] {
 // Textarea
 textarea {
   height: auto;
-  padding: unitSize(1) 1em;
+  padding: 0.25lh 1em;
   resize: vertical;
 }
 
@@ -207,7 +207,7 @@ input[type="range"] {
   display: block;
   font-size: pxToEm(12);
   font-weight: bold;
-  margin-top: unitSize(1);
+  margin-top: 0.25lh;
 }
 
 
@@ -272,13 +272,13 @@ input[type="range"] {
 // Small
 .input--small {
   font-size: pxToEm(12) !important;
-  height: unitSize(3) !important;
+  height: 1lh !important;
 }
 
 // Large
 .input--large {
   font-size: pxToEm(16) !important;
-  height: unitSize(6) !important;
+  height: 2lh !important;
 }
 
 // Flat

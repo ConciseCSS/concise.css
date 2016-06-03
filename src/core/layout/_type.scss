@@ -84,7 +84,7 @@ samp {
   font-size: pxToEm(14);
 }
 
-pre { padding: unitSize(2) 1.5em; }
+pre { padding: 0.5lh 1.5em; }
 
 code {
   vertical-align: middle;
@@ -97,7 +97,7 @@ pre {
   border: 1px solid getColor(base, lines);
   border-radius: 3px;
   color: darken(getColor(text, primary), 5%);
-  margin-bottom: unitSize(3);
+  margin-bottom: 1lh;
 }
 
 code { padding: 2px 3px; }
