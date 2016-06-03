@@ -101,7 +101,7 @@ input[type="checkbox"] + label,
 input[type="radio"] + label {
   display: inline-block;
   margin: 0 0 0 .5em;
-  line-height: unitSize(4, -2);
+  line-height: 1.25lh;
   vertical-align: middle;
 }
 
@@ -219,7 +219,7 @@ input[type="range"] {
 .form--inline {
   input,
   select,
-  textarea { margin-bottom: unitSize(3, -4); }
+  textarea { margin-bottom: 1lh; }
 
   @media (--small) {
     input,

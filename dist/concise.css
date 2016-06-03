@@ -186,14 +186,14 @@ video {
 blockquote {
   border-left: 1px solid #e0e0e0;
   color: #666;
-  margin-bottom: unitSize(3, -4);
+  margin-bottom: 1.5rem;
   padding: 0 1em; }
   blockquote cite,
   blockquote footer {
     display: block;
     font-size: 80%;
     font-style: italic;
-    margin-top: unitSize(1, 2); }
+    margin-top: 0.375rem; }
   blockquote cite:before,
   blockquote footer:before {
     content: "\2014 \00A0"; }
@@ -391,7 +391,7 @@ input[type="checkbox"] + label,
 input[type="radio"] + label {
   display: inline-block;
   margin: 0 0 0 .5em;
-  line-height: unitSize(4, -2);
+  line-height: 1.875rem;
   vertical-align: middle; }
 
 input[type="file"] {
@@ -475,7 +475,7 @@ input[type="range"] {
 .form--inline input,
 .form--inline select,
 .form--inline textarea {
-  margin-bottom: unitSize(3, -4); }
+  margin-bottom: 1.5rem; }
 
 @media (min-width: 480px) {
   .form--inline input,
@@ -572,7 +572,7 @@ h1, h2, h3, h4, h5, h6,
 h1, h2, h3,
 .h1, .h2, .h3,
 .giga, .mega, .kilo {
-  margin: unitSize(3, -4) 0 unitSize(1, 2); }
+  margin: 1.5rem 0 0.375rem; }
   h1 small,
   h1 .small, h2 small,
   h2 .small, h3 small,
@@ -589,7 +589,7 @@ h1, h2, h3,
 
 h4, h5, h6,
 .h4, .h5, .h6 {
-  margin: unitSize(1, 2) 0; }
+  margin: 0.375rem 0; }
   h4 small,
   h4 .small, h5 small,
   h5 .small, h6 small,
@@ -678,7 +678,7 @@ h6,
 ul,
 ol {
   padding-left: 1.5em;
-  margin-bottom: unitSize(1, 2); }
+  margin-bottom: 0.375rem; }
   ul ul,
   ul ol,
   ol ul,
@@ -724,7 +724,7 @@ dt {
 
 dt,
 dd {
-  margin-bottom: unitSize(1, 2); }
+  margin-bottom: 0.375rem; }
 
 @media (min-width: 960px) {
   .dl--horizontal dt {
@@ -1017,7 +1017,7 @@ s {
   text-decoration: line-through; }
 
 p:not(:last-child) {
-  margin-bottom: unitSize(3, -4); }
+  margin-bottom: 1.5rem; }
 
 a {
   background-color: transparent;

@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, h6,
 h1, h2, h3,
 .h1, .h2, .h3,
 .giga, .mega, .kilo {
-  margin: unitSize(3, -4) 0 unitSize(1, 2);
+  margin: 1lh 0 0.25lh;
 
   small,
   .small { font-size: 65%; }
@@ -66,7 +66,7 @@ h1, h2, h3,
 
 h4, h5, h6,
 .h4, .h5, .h6 {
-  margin: unitSize(1, 2) 0;
+  margin: 0.25lh 0;
 
   small,
   .small { font-size: 75%; }
