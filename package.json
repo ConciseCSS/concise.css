@@ -24,15 +24,15 @@
     "node": "<=4.2.3"
   },
   "devDependencies": {
+    "chokidar-cli": "^1.2.0",
     "concise-cli": "^0.1.0",
     "cssnano-cli": "^1.0.4",
     "node-sass": "^3.7.0",
-    "stylestats": "^6.3.0",
-    "watch": "^0.18.0"
+    "stylestats": "^6.3.0"
   },
   "scripts": {
     "build": "concise compile src/concise.scss dist/concise.css && cssnano dist/concise.css dist/concise.min.css",
-    "build:watch": "watch \"npm run build\" src",
+    "build:watch": "chokidar 'src/**/*.scss' -c 'npm run build'",
     "stats": "stylestats dist/concise.css",
     "stats:min": "stylestats dist/concise.css"
   }
