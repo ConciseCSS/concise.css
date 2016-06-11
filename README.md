@@ -18,10 +18,10 @@ You can also use our CDN:
 
 ```CSS
 /* Normal */
-<link rel="stylesheet" href="http://cdn.concisecss.com/v3.4.0/concise.css">
+<link rel="stylesheet" href="https://cdn.concisecss.com/v3.4.0/concise.css">
 
 /* Minified */
-<link rel="stylesheet" href="http://cdn.concisecss.com/v3.4.0/concise.min.css">
+<link rel="stylesheet" href="https://cdn.concisecss.com/v3.4.0/concise.min.css">
 ```
 
 After you download or install the package, [check out our documentation](http://concisecss.com/documentation) to get up and running.
