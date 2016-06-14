@@ -14,7 +14,7 @@ It's easy to get started with Concise:
 
 **Note:** If you just want the CSS files, please refer to the downloads section for each release: [https://github.com/ConciseCSS/concise.css/releases](https://github.com/ConciseCSS/concise.css/releases)
 
-You can also use our CDN:
+#### Using our CDN:
 
 ```CSS
 /* Normal */
