@@ -151,7 +151,7 @@ textarea {
   box-sizing: border-box;
   color: getColor(text, primary);
   cursor: default;
-  font: (($font-base-size * .875) + px) / 1.5 $font-family;
+  font: (round($font-base-size * .875) + px) / 1.5 $font-family;
   text-rendering: optimizeLegibility;
 
   @media (--small) {
