@@ -19,9 +19,15 @@ sub {
   vertical-align: baseline;
 }
 
-sup { top: -0.5em; }
+sup {
+  top: -0.5em;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "sups" 1;
+}
 
-sub { bottom: -0.25em; }
+sub {
+  bottom: -0.25em;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "subs" 1;
+}
 
 s { text-decoration: line-through; }
 
@@ -65,10 +71,18 @@ h1, h2, h3,
 //
 // Abbreviations
 // -------------
+// 1. Change all letters to uppercase
+// 2. Turn on small caps for upper and lowercase letters
+//
 
-abbr[title] {
-  border-bottom: 1px dotted getColor(base, lines);
-  cursor: help;
+abbr {
+  text-transform: uppercase; /* 1 */
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1; /* 2 */
+
+  &[title] {
+    border-bottom: 1px dotted getColor(base, lines);
+    cursor: help;
+  }
 }
 
 
