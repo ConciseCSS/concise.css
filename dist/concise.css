@@ -1008,10 +1008,14 @@ sub {
   vertical-align: baseline; }
 
 sup {
-  top: -0.5em; }
+  top: -0.5em;
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "sups" 1;
+          font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "sups" 1; }
 
 sub {
-  bottom: -0.25em; }
+  bottom: -0.25em;
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "subs" 1;
+          font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "subs" 1; }
 
 s {
   text-decoration: line-through; }
@@ -1038,9 +1042,15 @@ h1 a, h2 a, h3 a,
     color: #4591aa;
     text-decoration: none; }
 
-abbr[title] {
-  border-bottom: 1px dotted #e0e0e0;
-  cursor: help; }
+abbr {
+  text-transform: uppercase;
+  /* 1 */
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1;
+          font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1;
+  /* 2 */ }
+  abbr[title] {
+    border-bottom: 1px dotted #e0e0e0;
+    cursor: help; }
 
 code,
 pre,

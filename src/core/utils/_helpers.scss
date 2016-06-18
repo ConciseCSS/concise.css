@@ -25,7 +25,15 @@
 
 .float--left { float: left; }
 
-.clearfix { @include clearfix(); }
+.clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after { clear: both; }
+}
 
 
 //

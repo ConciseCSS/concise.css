@@ -80,7 +80,13 @@ dd { margin-bottom: 0.25lh; }
     }
 
     dd {
-      @include clearfix();
+      &:before,
+      &:after {
+        content: "";
+        display: table;
+      }
+
+      &:after { clear: both; }
 
       margin-left: 165px;
     }
@@ -101,7 +107,13 @@ dd { margin-bottom: 0.25lh; }
       }
 
       dd {
-        @include clearfix();
+        &:before,
+        &:after {
+          content: "";
+          display: table;
+        }
+
+        &:after { clear: both; }
 
         margin-left: 165px;
       }
