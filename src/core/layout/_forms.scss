@@ -14,7 +14,7 @@ select,
 textarea {
   border: 1px solid getColor(base, lines);
   border-radius: 3px;
-  font-size: 14pe;
+  font-size: 14pr;
   height: 1.25lh;
   padding: 0 .75em;
   transition: $transition-duration;
@@ -59,7 +59,7 @@ input[type="submit"] {
 
 label {
   display: block;
-  font-size: 14pe;
+  font-size: 14pr;
 }
 
 fieldset {
@@ -70,7 +70,7 @@ fieldset {
 }
 
 legend {
-  font-size: 14pe;
+  font-size: 14pr;
   font-weight: bold;
   padding: 0 1em;
 }
@@ -201,7 +201,7 @@ input[type="range"] {
 .input--help {
   color: getColor(text, secondary);
   display: block;
-  font-size: 12pe;
+  font-size: 12pr;
   font-weight: bold;
   margin-top: 0.25lh;
 }
@@ -244,13 +244,13 @@ input[type="range"] {
 
 // Small
 .input--small {
-  font-size: 12pe !important;
+  font-size: 12pr !important;
   height: 1lh !important;
 }
 
 // Large
 .input--large {
-  font-size: 16pe !important;
+  font-size: 16pr !important;
   height: 2lh !important;
 }
 

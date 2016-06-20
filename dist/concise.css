@@ -278,22 +278,22 @@ button, input[type="submit"],
     background-color: #db674b; }
 
 .button--xsm {
-  font-size: 0.75em;
+  font-size: 0.75rem;
   line-height: 1.875rem;
   padding: 0 1.5em; }
 
 .button--sm {
-  font-size: 0.875em;
+  font-size: 0.875rem;
   line-height: 2.25rem;
   padding: 0 2em; }
 
 .button--lg {
-  font-size: 1.125em;
+  font-size: 1.125rem;
   line-height: 3.375rem;
   padding: 0 3em; }
 
 .button--xlg {
-  font-size: 1.125em;
+  font-size: 1.125rem;
   line-height: 3.75rem;
   padding: 0 3.5em; }
 
@@ -329,7 +329,7 @@ select,
 textarea {
   border: 1px solid #e0e0e0;
   border-radius: 3px;
-  font-size: 0.875em;
+  font-size: 0.875rem;
   height: 1.875rem;
   padding: 0 .75em;
   -webkit-transition: 150ms;
@@ -357,7 +357,7 @@ input:not([type="submit"]) {
 
 label {
   display: block;
-  font-size: 0.875em; }
+  font-size: 0.875rem; }
 
 fieldset {
   border: 1px solid #e0e0e0;
@@ -366,7 +366,7 @@ fieldset {
   margin-bottom: 1.5rem; }
 
 legend {
-  font-size: 0.875em;
+  font-size: 0.875rem;
   font-weight: bold;
   padding: 0 1em; }
 
@@ -464,7 +464,7 @@ input[type="range"] {
 .input--help {
   color: #666;
   display: block;
-  font-size: 0.75em;
+  font-size: 0.75rem;
   font-weight: bold;
   margin-top: 0.375rem; }
 
@@ -489,11 +489,11 @@ input[type="range"] {
     margin-left: 1em; } }
 
 .input--small {
-  font-size: 0.75em !important;
+  font-size: 0.75rem !important;
   height: 1.5rem !important; }
 
 .input--large {
-  font-size: 1em !important;
+  font-size: 1rem !important;
   height: 3rem !important; }
 
 .input--flat {
@@ -582,57 +582,57 @@ h4, h5, h6,
 
 h1,
 .h1 {
-  font-size: 2.368000625em; }
+  font-size: 2.368rem; }
   @media (min-width: 768px) {
     h1,
     .h1 {
-      font-size: 3.157334375em; } }
+      font-size: 3.15733rem; } }
 
 h2,
 .h2 {
-  font-size: 1.776445em; }
+  font-size: 1.77645rem; }
   @media (min-width: 768px) {
     h2,
     .h2 {
-      font-size: 2.368593125em; } }
+      font-size: 2.36859rem; } }
 
 h3,
 .h3 {
-  font-size: 1.332666875em; }
+  font-size: 1.33267rem; }
   @media (min-width: 768px) {
     h3,
     .h3 {
-      font-size: 1.77688875em; } }
+      font-size: 1.77689rem; } }
 
 h4,
 .h4 {
-  font-size: 1.333em; }
+  font-size: 1.333rem; }
 
 h5,
 .h5 {
-  font-size: 1em; }
+  font-size: 1rem; }
 
 h6,
 .h6 {
-  font-size: 0.7501875em; }
+  font-size: 0.75019rem; }
 
 .giga {
-  font-size: 5.608830625em; }
+  font-size: 5.60883rem; }
   @media (min-width: 768px) {
     .giga {
-      font-size: 7.478440625em; } }
+      font-size: 7.47844rem; } }
 
 .mega {
-  font-size: 4.207675em; }
+  font-size: 4.20768rem; }
   @media (min-width: 768px) {
     .mega {
-      font-size: 5.610233125em; } }
+      font-size: 5.61023rem; } }
 
 .kilo {
-  font-size: 3.156545em; }
+  font-size: 3.15654rem; }
   @media (min-width: 768px) {
     .kilo {
-      font-size: 4.208726875em; } }
+      font-size: 4.20873rem; } }
 
 ul,
 ol {
@@ -989,7 +989,7 @@ pre,
 kbd,
 samp {
   font-family: "Consolas", monospace;
-  font-size: 0.875em; }
+  font-size: 0.875rem; }
 
 pre {
   padding: 0.75rem 1.5em; }
@@ -1019,7 +1019,7 @@ pre code {
 .pre--flat {
   background-color: transparent;
   border: 0;
-  border-radius: none;
+  border-radius: 0;
   padding: 0; }
 
 kbd {

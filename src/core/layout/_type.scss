@@ -95,7 +95,7 @@ pre,
 kbd,
 samp {
   font-family: $font-family-mono;
-  font-size: 14pe;
+  font-size: 14pr;
 }
 
 pre { padding: 0.5lh 1.5em; }
@@ -127,7 +127,7 @@ pre code {
 .pre--flat {
   background-color: transparent;
   border: 0;
-  border-radius: none;
+  border-radius: 0;
   padding: 0;
 }
 
