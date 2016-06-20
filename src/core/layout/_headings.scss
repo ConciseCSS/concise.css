@@ -114,27 +114,3 @@ h6,
     font-size: $kilo-size + pe;
   }
 }
-
-
-//
-// Non-Responsive
-// --------------
-
-@if $non-responsive == true {
-  .nonresponsive {
-    h1,
-    .h1 { font-size: $h1-size + pe; }
-
-    h2,
-    .h2 { font-size: $h2-size + pe; }
-
-    h3,
-    .h3 { font-size: $h3-size + pe; }
-
-    .giga { font-size: $giga-size + pe; }
-
-    .mega { font-size: $mega-size + pe; }
-
-    .kilo { font-size: $kilo-size + pe; }
-  }
-}

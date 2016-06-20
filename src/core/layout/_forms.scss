@@ -7,10 +7,6 @@ form [row] {
   @media (--small) {
     margin-bottom: 1lh;
   }
-
-  @if $non-responsive == true {
-    .nonresponsive & { margin-bottom: 1lh; }
-  }
 }
 
 input:not([type="submit"]),
@@ -238,29 +234,6 @@ input[type="range"] {
     }
 
     input + label { margin-left: 1em; }
-  }
-}
-
-@if $non-responsive == true {
-  .nonresponsive {
-    .form--inline {
-      input,
-      select,
-      textarea {
-        display: inline-block;
-        margin-bottom: 0;
-        vertical-align: middle;
-        width: auto;
-      }
-
-      label {
-        display: inline;
-        margin-right: .5em;
-        vertical-align: middle;
-      }
-
-      input + label { margin-left: 1em; }
-    }
   }
 }
 

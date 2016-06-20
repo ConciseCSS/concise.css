@@ -92,31 +92,3 @@ dd { margin-bottom: 0.25lh; }
     }
   }
 }
-
-@if $non-responsive == true {
-  .nonresponsive {
-    .dl--horizontal {
-      dt {
-        clear: left;
-        float: left;
-        overflow: hidden;
-        text-align: right;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        width: 150px;
-      }
-
-      dd {
-        &:before,
-        &:after {
-          content: "";
-          display: table;
-        }
-
-        &:after { clear: both; }
-
-        margin-left: 165px;
-      }
-    }
-  }
-}
