@@ -155,7 +155,7 @@ textarea {
   text-rendering: optimizeLegibility;
 
   @media (--small) {
-    font-size: $font-base-size * 1.125 + px;
+    font-size: round($font-base-size * 1.125) + px;
   }
 }
 
