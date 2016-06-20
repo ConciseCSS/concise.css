@@ -4,24 +4,6 @@
 
 
 //
-// pxToEm
-// ------
-// Converts a Px value into a Em value
-//
-// @access public
-//
-// @param {Number} $px - value in pixels
-// @param {Number} $base - Base font size
-//
-// @return {Number} Value in Ems
-//
-
-@function pxToEm($px, $base: $font-base-size) {
-  @return ($px / $base) + em;
-}
-
-
-//
 // pxToRem
 // ------
 // Converts a Px value into a Rem value

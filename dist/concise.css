@@ -602,27 +602,27 @@ h4, h5, h6,
 
 h1,
 .h1 {
-  font-size: 2.368em; }
+  font-size: 2.368000625em; }
   @media (min-width: 768px) {
     h1,
     .h1 {
-      font-size: 3.15733em; } }
+      font-size: 3.157334375em; } }
 
 h2,
 .h2 {
-  font-size: 1.77644em; }
+  font-size: 1.776445em; }
   @media (min-width: 768px) {
     h2,
     .h2 {
-      font-size: 2.36859em; } }
+      font-size: 2.368593125em; } }
 
 h3,
 .h3 {
-  font-size: 1.33267em; }
+  font-size: 1.332666875em; }
   @media (min-width: 768px) {
     h3,
     .h3 {
-      font-size: 1.77689em; } }
+      font-size: 1.77688875em; } }
 
 h4,
 .h4 {
@@ -634,46 +634,46 @@ h5,
 
 h6,
 .h6 {
-  font-size: 0.75019em; }
+  font-size: 0.7501875em; }
 
 .giga {
-  font-size: 5.60883em; }
+  font-size: 5.608830625em; }
   @media (min-width: 768px) {
     .giga {
-      font-size: 7.47844em; } }
+      font-size: 7.478440625em; } }
 
 .mega {
-  font-size: 4.20767em; }
+  font-size: 4.207675em; }
   @media (min-width: 768px) {
     .mega {
-      font-size: 5.61023em; } }
+      font-size: 5.610233125em; } }
 
 .kilo {
-  font-size: 3.15655em; }
+  font-size: 3.156545em; }
   @media (min-width: 768px) {
     .kilo {
-      font-size: 4.20873em; } }
+      font-size: 4.208726875em; } }
 
 .nonresponsive h1,
 .nonresponsive .h1 {
-  font-size: 3.15733em; }
+  font-size: 3.157334375em; }
 
 .nonresponsive h2,
 .nonresponsive .h2 {
-  font-size: 2.36859em; }
+  font-size: 2.368593125em; }
 
 .nonresponsive h3,
 .nonresponsive .h3 {
-  font-size: 1.77689em; }
+  font-size: 1.77688875em; }
 
 .nonresponsive .giga {
-  font-size: 7.47844em; }
+  font-size: 7.478440625em; }
 
 .nonresponsive .mega {
-  font-size: 5.61023em; }
+  font-size: 5.610233125em; }
 
 .nonresponsive .kilo {
-  font-size: 4.20873em; }
+  font-size: 4.208726875em; }
 
 ul,
 ol {
