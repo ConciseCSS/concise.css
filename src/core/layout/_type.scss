@@ -78,11 +78,6 @@ h1, h2, h3,
 abbr {
   text-transform: uppercase; /* 1 */
   font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1; /* 2 */
-
-  &[title] {
-    border-bottom: 1px dotted getColor(base, lines);
-    cursor: help;
-  }
 }
 
 
@@ -98,7 +93,7 @@ samp {
   font-size: 14pr;
 }
 
-pre { padding: 0.5lh 1.5em; }
+pre { padding: 0.5lh 1em; }
 
 code {
   vertical-align: middle;
@@ -137,9 +132,7 @@ kbd {
   border-radius: 3px;
   box-shadow: 0 2px 0 -1px white,0 2px 0 darken(getColor(base, lines), 1.5%);
   display: inline-block;
-  line-height: 1.75;
-  margin: -3px 2px 0;
-  padding: 2px 6px 0;
+  padding: 0 6px 0;
   white-space: nowrap;
 }
 
