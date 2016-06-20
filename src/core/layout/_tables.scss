@@ -10,6 +10,13 @@ table {
   margin-bottom: 1lh;
   width: 100%;
 
+  @media (--small) {
+    width: auto;
+
+    th,
+    td { padding: 0 2.5em; }
+  }
+
   caption {
     color: getColor(text, primary);
     font-size: 85%;
@@ -35,24 +42,13 @@ table {
     overflow: visible;
     padding: 0.25lh 1em;
 
-    @media (--small) {
-      line-height: 2lh;
-    }
+    @media (--small) { line-height: 2lh; }
 
     &:last-child { border-right: none; }
   }
 
   tr,
   td { transition: background-color $transition-duration; }
-
-  @media (--small) {
-    & {
-      width: auto;
-
-      th,
-      td { padding: 0 2.5em; }
-    }
-  }
 }
 
 

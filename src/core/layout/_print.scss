@@ -89,7 +89,7 @@ $font-family-print: "Georgia", "Times New Roman", "Times", serif !default;
 
   pre,
   code {
-    background-color: none;
+    background-color: transparent;
     border: 1px solid getColor(base, lines);
     page-break-inside: avoid;
   }
@@ -117,41 +117,5 @@ $font-family-print: "Georgia", "Times New Roman", "Times", serif !default;
   ul,
   ol {
    li { content: "&raquo; "; }
-  }
-
-  table {
-    @media (--small) {
-      & {
-        page-break-inside: avoid;
-        width: 100% !important;
-
-        th,
-        td { line-height: 1.5lh !important; }
-      }
-    }
-  }
-
-
-  //
-  // Components
-  //
-  // TODO: conditional to check if Concise UI is being included
-
-  // Base
-  .badge,
-  .label,
-  .spinner,
-  .tooltip,
-  [data-hint],
-  .progress,
-  .breadcrumbs,
-  .modal,
-  .alert {
-    &,
-    &:before,
-    *:after {
-      display: none;
-      visibility: hidden;
-    }
   }
 }
