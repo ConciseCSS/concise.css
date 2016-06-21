@@ -772,7 +772,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   empty-cells: show;
-  margin-bottom: 1.5rem;
   width: 100%; }
   @media (min-width: 480px) {
     table {
@@ -797,7 +796,7 @@ table {
     border-right: 1px solid #e0e0e0;
     line-height: 1.5rem;
     overflow: visible;
-    padding: 0.375rem 1em; }
+    padding: 0 1em; }
     @media (min-width: 480px) {
       table th,
       table td {

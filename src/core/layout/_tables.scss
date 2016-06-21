@@ -7,7 +7,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   empty-cells: show;
-  margin-bottom: 1lh;
   width: 100%;
 
   @media (--small) {
@@ -40,7 +39,7 @@ table {
     border-right: 1px solid getColor(base, lines);
     line-height: 1lh;
     overflow: visible;
-    padding: 0.25lh 1em;
+    padding: 0 1em;
 
     @media (--small) { line-height: 2lh; }
 
