@@ -210,9 +210,10 @@ button, input[type="submit"],
   color: white;
   cursor: pointer;
   display: inline-block;
-  line-height: 3rem;
+  font-size: 0.875rem;
+  line-height: 2.25rem;
   overflow: visible;
-  padding: 0 2.5em;
+  padding: 0 1.5em;
   text-align: center;
   text-decoration: none;
   -webkit-transition: 150ms;
@@ -227,7 +228,7 @@ button, input[type="submit"],
   .button:hover,
   .button:focus {
     background-color: #75b3c7;
-    color: inherit;
+    color: white;
     text-decoration: none; }
   button:focus, input[type="submit"]:focus, button:active, input[type="submit"]:active,
   .button:focus,
@@ -279,23 +280,23 @@ button, input[type="submit"],
 
 .button--xsm {
   font-size: 0.75rem;
-  line-height: 1.875rem;
-  padding: 0 1.5em; }
+  line-height: 1.5rem;
+  padding: 0 1em; }
 
 .button--sm {
   font-size: 0.875rem;
-  line-height: 2.25rem;
-  padding: 0 2em; }
+  line-height: 1.875rem;
+  padding: 0 1em; }
 
 .button--lg {
   font-size: 1.125rem;
-  line-height: 3.375rem;
-  padding: 0 3em; }
+  line-height: 3rem;
+  padding: 0 2em; }
 
 .button--xlg {
   font-size: 1.125rem;
   line-height: 3.75rem;
-  padding: 0 3.5em; }
+  padding: 0 2.5em; }
 
 .button--full {
   width: 100%; }

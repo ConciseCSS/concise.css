@@ -9,9 +9,10 @@ button,
   color: getColor(text, ui);
   cursor: pointer;
   display: inline-block;
-  line-height: 2lh;
+  font-size: 14pr;
+  line-height: 1.5lh;
   overflow: visible;
-  padding: 0 2.5em;
+  padding: 0 1.5em;
   text-align: center;
   text-decoration: none;
   transition: $transition-duration;
@@ -22,7 +23,7 @@ button,
   &:hover,
   &:focus {
     background-color: lighten(getColor(base, primary), 15%);
-    color: inherit;
+    color: getColor(text, ui);
     text-decoration: none;
   }
 
@@ -66,29 +67,29 @@ button,
 // Extra small
 .button--xsm {
   font-size: 12pr;
-  line-height: 1.25lh;
-  padding: 0 1.5em;
+  line-height: 1lh;
+  padding: 0 1em;
 }
 
 // Small
 .button--sm {
   font-size: 14pr;
-  line-height: 1.5lh;
-  padding: 0 2em;
+  line-height: 1.25lh;
+  padding: 0 1em;
 }
 
 // Large
 .button--lg {
   font-size: 18pr;
-  line-height: 2.25lh;
-  padding: 0 3em;
+  line-height: 2lh;
+  padding: 0 2em;
 }
 
 // Extra large
 .button--xlg {
   font-size: 18pr;
   line-height: 2.5lh;
-  padding: 0 3.5em;
+  padding: 0 2.5em;
 }
 
 // Full-width
@@ -100,6 +101,7 @@ button,
 // ---------
 
 // Pill
+// TODO: use relative unit
 .button--pill { border-radius: 25px; }
 
 // Flat
