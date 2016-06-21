@@ -302,7 +302,7 @@ button, input[type="submit"],
   width: 100%; }
 
 .button--pill {
-  border-radius: 25px; }
+  border-radius: 1.5em; }
 
 .button--flat {
   background-color: transparent;
