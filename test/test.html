@@ -1,5 +1,5 @@
 <!doctype html>
-
+<html>
 <!--
   NOTE: This is a test file to view all components and styles in Concise so we
   can view changes as they are made to the framework.
@@ -130,14 +130,6 @@
   </ul>
 
   <dl>
-    <dt>Definition</dt>
-    <dd>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </dd>
-
-    <dt>List</dt>
-    <dd>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </dd>
-  </dl>
-
-  <dl class="dl--horizontal">
     <dt>Definition</dt>
     <dd>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </dd>
 
@@ -307,22 +299,7 @@
   <button class="button--bordered border--error">Bordered Error Button</button>
   <button class="button--bordered border--warning">Bordered Warning Button</button>
 
-  <button class="button--bordered button--prefix">
-    <span class="prefix"><span class="icon-facebook"></span></span>
-    Prefix Button
-  </button>
-
   <button class="button--bordered button--affix">
-    Affix Button
-    <span class="affix"><span class="icon-facebook"></span></span>
-  </button>
-
-  <button class="button--prefix">
-    <span class="prefix"><span class="icon-facebook"></span></span>
-    Prefix Button
-  </button>
-
-  <button class="button--affix">
     Affix Button
     <span class="affix"><span class="icon-facebook"></span></span>
   </button>
@@ -702,331 +679,29 @@
     </div>
   </form>
 
-  <div class="spinner"></div>
-
-  <div id="modal" class="modal">
-    <a href="#close" class="modal-close modal-close--background"></a>
-
-    <div class="modal-container">
-      <div class="modal-header">
-        Modal Header
-
-        <a href="#close" class="modal-close">&times;</a>
-      </div>
-
-      <div class="modal-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget bibendum eros. Integer rhoncus pretium orci ut sagittis. Proin sollicitudin sapien eu dui imperdiet, et viverra enim dignissim.</p>
-      </div>
-
-      <div class="modal-footer">
-        <p>Copyright &copy; 2015</p>
-      </div>
-    </div>
-  </div>
-
-  <div id="modal2" class="modal modal--small">
-    <div class="modal-container">
-      <div class="modal-header">
-        Modal Header
-
-        <a href="#close" class="modal-close">&times;</a>
-      </div>
-
-      <div class="modal-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget bibendum eros. Integer rhoncus pretium orci ut sagittis. Proin sollicitudin sapien eu dui imperdiet, et viverra enim dignissim.</p>
-      </div>
-
-      <div class="modal-footer">
-        <p>Copyright &copy; 2015</p>
-      </div>
-    </div>
-  </div>
-
-  <div id="modal3" class="modal modal--large">
-    <div class="modal-container">
-      <div class="modal-header">
-        Modal Header
-
-        <a href="#close" class="modal-close">&times;</a>
-      </div>
-
-      <div class="modal-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget bibendum eros. Integer rhoncus pretium orci ut sagittis. Proin sollicitudin sapien eu dui imperdiet, et viverra enim dignissim.</p>
-      </div>
-
-      <div class="modal-footer">
-        <p>Copyright &copy; 2015</p>
-      </div>
-    </div>
-  </div>
-
-  <div id="modal4" class="modal modal--full">
-    <div class="modal-container">
-      <div class="modal-header">
-        Modal Header
-
-        <a href="#close" class="modal-close">&times;</a>
-      </div>
-
-      <div class="modal-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget bibendum eros. Integer rhoncus pretium orci ut sagittis. Proin sollicitudin sapien eu dui imperdiet, et viverra enim dignissim.</p>
-      </div>
-
-      <div class="modal-footer">
-        <p>Copyright &copy; 2015</p>
-      </div>
-    </div>
-  </div>
-
-  <div id="modal5" class="modal modal--flat">
-    <div class="modal-container">
-      <div class="modal-header">
-        Modal Header
-
-        <a href="#close" class="modal-close">&times;</a>
-      </div>
-
-      <div class="modal-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget bibendum eros. Integer rhoncus pretium orci ut sagittis. Proin sollicitudin sapien eu dui imperdiet, et viverra enim dignissim.</p>
-      </div>
-
-      <div class="modal-footer">
-        <p>Copyright &copy; 2015</p>
-      </div>
-    </div>
-  </div>
-
-  <p><a href="#modal">Open Modal</a></p>
-
-  <p><a href="#modal2">Open Small Modal</a></p>
-
-  <p><a href="#modal3">Open Large Modal</a></p>
-
-  <p><a href="#modal4">Open Full Modal</a></p>
-
-  <p><a href="#modal5">Open Flat Modal</a></p>
-
-  <p><span class="label">Label</span></p>
-  <p><span class="badge">25</span></p>
-
-  <p><a href="#" class="tooltip--top" data-hint="Left tooltip">Top tooltip</a></p>
-
-  <p><a href="#" class="tooltip--right" data-hint="Right tooltip">Right tooltip</a></p>
-
-  <p><a href="#" class="tooltip--bottom" data-hint="Bottom tooltip">Bottom tooltip</a></p>
-
-  <p><a href="#" class="tooltip--left" data-hint="Left tooltip">Left tooltip</a></p>
-
-  <p><a href="#" class="tooltip--right tooltip--always" data-hint="Persistent tooltip">Persistent Tooltip</a></p>
-
-  <div class="alert">
-    <a href="#close" class="alert-close">&times;</a>
-
-    <p><strong>Alert!</strong> This is a <a href="">standard message</a> for your application.</p>
-  </div>
-
-  <div class="alert alert--success">
-    <a href="#close" class="alert-close">&times;</a>
-
-    <p><strong>Success!</strong> This is a <a href="">success message</a> for your application.</p>
-  </div>
-
-  <div class="alert alert--warning">
-    <a href="#close" class="alert-close">&times;</a>
-
-    <p><strong>Warning!</strong> This is a <a href="">warning</a> for your application.</p>
-  </div>
-
-  <div class="alert alert--error">
-    <a href="#close" class="alert-close">&times;</a>
-
-    <p><strong>Error!</strong> This is an <a href="">error</a> for your application.</p>
-  </div>
-
-  <div row>
-    <div column="6">
-      <div class="card">
-        <div class="card-content">
-          <h3 class="card-title">Card Title</h3>
-
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
-        </div>
-
-        <div class="card-footer">
-          <a href="">Leave a comment?</a>
-        </div>
-      </div>
-    </div>
-
-    <div column="6">
-      <div class="card">
-        <div class="card-image">
-          <img src="http://concisecss.com/images/logo2.svg" alt="Card with image">
-          <h3 class="card-title">Card Title</h3>
-        </div>
-
-        <div class="card-content">
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
-        </div>
-
-        <div class="card-footer">
-          <a href="">Read More &raquo;</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="collection">
-    <div class="collection-header">
-      <h3>Collection Header</h3>
-    </div>
-
-    <div class="collection-item">
-      Collection Item
-    </div>
-
-    <div class="collection-item is-active">
-      Active Collection Item
-    </div>
-
-    <div class="collection-item">
-      Collection Item
-    </div>
-  </div>
-
-  <div class="collection">
-    <a href="#" class="collection-item">Collection Item</a>
-
-    <a href="#" class="collection-item is-active">Active Collection Item</a>
-
-    <a href="#" class="collection-item">Collection Item</a>
-  </div>
-
-  <ul class="group">
-    <li class="group-item"><a href="#">Left</a></li>
-    <li class="group-item"><a href="#">Center</a></li>
-    <li class="group-item"><a href="#">Right</a></li>
-  </ul>
-
-  <ul class="group">
-    <li class="group-item"><a href="#"><span class="icon-chevron-small-left"></span> First</a></li>
-    <li class="group-item"><a href="#">1</a></li>
-    <li class="group-item"><a href="#">2</a></li>
-    <li class="group-item is-active"><a href="#">3</a></li>
-    <li class="group-item"><a href="#">4</a></li>
-    <li class="group-item"><a href="#">Last <span class="icon-chevron-small-right"></span></a></li>
-  </ul>
-
-  <div class="progress progress--small">
-    <span style="width: 25%" class="bg-blue">50%</span>
-  </div>
-
-  <div class="progress">
-    <span style="width: 50%">25%</span>
-  </div>
-
-  <div class="progress progress--large">
-    <span style="width: 75%">75%</span>
-  </div>
-
-  <div class="progress progress--striped">
-    <span class="bg-red" style="width: 90%"></span>
-  </div>
-
-  <div class="progress progress--striped progress--animate">
-    <span class="bg-red" style="width: 90%"></span>
-  </div>
-
-  <div class="progress progress--stacked">
-    <span style="width: 25%"></span>
-    <span style="width: 25%" class="bg--success"></span>
-    <span style="width: 25%" class="bg--error"></span>
-    <span style="width: 20%" class="bg--warning"></span>
-  </div>
-
-  <ul class="breadcrumbs">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Product</a></li>
-    <li><a href="#">Features</a></li>
-    <li class="is-active"><a href="#">Feature</a></li>
-  </ul>
-
-  <ul class="breadcrumbs breadcrumbs--flat">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Product</a></li>
-    <li><a href="#">Features</a></li>
-    <li class="is-active"><a href="#">Feature</a></li>
-  </ul>
-
-  <div tabindex="0" class="dropdown button">
-    Dropdown Button &raquo;
-    <ul class="dropdown-content">
-      <li>Home</li>
-      <li>Account</li>
-      <li>Settings</li>
-    </ul>
-  </div>
-
-  <br>
-
-  <div tabindex="0" class="dropdown">
-    Dropdown
-    <ul class="dropdown-content">
-      <li>Home</li>
-      <li>Account</li>
-      <li>Settings</li>
-    </ul>
-  </div>
-
-  <br>
-
-  <div tabindex="0" class="dropdown dropdown--small">
-    Dropdown Small
-    <ul class="dropdown-content">
-      <li>Home</li>
-      <li>Account</li>
-      <li>Settings</li>
-    </ul>
-  </div>
-
-  <br>
-
-  <div tabindex="0" class="dropdown dropdown--large">
-    Dropdown Large
-    <ul class="dropdown-content">
-      <li>Home</li>
-      <li>Account</li>
-      <li>Settings</li>
-    </ul>
-  </div>
-
-  <br>
-
-  <div tabindex="0" class="dropdown dropdown--top">
-    Dropdown Top
-    <ul class="dropdown-content">
-      <li>Home</li>
-      <li>Account</li>
-      <li>Settings</li>
-    </ul>
-  </div>
-
-  <br>
-
-  <div tabindex="0" class="dropdown">
-    Dropdown Content
-    <div class="dropdown-content">
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</p>
-    </div>
-  </div>
-
-  <br>
-
-  <div tabindex="0" class="dropdown dropdown--hover">
-    Dropdown Hover
-    <div class="dropdown-content">
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</p>
-    </div>
-  </div>
+  <table>
+    <tbody>
+    <tr>
+      <td><span class="hide--xsm">.hide--xsm</span></td>
+      <td><span class="show--xsm">.show--xsm</span></td>
+    </tr>
+    <tr>
+      <td><span class="hide--sm">.hide--sm</span></td>
+      <td><span class="show--sm">.show--sm</span></td>
+    </tr>
+    <tr>
+      <td><span class="hide--md">.hide--md</span></td>
+      <td><span class="show--md">.show--md</span></td>
+    </tr>
+    <tr>
+      <td><span class="hide--lg">.hide--lg</span></td>
+      <td><span class="show--lg">.show--lg</span></td>
+    </tr>
+    <tr>
+      <td><span class="hide--xlg">.hide--xlg</span></td>
+      <td><span class="show--xlg">.show--xlg</span></td>
+    </tr>
+    </tbody>
+  </table>
 </body>
 </html>
