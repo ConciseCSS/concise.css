@@ -12,9 +12,10 @@ It's easy to get started with Concise:
 - Install with [Bower](http://bower.io/): `bower install concise`
 - Install with [NPM](https://www.npmjs.com/): `npm install concise.css`
 
-**Notes:** 
-- Currently the `Master` branch is being used for the development of the next version of Concise, the latest stable version is available in the branch `3.x.x`
-- If you just want the CSS files, please refer to the downloads section for each release: [https://github.com/ConciseCSS/concise.css/releases](https://github.com/ConciseCSS/concise.css/releases)
+**Note:** 
+If you just want the CSS files, please refer to the downloads section for each release: [https://github.com/ConciseCSS/concise.css/releases](https://github.com/ConciseCSS/concise.css/releases)
+
+**IMPORTANT:** Currently the `Master` branch is being used for the development of the next version of Concise, the latest stable version is available in the branch `3.x.x`
 
 #### Using our CDN:
 
