@@ -36,6 +36,7 @@ button,
     background-color: darken(getColor(background, light), 10%);
     color: getColor(text, ui);
     cursor: not-allowed;
+    opacity: 0.6;
   }
 }
 

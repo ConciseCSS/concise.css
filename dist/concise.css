@@ -246,7 +246,8 @@ button, input[type="submit"],
   .button[disabled] {
     background-color: gainsboro;
     color: white;
-    cursor: not-allowed; }
+    cursor: not-allowed;
+    opacity: 0.6; }
 
 .button--muted {
   background-color: #aaa; }
