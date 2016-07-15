@@ -1,186 +1,114 @@
-//
-// atGrid.css - CSS Grid System with HTML Attributes
-// =============================================================================
-// https://github.com/jameskolce/atGrid
-//
-// Copyright 2014 James Kolce <contact@jameskolce.com>
-// Licensed under MIT License
-// (https://github.com/jameskolce/atGrid/blob/master/LICENSE)
-//
+/*
+/* atGrid.css v4.0.0 - Attribute-based CSS Grid System
+/* https://github.com/kolcethompsonco/atgrid.css
+/* MIT License - James Kolce <james@kolcethompson.com>
+*/
 
 //
-// Variables
-// ---------
-
-// Attribute prefix
-$prefix: "" !default;
+// Configuration
+// ----------------------------------------
 
 // Max width for container
 $container-width: 1200px !default;
 
-// Gutter size in pixels (without the unit we can do math easily)
-$gutter: 30 !default;
+// Gutter size
+$gutter: 2em !default;
 
 // Number of columns in a row
 $num-columns: 12 !default;
 
-// If you only want to use the mixins for "semantic grids" set this to true
-$only-semantic: false !default;
-
-
+// Prefix for attributes
+$prefix: '' !default;
 
 
 //
-// Mixins
-// =============================================================================
-// You can use this to create "semantic grids"
-//
+// Styles
+// ----------------------------------------
 
-//
-// Container
-// ---------
-// Use this mixin to create a row. Rows should be contained in a
-// "container" element
-//
-
-@mixin container() {
-  box-sizing: border-box;
-  margin: 0 auto;
+[#{$prefix}container] {
+  margin-left: auto;
+  margin-right: auto;
   max-width: $container-width;
-  padding-left: ($gutter / 2) + px;
-  padding-right: ($gutter / 2) + px;
-  width: 100%;
+  padding-left: $gutter / 2;
+  padding-right: $gutter / 2;
+}
+
+[#{$prefix}grid] {
+  display: flex;
+  margin-left: $gutter / -2;
+  margin-right: $gutter / -2;
+
+  // Collapse columns on breakpoint
+  @media (--small) { flex-direction: column; }
+}
+
+[#{$prefix}column] { flex: 1; }
+
+
+//
+// Gutters by default
+//
+
+[#{$prefix}column] {
+  padding-left: $gutter / 2;
+  padding-right: $gutter / 2;
 }
 
 
 //
-// Rows
-// ----
-// Use this mixin to create a row. Columns should be contained in rows
-//
-// @clear-gutter: Set true to contain columns with gutter
+// No Gutters
 //
 
-@mixin row($clear-gutter: true) {
-  @if $clear-gutter {
-    margin-left: ($gutter / -2) + px;
-    margin-right: ($gutter / -2) + px;
-  }
-
-  margin-bottom: 0;
-
-  &:before,
-  &:after {
-    content: "";
-    display: table;
-  }
-
-  &:after { clear: both; }
-}
-
-
-//
-// Columns
-// -------
-// Use this mixin to create a column
-//
-// @size: The size of the column, should be a number between 0-1. Example: 1/2
-// @add-gutter: Set this to true if you want to create padding for the column
-//
-
-@mixin column($size, $add-gutter: true) {
-  box-sizing: border-box;
-  float: left;
-  margin-bottom: 0;
-  width: 100%;
-
-  @if $size < 1 {
-    @media (--medium) {
-      width: ($size * 100%);
-    }
-  }
-
-  @if $add-gutter {
-    padding-left: ($gutter / 2) + px;
-    padding-right: ($gutter / 2) + px;
-  }
-}
-
-
-//
-// Column offset
-// -------
-// Use this mixin to move a column
-//
-// @offset: The size of the offset, should be a number between 0-1. Example: 1/2
-//
-
-@mixin columnOffset($offset) {
-  margin-left: $offset * 100%;
-}
-
-
-//
-// Semantic Styles
-// =============================================================================
-
-@if not $only-semantic {
-  //
-  // General Styles
-  // --------------
-  // Basic styles for the container, rows and columns
-  //
-  // Put the columns inside the rows, and the rows inside a container.
-  //
-
-  [#{$prefix}container] {
-    @include container();
-  }
-
-  [#{$prefix}row] {
-    @include row();
-  }
+[#{$prefix}grid~="ng"] {
+  margin-left: 0;
+  margin-right: 0;
 
   [#{$prefix}column] {
-    @include column(1);
+    padding-left: 0;
+    padding-right: 0;
   }
+}
 
 
-  //
-  // Column Styles
-  // -------------
-  // Creates the width of the columns and their offset
-  //
-  // To use this grid system you need to use the following syntax in your
-  // HTML files (This example uses default configuration):
-  //
-  // <main container>
-  //   <div row>
-  //     <section column="6">
-  //       <!-- Column with a width of 6 columns -->
-  //     </section>
-  //
-  //     <section column="4 +2">
-  //       <!-- Column with a width of 4 columns and an offset of 2 columns -->
-  //     </section>
-  //   </div>
-  // </main>
-  //
+//
+// Alignment of all columns in a row
+//
 
-  // Create columns on devices larger than 768px
-  @media (--medium) {
-    // Create columns
-    @for $i from 1 through $num-columns {
-      [#{$prefix}column~="#{$i}"] {
-        width: (($i / $num-columns) * 100%);
-      }
-    }
+[#{$prefix}grid~="top"] { align-items: flex-start; }
 
-    // Offset for columns
-    @for $i from 1 through ($num-columns - 1) {
-      [#{$prefix}column~="+#{$i}"] {
-        margin-left: (($i / $num-columns) * 100%);
-      }
-    }
+[#{$prefix}grid~="center"] { align-items: center; }
+
+[#{$prefix}grid~="bottom"] { align-items: flex-end; }
+
+
+//
+// Alignment of individual columns
+//
+
+[#{$prefix}column~="top"] { align-self: flex-start; }
+
+[#{$prefix}column~="center"] { align-self: flex-end; }
+
+[#{$prefix}column~="bottom"] { align-self: center; }
+
+
+//
+// Column widths
+//
+
+@for $i from 1 through $num-columns {
+  [#{$prefix}column~="#{$i}"] {
+    flex: 0 1 ($i/$num-columns) * 100%;
+  }
+}
+
+
+//
+// Column offsets
+//
+
+@for $i from 1 through $num-columns {
+  [#{$prefix}column~="+#{$i}"] {
+    margin-left: ($i/$num-columns) * 100%;
   }
 }
