@@ -37,9 +37,10 @@ $prefix: '' !default;
   display: flex;
   margin-left: $gutter / -2;
   margin-right: $gutter / -2;
+  flex-direction: column;
 
   // Collapse columns on breakpoint
-  @media (--small) { flex-direction: column; }
+  @media (--small) { flex-direction: row; }
 }
 
 [#{$prefix}column] { flex: 1; }

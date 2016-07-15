@@ -1002,13 +1002,17 @@ address {
   display: -ms-flexbox;
   display: flex;
   margin-left: -1em;
-  margin-right: -1em; }
+  margin-right: -1em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
   @media (min-width: 480px) {
     [grid] {
-      -webkit-box-orient: vertical;
+      -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; } }
+          -ms-flex-direction: row;
+              flex-direction: row; } }
 
 [column] {
   -webkit-box-flex: 1;
