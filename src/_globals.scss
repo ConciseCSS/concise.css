@@ -15,6 +15,10 @@ $font-base-size-bg: 18 !default;
 $automargin: true !default;
 $block-margin: 1lh !default;
 
+$automargin-elements: 'address, article, aside, audio, blockquote, canvas, dd,
+dl, fieldset, figcaption, figure, footer, form, header,
+hr, ol, p, pre, section, table, table, tfoot, ul, video' !default;
+
 // Transition duration
 $transition-duration: 150ms !default;
 

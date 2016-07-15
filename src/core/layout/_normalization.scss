@@ -239,9 +239,7 @@ video { vertical-align: middle; }
 // -----------------
 
 @if $automargin {
-  address, article, aside, audio, blockquote, canvas, dd,
-  div, dl, fieldset, figcaption, figure, footer, form, header,
-  hr, ol, p, pre, section, table, table, tfoot, ul, video {
+  #{$automargin-elements} {
     &:not(:last-child) { margin-bottom: $block-margin; }
   }
 }
