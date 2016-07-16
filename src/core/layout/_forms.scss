@@ -111,7 +111,7 @@ input[type="file"] {
 // Textarea
 textarea {
   height: auto;
-  padding: 0.25lh 1em;
+  padding: 0.25lh 0.5em;
   resize: vertical;
 }
 
@@ -119,7 +119,7 @@ textarea {
 select {
   background-color: transparent;
   border-radius: 5px;
-  padding: 0;
+  padding: 0 0 0 0.5em;
 
   &[disabled] { color: getColor(text, secondary); }
 
