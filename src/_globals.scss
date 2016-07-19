@@ -2,8 +2,6 @@
 // Globals
 // =============================================================================
 
-@import 'core/globals/functions';
-
 //
 // Base
 // ----
@@ -142,3 +140,21 @@ $colors: (
     "lighter": #999999
   )
 ) !default;
+
+
+//
+// getColor Function
+// --------
+// Easily retrieve colors for use.
+//
+// @access public
+//
+// @param {String} $color - Name of the color
+// @param {Color}  $value - The color value to grab (default is "base")
+//
+// @return {Color} Value of the color
+//
+
+@function getColor($color, $value: "base") {
+  @return map-get(map-get($colors, $color), $value);
+}
