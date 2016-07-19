@@ -29,7 +29,7 @@
 
 ### Abbreviations
 
-### Type positioning
+### Type positioning
 
 ### Figures
 
