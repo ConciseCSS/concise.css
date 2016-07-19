@@ -58,7 +58,7 @@
 ### Input modifiers
 
 
-## TABLES
+## TABLES
 
 ### Basic
 
@@ -97,7 +97,7 @@
 ## UTILITY CLASSES
 
 
-## BREAKPOINTS
+## BREAKPOINTS
 
 
 ## CONDITIONAL STYLING
