@@ -74,6 +74,23 @@ $mega-size: $kilo-size * $font-ratio-size !default;
 $giga-size: $mega-size * $font-ratio-size !default;
 
 //
+// Grid
+// ----
+
+// Max width for container
+$container-width: 1200px !default;
+
+// Gutter size
+$gutter: 2em !default;
+
+// Number of columns in a row
+$num-columns: 12 !default;
+
+// Prefix for attributes
+$prefix: '' !default;
+
+
+//
 // Color Palette
 // -------------
 

@@ -4,26 +4,6 @@
 // MIT License - James Kolce <james@kolcethompson.com>
 // =============================================================================
 
-//
-// Configuration
-// ----------------------------------------
-
-// Max width for container
-$container-width: 1200px !default;
-
-// Gutter size
-$gutter: 2em !default;
-
-// Number of columns in a row
-$num-columns: 12 !default;
-
-// Prefix for attributes
-$prefix: '' !default;
-
-//
-// Styles
-// ----------------------------------------
-
 [#{$prefix}container] {
   margin-left: auto;
   margin-right: auto;
