@@ -2,7 +2,6 @@
 // Headings
 // =============================================================================
 
-
 h1, h2, h3, h4, h5, h6 {
   color: getColor(text, heading);
   font-family: $font-family-headings;
@@ -12,47 +11,23 @@ h1, h2, h3, h4, h5, h6 {
     color: getColor(text, secondary);
     font-weight: lighter;
     vertical-align: 0;
+    font-size: 75%;
   }
 }
 
-h1, h2, h3 {
-  margin: 1lh 0 0.25lh;
+h1, h2, h3 { margin: 1lh 0 0.25lh; }
+h4, h5, h6 { margin: 0.25lh 0; }
 
-  small { font-size: 65%; }
-}
+h1 { font-size: $h1-size * .75 + pr; }
+h2 { font-size: $h2-size * .75 + pr; }
+h3 { font-size: $h3-size * .75 + pr; }
 
-h4, h5, h6 {
-  margin: 0.25lh 0;
-
-  small { font-size: 75%; }
-}
-
-h1 {
-  font-size: $h1-size * .75 + pr;
-
-  @media (--medium) {
-    font-size: $h1-size + pr;
-  }
-}
-
-h2 {
-  font-size: $h2-size * .75 + pr;
-
-  @media (--medium) {
-    font-size: $h2-size + pr;
-  }
-}
-
-h3 {
-  font-size: $h3-size * .75 + pr;
-
-  @media (--medium) {
-    font-size: $h3-size + pr;
-  }
+@media (--medium) {
+  h1 { font-size: $h1-size + pr; }
+  h2 { font-size: $h2-size + pr; }
+  h3 { font-size: $h3-size + pr; }
 }
 
 h4 { font-size: $h4-size + pr; }
-
 h5 { font-size: $h5-size + pr; }
-
-h6{ font-size: $h6-size + pr; }
+h6 { font-size: $h6-size + pr; }
