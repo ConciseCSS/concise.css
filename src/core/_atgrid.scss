@@ -88,9 +88,9 @@ $prefix: '' !default;
 
 [#{$prefix}column~="top"] { align-self: flex-start; }
 
-[#{$prefix}column~="center"] { align-self: flex-end; }
+[#{$prefix}column~="center"] { align-self: center; }
 
-[#{$prefix}column~="bottom"] { align-self: center; }
+[#{$prefix}column~="bottom"] { align-self: flex-end; }
 
 
 //
