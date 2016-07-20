@@ -19,14 +19,3 @@ blockquote {
   cite:before,
   footer:before { content: "\2014 \00A0"; }
 }
-
-
-//
-// Modifiers
-// ---------
-
-.blockquote--reverse {
-  border-left: none;
-  border-right: 1px solid getColor(base, lines);
-  text-align: right;
-}

@@ -2,8 +2,7 @@
 // Buttons
 // =============================================================================
 
-button,
-.button {
+button {
   background-color: getColor(base, primary);
   border: none;
   color: getColor(text, ui);
@@ -38,91 +37,4 @@ button,
     cursor: not-allowed;
     opacity: 0.6;
   }
-}
-
-
-//
-// States
-// ------
-
-@each $color-name, $color in $colors {
-  @each $color-type, $color-value in $color {
-    @if $color-name == "state" {
-      .button--#{$color-type} {
-        background-color: $color-value;
-
-        &:hover,
-        &:focus { background-color: lighten($color-value, 15%); }
-
-        &:active { background-color: lighten($color-value, 10%); }
-      }
-    }
-  }
-}
-
-
-//
-// Sizes
-// -----
-
-// Extra small
-.button--xsm {
-  font-size: 12pr;
-  line-height: 1lh;
-  padding: 0 1em;
-}
-
-// Small
-.button--sm {
-  font-size: 14pr;
-  line-height: 1.25lh;
-  padding: 0 1em;
-}
-
-// Large
-.button--lg {
-  font-size: 18pr;
-  line-height: 2lh;
-  padding: 0 2em;
-}
-
-// Extra large
-.button--xlg {
-  font-size: 18pr;
-  line-height: 2.5lh;
-  padding: 0 2.5em;
-}
-
-// Full-width
-.button--full { width: 100%; }
-
-
-//
-// Modifiers
-// ---------
-
-// Pill
-.button--pill { border-radius: 1.5em; }
-
-// Flat
-.button--flat {
-  background-color: transparent;
-  color: getColor(text, primary);
-
-  &:hover {
-    background-color: rgba(0, 0, 0, .1);
-    color: getColor(text, primary);
-  }
-
-  &[disabled] {
-    background-color: transparent;
-    color: getColor(text, secondary);
-  }
-}
-
-// Collapsible
-.button--collapse {
-  width: 100%;
-
-  @media (--small) { width: auto; }
 }

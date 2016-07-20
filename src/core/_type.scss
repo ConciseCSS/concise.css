@@ -33,13 +33,6 @@ s { text-decoration: line-through; }
 
 
 //
-// Paragraphs
-// --------
-
-p:not(:last-child) { margin-bottom: 1lh; }
-
-
-//
 // Links
 // -----
 
@@ -54,8 +47,7 @@ a {
   &:focus { color: darken(getColor(base, primary), 15%); }
 }
 
-h1, h2, h3,
-.h1, .h2, .h3 {
+h1, h2, h3 {
   a {
     color: getColor(text, primary);
 
@@ -117,13 +109,6 @@ pre code {
   padding: 0;
   vertical-align: inherit;
   white-space: pre;
-}
-
-.pre--flat {
-  background-color: transparent;
-  border: 0;
-  border-radius: 0;
-  padding: 0;
 }
 
 kbd {

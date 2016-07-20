@@ -2,17 +2,6 @@
 // Print
 // =============================================================================
 
-//
-// Variables
-// ---------
-
-$font-family-print: "Georgia", "Times New Roman", "Times", serif !default;
-
-
-//
-// Styles
-// ---------
-
 @media print {
   @page { margin: .5cm; }
 
@@ -37,12 +26,6 @@ $font-family-print: "Georgia", "Times New Roman", "Times", serif !default;
     page-break-inside: avoid;
   }
 
-  .show--print {
-    display: block;
-    visibility: visible;
-  }
-
-  .hide--print,
   video,
   audio,
   object,
@@ -55,14 +38,12 @@ $font-family-print: "Georgia", "Times New Roman", "Times", serif !default;
   }
 
   p,
-  h2, h3,
-  .h2, .h3 {
+  h2, h3 {
     orphans: 3;
     widows: 3;
   }
 
-  h2, h3,
-  .h2, .h3 { page-break-after: avoid; }
+  h2, h3 { page-break-after: avoid; }
 
   a,
   a:visited {

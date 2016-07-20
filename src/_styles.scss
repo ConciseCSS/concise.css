@@ -1,14 +1,10 @@
-@import 'core/layout/normalization';
-@import 'core/layout/blockquotes';
-@import 'core/layout/buttons';
-@import 'core/layout/forms';
-@import 'core/layout/headings';
-@import 'core/layout/lists';
-@import 'core/layout/print';
-@import 'core/layout/tables';
-@import 'core/layout/type';
-@import 'core/layout/atgrid';
-@import 'core/layout/colors';
-@import 'core/layout/conditional-styling';
-@import 'core/layout/helpers';
-
+@import 'core/normalization';
+@import 'core/type';
+@import 'core/headings';
+@import 'core/lists';
+@import 'core/buttons';
+@import 'core/forms';
+@import 'core/blockquotes';
+@import 'core/tables';
+@import 'core/atgrid';
+@import 'core/print';

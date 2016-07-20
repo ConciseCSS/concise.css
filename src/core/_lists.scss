@@ -32,29 +32,6 @@ nav {
   li { list-style: none; }
 }
 
-
-//
-// Modifiers
-// ---------
-
-// Unstyled
-.list--unstyled {
-  list-style: none;
-  padding-left: 0;
-
-  li { padding-left: 0; }
-}
-
-// Inline
-.list--inline li {
-  display: inline;
-  list-style: none;
-  padding-left: 1.5em;
-
-  &:first-child { padding-left: 0; }
-}
-
-
 //
 // Definition Lists
 // ----------------

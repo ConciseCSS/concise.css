@@ -1,8 +1,8 @@
-/*
-/* atGrid.css v4.0.0 - Attribute-based CSS Grid System
-/* https://github.com/kolcethompsonco/atgrid.css
-/* MIT License - James Kolce <james@kolcethompson.com>
-*/
+//
+// atGrid.css v4.0.0 - Attribute-based CSS Grid System
+// https://github.com/kolcethompsonco/atgrid.css
+// MIT License - James Kolce <james@kolcethompson.com>
+// =============================================================================
 
 //
 // Configuration
@@ -19,7 +19,6 @@ $num-columns: 12 !default;
 
 // Prefix for attributes
 $prefix: '' !default;
-
 
 //
 // Styles
@@ -45,7 +44,6 @@ $prefix: '' !default;
 
 [#{$prefix}column] { flex: 1; }
 
-
 //
 // Gutters by default
 //
@@ -54,7 +52,6 @@ $prefix: '' !default;
   padding-left: $gutter / 2;
   padding-right: $gutter / 2;
 }
-
 
 //
 // No Gutters
@@ -70,7 +67,6 @@ $prefix: '' !default;
   }
 }
 
-
 //
 // Alignment of all columns in a row
 //
@@ -81,7 +77,6 @@ $prefix: '' !default;
 
 [#{$prefix}grid~="bottom"] { align-items: flex-end; }
 
-
 //
 // Alignment of individual columns
 //
@@ -91,7 +86,6 @@ $prefix: '' !default;
 [#{$prefix}column~="center"] { align-self: center; }
 
 [#{$prefix}column~="bottom"] { align-self: flex-end; }
-
 
 //
 // Column widths

@@ -34,7 +34,6 @@ textarea {
 }
 
 input:not([type="submit"]) {
-
   line-height: normal;
   min-height: 1lh;
 
@@ -190,99 +189,4 @@ input[type="range"] {
     margin-top: -5px;
     width: 16px;
   }
-}
-
-
-//
-// Descendents
-// -----------
-
-// Help text
-.input--help {
-  color: getColor(text, secondary);
-  display: block;
-  font-size: 12pr;
-  font-weight: bold;
-  margin-top: 0.25lh;
-}
-
-
-//
-// Form Modifiers
-// --------------
-
-// Inline Form
-.form--inline {
-  input,
-  select,
-  textarea { margin-bottom: 1lh; }
-
-  @media (--small) {
-    input,
-    select,
-    textarea {
-      display: inline-block;
-      margin-bottom: 0;
-      vertical-align: middle;
-      width: auto;
-    }
-
-    label {
-      display: inline;
-      margin-right: .5em;
-      vertical-align: middle;
-    }
-
-    input + label { margin-left: 1em; }
-  }
-}
-
-
-//
-// Input Modifiers
-// ---------------
-
-// Small
-.input--small {
-  font-size: 12pr !important;
-  height: 1lh !important;
-}
-
-// Large
-.input--large {
-  font-size: 16pr !important;
-  height: 2lh !important;
-}
-
-// Flat
-.input--flat {
-  background-color: transparent;
-  border-color: transparent;
-  box-shadow: none;
-
-  &:focus { border-color: getColor(blue, lighter); }
-}
-
-// Success
-.input--success {
-  background-color: rgba(getColor(state, success), .15);
-  border-color: getColor(state, success);
-
-  &:focus { border-color: getColor(state, success); }
-}
-
-// Warning
-.input--warning {
-  background-color: rgba(getColor(state, warning), .15);
-  border-color: getColor(state, warning);
-
-  &:focus { border-color: getColor(state, warning); }
-}
-
-// Warning
-.input--error {
-  background-color: rgba(getColor(state, error), .15);
-  border-color: getColor(state, error);
-
-  &:focus { border-color: getColor(state, error); }
 }
