@@ -1,0 +1,86 @@
+//
+// Helpers
+// =============================================================================
+
+//
+// Text Alignment
+// --------------
+
+.text--left { text-align: left; }
+
+.text--center { text-align: center; }
+
+.text--right { text-align: right; }
+
+.text--justify { text-align: justify; }
+
+
+//
+// Floats
+// ------
+
+.float--none { float: none; }
+
+.float--right { float: right; }
+
+.float--left { float: left; }
+
+.clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after { clear: both; }
+}
+
+
+//
+// Centering
+// ---------
+
+// Center horizontally and vertically
+.center--all {
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+//
+// Fluid Media
+// -----------
+
+.media--fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+
+//
+// Screen Reader Content
+// ---------------------
+
+.screenreader {
+  border: 0 none;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+
+  &:active,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}

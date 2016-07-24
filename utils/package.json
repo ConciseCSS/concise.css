@@ -1,0 +1,35 @@
+{
+  "name": "concise-utils",
+  "version": "0.1.0",
+  "description": "Utility classes for Concise Framework",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConciseCSS/concise-utils.git"
+  },
+  "keywords": [
+    "css",
+    "concise",
+    "sass",
+    "framework",
+    "add-on",
+    "utils",
+    "postcss"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ConciseCSS/concise-utils/issues"
+  },
+  "homepage": "https://github.com/ConciseCSS/concise-utils#readme",
+  "scripts": {
+    "build": "concise compile dist.scss dist/concise-utils.css && cssnano dist/concise-utils.css dist/concise-utils.min.css",
+    "build:watch": "watch \"npm run build\" src",
+    "stats": "stylestats dist/concise-utils.css"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^1.2.0",
+    "concise-cli": "^0.2.0",
+    "concise.css": "github:concisecss/concise.css#master",
+    "cssnano-cli": "^1.0.4",
+    "stylestats": "^6.3.0"
+  }
+}

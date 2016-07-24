@@ -1,0 +1,9 @@
+//
+// Blockquote
+// =============================================================================
+
+.blockquote--reverse {
+  border-left: none;
+  border-right: 1px solid getColor(base, lines);
+  text-align: right;
+}

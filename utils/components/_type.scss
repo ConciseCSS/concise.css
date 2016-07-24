@@ -1,0 +1,22 @@
+//
+// Type
+// =============================================================================
+
+.h1, .h2, .h3 {
+  a {
+    color: getColor(text, primary);
+
+    &:hover,
+    &:focus {
+      color: getColor(base, primary);
+      text-decoration: none;
+    }
+  }
+}
+
+.pre--flat {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+}
