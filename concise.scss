@@ -5,11 +5,19 @@
  * Copyright 2016 James Kolce, Keenan Payne and ConciseCSS Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
- *
  */
 
 // Globals
-@import 'src/globals';
+@import 'globals';
 
 // Styles
-@import 'src/styles';
+@import 'src/normalization';
+@import 'src/type';
+@import 'src/headings';
+@import 'src/lists';
+@import 'src/buttons';
+@import 'src/forms';
+@import 'src/blockquotes';
+@import 'src/tables';
+@import 'src/atgrid';
+@import 'src/print';
