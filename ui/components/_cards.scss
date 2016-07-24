@@ -5,22 +5,21 @@
 .card {
   background-color: white;
   border: 1px solid getColor(base, lines);
-  margin-bottom: unitSize(3);
   overflow: hidden;
   position: relative;
 }
 
-.card-content { padding: unitSize(3) 1.5em; }
+.card-content { padding: 1lh 1.5em; }
 
 .card-title {
   display: block;
-  margin-top: unitSize(1, 2);
+  margin-top: 0.25lh;
 }
 
 .card-footer {
   border-top: 1px solid getColor(base, lines);
-  font-size: pxToEm(14);
-  padding: unitSize(2) 1.5em;
+  font-size: 14pr;
+  padding: 0.5lh 1.5em;
 }
 
 

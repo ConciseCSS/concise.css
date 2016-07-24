@@ -3,10 +3,8 @@
 // =============================================================================
 
 .group {
-  @include clearfix();
-
   display: inline-block;
-  margin-bottom: unitSize(3);
+  margin-bottom: 1lh;
   padding: 0;
 
   span { margin-top: 0; }
@@ -15,9 +13,8 @@
 .group-item {
   border: 1px solid getColor(base, lines);
   display: inline-block;
-  float: left;
-  font-size: pxToEm(14);
-  line-height: unitSize(4);
+  font-size: 14pr;
+  line-height: 1lh;
   list-style: none;
   padding: 0 1em;
   transition: background-color $transition-duration;

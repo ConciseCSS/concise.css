@@ -6,7 +6,7 @@
   border: 1px solid getColor(base, lines);
   border-radius: 3px;
   list-style-type: none;
-  margin: unitSize(3) 0;
+  margin: 1lh 0;
   padding: 0;
 }
 
@@ -15,7 +15,7 @@
   border-bottom: 1px solid getColor(base, lines);
   display: block;
   margin: 0;
-  padding: unitSize(1) 1em;
+  padding: 0.25lh 1em;
 
   &:last-of-type { border-bottom: none; }
 

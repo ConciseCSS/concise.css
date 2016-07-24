@@ -6,9 +6,9 @@
   background-color: getColor(background, light);
   border: 1px solid getColor(base, lines);
   border-radius: 3px;
-  font-size: pxToEm(12);
-  margin-bottom: unitSize(3);
-  padding: unitSize(1) .5em;
+  font-size: 12pr;
+  margin-bottom: 1lh;
+  padding: 0.25lh 0.5em;
 
   li {
     display: inline;

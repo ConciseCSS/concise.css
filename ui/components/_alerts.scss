@@ -7,9 +7,9 @@
   border: 1px solid getColor(base, lines);
   border-radius: 3px;
   color: inherit;
-  font-size: pxToEm(14);
-  margin: unitSize(3, -4) 0;
-  padding: unitSize(1) 1em;
+  font-size: 14pr;
+  margin: 0.75lh;
+  padding: 0.25lh 1em;
   position: relative;
 
   a {

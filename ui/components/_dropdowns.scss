@@ -6,14 +6,14 @@
   cursor: auto;
   display: inline-block;
   outline: none;
-	position: relative;
+  position: relative;
 
   &:focus {
     pointer-events: none;
 
     .dropdown-content {
-    	opacity: 1;
-    	visibility: visible;
+      opacity: 1;
+      visibility: visible;
     }
   }
 
@@ -31,17 +31,17 @@
 
 // Dropdown content
 .dropdown-content {
-	background-color: white;
+  background-color: white;
   border: 1px solid getColor(base, lines);
   color: getColor(text, primary);
   left: 0;
-  margin-top: unitSize(1);
+  margin-top: 0.25lh;
   opacity: 0;
-  padding: unitSize(1) 1em;
+  padding: 0.25lh 1em;
   pointer-events: auto;
-	position: absolute;
+  position: absolute;
   text-align: left;
-	transition: all $transition-duration;
+  transition: all $transition-duration;
   visibility: hidden;
   width: 200px;
   z-index: 1;
@@ -59,24 +59,22 @@
   }
 
   &:before {
-  	border-color: rgba(255, 255, 255, 0);
-  	border-bottom-color: getColor(base, lines);
-  	border-width: 7px;
-  	margin-left: -7px;
+    border: 7px rgba(255, 255, 255, 0);
+    border-bottom-color: getColor(base, lines);
+    margin-left: -7px;
   }
 
   &:after {
-  	border-color: rgba(255, 255, 255, 0);
-  	border-bottom-color: white;
-  	border-width: 6px;
-  	margin-left: -6px;
+    border: 6px rgba(255, 255, 255, 0);
+    border-bottom-color: white;
+    margin-left: -6px;
   }
 
   li {
-    font-size: pxToEm(14);
+    font-size: 14pr;
   	list-style-type: none;
     margin: 0;
-    padding: unitSize(1) 1em;
+    padding: 0.25lh 1em;
     transition: background-color $transition-duration;
   	white-space: nowrap;
 
@@ -100,8 +98,8 @@ ol {
     pointer-events: none;
 
     .dropdown-content {
-    	opacity: 1;
-    	visibility: visible;
+      opacity: 1;
+      visibility: visible;
     }
   }
 }
@@ -126,19 +124,19 @@ ol {
   .dropdown-content {
     bottom: 100%;
     margin-top: 0;
-    margin-bottom: unitSize(1);
+    margin-bottom: 0.25lh;
 
     &:before,
     &:after { top: 100%; }
 
     &:after {
-    	border-color: rgba(255, 255, 255, 0);
-    	border-top-color: white;
+      border-color: rgba(255, 255, 255, 0);
+      border-top-color: white;
     }
 
     &:before {
-    	border-color: rgba(255, 255, 255, 0);
-    	border-top-color: getColor(base, lines);
+      border-color: rgba(255, 255, 255, 0);
+      border-top-color: getColor(base, lines);
     }
   }
 }
