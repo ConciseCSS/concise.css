@@ -22,7 +22,7 @@
   "homepage": "https://github.com/ConciseCSS/concise-utils#readme",
   "scripts": {
     "build": "concise compile dist.scss dist/concise-utils.css && cssnano dist/concise-utils.css dist/concise-utils.min.css",
-    "build:watch": "watch \"npm run build\" src",
+    "build:watch": "chokidar 'components/**/*.scss' -c 'npm run build'",
     "stats": "stylestats dist/concise-utils.css"
   },
   "devDependencies": {
