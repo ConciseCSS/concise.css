@@ -59,19 +59,33 @@ $augmented-fourth:1.414;
 $perfect-fifth:   1.500;
 $golden-ratio:    1.618;
 
-// Ratio
-$font-ratio-size: $perfect-fourth !default;
+// Ratio for small devices
+$font-ratio-small: $minor-third !default;
 
-// Scale
-$h5-size:   $font-base-size !default;
-$h6-size:   $h5-size / $font-ratio-size !default;
-$h4-size:   $h5-size * $font-ratio-size !default;
-$h3-size:   $h4-size * $font-ratio-size !default;
-$h2-size:   $h3-size * $font-ratio-size !default;
-$h1-size:   $h2-size * $font-ratio-size !default;
-$kilo-size: $h1-size * $font-ratio-size !default;
-$mega-size: $kilo-size * $font-ratio-size !default;
-$giga-size: $mega-size * $font-ratio-size !default;
+// Ratio for large devices
+$font-ratio-large: $perfect-fourth !default;
+
+// Scale for small devices
+$h5-size-small:   $font-base-size !default;
+$h6-size-small:   $h5-size-small / $font-ratio-small !default;
+$h4-size-small:   $h5-size-small * $font-ratio-small !default;
+$h3-size-small:   $h4-size-small * $font-ratio-small !default;
+$h2-size-small:   $h3-size-small * $font-ratio-small !default;
+$h1-size-small:   $h2-size-small * $font-ratio-small !default;
+$kilo-size-small: $h1-size-small * $font-ratio-small !default;
+$mega-size-small: $kilo-size-small * $font-ratio-small !default;
+$giga-size-small: $mega-size-small * $font-ratio-small !default;
+
+// Scale for large devices
+$h5-size-large:   $font-base-size !default;
+$h6-size-large:   $h5-size-large / $font-ratio-large !default;
+$h4-size-large:   $h5-size-large * $font-ratio-large !default;
+$h3-size-large:   $h4-size-large * $font-ratio-large !default;
+$h2-size-large:   $h3-size-large * $font-ratio-large !default;
+$h1-size-large:   $h2-size-large * $font-ratio-large !default;
+$kilo-size-large: $h1-size-large * $font-ratio-large !default;
+$mega-size-large: $kilo-size-large * $font-ratio-large !default;
+$giga-size-large: $mega-size-large * $font-ratio-large !default;
 
 //
 // Grid

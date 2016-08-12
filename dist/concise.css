@@ -284,12 +284,11 @@ address {
 h1, h2, h3, h4, h5, h6 {
   color: #222;
   font-family: "Helvetica", "Arial", sans-serif;
-  line-height: 1.25em; }
+  line-height: 1.25; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     color: #666;
     font-weight: lighter;
-    vertical-align: 0;
-    font-size: 75%; }
+    vertical-align: 0; }
 
 h1, h2, h3 {
   margin: 1.5rem 0 0.375rem; }
@@ -298,30 +297,56 @@ h4, h5, h6 {
   margin: 0.375rem 0; }
 
 h1 {
-  font-size: 2.368rem; }
+  font-size: 2.0736rem; }
+  h1 small {
+    font-size: 1.728rem; }
 
 h2 {
-  font-size: 1.77645rem; }
+  font-size: 1.728rem; }
+  h2 small {
+    font-size: 1.44rem; }
 
 h3 {
-  font-size: 1.33267rem; }
+  font-size: 1.44rem; }
+  h3 small {
+    font-size: 1.2rem; }
+
+h4 {
+  font-size: 1.2rem; }
+  h4 small {
+    font-size: 1rem; }
+
+h5 {
+  font-size: 1rem; }
+  h5 small {
+    font-size: 0.83333rem; }
+
+h6 {
+  font-size: 0.83333rem; }
 
 @media (min-width: 768px) {
   h1 {
     font-size: 3.15733rem; }
+    h1 small {
+      font-size: 2.36859rem; }
   h2 {
     font-size: 2.36859rem; }
+    h2 small {
+      font-size: 1.77689rem; }
   h3 {
-    font-size: 1.77689rem; } }
-
-h4 {
-  font-size: 1.333rem; }
-
-h5 {
-  font-size: 1rem; }
-
-h6 {
-  font-size: 0.75019rem; }
+    font-size: 1.77689rem; }
+    h3 small {
+      font-size: 1.333rem; }
+  h4 {
+    font-size: 1.333rem; }
+    h4 small {
+      font-size: 1rem; }
+  h5 {
+    font-size: 1rem; }
+    h5 small {
+      font-size: 0.75019rem; }
+  h6 {
+    font-size: 0.75019rem; } }
 
 ul,
 ol {

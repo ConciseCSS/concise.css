@@ -5,29 +5,72 @@
 h1, h2, h3, h4, h5, h6 {
   color: getColor(text, heading);
   font-family: $font-family-headings;
-  line-height: 1.25em;
+  line-height: 1.25;
 
   small {
     color: getColor(text, secondary);
     font-weight: lighter;
     vertical-align: 0;
-    font-size: 75%;
   }
 }
 
 h1, h2, h3 { margin: 1lh 0 0.25lh; }
 h4, h5, h6 { margin: 0.25lh 0; }
 
-h1 { font-size: $h1-size * .75 + pr; }
-h2 { font-size: $h2-size * .75 + pr; }
-h3 { font-size: $h3-size * .75 + pr; }
-
-@media (--medium) {
-  h1 { font-size: $h1-size + pr; }
-  h2 { font-size: $h2-size + pr; }
-  h3 { font-size: $h3-size + pr; }
+h1 {
+  font-size: $h1-size-small + pr;
+  small { font-size: $h2-size-small + pr; }
 }
 
-h4 { font-size: $h4-size + pr; }
-h5 { font-size: $h5-size + pr; }
-h6 { font-size: $h6-size + pr; }
+h2 {
+  font-size: $h2-size-small + pr;
+  small { font-size: $h3-size-small + pr; }
+}
+
+h3 {
+  font-size: $h3-size-small + pr;
+  small { font-size: $h4-size-small + pr; }
+}
+
+h4 {
+  font-size: $h4-size-small + pr;
+  small { font-size: $h5-size-small + pr; }
+}
+
+h5 {
+  font-size: $h5-size-small + pr;
+  small { font-size: $h6-size-small + pr; }
+}
+
+h6 { font-size: $h6-size-small + pr; }
+
+
+// Styles for medium and up displays
+@media (--medium) {
+  h1 {
+    font-size: $h1-size-large + pr;
+    small { font-size: $h2-size-large + pr; }
+  }
+
+  h2 {
+    font-size: $h2-size-large + pr;
+    small { font-size: $h3-size-large + pr; }
+  }
+
+  h3 {
+    font-size: $h3-size-large + pr;
+    small { font-size: $h4-size-large + pr; }
+  }
+
+  h4 {
+    font-size: $h4-size-large + pr;
+    small { font-size: $h5-size-large + pr; }
+  }
+
+  h5 {
+    font-size: $h5-size-large + pr;
+    small { font-size: $h6-size-large + pr; }
+  }
+
+  h6 { font-size: $h6-size-large + pr; }
+}
