@@ -20,24 +20,10 @@
       width: 100%;
     }
 
-    [column],
-    [row],
-    [container] {
-      margin-bottom: 0 !important;
-    }
-
-    .table--truncate,
-    .table--truncate td {
-      width: 500px;
-    }
   </style>
 </head>
 
 <body container>
-  <h1 class="giga">Giga <small>Helper text</small></h1>
-  <h1 class="mega">Mega <small>Helper text</small></h1>
-  <h1 class="kilo">Kilo <small>Helper text</small></h1>
-
   <h1>Heading 1 <small><a href="">Helper link</a></small></h1>
   <h2>Heading 2 <small>Helper text</small></h2>
   <h3>Heading 3 <small>Helper text</small></h3>
@@ -56,14 +42,6 @@
 
   <p>Lorem <strong>ipsum</strong> <em>dolor</em> sit <abbr title="Abbreviation">amet</abbr>, <code>sadipscing</code> <kbd>elitr</kbd>, sed diam <a href="">nonumy</a> eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
 
-  <p class="text--justify">At <b>vero</b> <i>eos</i> et accusam <sub>et</sub> justo <sup>duo</sup> dolores et ea rebum. <s>Stet clita</s> kasd gubergren, no sea <var>takimata</var> sanctus <samp>est Lorem ipsum dolor sit amet</samp>. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-
-  <p class="text--left">Left text</p>
-
-  <p class="text--center">Center text</p>
-
-  <p class="text--right">Right text</p>
-
   <hr>
 
   <blockquote>
@@ -72,19 +50,9 @@
     <footer>John Doe</footer>
   </blockquote>
 
-  <blockquote class="blockquote--reverse">
-    <p>This is a reverse blockquote.</p>
-
-    <cite>John Doe</cite>
-  </blockquote>
-
   <pre><code>.class {
     background-color: #ccc;
 }</code></pre>
-
-  <pre class="pre--flat">.class {
-    background-color: #ccc;
-}</pre>
 
   <ul>
     <li>List Item</li>
@@ -116,18 +84,6 @@
     </li>
     <li>List Item</li>
   </ol>
-
-  <ul class="list--unstyled">
-    <li>List item</li>
-    <li>List item</li>
-    <li>List item</li>
-  </ul>
-
-  <ul class="list--inline">
-    <li>List item</li>
-    <li>List item</li>
-    <li>List item</li>
-  </ul>
 
   <dl>
     <dt>Definition</dt>
@@ -279,35 +235,6 @@
     </div>
   </div>
 
-  <button class="button--xsm">Extra Small Button</button>
-  <button class="button--sm">Small Button</button>
-  <button>Default Button</button>
-  <button class="button--lg">Large Button</button>
-  <button class="button--xlg">Extra Large Button</button>
-
-  <button class="button--success">Success Button</button>
-  <button class="button--muted">Muted Button</button>
-  <button class="button--error">Error Button</button>
-  <button class="button--warning">Warning Button</button>
-  <button class="button--collapse">Collapsible Button</button>
-
-  <button class="button--bordered button--pill">Bordered Button</button>
-  <button class="button--bordered border--success">Bordered Success Button</button>
-  <button class="button--bordered border--muted">Bordered Muted Button</button>
-  <button class="button--bordered border--error">Bordered Error Button</button>
-  <button class="button--bordered border--warning">Bordered Warning Button</button>
-
-  <button class="button--bordered button--affix">
-    Affix Button
-    <span class="affix"><span class="icon-facebook"></span></span>
-  </button>
-
-  <button class="button--flat">Flat Button</button>
-  <button class="button--flat" disabled>Disabled Flat Button</button>
-  <button disabled>Disabled Button</button>
-
-  <button class="button--full">Full-width Button</button>
-
   <table>
     <thead>
       <tr>
@@ -340,225 +267,10 @@
     </tbody>
   </table>
 
-  <table class="table--truncate">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First Name</th>
-        <th scope="col">Last Name</th>
-      </tr>
-    </thead>
-
-    <tfoot>
-      <tr>
-        <td><strong>Total Users:</strong></td>
-        <td>2</td>
-        <td></td>
-      </tr>
-    </tfoot>
-
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td title="This is a long long long long long long long long text">This is a long long long long long long long long text</td>
-        <td>Doe</td>
-      </tr>
-
-      <tr>
-        <td>2</td>
-        <td>Jane</td>
-        <td>Doe</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="table--responsive">
-    <table class="table--full">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">First Name</th>
-          <th scope="col">Last Name</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>John</td>
-          <td>Doe</td>
-        </tr>
-
-        <tr>
-          <td>2</td>
-          <td>Jane</td>
-          <td>Doe</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <table class="table--full table--border table--hoverCell">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First Name</th>
-        <th scope="col">Last Name</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>John</td>
-        <td>Doe</td>
-      </tr>
-
-      <tr>
-        <td>2</td>
-        <td>Jane</td>
-        <td>Doe</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <table class="table--full table--borderOuter">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First Name</th>
-        <th scope="col">Last Name</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>John</td>
-        <td>Doe</td>
-      </tr>
-
-      <tr>
-        <td>2</td>
-        <td>Jane</td>
-        <td>Doe</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <table class="table--full table--borderHorizontal table--hoverRow">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First Name</th>
-        <th scope="col">Last Name</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>John</td>
-        <td>Doe</td>
-      </tr>
-
-      <tr>
-        <td>2</td>
-        <td>Jane</td>
-        <td>Doe</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <table class="table--full table--flat">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First Name</th>
-        <th scope="col">Last Name</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>John</td>
-        <td>Doe</td>
-      </tr>
-
-      <tr>
-        <td>2</td>
-        <td>Jane</td>
-        <td>Doe</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <table class="table--full table--fillEven">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First Name</th>
-        <th scope="col">Last Name</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>John</td>
-        <td>Doe</td>
-      </tr>
-
-      <tr>
-        <td>2</td>
-        <td>Jane</td>
-        <td>Doe</td>
-      </tr>
-
-      <tr>
-        <td>3</td>
-        <td>John</td>
-        <td>Doe</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <table class="table--full table--fillOdd">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First Name</th>
-        <th scope="col">Last Name</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>John</td>
-        <td>Doe</td>
-      </tr>
-
-      <tr>
-        <td>2</td>
-        <td>Jane</td>
-        <td>Doe</td>
-      </tr>
-
-      <tr>
-        <td>3</td>
-        <td>John</td>
-        <td>Doe</td>
-      </tr>
-    </tbody>
-  </table>
-
   <form>
     <p>
       <label for="firstname">First Name:</label>
       <input type="text" id="firstname" placeholder="John">
-      <span class="input--help">Here is some help text</span>
     </p>
 
     <p>
@@ -645,14 +357,6 @@
     </p>
   </form>
 
-  <form class="form--inline">
-    <label for="username1">Username:</label>
-    <input type="text" placeholder="Username" id="username1" />
-    <label for="password1">Password:</label>
-    <input id="password1" type="password" placeholder="Password" />
-    <input class="button" type="submit" value="Login" />
-  </form>
-
   <form>
     <div grid>
       <div column="1">
@@ -661,8 +365,6 @@
 
       <div column="3">
         <input type="text" id="name1" placeholder="John Doe" />
-
-        <p class="input--help">Here is some help text</p>
       </div>
     </div>
 
@@ -676,30 +378,5 @@
       </div>
     </div>
   </form>
-
-  <table>
-    <tbody>
-    <tr>
-      <td><span class="hide--xsm">.hide--xsm</span></td>
-      <td><span class="show--xsm">.show--xsm</span></td>
-    </tr>
-    <tr>
-      <td><span class="hide--sm">.hide--sm</span></td>
-      <td><span class="show--sm">.show--sm</span></td>
-    </tr>
-    <tr>
-      <td><span class="hide--md">.hide--md</span></td>
-      <td><span class="show--md">.show--md</span></td>
-    </tr>
-    <tr>
-      <td><span class="hide--lg">.hide--lg</span></td>
-      <td><span class="show--lg">.show--lg</span></td>
-    </tr>
-    <tr>
-      <td><span class="hide--xlg">.hide--xlg</span></td>
-      <td><span class="show--xlg">.show--xlg</span></td>
-    </tr>
-    </tbody>
-  </table>
 </body>
 </html>
