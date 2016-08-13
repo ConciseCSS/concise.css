@@ -48,6 +48,15 @@
 }
 
 //
+// No Collapse columns
+//
+
+[grid~="no-collapse"] {
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+//
 // Alignment of all columns in a row
 //
 
