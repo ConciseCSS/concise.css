@@ -19,7 +19,7 @@
   flex-direction: column;
 
   // Collapse columns on breakpoint
-  @media (--small) { flex-direction: row; }
+  @media ($breakpoint) { flex-direction: row; }
 }
 
 [#{$prefix}column] { flex: 1; }
@@ -81,8 +81,10 @@
 // Column offsets
 //
 
-@for $i from 1 through $num-columns {
-  [#{$prefix}column~="+#{$i}"] {
-    margin-left: ($i/$num-columns) * 100%;
+@media ($breakpoint) {
+  @for $i from 1 through $num-columns {
+    [#{$prefix}column~="+#{$i}"] {
+      margin-left: ($i/$num-columns) * 100%;
+    }
   }
 }
