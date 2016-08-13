@@ -17,6 +17,7 @@
   margin-left: $gutter / -2;
   margin-right: $gutter / -2;
   flex-direction: column;
+  flex-wrap: wrap;
 
   // Collapse columns on breakpoint
   @media ($breakpoint) { flex-direction: row; }
