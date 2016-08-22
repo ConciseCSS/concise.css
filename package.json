@@ -32,7 +32,7 @@
   },
   "scripts": {
     "build": "concise compile concise.scss dist/concise.css && cssnano dist/concise.css dist/concise.min.css",
-    "build:watch": "chokidar 'src/**/*.scss' -c 'npm run build'",
+    "build:watch": "npm run build && chokidar 'src/**/*.scss' -c 'npm run build'",
     "stats": "stylestats dist/concise.css",
     "stats:min": "stylestats dist/concise.min.css"
   }
