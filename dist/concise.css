@@ -222,7 +222,7 @@ a {
     color: #2f6374; }
 
 h1 a, h2 a, h3 a {
-  color: #555; }
+  color: inherit; }
   h1 a:hover, h1 a:focus, h2 a:hover, h2 a:focus, h3 a:hover, h3 a:focus {
     color: #4591aa;
     text-decoration: none; }
@@ -286,7 +286,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica", "Arial", sans-serif;
   line-height: 1.25; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-    color: #666;
+    color: inherit;
     font-weight: lighter;
     vertical-align: 0; }
 
