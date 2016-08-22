@@ -324,7 +324,7 @@ h5 {
 h6 {
   font-size: 0.83333rem; }
 
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   h1 {
     font-size: 3.15733rem; }
     h1 small {

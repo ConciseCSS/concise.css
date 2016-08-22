@@ -9,7 +9,7 @@ table {
   empty-cells: show;
   width: 100%;
 
-  @media (--small) {
+  @media ($breakpoint) {
     width: auto;
 
     th,
@@ -41,7 +41,7 @@ table {
     overflow: visible;
     padding: 0 1em;
 
-    @media (--small) { line-height: 2lh; }
+    @media ($breakpoint) { line-height: 2lh; }
 
     &:last-child { border-right: none; }
   }

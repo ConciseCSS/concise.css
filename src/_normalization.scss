@@ -146,7 +146,7 @@ textarea {
   font: $font-base-size + px / 1.5 $font-family;
   text-rendering: optimizeLegibility;
 
-  @media (--small) {
+  @media ($breakpoint) {
     font-size: $font-base-size-bg + px;
   }
 }
