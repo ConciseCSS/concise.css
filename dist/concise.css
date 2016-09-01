@@ -185,7 +185,7 @@ video {
 * + * {
   margin-top: 1.5rem; }
 
-li, kbd, div, input, option, select {
+li, kbd, div, input, option, select, a {
   margin-top: 0; }
 
 small,
