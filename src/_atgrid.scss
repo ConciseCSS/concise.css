@@ -43,6 +43,15 @@
 }
 
 //
+// No margins
+//
+
+[#{$prefix}grid~="nm"] {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+//
 // No Collapse columns
 //
 
