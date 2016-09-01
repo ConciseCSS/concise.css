@@ -187,19 +187,24 @@ dl:not(:last-child), fieldset:not(:last-child), figcaption:not(:last-child), fig
 hr:not(:last-child), ol:not(:last-child), p:not(:last-child), pre:not(:last-child), section:not(:last-child), table:not(:last-child), table:not(:last-child), tfoot:not(:last-child), ul:not(:last-child), video:not(:last-child) {
   margin-bottom: 1.5rem; }
 
-small {
-  font-size: 75%;
-  vertical-align: text-bottom; }
+small,
+sup,
+sub {
+  font-size: 83.33333%; }
+  @media (min-width: 480px) {
+    small,
+    sup,
+    sub {
+      font-size: 75.01875%; } }
 
 sup,
 sub {
-  font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline; }
 
 sup {
-  top: -0.5em;
+  top: -0.25em;
   -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "sups" 1;
           font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "sups" 1; }
 
@@ -207,9 +212,6 @@ sub {
   bottom: -0.25em;
   -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "subs" 1;
           font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "subs" 1; }
-
-s {
-  text-decoration: line-through; }
 
 a {
   background-color: transparent;
@@ -239,7 +241,13 @@ pre,
 kbd,
 samp {
   font-family: "Consolas", monospace;
-  font-size: 0.875rem; }
+  font-size: 0.83333rem; }
+  @media (min-width: 480px) {
+    code,
+    pre,
+    kbd,
+    samp {
+      font-size: 0.75019rem; } }
 
 pre {
   padding: 0.75rem 1em; }
@@ -253,8 +261,7 @@ pre {
   background-color: #f5f5f5;
   border: 1px solid #e0e0e0;
   border-radius: 3px;
-  color: #484848;
-  margin-bottom: 1.5rem; }
+  color: #484848; }
 
 code {
   padding: 2px 3px; }
@@ -264,7 +271,8 @@ pre code {
   border: none;
   padding: 0;
   vertical-align: inherit;
-  white-space: pre; }
+  white-space: pre;
+  font-size: inherit; }
 
 kbd {
   background-color: transparent;
@@ -287,11 +295,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.25; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     color: inherit;
-    font-weight: lighter;
     vertical-align: 0; }
 
 h1, h2, h3 {
-  margin: 1.5rem 0 0.375rem; }
+  margin: 0.75rem 0 0.375rem; }
 
 h4, h5, h6 {
   margin: 0.375rem 0; }
@@ -325,6 +332,10 @@ h6 {
   font-size: 0.83333rem; }
 
 @media (min-width: 480px) {
+  h1, h2, h3 {
+    margin: 1.5rem 0 0.375rem; }
+  h4, h5, h6 {
+    margin: 0.375rem 0; }
   h1 {
     font-size: 3.15733rem; }
     h1 small {
@@ -392,7 +403,7 @@ button, input[type="submit"] {
   color: white;
   cursor: pointer;
   display: inline-block;
-  font-size: 0.875rem;
+  font-size: 0.83333rem;
   line-height: 2.25rem;
   overflow: visible;
   padding: 0 1.5em;
@@ -406,6 +417,9 @@ button, input[type="submit"] {
           user-select: none;
   vertical-align: middle;
   white-space: nowrap; }
+  @media (min-width: 480px) {
+    button, input[type="submit"] {
+      font-size: 0.75019rem; } }
   button:hover, input[type="submit"]:hover, button:focus, input[type="submit"]:focus {
     background-color: #75b3c7;
     color: white;
@@ -420,22 +434,22 @@ button, input[type="submit"] {
     cursor: not-allowed;
     opacity: 0.6; }
 
-@media (min-width: 480px) {
-  form,
-  form [row] {
-    margin-bottom: 1.5rem; } }
-
 input:not([type="submit"]),
 select,
 textarea {
   border: 1px solid #e0e0e0;
   border-radius: 3px;
-  font-size: 0.875rem;
+  font-size: 0.83333rem;
   height: 1.875rem;
   padding: 0 .75em;
   -webkit-transition: 150ms;
   transition: 150ms;
   width: 100%; }
+  @media (min-width: 480px) {
+    input:not([type="submit"]),
+    select,
+    textarea {
+      font-size: 0.75019rem; } }
   input:not([type="submit"]):focus,
   select:focus,
   textarea:focus {
@@ -458,7 +472,10 @@ input:not([type="submit"]) {
 
 label {
   display: block;
-  font-size: 0.875rem; }
+  font-size: 0.83333rem; }
+  @media (min-width: 480px) {
+    label {
+      font-size: 0.75019rem; } }
 
 fieldset {
   border: 1px solid #e0e0e0;
@@ -467,9 +484,12 @@ fieldset {
   margin-bottom: 1.5rem; }
 
 legend {
-  font-size: 0.875rem;
+  font-size: 0.83333rem;
   font-weight: bold;
   padding: 0 1em; }
+  @media (min-width: 480px) {
+    legend {
+      font-size: 0.75019rem; } }
 
 input[type="checkbox"],
 input[type="file"],
@@ -570,9 +590,13 @@ blockquote {
   blockquote cite,
   blockquote footer {
     display: block;
-    font-size: 80%;
+    font-size: 83.33333%;
     font-style: italic;
     margin-top: 0.375rem; }
+    @media (breakpoint) {
+      blockquote cite,
+      blockquote footer {
+        font-size: 75.01875%; } }
   blockquote cite:before,
   blockquote footer:before {
     content: "\2014 \00A0"; }
@@ -591,10 +615,13 @@ table {
         padding: 0 2.5em; } }
   table caption {
     color: #555;
-    font-size: 85%;
+    font-size: 0.83333rem;
     font-style: italic;
     line-height: 3rem;
     text-align: center; }
+    @media (min-width: 480px) {
+      table caption {
+        font-size: 0.75019rem; } }
   table thead {
     background-color: #f5f5f5;
     text-align: left; }

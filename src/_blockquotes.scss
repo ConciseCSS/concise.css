@@ -11,9 +11,14 @@ blockquote {
   cite,
   footer {
     display: block;
-    font-size: 80%;
+    // Use the next smaller size in the scale
+    font-size: 100% / $type-ratio-primary;
     font-style: italic;
     margin-top: 0.25lh;
+
+    @media (breakpoint) {
+      font-size: 100% / $type-ratio-secondary;
+    }
   }
 
   cite:before,

@@ -8,7 +8,7 @@ button {
   color: getColor(text, ui);
   cursor: pointer;
   display: inline-block;
-  font-size: 14pr;
+  font-size: $type-1-primary;
   line-height: 1.5lh;
   overflow: visible;
   padding: 0 1.5em;
@@ -18,6 +18,10 @@ button {
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
+
+  @media ($breakpoint) {
+    font-size: $type-1-secondary;
+  }
 
   &:hover,
   &:focus {

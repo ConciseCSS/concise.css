@@ -39,53 +39,59 @@ $transition-duration: 150ms !default;
 // Spacing
 $spacing-xs: 0.5lh !default;
 $spacing-s:  1lh !default;
-$spacing-m:  1.5lh !default;
-$spacing-l:  2lh !default;
-$spacing-xl: 2.5lh !default;
+$spacing-m:  2lh !default;
+$spacing-l:  3lh !default;
+$spacing-xl: 4lh !default;
 
 
 //
-// Type Scale Ratio
+// Type Scale
 // -------------
 
 // Suggested ratios
 // Source: http://type-scale.com/
-$minor-second:    1.067;
-$major-second:    1.125;
-$minor-third:     1.200;
-$major-third:     1.250;
-$perfect-fourth:  1.333;
-$augmented-fourth:1.414;
-$perfect-fifth:   1.500;
-$golden-ratio:    1.618;
+$minor-second:     1.067;
+$major-second:     1.125;
+$minor-third:      1.200;
+$major-third:      1.250;
+$perfect-fourth:   1.333;
+$augmented-fourth: 1.414;
+$perfect-fifth:    1.500;
+$golden-ratio:     1.618;
 
-// Ratio for small devices
-$font-ratio-small: $minor-third !default;
+// Ratio for primary scale
+$type-ratio-primary: $minor-third !default;
 
-// Ratio for large devices
-$font-ratio-large: $perfect-fourth !default;
+// Ratio for secondary scale
+$type-ratio-secondary: $perfect-fourth !default;
 
-// Scale for small devices
-$h5-size-small:   $font-base-size !default;
-$h6-size-small:   $h5-size-small / $font-ratio-small !default;
-$h4-size-small:   $h5-size-small * $font-ratio-small !default;
-$h3-size-small:   $h4-size-small * $font-ratio-small !default;
-$h2-size-small:   $h3-size-small * $font-ratio-small !default;
-$h1-size-small:   $h2-size-small * $font-ratio-small !default;
-$kilo-size-small: $h1-size-small * $font-ratio-small !default;
-$mega-size-small: $kilo-size-small * $font-ratio-small !default;
-$giga-size-small: $mega-size-small * $font-ratio-small !default;
+// Primary scale
+$type-1-primary:  1rem / $type-ratio-primary !default;
+$type-2-primary:  1rem !default;
+$type-3-primary:  $type-2-primary * $type-ratio-primary !default;
+$type-4-primary:  $type-3-primary * $type-ratio-primary !default;
+$type-5-primary:  $type-4-primary * $type-ratio-primary !default;
+$type-6-primary:  $type-5-primary * $type-ratio-primary !default;
+$type-7-primary:  $type-6-primary * $type-ratio-primary !default;
+$type-8-primary:  $type-7-primary * $type-ratio-primary !default;
+$type-9-primary:  $type-8-primary * $type-ratio-primary !default;
+$type-10-primary: $type-9-primary * $type-ratio-primary !default;
+$type-11-primary: $type-10-primary * $type-ratio-primary !default;
+$type-12-primary: $type-11-primary * $type-ratio-primary !default;
 
-// Scale for large devices
-$h5-size-large:   $font-base-size !default;
-$h6-size-large:   $h5-size-large / $font-ratio-large !default;
-$h4-size-large:   $h5-size-large * $font-ratio-large !default;
-$h3-size-large:   $h4-size-large * $font-ratio-large !default;
-$h2-size-large:   $h3-size-large * $font-ratio-large !default;
-$h1-size-large:   $h2-size-large * $font-ratio-large !default;
-$kilo-size-large: $h1-size-large * $font-ratio-large !default;
-$mega-size-large: $kilo-size-large * $font-ratio-large !default;
-$giga-size-large: $mega-size-large * $font-ratio-large !default;
+// Secondary scale
+$type-1-secondary:  1rem / $type-ratio-secondary !default;
+$type-2-secondary:  1rem !default;
+$type-3-secondary:  $type-2-secondary * $type-ratio-secondary !default;
+$type-4-secondary:  $type-3-secondary * $type-ratio-secondary !default;
+$type-5-secondary:  $type-4-secondary * $type-ratio-secondary !default;
+$type-6-secondary:  $type-5-secondary * $type-ratio-secondary !default;
+$type-7-secondary:  $type-6-secondary * $type-ratio-secondary !default;
+$type-8-secondary:  $type-7-secondary * $type-ratio-secondary !default;
+$type-9-secondary:  $type-8-secondary * $type-ratio-secondary !default;
+$type-10-secondary: $type-9-secondary * $type-ratio-secondary !default;
+$type-11-secondary: $type-10-secondary * $type-ratio-secondary !default;
+$type-12-secondary: $type-11-secondary * $type-ratio-secondary !default;
 
 //
 // Grid

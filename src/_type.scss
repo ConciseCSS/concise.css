@@ -6,21 +6,26 @@
 // Defaults
 // --------
 
-small {
-  font-size: 75%;
-  vertical-align: text-bottom;
+small,
+sup,
+sub {
+  // Use the next smaller size in the scale
+  font-size: 100% / $type-ratio-primary;
+
+  @media ($breakpoint) {
+    font-size: 100% / $type-ratio-secondary;
+  }
 }
 
 sup,
 sub {
-  font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
 
 sup {
-  top: -0.5em;
+  top: -0.25em;
   font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "sups" 1;
 }
 
@@ -28,9 +33,6 @@ sub {
   bottom: -0.25em;
   font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "subs" 1;
 }
-
-s { text-decoration: line-through; }
-
 
 //
 // Links
@@ -82,7 +84,11 @@ pre,
 kbd,
 samp {
   font-family: $font-family-mono;
-  font-size: 14pr;
+  font-size: $type-1-primary;
+
+  @media ($breakpoint) {
+    font-size: $type-1-secondary;
+  }
 }
 
 pre { padding: 0.5lh 1em; }
@@ -98,7 +104,6 @@ pre {
   border: 1px solid getColor(base, lines);
   border-radius: 3px;
   color: darken(getColor(text, primary), 5%);
-  margin-bottom: 1lh;
 }
 
 code { padding: 2px 3px; }
@@ -109,13 +114,15 @@ pre code {
   padding: 0;
   vertical-align: inherit;
   white-space: pre;
+  font-size: inherit;
 }
 
 kbd {
   background-color: transparent;
   border: 1px solid getColor(base, lines);
   border-radius: 3px;
-  box-shadow: 0 2px 0 -1px white,0 2px 0 darken(getColor(base, lines), 1.5%);
+  box-shadow: 0 2px 0 -1px white,
+              0 2px 0 darken(getColor(base, lines), 1.5%);
   display: inline-block;
   padding: 0 6px 0;
   white-space: nowrap;

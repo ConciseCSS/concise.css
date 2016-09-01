@@ -2,23 +2,20 @@
 // Forms
 // =============================================================================
 
-form,
-form [row] {
-  @media ($breakpoint) {
-    margin-bottom: 1lh;
-  }
-}
-
 input:not([type="submit"]),
 select,
 textarea {
   border: 1px solid getColor(base, lines);
   border-radius: 3px;
-  font-size: 14pr;
+  font-size: $type-1-primary;
   height: 1.25lh;
   padding: 0 .75em;
   transition: $transition-duration;
   width: 100%;
+
+  @media ($breakpoint) {
+    font-size: $type-1-secondary;
+  }
 
   &:focus {
     border-color: getColor(blue, lighter);
@@ -58,7 +55,11 @@ input[type="submit"] {
 
 label {
   display: block;
-  font-size: 14pr;
+  font-size: $type-1-primary;
+
+  @media ($breakpoint) {
+    font-size: $type-1-secondary;
+  }
 }
 
 fieldset {
@@ -69,9 +70,13 @@ fieldset {
 }
 
 legend {
-  font-size: 14pr;
+  font-size: $type-1-primary;
   font-weight: bold;
   padding: 0 1em;
+
+  @media ($breakpoint) {
+    font-size: $type-1-secondary;
+  }
 }
 
 // Keep the original size for this small inputs

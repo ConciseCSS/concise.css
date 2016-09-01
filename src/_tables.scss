@@ -18,10 +18,14 @@ table {
 
   caption {
     color: getColor(text, primary);
-    font-size: 85%;
+    font-size: $type-1-primary;
     font-style: italic;
     line-height: 2lh;
     text-align: center;
+
+    @media ($breakpoint) {
+      font-size: $type-1-secondary;
+    }
   }
 
   thead {
