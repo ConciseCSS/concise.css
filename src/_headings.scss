@@ -31,7 +31,6 @@ h6 { font-size: $type-1-primary; }
 // Styles for medium and up displays
 @media ($breakpoint) {
   h1, h2, h3 { margin: 1lh 0 0.25lh; }
-  h4, h5, h6 { margin: 0.25lh 0; }
 
   h1 { font-size: $type-6-secondary; }
   h2 { font-size: $type-5-secondary; }
