@@ -1,5 +1,5 @@
 //
-// atGrid.css v4.0.0 - Attribute-based CSS Grid System
+// atGrid.css for Concise - Attribute-based CSS Grid System
 // https://github.com/kolcethompsonco/atgrid.css
 // MIT License - James Kolce <james@kolcethompson.com>
 // =============================================================================
@@ -17,19 +17,13 @@
   margin-left: $gutter / -2;
   margin-right: $gutter / -2;
   flex-direction: column;
-  flex-wrap: wrap;
 
   // Collapse columns on breakpoint
   @media ($breakpoint) { flex-direction: row; }
 }
 
-[#{$prefix}column] { flex: 1; }
-
-//
-// Gutters by default
-//
-
 [#{$prefix}column] {
+  flex: 1;
   padding-left: $gutter / 2;
   padding-right: $gutter / 2;
 }
@@ -52,46 +46,70 @@
 // No Collapse columns
 //
 
-[grid~="no-collapse"] {
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
+[#{$prefix}grid~="no-collapse"] { flex-flow: row nowrap; }
+
+//
+// Wrap columns
+//
+
+[#{$prefix}grid~="wrap"] { flex-wrap: wrap; }
+[#{$prefix}grid~="nowrap"] { flex-wrap: nowrap; }
+[#{$prefix}grid~="wrap-reverse"] { flex-wrap: wrap-reverse; }
+
+//
+// Direction of columns in a row
+//
+
+[#{$prefix}grid~="row"] { flex-direction: row; }
+[#{$prefix}grid~="row-reverse"] { flex-direction: row-reverse; }
+[#{$prefix}grid~="column"] { flex-direction: column; }
+[#{$prefix}grid~="column-reverse"] { flex-direction: column-reverse; }
+
+//
+// Justify content
+//
+
+[#{$prefix}grid~="justify-start"] { justify-content: flex-start; }
+[#{$prefix}grid~="justify-end"] { justify-content: flex-end; }
+[#{$prefix}grid~="justify-center"] { justify-content: center; }
+[#{$prefix}grid~="justify-between"] { justify-content: space-between; }
+[#{$prefix}grid~="justify-around"] { justify-content: space-around; }
 
 //
 // Alignment of all columns in a row
 //
 
 [#{$prefix}grid~="top"] { align-items: flex-start; }
-
 [#{$prefix}grid~="center"] { align-items: center; }
-
 [#{$prefix}grid~="bottom"] { align-items: flex-end; }
+[#{$prefix}grid~="baseline"] { align-items: baseline; }
+[#{$prefix}grid~="stretch"] { align-items: stretch; }
 
 //
 // Alignment of individual columns
 //
 
 [#{$prefix}column~="top"] { align-self: flex-start; }
-
 [#{$prefix}column~="center"] { align-self: center; }
-
 [#{$prefix}column~="bottom"] { align-self: flex-end; }
 
-//
-// Column widths
-//
-
-@for $i from 1 through $num-columns {
-  [#{$prefix}column~="#{$i}"] {
-    flex: 0 1 ($i/$num-columns) * 100%;
-  }
-}
-
-//
-// Column offsets
-//
-
+// Create column widths and offsets above the breakpoint
 @media ($breakpoint) {
+  //
+  // Column widths
+  //
+
+  @for $i from 1 through $num-columns {
+    [#{$prefix}column~="#{$i}"] {
+      flex: 0 1 ($i/$num-columns) * 100%;
+      max-width: ($i/$num-columns) * 100%;
+    }
+  }
+
+  //
+  // Column offsets
+  //
+
   @for $i from 1 through $num-columns {
     [#{$prefix}column~="+#{$i}"] {
       margin-left: ($i/$num-columns) * 100%;
