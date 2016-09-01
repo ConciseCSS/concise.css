@@ -183,10 +183,10 @@ video {
   text-shadow: none; }
 
 * + * {
-  margin-bottom: 1.5rem; }
+  margin-top: 1.5rem; }
 
 li, kbd, div, input, option, select {
-  margin-bottom: 0; }
+  margin-top: 0; }
 
 small,
 sup,
