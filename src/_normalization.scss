@@ -229,10 +229,11 @@ video { vertical-align: middle; }
 //
 // Automatic margins
 // -----------------
-// TODO: Fix specificity
 
 @if $automargin {
-  #{$automargin-elements} {
-    &:not(:last-child) { margin-bottom: $block-margin; }
+  * + * { margin-bottom: $block-margin; }
+
+  li, kbd, div, input, option {
+    margin-bottom: 0;
   }
 }
