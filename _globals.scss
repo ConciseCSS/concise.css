@@ -43,6 +43,7 @@ $spacing-xl: 4lh !default;
 //
 // Type Scale
 // -------------
+// TODO: Find a way to generate the scale
 
 // Suggested ratios
 // Source: http://type-scale.com/
@@ -56,38 +57,38 @@ $perfect-fifth:    1.500;
 $golden-ratio:     1.618;
 
 // Ratio for primary scale
-$type-ratio-primary: $minor-third !default;
+$scale-ratio: $minor-third !default;
 
 // Ratio for secondary scale
-$type-ratio-secondary: $perfect-fourth !default;
+$scale-ratio-secondary: $perfect-fourth !default;
 
 // Primary scale
-$type-1-primary:  1rem / $type-ratio-primary !default;
-$type-2-primary:  1rem !default;
-$type-3-primary:  $type-2-primary * $type-ratio-primary !default;
-$type-4-primary:  $type-3-primary * $type-ratio-primary !default;
-$type-5-primary:  $type-4-primary * $type-ratio-primary !default;
-$type-6-primary:  $type-5-primary * $type-ratio-primary !default;
-$type-7-primary:  $type-6-primary * $type-ratio-primary !default;
-$type-8-primary:  $type-7-primary * $type-ratio-primary !default;
-$type-9-primary:  $type-8-primary * $type-ratio-primary !default;
-$type-10-primary: $type-9-primary * $type-ratio-primary !default;
-$type-11-primary: $type-10-primary * $type-ratio-primary !default;
-$type-12-primary: $type-11-primary * $type-ratio-primary !default;
+$scale-1:  1rem / $scale-ratio !default;
+$scale-2:  1rem !default;
+$scale-3:  $scale-2 * $scale-ratio !default;
+$scale-4:  $scale-3 * $scale-ratio !default;
+$scale-5:  $scale-4 * $scale-ratio !default;
+$scale-6:  $scale-5 * $scale-ratio !default;
+$scale-7:  $scale-6 * $scale-ratio !default;
+$scale-8:  $scale-7 * $scale-ratio !default;
+$scale-9:  $scale-8 * $scale-ratio !default;
+$scale-10: $scale-9 * $scale-ratio !default;
+$scale-11: $scale-10 * $scale-ratio !default;
+$scale-12: $scale-11 * $scale-ratio !default;
 
 // Secondary scale
-$type-1-secondary:  1rem / $type-ratio-secondary !default;
-$type-2-secondary:  1rem !default;
-$type-3-secondary:  $type-2-secondary * $type-ratio-secondary !default;
-$type-4-secondary:  $type-3-secondary * $type-ratio-secondary !default;
-$type-5-secondary:  $type-4-secondary * $type-ratio-secondary !default;
-$type-6-secondary:  $type-5-secondary * $type-ratio-secondary !default;
-$type-7-secondary:  $type-6-secondary * $type-ratio-secondary !default;
-$type-8-secondary:  $type-7-secondary * $type-ratio-secondary !default;
-$type-9-secondary:  $type-8-secondary * $type-ratio-secondary !default;
-$type-10-secondary: $type-9-secondary * $type-ratio-secondary !default;
-$type-11-secondary: $type-10-secondary * $type-ratio-secondary !default;
-$type-12-secondary: $type-11-secondary * $type-ratio-secondary !default;
+$scale-1-secondary:  1rem / $scale-ratio-secondary !default;
+$scale-2-secondary:  1rem !default;
+$scale-3-secondary:  $scale-2-secondary * $scale-ratio-secondary !default;
+$scale-4-secondary:  $scale-3-secondary * $scale-ratio-secondary !default;
+$scale-5-secondary:  $scale-4-secondary * $scale-ratio-secondary !default;
+$scale-6-secondary:  $scale-5-secondary * $scale-ratio-secondary !default;
+$scale-7-secondary:  $scale-6-secondary * $scale-ratio-secondary !default;
+$scale-8-secondary:  $scale-7-secondary * $scale-ratio-secondary !default;
+$scale-9-secondary:  $scale-8-secondary * $scale-ratio-secondary !default;
+$scale-10-secondary: $scale-9-secondary * $scale-ratio-secondary !default;
+$scale-11-secondary: $scale-10-secondary * $scale-ratio-secondary !default;
+$scale-12-secondary: $scale-11-secondary * $scale-ratio-secondary !default;
 
 //
 // Grid

@@ -10,10 +10,10 @@ small,
 sup,
 sub {
   // Use the next smaller size in the scale
-  font-size: 100% / $type-ratio-primary;
+  font-size: 100% / $scale-ratio;
 
   @media ($breakpoint) {
-    font-size: 100% / $type-ratio-secondary;
+    font-size: 100% / $scale-ratio-secondary;
   }
 }
 
@@ -84,10 +84,10 @@ pre,
 kbd,
 samp {
   font-family: $font-family-mono;
-  font-size: $type-1-primary;
+  font-size: $scale-1;
 
   @media ($breakpoint) {
-    font-size: $type-1-secondary;
+    font-size: $scale-1-secondary;
   }
 }
 

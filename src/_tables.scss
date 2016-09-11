@@ -18,13 +18,13 @@ table {
 
   caption {
     color: getColor(text, primary);
-    font-size: $type-1-primary;
+    font-size: $scale-1;
     font-style: italic;
     line-height: 2lh;
     text-align: center;
 
     @media ($breakpoint) {
-      font-size: $type-1-secondary;
+      font-size: $scale-1-secondary;
     }
   }
 

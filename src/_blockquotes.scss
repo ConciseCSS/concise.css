@@ -12,12 +12,12 @@ blockquote {
   footer {
     display: block;
     // Use the next smaller size in the scale
-    font-size: 100% / $type-ratio-primary;
+    font-size: 100% / $scale-ratio;
     font-style: italic;
     margin-top: 0.25lh;
 
     @media (breakpoint) {
-      font-size: 100% / $type-ratio-secondary;
+      font-size: 100% / $scale-ratio-secondary;
     }
   }
 

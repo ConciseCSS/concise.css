@@ -12,30 +12,30 @@ h1, h2, h3, h4, h5, h6 {
     vertical-align: 0;
 
     // Use the next smaller size in the scale
-    font-size: 100% / $type-ratio-primary;
-    @media ($breakpoint) { font-size: 100% / $type-ratio-secondary; }
+    font-size: 100% / $scale-ratio;
+    @media ($breakpoint) { font-size: 100% / $scale-ratio-secondary; }
   }
 }
 
 h1, h2, h3 { margin: 0.5lh 0 0.25lh; }
 h4, h5, h6 { margin: 0.25lh 0; }
 
-h1 { font-size: $type-6-primary; }
-h2 { font-size: $type-5-primary; }
-h3 { font-size: $type-4-primary; }
-h4 { font-size: $type-3-primary; }
-h5 { font-size: $type-2-primary; }
-h6 { font-size: $type-1-primary; }
+h1 { font-size: $scale-6; }
+h2 { font-size: $scale-5; }
+h3 { font-size: $scale-4; }
+h4 { font-size: $scale-3; }
+h5 { font-size: $scale-2; }
+h6 { font-size: $scale-1; }
 
 
 // Styles for medium and up displays
 @media ($breakpoint) {
   h1, h2, h3 { margin: 1lh 0 0.25lh; }
 
-  h1 { font-size: $type-6-secondary; }
-  h2 { font-size: $type-5-secondary; }
-  h3 { font-size: $type-4-secondary; }
-  h4 { font-size: $type-3-secondary; }
-  h5 { font-size: $type-2-secondary; }
-  h6 { font-size: $type-1-secondary; }
+  h1 { font-size: $scale-6-secondary; }
+  h2 { font-size: $scale-5-secondary; }
+  h3 { font-size: $scale-4-secondary; }
+  h4 { font-size: $scale-3-secondary; }
+  h5 { font-size: $scale-2-secondary; }
+  h6 { font-size: $scale-1-secondary; }
 }
