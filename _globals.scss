@@ -3,6 +3,26 @@
 // =============================================================================
 
 //
+// Helper functions
+// ----------------
+
+@function pow($number, $exponent) {
+  $value: 1;
+
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $number;
+    }
+  } @else if $exponent < 0 {
+    @for $i from 1 through -$exponent {
+      $value: $value / $number;
+    }
+  }
+
+  @return $value;
+}
+
+//
 // Base
 // ----
 
@@ -43,7 +63,6 @@ $spacing-xl: 4lh !default;
 //
 // Type Scale
 // -------------
-// TODO: Find a way to generate the scale
 
 // Suggested ratios
 // Source: http://type-scale.com/
@@ -62,33 +81,10 @@ $scale-ratio: $minor-third !default;
 // Ratio for secondary scale
 $scale-ratio-secondary: $perfect-fourth !default;
 
-// Primary scale
-$scale-1:  1rem / $scale-ratio !default;
-$scale-2:  1rem !default;
-$scale-3:  $scale-2 * $scale-ratio !default;
-$scale-4:  $scale-3 * $scale-ratio !default;
-$scale-5:  $scale-4 * $scale-ratio !default;
-$scale-6:  $scale-5 * $scale-ratio !default;
-$scale-7:  $scale-6 * $scale-ratio !default;
-$scale-8:  $scale-7 * $scale-ratio !default;
-$scale-9:  $scale-8 * $scale-ratio !default;
-$scale-10: $scale-9 * $scale-ratio !default;
-$scale-11: $scale-10 * $scale-ratio !default;
-$scale-12: $scale-11 * $scale-ratio !default;
-
-// Secondary scale
-$scale-1-secondary:  1rem / $scale-ratio-secondary !default;
-$scale-2-secondary:  1rem !default;
-$scale-3-secondary:  $scale-2-secondary * $scale-ratio-secondary !default;
-$scale-4-secondary:  $scale-3-secondary * $scale-ratio-secondary !default;
-$scale-5-secondary:  $scale-4-secondary * $scale-ratio-secondary !default;
-$scale-6-secondary:  $scale-5-secondary * $scale-ratio-secondary !default;
-$scale-7-secondary:  $scale-6-secondary * $scale-ratio-secondary !default;
-$scale-8-secondary:  $scale-7-secondary * $scale-ratio-secondary !default;
-$scale-9-secondary:  $scale-8-secondary * $scale-ratio-secondary !default;
-$scale-10-secondary: $scale-9-secondary * $scale-ratio-secondary !default;
-$scale-11-secondary: $scale-10-secondary * $scale-ratio-secondary !default;
-$scale-12-secondary: $scale-11-secondary * $scale-ratio-secondary !default;
+// Function to easily retrieve sizes from a scale.
+@function typeScale($size, $ratio: $scale-ratio) {
+  @return pow($ratio, $size - 2) * 1rem;
+}
 
 //
 // Grid
@@ -188,13 +184,6 @@ $colors: (
 // getColor Function
 // --------
 // Easily retrieve colors for use.
-//
-// @access public
-//
-// @param {String} $color - Name of the color
-// @param {Color}  $value - The color value to grab (default is "base")
-//
-// @return {Color} Value of the color
 //
 
 @function getColor($color, $value: "base") {

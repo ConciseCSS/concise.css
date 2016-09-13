@@ -8,7 +8,7 @@ button {
   color: getColor(text, ui);
   cursor: pointer;
   display: inline-block;
-  font-size: $scale-1;
+  font-size: typeScale(1);
   line-height: 1.5lh;
   overflow: visible;
   padding: 0 1.5em;
@@ -20,7 +20,7 @@ button {
   white-space: nowrap;
 
   @media ($breakpoint) {
-    font-size: $scale-1-secondary;
+    font-size: typeScale(1, $scale-ratio-secondary);
   }
 
   &:hover,

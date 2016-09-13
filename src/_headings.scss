@@ -20,22 +20,22 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2, h3 { margin: 0.5lh 0 0.25lh; }
 h4, h5, h6 { margin: 0.25lh 0; }
 
-h1 { font-size: $scale-6; }
-h2 { font-size: $scale-5; }
-h3 { font-size: $scale-4; }
-h4 { font-size: $scale-3; }
-h5 { font-size: $scale-2; }
-h6 { font-size: $scale-1; }
+h1 { font-size: typeScale(6); }
+h2 { font-size: typeScale(5); }
+h3 { font-size: typeScale(4); }
+h4 { font-size: typeScale(3); }
+h5 { font-size: typeScale(2); }
+h6 { font-size: typeScale(1); }
 
 
 // Styles for medium and up displays
 @media ($breakpoint) {
   h1, h2, h3 { margin: 1lh 0 0.25lh; }
 
-  h1 { font-size: $scale-6-secondary; }
-  h2 { font-size: $scale-5-secondary; }
-  h3 { font-size: $scale-4-secondary; }
-  h4 { font-size: $scale-3-secondary; }
-  h5 { font-size: $scale-2-secondary; }
-  h6 { font-size: $scale-1-secondary; }
+  h1 { font-size: typeScale(6, $scale-ratio-secondary); }
+  h2 { font-size: typeScale(5, $scale-ratio-secondary); }
+  h3 { font-size: typeScale(4, $scale-ratio-secondary); }
+  h4 { font-size: typeScale(3, $scale-ratio-secondary); }
+  h5 { font-size: typeScale(2, $scale-ratio-secondary); }
+  h6 { font-size: typeScale(1, $scale-ratio-secondary); }
 }

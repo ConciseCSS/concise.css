@@ -7,14 +7,14 @@ select,
 textarea {
   border: 1px solid getColor(base, lines);
   border-radius: 3px;
-  font-size: $scale-1;
+  font-size: typeScale(1);
   height: 1.25lh;
   padding: 0 .75em;
   transition: $transition-duration;
   width: 100%;
 
   @media ($breakpoint) {
-    font-size: $scale-1-secondary;
+    font-size: typeScale(1, $scale-ratio-secondary);
   }
 
   &:focus {
@@ -55,10 +55,10 @@ input[type="submit"] {
 
 label {
   display: block;
-  font-size: $scale-1;
+  font-size: typeScale(1);
 
   @media ($breakpoint) {
-    font-size: $scale-1-secondary;
+    font-size: typeScale(1, $scale-ratio-secondary);
   }
 }
 
@@ -70,12 +70,12 @@ fieldset {
 }
 
 legend {
-  font-size: $scale-1;
+  font-size: typeScale(1);
   font-weight: bold;
   padding: 0 1em;
 
   @media ($breakpoint) {
-    font-size: $scale-1-secondary;
+    font-size: typeScale(1, $scale-ratio-secondary);
   }
 }
 
