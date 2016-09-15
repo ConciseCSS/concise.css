@@ -19,10 +19,6 @@ button {
   vertical-align: middle;
   white-space: nowrap;
 
-  @media ($breakpoint) {
-    font-size: typeScale(1, $scale-ratio-secondary);
-  }
-
   &:hover,
   &:focus {
     background-color: lighten(getColor(base, primary), 15%);

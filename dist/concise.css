@@ -400,9 +400,6 @@ button, input[type="submit"] {
           user-select: none;
   vertical-align: middle;
   white-space: nowrap; }
-  @media (min-width: 480px) {
-    button, input[type="submit"] {
-      font-size: 0.75019rem; } }
   button:hover, input[type="submit"]:hover, button:focus, input[type="submit"]:focus {
     background-color: #75b3c7;
     color: white;
@@ -426,7 +423,8 @@ textarea {
   padding: 0 .75em;
   -webkit-transition: 150ms;
   transition: 150ms;
-  width: 100%; }
+  width: 100%;
+  font-size: 0.83333rem; }
   input:not([type="submit"]):focus,
   select:focus,
   textarea:focus {
@@ -452,7 +450,8 @@ input:not([type="submit"]) {
     outline: none; }
 
 label {
-  display: block; }
+  display: block;
+  font-size: 0.83333rem; }
 
 fieldset {
   border: 1px solid #e0e0e0;
@@ -475,7 +474,8 @@ input[type="checkbox"],
 input[type="radio"] {
   line-height: normal;
   padding: 0;
-  vertical-align: middle; }
+  vertical-align: middle;
+  margin-top: 0 !important; }
 
 input[type="checkbox"] + label,
 input[type="radio"] + label {
