@@ -28,7 +28,7 @@
   position: relative;
   width: 90%;
 
-  @media (--small) { width: 526px; }
+  @media ($breakpoint) { width: 526px; }
 }
 
 .modal-header {
@@ -54,7 +54,7 @@
 
 .modal-footer {
   border-top: 1px solid getColor(base, lines);
-  font-size: 14pr;
+  font-size: typeScale(1);
   margin: 0;
   padding: 1lh 2.5em;
 }
@@ -90,7 +90,7 @@
 // Modifiers
 // ---------
 
-@media (--small) {
+@media ($breakpoint) {
   // Small
   .modal--small .modal-container { width: 360px; }
 

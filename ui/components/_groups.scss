@@ -13,7 +13,7 @@
 .group-item {
   border: 1px solid getColor(base, lines);
   display: inline-block;
-  font-size: 14pr;
+  font-size: typeScale(1);
   line-height: 1lh;
   list-style: none;
   padding: 0 1em;

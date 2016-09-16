@@ -33,7 +33,7 @@
     background-color: getColor(background, dark);
     color: getColor(text, ui);
     content: attr(data-hint);
-    font-size: pxToEm(12);
+    font-size: typeScale(1);
     padding: .25em .5em;
     text-decoration: none;
     white-space: nowrap;

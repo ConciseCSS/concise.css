@@ -6,7 +6,7 @@
   background-color: getColor(background, light);
   border: 1px solid getColor(base, lines);
   border-radius: 3px;
-  font-size: 12pr;
+  font-size: typeSize(1);
   margin-bottom: 1lh;
   padding: 0.25lh 0.5em;
 
