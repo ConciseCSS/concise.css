@@ -25,13 +25,13 @@
   },
   "devDependencies": {
     "chokidar-cli": "^1.2.0",
-    "concise-cli": "^0.2.0",
+    "concise-cli": "^0.3.0",
     "cssnano-cli": "^1.0.4",
     "node-sass": "^3.7.0",
     "stylestats": "^6.3.0"
   },
   "scripts": {
-    "build": "concise compile concise.scss dist/concise.css && cssnano dist/concise.css dist/concise.min.css",
+    "build": "concisecss compile concise.scss dist/concise.css && cssnano dist/concise.css dist/concise.min.css",
     "build:watch": "npm run build && chokidar '**/*.scss' -c 'npm run build'",
     "stats": "stylestats dist/concise.css",
     "stats:min": "stylestats dist/concise.min.css"
