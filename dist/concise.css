@@ -112,7 +112,7 @@ textarea {
   cursor: default;
   font: 16px/1.5 "Helvetica", "Arial", sans-serif;
   text-rendering: optimizeLegibility; }
-  @media (min-width: 480px) {
+  @media       (min-width: 480px) {
     :root {
       font-size: 18px; } }
 
@@ -192,7 +192,7 @@ small,
 sup,
 sub {
   font-size: 83.33333%; }
-  @media (min-width: 480px) {
+  @media       (min-width: 480px) {
     small,
     sup,
     sub {
@@ -243,7 +243,7 @@ kbd,
 samp {
   font-family: "Consolas", monospace;
   font-size: 0.83333rem; }
-  @media (min-width: 480px) {
+  @media       (min-width: 480px) {
     code,
     pre,
     kbd,
@@ -298,7 +298,7 @@ h1, h2, h3, h4, h5, h6 {
     color: inherit;
     vertical-align: 0;
     font-size: 83.33333%; }
-    @media (min-width: 480px) {
+    @media       (min-width: 480px) {
       h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
         font-size: 75.01875%; } }
 
@@ -326,7 +326,7 @@ h5 {
 h6 {
   font-size: 0.83333rem; }
 
-@media (min-width: 480px) {
+@media       (min-width: 480px) {
   h1, h2, h3 {
     margin: 1.5rem 0 0.375rem; }
   h1 {
@@ -580,7 +580,7 @@ table {
   border-spacing: 0;
   empty-cells: show;
   width: 100%; }
-  @media (min-width: 480px) {
+  @media       (min-width: 480px) {
     table {
       width: auto; }
       table th,
@@ -592,7 +592,7 @@ table {
     font-style: italic;
     line-height: 3rem;
     text-align: center; }
-    @media (min-width: 480px) {
+    @media       (min-width: 480px) {
       table caption {
         font-size: 0.75019rem; } }
   table thead {
@@ -607,7 +607,7 @@ table {
     line-height: 1.5rem;
     overflow: visible;
     padding: 0 1em; }
-    @media (min-width: 480px) {
+    @media       (min-width: 480px) {
       table th,
       table td {
         line-height: 3rem; } }
@@ -636,7 +636,7 @@ table {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
-  @media (min-width: 480px) {
+  @media       (min-width: 480px) {
     [grid] {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
@@ -767,7 +767,7 @@ table {
   -ms-flex-item-align: end;
       align-self: flex-end; }
 
-@media (min-width: 480px) {
+@media       (min-width: 480px) {
   [column~="1"] {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 8.33333%;

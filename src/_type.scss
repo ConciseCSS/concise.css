@@ -83,7 +83,7 @@ code,
 pre,
 kbd,
 samp {
-  font-family: $font-family-mono;
+  font-family: $font-mono;
   font-size: typeScale(1);
 
   @media ($breakpoint) {

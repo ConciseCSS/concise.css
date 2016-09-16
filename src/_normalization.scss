@@ -143,7 +143,7 @@ textarea {
   box-sizing: border-box;
   color: getColor(text, primary);
   cursor: default;
-  font: $font-size + px / 1.5 $font-family;
+  font: $font-size + px / 1.5 $font-primary;
   text-rendering: optimizeLegibility;
 
   @media ($breakpoint) {

@@ -26,17 +26,17 @@
 // Base
 // ----
 
-$font-size: 16 !default;
+$font-size:           16 !default;
 $font-size-secondary: 18 !default;
 
 // Font families
-$font-family-headings: "Helvetica", "Arial", sans-serif !default;
-$font-family:          "Helvetica", "Arial", sans-serif !default;
-$font-family-mono:     "Consolas", monospace !default;
-$font-family-print: "Georgia", "Times New Roman", "Times", serif !default;
+$font-primary:   "Helvetica", "Arial", sans-serif !default;
+$font-secondary: "Helvetica", "Arial", sans-serif !default;
+$font-mono:      "Consolas", monospace !default;
+$font-print:     "Georgia", "Times New Roman", "Times", serif !default;
 
 // Automatic margins
-$automargin: true !default;
+$automargin:   true !default;
 $block-margin: 1lh !default;
 
 // Transition duration
@@ -44,13 +44,13 @@ $transition-duration: 150ms !default;
 
 // Custom media queries
 @custom-media --extra-small (width <= 480px);
-@custom-media --small (width >= 480px);
-@custom-media --medium (width >= 768px);
-@custom-media --large (width >= 960px);
+@custom-media --small       (width >= 480px);
+@custom-media --medium      (width >= 768px);
+@custom-media --large       (width >= 960px);
 @custom-media --extra-large (width >= 1100px);
-@custom-media --only-small (480px < width <= 768px);
+@custom-media --only-small  (480px < width <= 768px);
 @custom-media --only-medium (768px < width <= 980px);
-@custom-media --only-large (980px < width <= 1100px);
+@custom-media --only-large  (980px < width <= 1100px);
 
 // Spacing
 $spacing-xs: 0.5lh !default;
@@ -102,6 +102,7 @@ $num-columns: 12 !default;
 // Prefix for attributes
 $prefix: '' !default;
 
+// Create columns and offsets above this breakpoint
 $breakpoint: --small !default;
 
 

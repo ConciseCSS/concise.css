@@ -4,7 +4,7 @@
 
 h1, h2, h3, h4, h5, h6 {
   color: getColor(text, heading);
-  font-family: $font-family-headings;
+  font-family: $font-secondary;
   line-height: 1.25;
 
   small {
