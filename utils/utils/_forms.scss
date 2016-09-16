@@ -10,7 +10,7 @@
 .input--help {
   color: getColor(text, secondary);
   display: block;
-  font-size: 12pr;
+  font-size: typeScale(1);
   font-weight: bold;
   margin-top: 0.25lh;
 }
@@ -25,7 +25,7 @@
   select,
   textarea { margin-bottom: 1lh; }
 
-  @media (--small) {
+  @media ($breakpoint) {
     input,
     select,
     textarea {
@@ -51,13 +51,13 @@
 
 // Small
 .input--small {
-  font-size: 12pr !important;
+  font-size: typeScale(1, $scale-ratio-secondary) !important;
   height: 1lh !important;
 }
 
 // Large
 .input--large {
-  font-size: 16pr !important;
+  font-size: typeScale(2) !important;
   height: 2lh !important;
 }
 

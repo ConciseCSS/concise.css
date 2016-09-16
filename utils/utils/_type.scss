@@ -4,7 +4,7 @@
 
 .h1, .h2, .h3 {
   a {
-    color: getColor(text, primary);
+    color: inherit;
 
     &:hover,
     &:focus {
