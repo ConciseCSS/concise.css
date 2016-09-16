@@ -44,22 +44,22 @@
     background-color: #db674b; }
 
 .button--xsm {
-  font-size: 0.75rem;
+  font-size: 12pr;
   line-height: 1.5rem;
   padding: 0 1em; }
 
 .button--sm {
-  font-size: 0.875rem;
+  font-size: 14pr;
   line-height: 1.875rem;
   padding: 0 1em; }
 
 .button--lg {
-  font-size: 1.125rem;
+  font-size: 18pr;
   line-height: 3rem;
   padding: 0 2em; }
 
 .button--xlg {
-  font-size: 1.125rem;
+  font-size: 18pr;
   line-height: 3.75rem;
   padding: 0 2.5em; }
 

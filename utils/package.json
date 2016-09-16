@@ -21,13 +21,13 @@
   },
   "homepage": "https://github.com/ConciseCSS/concise-utils#readme",
   "scripts": {
-    "build": "concise compile dist.scss dist/concise-utils.css && cssnano dist/concise-utils.css dist/concise-utils.min.css",
+    "build": "concisecss compile dist.scss dist/concise-utils.css && cssnano dist/concise-utils.css dist/concise-utils.min.css",
     "build:watch": "npm run build && chokidar '**/*.scss' -c 'npm run build'",
     "stats": "stylestats dist/concise-utils.css"
   },
   "devDependencies": {
     "chokidar-cli": "^1.2.0",
-    "concise-cli": "^0.2.0",
+    "concise-cli": "^0.3.0",
     "concise.css": "github:concisecss/concise.css#master",
     "cssnano-cli": "^1.0.4",
     "stylestats": "^6.3.0"
