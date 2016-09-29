@@ -6,10 +6,6 @@
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  */
-abbr[title] {
-  text-decoration: underline;
-  text-decoration: underline dotted; }
-
 audio:not([controls]) {
   display: none; }
 
@@ -239,6 +235,10 @@ abbr {
   -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1;
           font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1;
   /* 2 */ }
+  abbr[title] {
+    text-decoration: none;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: help; }
 
 code,
 pre,
