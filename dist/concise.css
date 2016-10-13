@@ -871,6 +871,8 @@ table {
     background-color: white;
     color: black;
     font: 11pt/1.3 "Georgia", "Times New Roman", "Times", serif; }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Georgia", "Times New Roman", "Times", serif; }
   img {
     max-width: 100% !important;
     page-break-after: avoid;
