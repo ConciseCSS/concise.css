@@ -1,6 +1,6 @@
 {
   "name": "concise.css",
-  "version": "3.4.0",
+  "version": "4.0.0",
   "description": "A lightweight front-end framework that provides functionality without the bloat.",
   "license": "MIT",
   "keywords": [
@@ -12,7 +12,8 @@
     "front-end",
     "framework",
     "web",
-    "lightweight"
+    "lightweight",
+    "postcss"
   ],
   "homepage": "http://concisecss.com",
   "bugs": "https://github.com/ConciseCSS/concise.css/issues",
@@ -21,7 +22,7 @@
     "url": "https://github.com/ConciseCSS/concise.css"
   },
   "engines": {
-    "node": "<=4.2.3"
+    "node": ">=6.0.0"
   },
   "devDependencies": {
     "chokidar-cli": "^1.2.0",
