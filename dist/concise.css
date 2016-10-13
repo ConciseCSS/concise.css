@@ -858,7 +858,7 @@ table {
 
 @media print {
   @page {
-    margin: .5cm; }
+    margin: 2cm; }
   *,
   *:before,
   *:after {
@@ -870,9 +870,22 @@ table {
   :root {
     background-color: white;
     color: black;
-    font: 11pt/1.3 "Georgia", "Times New Roman", "Times", serif; }
+    font: 12pt/1.4 "Georgia", "Times New Roman", "Times", serif; }
+  body {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important; }
   h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
     font-family: "Georgia", "Times New Roman", "Times", serif; }
+  h1 {
+    font-size: 19pt; }
+  h2 {
+    font-size: 17pt; }
+  h3 {
+    font-size: 15pt; }
+  h4, h5, h6 {
+    font-size: 14pt; }
   img {
     max-width: 100% !important;
     page-break-after: avoid;
@@ -890,8 +903,6 @@ table {
   h2, h3 {
     orphans: 3;
     widows: 3; }
-  h2, h3 {
-    page-break-after: avoid; }
   a,
   a:visited {
     color: black;

@@ -3,7 +3,7 @@
 // =============================================================================
 
 @media print {
-  @page { margin: .5cm; }
+  @page { margin: 2cm; }
 
   *,
   *:before,
@@ -17,12 +17,24 @@
   :root {
     background-color: white;
     color: black;
-    font: 11pt / 1.3 $font-print-primary;
+    font: 12pt / 1.4 $font-print-primary;
+  }
+
+  body {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
     font-family: $font-print-secondary;
   }
+
+  h1 { font-size: 19pt; }
+  h2 { font-size: 17pt; }
+  h3 { font-size: 15pt; }
+  h4, h5, h6 {font-size: 14pt; }
 
   img {
     max-width: 100% !important;
@@ -46,8 +58,6 @@
     orphans: 3;
     widows: 3;
   }
-
-  h2, h3 { page-break-after: avoid; }
 
   a,
   a:visited {
