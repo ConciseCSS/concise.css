@@ -33,10 +33,11 @@ $font-size-secondary: 18 !default;
 $letter-spacing: 0.05em !default;
 
 // Font families
-$font-primary:   "Helvetica", "Arial", sans-serif !default;
+$font-primary: "Helvetica", "Arial", sans-serif !default;
 $font-secondary: "Helvetica", "Arial", sans-serif !default;
-$font-mono:      "Consolas", monospace !default;
-$font-print:     "Georgia", "Times New Roman", "Times", serif !default;
+$font-mono: "Consolas", monospace !default;
+$font-print-primary: "Georgia", "Times New Roman", "Times", serif !default;
+$font-print-secondary: "Georgia", "Times New Roman", "Times", serif !default;
 
 // Automatic margins
 $automargin:   true !default;

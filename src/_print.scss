@@ -17,7 +17,11 @@
   :root {
     background-color: white;
     color: black;
-    font: 11pt / 1.3 $font-print;
+    font: 11pt / 1.3 $font-print-primary;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $font-print-secondary;
   }
 
   img {
