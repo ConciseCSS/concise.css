@@ -107,7 +107,6 @@
   //
   // Column widths
   //
-
   @for $i from 1 through $num-columns {
     [#{$prefix}column~="#{$i}"] {
       flex: 0 1 ($i/$num-columns) * 100%;
@@ -118,10 +117,116 @@
   //
   // Column offsets
   //
-
   @for $i from 1 through $num-columns {
     [#{$prefix}column~="+#{$i}"] {
       margin-left: ($i/$num-columns) * 100%;
+    }
+  }
+}
+
+@if ($full-grid) {
+  @media (--extra-small) {
+    //
+    // Column widths
+    //
+    @for $i from 1 through $num-columns {
+      [#{$prefix}column~="xs-#{$i}"] {
+        flex: 0 1 ($i/$num-columns) * 100%;
+        max-width: ($i/$num-columns) * 100%;
+      }
+    }
+
+    //
+    // Column offsets
+    //
+    @for $i from 1 through $num-columns {
+      [#{$prefix}column~="+xs-#{$i}"] {
+        margin-left: ($i/$num-columns) * 100%;
+      }
+    }
+  }
+
+  @media (--small) {
+    //
+    // Column widths
+    //
+    @for $i from 1 through $num-columns {
+      [#{$prefix}column~="sm-#{$i}"] {
+        flex: 0 1 ($i/$num-columns) * 100%;
+        max-width: ($i/$num-columns) * 100%;
+      }
+    }
+
+    //
+    // Column offsets
+    //
+    @for $i from 1 through $num-columns {
+      [#{$prefix}column~="+sm-#{$i}"] {
+        margin-left: ($i/$num-columns) * 100%;
+      }
+    }
+  }
+
+  @media (--medium) {
+    //
+    // Column widths
+    //
+    @for $i from 1 through $num-columns {
+      [#{$prefix}column~="md-#{$i}"] {
+        flex: 0 1 ($i/$num-columns) * 100%;
+        max-width: ($i/$num-columns) * 100%;
+      }
+    }
+
+    //
+    // Column offsets
+    //
+    @for $i from 1 through $num-columns {
+      [#{$prefix}column~="+md-#{$i}"] {
+        margin-left: ($i/$num-columns) * 100%;
+      }
+    }
+  }
+
+  @media (--large) {
+    //
+    // Column widths
+    //
+    @for $i from 1 through $num-columns {
+      [#{$prefix}column~="lg-#{$i}"] {
+        flex: 0 1 ($i/$num-columns) * 100%;
+        max-width: ($i/$num-columns) * 100%;
+      }
+    }
+
+    //
+    // Column offsets
+    //
+    @for $i from 1 through $num-columns {
+      [#{$prefix}column~="+lg-#{$i}"] {
+        margin-left: ($i/$num-columns) * 100%;
+      }
+    }
+  }
+
+  @media (--extra-large) {
+    //
+    // Column widths
+    //
+    @for $i from 1 through $num-columns {
+      [#{$prefix}column~="xl-#{$i}"] {
+        flex: 0 1 ($i/$num-columns) * 100%;
+        max-width: ($i/$num-columns) * 100%;
+      }
+    }
+
+    //
+    // Column offsets
+    //
+    @for $i from 1 through $num-columns {
+      [#{$prefix}column~="+xl-#{$i}"] {
+        margin-left: ($i/$num-columns) * 100%;
+      }
     }
   }
 }

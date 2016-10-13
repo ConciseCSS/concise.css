@@ -93,6 +93,9 @@ $scale-ratio-secondary: $perfect-fourth !default;
 // Grid
 // ----
 
+// Create x-*, sm-*, md-*, lg-*, xl-* columns and offsets
+$full-grid: false;
+
 // Max width for container
 $container-width: 1200px !default;
 
