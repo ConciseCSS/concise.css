@@ -70,20 +70,20 @@ $spacing-xl: 4lh !default;
 
 // Suggested ratios
 // Source: http://type-scale.com/
-$minor-second:     1.067;
-$major-second:     1.125;
-$minor-third:      1.200;
-$major-third:      1.250;
-$perfect-fourth:   1.333;
-$augmented-fourth: 1.414;
-$perfect-fifth:    1.500;
-$golden-ratio:     1.618;
+$_minor-second:     1.067;
+$_major-second:     1.125;
+$_minor-third:      1.200;
+$_major-third:      1.250;
+$_perfect-fourth:   1.333;
+$_augmented-fourth: 1.414;
+$_perfect-fifth:    1.500;
+$_golden-ratio:     1.618;
 
 // Ratio for primary scale
-$scale-ratio: $minor-third !default;
+$scale-ratio: $_minor-third !default;
 
 // Ratio for secondary scale
-$scale-ratio-secondary: $perfect-fourth !default;
+$scale-ratio-secondary: $_perfect-fourth !default;
 
 // Function to easily retrieve sizes from a scale.
 @function typeScale($size, $ratio: $scale-ratio) {
