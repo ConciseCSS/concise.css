@@ -631,7 +631,8 @@
 
 ._small-caps {
   -webkit-font-feature-settings: "smcp" 1, "c2sc" 1;
-          font-feature-settings: "smcp" 1, "c2sc" 1; }
+          font-feature-settings: "smcp" 1, "c2sc" 1;
+  letter-spacing: 0.05em; }
 
 ._text-center {
   text-align: center; }

@@ -9,7 +9,10 @@
 ._italic { font-style: italic; }
 ._no-decoration {text-decoration: none; }
 ._regular { font-weight: normal; }
-._small-caps { font-feature-settings: "smcp" 1, "c2sc" 1; }
+._small-caps { 
+  font-feature-settings: "smcp" 1, "c2sc" 1;
+  letter-spacing: 0.05em;
+}
 ._text-center { text-align: center; }
 ._text-left { text-align: left; }
 ._text-right { text-align: right; }
