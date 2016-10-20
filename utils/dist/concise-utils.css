@@ -674,3 +674,17 @@
 
 ._pos-fix {
   position: fixed; }
+
+._dis-inline-block {
+  display: inline-block; }
+
+._dis-block {
+  display: block; }
+
+._dis-inline {
+  display: inline; }
+
+._dis-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
