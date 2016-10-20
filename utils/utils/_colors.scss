@@ -1,0 +1,15 @@
+//
+// Color classes
+// =============================================================================
+
+@each $color-name, $color in $colors {
+  @each $color-type, $color-value in $color {
+    .c-#{$color-name}-#{$color-type} {
+      color: $color-value;
+    }
+
+    .bg-#{$color-name}-#{$color-type} {
+      background-color: $color-value;
+    }
+  }
+}
