@@ -631,8 +631,7 @@
 
 ._small-caps {
   -webkit-font-feature-settings: "smcp" 1, "c2sc" 1;
-          font-feature-settings: "smcp" 1, "c2sc" 1;
-  letter-spacing: 0.05em; }
+          font-feature-settings: "smcp" 1, "c2sc" 1; }
 
 ._text-center {
   text-align: center; }
@@ -645,3 +644,6 @@
 
 ._underline {
   text-decoration: underline; }
+
+._letter-spacing {
+  letter-spacing: 0.05em; }
