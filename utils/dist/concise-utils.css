@@ -647,3 +647,18 @@
 
 ._letter-spacing {
   letter-spacing: 0.05em; }
+
+._font-primary {
+  font-family: "Helvetica", "Arial", sans-serif; }
+
+._font-secondary {
+  font-family: "Helvetica", "Arial", sans-serif; }
+
+._font-mono {
+  font-family: "Consolas", monospace; }
+
+._font-print {
+  font-family: "Georgia", "Times New Roman", "Times", serif; }
+
+._font-print-secondary {
+  font-family: "Georgia", "Times New Roman", "Times", serif; }
