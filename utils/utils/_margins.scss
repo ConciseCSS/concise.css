@@ -11,9 +11,9 @@
 
 // All the sides
 .mxs { margin: $spacing-xs; }
-.msm { margin: $spacing-sm; }
-.mmd { margin: $spacing-md; }
-.mlg { margin: $spacing-lg; }
+.ms { margin: $spacing-s; }
+.mm { margin: $spacing-m; }
+.ml { margin: $spacing-l; }
 .mxl { margin: $spacing-xl; }
 
 // Extra small
@@ -23,22 +23,22 @@
 .mlxs { margin-left: $spacing-xs; }
 
 // Small
-.mtsm { margin-top: $spacing-sm; }
-.mrsm { margin-right: $spacing-sm; }
-.mbsm { margin-bottom: $spacing-sm; }
-.mlsm { margin-left: $spacing-sm; }
+.mts { margin-top: $spacing-s; }
+.mrs { margin-right: $spacing-s; }
+.mbs { margin-bottom: $spacing-s; }
+.mls { margin-left: $spacing-s; }
 
 // Medium
-.mtmd { margin-top: $spacing-md; }
-.mrmd { margin-right: $spacing-md; }
-.mbmd { margin-bottom: $spacing-md; }
-.mlmd { margin-left: $spacing-md; }
+.mtm { margin-top: $spacing-m; }
+.mrm { margin-right: $spacing-m; }
+.mbm { margin-bottom: $spacing-m; }
+.mlm { margin-left: $spacing-m; }
 
 // Large
-.mtlg { margin-top: $spacing-lg; }
-.mrlg { margin-right: $spacing-lg; }
-.mblg { margin-bottom: $spacing-lg; }
-.mllg { margin-left: $spacing-lg; }
+.mtl { margin-top: $spacing-l; }
+.mrl { margin-right: $spacing-l; }
+.mbl { margin-bottom: $spacing-l; }
+.mll { margin-left: $spacing-l; }
 
 // Extra Large
 .mtxl { margin-top: $spacing-xl; }
