@@ -1,0 +1,47 @@
+//
+// Margin classes
+// =============================================================================
+
+// Resets
+.m0 { margin: 0; }
+.mt0 { margin-top: 0; }
+.mr0 { margin-right: 0; }
+.mb0 { margin-bottom: 0; }
+.ml0 { margin-left: 0; }
+
+// All the sides
+.mxs { margin: $spacing-xs; }
+.msm { margin: $spacing-sm; }
+.mmd { margin: $spacing-md; }
+.mlg { margin: $spacing-lg; }
+.mxl { margin: $spacing-xl; }
+
+// Extra small
+.mtxs { margin-top: $spacing-xs; }
+.mrxs { margin-right: $spacing-xs; }
+.mbxs { margin-bottom: $spacing-xs; }
+.mlxs { margin-left: $spacing-xs; }
+
+// Small
+.mtsm { margin-top: $spacing-sm; }
+.mrsm { margin-right: $spacing-sm; }
+.mbsm { margin-bottom: $spacing-sm; }
+.mlsm { margin-left: $spacing-sm; }
+
+// Medium
+.mtmd { margin-top: $spacing-md; }
+.mrmd { margin-right: $spacing-md; }
+.mbmd { margin-bottom: $spacing-md; }
+.mlmd { margin-left: $spacing-md; }
+
+// Large
+.mtlg { margin-top: $spacing-lg; }
+.mrlg { margin-right: $spacing-lg; }
+.mblg { margin-bottom: $spacing-lg; }
+.mllg { margin-left: $spacing-lg; }
+
+// Extra Large
+.mtxl { margin-top: $spacing-xl; }
+.mrxl { margin-right: $spacing-xl; }
+.mbxl { margin-bottom: $spacing-xl; }
+.mlxl { margin-left: $spacing-xl; }
