@@ -247,241 +247,333 @@
   border-top: 4px solid #e0e0e0; }
 
 .c-base-primary {
-  color: #4591aa !important; }
+  color: #4591aa; }
 
 .bg-base-primary {
-  background-color: #4591aa !important; }
+  background-color: #4591aa; }
 
 .c-base-selection {
-  color: #d6d6d6 !important; }
+  color: #d6d6d6; }
 
 .bg-base-selection {
-  background-color: #d6d6d6 !important; }
+  background-color: #d6d6d6; }
 
 .c-base-lines {
-  color: #e0e0e0 !important; }
+  color: #e0e0e0; }
 
 .bg-base-lines {
-  background-color: #e0e0e0 !important; }
+  background-color: #e0e0e0; }
 
 .c-text-primary {
-  color: #555 !important; }
+  color: #555; }
 
 .bg-text-primary {
-  background-color: #555 !important; }
+  background-color: #555; }
 
 .c-text-secondary {
-  color: #666 !important; }
+  color: #666; }
 
 .bg-text-secondary {
-  background-color: #666 !important; }
+  background-color: #666; }
 
 .c-text-heading {
-  color: #222 !important; }
+  color: #222; }
 
 .bg-text-heading {
-  background-color: #222 !important; }
+  background-color: #222; }
 
 .c-text-ui {
-  color: white !important; }
+  color: white; }
 
 .bg-text-ui {
-  background-color: white !important; }
+  background-color: white; }
 
 .c-background-dark {
-  color: #282E31 !important; }
+  color: #282E31; }
 
 .bg-background-dark {
-  background-color: #282E31 !important; }
+  background-color: #282E31; }
 
 .c-background-light {
-  color: #f5f5f5 !important; }
+  color: #f5f5f5; }
 
 .bg-background-light {
-  background-color: #f5f5f5 !important; }
+  background-color: #f5f5f5; }
 
 .c-background-body {
-  color: white !important; }
+  color: white; }
 
 .bg-background-body {
-  background-color: white !important; }
+  background-color: white; }
 
 .c-state-muted {
-  color: #aaa !important; }
+  color: #aaa; }
 
 .bg-state-muted {
-  background-color: #aaa !important; }
+  background-color: #aaa; }
 
 .c-state-primary {
-  color: #4591aa !important; }
+  color: #4591aa; }
 
 .bg-state-primary {
-  background-color: #4591aa !important; }
+  background-color: #4591aa; }
 
 .c-state-success {
-  color: #45ca69 !important; }
+  color: #45ca69; }
 
 .bg-state-success {
-  background-color: #45ca69 !important; }
+  background-color: #45ca69; }
 
 .c-state-warning {
-  color: #ffb800 !important; }
+  color: #ffb800; }
 
 .bg-state-warning {
-  background-color: #ffb800 !important; }
+  background-color: #ffb800; }
 
 .c-state-error {
-  color: #ca4829 !important; }
+  color: #ca4829; }
 
 .bg-state-error {
-  background-color: #ca4829 !important; }
+  background-color: #ca4829; }
 
 .c-blue-darker {
-  color: #495b61 !important; }
+  color: #495b61; }
 
 .bg-blue-darker {
-  background-color: #495b61 !important; }
+  background-color: #495b61; }
 
 .c-blue-dark {
-  color: #447281 !important; }
+  color: #447281; }
 
 .bg-blue-dark {
-  background-color: #447281 !important; }
+  background-color: #447281; }
 
 .c-blue-base {
-  color: #4591aa !important; }
+  color: #4591aa; }
 
 .bg-blue-base {
-  background-color: #4591aa !important; }
+  background-color: #4591aa; }
 
 .c-blue-light {
-  color: #5ab0cc !important; }
+  color: #5ab0cc; }
 
 .bg-blue-light {
-  background-color: #5ab0cc !important; }
+  background-color: #5ab0cc; }
 
 .c-blue-lighter {
-  color: #74cbe8 !important; }
+  color: #74cbe8; }
 
 .bg-blue-lighter {
-  background-color: #74cbe8 !important; }
+  background-color: #74cbe8; }
 
 .c-green-darker {
-  color: #3b6e6e !important; }
+  color: #3b6e6e; }
 
 .bg-green-darker {
-  background-color: #3b6e6e !important; }
+  background-color: #3b6e6e; }
 
 .c-green-dark {
-  color: #3b8686 !important; }
+  color: #3b8686; }
 
 .bg-green-dark {
-  background-color: #3b8686 !important; }
+  background-color: #3b8686; }
 
 .c-green-base {
-  color: #37a1a1 !important; }
+  color: #37a1a1; }
 
 .bg-green-base {
-  background-color: #37a1a1 !important; }
+  background-color: #37a1a1; }
 
 .c-green-light {
-  color: #2dbaba !important; }
+  color: #2dbaba; }
 
 .bg-green-light {
-  background-color: #2dbaba !important; }
+  background-color: #2dbaba; }
 
 .c-green-lighter {
-  color: #69d1d1 !important; }
+  color: #69d1d1; }
 
 .bg-green-lighter {
-  background-color: #69d1d1 !important; }
+  background-color: #69d1d1; }
 
 .c-cream-darker {
-  color: #c47858 !important; }
+  color: #c47858; }
 
 .bg-cream-darker {
-  background-color: #c47858 !important; }
+  background-color: #c47858; }
 
 .c-cream-dark {
-  color: #e29372 !important; }
+  color: #e29372; }
 
 .bg-cream-dark {
-  background-color: #e29372 !important; }
+  background-color: #e29372; }
 
 .c-cream-base {
-  color: #ecac91 !important; }
+  color: #ecac91; }
 
 .bg-cream-base {
-  background-color: #ecac91 !important; }
+  background-color: #ecac91; }
 
 .c-cream-light {
-  color: #f9c2ab !important; }
+  color: #f9c2ab; }
 
 .bg-cream-light {
-  background-color: #f9c2ab !important; }
+  background-color: #f9c2ab; }
 
 .c-cream-lighter {
-  color: #fdd5c3 !important; }
+  color: #fdd5c3; }
 
 .bg-cream-lighter {
-  background-color: #fdd5c3 !important; }
+  background-color: #fdd5c3; }
 
 .c-red-darker {
-  color: #653131 !important; }
+  color: #653131; }
 
 .bg-red-darker {
-  background-color: #653131 !important; }
+  background-color: #653131; }
 
 .c-red-dark {
-  color: #b73333 !important; }
+  color: #b73333; }
 
 .bg-red-dark {
-  background-color: #b73333 !important; }
+  background-color: #b73333; }
 
 .c-red-base {
-  color: #da3c3c !important; }
+  color: #da3c3c; }
 
 .bg-red-base {
-  background-color: #da3c3c !important; }
+  background-color: #da3c3c; }
 
 .c-red-light {
-  color: #f25a5a !important; }
+  color: #f25a5a; }
 
 .bg-red-light {
-  background-color: #f25a5a !important; }
+  background-color: #f25a5a; }
 
 .c-red-lighter {
-  color: #fa8181 !important; }
+  color: #fa8181; }
 
 .bg-red-lighter {
-  background-color: #fa8181 !important; }
+  background-color: #fa8181; }
 
 .c-gray-darker {
-  color: #333333 !important; }
+  color: #333333; }
 
 .bg-gray-darker {
-  background-color: #333333 !important; }
+  background-color: #333333; }
 
 .c-gray-dark {
-  color: #4d4d4d !important; }
+  color: #4d4d4d; }
 
 .bg-gray-dark {
-  background-color: #4d4d4d !important; }
+  background-color: #4d4d4d; }
 
 .c-gray-base {
-  color: #666666 !important; }
+  color: #666666; }
 
 .bg-gray-base {
-  background-color: #666666 !important; }
+  background-color: #666666; }
 
 .c-gray-light {
-  color: #808080 !important; }
+  color: #808080; }
 
 .bg-gray-light {
-  background-color: #808080 !important; }
+  background-color: #808080; }
 
 .c-gray-lighter {
-  color: #999999 !important; }
+  color: #999999; }
 
 .bg-gray-lighter {
-  background-color: #999999 !important; }
+  background-color: #999999; }
+
+.show-xs,
+.hide-s,
+.hide-m,
+.hide-l,
+.hide-xl,
+.hide-print,
+.hide-hd {
+  display: block;
+  visibility: visible; }
+
+.hide-xs,
+.show-s,
+.show-m,
+.show-l,
+.show-xl,
+.show-print,
+.show-hd {
+  display: none;
+  visibility: hidden; }
+
+@media (min-width: 480px) {
+  .show-s,
+  .hide-xs,
+  .hide-m,
+  .hide-l,
+  .hide-xl {
+    display: block;
+    visibility: visible; }
+  .hide-s,
+  .show-xs,
+  .show-m,
+  .show-l,
+  .show-xl {
+    display: none;
+    visibility: hidden; } }
+
+@media (min-width: 768px) {
+  .show-m,
+  .hide-sm
+.hide-xm,
+  .hide-l,
+  .hide-xl {
+    display: block;
+    visibility: visible; }
+  .hide-m,
+  .show-sm
+.show-xm,
+  .show-l,
+  .show-xl {
+    display: none;
+    visibility: hidden; } }
+
+@media (min-width: 960px) {
+  .show-l,
+  .hide-xs,
+  .hide-s,
+  .hide-m,
+  .hide-xl {
+    display: block;
+    visibility: visible; }
+  .hide-l,
+  .show-xs,
+  .show-s,
+  .show-m,
+  .show-xl {
+    display: none;
+    visibility: hidden; } }
+
+@media (min-width: 1100px) {
+  .show-xl,
+  .hide-xs,
+  .hide-s,
+  .hide-m,
+  .hide-l {
+    display: block;
+    visibility: visible; }
+  .hide-xl,
+  .show-xs,
+  .show-s,
+  .show-m,
+  .show-l {
+    display: none;
+    visibility: hidden; } }
+
+@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  .show-hd {
+    display: block;
+    visibility: visible; }
+  .hide-hd {
+    display: none;
+    visibility: hidden; } }
