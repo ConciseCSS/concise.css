@@ -662,3 +662,15 @@
 
 ._font-print-secondary {
   font-family: "Georgia", "Times New Roman", "Times", serif; }
+
+._pos-abs {
+  position: absolute; }
+
+._pos-rel {
+  position: relative; }
+
+._pos-static {
+  position: static; }
+
+._pos-fix {
+  position: fixed; }
