@@ -70,14 +70,14 @@ $spacing-xl: 4lh !default;
 
 // Suggested ratios
 // Source: http://type-scale.com/
-$_minor-second:     1.067;
-$_major-second:     1.125;
-$_minor-third:      1.200;
-$_major-third:      1.250;
-$_perfect-fourth:   1.333;
-$_augmented-fourth: 1.414;
-$_perfect-fifth:    1.500;
-$_golden-ratio:     1.618;
+$_minor-second:     1.067 !default;
+$_major-second:     1.125 !default;
+$_minor-third:      1.200 !default;
+$_major-third:      1.250 !default;
+$_perfect-fourth:   1.333 !default;
+$_augmented-fourth: 1.414 !default;
+$_perfect-fifth:    1.500 !default;
+$_golden-ratio:     1.618 !default;
 
 // Ratio for primary scale
 $scale-ratio: $_minor-third !default;
