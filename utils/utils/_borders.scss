@@ -1,0 +1,29 @@
+//
+// Border classes
+// =============================================================================
+
+.b0 { border: 0; }
+.bt0 { border-top: 0; }
+.br0 { border-right: 0; }
+.bb0 { border-bottom: 0; }
+.bl0 { border-left: 0; }
+
+.bt1 { border-top: 1px solid getColor(base, lines); }
+.br1 { border-top: 1px solid getColor(base, lines); }
+.bb1 { border-top: 1px solid getColor(base, lines); }
+.bl1 { border-top: 1px solid getColor(base, lines); }
+
+.bt2 { border-top: 2px solid getColor(base, lines); }
+.br2 { border-top: 2px solid getColor(base, lines); }
+.bb2 { border-top: 2px solid getColor(base, lines); }
+.bl2 { border-top: 2px solid getColor(base, lines); }
+
+.bt3 { border-top: 3px solid getColor(base, lines); }
+.br3 { border-top: 3px solid getColor(base, lines); }
+.bb3 { border-top: 3px solid getColor(base, lines); }
+.bl3 { border-top: 3px solid getColor(base, lines); }
+
+.bt4 { border-top: 4px solid getColor(base, lines); }
+.br4 { border-top: 4px solid getColor(base, lines); }
+.bb4 { border-top: 4px solid getColor(base, lines); }
+.bl4 { border-top: 4px solid getColor(base, lines); }
