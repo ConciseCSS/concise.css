@@ -92,3 +92,93 @@
 
 .mlxl {
   margin-left: 6rem; }
+
+.p0 {
+  padding: 0; }
+
+.pt0 {
+  padding-top: 0; }
+
+.pr0 {
+  padding-right: 0; }
+
+.pb0 {
+  padding-bottom: 0; }
+
+.pl0 {
+  padding-left: 0; }
+
+.pxs {
+  padding: 0.75rem; }
+
+.ps {
+  padding: 1.5rem; }
+
+.pm {
+  padding: 3rem; }
+
+.pl {
+  padding: 4.5rem; }
+
+.pxl {
+  padding: 6rem; }
+
+.ptxs {
+  padding-top: 0.75rem; }
+
+.prxs {
+  padding-right: 0.75rem; }
+
+.pbxs {
+  padding-bottom: 0.75rem; }
+
+.plxs {
+  padding-left: 0.75rem; }
+
+.pts {
+  padding-top: 1.5rem; }
+
+.prs {
+  padding-right: 1.5rem; }
+
+.pbs {
+  padding-bottom: 1.5rem; }
+
+.pls {
+  padding-left: 1.5rem; }
+
+.ptm {
+  padding-top: 3rem; }
+
+.prm {
+  padding-right: 3rem; }
+
+.pbm {
+  padding-bottom: 3rem; }
+
+.plm {
+  padding-left: 3rem; }
+
+.ptl {
+  padding-top: 4.5rem; }
+
+.prl {
+  padding-right: 4.5rem; }
+
+.pbl {
+  padding-bottom: 4.5rem; }
+
+.pll {
+  padding-left: 4.5rem; }
+
+.ptxl {
+  padding-top: 6rem; }
+
+.prxl {
+  padding-right: 6rem; }
+
+.pbxl {
+  padding-bottom: 6rem; }
+
+.plxl {
+  padding-left: 6rem; }

@@ -1,0 +1,47 @@
+//
+// Margin classes
+// =============================================================================
+
+// Resets
+.p0 { padding: 0; }
+.pt0 { padding-top: 0; }
+.pr0 { padding-right: 0; }
+.pb0 { padding-bottom: 0; }
+.pl0 { padding-left: 0; }
+
+// All the sides
+.pxs { padding: $spacing-xs; }
+.ps { padding: $spacing-s; }
+.pm { padding: $spacing-m; }
+.pl { padding: $spacing-l; }
+.pxl { padding: $spacing-xl; }
+
+// Extra small
+.ptxs { padding-top: $spacing-xs; }
+.prxs { padding-right: $spacing-xs; }
+.pbxs { padding-bottom: $spacing-xs; }
+.plxs { padding-left: $spacing-xs; }
+
+// Small
+.pts { padding-top: $spacing-s; }
+.prs { padding-right: $spacing-s; }
+.pbs { padding-bottom: $spacing-s; }
+.pls { padding-left: $spacing-s; }
+
+// Medium
+.ptm { padding-top: $spacing-m; }
+.prm { padding-right: $spacing-m; }
+.pbm { padding-bottom: $spacing-m; }
+.plm { padding-left: $spacing-m; }
+
+// Large
+.ptl { padding-top: $spacing-l; }
+.prl { padding-right: $spacing-l; }
+.pbl { padding-bottom: $spacing-l; }
+.pll { padding-left: $spacing-l; }
+
+// Extra Large
+.ptxl { padding-top: $spacing-xl; }
+.prxl { padding-right: $spacing-xl; }
+.pbxl { padding-bottom: $spacing-xl; }
+.plxl { padding-left: $spacing-xl; }
