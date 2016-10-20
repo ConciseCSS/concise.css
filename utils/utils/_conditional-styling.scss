@@ -21,23 +21,23 @@
 // Extra-Small Devices
 // -------------------
 
-.show-xs,
-.hide-s,
-.hide-m,
-.hide-l,
-.hide-xl,
-.hide-print,
-.hide-hd {
+._show-xs,
+._hide-s,
+._hide-m,
+._hide-l,
+._hide-xl,
+._hide-print,
+._hide-hd {
   @include show-conditional;
 }
 
-.hide-xs,
-.show-s,
-.show-m,
-.show-l,
-.show-xl,
-.show-print,
-.show-hd {
+._hide-xs,
+._show-s,
+._show-m,
+._show-l,
+._show-xl,
+._show-print,
+._show-hd {
   @include hide-conditional;
 }
 
@@ -47,19 +47,19 @@
 // -------------
 
 @media (--small) {
-  .show-s,
-  .hide-xs,
-  .hide-m,
-  .hide-l,
-  .hide-xl {
+  ._show-s,
+  ._hide-xs,
+  ._hide-m,
+  ._hide-l,
+  ._hide-xl {
     @include show-conditional;
   }
 
-  .hide-s,
-  .show-xs,
-  .show-m,
-  .show-l,
-  .show-xl {
+  ._hide-s,
+  ._show-xs,
+  ._show-m,
+  ._show-l,
+  ._show-xl {
     @include hide-conditional;
   }
 }
@@ -70,19 +70,19 @@
 // --------------
 
 @media (--medium) {
-  .show-m,
-  .hide-sm
-  .hide-xm,
-  .hide-l,
-  .hide-xl {
+  ._show-m,
+  ._hide-sm
+  ._hide-xm,
+  ._hide-l,
+  ._hide-xl {
     @include show-conditional;
   }
 
-  .hide-m,
-  .show-sm
-  .show-xm,
-  .show-l,
-  .show-xl {
+  ._hide-m,
+  ._show-sm
+  ._show-xm,
+  ._show-l,
+  ._show-xl {
     @include hide-conditional;
   }
 }
@@ -93,19 +93,19 @@
 // -------------
 
 @media (--large) {
-  .show-l,
-  .hide-xs,
-  .hide-s,
-  .hide-m,
-  .hide-xl {
+  ._show-l,
+  ._hide-xs,
+  ._hide-s,
+  ._hide-m,
+  ._hide-xl {
     @include show-conditional;
   }
 
-  .hide-l,
-  .show-xs,
-  .show-s,
-  .show-m,
-  .show-xl {
+  ._hide-l,
+  ._show-xs,
+  ._show-s,
+  ._show-m,
+  ._show-xl {
     @include hide-conditional;
   }
 }
@@ -116,19 +116,19 @@
 // -------------------
 
 @media (--extra-large) {
-  .show-xl,
-  .hide-xs,
-  .hide-s,
-  .hide-m,
-  .hide-l {
+  ._show-xl,
+  ._hide-xs,
+  ._hide-s,
+  ._hide-m,
+  ._hide-l {
     @include show-conditional;
   }
 
-  .hide-xl,
-  .show-xs,
-  .show-s,
-  .show-m,
-  .show-l {
+  ._hide-xl,
+  ._show-xs,
+  ._show-s,
+  ._show-m,
+  ._show-l {
     @include hide-conditional;
   }
 }
@@ -142,11 +142,11 @@
 only screen and (-o-min-device-pixel-ratio: 3 / 2),
 only screen and (-webkit-min-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {
-  .show-hd {
+  ._show-hd {
     @include show-conditional;
   }
 
-  .hide-hd {
+  ._hide-hd {
     @include hide-conditional;
   }
 }
