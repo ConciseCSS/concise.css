@@ -626,15 +626,15 @@ table {
   margin-left: auto;
   margin-right: auto;
   max-width: 1200px;
-  padding-left: 1em;
-  padding-right: 1em; }
+  padding-left: 1rem;
+  padding-right: 1rem; }
 
 [grid] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: -1em;
-  margin-right: -1em;
+  margin-left: -1rem;
+  margin-right: -1rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -650,8 +650,8 @@ table {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding-left: 1em;
-  padding-right: 1em; }
+  padding-left: 1rem;
+  padding-right: 1rem; }
 
 [grid~="ng"] {
   margin-left: 0;
