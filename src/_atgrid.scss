@@ -50,14 +50,6 @@
   [#{$prefix}grid~="no-collapse"] { flex-flow: row nowrap; }
 
   //
-  // Wrap columns
-  //
-
-  [#{$prefix}grid~="wrap"] { flex-wrap: wrap; }
-  [#{$prefix}grid~="nowrap"] { flex-wrap: nowrap; }
-  [#{$prefix}grid~="wrap-reverse"] { flex-wrap: wrap-reverse; }
-
-  //
   // Direction of columns in a row
   //
 
