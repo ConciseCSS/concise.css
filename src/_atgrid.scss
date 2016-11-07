@@ -4,133 +4,112 @@
 // MIT License - James Kolce <contact@jameskolce.com>
 // =============================================================================
 
-[#{$prefix}container] {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: $container-width;
-  padding-left: $gutter / 2;
-  padding-right: $gutter / 2;
-}
+@if ($enable-grid) {
+  [#{$prefix}container] {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $container-width;
+    padding-left: $gutter / 2;
+    padding-right: $gutter / 2;
+  }
 
-[#{$prefix}grid] {
-  display: flex;
-  margin-left: $gutter / -2;
-  margin-right: $gutter / -2;
-  flex-direction: column;
+  [#{$prefix}grid] {
+    display: flex;
+    margin-left: $gutter / -2;
+    margin-right: $gutter / -2;
+    flex-direction: column;
 
-  // Collapse columns on breakpoint
-  @media ($breakpoint) { flex-direction: row; }
-}
-
-[#{$prefix}column] {
-  flex: 1;
-  padding-left: $gutter / 2;
-  padding-right: $gutter / 2;
-}
-
-//
-// No Gutters
-//
-
-[#{$prefix}grid~="ng"] {
-  margin-left: 0;
-  margin-right: 0;
+    // Collapse columns on breakpoint
+    @media ($breakpoint) { flex-direction: row; }
+  }
 
   [#{$prefix}column] {
-    padding-left: 0;
-    padding-right: 0;
+    flex: 1;
+    padding-left: $gutter / 2;
+    padding-right: $gutter / 2;
   }
-}
 
-//
-// No margins
-//
-
-[#{$prefix}grid~="nm"] {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-//
-// No Collapse columns
-//
-
-[#{$prefix}grid~="no-collapse"] { flex-flow: row nowrap; }
-
-//
-// Wrap columns
-//
-
-[#{$prefix}grid~="wrap"] { flex-wrap: wrap; }
-[#{$prefix}grid~="nowrap"] { flex-wrap: nowrap; }
-[#{$prefix}grid~="wrap-reverse"] { flex-wrap: wrap-reverse; }
-
-//
-// Direction of columns in a row
-//
-
-[#{$prefix}grid~="row"] { flex-direction: row; }
-[#{$prefix}grid~="row-reverse"] { flex-direction: row-reverse; }
-[#{$prefix}grid~="column"] { flex-direction: column; }
-[#{$prefix}grid~="column-reverse"] { flex-direction: column-reverse; }
-
-//
-// Justify content
-//
-
-[#{$prefix}grid~="justify-start"] { justify-content: flex-start; }
-[#{$prefix}grid~="justify-end"] { justify-content: flex-end; }
-[#{$prefix}grid~="justify-center"] { justify-content: center; }
-[#{$prefix}grid~="justify-between"] { justify-content: space-between; }
-[#{$prefix}grid~="justify-around"] { justify-content: space-around; }
-
-//
-// Alignment of all columns in a row
-//
-
-[#{$prefix}grid~="top"] { align-items: flex-start; }
-[#{$prefix}grid~="center"] { align-items: center; }
-[#{$prefix}grid~="bottom"] { align-items: flex-end; }
-[#{$prefix}grid~="baseline"] { align-items: baseline; }
-[#{$prefix}grid~="stretch"] { align-items: stretch; }
-
-//
-// Alignment of individual columns
-//
-
-[#{$prefix}column~="top"] { align-self: flex-start; }
-[#{$prefix}column~="center"] { align-self: center; }
-[#{$prefix}column~="bottom"] { align-self: flex-end; }
-
-// Create column widths and offsets above the breakpoint
-@media ($breakpoint) {
   //
-  // Column widths
+  // No Gutters
   //
-  @for $i from 1 through $num-columns {
-    [#{$prefix}column~="#{$i}"] {
-      flex: 0 1 ($i/$num-columns) * 100%;
-      max-width: ($i/$num-columns) * 100%;
+
+  [#{$prefix}grid~="ng"] {
+    margin-left: 0;
+    margin-right: 0;
+
+    [#{$prefix}column] {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 
   //
-  // Column offsets
+  // No margins
   //
-  @for $i from 1 through $num-columns {
-    [#{$prefix}column~="+#{$i}"] {
-      margin-left: ($i/$num-columns) * 100%;
-    }
-  }
-}
 
-@if ($full-grid) {
-  @media (--extra-small) {
+  [#{$prefix}grid~="nm"] {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  //
+  // No Collapse columns
+  //
+
+  [#{$prefix}grid~="no-collapse"] { flex-flow: row nowrap; }
+
+  //
+  // Wrap columns
+  //
+
+  [#{$prefix}grid~="wrap"] { flex-wrap: wrap; }
+  [#{$prefix}grid~="nowrap"] { flex-wrap: nowrap; }
+  [#{$prefix}grid~="wrap-reverse"] { flex-wrap: wrap-reverse; }
+
+  //
+  // Direction of columns in a row
+  //
+
+  [#{$prefix}grid~="row"] { flex-direction: row; }
+  [#{$prefix}grid~="row-reverse"] { flex-direction: row-reverse; }
+  [#{$prefix}grid~="column"] { flex-direction: column; }
+  [#{$prefix}grid~="column-reverse"] { flex-direction: column-reverse; }
+
+  //
+  // Justify content
+  //
+
+  [#{$prefix}grid~="justify-start"] { justify-content: flex-start; }
+  [#{$prefix}grid~="justify-end"] { justify-content: flex-end; }
+  [#{$prefix}grid~="justify-center"] { justify-content: center; }
+  [#{$prefix}grid~="justify-between"] { justify-content: space-between; }
+  [#{$prefix}grid~="justify-around"] { justify-content: space-around; }
+
+  //
+  // Alignment of all columns in a row
+  //
+
+  [#{$prefix}grid~="top"] { align-items: flex-start; }
+  [#{$prefix}grid~="center"] { align-items: center; }
+  [#{$prefix}grid~="bottom"] { align-items: flex-end; }
+  [#{$prefix}grid~="baseline"] { align-items: baseline; }
+  [#{$prefix}grid~="stretch"] { align-items: stretch; }
+
+  //
+  // Alignment of individual columns
+  //
+
+  [#{$prefix}column~="top"] { align-self: flex-start; }
+  [#{$prefix}column~="center"] { align-self: center; }
+  [#{$prefix}column~="bottom"] { align-self: flex-end; }
+
+  // Create column widths and offsets above the breakpoint
+  @media ($breakpoint) {
     //
     // Column widths
     //
     @for $i from 1 through $num-columns {
-      [#{$prefix}column~="xs-#{$i}"] {
+      [#{$prefix}column~="#{$i}"] {
         flex: 0 1 ($i/$num-columns) * 100%;
         max-width: ($i/$num-columns) * 100%;
       }
@@ -140,92 +119,115 @@
     // Column offsets
     //
     @for $i from 1 through $num-columns {
-      [#{$prefix}column~="+xs-#{$i}"] {
+      [#{$prefix}column~="+#{$i}"] {
         margin-left: ($i/$num-columns) * 100%;
       }
     }
   }
 
-  @media (--small) {
-    //
-    // Column widths
-    //
-    @for $i from 1 through $num-columns {
-      [#{$prefix}column~="sm-#{$i}"] {
-        flex: 0 1 ($i/$num-columns) * 100%;
-        max-width: ($i/$num-columns) * 100%;
+  @if ($full-grid) {
+    @media (--extra-small) {
+      //
+      // Column widths
+      //
+      @for $i from 1 through $num-columns {
+        [#{$prefix}column~="xs-#{$i}"] {
+          flex: 0 1 ($i/$num-columns) * 100%;
+          max-width: ($i/$num-columns) * 100%;
+        }
+      }
+
+      //
+      // Column offsets
+      //
+      @for $i from 1 through $num-columns {
+        [#{$prefix}column~="+xs-#{$i}"] {
+          margin-left: ($i/$num-columns) * 100%;
+        }
       }
     }
 
-    //
-    // Column offsets
-    //
-    @for $i from 1 through $num-columns {
-      [#{$prefix}column~="+sm-#{$i}"] {
-        margin-left: ($i/$num-columns) * 100%;
+    @media (--small) {
+      //
+      // Column widths
+      //
+      @for $i from 1 through $num-columns {
+        [#{$prefix}column~="sm-#{$i}"] {
+          flex: 0 1 ($i/$num-columns) * 100%;
+          max-width: ($i/$num-columns) * 100%;
+        }
       }
-    }
-  }
 
-  @media (--medium) {
-    //
-    // Column widths
-    //
-    @for $i from 1 through $num-columns {
-      [#{$prefix}column~="md-#{$i}"] {
-        flex: 0 1 ($i/$num-columns) * 100%;
-        max-width: ($i/$num-columns) * 100%;
-      }
-    }
-
-    //
-    // Column offsets
-    //
-    @for $i from 1 through $num-columns {
-      [#{$prefix}column~="+md-#{$i}"] {
-        margin-left: ($i/$num-columns) * 100%;
-      }
-    }
-  }
-
-  @media (--large) {
-    //
-    // Column widths
-    //
-    @for $i from 1 through $num-columns {
-      [#{$prefix}column~="lg-#{$i}"] {
-        flex: 0 1 ($i/$num-columns) * 100%;
-        max-width: ($i/$num-columns) * 100%;
+      //
+      // Column offsets
+      //
+      @for $i from 1 through $num-columns {
+        [#{$prefix}column~="+sm-#{$i}"] {
+          margin-left: ($i/$num-columns) * 100%;
+        }
       }
     }
 
-    //
-    // Column offsets
-    //
-    @for $i from 1 through $num-columns {
-      [#{$prefix}column~="+lg-#{$i}"] {
-        margin-left: ($i/$num-columns) * 100%;
+    @media (--medium) {
+      //
+      // Column widths
+      //
+      @for $i from 1 through $num-columns {
+        [#{$prefix}column~="md-#{$i}"] {
+          flex: 0 1 ($i/$num-columns) * 100%;
+          max-width: ($i/$num-columns) * 100%;
+        }
+      }
+
+      //
+      // Column offsets
+      //
+      @for $i from 1 through $num-columns {
+        [#{$prefix}column~="+md-#{$i}"] {
+          margin-left: ($i/$num-columns) * 100%;
+        }
       }
     }
-  }
 
-  @media (--extra-large) {
-    //
-    // Column widths
-    //
-    @for $i from 1 through $num-columns {
-      [#{$prefix}column~="xl-#{$i}"] {
-        flex: 0 1 ($i/$num-columns) * 100%;
-        max-width: ($i/$num-columns) * 100%;
+    @media (--large) {
+      //
+      // Column widths
+      //
+      @for $i from 1 through $num-columns {
+        [#{$prefix}column~="lg-#{$i}"] {
+          flex: 0 1 ($i/$num-columns) * 100%;
+          max-width: ($i/$num-columns) * 100%;
+        }
+      }
+
+      //
+      // Column offsets
+      //
+      @for $i from 1 through $num-columns {
+        [#{$prefix}column~="+lg-#{$i}"] {
+          margin-left: ($i/$num-columns) * 100%;
+        }
       }
     }
 
-    //
-    // Column offsets
-    //
-    @for $i from 1 through $num-columns {
-      [#{$prefix}column~="+xl-#{$i}"] {
-        margin-left: ($i/$num-columns) * 100%;
+    @media (--extra-large) {
+      //
+      // Column widths
+      //
+      @for $i from 1 through $num-columns {
+        [#{$prefix}column~="xl-#{$i}"] {
+          flex: 0 1 ($i/$num-columns) * 100%;
+          max-width: ($i/$num-columns) * 100%;
+        }
+      }
+
+      //
+      // Column offsets
+      //
+      @for $i from 1 through $num-columns {
+        [#{$prefix}column~="+xl-#{$i}"] {
+          margin-left: ($i/$num-columns) * 100%;
+        }
       }
     }
   }

@@ -94,6 +94,9 @@ $scale-ratio-secondary: $_perfect-fourth !default;
 // Grid
 // ----
 
+// Create grid styles
+$enable-grid: true !default;
+
 // Create x-*, sm-*, md-*, lg-*, xl-* columns and offsets
 $full-grid: false !default;
 
