@@ -229,17 +229,19 @@ a {
 h1, h2, h3, h4, h5, h6 {
   color: #222;
   font-family: "Helvetica", "Arial", sans-serif;
-  line-height: 1.25; }
+  line-height: 1.3; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     color: inherit;
     vertical-align: 0;
     font-size: 83.33333%; }
-    @media (min-width: 480px) {
-      h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-        font-size: 75.01875%; } }
 
 h1, h2, h3 {
   margin: 0.75rem 0 0.375rem; }
+  h1 a, h2 a, h3 a {
+    color: inherit; }
+    h1 a:hover, h1 a:focus, h2 a:hover, h2 a:focus, h3 a:hover, h3 a:focus {
+      color: #4591aa;
+      text-decoration: none; }
 
 h4, h5, h6 {
   margin: 0.375rem 0; }
@@ -261,28 +263,6 @@ h5 {
 
 h6 {
   font-size: 0.83333rem; }
-
-h1 a, h2 a, h3 a {
-  color: inherit; }
-  h1 a:hover, h1 a:focus, h2 a:hover, h2 a:focus, h3 a:hover, h3 a:focus {
-    color: #4591aa;
-    text-decoration: none; }
-
-@media (min-width: 480px) {
-  h1, h2, h3 {
-    margin: 1.5rem 0 0.375rem; }
-  h1 {
-    font-size: 3.15733rem; }
-  h2 {
-    font-size: 2.36859rem; }
-  h3 {
-    font-size: 1.77689rem; }
-  h4 {
-    font-size: 1.333rem; }
-  h5 {
-    font-size: 1rem; }
-  h6 {
-    font-size: 0.75019rem; } }
 
 abbr {
   text-transform: uppercase;
