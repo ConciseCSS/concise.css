@@ -36,7 +36,7 @@ details {
 hr {
   overflow: visible;
   margin: 1.5rem 0;
-  background-color: #e0e0e0;
+  background-color: #DCDCDC;
   height: 1px; }
 
 html {
@@ -104,7 +104,7 @@ textarea {
 :root {
   background-color: white;
   box-sizing: border-box;
-  color: #555;
+  color: #444;
   cursor: default;
   font: 16px/1.5 "Helvetica", "Arial", sans-serif;
   text-rendering: optimizeLegibility; }
@@ -171,11 +171,11 @@ video {
   vertical-align: middle; }
 
 ::-moz-selection {
-  background-color: #d6d6d6;
+  background-color: #EBE1D3;
   text-shadow: none; }
 
 ::selection {
-  background-color: #d6d6d6;
+  background-color: #EBE1D3;
   text-shadow: none; }
 
 * + * {
@@ -267,7 +267,7 @@ abbr {
   /* 2 */ }
   abbr[title] {
     text-decoration: none;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #DCDCDC;
     cursor: help; }
 
 code,
@@ -287,8 +287,8 @@ code {
 
 kbd {
   background-color: transparent;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 2px 0 -1px white, 0 2px 0 gainsboro;
+  border: 1px solid #DCDCDC;
+  box-shadow: 0 2px 0 -1px white, 0 2px 0 #d8d8d8;
   display: inline-block;
   padding: 0 6px 0; }
 
@@ -296,7 +296,7 @@ samp {
   vertical-align: bottom; }
 
 blockquote {
-  border-left: 1px solid #e0e0e0;
+  border-left: 1px solid #DCDCDC;
   color: #666;
   margin-bottom: 1.5rem;
   padding: 0 1em; }
@@ -351,7 +351,6 @@ dd {
 button, input[type="submit"] {
   background-color: #C65146;
   border: none;
-  color: white;
   cursor: pointer;
   display: inline-block;
   font-size: 0.83333rem;
@@ -370,7 +369,6 @@ button, input[type="submit"] {
   white-space: nowrap; }
   button:hover, input[type="submit"]:hover, button:focus, input[type="submit"]:focus {
     background-color: #d88880;
-    color: white;
     text-decoration: none; }
   button:focus, input[type="submit"]:focus, button:active, input[type="submit"]:active {
     outline: none; }
@@ -378,14 +376,13 @@ button, input[type="submit"] {
     background-color: #d2766d; }
   button[disabled], input[disabled][type="submit"] {
     background-color: gainsboro;
-    color: white;
     cursor: not-allowed;
     opacity: 0.6; }
 
 input:not([type="submit"]),
 select,
 textarea {
-  border: 1px solid #e0e0e0;
+  border: 1px solid #DCDCDC;
   border-radius: 3px;
   height: 2.25rem;
   padding: 0 .75em;
@@ -396,8 +393,8 @@ textarea {
   input:not([type="submit"]):focus,
   select:focus,
   textarea:focus {
-    border-color: #74cbe8;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px rgba(69, 145, 170, 0.5);
+    border-color: #4eb1f9;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px rgba(43, 144, 217, 0.5);
     outline: none; }
   input:not([type="submit"])[disabled],
   select[disabled],
@@ -422,7 +419,7 @@ label {
   font-size: 0.83333rem; }
 
 fieldset {
-  border: 1px solid #e0e0e0;
+  border: 1px solid #DCDCDC;
   border-radius: 3px;
   padding: 1.5rem 1em;
   margin-bottom: 1.5rem; }
@@ -524,7 +521,7 @@ input[type="range"] {
     width: 16px; }
 
 table {
-  border: 1px solid #e0e0e0;
+  border: 1px solid #DCDCDC;
   border-collapse: collapse;
   border-spacing: 0;
   empty-cells: show;
@@ -536,7 +533,7 @@ table {
       table td {
         padding: 0 2.5em; } }
   table caption {
-    color: #555;
+    color: #444;
     font-size: 0.83333rem;
     font-style: italic;
     line-height: 3rem;
@@ -546,10 +543,10 @@ table {
     text-align: left; }
   table tfoot {
     background-color: #fbfbfb;
-    border-top: 1px solid #e0e0e0; }
+    border-top: 1px solid #DCDCDC; }
   table th,
   table td {
-    border-right: 1px solid #e0e0e0;
+    border-right: 1px solid #DCDCDC;
     line-height: 1.5rem;
     overflow: visible;
     padding: 0 1em; }
@@ -849,7 +846,7 @@ table {
   pre,
   code {
     background-color: transparent;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #DCDCDC;
     page-break-inside: avoid; }
   blockquote {
     border: none;
