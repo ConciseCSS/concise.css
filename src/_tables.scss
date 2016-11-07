@@ -22,10 +22,6 @@ table {
     font-style: italic;
     line-height: 2lh;
     text-align: center;
-
-    @media ($breakpoint) {
-      font-size: typeScale(1, $scale-ratio-secondary);
-    }
   }
 
   thead {

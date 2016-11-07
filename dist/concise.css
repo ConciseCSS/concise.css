@@ -191,11 +191,6 @@ small,
 sup,
 sub {
   font-size: 83.33333%; }
-  @media (min-width: 480px) {
-    small,
-    sup,
-    sub {
-      font-size: 75.01875%; } }
 
 sup,
 sub {
@@ -282,12 +277,6 @@ samp {
   font-family: "Consolas", monospace;
   font-size: 0.83333rem;
   background-color: #f5f5f5; }
-  @media (min-width: 480px) {
-    code,
-    pre,
-    kbd,
-    samp {
-      font-size: 0.75019rem; } }
 
 pre {
   padding: 0.75rem 1em; }
@@ -317,10 +306,6 @@ blockquote {
     font-size: 83.33333%;
     font-style: italic;
     margin-top: 0.375rem; }
-    @media (breakpoint) {
-      blockquote cite,
-      blockquote footer {
-        font-size: 75.01875%; } }
   blockquote cite:before,
   blockquote footer:before {
     content: "\2014 \00A0"; }
@@ -556,9 +541,6 @@ table {
     font-style: italic;
     line-height: 3rem;
     text-align: center; }
-    @media (min-width: 480px) {
-      table caption {
-        font-size: 0.75019rem; } }
   table thead {
     background-color: #f5f5f5;
     text-align: left; }

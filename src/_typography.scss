@@ -7,10 +7,6 @@ sup,
 sub {
   // Use the next smaller size in the scale
   font-size: 100% / $scale-ratio;
-
-  @media ($breakpoint) {
-    font-size: 100% / $scale-ratio-secondary;
-  }
 }
 
 sup,
@@ -117,10 +113,6 @@ samp {
   font-family: $font-mono;
   font-size: typeScale(1);
   background-color: getColor(background, light);
-
-  @media ($breakpoint) {
-    font-size: typeScale(1, $scale-ratio-secondary);
-  }
 }
 
 pre { padding: 0.5lh 1em; }
@@ -158,10 +150,6 @@ blockquote {
     font-size: 100% / $scale-ratio;
     font-style: italic;
     margin-top: 0.25lh;
-
-    @media (breakpoint) {
-      font-size: 100% / $scale-ratio-secondary;
-    }
   }
 
   cite:before,
