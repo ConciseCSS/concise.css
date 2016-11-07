@@ -138,18 +138,14 @@ samp { vertical-align: bottom; }
 // --------------------------------------------------
 
 blockquote {
-  border-left: 1px solid getColor(base, lines);
   color: getColor(text, secondary);
-  margin-bottom: 1lh;
   padding: 0 1em;
 
   cite,
   footer {
-    display: block;
     // Use the next smaller size in the scale
     font-size: 100% / $scale-ratio;
-    font-style: italic;
-    margin-top: 0.25lh;
+    margin-top: 0.5lh;
   }
 
   cite:before,
