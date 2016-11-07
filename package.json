@@ -28,11 +28,14 @@
     "chokidar-cli": "^1.2.0",
     "concise-cli": "^0.3.0",
     "cssnano-cli": "^1.0.4",
+    "http-server": "^0.9.0",
+    "jake": "^8.0.15",
+    "livereload": "^0.6.0",
     "stylestats": "^6.3.0"
   },
   "scripts": {
-    "build": "concisecss compile concise.scss dist/concise.css && cssnano dist/concise.css dist/concise.min.css",
-    "build:watch": "npm run build && chokidar '**/*.scss' -c 'npm run build'",
+    "build": "jake build",
+    "build:dev": "jake default",
     "stats": "stylestats dist/concise.css",
     "stats:min": "stylestats dist/concise.min.css"
   }
