@@ -596,10 +596,10 @@ table {
   padding-left: 1rem;
   padding-right: 1rem; }
 
-[grid~="ng"] {
+[grid~="no-gutters"] {
   margin-left: 0;
   margin-right: 0; }
-  [grid~="ng"] [column] {
+  [grid~="no-gutters"] [column] {
     padding-left: 0;
     padding-right: 0; }
 
