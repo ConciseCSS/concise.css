@@ -181,7 +181,7 @@ video {
 * + * {
   margin-top: 1.5rem; }
 
-li, kbd, div, input, option, select, a, textarea, body {
+li, kbd, div, input, option, select, a, textarea, body, span {
   margin-top: 0; }
 
 h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {

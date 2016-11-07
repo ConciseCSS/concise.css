@@ -228,7 +228,7 @@ video { vertical-align: middle; }
 @if $automargin {
   * + * { margin-top: $block-margin; }
 
-  li, kbd, div, input, option, select, a, textarea, body {
+  li, kbd, div, input, option, select, a, textarea, body, span {
     margin-top: 0;
   }
 
