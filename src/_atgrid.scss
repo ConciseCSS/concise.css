@@ -135,7 +135,7 @@
       // Column widths
       //
       @for $i from 1 through $num-columns {
-        [#{$prefix}column~="sm-#{$i}"] {
+        [#{$prefix}column~="s-#{$i}"] {
           flex: 0 1 ($i/$num-columns) * 100%;
           max-width: ($i/$num-columns) * 100%;
         }
@@ -145,7 +145,7 @@
       // Column offsets
       //
       @for $i from 1 through $num-columns {
-        [#{$prefix}column~="+sm-#{$i}"] {
+        [#{$prefix}column~="+s-#{$i}"] {
           margin-left: ($i/$num-columns) * 100%;
         }
       }
@@ -156,7 +156,7 @@
       // Column widths
       //
       @for $i from 1 through $num-columns {
-        [#{$prefix}column~="md-#{$i}"] {
+        [#{$prefix}column~="m-#{$i}"] {
           flex: 0 1 ($i/$num-columns) * 100%;
           max-width: ($i/$num-columns) * 100%;
         }
@@ -166,7 +166,7 @@
       // Column offsets
       //
       @for $i from 1 through $num-columns {
-        [#{$prefix}column~="+md-#{$i}"] {
+        [#{$prefix}column~="+m-#{$i}"] {
           margin-left: ($i/$num-columns) * 100%;
         }
       }
@@ -177,7 +177,7 @@
       // Column widths
       //
       @for $i from 1 through $num-columns {
-        [#{$prefix}column~="lg-#{$i}"] {
+        [#{$prefix}column~="l-#{$i}"] {
           flex: 0 1 ($i/$num-columns) * 100%;
           max-width: ($i/$num-columns) * 100%;
         }
@@ -187,7 +187,7 @@
       // Column offsets
       //
       @for $i from 1 through $num-columns {
-        [#{$prefix}column~="+lg-#{$i}"] {
+        [#{$prefix}column~="+l-#{$i}"] {
           margin-left: ($i/$num-columns) * 100%;
         }
       }
