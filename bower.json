@@ -1,12 +1,13 @@
 {
   "name": "concise",
   "description": "A front-end framework written in SASS that's lightweight, and easy-to-use.",
-  "version": "3.4.0",
+  "version": "4.0.0",
   "ignore": [
     ".gitignore",
     ".editorconfig",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "node_modules"
   ],
   "keywords": [
     "css",
