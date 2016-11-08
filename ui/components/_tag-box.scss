@@ -1,0 +1,36 @@
+//
+// Tags
+// =============================================================================
+
+.tag-box {
+  background-color: getColor(background, light);
+  color: getColor(text, secondary);
+  border-radius: 0.2em;
+  display: inline-block;
+  font-size: 100% / $scale-ratio;
+  padding: 0 0.5em;
+  font-weight: normal;
+
+  //
+  // Rounded variant
+  // --------------------------------------------------
+
+  &.-pill { border-radius: 2em; }
+
+  //
+  // States
+  // --------------------------------------------------
+  // Will generate a variant for each state color in the
+  // color palette
+
+  @each $color-name, $color in $colors {
+    @each $color-type, $color-value in $color {
+      @if $color-name == "state" {
+        &.-#{$color-type} {
+          background-color: rgba($color-value, .15);
+          color: darken($color-value, 10%);
+        }
+      }
+    }
+  }
+}

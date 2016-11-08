@@ -44,13 +44,28 @@
     .alert-box.-error a {
       color: #941c1c; }
 
-.badge {
-  background-color: #C65146;
-  border-radius: 25px;
+.tag-box {
+  background-color: #f5f5f5;
+  color: #777;
+  border-radius: 0.2em;
   display: inline-block;
-  font-size: 0.75019rem;
-  line-height: 1.5rem;
-  padding: 0 .75em; }
+  font-size: 83.33333%;
+  padding: 0 0.5em;
+  font-weight: normal; }
+  .tag-box.-pill {
+    border-radius: 2em; }
+  .tag-box.-muted {
+    background-color: rgba(238, 238, 238, 0.15);
+    color: #d5d5d5; }
+  .tag-box.-success {
+    background-color: rgba(16, 168, 135, 0.15);
+    color: #0c7962; }
+  .tag-box.-warning {
+    background-color: rgba(241, 127, 66, 0.15);
+    color: #ed5f13; }
+  .tag-box.-error {
+    background-color: rgba(218, 60, 60, 0.15);
+    color: #bf2424; }
 
 .breadcrumbs {
   background-color: #f5f5f5;
@@ -323,14 +338,6 @@ ol.dropdown-content {
     border-radius: 0 3px 3px 0; }
   .group-item.is-active {
     background-color: #f5f5f5; }
-
-.label {
-  background-color: #C65146;
-  border-radius: 3px;
-  display: inline-block;
-  font-size: 0.83333rem;
-  line-height: 1.5rem;
-  padding: 0 1em; }
 
 .modal {
   background-color: rgba(50, 55, 61, 0.5);
