@@ -421,7 +421,6 @@ input:not([type="submit"]),
 select,
 textarea {
   border: 1px solid #DCDCDC;
-  padding: 0 0.75em;
   -webkit-transition-duration: 150ms;
           transition-duration: 150ms;
   width: 100%;
@@ -438,6 +437,10 @@ textarea {
     background-color: #aaa;
     cursor: not-allowed;
     border: 0; }
+
+input:not([type="submit"]),
+select {
+  padding: 0 0.75em; }
 
 input[type="checkbox"],
 input[type="file"],

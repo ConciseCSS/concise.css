@@ -6,7 +6,6 @@ input:not([type="submit"]),
 select,
 textarea {
   border: 1px solid getColor(base, lines);
-  padding: 0 0.75em;
   transition-duration: $transition-duration;
   width: 100%;
   font-size: typeScale(1);
@@ -22,6 +21,11 @@ textarea {
     cursor: not-allowed;
     border: 0;
   }
+}
+
+input:not([type="submit"]),
+select {
+  padding: 0 0.75em;
 }
 
 // Keep the original size for this small inputs
