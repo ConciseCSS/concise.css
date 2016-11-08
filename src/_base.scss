@@ -87,18 +87,16 @@ template, // 1
 
 //
 // 1. Add border box sizing in all browsers.
-// 2. Add the default cursor in all browsers.
-// 3. Add a flattened line height in all browsers.
-// 4. Prevent font size adjustments after orientation changes in IE and iOS.
+// 2. Add a flattened line height in all browsers.
+// 3. Prevent font size adjustments after orientation changes in IE and iOS.
 //
 
 :root {
 	box-sizing: border-box; // 1
-	cursor: default; // 2
 	font-family: $font-primary;
-	line-height: 1.5; // 3
-	-ms-text-size-adjust: 100%; // 4
-	-webkit-text-size-adjust: 100%; // 4
+	line-height: 1.5; // 2
+	-ms-text-size-adjust: 100%; // 3
+	-webkit-text-size-adjust: 100%; // 3
   background-color: getColor(background, body);
   color: getColor(text, primary);
   font-size: $font-size;

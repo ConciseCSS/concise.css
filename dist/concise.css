@@ -48,7 +48,6 @@ template,
 
 :root {
   box-sizing: border-box;
-  cursor: default;
   font-family: "Helvetica", "Arial", sans-serif;
   line-height: 1.5;
   -ms-text-size-adjust: 100%;
