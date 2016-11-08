@@ -68,33 +68,23 @@
     background-color: rgba(218, 60, 60, 0.15);
     color: #bf2424; }
 
-.breadcrumbs {
+.breadcrumb-nav {
   background-color: #f5f5f5;
-  border: 1px solid #DCDCDC;
-  border-radius: 3px;
-  font-size: typeSize(1);
-  margin-bottom: 1.5rem;
-  padding: 0.375rem 0.5em; }
-  .breadcrumbs li {
+  font-size: 0.83333rem;
+  padding: 0.75rem 1.5em;
+  font-weight: bold; }
+  .breadcrumb-nav > .item {
     display: inline;
     list-style: none;
-    padding-left: .75em; }
-    .breadcrumbs li:after {
-      color: #c3c3c3;
-      content: "\002f";
-      padding-left: .75em; }
-    .breadcrumbs li:last-child:after {
-      content: "";
-      padding-left: 0; }
-    .breadcrumbs li.is-active,
-    .breadcrumbs li.is-active a {
-      color: #5e5e5e; }
-
-.breadcrumbs--flat {
-  background-color: transparent;
-  border: none;
-  border-radius: 0;
-  padding: 0; }
+    margin-right: 1em; }
+    .breadcrumb-nav > .item:not(:last-child):after {
+      color: #DCDCDC;
+      content: "/";
+      margin-left: 1em; }
+    .breadcrumb-nav > .item.-active,
+    .breadcrumb-nav > .item.-active a {
+      color: #777;
+      font-weight: normal; }
 
 .button--bordered {
   background-color: transparent;
