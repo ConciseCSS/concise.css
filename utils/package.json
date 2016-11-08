@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "chokidar-cli": "^1.2.0",
-    "concise-cli": "^0.3.0",
+    "concise-cli": "^0.4.1",
     "concise.css": "github:concisecss/concise.css#master",
     "cssnano-cli": "^1.0.4",
     "stylestats": "^6.3.0"
