@@ -273,17 +273,39 @@ input[type="range"] {
   -webkit-appearance: none; }
   input[type="range"]:focus {
     outline: none; }
-  input[type="range"]::range-track {
-    background-color: #DCDCDC;
-    border: none;
-    height: 0.3rem; }
-  input[type="range"] ::range-thumb {
-    border: none;
-    border-radius: 50%;
-    background-color: #C65146;
-    height: 0.75rem;
-    margin-top: -0.225rem;
-    width: 0.75rem; }
+  input[type="range"]::-moz-range-track{
+  background-color: #DCDCDC;
+  border: none;
+  height: 0.3rem; }
+  input[type="range"]::-ms-track{
+  background-color: #DCDCDC;
+  border: none;
+  height: 0.3rem; }
+  input[type="range"]::-webkit-slider-runnable-track{
+  background-color: #DCDCDC;
+  border: none;
+  height: 0.3rem; }
+  input[type="range"]::-moz-range-thumb{
+  border: none;
+  border-radius: 50%;
+  background-color: #C65146;
+  height: 0.75rem;
+  margin-top: -0.225rem;
+  width: 0.75rem; }
+  input[type="range"]::-ms-thumb{
+  border: none;
+  border-radius: 50%;
+  background-color: #C65146;
+  height: 0.75rem;
+  margin-top: -0.225rem;
+  width: 0.75rem; }
+  input[type="range"]::-webkit-slider-thumb{
+  border: none;
+  border-radius: 50%;
+  background-color: #C65146;
+  height: 0.75rem;
+  margin-top: -0.225rem;
+  width: 0.75rem; }
   input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none; }
 
@@ -420,7 +442,6 @@ ol {
 input:not([type="submit"]),
 select,
 textarea {
-  border: 1px solid #DCDCDC;
   -webkit-transition-duration: 150ms;
           transition-duration: 150ms;
   width: 100%;
@@ -438,8 +459,10 @@ textarea {
     cursor: not-allowed;
     border: 0; }
 
-input:not([type="submit"]),
-select {
+input:not([type="submit"]):not([type="range"]),
+select,
+textarea {
+  border: 1px solid #DCDCDC;
   padding: 0 0.75em; }
 
 input[type="checkbox"],

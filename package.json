@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "chokidar-cli": "^1.2.0",
-    "concise-cli": "^0.3.0",
+    "concise-cli": "^0.4.1",
     "cssnano-cli": "^1.0.4",
     "http-server": "^0.9.0",
     "jake": "^8.0.15",

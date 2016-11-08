@@ -555,7 +555,7 @@ input[type="range"] {
     height: 0.2lh;
   }
 
-  ::range-thumb {
+  &::range-thumb {
     border: none;
     border-radius: 50%;
     background-color: getColor(base, primary);

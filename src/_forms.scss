@@ -5,7 +5,6 @@
 input:not([type="submit"]),
 select,
 textarea {
-  border: 1px solid getColor(base, lines);
   transition-duration: $transition-duration;
   width: 100%;
   font-size: typeScale(1);
@@ -23,8 +22,10 @@ textarea {
   }
 }
 
-input:not([type="submit"]),
-select {
+input:not([type="submit"]):not([type="range"]),
+select,
+textarea {
+  border: 1px solid getColor(base, lines);
   padding: 0 0.75em;
 }
 
