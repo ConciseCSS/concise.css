@@ -1,0 +1,28 @@
+//
+// Lists
+// =============================================================================
+
+ul,
+ol {
+  padding-left: 1em;
+
+  ol,
+  ul {
+    padding-left: 1.5em;
+  }
+}
+
+ol {
+  padding-left: 0;
+  counter-reset: item;
+
+  li {
+    list-style: none;
+  }
+
+  li:before {
+    content: counters(item, ".") ". ";
+    counter-increment: item;
+    margin-right: 0.2em;
+  }
+}

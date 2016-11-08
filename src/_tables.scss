@@ -3,49 +3,29 @@
 // =============================================================================
 
 table {
-  border: 1px solid getColor(base, lines);
-  border-collapse: collapse;
-  border-spacing: 0;
-  empty-cells: show;
   width: 100%;
 
   @media ($breakpoint) {
     width: auto;
+  }
 
-    th,
-    td { padding: 0 2.5em; }
+  thead,
+  tfoot {
+    background-color: getColor(background, light);
+    text-align: left;
+  }
+
+  th,
+  td {
+    line-height: 1.5lh;
+    overflow: visible;
+    padding: 0 1em;
   }
 
   caption {
-    color: getColor(text, primary);
     font-size: typeScale(1);
     font-style: italic;
     line-height: 2lh;
     text-align: center;
   }
-
-  thead {
-    background-color: getColor(background, light);
-    text-align: left;
-  }
-
-  tfoot {
-    background-color: lighten(getColor(background, light), 2.5%);
-    border-top: 1px solid getColor(base, lines);
-  }
-
-  th,
-  td {
-    border-right: 1px solid getColor(base, lines);
-    line-height: 1lh;
-    overflow: visible;
-    padding: 0 1em;
-
-    @media ($breakpoint) { line-height: 2lh; }
-
-    &:last-child { border-right: none; }
-  }
-
-  tr,
-  td { transition: background-color $transition-duration; }
 }

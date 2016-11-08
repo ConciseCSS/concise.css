@@ -6,68 +6,22 @@ input:not([type="submit"]),
 select,
 textarea {
   border: 1px solid getColor(base, lines);
-  border-radius: 3px;
-  height: 1.5lh;
-  padding: 0 .75em;
-  transition: $transition-duration;
+  padding: 0 0.75em;
+  transition-duration: $transition-duration;
   width: 100%;
   font-size: typeScale(1);
+  min-height: 1.5lh;
 
   &:focus {
     border-color: getColor(blue, lighter);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075),
-                      0 0 6px rgba(getColor(blue, base), .5);
     outline: none;
   }
 
   &[disabled] {
-    background-color: getColor(background, light);
+    background-color: getColor(state, muted);
     cursor: not-allowed;
+    border: 0;
   }
-
-  label + & {
-    margin-top: 0.25lh;
-  }
-}
-
-input:not([type="submit"]) {
-  line-height: normal;
-  min-height: 1lh;
-
-  // Remove focus styles
-  &[type="checkbox"],
-  &[type="radio"],
-  &[type="range"],
-  &[type="file"],
-  &[type="color"],
-  &[type="submit"] {
-    &:focus {
-      border-color: transparent;
-      box-shadow: none;
-      outline: none;
-    }
-  }
-}
-
-input[type="submit"] {
-  @extend button;
-}
-
-label {
-  display: block;
-  font-size: typeScale(1);
-}
-
-fieldset {
-  border: 1px solid getColor(base, lines);
-  border-radius: 3px;
-  padding: 1lh 1em;
-  margin-bottom: 1lh;
-}
-
-legend {
-  font-weight: bold;
-  padding: 0 1em;
 }
 
 // Keep the original size for this small inputs
@@ -79,111 +33,50 @@ input[type="radio"] {
   width: auto;
 }
 
-// Checkbox & radio
 input[type="checkbox"],
 input[type="radio"] {
   line-height: normal;
   padding: 0;
   vertical-align: middle;
-  margin-top: 0 !important;
 }
 
-// Checkbox & radio elements are inline with their label
-input[type="checkbox"] + label,
-input[type="radio"] + label {
-  display: inline-block;
-  margin: 0 0 0 .5em;
-  line-height: 1.25lh;
-  vertical-align: middle;
-}
-
-// File upload
 input[type="file"] {
   border: none;
-  line-height: 100%;
+  line-height: 1lh;
   padding: 0;
 }
 
-// Textarea
-textarea {
-  height: auto;
-  padding: 0.25lh 0.5em;
-  resize: vertical;
-}
-
-// Style select like a standard input - Internet Explorer 11+
 select {
   background-color: transparent;
-  border-radius: 5px;
-  padding: 0 0 0 0.5em;
+  padding-left: 0.5em;
+  width: auto;
+  min-width: 10em;
+  height: 1.5lh;
 
   &[disabled] { color: getColor(text, secondary); }
 
-  &[multiple] { height: auto; }
+  &[multiple] {
+    height: auto;
+    width: 100%;
+    padding: 0;
+  }
 
   &::-ms-expand { display: none; }
 
   &::-ms-value { color: currentColor; }
 
-  option { padding: 0 .75em }
+  option { padding: 0 0.75em }
 }
 
-// Range input
-input[type="range"] {
-  border: none;
-  padding: 0;
-  width: 100%;
-  -webkit-appearance: none;
+label {
+  display: block;
+  font-size: typeScale(1);
+  line-height: 1.5lh;
+}
 
-  &:focus { outline: none; }
-
-  &::-webkit-slider-runnable-track {
-    background-color: darken(getColor(background, light), 10%);
-    border: none;
-    border-radius: 3px;
-    height: 5px;
-  }
-
-  &::-webkit-slider-thumb {
-    border: none;
-    border-radius: 50%;
-    background-color: getColor(base, primary);
-    height: 16px;
-    margin-top: -5px;
-    width: 16px;
-    -webkit-appearance: none;
-  }
-
-  &::-moz-range-track {
-    background-color: darken(getColor(background, light), 10%);
-    border: none;
-    border-radius: 3px;
-    height: 5px;
-  }
-
-  &::-moz-range-thumb {
-    border: none;
-    border-radius: 50%;
-    background-color: getColor(base, primary);
-    height: 16px;
-    margin-top: -5px;
-    width: 16px;
-  }
-
-  &::-ms-track {
-    background-color: darken(getColor(background, light), 10%);
-    border: none;
-    border-radius: 3px;
-    color: transparent;
-    height: 5px;
-  }
-
-  &::-ms-thumb {
-    border: none;
-    border-radius: 50%;
-    background-color: getColor(base, primary);
-    height: 16px;
-    margin-top: -5px;
-    width: 16px;
-  }
+// Labels are inline with their checkbox and radio elements
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: inline-block;
+  margin-left: 0.5em;
 }

@@ -1,0 +1,40 @@
+//
+// Headings
+// =============================================================================
+
+h1 { font-size: typeScale(6); }
+h2 { font-size: typeScale(5); }
+h3 { font-size: typeScale(4); }
+h4 { font-size: typeScale(3); }
+h5 { font-size: typeScale(2); }
+h6 { font-size: typeScale(1); }
+
+h1, h2, h3, h4, h5, h6 {
+  color: getColor(text, heading);
+  font-family: $font-secondary;
+  line-height: 1.3;
+
+  small {
+    color: inherit;
+    vertical-align: 0;
+
+    // Use the next smaller size in the scale
+    font-size: 100% / $scale-ratio;
+  }
+}
+
+h1, h2, h3 {
+  margin: 0.5lh 0 0.25lh;
+
+  a {
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      color: getColor(base, primary);
+      text-decoration: none;
+    }
+  }
+}
+
+h4, h5, h6 { margin: 0.25lh 0; }
