@@ -96,7 +96,7 @@ dt {
   font-weight: bold; }
 
 blockquote {
-  color: #666;
+  color: #777;
   padding: 0 1em; }
   blockquote cite,
   blockquote footer {
@@ -467,7 +467,7 @@ select {
   min-width: 10em;
   height: 2.25rem; }
   select[disabled] {
-    color: #666; }
+    color: #777; }
   select[multiple] {
     height: auto;
     width: 100%;
