@@ -639,28 +639,28 @@
 ._font-print-secondary {
   font-family: "Georgia", "Times New Roman", "Times", serif; }
 
-._pos-abs {
+._abs {
   position: absolute; }
 
-._pos-rel {
+._rel {
   position: relative; }
 
-._pos-static {
+._sta {
   position: static; }
 
-._pos-fix {
+._fix {
   position: fixed; }
 
-._dis-inline-block {
+._inline-block {
   display: inline-block; }
 
-._dis-block {
+._block {
   display: block; }
 
-._dis-inline {
+._inline {
   display: inline; }
 
-._dis-flex {
+._flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
