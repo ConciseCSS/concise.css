@@ -22,15 +22,18 @@
   },
   "homepage": "https://github.com/ConciseCSS/concise-ui#readme",
   "scripts": {
-    "build": "concisecss compile dist.scss dist/concise-ui.css && cssnano dist/concise-ui.css dist/concise-ui.min.css",
-    "build:watch": "npm run build && chokidar '**/*.scss' -c 'npm run build'",
+    "build": "jake build",
+    "start": "jake default",
     "stats": "stylestats dist/concise-utils.css"
   },
   "devDependencies": {
     "chokidar-cli": "^1.2.0",
-    "concise-cli": "^0.3.0",
+    "concise-cli": "^0.4.1",
     "concise.css": "github:concisecss/concise.css#master",
-    "cssnano-cli": "^1.0.4",
+    "cssnano-cli": "^1.0.5",
+    "http-server": "^0.9.0",
+    "jake": "^8.0.15",
+    "livereload": "^0.6.0",
     "stylestats": "^6.3.0"
   }
 }

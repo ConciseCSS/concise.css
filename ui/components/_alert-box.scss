@@ -1,0 +1,46 @@
+//
+// Alerts
+// =============================================================================
+
+.alert-box {
+  background-color: getColor(background, light);
+  border: 1px solid getColor(base, lines);
+  font-size: typeScale(1);
+  padding: 0.5lh 1em;
+  position: relative;
+
+  //
+  // Close button
+  // --------------------------------------------------
+
+  & > .close {
+    color: inherit;
+    position: absolute;
+    right: 1em;
+    top: 0.8em;
+    opacity: 0.5;
+    transition: opacity $transition-duration;
+
+    &:hover { opacity: 1; }
+  }
+
+  //
+  // States
+  // --------------------------------------------------
+  // Will generate a variant for each state color in the
+  // color palette
+
+  @each $color-name, $color in $colors {
+    @each $color-type, $color-value in $color {
+      @if $color-name == "state" {
+        &.-#{$color-type} {
+          background-color: rgba($color-value, .15);
+          border-color: rgba($color-value, .2);
+          color: darken($color-value, 10%);
+
+          a { color: darken($color-value, 20%); }
+        }
+      }
+    }
+  }
+}
