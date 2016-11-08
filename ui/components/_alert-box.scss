@@ -8,6 +8,7 @@
   font-size: typeScale(1);
   padding: 0.5lh 1em;
   position: relative;
+  color: getColor(text, secondary);
 
   //
   // Close button
