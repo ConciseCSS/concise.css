@@ -96,10 +96,10 @@ dt {
   font-weight: bold; }
 
 blockquote {
-  color: #777;
   padding: 0 1em; }
   blockquote cite,
   blockquote footer {
+    color: #777;
     font-size: 83.33333%;
     margin-top: 0.75rem; }
     blockquote cite:before,

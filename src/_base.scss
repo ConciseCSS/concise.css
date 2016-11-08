@@ -179,11 +179,11 @@ dt { font-weight: bold; }
 //
 
 blockquote {
-  color: getColor(text, secondary);
   padding: 0 1em;
 
   cite,
   footer {
+    color: getColor(text, secondary);
     font-size: 100% / $scale-ratio; // 2
     margin-top: 0.5lh;
 
