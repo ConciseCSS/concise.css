@@ -6,6 +6,7 @@
 // Helper functions
 // --------------------------------------------------
 
+// Pow function, used in the type scale.
 @function pow($number, $exponent) {
   $value: 1;
 
@@ -26,7 +27,10 @@
 // Base
 // --------------------------------------------------
 
+// Font size for small devices
 $font-size:           16 !default;
+
+// Font size for big devices
 $font-size-secondary: 18 !default;
 
 // Tracking
@@ -39,14 +43,18 @@ $font-mono: "Consolas", monospace !default;
 $font-print-primary: "Georgia", "Times New Roman", "Times", serif !default;
 $font-print-secondary: "Georgia", "Times New Roman", "Times", serif !default;
 
-// Automatic margins
+// Enable margins to all the elements
+// except the first one in each nesting level
 $automargin:   true !default;
+
+// ^ How much margin for those elements
 $block-margin: 1lh !default;
 
 // Transition duration
 $transition-duration: 150ms !default;
 
 // Custom media queries
+// Use as @media (--medium) { … }
 @custom-media --extra-small (width <= 480px);
 @custom-media --small (width >= 480px);
 @custom-media --medium (width >= 768px);
@@ -56,7 +64,7 @@ $transition-duration: 150ms !default;
 @custom-media --only-medium (768px < width <= 980px);
 @custom-media --only-large (980px < width <= 1100px);
 
-// Spacing
+// Spacing variables
 $spacing-xs: 0.5lh !default;
 $spacing-s:  1lh !default;
 $spacing-m:  2lh !default;
@@ -93,10 +101,10 @@ $scale-ratio-secondary: $_perfect-fourth !default;
 // Grid
 // --------------------------------------------------
 
-// Create grid styles
+// Enable grid styles
 $enable-grid: true !default;
 
-// Create x-*, sm-*, md-*, lg-*, xl-* columns and offsets
+// Enable x-*, sm-*, md-*, lg-*, xl-* columns and offsets
 $full-grid: false !default;
 
 // Max width for container
@@ -117,6 +125,8 @@ $breakpoint: --small !default;
 //
 // Color Palette
 // --------------------------------------------------
+// Use the getColor() function to use those values in
+// your stylesheets. Example: getColor(base, primary)
 
 $colors: (
   base: (
@@ -181,7 +191,7 @@ $colors: (
 //
 // getColor Function
 // --------------------------------------------------
-// Easily retrieve colors for use.
+// Easily retrieve colors from the $colors map.
 //
 
 @function getColor($color, $value: "base") {

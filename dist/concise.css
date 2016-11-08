@@ -145,13 +145,13 @@ sup {
 
 sub {
   bottom: -0.25em;
-  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "subs" 1;
-          font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "subs" 1; }
+  -webkit-font-feature-settings: "subs" 1;
+          font-feature-settings: "subs" 1; }
 
 sup {
   top: -0.25em;
-  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "sups" 1;
-          font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "sups" 1; }
+  -webkit-font-feature-settings: "sups" 1;
+          font-feature-settings: "sups" 1; }
 
 ::-moz-selection {
   background-color: #EBE1D3;
@@ -200,8 +200,7 @@ select,
 textarea {
   background-color: transparent;
   border-style: none;
-  color: inherit;
-  font-size: 1em; }
+  color: inherit; }
 
 button, input[type="submit"],
 input {

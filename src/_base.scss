@@ -2,9 +2,24 @@
 // Base styles
 // =============================================================================
 // Based on sanitize.css v4.1.0 with heavy modifications for Concise CSS
+//
+// TODO: Most of the comments are from sanitize.css. Comments for Concise should be added too.
+//
+// Contents:
+// 1. Display definitions
+// 2. Elements of HTML
+// 3. Grouping content
+// 4. Text-level semantics
+// 5. Embedded content
+// 6. Links
+// 7. Tabular data
+// 8. Forms
+// 9. WAI-ARIA
+// 10. User interaction
+// 11. Lobotomized Owl (Margins)
 
 //
-// Display definitions
+// 1. Display definitions
 // --------------------------------------------------
 
 //
@@ -59,7 +74,7 @@ template, // 1
 }
 
 //
-// Elements of HTML (https://www.w3.org/TR/html5/semantics.html)
+// 2. Elements of HTML (https://www.w3.org/TR/html5/semantics.html)
 // --------------------------------------------------
 
 //
@@ -86,17 +101,15 @@ template, // 1
 }
 
 //
-// 1. Add border box sizing in all browsers.
-// 2. Add a flattened line height in all browsers.
-// 3. Prevent font size adjustments after orientation changes in IE and iOS.
+// Root styles
 //
 
 :root {
-	box-sizing: border-box; // 1
+	box-sizing: border-box;
 	font-family: $font-primary;
-	line-height: 1.5; // 2
-	-ms-text-size-adjust: 100%; // 3
-	-webkit-text-size-adjust: 100%; // 3
+	line-height: 1.5;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
   background-color: getColor(background, body);
   color: getColor(text, primary);
   font-size: $font-size;
@@ -108,7 +121,7 @@ template, // 1
 }
 
 //
-// Grouping content (https://www.w3.org/TR/html5/grouping-content.html)
+// 3. Grouping content (https://www.w3.org/TR/html5/grouping-content.html)
 // --------------------------------------------------
 
 //
@@ -169,7 +182,7 @@ nav {
 dt { font-weight: bold; }
 
 //
-// Text-level semantics
+// 4. Text-level semantics
 // --------------------------------------------------
 
 //
@@ -263,7 +276,10 @@ small {
 //
 // Change the positioning on superscript and subscript elements
 // in all browsers.
-// 1. Correct the font size in all browsers.
+// 1. Use the next smaller size in the scale
+// 2. Enables display of subscript variants
+// 3. Enables display of superscript variants
+// 4. Adjust position
 //
 
 sub,
@@ -271,18 +287,17 @@ sup {
 	line-height: 0;
 	position: relative;
 	vertical-align: baseline;
-  // Use the next smaller size in the scale
   font-size: 100% / $scale-ratio; // 1
 }
 
 sub {
-  bottom: -0.25em;
-  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "subs" 1;
+  bottom: -0.25em; // 4
+  font-feature-settings: "subs" 1; // 2
 }
 
 sup {
-  top: -0.25em;
-  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "sups" 1;
+  top: -0.25em; // 4
+  font-feature-settings: "sups" 1; // 3
 }
 
 //
@@ -291,17 +306,17 @@ sup {
 //
 
 ::-moz-selection {
-	background-color: getColor(base, selection);
-	text-shadow: none;
+	background-color: getColor(base, selection); // 2
+	text-shadow: none; // 1
 }
 
 ::selection {
-	background-color: getColor(base, selection);
-	text-shadow: none;
+	background-color: getColor(base, selection); // 2
+	text-shadow: none; // 1
 }
 
 //
-// Embedded content (https://www.w3.org/TR/html5/embedded-content-0.html)
+// 5. Embedded content (https://www.w3.org/TR/html5/embedded-content-0.html)
 // --------------------------------------------------
 
 //
@@ -342,12 +357,13 @@ svg:not(:root) {
 }
 
 //
-// Links (https://www.w3.org/TR/html5/links.html#links)
+// 6. Links (https://www.w3.org/TR/html5/links.html#links)
 // --------------------------------------------------
 
 //
 // 1. Remove the gray background on active links in IE 10.
 // 2. Remove the gaps in underlines in iOS 8+ and Safari 8+.
+// 3. Add transition by default
 //
 
 a {
@@ -355,7 +371,7 @@ a {
 	-webkit-text-decoration-skip: objects; // 2
   color: getColor(base, primary);
   text-decoration: none;
-  transition-duration: $transition-duration;
+  transition-duration: $transition-duration; // 3
 
   &:hover,
   &:focus { color: darken(getColor(base, primary), 20%); }
@@ -370,7 +386,7 @@ a:hover {
 }
 
 //
-// Tabular data (https://www.w3.org/TR/html5/tabular-data.html)
+// 7. Tabular data (https://www.w3.org/TR/html5/tabular-data.html)
 // --------------------------------------------------
 
 //
@@ -383,7 +399,7 @@ table {
 }
 
 //
-// transform-style:  (https://www.w3.org/TR/html5/forms.html)
+// 8. Forms:  (https://www.w3.org/TR/html5/forms.html)
 // --------------------------------------------------
 
 //
@@ -396,7 +412,6 @@ textarea {
 	background-color: transparent; // 1
 	border-style: none; // 1
 	color: inherit; // 1
-	font-size: 1em; // 1
 }
 
 //
@@ -601,7 +616,7 @@ button {
 input[type="submit"] { @extend button; }
 
 //
-// WAI-ARIA (https://www.w3.org/TR/html5/dom.html#wai-aria)
+// 9. WAI-ARIA (https://www.w3.org/TR/html5/dom.html#wai-aria)
 // --------------------------------------------------
 
 //
@@ -630,7 +645,7 @@ input[type="submit"] { @extend button; }
 }
 
 //
-// User interaction (https://www.w3.org/TR/html5/editing.html)
+// 10. User interaction (https://www.w3.org/TR/html5/editing.html)
 // --------------------------------------------------
 
 //
@@ -665,7 +680,7 @@ textarea,
 }
 
 //
-// Automatic margins a.k.a Lobotomized Owls
+// 11. Automatic margins a.k.a Lobotomized Owl
 // --------------------------------------------------
 
 @if $automargin {
