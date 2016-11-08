@@ -304,7 +304,7 @@ button, input[type="submit"] {
   button:active, input[type="submit"]:active {
     background-color: #d2766d; }
   button[disabled], input[disabled][type="submit"] {
-    background-color: #aaa;
+    background-color: #eee;
     cursor: not-allowed; }
 
 [aria-busy="true"] {
@@ -434,7 +434,7 @@ textarea {
   input:not([type="submit"])[disabled],
   select[disabled],
   textarea[disabled] {
-    background-color: #aaa;
+    background-color: #eee;
     cursor: not-allowed;
     border: 0; }
 
