@@ -63,6 +63,33 @@
       color: #777;
       font-weight: normal; }
 
+.button-group {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .button-group > li {
+    list-style: none;
+    border: 1px solid #DCDCDC;
+    font-size: 0.83333rem; }
+    .button-group > li:first-child {
+      border-radius: 3px 0 0 3px; }
+    .button-group > li:last-child {
+      border-radius: 0 3px 3px 0; }
+    .button-group > li:not(:last-child) {
+      border-right: 0; }
+  .button-group .item {
+    display: inline-block;
+    line-height: 1.5rem;
+    padding: 0 1em;
+    -webkit-transition: background-color 150ms;
+    transition: background-color 150ms; }
+    .button-group .item:hover, .button-group .item:focus {
+      background-color: #f5f5f5; }
+    .button-group .item.-active {
+      background-color: #f5f5f5;
+      color: #777; }
+
 .card {
   background-color: white;
   border: 1px solid #DCDCDC;
@@ -214,33 +241,6 @@ ol.dropdown-content {
   .dropdown--top .dropdown-content:before {
     border-color: rgba(255, 255, 255, 0);
     border-top-color: #DCDCDC; }
-
-.group {
-  display: inline-block;
-  margin-bottom: 1.5rem;
-  padding: 0; }
-  .group span {
-    margin-top: 0; }
-
-.group-item {
-  border: 1px solid #DCDCDC;
-  display: inline-block;
-  font-size: 0.83333rem;
-  line-height: 1.5rem;
-  list-style: none;
-  padding: 0 1em;
-  -webkit-transition: background-color 150ms;
-  transition: background-color 150ms; }
-  .group-item:not(:first-child) {
-    margin: 0 0 0 -1px; }
-  .group-item:hover {
-    background-color: #f5f5f5; }
-  .group-item:first-child {
-    border-radius: 3px 0 0 3px; }
-  .group-item:last-child {
-    border-radius: 0 3px 3px 0; }
-  .group-item.is-active {
-    background-color: #f5f5f5; }
 
 .modal {
   background-color: rgba(50, 55, 61, 0.5);
