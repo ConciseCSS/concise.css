@@ -4,11 +4,13 @@
  * MIT license - James Kolce, Keenan Payne & Concise CSS Contributors
  */
 
-// Concise UI Components
+//
+// Components
+// --------------------------------------------------
+
 @import 'components/alert-box';
-@import 'components/tag-box';
 @import 'components/breadcrumb-nav';
-@import 'components/buttons';
+
 @import 'components/cards';
 @import 'components/collections';
 @import 'components/dropdowns';
@@ -17,3 +19,10 @@
 @import 'components/progress';
 @import 'components/spinner';
 @import 'components/tooltips';
+
+//
+// Elements
+// --------------------------------------------------
+
+@import 'elements/tag';
+@import 'elements/button';

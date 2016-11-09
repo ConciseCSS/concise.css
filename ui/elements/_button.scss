@@ -1,0 +1,112 @@
+//
+// Buttons
+// =============================================================================
+
+button {
+
+  //
+  // Bordered variant
+  // --------------------------------------------------
+
+  &.-bordered {
+    background-color: transparent;
+    outline: 1px solid getColor(base, primary);
+    color: getColor(base, primary);
+
+    &:hover,
+    &:focus {
+      background-color: getColor(base, primary);
+      color: getColor(text, inverted);
+    }
+
+    &[disabled] {
+      outline-color: getColor(state, muted);
+      color: getColor(state, muted);
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: transparent;
+        outline-color: getColor(state, muted);
+        color: getColor(state, muted);
+      }
+    }
+
+    // State variants
+    @each $color-name, $color in $colors {
+      @each $color-type, $color-value in $color {
+        @if $color-name == "state" {
+          &.-#{$color-type} {
+            outline-color: $color-value;
+            background-color: transparent;
+            color: $color-value;
+
+            &:hover,
+            &:focus { background-color: $color-value; }
+
+            &:active { background-color: ligthen($color-value, 5%); }
+
+            &:hover,
+            &:focus,
+            &:active { color: getColor(text, inverted); }
+          }
+        }
+      }
+    }
+  }
+
+  //
+  // State variants
+  // --------------------------------------------------
+
+  @each $color-name, $color in $colors {
+    @each $color-type, $color-value in $color {
+      @if $color-name == "state" {
+        &.-#{$color-type} {
+          background-color: $color-value;
+          color: getColor(text, inverted);;
+
+          &:hover,
+          &:focus {
+            background-color: lighten($color-value, 5%);
+          }
+
+          &:active { background-color: lighten($color-value, 10%); }
+        }
+      }
+    }
+  }
+
+
+  //
+  // Prefix variant
+  // --------------------------------------------------
+
+  &.-prefix {
+    padding-left: 0;
+
+    .prefix {
+      background-color: rgba(0,0,0,0.15);
+      display: inline-block;
+      margin-right: 1.25em;
+      padding: 0 1em;
+      vertical-align: 0;
+    }
+  }
+
+  //
+  // Affix variant
+  // --------------------------------------------------
+
+  &.-affix {
+    padding-right: 0;
+
+    & > .affix {
+      background-color: rgba(0,0,0,0.15);
+      display: inline-block;
+      margin-left: 1.25em;
+      padding: 0 1em;
+      vertical-align: 0;
+    }
+  }
+}
