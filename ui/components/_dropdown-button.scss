@@ -63,9 +63,9 @@
   visibility: hidden;
   min-width: 10em;
   z-index: 1;
+  font-size: typeScale(1);
 
   & > .item {
-    font-size: typeScale(1);
     list-style-type: none;
     margin: 0;
     padding: 0.25lh 1em;

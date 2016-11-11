@@ -143,9 +143,9 @@
           transition-duration: 150ms;
   visibility: hidden;
   min-width: 10em;
-  z-index: 1; }
+  z-index: 1;
+  font-size: 0.83333rem; }
   .dropdown-content > .item {
-    font-size: 0.83333rem;
     list-style-type: none;
     margin: 0;
     padding: 0.375rem 1em;
