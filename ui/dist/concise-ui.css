@@ -247,20 +247,20 @@
 
 button.-bordered {
   background-color: transparent;
-  outline: 1px solid #C65146;
+  border: 1px solid #C65146;
   color: #C65146; }
   button.-bordered:hover, button.-bordered:focus {
     background-color: #C65146;
     color: white; }
   button.-bordered[disabled] {
-    outline-color: #eee;
+    border-color: #eee;
     color: #eee; }
     button.-bordered[disabled]:hover, button.-bordered[disabled]:focus, button.-bordered[disabled]:active {
       background-color: transparent;
-      outline-color: #eee;
+      border-color: #eee;
       color: #eee; }
   button.-bordered.-muted {
-    outline-color: #eee;
+    border-color: #eee;
     background-color: transparent;
     color: #eee; }
     button.-bordered.-muted:hover, button.-bordered.-muted:focus {
@@ -270,7 +270,7 @@ button.-bordered {
     button.-bordered.-muted:hover, button.-bordered.-muted:focus, button.-bordered.-muted:active {
       color: white; }
   button.-bordered.-success {
-    outline-color: #10a887;
+    border-color: #10a887;
     background-color: transparent;
     color: #10a887; }
     button.-bordered.-success:hover, button.-bordered.-success:focus {
@@ -280,7 +280,7 @@ button.-bordered {
     button.-bordered.-success:hover, button.-bordered.-success:focus, button.-bordered.-success:active {
       color: white; }
   button.-bordered.-warning {
-    outline-color: #F17F42;
+    border-color: #F17F42;
     background-color: transparent;
     color: #F17F42; }
     button.-bordered.-warning:hover, button.-bordered.-warning:focus {
@@ -290,7 +290,7 @@ button.-bordered {
     button.-bordered.-warning:hover, button.-bordered.-warning:focus, button.-bordered.-warning:active {
       color: white; }
   button.-bordered.-error {
-    outline-color: #da3c3c;
+    border-color: #da3c3c;
     background-color: transparent;
     color: #da3c3c; }
     button.-bordered.-error:hover, button.-bordered.-error:focus {

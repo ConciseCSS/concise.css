@@ -10,7 +10,7 @@ button {
 
   &.-bordered {
     background-color: transparent;
-    outline: 1px solid getColor(base, primary);
+    border: 1px solid getColor(base, primary);
     color: getColor(base, primary);
 
     &:hover,
@@ -20,14 +20,14 @@ button {
     }
 
     &[disabled] {
-      outline-color: getColor(state, muted);
+      border-color: getColor(state, muted);
       color: getColor(state, muted);
 
       &:hover,
       &:focus,
       &:active {
         background-color: transparent;
-        outline-color: getColor(state, muted);
+        border-color: getColor(state, muted);
         color: getColor(state, muted);
       }
     }
@@ -37,7 +37,7 @@ button {
       @each $color-type, $color-value in $color {
         @if $color-name == "state" {
           &.-#{$color-type} {
-            outline-color: $color-value;
+            border-color: $color-value;
             background-color: transparent;
             color: $color-value;
 
