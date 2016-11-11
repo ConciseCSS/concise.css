@@ -1,0 +1,116 @@
+//
+// Progress Bars
+// =============================================================================
+// Courtesy of Chris Coyier (http://css-tricks.com/css3-progress-bars/)
+
+.progress-bar {
+  background-color: getColor(background, light);
+  border-radius: 3px;
+  box-shadow: inset 0 1px 1px rgba(getColor(base, lines), .25);
+  box-sizing: initial;
+  color: getColor(text, inverted);
+  font-size: typeScale(1);
+  height: 0.5lh;
+  line-height: 1.2;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  & > .progress {
+    background-color: getColor(base, primary);
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  //
+  // Striped variant
+  // --------------------------------------------------
+
+  &.-striped {
+    & > .progress {
+      &:after {
+        background-image: linear-gradient(-45deg,
+            rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%,
+            rgba(255, 255, 255, .2) 50%,
+            rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+        background-size: 50px 50px;
+        background-repeat: repeat;
+        bottom: 0;
+        content: "";
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+      }
+    }
+
+    // Animated
+    &.-animated > .progress {
+      &:after { animation: move 2s linear infinite; }
+    }
+  }
+
+  //
+  // Small variant
+  // --------------------------------------------------
+
+  &.-small {
+    font-size: typeScale(1);
+    height: 10px;
+    line-height: 1.2;
+  }
+
+  //
+  // Large variant
+  // --------------------------------------------------
+
+  &.-large {
+    font-size: typeScale(2);
+    height: 25px;
+    line-height: 1.7;
+  }
+
+  //
+  // Stacked variant
+  // --------------------------------------------------
+
+  &.-stacked {
+    & > .progress {
+      border-radius: 0;
+      display: block;
+      float: left;
+
+      &:first-of-type { border-radius: 3px 0 0 3px; }
+
+      &:last-of-type { border-radius: 0 3px 3px 0; }
+    }
+  }
+}
+
+//
+// "Move" animation
+// --------------------------------------------------
+
+@keyframes move {
+  0% { background-position: 0 0; }
+
+  100% { background-position: 50px 50px; }
+}
+
+@-moz-keyframes move {
+  0% { background-position: 0 0; }
+
+  100% { background-position: 50px 50px; }
+}
+
+@-webkit-keyframes move {
+  0% { background-position: 0 0; }
+
+  100% { background-position: 50px 50px; }
+}
