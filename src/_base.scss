@@ -601,6 +601,7 @@ button {
   &:focus {
     background-color: lighten(getColor(base, primary), 5%);
     text-decoration: none;
+    outline: none;
   }
 
   &:active { background-color: lighten(getColor(base, primary), 10%); }

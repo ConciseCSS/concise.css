@@ -321,7 +321,8 @@ button, input[type="submit"] {
   white-space: nowrap; }
   button:hover, input[type="submit"]:hover, button:focus, input[type="submit"]:focus {
     background-color: #cc6359;
-    text-decoration: none; }
+    text-decoration: none;
+    outline: none; }
   button:active, input[type="submit"]:active {
     background-color: #d2766d; }
   button[disabled], input[disabled][type="submit"] {
@@ -449,8 +450,7 @@ textarea {
   input:not([type="submit"]):focus,
   select:focus,
   textarea:focus {
-    border-color: #4eb1f9;
-    outline: none; }
+    border-color: #4eb1f9; }
   input:not([type="submit"])[disabled],
   select[disabled],
   textarea[disabled] {

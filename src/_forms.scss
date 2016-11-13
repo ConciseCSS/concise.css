@@ -12,7 +12,6 @@ textarea {
 
   &:focus {
     border-color: getColor(blue, lighter);
-    outline: none;
   }
 
   &[disabled] {
