@@ -363,6 +363,38 @@ The color follows the same schema in the $colors map. For example, you can use t
 <div class="_bg-gray-lighter">…</div>
 ```
 
+## Columns
+
+Is possible to split the content into several columns, up to 12 by default, using the column utilities.
+
+Those classes use the #[a(href='https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layoutsare different') Multicolumn layout], so they are distinct from the grid included in the core of Concise CSS.
+
+Also, there is a class to build masonry-type layouts with pure CSS quickly.
+
+#### Columns
+
+```HTML
+<div class="_cols-1">…</div>
+<div class="_cols-2">…</div>
+…
+<div class="_cols-11">…</div>
+<div class="_cols-12">…</div>
+```
+
+#### Gap between columns
+
+You can set the space between the columns, by default it will have the value of the #[code $gutter] variable.
+
+```HTML
+<div class="_col-gap">…</div>
+```
+
+#### Masonry layout
+
+```HTML
+<div class="_masonry">…</div>
+```
+
 ### Hide/Show
 
 You can hide or show elements depending on certain key points, like the device size, resolution, or media (printing or screen).
