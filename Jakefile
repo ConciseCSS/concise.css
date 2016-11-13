@@ -48,13 +48,13 @@ task('http', () => {
   })
 })
 
-desc('Start the development services.')
+desc('Build the files for distribution.')
 task('build', () => {
   jake.Task['concise'].invoke()
   jake.Task['minify'].invoke()
 })
 
-desc('Start the development services.')
+desc('Start the development tools.')
 task('default', () => {
   jake.Task['build'].invoke()
   jake.Task['concise:watch'].invoke()
