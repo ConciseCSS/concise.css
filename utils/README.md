@@ -9,13 +9,14 @@ Utility classes for Concise CSS
 3. Utilities
   1. Borders
   2. Colors
-  3. Hide/Show
-  4. Display
-  5. Margins
-  6. Paddings
-  7. Position
-  8. Type Scale
-  9. Typography
+  3. Columns
+  4. Hide/Show
+  5. Display
+  6. Margins
+  7. Paddings
+  8. Position
+  9. Type Scale
+  10. Typography
 4. License
 
 ## Introduction
