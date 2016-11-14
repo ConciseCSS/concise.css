@@ -27,12 +27,34 @@ Helper classes are prefixed with an underscore (`_`) to distinguish them from co
 
 ## Installation
 
+### With NPM
+
 ```
 npm install concise-utils
 ```
 
 ```scss
 @import 'node_modules/concise-utils/concise-utils'
+```
+
+### Using the CDN
+
+```HTML
+<!-- Normal - Latest version -->
+<link rel="stylesheet" href="https://cdn.concisecss.com/concise-utils/concise-utils.css">
+
+<!-- Minified - Latest version -->
+<link rel="stylesheet" href="https://cdn.concisecss.com/concise-utils/concise-utils.min.css">
+```
+
+That is for the latest version, if you want to use a specific one you can do something like the following:
+
+```HTML
+<!-- Normal - Specific version -->
+<link rel="stylesheet" href="https://cdn.concisecss.com/concise-utils/v1.0.0/concise.css">
+
+<!-- Minified - Specific version -->
+<link rel="stylesheet" href="https://cdn.concisecss.com/concise-utils/v1.0.0/concise.min.css">
 ```
 
 ## Utilities
