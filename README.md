@@ -51,7 +51,7 @@ Then you can include the main file inside your project:
 Finally, if you prefer, you can just copy the framework files to your project folder.
 You can download the latest version from Github from [this link](https://github.com/ConciseCSS/concise.css/archive/master.zip), and place the files wherever you need them.
 
-### Building the source files
+## Building the source files
 
 To build the source files, you need to install the Concise CLI globally (locally if you compile the files with an NPM script):
 
