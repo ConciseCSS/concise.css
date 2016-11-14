@@ -9,13 +9,14 @@ Utility classes for Concise CSS
 3. Utilities
   1. Borders
   2. Colors
-  3. Hide/Show
-  4. Display
-  5. Margins
-  6. Paddings
-  7. Position
-  8. Type Scale
-  9. Typography
+  3. Columns
+  4. Hide/Show
+  5. Display
+  6. Margins
+  7. Paddings
+  8. Position
+  9. Type Scale
+  10. Typography
 4. License
 
 ## Introduction
@@ -361,6 +362,38 @@ The color follows the same schema in the $colors map. For example, you can use t
 
 <!-- Equivalent to getColor(gray, lighter) -->
 <div class="_bg-gray-lighter">…</div>
+```
+
+## Columns
+
+Is possible to split the content into several columns, up to 12 by default, using the column utilities.
+
+Those classes use the #[a(href='https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layoutsare different') Multicolumn layout], so they are distinct from the grid included in the core of Concise CSS.
+
+Also, there is a class to build masonry-type layouts with pure CSS quickly.
+
+#### Columns
+
+```HTML
+<div class="_cols-1">…</div>
+<div class="_cols-2">…</div>
+…
+<div class="_cols-11">…</div>
+<div class="_cols-12">…</div>
+```
+
+#### Gap between columns
+
+You can set the space between the columns, by default it will have the value of the #[code $gutter] variable.
+
+```HTML
+<div class="_col-gap">…</div>
+```
+
+#### Masonry layout
+
+```HTML
+<div class="_masonry">…</div>
 ```
 
 ### Hide/Show
