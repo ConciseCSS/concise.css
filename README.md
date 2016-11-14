@@ -2,36 +2,70 @@
 
 [![Bower version](https://badge.fury.io/bo/concise.svg)](http://badge.fury.io/bo/concise) [![npm version](https://badge.fury.io/js/concise.css.svg)](https://badge.fury.io/js/concise.css)
 
-Concise is a lightweight, front-end framework that provides a number of great features without the bloat. Concise is built based on Object-Oriented CSS principles and keeps semantics in mind to provide a small learning curve, and a high level of customization.
+Concise CSS is a lightweight, CSS framework that provides a number of great features without the bloat.
 
-## Quickstart
+Concise CSS provides a solid foundation to stylize your website. It offers an alternative to frameworks like Bootstrap and Foundation, with the difference that Concise only includes the minimum styles required. That does not mean that the features are limited; is possible to use add-ons on top of the core to extend the functionality as required.
 
-It's easy to get started with Concise:
+The core of the framework only includes styles for native HTML elements. Components and utilities are provided as optional add-ons, Concise UI and Concise Utils, respectively.
 
-- [Download the latest release (SASS Included)](https://github.com/ConciseCSS/concise.css/archive/v3.4.0.zip)
-- Install with [Bower](http://bower.io/): `bower install concise`
-- Install with [NPM](https://www.npmjs.com/): `npm install concise.css`
+Concise CSS is written using a custom CSS preprocessor, built on top of Sass and some PostCSS plugins; this means that you can still write Sass code as usual, but you can also enjoy of other custom features, like the `lh` unit provided to handle vertical rhythm.
 
-**Note:** 
-If you just want the CSS files, please refer to the downloads section for each release: [https://github.com/ConciseCSS/concise.css/releases](https://github.com/ConciseCSS/concise.css/releases)
+## Installation
 
-**IMPORTANT:** Currently the `Master` branch is being used for the development of the next version of Concise, the latest stable version is available in the branch `3.x.x`
+There are 3 different options to install Concise CSS in your website, although the recommended way is to use NPM.
 
-#### Using our CDN:
+### Using our CDN
+
+If you just want to try Concise CSS or of you do not have plans to customize the styles, you can use our CDN, this is the easier way to get started with the framework—and if you like it—is recommended to switch to NPM so that you can customize the styles.
+
 
 ```CSS
 /* Normal */
-<link rel="stylesheet" href="https://cdn.concisecss.com/v3.4.0/concise.css">
+<link rel="stylesheet" href="https://cdn.concisecss.com/latest/concise.css">
 
 /* Minified */
-<link rel="stylesheet" href="https://cdn.concisecss.com/v3.4.0/concise.min.css">
+<link rel="stylesheet" href="https://cdn.concisecss.com/latest/concise.min.css">
 ```
 
-After you download or install the package, [check out our documentation](http://concisecss.com/documentation) to get up and running.
+### Install with NPM
 
-### Building the project
+Execute the following command to install Concise CSS from NPM. If you are new to NPM, you can check their [documentation](https://docs.npmjs.com/).
 
-Please refer to our [Contributing](https://github.com/ConciseCSS/concise.css/blob/master/CONTRIBUTING.md#building-the-project) page for instructions on compiling the SASS in the project.
+```
+npm install concise.css
+```
+
+Then you can include the main file inside your project:
+
+```scss
+//
+// myStyles.scss
+// ---------
+
+// Concise Core
+@import "node_modules/concise.css/concise";
+```
+
+### Copy the source files
+
+Finally, if you prefer, you can just copy the framework files to your project folder.
+You can download the latest version from Github from [this link](https://github.com/ConciseCSS/concise.css/archive/master.zip), and place the files wherever you need them.
+
+### Building the source files
+
+To build the source files, you need to install the Concise CLI globally (locally if you compile the files with an NPM script):
+
+```
+npm install -g concise-cli
+```
+
+Once it is installed, you can compile source files with the `concisecss compile` command:
+
+```
+concisecss compile input.scss output.css
+```
+
+**Note**: When compiling the source code with the Concise CLI, Autoprefixer will automatically add the required browser prefixes for the last two browser versions.
 
 ### Changelog
 
@@ -63,7 +97,7 @@ There are lots of different things that people will want to post regarding the C
 
 ## Contributing
 
-If you wish to contribute to the Concise project, please read through our [contributing guidelines](https://github.com/ConciseCSS/concise.css/blob/master/CONTRIBUTING.md) first and then help however you'd like!
+If you wish to contribute to the Concise CSS project, please read through our [contributing guidelines](https://github.com/ConciseCSS/concise.css/blob/master/CONTRIBUTING.md) first and then help however you’d like!
 
 ## Versioning
 
