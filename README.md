@@ -2,7 +2,7 @@
 
 [![Bower version](https://badge.fury.io/bo/concise.svg)](http://badge.fury.io/bo/concise) [![npm version](https://badge.fury.io/js/concise.css.svg)](https://badge.fury.io/js/concise.css)
 
-Concise CSS is a lightweight, CSS framework that provides a number of great features without the bloat.
+Concise CSS is a lightweight CSS framework that provides a number of great features without the bloat.
 
 Concise CSS provides a solid foundation to stylize your website. It offers an alternative to frameworks like Bootstrap and Foundation, with the difference that Concise only includes the minimum styles required. That does not mean that the features are limited; is possible to use add-ons on top of the core to extend the functionality as required.
 
