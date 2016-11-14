@@ -1,7 +1,7 @@
 {
   "name": "concise-utils",
-  "version": "0.2.0",
-  "description": "Utility classes for Concise Framework",
+  "version": "1.0.0",
+  "description": "Utility classes for Concise CSS",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ConciseCSS/concise-utils.git"
