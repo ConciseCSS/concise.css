@@ -1,7 +1,7 @@
 {
   "name": "concise",
   "description": "A front-end framework written in SASS that's lightweight, and easy-to-use.",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "ignore": [
     ".gitignore",
     ".editorconfig",
