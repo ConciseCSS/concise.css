@@ -1,0 +1,9 @@
+//
+// getColor Function
+// --------------------------------------------------
+// Easily retrieve colors from the $colors map.
+//
+
+@function getColor($color, $value: "base") {
+  @return map-get(map-get($colors, $color), $value);
+}

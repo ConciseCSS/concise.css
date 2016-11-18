@@ -1,0 +1,159 @@
+//
+// Base
+// --------------------------------------------------
+
+// Font size for small devices
+$font-size: 16 !default;
+
+// Font size for big devices
+$font-size-secondary: 18 !default;
+
+// Tracking
+$letter-spacing: 0.05em !default;
+
+// Font families
+$font-primary: "Helvetica", "Arial", sans-serif !default;
+$font-secondary: "Helvetica", "Arial", sans-serif !default;
+$font-mono: "Consolas", monospace !default;
+$font-print-primary: "Georgia", "Times New Roman", "Times", serif !default;
+$font-print-secondary: "Georgia", "Times New Roman", "Times", serif !default;
+
+// Enable margins to all the elements
+// except the first one in each nesting level
+$automargin: true !default;
+
+// ^ How much margin for those elements
+$block-margin: 1lh !default;
+
+// Transition duration
+$transition-duration: 150ms !default;
+
+// Custom media queries
+// Use as @media (--medium) { … }
+@custom-media --extra-small (width <= 480px);
+@custom-media --small (width >= 480px);
+@custom-media --medium (width >= 768px);
+@custom-media --large (width >= 960px);
+@custom-media --extra-large (width >= 1100px);
+@custom-media --only-small (480px < width <= 768px);
+@custom-media --only-medium (768px < width <= 980px);
+@custom-media --only-large (980px < width <= 1100px);
+
+// Spacing variables
+$spacing-xs: 0.5lh !default;
+$spacing-s: 1lh !default;
+$spacing-m: 2lh !default;
+$spacing-l: 3lh !default;
+$spacing-xl: 4lh !default;
+
+//
+// Type Scale
+// --------------------------------------------------
+
+// Suggested ratios
+// Source: http://type-scale.com/
+$_minor-second:     1.067 !default;
+$_major-second:     1.125 !default;
+$_minor-third:      1.200 !default;
+$_major-third:      1.250 !default;
+$_perfect-fourth:   1.333 !default;
+$_augmented-fourth: 1.414 !default;
+$_perfect-fifth:    1.500 !default;
+$_golden-ratio:     1.618 !default;
+
+// Ratio for primary scale
+$scale-ratio: $_minor-third !default;
+
+// Ratio for secondary scale
+$scale-ratio-secondary: $_perfect-fourth !default;
+
+//
+// Grid
+// --------------------------------------------------
+
+// Enable grid styles
+$enable-grid: true !default;
+
+// Enable x-*, sm-*, md-*, lg-*, xl-* columns and offsets
+$full-grid: false !default;
+
+// Max width for container
+$container-width: 1200px !default;
+
+// Gutter size
+$gutter: 2rem !default;
+
+// Number of columns in a row
+$num-columns: 12 !default;
+
+// Prefix for attributes
+$prefix: '' !default;
+
+// Create columns and offsets above this breakpoint
+$breakpoint: --small !default;
+
+//
+// Color Palette
+// --------------------------------------------------
+// Use the getColor() function to use those values in
+// your stylesheets. Example: getColor(base, primary)
+
+$colors: (
+  base: (
+    "primary":   #C65146,
+    "selection": #EBE1D3,
+    "lines":     #DCDCDC
+  ),
+
+  text: (
+    "primary":   #444,
+    "secondary": #777,
+    "heading":   #222,
+    "inverted":  white
+  ),
+
+  background: (
+    "dark":  #32373d,
+    "light": #f5f5f5,
+    "body":  white
+  ),
+
+  state: (
+    "muted":   #eee,
+    "success": #10a887,
+    "warning": #F17F42,
+    "error":   #da3c3c
+  ),
+
+  blue: (
+    "darker":  #1573b6,
+    "dark":    #1e80c6,
+    "base":    #2b90d9,
+    "light":   #3fa2e9,
+    "lighter": #4eb1f9
+  ),
+
+  green: (
+    "darker":  #089073,
+    "dark":    #0b9d7d,
+    "base":    #10a887,
+    "light":   #1eb896,
+    "lighter": #28ceaa
+  ),
+
+  red: (
+    "darker":  #653131,
+    "dark":    #b73333,
+    "base":    #da3c3c,
+    "light":   #f25a5a,
+    "lighter": #fa8181
+  ),
+
+  gray: (
+    "darker":  #333333,
+    "dark":    #4d4d4d,
+    "base":    #666666,
+    "light":   #808080,
+    "lighter": #999999
+  )
+) !default;
