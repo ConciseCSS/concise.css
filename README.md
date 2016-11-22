@@ -31,10 +31,10 @@ That is for the latest version, if you want to use a specific one you can do som
 
 ```HTML
 <!-- Normal - Specific version -->
-<link rel="stylesheet" href="https://cdn.concisecss.com/v4.0.0/concise.css">
+<link rel="stylesheet" href="https://cdn.concisecss.com/v4.0/concise.css">
 
 <!-- Minified - Specific version -->
-<link rel="stylesheet" href="https://cdn.concisecss.com/v4.0.0/concise.min.css">
+<link rel="stylesheet" href="https://cdn.concisecss.com/v4.0/concise.min.css">
 ```
 
 ### Install with NPM
