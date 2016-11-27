@@ -76,6 +76,8 @@ kbd {
 
 pre {
   padding: 0.75rem 1em; }
+  pre > code  {
+    white-space: pre; }
 
 kbd {
   background-color: transparent;

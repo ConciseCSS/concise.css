@@ -145,7 +145,11 @@ kbd {
   padding: 0 0.4em;
 }
 
-pre { padding: 0.5lh 1em; }
+pre {
+  padding: 0.5lh 1em;
+
+  & > code { white-space: pre; }
+}
 
 kbd {
   background-color: transparent;
