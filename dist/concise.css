@@ -575,6 +575,18 @@ table {
   -ms-flex-flow: row nowrap;
       flex-flow: row nowrap; }
 
+[grid~="wrap"] {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+[grid~="no-wrap"] {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; }
+
+[grid~="wrap-reverse"] {
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse; }
+
 [grid~="row"] {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
