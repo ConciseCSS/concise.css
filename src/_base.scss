@@ -112,7 +112,7 @@ template, // 1
 	-webkit-text-size-adjust: 100%;
   background-color: getColor(background, body);
   color: getColor(text, primary);
-  font-size: $font-size;
+  font-size: $font-size + px;
   text-rendering: optimizeLegibility;
 
   @media ($breakpoint) {
