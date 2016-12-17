@@ -173,10 +173,9 @@ hr {
 
 nav {
   ol,
-  ul {
-    list-style: none;
-    padding-left: 0;
-  }
+  ul { padding-left: 0; }
+
+  li { list-style: none; }
 }
 
 //
