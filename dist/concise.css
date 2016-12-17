@@ -54,7 +54,7 @@ template,
   -webkit-text-size-adjust: 100%;
   background-color: white;
   color: #444;
-  font-size: 16;
+  font-size: 16px;
   text-rendering: optimizeLegibility; }
   @media (min-width: 480px) {
     :root {
@@ -378,7 +378,8 @@ body,
 span,
 dd,
 code,
-label {
+label,
+[column] {
   margin-top: 0; }
 
 h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
@@ -638,31 +639,26 @@ table {
 [grid~="top"] {
   -webkit-box-align: start;
       -ms-flex-align: start;
-              -ms-grid-row-align: flex-start;
           align-items: flex-start; }
 
 [grid~="center"] {
   -webkit-box-align: center;
       -ms-flex-align: center;
-              -ms-grid-row-align: center;
           align-items: center; }
 
 [grid~="bottom"] {
   -webkit-box-align: end;
       -ms-flex-align: end;
-              -ms-grid-row-align: flex-end;
           align-items: flex-end; }
 
 [grid~="baseline"] {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
-              -ms-grid-row-align: baseline;
           align-items: baseline; }
 
 [grid~="stretch"] {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
-              -ms-grid-row-align: stretch;
           align-items: stretch; }
 
 [column~="top"] {
@@ -671,6 +667,7 @@ table {
 
 [column~="center"] {
   -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center; }
 
 [column~="bottom"] {

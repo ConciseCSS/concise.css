@@ -707,7 +707,8 @@ textarea,
   span,
   dd,
   code,
-	label { margin-top: 0; }
+	label,
+  [#{$prefix}column]{ margin-top: 0; }
 
   // First paragraphs below a heading shouldn’t get a margin
   h1, h2, h3, h4, h5, h6 {
