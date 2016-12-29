@@ -11,6 +11,7 @@
     max-width: $container-width;
     padding-left: $gutter / 2;
     padding-right: $gutter / 2;
+    overflow: auto;
   }
 
   [#{$prefix}grid] {
