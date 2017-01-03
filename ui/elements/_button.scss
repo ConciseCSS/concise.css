@@ -44,7 +44,7 @@ button {
             &:hover,
             &:focus { background-color: $color-value; }
 
-            &:active { background-color: ligthen($color-value, 5%); }
+            &:active { background-color: lighten($color-value, 5%); }
 
             &:hover,
             &:focus,

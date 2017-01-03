@@ -266,7 +266,7 @@ button.-bordered {
     button.-bordered.-muted:hover, button.-bordered.-muted:focus {
       background-color: #eee; }
     button.-bordered.-muted:active {
-      background-color: ligthen(#eee, 5%); }
+      background-color: #fbfbfb; }
     button.-bordered.-muted:hover, button.-bordered.-muted:focus, button.-bordered.-muted:active {
       color: white; }
   button.-bordered.-success {
@@ -276,7 +276,7 @@ button.-bordered {
     button.-bordered.-success:hover, button.-bordered.-success:focus {
       background-color: #10a887; }
     button.-bordered.-success:active {
-      background-color: ligthen(#10a887, 5%); }
+      background-color: #12bf9a; }
     button.-bordered.-success:hover, button.-bordered.-success:focus, button.-bordered.-success:active {
       color: white; }
   button.-bordered.-warning {
@@ -286,7 +286,7 @@ button.-bordered {
     button.-bordered.-warning:hover, button.-bordered.-warning:focus {
       background-color: #F17F42; }
     button.-bordered.-warning:active {
-      background-color: ligthen(#F17F42, 5%); }
+      background-color: #f38f5a; }
     button.-bordered.-warning:hover, button.-bordered.-warning:focus, button.-bordered.-warning:active {
       color: white; }
   button.-bordered.-error {
@@ -296,7 +296,7 @@ button.-bordered {
     button.-bordered.-error:hover, button.-bordered.-error:focus {
       background-color: #da3c3c; }
     button.-bordered.-error:active {
-      background-color: ligthen(#da3c3c, 5%); }
+      background-color: #de5151; }
     button.-bordered.-error:hover, button.-bordered.-error:focus, button.-bordered.-error:active {
       color: white; }
 
