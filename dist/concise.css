@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * ConciseCSS v4.0.1
+ * ConciseCSS v4.1.2
  * https://github.com/ConciseCSS/concise.css
  *
  * Copyright 2016 James Kolce, Keenan Payne and ConciseCSS Contributors
@@ -204,7 +204,8 @@ select,
 textarea {
   background-color: transparent;
   border-style: none;
-  color: inherit; }
+  color: inherit;
+  font: inherit; }
 
 button, input[type="submit"],
 input {
@@ -218,7 +219,8 @@ button, input[type="submit"],
 html [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button; }
+  -webkit-appearance: button;
+  font: inherit; }
 
 ::-moz-focus-inner {
   border-style: none;
