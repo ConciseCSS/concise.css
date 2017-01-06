@@ -333,6 +333,7 @@ button, input[type="submit"] {
     background-color: #d2766d; }
   button[disabled], input[disabled][type="submit"] {
     background-color: #eee;
+    color: white;
     cursor: not-allowed; }
 
 [aria-busy="true"] {

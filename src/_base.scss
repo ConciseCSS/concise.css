@@ -613,7 +613,7 @@ button {
 
   &[disabled] {
     background-color: getColor(state, muted);
-    color: getColor(text, ui);
+    color: getColor(text, inverted);
     cursor: not-allowed;
   }
 }
