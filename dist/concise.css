@@ -206,6 +206,10 @@ textarea {
   border-style: none;
   color: inherit;
   font: inherit; }
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: 2px solid #2b90d9; }
 
 button, input[type="submit"],
 input {
@@ -450,8 +454,6 @@ ol {
 input:not([type="submit"]),
 select,
 textarea {
-  -webkit-transition-duration: 150ms;
-          transition-duration: 150ms;
   width: 100%;
   font-size: 0.83333rem;
   min-height: 2.25rem; }

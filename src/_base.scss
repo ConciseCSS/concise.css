@@ -416,6 +416,8 @@ textarea {
 	border-style: none; // 1
 	color: inherit; // 1
   font: inherit;
+
+  &:focus { outline: 2px solid getColor(blue, base); }
 }
 
 //
