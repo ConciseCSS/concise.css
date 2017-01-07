@@ -388,7 +388,7 @@ span,
 dd,
 code,
 label,
-[column] {
+br [column] {
   margin-top: 0; }
 
 h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
