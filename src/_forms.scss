@@ -9,10 +9,6 @@ textarea {
   font-size: typeScale(1);
   min-height: 1.5lh;
 
-  &:focus {
-    border-color: getColor(blue, lighter);
-  }
-
   &[disabled] {
     background-color: getColor(state, muted);
     cursor: not-allowed;

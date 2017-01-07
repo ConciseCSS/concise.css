@@ -457,10 +457,6 @@ textarea {
   width: 100%;
   font-size: 0.83333rem;
   min-height: 2.25rem; }
-  input:not([type="submit"]):focus,
-  select:focus,
-  textarea:focus {
-    border-color: #4eb1f9; }
   input:not([type="submit"])[disabled],
   select[disabled],
   textarea[disabled] {
