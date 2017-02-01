@@ -14,7 +14,7 @@ Concise CSS is written using a custom CSS preprocessor, built on top of Sass and
 
 ## Installation
 
-There are 3 different options to install Concise CSS in your website, although the recommended way is to use NPM.
+There are 4 different options to install Concise CSS in your website, although the recommended way is to use NPM.
 
 ### Using our CDN
 
@@ -56,6 +56,25 @@ Then you can include the main file inside your project:
 
 // Concise Core
 @import "node_modules/concise.css/concise";
+```
+
+### Install with diamond
+
+Execute the following command to install Concise CSS from diamond. If you are new to diamond, you can check their [documentation](https://diamond.js.org/docs).
+
+```
+diamond install concise.css
+```
+
+Then you can include the main file inside your project:
+
+```scss
+//
+// myStyles.scss
+// ---------
+
+// Concise Core
+@import "[concise.css]";
 ```
 
 ### Copy the source files
