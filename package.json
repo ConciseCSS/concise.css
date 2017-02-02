@@ -31,7 +31,12 @@
     "http-server": "^0.9.0",
     "jake": "^8.0.15",
     "livereload": "^0.6.0",
-    "stylestats": "^6.3.0"
+    "stylestats": "^6.3.0",
+    "postcss": "^5.0.21",
+    "postcss-custom-media": "^5.0.1",
+    "postcss-lh": "^1.1.0",
+    "postcss-media-minmax": "^2.1.2",
+    "postcss-input-range": "^2.0.0"
   },
   "scripts": {
     "build": "jake build",
@@ -40,6 +45,7 @@
     "stats:min": "stylestats dist/concise.min.css"
   },
   "diamond": {
-    "main": "concise.scss" 
+    "main": "concise.scss",
+    "postCompile": "diamond.js"
   }
 }
