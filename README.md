@@ -98,6 +98,13 @@ concisecss compile input.scss output.css
 
 **Note**: When compiling the source code with the Concise CLI, Autoprefixer will automatically add the required browser prefixes for the last two browser versions.
 
+### Building with diamond
+To build with diamond, simply use the `diamond compile` command. If you are new to diamond, you can check their [documentation](https://diamond.js.org/docs).  
+
+```
+diamond compile -o output.css input.scss
+```
+
 ### Changelog
 
 You can keep up-to-date with the changes that we have made via our [releases page](https://github.com/ConciseCSS/concise.css/releases).
