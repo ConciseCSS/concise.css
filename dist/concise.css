@@ -577,8 +577,10 @@ table {
     padding-right: 0; }
 
 [grid~="no-collapse"] {
-  -ms-flex-flow: row nowrap;
-      flex-flow: row nowrap; }
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap; }
 
 [grid~="wrap"] {
   -ms-flex-wrap: wrap;
