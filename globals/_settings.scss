@@ -28,16 +28,22 @@ $block-margin: 1lh !default;
 // Transition duration
 $transition-duration: 150ms !default;
 
+// Break points
+$break-small: 480px;
+$break-medium: 768px;
+$break-large: 960px;
+$break-extra-large: 1100px;
+
 // Custom media queries
 // Use as @media (--medium) { … }
-@custom-media --extra-small (width <= 480px);
-@custom-media --small (width >= 480px);
-@custom-media --medium (width >= 768px);
-@custom-media --large (width >= 960px);
-@custom-media --extra-large (width >= 1100px);
-@custom-media --only-small (480px < width <= 768px);
-@custom-media --only-medium (768px < width <= 980px);
-@custom-media --only-large (980px < width <= 1100px);
+@custom-media --extra-small (width < #{$break-small});
+@custom-media --small (width >= #{$break-small});
+@custom-media --medium (width >= #{$break-medium});
+@custom-media --large (width >= #{$break-large});
+@custom-media --extra-large (width >= #{$break-extra-large});
+@custom-media --only-small (#{$break-small} < width <= #{$break-medium});
+@custom-media --only-medium (#{$break-medium} < width <= #{$break-large});
+@custom-media --only-large (#{$break-large} < width <= #{$break-extra-large});
 
 // Spacing variables
 $spacing-xs: 0.5lh !default;
@@ -79,6 +85,9 @@ $full-grid: false !default;
 
 // Max width for container
 $container-width: 1200px !default;
+
+// Enable container="solid" option
+$enable-container-solid: false !default;
 
 // Gutter size
 $gutter: 2rem !default;
