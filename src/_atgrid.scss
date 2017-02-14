@@ -14,6 +14,23 @@
     overflow: auto;
   }
 
+  @if($enable-container-solid) {
+    [#{$prefix}container~="solid"] {
+      @media(--small) {
+        max-width: $break-small;
+      }
+      @media(--medium) {
+        max-width: $break-medium;
+      }
+      @media(--large) {
+        max-width: $break-large;
+      }
+      @media(--extra-large) {
+        max-width: $container-width;
+      }
+    }
+  }
+
   [#{$prefix}grid] {
     display: flex;
     margin-left: $gutter / -2;
