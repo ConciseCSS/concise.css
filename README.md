@@ -74,7 +74,7 @@ Then you can include the main file inside your project:
 // ---------
 
 // Concise Core
-@import "[concise.css]";
+@import "~concise.css";
 ```
 
 ### Copy the source files
