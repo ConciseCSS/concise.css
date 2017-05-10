@@ -43,9 +43,5 @@
     "build:dev": "jake default",
     "stats": "stylestats dist/concise.css",
     "stats:min": "stylestats dist/concise.min.css"
-  },
-  "diamond": {
-    "main": "concise.scss",
-    "postCompile": "diamond.js"
   }
 }

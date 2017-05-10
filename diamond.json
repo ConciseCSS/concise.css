@@ -1,0 +1,7 @@
+{
+  "name": "concise.css",
+  "version": "4.1.2",
+  "description": "A lightweight front-end framework that provides functionality without the bloat.",
+  "main": "concise.scss",
+  "postProcessor": "diamond.js"
+}
