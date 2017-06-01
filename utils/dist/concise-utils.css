@@ -500,15 +500,15 @@
 
 @media (min-width: 768px) {
   ._show-m,
-  ._hide-sm
-._hide-xm,
+  ._hide-s,
+  ._hide-xm,
   ._hide-l,
   ._hide-xl {
     display: block;
     visibility: visible; }
   ._hide-m,
-  ._show-sm
-._show-xm,
+  ._show-s,
+  ._show-xm,
   ._show-l,
   ._show-xl {
     display: none;
