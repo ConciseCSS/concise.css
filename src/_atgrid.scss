@@ -89,7 +89,7 @@
   //
   
   @media ($breakpoint) {
-     @for $i from 1 through 10 {  
+     @for $i from 1 through $num-columns {  
         [#{$prefix}column~="n#{$i}"] { order: #{$i}; }
      }
   }
