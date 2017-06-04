@@ -83,6 +83,16 @@
   [#{$prefix}grid~="row-reverse"] { flex-direction: row-reverse; }
   [#{$prefix}grid~="column"] { flex-direction: column; }
   [#{$prefix}grid~="column-reverse"] { flex-direction: column-reverse; }
+  
+  //
+  // Reorder items above breakpoint
+  //
+  
+  @media ($breakpoint) {
+     @for $i from 1 through 10 {  
+        [#{$prefix}column~="n#{$i}"] { order: #{$i}; }
+     }
+  }
 
   //
   // Justify content
