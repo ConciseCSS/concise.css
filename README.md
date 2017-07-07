@@ -10,8 +10,6 @@ The core of the framework only includes styles for native HTML elements. Compone
 
 Concise CSS is written using a custom CSS preprocessor, built on top of Sass and some PostCSS plugins; this means that you can still write Sass code as usual, but you can also enjoy of other custom features, like the `lh` unit provided to handle vertical rhythm.
 
-**Browser Compatibility:** Since the core of of Concise CSS only includes general normalization styles, it should work with no problems on IE>9. Add-ons like Concise UI use Flexbox, so they will only work on modern browsers (including IE>11|Edge). If you find a problem with certain browser let us know and we will try to fix it. 
-
 ## Installation
 
 There are 4 different options to install Concise CSS in your website, although the recommended way is to use NPM.
