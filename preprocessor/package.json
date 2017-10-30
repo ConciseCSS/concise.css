@@ -4,7 +4,8 @@
   "description": "The Concise CSS Preprocessor",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ts-node node_modules/tape/bin/tape spec",
+    "compile": "tsc"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,15 @@
     "url": "https://github.com/ConciseCSS/preprocessor/issues"
   },
   "homepage": "https://github.com/ConciseCSS/preprocessor#readme",
-  "dependencies": {}
+  "dependencies": {
+    "autoprefixer": "^7.1.6",
+    "node-sass": "^4.5.3",
+    "postcss": "^6.0.13"
+  },
+  "devDependencies": {
+    "ts-node": "^3.3.0",
+    "typescript": "^2.5.3",
+    "@types/node": "^8.0.47",
+    "tape": "^4.8.0"
+  }
 }
