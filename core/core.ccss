@@ -1,9 +1,19 @@
+// Custom media queries
+@custom-media --extra-small (width < 480px);
+@custom-media --small (width >= 480px);
+@custom-media --medium (width >= 768px);
+@custom-media --large (width >= 960px);
+@custom-media --extra-large (width >= 1100px);
+@custom-media --only-small (480px < width <= 768px);
+@custom-media --only-medium (768px < width <= 960px);
+@custom-media --only-large (960px < width <= 1100px);
+
 :root {
   // Font size for small devices
-  --font-size: 16;
+  --font-size: 16px;
 
   // Font size for large devices
-  --font-size-large: 18;
+  --font-size-large: 18px;
 
   // Space between characters
   --tracking: 0.05em;
@@ -17,12 +27,6 @@
 
   // Transitions
   --transition-duration: 150ms;
-
-  // Breakpoints
-  --break-small: 480px;
-  --break-medium: 768px;
-  --break-large: 960px;
-  --break-extra-large: 1100px;
 
   // Spacing
   --spacing-xs: 0.5lh;
@@ -73,5 +77,4 @@
   --color-gray-base: #666666;
   --color-gray-light: #808080;
   --color-gray-lighter: #999999;
-
 }
