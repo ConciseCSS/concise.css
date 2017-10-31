@@ -1,0 +1,33 @@
+:root {
+  // Font size for small devices
+  --font-size: 16;
+
+  // Font size for large devices
+  --font-size-large: 18;
+
+  // Space between characters
+  --tracking: 0.05em;
+
+  // Font families
+  --font-primary: "Helvetica", "Arial", sans-serif;
+  --font-secondary: "Helvetica", "Arial", sans-serif;
+  --font-mono: "Consolas", monospace;
+  --font-print-primary: "Georgia", "Times New Roman", "Times", serif;
+  --font-print-secondary: "Georgia", "Times New Roman", "Times", serif;
+
+  // Transitions
+  --transition-duration: 150ms;
+
+  // Breakpoints
+  --break-small: 480px;
+  --break-medium: 768px;
+  --break-large: 960px;
+  --break-extra-large: 1100px;
+
+  // Spacing
+  --spacing-xs: 0.5lh;
+  --spacing-s: 1lh;
+  --spacing-m: 2lh;
+  --spacing-l: 3lh;
+  --spacing-xl: 4lh;
+}
