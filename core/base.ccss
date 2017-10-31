@@ -1,20 +1,20 @@
 *,
 ::before,
 ::after {
-	background-repeat: no-repeat;
-	box-sizing: inherit;
+  background-repeat: no-repeat;
+  box-sizing: inherit;
 }
 
 ::before,
 ::after {
-	text-decoration: inherit;
-	vertical-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
 }
 
 :root {
-	box-sizing: border-box;
-	font-family: var(--font-family);
-	line-height: 1.5;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  line-height: 1.5;
   background-color: var(--color-background-body);
   color: var(--color-text-primary);
   font-size: var(--font-size);
@@ -26,7 +26,7 @@
 }
 
 hr {
-	background-color: var(--color-base-lines);
+  background-color: var(--color-base-lines);
   height: 1px;
   border: 0;
 }
@@ -39,18 +39,18 @@ nav {
 }
 
 small {
-	// Use the next smaller size in the scale
+  // Use the next smaller size in the scale
   font-size: calc(100% / var(--scale-ratio));
 }
 
 ::-moz-selection {
-	background-color: getColor(base, selection);
-	text-shadow: none;
+  background-color: getColor(base, selection);
+  text-shadow: none;
 }
 
 ::selection {
-	background-color: getColor(base, selection);
-	text-shadow: none;
+  background-color: getColor(base, selection);
+  text-shadow: none;
 }
 
 a {
@@ -71,6 +71,6 @@ label,
 select,
 textarea,
 [tabindex] {
-	-ms-touch-action: manipulation;
-	touch-action: manipulation;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
