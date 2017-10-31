@@ -1,0 +1,14 @@
+@media screen and (color-index) { }
+@media screen and (min-color-index: 0) and (max-color-index: 1000) { }
+@media screen and (min-monochrome: 0) and (max-monochrome: 1000) { }
+
+
+@media screen and (-webkit-min-device-pixel-ratio:1) and (-webkit-max-device-pixel-ratio: 3), screen and (min-resolution: 96dpi) and (max-resolution: 3dppx) { }
+@media screen and (min-width: -200px) and (max-width: 900.56px) { }
+@media screen and (min-width: -0.58px) and (max-width: .99px) { }
+
+
+@media screen and (resolution) { }
+@media screen and (-webkit-min-device-pixel-ratio:10.416666666666666) and (-webkit-max-device-pixel-ratio: 3), screen and (min-resolution: 1000dpi) and (max-resolution: 3dppx) { }
+@media screen and (-webkit-min-device-pixel-ratio:10416.666666666666) and (max-resolution: 1000000dpcm), screen and (min-resolution: 1000000dpi) and (max-resolution: 1000000dpcm) { }
+@media screen and (min-resolution: 1 / 1000) and (max-resolution: 16 /9) { }

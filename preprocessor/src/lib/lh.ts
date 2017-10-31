@@ -36,7 +36,7 @@ const defaults = {
     lineHeight: 1.5
 };
 
-export default postcss.plugin('postcss-lh', (opts: Options = defaults) => {
+export default postcss.plugin('lh', (opts: Options = defaults) => {
     const options: Options = Object.assign(defaults, opts);
 
     return css => {

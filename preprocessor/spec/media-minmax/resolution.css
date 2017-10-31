@@ -1,0 +1,15 @@
+@media screen and (-webkit-min-device-pixel-ratio: 0.010416666666666666) and (-webkit-max-device-pixel-ratio: 2), screen and (min-resolution: 1dpi) and (max-resolution: 192dpi) {
+
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:1.5) and (-webkit-max-device-pixel-ratio:3), screen and (min-resolution: 1.5dppx) and (max-resolution: 3dppx) {
+
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:.5) and (-webkit-max-device-pixel-ratio: 2.5), screen and (min-resolution: .5dppx) and (max-resolution: 2.5dppx) {
+
+}
+
+@media screen and (resolution) and (-webkit-min-device-pixel-ratio: 0.10416666666666667) and (max-resolution: 118dpcm), screen and (resolution) and (min-resolution: 10dpi) and (max-resolution: 118dpcm) {
+
+}
