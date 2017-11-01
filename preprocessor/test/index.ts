@@ -4,8 +4,8 @@ import * as fs from 'fs';
 
 import preprocessor from '../src/';
 
-const actual = feature => preprocessor(`spec/${feature}.ccss`).replace(/\s+/g, '');
-const expected = feature => fs.readFileSync(`spec/${feature}.css`, 'utf8').replace(/\s+/g, '');
+const actual = feature => preprocessor(`test/${feature}.ccss`).replace(/\s+/g, '');
+const expected = feature => fs.readFileSync(`test/${feature}.css`, 'utf8').replace(/\s+/g, '');
 
 test('lh', t => {
     t.equal(
