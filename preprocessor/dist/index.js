@@ -9,8 +9,8 @@ const media_minmax_1 = require("./lib/media-minmax");
 exports.default = file => {
     const ccss = fs.readFileSync(file, 'utf8');
     return postcss([
-        media_minmax_1.default,
         custom_media_1.default,
+        media_minmax_1.default,
         lh_1.default,
         autoprefixer
     ]).process(ccss).css;

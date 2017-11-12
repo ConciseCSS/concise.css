@@ -10,8 +10,8 @@ export default file => {
     const ccss = fs.readFileSync(file, 'utf8');
 
     return postcss([
-        mediaMinMax,
         customMedia,
+        mediaMinMax,
         lh,
         autoprefixer
     ]).process(ccss).css;
