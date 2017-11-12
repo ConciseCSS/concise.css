@@ -24,7 +24,8 @@
   "homepage": "https://github.com/ConciseCSS/preprocessor#readme",
   "dependencies": {
     "autoprefixer": "^7.1.6",
-    "postcss": "^6.0.13"
+    "postcss": "^6.0.13",
+    "postcss-nested": "^2.1.2"
   },
   "devDependencies": {
     "@types/node": "^8.0.47",

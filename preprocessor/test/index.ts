@@ -123,3 +123,12 @@ test('media-minmax', t => {
 
     t.end();
 });
+
+test('nested', t => {
+    t.equal(
+        actual('nested/input'),
+        expected('nested/output'),
+        'should transform nested rulesets');
+
+    t.end();
+});
