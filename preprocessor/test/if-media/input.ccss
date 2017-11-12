@@ -1,0 +1,22 @@
+.test {
+  position: relative;
+  margin: 0 1em ?if media (min-width: 1025px);
+  margin: 0 0.5em ?if media (min-width: 641px) and (max-width: 1024px);
+  margin: 0 0.3em ?if media (max-width: 640px);
+}
+
+.test2 {
+  position: relative;
+  ?if media (min-width: 1025px) {
+    color: red;
+    margin: 0 1em;
+  }
+  ?if media (min-width: 641px) and (max-width: 1024px) {
+    color: green;
+    margin: 0 0.5em;
+  }
+  ?if media (max-width: 640px) {
+    color: blue;
+    margin: 0 0.3em;
+  }
+}

@@ -25,6 +25,7 @@
   "dependencies": {
     "autoprefixer": "^7.1.6",
     "postcss": "^6.0.13",
+    "postcss-if-media": "^1.0.3",
     "postcss-nested": "^2.1.2"
   },
   "devDependencies": {

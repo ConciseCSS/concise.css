@@ -132,3 +132,12 @@ test('nested', t => {
 
     t.end();
 });
+
+test('if-media', t => {
+    t.equal(
+        actual('if-media/input'),
+        expected('if-media/output'),
+        'should transform inline media queries');
+
+    t.end();
+});
