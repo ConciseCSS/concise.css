@@ -1,0 +1,7 @@
+/* This comment will remain */
+// This comment will be removed
+body {
+  // This comment will also be removed
+  background-color: black;
+}
+// And so will this one

@@ -141,3 +141,12 @@ test('if-media', t => {
 
     t.end();
 });
+
+test('strip-comments', t => {
+    t.equal(
+        actual('strip-comments/input'),
+        expected('strip-comments/output'),
+        'should remove inline comments');
+
+    t.end();
+});
