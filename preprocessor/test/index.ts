@@ -1,152 +1,68 @@
-import * as test from 'tape';
+import chalk from 'chalk';
 import * as postcss from 'postcss';
 import * as fs from 'fs';
-
 import preprocessor from '../src/';
 
-const actual = feature => preprocessor(`test/${feature}.ccss`).replace(/\s+/g, '');
-const expected = feature => fs.readFileSync(`test/${feature}.css`, 'utf8').replace(/\s+/g, '');
+test('imports', 'should import ccss files');
+test('nested', 'should expand nested rulesets');
+test('if-media', 'should expand inline media queries');
+test('lh', 'should replace lh units');
+test('strip-comments', 'should strip inline comments');
 
-test('lh', t => {
-    t.equal(
-        actual('lh/input'),
-        expected('lh/output'),
-        'should be transformed to rem');
+test('custom-media', {
+    'transform-all': 'should transform all custom media',
+    'transform-circular-reference': 'should transform circular reference',
+    'transform-reference': 'should transform reference',
+    'transform-self-reference': 'transform self reference',
+    'transform': 'transform',
+    'undefined': 'undefined',
+})
 
-    t.end();
+test('media-minmax', {
+    'min-max': 'min max',
+    'aspect-ratio': 'aspect ratio',
+    'color-index': 'color index',
+    'color': 'color',
+    'comment': 'comment',
+    'device-aspect-ratio': 'device aspect ratio',
+    'device-width-height': 'device width height',
+    'line-break': 'line breeak',
+    'monochrome': 'monochrome',
+    'more-units': 'more units',
+    'other-name': 'other-name',
+    'resolution': 'resolution',
+    'shorthands': 'shorthands',
+    'width-height': 'width-height'
 });
 
-test('custom-media', t => {
-    t.equal(
-        actual('custom-media/transform-all'),
-        expected('custom-media/transform-all'),
-        'transform all');
+function test (feature: string, extra: string | Object) {
+    if (typeof extra === 'string') {
+        const actual = `test/${feature}/input.ccss`;
+        const expected = `test/${feature}/output.css`;
+        const description = `${chalk.blue(feature)}: ${chalk.gray(extra)}`;
 
-    t.equal(
-        actual('custom-media/transform-circular-reference'),
-        expected('custom-media/transform-circular-reference'),
-        'transform circular reference');
+        compare(actual, expected, description);
+    } else {
+        for (const subfeature in <Object>extra) {
+            const actual = `test/${feature}/${subfeature}.ccss`;
+            const expected = `test/${feature}/${subfeature}.css`;
+            const description = `${chalk.blue(feature)}/${chalk.cyan(subfeature)}: ${chalk.gray(extra[subfeature])}`;
 
-    t.equal(
-        actual('custom-media/transform-reference'),
-        expected('custom-media/transform-reference'),
-        'transform reference');
+            compare(actual, expected, description);
+        }
+    }
 
-    t.equal(
-        actual('custom-media/transform-self-reference'),
-        expected('custom-media/transform-self-reference'),
-        'transform self reference');
+    function compare(inputFile, outputFile, description) {
+        const log = console.log;
 
-    t.equal(
-        actual('custom-media/transform'),
-        expected('custom-media/transform'),
-        'transform');
-
-    t.equal(
-        actual('custom-media/undefined'),
-        expected('custom-media/undefined'),
-        'undefined');
-
-    t.end();
-});
-
-test('media-minmax', t => {
-    t.equal(
-        actual('media-minmax/aspect-ratio'),
-        expected('media-minmax/aspect-ratio'),
-        'aspect ratio');
-
-    t.equal(
-        actual('media-minmax/color-index'),
-        expected('media-minmax/color-index'),
-        'color-index');
-
-    t.equal(
-        actual('media-minmax/color'),
-        expected('media-minmax/color'),
-        'color');
-
-    t.equal(
-        actual('media-minmax/comment'),
-        expected('media-minmax/comment'),
-        'comment');
-
-    t.equal(
-        actual('media-minmax/device-aspect-ratio'),
-        expected('media-minmax/device-aspect-ratio'),
-        'device-aspect-ratio');
-
-    t.equal(
-        actual('media-minmax/device-width-height'),
-        expected('media-minmax/device-width-height'),
-        'device-width-height');
-
-    t.equal(
-        actual('media-minmax/line-break'),
-        expected('media-minmax/line-break'),
-        'line-break');
-
-    t.equal(
-        actual('media-minmax/min-max'),
-        expected('media-minmax/min-max'),
-        'min-max');
-
-    t.equal(
-        actual('media-minmax/monochrome'),
-        expected('media-minmax/monochrome'),
-        'monochrome');
-
-    t.equal(
-        actual('media-minmax/more-units'),
-        expected('media-minmax/more-units'),
-        'more-units');
-
-    t.equal(
-        actual('media-minmax/other-name'),
-        expected('media-minmax/other-name'),
-        'other-name');
-
-    t.equal(
-        actual('media-minmax/resolution'),
-        expected('media-minmax/resolution'),
-        'resolution');
-
-    t.equal(
-        actual('media-minmax/shorthands'),
-        expected('media-minmax/shorthands'),
-        'shorthands');
-
-    t.equal(
-        actual('media-minmax/width-height'),
-        expected('media-minmax/width-height'),
-        'width-height');
-
-    t.end();
-});
-
-test('nested', t => {
-    t.equal(
-        actual('nested/input'),
-        expected('nested/output'),
-        'should transform nested rulesets');
-
-    t.end();
-});
-
-test('if-media', t => {
-    t.equal(
-        actual('if-media/input'),
-        expected('if-media/output'),
-        'should transform inline media queries');
-
-    t.end();
-});
-
-test('strip-comments', t => {
-    t.equal(
-        actual('strip-comments/input'),
-        expected('strip-comments/output'),
-        'should remove inline comments');
-
-    t.end();
-});
+        preprocessor(inputFile).then( result => {
+            fs.readFile(outputFile, 'utf-8', (err, data) => {
+                if (result.css.replace(/\s+/g, '') == data.replace(/\s+/g, '')) {
+                    log(`${chalk.green('OK')}: ${description}`);
+                } else {
+                    log(`${chalk.red('Fail')}: ${description}`);
+                }
+            });
+        });
+    }
+}
