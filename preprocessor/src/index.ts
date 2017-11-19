@@ -10,6 +10,7 @@ import * as imports from 'postcss-easy-import';
 import lh from './lib/lh';
 import customMedia from './lib/custom-media';
 import mediaMinMax from './lib/media-minmax';
+import typeScale from './lib/type-scale';
 
 export default file => {
     const ccss = fs.readFileSync(file, 'utf8');
@@ -22,6 +23,7 @@ export default file => {
         .use(customMedia())
         .use(mediaMinMax())
         .use(lh())
+        .use(typeScale())
         .use(autoprefixer())
         .process(ccss, { parser: scssSyntax, from: file });
 }

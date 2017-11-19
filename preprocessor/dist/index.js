@@ -11,6 +11,7 @@ const imports = require("postcss-easy-import");
 const lh_1 = require("./lib/lh");
 const custom_media_1 = require("./lib/custom-media");
 const media_minmax_1 = require("./lib/media-minmax");
+const type_scale_1 = require("./lib/type-scale");
 exports.default = file => {
     const ccss = fs.readFileSync(file, 'utf8');
     return postcss()
@@ -21,6 +22,7 @@ exports.default = file => {
         .use(custom_media_1.default())
         .use(media_minmax_1.default())
         .use(lh_1.default())
+        .use(type_scale_1.default())
         .use(autoprefixer())
         .process(ccss, { parser: scssSyntax, from: file });
 };

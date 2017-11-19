@@ -8,6 +8,7 @@ test('nested', 'should expand nested rulesets');
 test('if-media', 'should expand inline media queries');
 test('lh', 'should replace lh units');
 test('strip-comments', 'should strip inline comments');
+test('type-scale', 'should set sizes using a scale');
 
 test('custom-media', {
     'transform-all': 'should transform all custom media',
@@ -61,6 +62,8 @@ function test (feature: string, extra: string | Object) {
                     log(`${chalk.green('OK')}: ${description}`);
                 } else {
                     log(`${chalk.red('Fail')}: ${description}`);
+                    // TODO: Show a diff instead
+                    log(`${chalk.red('CURRENT:')}\n${result.css.replace(/\n\n+/g, '\n')}\n${chalk.blue('EXPECTED:')}\n${data.replace(/\n\n+/g, '\n')}`);
                 }
             });
         });
