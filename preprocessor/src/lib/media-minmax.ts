@@ -20,11 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import * as postcss from 'postcss';
+import * as postcss from 'postcss'
 
-export default postcss.plugin('postcss-media-minmax', function () {
-  return function(css) {
-    var feature_unit = {
+export default postcss.plugin('postcss-media-minmax', () => {
+  return css => {
+    const feature_unit = {
       'width': 'px',
       'height': 'px',
       'device-width': 'px',
@@ -35,50 +35,48 @@ export default postcss.plugin('postcss-media-minmax', function () {
       'color-index': '',
       'monochrome': '',
       'resolution': 'dpi'
-    };
+    }
 
     //支持 min-/max- 前缀的属性
-    var feature_name = Object.keys(feature_unit);
+    const feature_name = Object.keys(feature_unit)
 
-    var step = .001; // smallest even number that won’t break complex queries (1in = 96px)
+    const step = .001 // smallest even number that won’t break complex queries (1in = 96px)
 
-    var power = {
+    const power = {
       '>': 1,
       '<': -1
-    };
+    }
 
-    var minmax = {
+    const minmax = {
       '>': 'min',
       '<': 'max'
-    };
+    }
 
     function create_query(name, gtlt, eq, value, params?) {
-      return value.replace(/([-\d\.]+)(.*)/, function (match, number, unit) {
-        var initialNumber = parseFloat(number);
+      return value.replace(/([-\d\.]+)(.*)/, (match, number, unit) => {
+        const initialNumber = parseFloat(number)
 
         if (parseFloat(number) || eq) {
           // if eq is true, then number remains same
           if (!eq) {
             // change integer pixels value only on integer pixel
             if (unit === 'px' && initialNumber === parseInt(number, 10)) {
-              number = initialNumber + power[gtlt];
+              number = initialNumber + power[gtlt]
             } else {
-              number = Number(Math.round(parseFloat(parseFloat(number) + step * power[gtlt] + 'e6'))+'e-6');
+              number = Number(Math.round(parseFloat(parseFloat(number) + step * power[gtlt] + 'e6')) + 'e-6')
             }
           }
         } else {
-          number = power[gtlt] + feature_unit[name];
+          number = power[gtlt] + feature_unit[name]
         }
 
-        return '(' + minmax[gtlt] + '-' + name + ': ' + number + unit + ')';
-      });
+        return '(' + minmax[gtlt] + '-' + name + ': ' + number + unit + ')'
+      })
     }
 
     // 读取 media-feature
-    css.walkAtRules(function(rule, i) {
-      if (rule.name !== "media" && rule.name !== "custom-media") {
-        return
-      }
+    css.walkAtRules((rule, i) => {
+      if (rule.name !== "media" && rule.name !== "custom-media") return
 
       /**
        * 转换 <mf-name> <|>= <mf-value>
@@ -90,15 +88,14 @@ export default postcss.plugin('postcss-media-minmax', function () {
       //取值不支持负值
       //But -0 is always equivalent to 0 in CSS, and so is also accepted as a valid <mq-boolean> value.
 
-      rule.params = rule.params.replace(/\(\s*([a-z-]+?)\s*([<>])(=?)\s*((?:-?\d*\.?(?:\s*\/?\s*)?\d+[a-z]*)?)\s*\)/gi, function($0, $1, $2, $3, $4) {
+      rule.params = rule.params.replace(/\(\s*([a-z-]+?)\s*([<>])(=?)\s*((?:-?\d*\.?(?:\s*\/?\s*)?\d+[a-z]*)?)\s*\)/gi, ($0, $1, $2, $3, $4) => {
 
-        var params = '';
+        let params = ''
 
-        if (feature_name.indexOf($1) > -1) {
-          return create_query($1, $2, $3, $4, rule.params);
-        }
+        if (feature_name.indexOf($1) > -1) return create_query($1, $2, $3, $4, rule.params)
+
         //如果不是指定的属性，不做替换
-        return $0;
+        return $0
       })
 
       /**
@@ -110,34 +107,26 @@ export default postcss.plugin('postcss-media-minmax', function () {
        * (900px >= width >= 300px)  => (min-width: 300px) and (max-width: 900px)
        */
 
-      rule.params = rule.params.replace(/\(\s*((?:-?\d*\.?(?:\s*\/?\s*)?\d+[a-z]*)?)\s*(<|>)(=?)\s*([a-z-]+)\s*(<|>)(=?)\s*((?:-?\d*\.?(?:\s*\/?\s*)?\d+[a-z]*)?)\s*\)/gi, function($0, $1, $2, $3, $4, $5, $6, $7) {
-
+      rule.params = rule.params.replace(/\(\s*((?:-?\d*\.?(?:\s*\/?\s*)?\d+[a-z]*)?)\s*(<|>)(=?)\s*([a-z-]+)\s*(<|>)(=?)\s*((?:-?\d*\.?(?:\s*\/?\s*)?\d+[a-z]*)?)\s*\)/gi, ($0, $1, $2, $3, $4, $5, $6, $7) => {
         if (feature_name.indexOf($4) > -1) {
           if ($2 === '<' && $5 === '<' || $2 === '>' && $5 === '>') {
-            var min = ($2 === '<') ? $1 : $7;
-            var max = ($2 === '<') ? $7 : $1;
+            const min = ($2 === '<') ? $1 : $7
+            const max = ($2 === '<') ? $7 : $1
 
             // output differently depended on expression direction
             // <mf-value> <|<= <mf-name> <|<= <mf-value>
             // or
             // <mf-value> >|>= <mf-name> >|>= <mf-value>
-            var equals_for_min = $3;
-            var equals_for_max = $6;
+            const equals_for_min = ($2 === '>') ? $6 : $3
+            const equals_for_max = ($2 === '>') ? $3 : $6
 
-            if ($2 === '>') {
-              equals_for_min = $6;
-              equals_for_max = $3;
-            }
-
-            return create_query($4, '>', equals_for_min, min) + ' and ' + create_query($4, '<', equals_for_max, max);
+            return create_query($4, '>', equals_for_min, min) + ' and ' + create_query($4, '<', equals_for_max, max)
           }
         }
+
         //如果不是指定的属性，不做替换
-        return $0;
-
-      });
-
-    });
-
+        return $0
+      })
+    })
   }
-});
+})

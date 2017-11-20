@@ -1,4 +1,4 @@
-import * as postcss from 'postcss';
+import * as postcss from 'postcss'
 
 interface Options {
     rootSelector: string,
@@ -10,26 +10,24 @@ const defaults = {
     rootSelector: ':root',
     typeRatio: 1.2,
     ratioProperty: '--type-ratio'
-};
+}
 
 export default postcss.plugin('type-scale', (opts: Options = defaults) => {
-    const options: Options = Object.assign(defaults, opts);
+    const options: Options = Object.assign(defaults, opts)
 
     return css => {
-        const typeRatio: number = getTypeRatio(css, options);
+        const typeRatio: number = getTypeRatio(css, options)
 
         css.walkDecls('font-size', decl => {
             // Replace only if it's a unitless value
-            if (/\d+$/.test(decl.value)) {
-                decl.value = getSize(decl.value, typeRatio)
-            }
-        });
-    };
-});
+            if (/\d+$/.test(decl.value)) decl.value = getSize(decl.value, typeRatio)
+        })
+    }
+})
 
 function getTypeRatio (css, opts: Options): number {
     // Start with the default ratio
-    let typeRatio: number = opts.typeRatio;
+    let typeRatio: number = opts.typeRatio
 
     // Walk over all the root selectors
     css.walkRules(opts.rootSelector, rule => {
@@ -39,13 +37,13 @@ function getTypeRatio (css, opts: Options): number {
 
         // Walk over all the font-size rules
         rule.walkDecls(opts.ratioProperty, decl => {
-            typeRatio = parseFloat(decl.value);
-        });
-    });
+            typeRatio = parseFloat(decl.value)
+        })
+    })
 
-    return typeRatio;
-};
+    return typeRatio
+}
 
 function getSize(val: string, ratio: number): string {
-    return Math.pow(ratio, parseInt(val) - 2) + 'rem';
-};
+    return Math.pow(ratio, parseInt(val) - 2) + 'rem'
+}

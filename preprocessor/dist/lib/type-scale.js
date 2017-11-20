@@ -12,9 +12,8 @@ exports.default = postcss.plugin('type-scale', (opts = defaults) => {
         const typeRatio = getTypeRatio(css, options);
         css.walkDecls('font-size', decl => {
             // Replace only if it's a unitless value
-            if (/\d+$/.test(decl.value)) {
+            if (/\d+$/.test(decl.value))
                 decl.value = getSize(decl.value, typeRatio);
-            }
         });
     };
 });
@@ -33,8 +32,6 @@ function getTypeRatio(css, opts) {
     });
     return typeRatio;
 }
-;
 function getSize(val, ratio) {
     return Math.pow(ratio, parseInt(val) - 2) + 'rem';
 }
-;

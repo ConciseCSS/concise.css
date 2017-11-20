@@ -19,69 +19,68 @@
 // IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-import * as postcss from 'postcss';
+import * as postcss from 'postcss'
 
-var EXTENSION_RE = /\(\s*(--[\w-]+)\s*\)/g
+export default postcss.plugin("postcss-custom-media", customMedia)
 
-/*
- * Resolve custom media values.
- */
+const EXTENSION_RE = /\(\s*(--[\w-]+)\s*\)/g
+
+// Resolve custom media values.
 function resolveValue(query, depChain, map, result) {
-  if (!EXTENSION_RE.test(query.value)) {
-    return query.value
-  }
-  var val = query.value.replace(EXTENSION_RE, function(orig, name) {
-    if (!map[name]) {
-      return orig
-    }
+  if (!EXTENSION_RE.test(query.value)) return query.value
 
-    var mq = map[name]
-    if (mq.resolved) {
-      return mq.value
-    }
+  let val = query.value.replace(EXTENSION_RE, (orig, name) => {
+    if (!map[name]) return orig
+
+    let mq = map[name]
+
+    if (mq.resolved) return mq.value
 
     if (depChain.indexOf(name) !== -1) {
       mq.circular = true
       return orig
     }
+
     depChain.push(name)
+
     mq.value = resolveValue(mq, depChain, map, result)
+
     return mq.value
   })
-  if (val === query.value) {
-    query.circular = true
-  }
+
+  if (val === query.value) query.circular = true
+
   return val
 }
 
-/*
- * read & replace custom media queries by standard media queries
- */
+// Read & replace custom media queries by standard media queries
 function customMedia(options) {
-  return function(styles, result) {
+  return (styles, result) => {
     options = options || {}
-    var extensions = {}
+
+    let extensions = {}
+
     if (options.extensions) {
-      Object.keys(options.extensions).forEach(function(name) {
-        var val = options.extensions[name]
-        if (name.slice(0, 2) !== "--") {
-          name = "--" + name
-        }
+      Object.keys(options.extensions).forEach(name => {
+        let val = options.extensions[name]
+
+        if (name.slice(0, 2) !== "--") name = "--" + name
+
         extensions[name] = val
       })
     }
-    var appendExtensions = options.appendExtensions
-    var preserve = options.preserve
-    var map = {}
-    var toRemove = []
+
+    let appendExtensions = options.appendExtensions
+    let preserve = options.preserve
+    let map = {}
+    let toRemove = []
 
     // read custom media queries
-    styles.walkAtRules(function(rule) {
-      if (rule.name !== "custom-media") {
-        return
-      }
+    styles.walkAtRules(rule => {
+      if (rule.name !== "custom-media") return
 
-      var params = rule.params.split(" ")
+      let params = rule.params.split(" ")
+
       // @custom-media <extension-name> <media-query-list>;
       // map[<extension-name>] = <media-query-list>
       map[params.shift()] = {
@@ -90,13 +89,11 @@ function customMedia(options) {
         resolved: false,
       }
 
-      if (!preserve) {
-        toRemove.push(rule)
-      }
+      if (!preserve) toRemove.push(rule)
     })
 
     // apply js-defined media queries
-    Object.keys(extensions).forEach(function(name) {
+    Object.keys(extensions).forEach(name => {
       map[name] = {
         value: extensions[name],
         circular: false,
@@ -104,65 +101,62 @@ function customMedia(options) {
       }
     })
 
-    Object.keys(map).forEach(function(name) {
-      map[name].value = resolveValue(map[name], [ name ], map, result)
+    Object.keys(map).forEach(name => {
+      map[name].value = resolveValue(map[name], [name], map, result)
       map[name].resolved = true
     })
 
     // transform custom media query aliases
-    styles.walkAtRules(function(rule) {
-      if (rule.name !== "media") {
-        return
-      }
+    styles.walkAtRules(rule => {
+      if (rule.name !== "media") return
 
-      rule.params = rule.params.replace(EXTENSION_RE, function(_, name) {
+      rule.params = rule.params.replace(EXTENSION_RE, (_, name) => {
         if (map[name]) {
           if (map[name].circular) {
             result.warn(
-              "Circular @custom-media definition for '" + name +
-                "'. The entire rule has been removed from the output.",
+              `Circular @custom-media definition for ${name}. The entire rule has been removed from the output.`,
               { node: rule }
             )
+
             toRemove.push(rule)
           }
+
           return map[name].value
         }
 
         result.warn(
-          "Missing @custom-media definition for '" + name +
-            "'. The entire rule has been removed from the output.",
+          `Missing @custom-media definition for ${name}. The entire rule has been removed from the output.`,
           { node: rule }
         )
+
         toRemove.push(rule)
       })
     })
 
     if (appendExtensions) {
-      var names = Object.keys(map)
+      let names = Object.keys(map)
+
       if (names.length) {
-        names.forEach(function(name) {
-          if (map[name].circular) {
-            return
-          }
-          var atRule = postcss.atRule({
+        names.forEach(name => {
+          if (map[name].circular) return
+
+          let atRule = postcss.atRule({
             name: "custom-media",
             params: name + " " + map[name].value,
             raws: {
               afterName: " ",
             },
           })
+
           styles.append(atRule)
         })
+
         styles.raws.semicolon = true
         styles.raws.after = "\n"
-      }
-    }
+      };
+    };
 
     // remove @custom-media
-    toRemove.forEach(function(rule) {
-      rule.remove()
-    })
-  }
-}
-
-export default postcss.plugin("postcss-custom-media", customMedia)
+    toRemove.forEach(rule => rule.remove())
+  };
+};
