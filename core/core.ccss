@@ -82,4 +82,4 @@
   --color-gray-lighter: #999999;
 }
 
-@import 'styles.ccss';
+@import './styles';
