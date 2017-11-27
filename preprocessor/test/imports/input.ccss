@@ -1,1 +1,4 @@
 @import './import';
+@import './import2';
+
+h1 { font-size: 1em; }

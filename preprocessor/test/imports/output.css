@@ -1,3 +1,9 @@
 .a {
   width: auto;
 }
+
+.b {
+  height: auto;
+}
+
+h1 { font-size: 1em; }
