@@ -4,7 +4,17 @@
  * MIT license - James Kolce
  */
 
+
+$responsive-margins: false !default;
+//above should be moved to settings
+
 // Concise Utils components
+@if ($responsive-margins) {
+  @import 'utils/margins-responsive';
+} @else {
+  @import 'utils/margins';
+}
+   
 @import 'utils/margins';
 @import 'utils/paddings';
 @import 'utils/borders';
