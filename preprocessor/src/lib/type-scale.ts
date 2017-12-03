@@ -45,5 +45,5 @@ function getTypeRatio (css, opts: Options): number {
 }
 
 function getSize(val: string, ratio: number): string {
-    return Math.pow(ratio, parseInt(val) - 2) + 'rem'
+    return parseFloat(Math.pow(ratio, parseInt(val) - 2).toFixed(4)) + 'rem'
 }
