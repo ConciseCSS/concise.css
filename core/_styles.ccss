@@ -44,12 +44,12 @@ small {
 }
 
 ::-moz-selection {
-  background-color: getColor(base, selection);
+  background-color: var(--color-base-selection);
   text-shadow: none;
 }
 
 ::selection {
-  background-color: getColor(base, selection);
+  background-color: var(--color-base-selection);
   text-shadow: none;
 }
 
