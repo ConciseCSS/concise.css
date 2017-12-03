@@ -48,9 +48,9 @@
   --color-text-heading: #222222;
   --color-text-inverted: white;
 
-  --color-background: #32373d;
-  --color-background: #f5f5f5;
-  --color-background: white;
+  --color-background-dark: #32373d;
+  --color-background-light: #f5f5f5;
+  --color-background-body: white;
 
   --color-state-muted: #eeeeee;
   --color-state-success: #10a887;
