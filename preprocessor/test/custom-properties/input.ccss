@@ -1,6 +1,7 @@
 :root {
   --var: 10px;
-  --color: black;
+  --color-black: black;
+  --second-var: 20px;
 }
 
 .a {
@@ -16,5 +17,5 @@
 }
 
 .d {
-  property: --var var(--color) --var;
+  property: --var var(--color-black) --second-var;
 }
