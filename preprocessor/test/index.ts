@@ -9,6 +9,7 @@ test('if-media', 'should expand inline media queries')
 test('lh', 'should replace lh units')
 test('strip-comments', 'should strip inline comments')
 test('type-scale', 'should set sizes using a scale')
+test('custom-properties', 'should transform custom properties syntactic sugar')
 
 test('custom-media', {
     'transform-all': 'should transform all custom media',

@@ -1,0 +1,20 @@
+:root {
+  --var: 10px;
+  --color: black;
+}
+
+.a {
+  property: var(--var);
+}
+
+.b {
+  property: var(--var) solid black;
+}
+
+.c {
+  property: white var(--color) var(--var);
+}
+
+.d {
+  property: var(--var) var(--color) var(--var);
+}

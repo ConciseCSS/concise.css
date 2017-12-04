@@ -11,6 +11,7 @@ import lh from './lib/lh';
 import customMedia from './lib/custom-media';
 import mediaMinMax from './lib/media-minmax';
 import typeScale from './lib/type-scale';
+import customProperties from './lib/custom-properties';
 
 export default file => {
     const ccss = fs.readFileSync(file, 'utf8');
@@ -24,6 +25,7 @@ export default file => {
         .use(mediaMinMax())
         .use(lh())
         .use(typeScale())
+        .use(customProperties())
         .use(autoprefixer())
         .process(ccss, { parser: scssSyntax, from: file });
 }
