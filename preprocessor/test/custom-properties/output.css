@@ -19,3 +19,7 @@
 .d {
   property: var(--var) var(--color-black) var(--second-var);
 }
+
+.e {
+  property: var(--color-black, gray);
+}

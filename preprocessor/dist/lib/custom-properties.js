@@ -3,13 +3,19 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const postcss = require("postcss");
 exports.default = postcss.plugin('custom-properties', () => {
     return css => {
-        // Extend custom properties that aren't inside var()
-        // TODO: I don't know if there is a way to include the conditional inside the regex
-        css.replaceValues(/var\(--[\w\d-_]+|--[\w\d-_]+/g, { fast: '--' }, property => {
-            if (!property.includes('var('))
-                return `var(${property})`;
+        css.replaceValues(/(var\()*--[\w\d-_]+(\))*(\(.*\))*/g, { fast: '--' }, value => {
+            // Matches --variable(fallback)
+            const withFallbackRegex = /(--[\w\d-_]+)\((.*)\)/;
+            // If the value is already using var()
+            if (value.includes('var('))
+                return value;
+            else if (withFallbackRegex.test(value)) {
+                // Extract {$1:propertyName}{$2:Fallback}
+                const customProperty = value.match(withFallbackRegex);
+                return `var(${customProperty[1]}, ${customProperty[2]})`;
+            }
             else
-                return property;
+                return `var(${value})`;
         });
     };
 });
