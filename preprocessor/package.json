@@ -28,9 +28,18 @@
     "postcss": "^6.0.13",
     "postcss-easy-import": "^3.0.0",
     "postcss-if-media": "^1.0.3",
+    "postcss-import": "^11.0.0",
     "postcss-nested": "^2.1.2",
     "postcss-scss": "^1.0.2",
-    "postcss-strip-inline-comments": "^0.1.5"
+    "postcss-strip-inline-comments": "^0.1.5",
+    "globby": "^6.1.0",
+    "is-glob": "^4.0.0",
+    "lodash": "^4.17.4",
+    "object-assign": "^4.0.1",
+    "pify": "^3.0.0",
+    "resolve": "^1.1.7",
+    "postcss-value-parser": "^3.2.3",
+    "read-cache": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^8.0.47",

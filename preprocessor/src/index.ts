@@ -5,8 +5,8 @@ import * as nested from 'postcss-nested';
 import * as ifMedia from 'postcss-if-media';
 import * as scssSyntax from 'postcss-scss';
 import * as stripComments from 'postcss-strip-inline-comments';
-import * as imports from 'postcss-easy-import';
 
+import imports from './lib/import';
 import lh from './lib/lh';
 import customMedia from './lib/custom-media';
 import mediaMinMax from './lib/media-minmax';
@@ -17,7 +17,7 @@ export default file => {
     const ccss = fs.readFileSync(file, 'utf8');
 
     return postcss()
-        .use(imports({ extensions: '.ccss', prefix: '_' }))
+        .use(imports())
         .use(stripComments())
         .use(ifMedia())
         .use(nested())
