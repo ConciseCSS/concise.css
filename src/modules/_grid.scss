@@ -1,7 +1,5 @@
 //
-// atGrid.css for Concise CSS - Attribute-based Grid System
-// https://github.com/jameskolce/atgrid.css
-// MIT License - James Kolce <contact@jameskolce.com>
+// Attribute-based Grid System
 // =============================================================================
 
 @if ($enable-grid) {
@@ -83,13 +81,13 @@
   [#{$prefix}grid~="row-reverse"] { flex-direction: row-reverse; }
   [#{$prefix}grid~="column"] { flex-direction: column; }
   [#{$prefix}grid~="column-reverse"] { flex-direction: column-reverse; }
-  
+
   //
   // Reorder items above breakpoint
   //
-  
+
   @media ($breakpoint) {
-     @for $i from 1 through $num-columns {  
+     @for $i from 1 through $num-columns {
         [#{$prefix}column~="n#{$i}"] { order: #{$i}; }
      }
   }
