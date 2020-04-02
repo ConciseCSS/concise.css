@@ -25,7 +25,7 @@
     "node": ">=12.0.0"
   },
   "scripts": {
-    "build": "./cli/index.js compile src/concise.pcss dist/concise.css"
+    "build": "node ./cli/index.js compile src/concise.pcss dist/concise.css"
   },
   "dependencies": {
     "autoprefixer": "^9.7.5",

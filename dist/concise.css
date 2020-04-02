@@ -238,10 +238,10 @@ table {
   width: 100%;
 }
 @media (min-width: 768px) {
-table {
-    width: auto
-}
+  table {
+  width: auto;
   }
+}
 table thead,
   table tfoot {
     background-color: var(--color-background-light);
@@ -303,18 +303,18 @@ table caption {
 [grid~="column"] { flex-direction: column; }
 [grid~="column-reverse"] { flex-direction: column-reverse; }
 @media (min-width: 768px) {
-  [column~="1"] { order: 1};
-  [column~="2"] { order: 2};
-  [column~="3"] { order: 3};
-  [column~="4"] { order: 4};
-  [column~="5"] { order: 5};
-  [column~="6"] { order: 6};
-  [column~="7"] { order: 7};
-  [column~="8"] { order: 8};
-  [column~="9"] { order: 9};
-  [column~="10"] { order: 10};
-  [column~="11"] { order: 11};
-  [column~="12"] { order: 12};
+  [column~="n1"] { order: 1};
+  [column~="n2"] { order: 2};
+  [column~="n3"] { order: 3};
+  [column~="n4"] { order: 4};
+  [column~="n5"] { order: 5};
+  [column~="n6"] { order: 6};
+  [column~="n7"] { order: 7};
+  [column~="n8"] { order: 8};
+  [column~="n9"] { order: 9};
+  [column~="n10"] { order: 10};
+  [column~="n11"] { order: 11};
+  [column~="n12"] { order: 12};
 }
 [grid~="justify-start"] { justify-content: flex-start; }
 [grid~="justify-end"] { justify-content: flex-end; }
