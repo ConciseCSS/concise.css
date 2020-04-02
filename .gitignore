@@ -7,9 +7,6 @@ __MACOSX/
 # Dependencies
 /node_modules
 
-# Sass cache
-/.sass-cache
-
 # Log files
 *.log
 *.log.*
