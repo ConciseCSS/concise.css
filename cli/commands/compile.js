@@ -8,17 +8,15 @@ const stripComments = require('postcss-strip-inline-comments');
 const mediaMinMax = require('postcss-media-minmax');
 const customMedia = require('postcss-custom-media');
 const imports = require('postcss-easy-import');
-const postcssFor = require('postcss-for');
 
-const lh = require('./lib/lh');
-const typeScale = require('./lib/type-scale');
+const lh = require('../lib/lh');
+const typeScale = require('../lib/type-scale');
 
-module.exports = file => {
+module.exports = async file => {
   const ccss = fs.readFileSync(file, 'utf8');
 
-  return postcss()
+  return await postcss()
     .use(imports())
-    .use(postcssFor())
     .use(stripComments())
     .use(ifMedia())
     .use(nested())

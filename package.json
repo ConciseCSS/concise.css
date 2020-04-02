@@ -25,13 +25,12 @@
     "node": ">=12.0.0"
   },
   "scripts": {
-    "build": "./cli/index.js compile concise.scss dist/concise.css",
-    "build:dev": "chokidar 'src/**/*.scss' -c 'npm run build'",
+    "build": "./cli/index.js compile src/concise.pcss dist/concise.css",
+    "build:dev": "chokidar 'src/**/*.pcss' -c 'npm run build'",
     "stats": "stylestats dist/concise.css",
     "stats:min": "stylestats dist/concise.min.css"
   },
   "dependencies": {
-    "postcss-for": "^2.1.1",
     "autoprefixer": "^9.7.5",
     "chalk": "^2.3.0",
     "chokidar": "^1.7.0",
