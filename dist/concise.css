@@ -78,10 +78,10 @@
   text-rendering: optimizeLegibility;
 }
 @media (min-width: 480px) {
-:root {
-    font-size: var(--font-size-large)
-}
+  :root {
+  font-size: var(--font-size-large);
   }
+}
 hr {
   background-color: var(--color-base-lines);
   height: 1px;
@@ -277,8 +277,10 @@ table caption {
   flex-direction: column;
 }
 @media (min-width: 768px) {
-[grid] { flex-direction: row
-} }
+  [grid] {
+  flex-direction: row;
+  }
+}
 [column] {
   flex: 1;
   padding-left: calc(var(--gutter) / 2);

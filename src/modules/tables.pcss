@@ -1,9 +1,6 @@
 table {
   width: 100%;
-
-  @media (--medium) {
-    width: auto;
-  }
+  width: auto ?if media (--medium);
 
   thead,
   tfoot {

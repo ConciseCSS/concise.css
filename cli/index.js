@@ -11,24 +11,8 @@ const mediaMinMax = require('postcss-media-minmax');
 const customMedia = require('postcss-custom-media');
 const imports = require('postcss-easy-import');
 
-const lh = require('../lib/lh');
-const typeScale = require('../lib/type-scale');
-
-const compile = async file => {
-  const ccss = fs.readFileSync(file, 'utf8');
-
-  return await postcss()
-    .use(imports())
-    .use(stripComments())
-    .use(ifMedia())
-    .use(nested())
-    .use(customMedia())
-    .use(mediaMinMax())
-    .use(lh())
-    .use(typeScale())
-    .use(autoprefixer())
-    .process(ccss, { parser: scssSyntax, from: file });
-}
+const lh = require('./lib/lh');
+const typeScale = require('./lib/type-scale');
 
 const command = {
   name: process.argv[2],
@@ -36,9 +20,22 @@ const command = {
   output: process.argv[4]
 }
 
+const compile = async src => await postcss()
+  .use(imports())
+  .use(stripComments())
+  .use(nested())
+  .use(ifMedia())
+  .use(customMedia())
+  .use(mediaMinMax())
+  .use(lh())
+  .use(typeScale())
+  .use(autoprefixer())
+  .process(src, { parser: scssSyntax, from: command.input });
+
+
 switch (command.name) {
   case 'compile':
-    compile(command.input).then(css => {
+    compile(fs.readFileSync(command.input, 'utf8')).then(css => {
       fs.writeFile(command.output, css, err => {
         if (err) throw err
         console.log(`File written: ${command.output}\nFrom: ${command.input}`);
@@ -46,5 +43,6 @@ switch (command.name) {
     })
     break
   default:
+    console.log('Unknown command')
     break
 }
