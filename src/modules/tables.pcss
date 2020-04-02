@@ -1,17 +1,13 @@
-//
-// Tables
-// =============================================================================
-
 table {
   width: 100%;
 
-  @media ($breakpoint) {
+  @media (--medium) {
     width: auto;
   }
 
   thead,
   tfoot {
-    background-color: getColor(background, light);
+    background-color: var(--color-background-light);
     text-align: left;
   }
 
@@ -23,7 +19,7 @@ table {
   }
 
   caption {
-    font-size: typeScale(1);
+    font-size: 1;
     font-style: italic;
     line-height: 2lh;
     text-align: center;

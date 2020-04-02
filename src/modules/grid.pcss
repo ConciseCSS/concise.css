@@ -1,0 +1,247 @@
+[container] {
+  --container-width: 1200px;
+  --gutter: 2rem;
+
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--container-width);
+  padding-left: calc(var(--gutter) / 2);
+  padding-right: calc(var(--gutter) / 2);
+  overflow: auto;
+}
+
+[container~="solid"] {
+  @media(--small) {
+    max-width: 480px;
+  }
+  @media(--medium) {
+    max-width: 768px;
+  }
+  @media(--large) {
+    max-width: 960px;
+  }
+  @media(--extra-large) {
+    max-width: 1100px;
+  }
+}
+
+[grid] {
+  display: flex;
+  margin-left: calc(var(--gutter) / -2);
+  margin-right: calc(var(--gutter) / -2);
+  flex-direction: column;
+
+  // Collapse columns on breakpoint
+  @media (--medium) { flex-direction: row; }
+}
+
+[column] {
+  flex: 1;
+  padding-left: calc(var(--gutter) / 2);
+  padding-right: calc(var(--gutter) / 2);
+}
+
+//
+// No Gutters
+//
+
+[grid~="no-gutters"] {
+  margin-left: 0;
+  margin-right: 0;
+
+  & > [column] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+//
+// No Collapse columns
+//
+
+[grid~="no-collapse"] { flex-flow: row nowrap; }
+
+//
+// Column wrapping
+//
+
+[grid~="wrap"] { flex-wrap: wrap; }
+[grid~="no-wrap"] { flex-wrap: nowrap; }
+[grid~="wrap-reverse"] { flex-wrap: wrap-reverse; }
+
+//
+// Direction of columns in a row
+//
+
+[grid~="row"] { flex-direction: row; }
+[grid~="row-reverse"] { flex-direction: row-reverse; }
+[grid~="column"] { flex-direction: column; }
+[grid~="column-reverse"] { flex-direction: column-reverse; }
+
+//
+// Reorder items above breakpoint
+// TODO: Make sure loops are implemented
+//
+
+@media (--medium) {
+  @for $i from 1 to 12 {
+    [column~="n$i"] { order: $(i)}; }
+  }
+}
+
+//
+// Justify content
+//
+
+[grid~="justify-start"] { justify-content: flex-start; }
+[grid~="justify-end"] { justify-content: flex-end; }
+[grid~="justify-center"] { justify-content: center; }
+[grid~="justify-between"] { justify-content: space-between; }
+[grid~="justify-around"] { justify-content: space-around; }
+
+//
+// Alignment of all columns in a row
+//
+
+[grid~="top"] { align-items: flex-start; }
+[grid~="center"] { align-items: center; }
+[grid~="bottom"] { align-items: flex-end; }
+[grid~="baseline"] { align-items: baseline; }
+[grid~="stretch"] { align-items: stretch; }
+
+//
+// Alignment of individual columns
+//
+
+[column~="top"] { align-self: flex-start; }
+[column~="center"] { align-self: center; }
+[column~="bottom"] { align-self: flex-end; }
+
+// Create column widths and offsets above the breakpoint
+@media (--medium) {
+  //
+  // Column widths
+  //
+  @for $i from 1 through $num-columns {
+    [column~="#{$i}"] {
+      flex: 0 1 ($i/$num-columns) * 100%;
+      max-width: ($i/$num-columns) * 100%;
+    }
+  }
+
+  //
+  // Column offsets
+  //
+  @for $i from 1 through $num-columns {
+    [column~="+#{$i}"] {
+      margin-left: ($i/$num-columns) * 100%;
+    }
+  }
+}
+
+@if ($full-grid) {
+  @media (--extra-small) {
+    //
+    // Column widths
+    //
+    @for $i from 1 through $num-columns {
+      [column~="xs-#{$i}"] {
+        flex: 0 1 ($i/$num-columns) * 100%;
+        max-width: ($i/$num-columns) * 100%;
+      }
+    }
+
+    //
+    // Column offsets
+    //
+    @for $i from 1 through $num-columns {
+      [column~="+xs-#{$i}"] {
+        margin-left: ($i/$num-columns) * 100%;
+      }
+    }
+  }
+
+  @media (--small) {
+    //
+    // Column widths
+    //
+    @for $i from 1 through $num-columns {
+      [column~="s-#{$i}"] {
+        flex: 0 1 ($i/$num-columns) * 100%;
+        max-width: ($i/$num-columns) * 100%;
+      }
+    }
+
+    //
+    // Column offsets
+    //
+    @for $i from 1 through $num-columns {
+      [column~="+s-#{$i}"] {
+        margin-left: ($i/$num-columns) * 100%;
+      }
+    }
+  }
+
+  @media (--medium) {
+    //
+    // Column widths
+    //
+    @for $i from 1 through $num-columns {
+      [column~="m-#{$i}"] {
+        flex: 0 1 ($i/$num-columns) * 100%;
+        max-width: ($i/$num-columns) * 100%;
+      }
+    }
+
+    //
+    // Column offsets
+    //
+    @for $i from 1 through $num-columns {
+      [column~="+m-#{$i}"] {
+        margin-left: ($i/$num-columns) * 100%;
+      }
+    }
+  }
+
+  @media (--large) {
+    //
+    // Column widths
+    //
+    @for $i from 1 through $num-columns {
+      [column~="l-#{$i}"] {
+        flex: 0 1 ($i/$num-columns) * 100%;
+        max-width: ($i/$num-columns) * 100%;
+      }
+    }
+
+    //
+    // Column offsets
+    //
+    @for $i from 1 through $num-columns {
+      [column~="+l-#{$i}"] {
+        margin-left: ($i/$num-columns) * 100%;
+      }
+    }
+  }
+
+  @media (--extra-large) {
+    //
+    // Column widths
+    //
+    @for $i from 1 through $num-columns {
+      [column~="xl-#{$i}"] {
+        flex: 0 1 ($i/$num-columns) * 100%;
+        max-width: ($i/$num-columns) * 100%;
+      }
+    }
+
+    //
+    // Column offsets
+    //
+    @for $i from 1 through $num-columns {
+      [column~="+xl-#{$i}"] {
+        margin-left: ($i/$num-columns) * 100%;
+      }
+    }
+  }
+}

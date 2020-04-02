@@ -1,0 +1,76 @@
+*,
+::before,
+::after {
+  background-repeat: no-repeat;
+  box-sizing: inherit;
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+:root {
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+  line-height: 1.5;
+  background-color: var(--color-background-body);
+  color: var(--color-text-primary);
+  font-size: var(--font-size);
+  text-rendering: optimizeLegibility;
+
+  @media (--small) {
+    font-size: var(--font-size-large);
+  }
+}
+
+hr {
+  background-color: var(--color-base-lines);
+  height: 1px;
+  border: 0;
+}
+
+nav {
+  ol,
+  ul { padding-left: 0; }
+
+  li { list-style: none; }
+}
+
+small {
+  // Use the next smaller size in the scale
+  font-size: calc(100% / var(--scale-ratio));
+}
+
+::-moz-selection {
+  background-color: var(--color-base-selection);
+  text-shadow: none;
+}
+
+::selection {
+  background-color: var(--color-base-selection);
+  text-shadow: none;
+}
+
+a {
+  color: var(--color-base-primary);
+  text-decoration: none;
+
+  &:hover,
+  &:focus { text-decoration: underline; }
+
+  &:hover { outline-width: 0; }
+}
+
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex] {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}

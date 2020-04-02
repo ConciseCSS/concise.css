@@ -1,16 +1,12 @@
-//
-// Forms
-// =============================================================================
-
 input:not([type="submit"]),
 select,
 textarea {
   width: 100%;
-  font-size: typeScale(1);
+  font-size: 1;
   min-height: 1.5lh;
 
   &[disabled] {
-    background-color: getColor(state, muted);
+    background-color: var(--color-state-muted);
     cursor: not-allowed;
     border: 0;
   }
@@ -19,7 +15,7 @@ textarea {
 input:not([type="submit"]):not([type="range"]),
 select,
 textarea {
-  border: 1px solid getColor(base, lines);
+  border: 1px solid var(--color-base-lines);
   padding: 0 0.75em;
 }
 
@@ -51,7 +47,7 @@ select {
   min-width: 10em;
   height: 1.5lh;
 
-  &[disabled] { color: getColor(text, secondary); }
+  &[disabled] { color: var(--color-text-secondary); }
 
   &[multiple] {
     height: auto;
@@ -68,7 +64,7 @@ select {
 
 label {
   display: block;
-  font-size: typeScale(1);
+  font-size: 1;
   line-height: 1.5lh;
 }
 
