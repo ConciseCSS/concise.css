@@ -1,0 +1,28 @@
+@custom-media --only-extra-small (width <= 768px);
+@custom-media --only-small (768px <= width <= 992px);
+@custom-media --only-medium (992px <= width <= 1200px);
+@custom-media --only-large (width >= 1200px);
+
+@media (--only-extra-small) {
+  .element {
+    width: 20%;
+  }
+}
+
+@media (--only-small) {
+  .element {
+    width: 30%;
+  }
+}
+
+@media (--only-medium) {
+  .element {
+    width: 40%;
+  }
+}
+
+@media (--only-large) {
+  .element {
+    width: 50%;
+  }
+}

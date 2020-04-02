@@ -1,0 +1,29 @@
+::-moz-range-track {
+    background: #3071a9;
+    width: 100%
+}
+
+::-ms-track {
+    background: #3071a9;
+    width: 100%
+}
+
+::-webkit-slider-runnable-track {
+    background: #3071a9;
+    width: 100%
+}
+
+::-moz-range-thumb {
+    border-radius: 3px;
+    cursor: pointer
+}
+
+::-ms-thumb {
+    border-radius: 3px;
+    cursor: pointer
+}
+
+::-webkit-slider-thumb {
+    border-radius: 3px;
+    cursor: pointer
+}
