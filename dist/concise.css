@@ -125,7 +125,7 @@ h4 { font-size: 1.2rem; }
 h5 { font-size: 1rem; }
 h6 { font-size: 0.8333rem; }
 h1, h2, h3, h4, h5, h6 {
-  color: getColor(text, heading);
+  color: var(--color-text-heading);
   font-family: var(--font-secondary);
   line-height: 1.3;
 }
