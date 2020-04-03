@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require('fs')
+const path = require('path')
 const postcss = require('postcss');
 const autoprefixer = require('autoprefixer');
 const nested = require('postcss-nested');
@@ -11,9 +12,9 @@ const mediaMinMax = require('postcss-media-minmax');
 const customMedia = require('postcss-custom-media');
 const imports = require('postcss-easy-import');
 
-const src = require('./src');
 const lh = require('./lib/lh');
 const typeScale = require('./lib/type-scale');
+const use = require('./lib/use')
 
 const command = {
   name: process.argv[2],
@@ -33,16 +34,16 @@ const compile = async src => await postcss()
   .use(autoprefixer())
   .process(src, { parser: scssSyntax, from: command.input });
 
-const build = () => {
-  compile(fs.readFileSync(command.input, 'utf8')).then(css => {
-    fs.writeFile(command.output, css, err => {
+const build = (input, output) => {
+  compile(fs.readFileSync(input, 'utf8')).then(css => {
+    fs.writeFile(output, css, err => {
       if (err) throw err
-      console.log(`File written: ${command.output}\nFrom: ${command.input}`);
+      console.log(`File written: ${output}\nFrom: ${input}`);
     })
   });
 };
 
-const watch = async path => {
+const watch = path => {
   console.log(`Currently watching for changes in: ${path}`);
 
   fs.watch(path, {recursive: true}, (eventType, filename) => {
@@ -53,13 +54,12 @@ const watch = async path => {
 
 switch (command.name) {
   case 'compile':
-    build();
-    
+    build(command.input, command.output);
     break
-  case 'watch':
-    build();
-    watch(src).catch(console.error);
 
+  case 'watch':
+    build(command.input, command.output);
+    watch(path.dirname(command.input));
     break
 
   default:
