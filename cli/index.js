@@ -11,6 +11,7 @@ const mediaMinMax = require('postcss-media-minmax');
 const customMedia = require('postcss-custom-media');
 const imports = require('postcss-easy-import');
 
+const src = require('./src');
 const lh = require('./lib/lh');
 const typeScale = require('./lib/type-scale');
 
@@ -32,16 +33,35 @@ const compile = async src => await postcss()
   .use(autoprefixer())
   .process(src, { parser: scssSyntax, from: command.input });
 
+const build = () => {
+  compile(fs.readFileSync(command.input, 'utf8')).then(css => {
+    fs.writeFile(command.output, css, err => {
+      if (err) throw err
+      console.log(`File written: ${command.output}\nFrom: ${command.input}`);
+    })
+  });
+};
+
+const watch = async path => {
+  console.log(`Currently watching for changes in: ${path}`);
+
+  fs.watch(path, {recursive: true}, (eventType, filename) => {
+    console.log(`${eventType.charAt(0).toUpperCase() + eventType.slice(1)} in: ${filename}`);
+    build();
+  });
+};
 
 switch (command.name) {
   case 'compile':
-    compile(fs.readFileSync(command.input, 'utf8')).then(css => {
-      fs.writeFile(command.output, css, err => {
-        if (err) throw err
-        console.log(`File written: ${command.output}\nFrom: ${command.input}`);
-      })
-    })
+    build();
+    
     break
+  case 'watch':
+    build();
+    watch(src).catch(console.error);
+
+    break
+
   default:
     console.log('Unknown command')
     break
