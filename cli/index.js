@@ -14,7 +14,6 @@ const imports = require('postcss-easy-import');
 
 const lh = require('./lib/lh');
 const typeScale = require('./lib/type-scale');
-const use = require('./lib/use')
 
 const command = {
   name: process.argv[2],
