@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+// TODO: Create parent directories if they don't exist when compiling
+
 const fs = require('fs')
 const path = require('path')
 const compile = require('../src/index')
