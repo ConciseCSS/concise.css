@@ -1,19 +1,21 @@
 {
   "name": "concise.css",
+  "bin": {
+    "concise": "./bin/index.js"
+  },
   "version": "5.0.0",
-  "description": "The professional web design environment.",
+  "description": "A CSS pre-processor that makes web design more efficient and intuitive. Give up the bloat. Stop tripping over your classes. Be Concise.",
   "license": "MIT",
   "keywords": [
     "css",
-    "sass",
-    "scss",
     "mobile-first",
     "responsive",
     "front-end",
-    "framework",
+    "preprocessor",
     "web",
     "lightweight",
-    "postcss"
+    "postcss",
+    "design"
   ],
   "homepage": "http://concisecss.com",
   "bugs": "https://github.com/ConciseCSS/concise.css/issues",
@@ -26,7 +28,9 @@
   },
   "scripts": {
     "build": "node ./src/index.js compile src/concise.pcss dist/concise.css",
-    "build:watch": "node ./src/index.js watch src/concise.pcss dist/concise.css"
+    "build:watch": "node ./src/index.js watch src/concise.pcss dist/concise.css",
+    "test": "tape ./test/index.js | tap-diff",
+    "local-install": "npm link"
   },
   "dependencies": {
     "autoprefixer": "^9.7.5",
@@ -40,5 +44,9 @@
     "postcss-nested": "^4.2.1",
     "postcss-scss": "^2.0.0",
     "postcss-strip-inline-comments": "^0.1.5"
+  },
+  "devDependencies": {
+    "tap-diff": "^0.1.1",
+    "tape": "^4.13.2"
   }
 }
