@@ -13,16 +13,13 @@
 
 :root {
   box-sizing: border-box;
-  font-family: var(--font-family);
+  font-family: var(--font-primary);
   line-height: 1.5;
   background-color: var(--color-background-body);
   color: var(--color-text-primary);
   font-size: var(--font-size);
+  font-size: var(--font-size-large) ?if media (--small);
   text-rendering: optimizeLegibility;
-
-  @media (--small) {
-    font-size: var(--font-size-large);
-  }
 }
 
 hr {
