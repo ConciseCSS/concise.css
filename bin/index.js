@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-// TODO: Create parent directories if they don't exist when compiling
-
 const fs = require('fs')
 const path = require('path')
 const compile = require('../src/index')
@@ -14,6 +12,10 @@ const command = {
 
 const build = (input, output) => {
   compile(fs.readFileSync(input, 'utf8')).then(css => {
+    // Create all the parent directories if required
+    fs.mkdirSync(path.dirname(output), { recursive: true })
+
+    // Write the CSS
     fs.writeFile(output, css, err => {
       if (err) throw err
       console.log(`File written: ${output}\nFrom: ${input}`);
