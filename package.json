@@ -27,8 +27,6 @@
     "node": ">=12.0.0"
   },
   "scripts": {
-    "build": "node ./src/index.js compile src/concise.pcss dist/concise.css",
-    "build:watch": "node ./src/index.js watch src/concise.pcss dist/concise.css",
     "test": "tape ./test/index.js | tap-diff",
     "local-install": "npm link"
   },
