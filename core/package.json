@@ -2,9 +2,9 @@
   "name": "@concisecss/core",
   "version": "1.0.0",
   "description": "Base styles",
-  "main": "dist/core.css",
+  "main": "core.css",
   "scripts": {
-    "build": "concise compile src/core.pcss dist/core.css"
+    "build": "concise compile core.pcss core.css"
   },
   "repository": {
     "type": "git",
