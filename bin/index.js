@@ -11,12 +11,12 @@ const command = {
 }
 
 const build = (input, output) => {
-  concise.process(fs.readFileSync(input, 'utf8'), { from: input }).then(css => {
+  concise.process(fs.readFileSync(input, 'utf8'), { from: input }).then(result => {
     // Create all the parent directories if required
     fs.mkdirSync(path.dirname(output), { recursive: true })
 
     // Write the CSS
-    fs.writeFile(output, css, err => {
+    fs.writeFile(output, result.css, err => {
       if (err) throw err
       console.log(`File written: ${output}\nFrom: ${input}`);
     })
