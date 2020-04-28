@@ -3,6 +3,7 @@
   "bin": {
     "concise": "./bin/index.js"
   },
+  "main": "src/index.js",
   "version": "5.0.0",
   "description": "A CSS pre-processor that makes web design more efficient and intuitive. Give up the bloat. Stop tripping over your classes. Be Concise.",
   "license": "MIT",
