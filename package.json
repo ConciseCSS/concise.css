@@ -41,7 +41,6 @@
     "postcss-lh": "^2.0.2",
     "postcss-media-minmax": "^4.0.0",
     "postcss-nested": "^4.2.1",
-    "postcss-scss": "^2.0.0",
     "postcss-strip-inline-comments": "^0.1.5"
   },
   "devDependencies": {

@@ -2,7 +2,6 @@
 
 const fs = require('fs')
 const path = require('path')
-const scssSyntax = require('postcss-scss')
 const concise = require('../src/index')
 
 const command = {
@@ -12,7 +11,7 @@ const command = {
 }
 
 const build = (input, output) => {
-  concise.process(fs.readFileSync(input, 'utf8'), { from: input, parser: scssSyntax }).then(css => {
+  concise.process(fs.readFileSync(input, 'utf8'), { from: input }).then(css => {
     // Create all the parent directories if required
     fs.mkdirSync(path.dirname(output), { recursive: true })
 
