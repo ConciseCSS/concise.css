@@ -1,0 +1,21 @@
+{
+  "name": "@concisecss/core",
+  "version": "1.0.0",
+  "description": "Base styles",
+  "main": "dist/core.css",
+  "scripts": {
+    "build": "concise compile src/core.pcss dist/core.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConciseCSS/core.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ConciseCSS/core/issues"
+  },
+  "homepage": "https://github.com/ConciseCSS/core#readme",
+  "devDependencies": {
+    "concise.css": "github:ConciseCSS/concise.css#dev"
+  }
+}

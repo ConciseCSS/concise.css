@@ -1,5 +1,7 @@
-// Custom media queries
-// Use as @media (--medium) { … }
+/*
+Custom media queries
+Use as @media (--medium) { … }
+*/
 @custom-media --extra-small (width < 480px);
 @custom-media --small (width >= 480px);
 @custom-media --medium (width >= 768px);
@@ -10,48 +12,49 @@
 @custom-media --only-large (960px < width <= 1100px);
 
 :root {
-  // Font size for small devices
+  /* Font size for small devices */
   --font-size: 16px;
 
-  // Font size for large devices
+  /* Font size for large devices */
   --font-size-large: 18px;
 
-  // Space between characters
+  /* Space between characters */
   --letter-spacing: 0.05em;
 
-  // Type scale ratio
-  // Suggested values:
-  // minor-second:     1.067
-  // major-second:     1.125
-  // minor-third:      1.200
-  // major-third:      1.250
-  // perfect-fourth:   1.333
-  // augmented-fourth: 1.414
-  // perfect-fifth:    1.500
-  // golden-ratio:     1.618
+  /* Type scale ratio
+      Suggested values:
+      minor-second:     1.067
+      major-second:     1.125
+      minor-third:      1.200
+      major-third:      1.250
+      perfect-fourth:   1.333
+      augmented-fourth: 1.414
+      perfect-fifth:    1.500
+      golden-ratio:     1.618
+  */
   --type-ratio: 1.2;
 
-  // Enable margins to all the elements except the first one in each nesting level
+  /* Enable margins to all the elements except the first one in each nesting level */
   --automargin: 1lh;
 
-  // Font families
+  /* Font families */
   --font-primary: "Helvetica", "Arial", sans-serif;
   --font-secondary: "Helvetica", "Arial", sans-serif;
   --font-mono: "Consolas", monospace;
   --font-print-primary: "Georgia", "Times New Roman", "Times", serif;
   --font-print-secondary: "Georgia", "Times New Roman", "Times", serif;
 
-  // Transitions
+  /* Transitions */
   --transition-duration: 150ms;
 
-  // Spacing
+  /* Spacing */
   --spacing-xs: 0.5lh;
   --spacing-s: 1lh;
   --spacing-m: 2lh;
   --spacing-l: 3lh;
   --spacing-xl: 4lh;
 
-  // Color palette
+  /* Color palette */
   --color-base-primary: #C65146;
   --color-base-selection: #EBE1D3;
   --color-base-lines: #DCDCDC;
