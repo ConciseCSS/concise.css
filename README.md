@@ -12,6 +12,29 @@ Concise CSS is written using a custom CSS preprocessor, built on top of Sass and
 
 ## Installation
 
+There are 4 different options to install Concise CSS in your website, although the recommended way is to use NPM.
+
+### Using our CDN
+
+If you just want to try Concise CSS or of you do not have plans to customize the styles, you can use our CDN, this is the easier way to get started with the framework—and if you like it—is recommended to switch to NPM so that you can customize the styles.
+
+
+```HTML
+<!-- Normal - Latest version -->
+<link rel="stylesheet" href="https://cdn.concisecss.com/concise.css">
+
+<!-- Minified - Latest version -->
+<link rel="stylesheet" href="https://cdn.concisecss.com/concise.min.css">
+```
+
+That is for the latest version, if you want to use a specific one you can do something like the following:
+
+```HTML
+<!-- Normal - Specific version -->
+<link rel="stylesheet" href="https://cdn.concisecss.com/v4.1/concise.css">
+
+<!-- Minified - Specific version -->
+<link rel="stylesheet" href="https://cdn.concisecss.com/v4.1/concise.min.css">
 ```
 
 ### Install with NPM
