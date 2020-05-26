@@ -21,20 +21,20 @@ If you just want to try Concise CSS or of you do not have plans to customize the
 
 ```HTML
 <!-- Normal - Latest version -->
-<link rel="stylesheet" href="https://cdn.concisecss.com/concise.css">
+<link rel="stylesheet" href="//cdn.concisecss.com/concise.css">
 
 <!-- Minified - Latest version -->
-<link rel="stylesheet" href="https://cdn.concisecss.com/concise.min.css">
+<link rel="stylesheet" href="//cdn.concisecss.com/concise.min.css">
 ```
 
 That is for the latest version, if you want to use a specific one you can do something like the following:
 
 ```HTML
 <!-- Normal - Specific version -->
-<link rel="stylesheet" href="https://cdn.concisecss.com/v4.1/concise.css">
+<link rel="stylesheet" href="//cdn.concisecss.com/v4.1/concise.css">
 
 <!-- Minified - Specific version -->
-<link rel="stylesheet" href="https://cdn.concisecss.com/v4.1/concise.min.css">
+<link rel="stylesheet" href="//cdn.concisecss.com/v4.1/concise.min.css">
 ```
 
 ### Install with NPM
