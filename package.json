@@ -33,6 +33,8 @@
   },
   "dependencies": {
     "autoprefixer": "^9.7.5",
+    "chalk": "^4.0.0",
+    "chokidar": "^3.4.0",
     "postcss": "^7.0.27",
     "postcss-custom-media": "^7.0.8",
     "postcss-easy-import": "^3.0.0",

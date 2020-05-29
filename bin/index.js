@@ -3,7 +3,8 @@
 const fs = require('fs')
 const path = require('path')
 const concise = require('../src/index')
-const minimist = require('minimist')
+const chokidar = require('chokidar')
+const chalk = require('chalk')
 
 const command = {
   name: process.argv[2],
@@ -20,17 +21,18 @@ const build = (input, output) => {
     // Write the CSS
     fs.writeFile(output, result.css, err => {
       if (err) throw err
-      console.log(`File written: ${output}\nFrom: ${input}`)
+      console.log(chalk.bold.green('File written: ') + output)
+      console.log(chalk.bold.green('From: ') + input)
     })
   })
 }
 
 const watch = path => {
-  console.log(`Currently watching for changes in: ${path}`)
+  console.log(chalk.bold.blue('\nCurrently watching for changes in: ') + chalk.gray(path))
 
-  fs.watch(path, {recursive: true}, (eventType, filename) => {
-    console.log(`${eventType.charAt(0).toUpperCase() + eventType.slice(1)} in: ${filename}`)
-    build()
+  chokidar.watch(path, { ignored: /\.css$/, ignoreInitial: true }).on('all', (eventType, filename) => {
+    console.log(chalk.bold.blue(`${eventType.charAt(0).toUpperCase() + eventType.slice(1)} in: `) + filename)
+    build(command.input, command.output)
   })
 }
 
