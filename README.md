@@ -4,7 +4,7 @@
 
 ## Installing the CLI Locally
 
-To install the Concise CLI in a project just run the following command: 
+To install the Concise CLI in a project just run the following command:
 
 ```
 npm install -D ConciseCSS/concise.css#dev
@@ -12,9 +12,9 @@ npm install -D ConciseCSS/concise.css#dev
 
 ## Using Packages and Writing Styles
 
-The Concise CLI can be used independently of any styles. In principle, it would will with any other CSS library, framework or any existing project so long as the code is plain CSS or contains only the features that can be compiled with PostCSS. Of course, one can start writing everything from scratch using Concise as well. 
+The Concise CLI can be used independently of any styles. In principle, it would will with any other CSS library, framework or any existing project so long as the code is plain CSS or contains only the features that can be compiled with PostCSS. Of course, one can start writing everything from scratch using Concise as well.
 
-The core library contains the very basic styles that one might use, and contains most of the code that was available on Concise v4. This can be installed by running: 
+The core library contains the very basic styles that one might use, and contains most of the code that was available on Concise v4. This can be installed by running:
 
 ```
 npm install -D ConciseCSS/core#master
@@ -51,7 +51,7 @@ To execute the CLI manually after installing locally (without the `package.json`
 npx concise compile main.pcss main.css
 ```
 
-The equivalent `concise watch` command will also watch the files for changes.
+The flag `-w` will also watch the files for changes.
 
 ## Changelog
 

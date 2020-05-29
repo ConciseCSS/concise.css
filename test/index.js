@@ -2,7 +2,6 @@ const fs = require("fs")
 const path = require('path')
 const test = require('tape')
 const postcss = require('postcss')
-const scssSyntax = require('postcss-scss')
 const concise = require('../src/index.js')
 
 ;(() => {
@@ -10,7 +9,7 @@ const concise = require('../src/index.js')
     const sourcePath = path.join(__dirname,`fixtures/${file}/${file}.pcss`)
     const fileContent = fs.readFileSync(sourcePath, 'utf8')
 
-    const result = await postcss([concise]).process(fileContent, { from: sourcePath, parser: scssSyntax })
+    const result = await postcss([concise]).process(fileContent, { from: sourcePath })
 
     return result.css.replace(/\s+/g, '')
   }
