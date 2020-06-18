@@ -27,7 +27,10 @@ If you just want to try Concise CSS or of you do not have plans to customize the
 <link rel="stylesheet" href="//cdn.concisecss.com/concise.min.css">
 ```
 
-That is for the latest version, if you want to use a specific one you can do something like the following:
+#### Semantic versioning with CDN
+All major and minor versions of Concise exist in its own folder on the CDN. You can use specific versions of Concise with the CDN by prefixing the CSS file with the version number in the URL. 
+
+For example, you can use the latest version as such:
 
 ```HTML
 <!-- Normal - Specific version -->
@@ -36,6 +39,8 @@ That is for the latest version, if you want to use a specific one you can do som
 <!-- Minified - Specific version -->
 <link rel="stylesheet" href="//cdn.concisecss.com/v4.1/concise.min.css">
 ```
+
+**Note:** All patch versions of Concise get published automatically to the non-prefixed URL. Patch versions are not organized into a folder.
 
 ### Install with NPM
 
