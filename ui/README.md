@@ -1,7 +1,9 @@
 
 # Concise UI
 
-> Basic user interface kit for Concise CSS
+Basic user interface kit for Concise CSS
+
+> :warning: &nbsp; **Notice:** This project is not actively maintained. Reach out to [@keenanpayne](https://twitter.com/KeenanPayne_) or [@jaiheravi](https://twitter.com/jaiheravi) if you would like to chat about it ✌🏻
 
 Concise UI is one of the official add-ons for Concise CSS. It provides a basic user interface kit to help you build your websites quicker.
 
