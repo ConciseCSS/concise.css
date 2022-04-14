@@ -2,6 +2,8 @@
   <img src="https://i.imgur.com/ihzCgEr.png">
 </p>
 
+> :warning: &nbsp; **Notice:** This project is not actively maintained. Reach out to [@keenanpayne](https://twitter.com/KeenanPayne_) or [@jaiheravi](https://twitter.com/jaiheravi) if you would like to chat about it ✌🏻
+
 ## Installing the CLI Locally
 
 To install the Concise CLI in a project just run the following command:
