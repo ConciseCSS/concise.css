@@ -39,10 +39,10 @@
     "postcss-custom-media": "^7.0.8",
     "postcss-easy-import": "^3.0.0",
     "postcss-if-media": "^1.0.3",
-    "postcss-input-range": "^4.0.0",
+    "postcss-input-range": "^6.0.0",
     "postcss-lh": "^2.0.2",
     "postcss-media-minmax": "^4.0.0",
-    "postcss-nested": "^4.2.1",
+    "postcss-nested": "^9.0.0",
     "postcss-strip-inline-comments": "^0.1.5"
   },
   "devDependencies": {
