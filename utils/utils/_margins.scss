@@ -1,0 +1,47 @@
+//
+// Margin classes
+// =============================================================================
+
+// Resets
+._m0 { margin: 0; }
+._mt0 { margin-top: 0; }
+._mr0 { margin-right: 0; }
+._mb0 { margin-bottom: 0; }
+._ml0 { margin-left: 0; }
+
+// All the sides
+._mxs { margin: $spacing-xs; }
+._ms { margin: $spacing-s; }
+._mm { margin: $spacing-m; }
+._ml { margin: $spacing-l; }
+._mxl { margin: $spacing-xl; }
+
+// Extra small
+._mtxs { margin-top: $spacing-xs; }
+._mrxs { margin-right: $spacing-xs; }
+._mbxs { margin-bottom: $spacing-xs; }
+._mlxs { margin-left: $spacing-xs; }
+
+// Small
+._mts { margin-top: $spacing-s; }
+._mrs { margin-right: $spacing-s; }
+._mbs { margin-bottom: $spacing-s; }
+._mls { margin-left: $spacing-s; }
+
+// Medium
+._mtm { margin-top: $spacing-m; }
+._mrm { margin-right: $spacing-m; }
+._mbm { margin-bottom: $spacing-m; }
+._mlm { margin-left: $spacing-m; }
+
+// Large
+._mtl { margin-top: $spacing-l; }
+._mrl { margin-right: $spacing-l; }
+._mbl { margin-bottom: $spacing-l; }
+._mll { margin-left: $spacing-l; }
+
+// Extra Large
+._mtxl { margin-top: $spacing-xl; }
+._mrxl { margin-right: $spacing-xl; }
+._mbxl { margin-bottom: $spacing-xl; }
+._mlxl { margin-left: $spacing-xl; }

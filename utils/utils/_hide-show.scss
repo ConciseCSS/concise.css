@@ -1,0 +1,152 @@
+//
+// Hide/Show classes
+// =============================================================================
+
+//
+// Mixins
+// ------
+
+@mixin show-conditional {
+  display: block;
+  visibility: visible;
+}
+
+@mixin hide-conditional {
+  display: none;
+  visibility: hidden;
+}
+
+
+//
+// Extra-Small Devices
+// -------------------
+
+._show-xs,
+._hide-s,
+._hide-m,
+._hide-l,
+._hide-xl,
+._hide-print,
+._hide-hd {
+  @include show-conditional;
+}
+
+._hide-xs,
+._show-s,
+._show-m,
+._show-l,
+._show-xl,
+._show-print,
+._show-hd {
+  @include hide-conditional;
+}
+
+
+//
+// Small Devices
+// -------------
+
+@media (--small) {
+  ._show-s,
+  ._hide-xs,
+  ._hide-m,
+  ._hide-l,
+  ._hide-xl {
+    @include show-conditional;
+  }
+
+  ._hide-s,
+  ._show-xs,
+  ._show-m,
+  ._show-l,
+  ._show-xl {
+    @include hide-conditional;
+  }
+}
+
+
+//
+// Medium Devices
+// --------------
+
+@media (--medium) {
+  ._show-m,
+  ._hide-s,
+  ._hide-xm,
+  ._hide-l,
+  ._hide-xl {
+    @include show-conditional;
+  }
+
+  ._hide-m,
+  ._show-s,
+  ._show-xm,
+  ._show-l,
+  ._show-xl {
+    @include hide-conditional;
+  }
+}
+
+
+//
+// Large Devices
+// -------------
+
+@media (--large) {
+  ._show-l,
+  ._hide-xs,
+  ._hide-s,
+  ._hide-m,
+  ._hide-xl {
+    @include show-conditional;
+  }
+
+  ._hide-l,
+  ._show-xs,
+  ._show-s,
+  ._show-m,
+  ._show-xl {
+    @include hide-conditional;
+  }
+}
+
+
+//
+// Extra-Large Devices
+// -------------------
+
+@media (--extra-large) {
+  ._show-xl,
+  ._hide-xs,
+  ._hide-s,
+  ._hide-m,
+  ._hide-l {
+    @include show-conditional;
+  }
+
+  ._hide-xl,
+  ._show-xs,
+  ._show-s,
+  ._show-m,
+  ._show-l {
+    @include hide-conditional;
+  }
+}
+
+
+//
+// HiDPI and Retina
+// ----------------
+
+@media only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3 / 2),
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+  ._show-hd {
+    @include show-conditional;
+  }
+
+  ._hide-hd {
+    @include hide-conditional;
+  }
+}

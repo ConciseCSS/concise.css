@@ -1,0 +1,24 @@
+//
+// Typography classes
+// =============================================================================
+
+._bold { font-weight: bold; }
+._caps { text-transform: uppercase; }
+._font-family-inherit { font-family: inherit; }
+._font-size-inherit { font-size: inherit; }
+._italic { font-style: italic; }
+._no-decoration {text-decoration: none; }
+._regular { font-weight: normal; }
+._small-caps { font-feature-settings: "smcp" 1, "c2sc" 1; }
+._text-center { text-align: center; }
+._text-left { text-align: left; }
+._text-right { text-align: right; }
+._underline { text-decoration: underline; }
+._letter-spacing { letter-spacing: $letter-spacing; }
+
+// Font-families
+._font-primary { font-family: $font-primary; }
+._font-secondary { font-family: $font-secondary; }
+._font-mono { font-family: $font-mono; }
+._font-print { font-family: $font-print-primary; }
+._font-print-secondary { font-family: $font-print-secondary; }

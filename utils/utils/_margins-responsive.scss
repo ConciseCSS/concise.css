@@ -1,0 +1,36 @@
+//
+// Responsive margins
+// =============================================================================
+
+$spacings: (
+    0: 0,
+    1: $spacing-xs,
+    2: $spacing-s,
+    3: $spacing-m,
+    4: $spacing-l,
+    5: $spacing-xl
+);
+
+$queries: (-s: --small, -m: --medium, -l: --large, -xl: --extra-large); 
+
+// Above defenitely should be moved to settings
+
+@mixin responsive-margins ($media){
+    @each $spacing, $spacing-value in $spacings {
+        ._m#{$spacing}#{$media} { margin: $spacing-value; }
+        ._mt#{$spacing}#{$media} { margin-top: $spacing-value; }
+        ._mr#{$spacing}#{$media} { margin-right: $spacing-value; }
+        ._mb#{$spacing}#{$media} { margin-bottom: $spacing-value; }
+        ._ml#{$spacing}#{$media} { margin-left: $spacing-value; }
+        ._mv#{$spacing}#{$media} { margin-top: $spacing-value; margin-bottom: $spacing-value; }
+        ._mh#{$spacing}#{$media} { margin-left:$spacing-value; margin-right: $spacing-value; }
+    }    
+}
+
+@include responsive-margins ('');
+
+@each $media, $query in $queries {    
+    @media (#{$query}) {    
+        @include responsive-margins ($media);
+    }    
+}

@@ -1,0 +1,33 @@
+//
+// Border classes
+// =============================================================================
+
+._b0 { border: 0; }
+._bt0 { border-top: 0; }
+._br0 { border-right: 0; }
+._bb0 { border-bottom: 0; }
+._bl0 { border-left: 0; }
+
+._b1 { border: 1px solid getColor(base, lines); }
+._bt1 { border-top: 1px solid getColor(base, lines); }
+._br1 { border-right: 1px solid getColor(base, lines); }
+._bb1 { border-bottom: 1px solid getColor(base, lines); }
+._bl1 { border-left: 1px solid getColor(base, lines); }
+
+._b2 { border: 2px solid getColor(base, lines); }
+._bt2 { border-top: 2px solid getColor(base, lines); }
+._br2 { border-right: 2px solid getColor(base, lines); }
+._bb2 { border-bottom: 2px solid getColor(base, lines); }
+._bl2 { border-left: 2px solid getColor(base, lines); }
+
+._b3 { border: 3px solid getColor(base, lines); }
+._bt3 { border-top: 3px solid getColor(base, lines); }
+._br3 { border-right: 3px solid getColor(base, lines); }
+._bb3 { border-bottom: 3px solid getColor(base, lines); }
+._bl3 { border-left: 3px solid getColor(base, lines); }
+
+._b4 { border: 4px solid getColor(base, lines); }
+._bt4 { border-top: 4px solid getColor(base, lines); }
+._br4 { border-right: 4px solid getColor(base, lines); }
+._bb4 { border-bottom: 4px solid getColor(base, lines); }
+._bl4 { border-left: 4px solid getColor(base, lines); }
