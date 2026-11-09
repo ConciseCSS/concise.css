@@ -1,7 +1,7 @@
 /**
  * Concise UI
  * A basic user interface kit: components and elements following the RSCSS
- * convention (https://rscss.io).
+ * convention (https://github.com/rstacruz/rscss).
  */
 
 // Settings (custom properties and media queries); imported only once even
