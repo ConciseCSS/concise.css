@@ -28,7 +28,10 @@
     "node": ">=22.22"
   },
   "scripts": {
-    "test": "node --test \"test/**/*.test.js\""
+    "test": "node --test \"test/**/*.test.js\"",
+    "build": "node scripts/build.js",
+    "prepack": "npm run build",
+    "test:update": "node --test --test-update-snapshots \"test/**/*.test.js\""
   },
   "dependencies": {
     "autoprefixer": "^10.6.2",
@@ -55,5 +58,8 @@
     "utils",
     "concise.ccss",
     "dist"
-  ]
+  ],
+  "devDependencies": {
+    "cssnano": "^9.9.0"
+  }
 }

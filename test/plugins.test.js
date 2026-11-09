@@ -86,3 +86,16 @@ describe('resolve', () => {
     assert.throws(() => resolve('./missing', from), /Unable to resolve "\.\/missing"[\s\S]*missing\.ccss/)
   })
 })
+
+describe('default parser', () => {
+  test('imported .ccss files with // comments work without postcss-scss', async () => {
+    const from = path.join(import.meta.dirname, '../concise.ccss')
+    const result = await postcss([concise({ autoprefixer: false })]).process(fs.readFileSync(from, 'utf8'), { from })
+    assert.match(result.css, /\._mxs \{ margin: var\(--spacing-xs\); \}/)
+    assert.doesNotMatch(result.css, /^\s*\/\/ /m)
+  })
+
+  test('the plugin exposes the parser for CommonJS users', () => {
+    assert.equal(concise.parser, parser)
+  })
+})

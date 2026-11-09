@@ -7,8 +7,8 @@
  *
  *   await postcss([concise()]).process(css, { from: 'main.ccss', parser: scss.parse })
  *
- * The postcss-scss parser is only needed for `//` comments; everything else works
- * with the default parser.
+ * The postcss-scss parser is only needed for `//` comments in the file being
+ * processed; imported .ccss files are always read with it.
  */
 
 import autoprefixer from 'autoprefixer'
@@ -20,13 +20,14 @@ import scss from 'postcss-scss'
 
 import ifMedia from './lib/if-media.js'
 import lh from './lib/lh.js'
+import load from './lib/load.js'
 import resolve from './lib/resolve.js'
 import stripComments from './lib/strip-comments.js'
 import typeScale from './lib/type-scale.js'
 
 /**
  * @param {object} [options]
- * @param {object} [options.import]        options for postcss-import (a custom `resolve` replaces Concise's)
+ * @param {object} [options.import]        options for postcss-import (custom `resolve`/`load` replace Concise's)
  * @param {object} [options.lh]            { rootSelector, unit, lineHeight }
  * @param {object} [options.typeScale]     { rootSelector, typeRatio, ratioProperty }
  * @param {object|false} [options.autoprefixer]  autoprefixer options, or false to skip it
@@ -34,7 +35,7 @@ import typeScale from './lib/type-scale.js'
 const concise = (options = {}) => ({
   postcssPlugin: 'concise',
   plugins: [
-    imports({ resolve, ...options.import }),
+    imports({ resolve, load, ...options.import }),
     stripComments(),
     // Before nested: postcss-nested would read `?if media …` blocks as selectors
     ifMedia(),
@@ -48,7 +49,11 @@ const concise = (options = {}) => ({
 })
 concise.postcss = true
 
-export default concise
-
 /** Parser that understands `//` comments; pass as `parser` when processing .ccss files. */
 export const parser = scss.parse
+concise.parser = parser
+
+export default concise
+
+// require('concise.css') returns the plugin itself (with .parser) instead of the module namespace
+export { concise as 'module.exports' }
