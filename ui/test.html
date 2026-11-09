@@ -1,0 +1,288 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Concise UI: Test File</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="node_modules/concise.css/dist/concise.min.css">
+
+    <link rel="stylesheet" href="dist/concise-ui.css">
+
+    <style>
+      h1 {
+        text-align: center;
+        margin: 3rem 0;
+      }
+
+      body {
+        padding-bottom: 5rem;
+      }
+    </style>
+  </head>
+  <body container>
+    <h1>Concise UI: Test file</h1>
+
+    <section>
+      <h2>Alert box</h2>
+
+      <section class="alert-box">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non lacus sapien.</p>
+      </section>
+
+      <section class="alert-box">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non lacus sapien.</p>
+        <p>Donec dapibus felis erat, et tincidunt arcu interdum id. Sed commodo quam id lectus porttitor, at gravida justo convallis. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+        <a class="close" href="#">&times;</a>
+      </section>
+
+      <section class="alert-box -warning">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non lacus sapien.</p>
+        <a class="close" href="#">&times;</a>
+      </section>
+
+      <section class="alert-box -success">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non lacus sapien.</p>
+        <a class="close" href="#">&times;</a>
+      </section>
+
+      <section class="alert-box -error">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non lacus sapien.</p>
+        <a class="close" href="#">&times;</a>
+      </section>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Tag box</h2>
+      <span class="tag-box">Lorem</span>
+      <span class="tag-box -success">Lorem</span>
+      <span class="tag-box -warning">Lorem</span>
+      <span class="tag-box -error">Lorem</span>
+      <span class="tag-box -pill">Lorem</span>
+      <span class="tag-box -pill -success">Lorem</span>
+      <span class="tag-box -pill -warning">Lorem</span>
+      <span class="tag-box -pill -error">Lorem</span>
+
+      <h2>Title with a tag
+        <span class="tag-box -success">adaptable</span>
+      </h2>
+
+      <h5>A smaller one
+        <span class="tag-box -success">still adaptable</span>
+      </h5>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Breadcrumb nav</h2>
+
+      <ul class="breadcrumb-nav">
+        <li class="item"><a href="#">Home</a></li>
+        <li class="item"><a href="#">Level 1</a></li>
+        <li class="item"><a href="#">Level 2</a></li>
+        <li class="item -active">Active page</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Buttons</h2>
+
+      <button>Default</button>
+      <br>
+      <button class="-bordered">Bordered</button>
+      <button class="-bordered -error">Bordered error</button>
+      <button class="-bordered -warning">Bordered warning</button>
+      <button class="-bordered -success">Bordered success</button>
+      <button class="-bordered -muted">Bordered muted</button>
+      <button class="-bordered" disabled>Bordered disabled</button>
+      <br>
+      <button class="-error">Error</button>
+      <button class="-warning">Warning</button>
+      <button class="-success">Success</button>
+      <button class="-muted">Muted</button>
+      <button disabled>Disabled</button>
+      <br>
+      <button class="-prefix">
+        <span class="prefix">Prefix</span>
+        Button
+      </button>
+      <button class="-affix">
+        Button
+        <span class="affix">Affix</span>
+      </button>
+      <button class="-prefix -success">
+        <span class="prefix">Prefix</span>
+        Button
+      </button>
+      <button class="-affix -warning">
+        Button
+        <span class="affix -error">Affix</span>
+      </button>
+      <button class="-prefix">
+        <span class="prefix">Prefix</span>
+        Button
+      </button>
+      <button class="-affix -muted">
+        Button
+        <span class="affix">Affix</span>
+      </button>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Button group</h2>
+      <ul class="button-group">
+        <li><a class="item" href="#">1</a></li>
+        <li><a class="item" href="#">2</a></li>
+        <li><a class="item -active" href="#">3</a></li>
+        <li><a class="item" href="#">4</a></li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Cards</h2>
+
+      <div grid>
+        <div column="4">
+          <div class="card-box">
+            <img class="image" src="http://onebigphoto.com/uploads/2012/10/stunning-dolomites-mountains-italy.jpg">
+            <div class="card-content">
+              <h3 class="title">Card title</h3>
+              <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend dapibus nisl eu egestas.</p>
+            </div>
+          </div>
+        </div>
+
+        <div column="4">
+          <div class="card-box">
+            <img class="image" src="http://onebigphoto.com/uploads/2012/10/stunning-dolomites-mountains-italy.jpg">
+            <div class="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend dapibus nisl eu egestas.</div>
+          </div>
+        </div>
+
+        <div column="4">
+          <div class="card-box">
+            <div class="card-content">
+              <h3 class="title">Card title</h3>
+              <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend dapibus nisl eu egestas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <div grid>
+        <div column="4">
+          <div class="card-box">
+            <div class="header">
+              Header
+            </div>
+            <div class="card-content">
+              <h3 class="title">Card title</h3>
+              <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend dapibus nisl eu egestas.</p>
+            </div>
+            <div class="footer">
+              Footer
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Dropdowns</h2>
+
+      <div tabindex="0" class="dropdown-button">
+        <span>Dropdown</span>
+        <ul class="dropdown-content">
+          <li class="item">Item</li>
+          <li class="item">Item</li>
+          <li class="item">Item</li>
+        </ul>
+      </div>
+
+      <br>
+
+      <div tabindex="0" class="dropdown-button -top">
+        <span>Dropdown Top</span>
+        <ul class="dropdown-content">
+          <li class="item">Item</li>
+          <li class="item">Item</li>
+          <li class="item">Item</li>
+        </ul>
+      </div>
+
+      <br>
+
+      <div tabindex="0" class="dropdown-button -hover">
+        <span>Dropdown Hover with content</span>
+        <div class="dropdown-content">
+          <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Progress bars</h2>
+
+      <div class="progress-bar -small">
+        <span class="progress" style="width: 25%"></span>
+      </div>
+
+      <br>
+
+      <div class="progress-bar">
+        <span class="progress" style="width: 50%"></span>
+      </div>
+
+      <br>
+
+      <div class="progress-bar -large">
+        <span class="progress" style="width: 75%"></span>
+      </div>
+
+      <br>
+
+      <div class="progress-bar -striped">
+        <span class="progress" style="width: 90%"></span>
+      </div>
+
+      <br>
+
+      <div class="progress-bar -striped -animated">
+        <span class="progress" style="width: 90%"></span>
+      </div>
+
+      <br>
+
+      <div class="progress-bar -stacked">
+        <span class="progress" style="width: 25%"></span>
+        <span class="progress" style="width: 25%; background-color: green"></span>
+        <span class="progress" style="width: 25%; background-color: blue"></span>
+        <span class="progress" style="width: 20%; background-color: red"></span>
+      </div>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Spinner</h2>
+
+      <div class="spinner"></div>
+    </section>
+  </body>
+</html>

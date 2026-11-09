@@ -1,0 +1,39 @@
+{
+  "name": "concise-ui",
+  "version": "0.2.1",
+  "description": "Basic user interface kit for Concise Framework",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConciseCSS/concise-ui.git"
+  },
+  "keywords": [
+    "css",
+    "concise",
+    "ui",
+    "user",
+    "interface",
+    "kit",
+    "framework",
+    "add-on"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ConciseCSS/concise-ui/issues"
+  },
+  "homepage": "https://github.com/ConciseCSS/concise-ui#readme",
+  "scripts": {
+    "build": "jake build",
+    "start": "jake default",
+    "stats": "stylestats dist/concise-utils.css"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^1.2.0",
+    "concise-cli": "^0.4.1",
+    "concise.css": "github:concisecss/concise.css#master",
+    "cssnano-cli": "^1.0.5",
+    "http-server": "^0.9.0",
+    "jake": "^8.0.15",
+    "livereload": "^0.6.0",
+    "stylestats": "^6.3.0"
+  }
+}

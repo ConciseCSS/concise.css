@@ -1,0 +1,35 @@
+//
+// Breadcrumbs
+// =============================================================================
+
+.breadcrumb-nav {
+  background-color: getColor(background, light);
+  font-size: typeScale(1);
+  padding: 0.5lh 1.5em;
+  font-weight: bold;
+
+  //
+  // Breadcrumb item
+  // --------------------------------------------------
+
+  & > .item {
+    display: inline;
+    list-style: none;
+    margin-right: 1em;
+
+    // Add a separator to all the elements
+    // except the last one
+    &:not(:last-child):after {
+      color: getColor(base, lines);
+      content: "/";
+      margin-left: 1em;
+    }
+
+    // Active item
+    &.-active,
+    &.-active a {
+      color: getColor(text, secondary);
+      font-weight: normal;
+    }
+  }
+}

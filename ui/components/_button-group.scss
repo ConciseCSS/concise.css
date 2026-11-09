@@ -1,0 +1,36 @@
+//
+// Button Groups
+// =============================================================================
+
+.button-group {
+  padding: 0;
+  display: flex;
+
+  & > li {
+    list-style: none;
+    border: 1px solid getColor(base, lines);
+    font-size: typeScale(1);
+
+    &:first-child { border-radius: 3px 0 0 3px; }
+    &:last-child { border-radius: 0 3px 3px 0; }
+
+    &:not(:last-child) {
+      border-right: 0;
+    }
+  }
+
+  .item {
+    display: inline-block;
+    line-height: 1lh;
+    padding: 0 1em;
+    transition: background-color $transition-duration;
+
+    &:hover,
+    &:focus { background-color: getColor(background, light); }
+
+    &.-active {
+      background-color: getColor(background, light);
+      color: getColor(text, secondary);
+    }
+  }
+}
