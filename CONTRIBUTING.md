@@ -32,9 +32,9 @@ There are lots of different things that people will want to post regarding the C
 
 # Building the Project
 
-Our project is build with NodeJS so if you wish to make changes to the source SASS files and build CSS, follow the instructions below:
+The project is built with Node.js. To change the styles or the preprocessor, follow these steps:
 
-1) Install [NodeJS](https://nodejs.org) on your machine.
+1) Install [Node.js](https://nodejs.org) 22.22 or newer.
 
 2) Navigate to the project in the terminal:
 
@@ -42,7 +42,7 @@ Our project is build with NodeJS so if you wish to make changes to the source SA
 cd /path/to/directory
 ```
 
-3) Install the NPM modules:
+3) Install the npm modules:
 
 ```
 npm install
@@ -50,23 +50,38 @@ npm install
 
 4) You can now run the following commands:
 
-**Build the project:**
+**Run the tests:**
+
+```
+npm test
+```
+
+The test suite compiles the fixtures in `test/fixtures/` (one `.ccss` input and its expected `.css` output per case). It also compares the compiled `core`, `ui` and `utils` stylesheets with the snapshots in `test/snapshots/`.
+
+**Accept changes to the compiled stylesheets:**
+
+After changing a style on purpose, review the snapshot diff from `npm test`, then update the snapshots:
+
+```
+npm run test:update
+```
+
+**Build the precompiled stylesheets in `dist/`:**
 
 ```
 npm run build
 ```
 
-**Build the project and watch for changes:**
+Open `playground/core.html` or `playground/ui.html` to check the result visually.
 
-```
-npm run build:watch
-```
+## Project structure
 
-**Check the stylesheet statistics:**
-
-```
-npm run stats
-```
+- `bin/concise.js`: the `concise` CLI
+- `src/`: the PostCSS plugin (`src/index.js`) and Concise's own plugins (`src/lib/`)
+- `core/`, `ui/`, `utils/`: the stylesheets, written in `.ccss`
+- `concise.ccss`: imports core, ui and utils
+- `test/`: tests, fixtures and snapshots
+- `playground/`: pages for checking the styles visually
 
 # Feature Requests
 
@@ -105,7 +120,11 @@ Concise.CSS project has a `.editorconfig` file, you can install [Editorconfig](h
 
 ## CSS
 
-[Follow @mdo's Code Guide](http://codeguide.co/#css)
+[Follow @mdo's Code Guide](http://codeguide.co/#css). Stylesheets use the `.ccss` extension and can use `//` comments. Use the settings (`var(--color-*)`, `var(--spacing-*)`, `lh` units, type scale steps) instead of hard-coded values.
+
+## JavaScript
+
+The CLI and plugin are ES modules that use only the Node.js standard library and PostCSS plugins. Add a test for each change.
 
 # License
 

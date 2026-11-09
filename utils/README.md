@@ -1,65 +1,29 @@
-<img src="https://keenanpayne.com/images/work/concise-logo.svg" alt="Concise.css logo" width="300">
-
 # Concise Utils
 
 **Utility classes for Concise CSS**
 
-> :warning: &nbsp; **Notice:** This project is not actively maintained. Reach out to [@keenanpayne](https://twitter.com/KeenanPayne_) or [@jaiheravi](https://twitter.com/jaiheravi) if you would like to chat about it ✌🏻
-
-## Content
-
-1. Introduction
-2. Installation
-3. Utilities
-  1. Borders
-  2. Colors
-  3. Columns
-  4. Hide/Show
-  5. Display
-  6. Margins
-  7. Paddings
-  8. Position
-  9. Type Scale
-  10. Typography
-4. License
-
-## Introduction
-
-Concise Utils is one of the official add-ons for Concise CSS. It provides helper classes that you can use in your markup for fast prototyping or context-dependent styles.
-
-Helper classes are prefixed with an underscore (`_`) to distinguish them from components or elements.
-
-## Installation
-
-### With NPM
-
-```
-npm install concise-utils
-```
+Helper classes that you can use in your markup for fast prototyping or context-dependent styles. They are prefixed with an underscore (`_`) to tell them apart from components and elements.
 
 ```scss
-@import 'node_modules/concise-utils/concise-utils'
+@import 'concise.css/utils';
+@import 'concise.css/utils/margins-responsive'; // optional, see Responsive margins
 ```
 
-### Using the CDN
+Or use the precompiled `dist/utils.css` / `dist/utils.min.css`. Concise Utils imports the [settings](../core/settings.ccss) it needs, so it can be used with or without `concise.css/core`.
 
-```HTML
-<!-- Normal - Latest version -->
-<link rel="stylesheet" href="https://cdn.concisecss.com/concise-utils/concise-utils.css">
+## Contents
 
-<!-- Minified - Latest version -->
-<link rel="stylesheet" href="https://cdn.concisecss.com/concise-utils/concise-utils.min.css">
-```
-
-That is for the latest version, if you want to use a specific one you can do something like the following:
-
-```HTML
-<!-- Normal - Specific version -->
-<link rel="stylesheet" href="https://cdn.concisecss.com/concise-utils/v1.0.0/concise.css">
-
-<!-- Minified - Specific version -->
-<link rel="stylesheet" href="https://cdn.concisecss.com/concise-utils/v1.0.0/concise.min.css">
-```
+1. [Borders](#borders)
+2. [Colors](#colors)
+3. [Columns](#columns)
+4. [Hide/Show](#hideshow)
+5. [Display](#display)
+6. [Margins](#margins)
+7. [Responsive margins](#responsive-margins)
+8. [Paddings](#paddings)
+9. [Position](#position)
+10. [Type Scale](#type-scale)
+11. [Typography](#typography)
 
 ## Utilities
 
@@ -145,7 +109,7 @@ Classes that work on all the sides are composed only of the letter `b` and the w
 <div class="_bl3">…</div>
 ```
 
-##### 4px border
+#### 4px border
 
 ```html
 <!-- All the borders -->
@@ -168,233 +132,227 @@ Classes that work on all the sides are composed only of the letter `b` and the w
 
 All the colors in the color palette are available as classes to be used directly within your HTML.
 
-The classes for text colors are prefixed with `_c-` and `_bg-` for backrounds.
+The classes for text colors are prefixed with `_c-`, and the ones for backgrounds with `_bg-`.
 
-The color follows the same schema in the $colors map. For example, you can use the color obtained with `getColor(base, primary)` in HTML as `_c-base-primary` for text or `_bg-base-primary` for backgrounds.
+Each class uses the matching `--color-*` setting. For example, `var(--color-base-primary)` is available as `_c-base-primary` for text and `_bg-base-primary` for backgrounds.
 
 #### Text Colors
 
 ```html
-<!-- Equivalent to getColor(base, primary) -->
+<!-- color: var(--color-base-primary) -->
 <div class="_c-base-primary">…</div>
 
-<!-- Equivalent to getColor(base, selection) -->
+<!-- color: var(--color-base-selection) -->
 <div class="_c-base-selection">…</div>
 
-<!-- Equivalent to getColor(base, lines) -->
+<!-- color: var(--color-base-lines) -->
 <div class="_c-base-lines">…</div>
 
-<!-- Equivalent to getColor(text, primary) -->
+<!-- color: var(--color-text-primary) -->
 <div class="_c-text-primary">…</div>
 
-<!-- Equivalent to getColor(text, secondary) -->
+<!-- color: var(--color-text-secondary) -->
 <div class="_c-text-secondary">…</div>
 
-<!-- Equivalent to getColor(text, heading) -->
+<!-- color: var(--color-text-heading) -->
 <div class="_c-text-heading">…</div>
 
-<!-- Equivalent to getColor(text, ui) -->
-<div class="_c-text-ui">…</div>
+<!-- color: var(--color-text-inverted) -->
+<div class="_c-text-inverted">…</div>
 
-<!-- Equivalent to getColor(background, dark) -->
+<!-- color: var(--color-background-dark) -->
 <div class="_c-background-dark">…</div>
 
-<!-- Equivalent to getColor(background, light) -->
+<!-- color: var(--color-background-light) -->
 <div class="_c-background-light">…</div>
 
-<!-- Equivalent to getColor(background, body) -->
+<!-- color: var(--color-background-body) -->
 <div class="_c-background-body">…</div>
 
-<!-- Equivalent to getColor(state, muted) -->
+<!-- color: var(--color-state-muted) -->
 <div class="_c-state-muted">…</div>
 
-<!-- Equivalent to getColor(state, primary) -->
-<div class="_c-state-primary">…</div>
-
-<!-- Equivalent to getColor(state, success) -->
+<!-- color: var(--color-state-success) -->
 <div class="_c-state-success">…</div>
 
-<!-- Equivalent to getColor(state, warning) -->
+<!-- color: var(--color-state-warning) -->
 <div class="_c-state-warning">…</div>
 
-<!-- Equivalent to getColor(state, error) -->
+<!-- color: var(--color-state-error) -->
 <div class="_c-state-error">…</div>
 
-<!-- Equivalent to getColor(blue, darker) -->
+<!-- color: var(--color-blue-darker) -->
 <div class="_c-blue-darker">…</div>
 
-<!-- Equivalent to getColor(blue, dark) -->
+<!-- color: var(--color-blue-dark) -->
 <div class="_c-blue-dark">…</div>
 
-<!-- Equivalent to getColor(blue, base) -->
+<!-- color: var(--color-blue-base) -->
 <div class="_c-blue-base">…</div>
 
-<!-- Equivalent to getColor(blue, light) -->
+<!-- color: var(--color-blue-light) -->
 <div class="_c-blue-light">…</div>
 
-<!-- Equivalent to getColor(blue, lighter) -->
+<!-- color: var(--color-blue-lighter) -->
 <div class="_c-blue-lighter">…</div>
 
-<!-- Equivalent to getColor(green, darker) -->
+<!-- color: var(--color-green-darker) -->
 <div class="_c-green-darker">…</div>
 
-<!-- Equivalent to getColor(green, dark) -->
+<!-- color: var(--color-green-dark) -->
 <div class="_c-green-dark">…</div>
 
-<!-- Equivalent to getColor(green, base) -->
+<!-- color: var(--color-green-base) -->
 <div class="_c-green-base">…</div>
 
-<!-- Equivalent to getColor(green, light) -->
+<!-- color: var(--color-green-light) -->
 <div class="_c-green-light">…</div>
 
-<!-- Equivalent to getColor(green, lighter) -->
+<!-- color: var(--color-green-lighter) -->
 <div class="_c-green-lighter">…</div>
 
-<!-- Equivalent to getColor(red, darker) -->
+<!-- color: var(--color-red-darker) -->
 <div class="_c-red-darker">…</div>
 
-<!-- Equivalent to getColor(red, dark) -->
+<!-- color: var(--color-red-dark) -->
 <div class="_c-red-dark">…</div>
 
-<!-- Equivalent to getColor(red, base) -->
+<!-- color: var(--color-red-base) -->
 <div class="_c-red-base">…</div>
 
-<!-- Equivalent to getColor(red, light) -->
+<!-- color: var(--color-red-light) -->
 <div class="_c-red-light">…</div>
 
-<!-- Equivalent to getColor(red, lighter) -->
+<!-- color: var(--color-red-lighter) -->
 <div class="_c-red-lighter">…</div>
 
-<!-- Equivalent to getColor(gray, darker) -->
+<!-- color: var(--color-gray-darker) -->
 <div class="_c-gray-darker">…</div>
 
-<!-- Equivalent to getColor(gray, dark) -->
+<!-- color: var(--color-gray-dark) -->
 <div class="_c-gray-dark">…</div>
 
-<!-- Equivalent to getColor(gray, base) -->
+<!-- color: var(--color-gray-base) -->
 <div class="_c-gray-base">…</div>
 
-<!-- Equivalent to getColor(gray, light) -->
+<!-- color: var(--color-gray-light) -->
 <div class="_c-gray-light">…</div>
 
-<!-- Equivalent to getColor(gray, lighter) -->
+<!-- color: var(--color-gray-lighter) -->
 <div class="_c-gray-lighter">…</div>
 ```
 
 #### Background Colors
 
 ```html
-<!-- Equivalent to getColor(base, primary) -->
+<!-- background-color: var(--color-base-primary) -->
 <div class="_bg-base-primary">…</div>
 
-<!-- Equivalent to getColor(base, selection) -->
+<!-- background-color: var(--color-base-selection) -->
 <div class="_bg-base-selection">…</div>
 
-<!-- Equivalent to getColor(base, lines) -->
+<!-- background-color: var(--color-base-lines) -->
 <div class="_bg-base-lines">…</div>
 
-<!-- Equivalent to getColor(text, primary) -->
+<!-- background-color: var(--color-text-primary) -->
 <div class="_bg-text-primary">…</div>
 
-<!-- Equivalent to getColor(text, secondary) -->
+<!-- background-color: var(--color-text-secondary) -->
 <div class="_bg-text-secondary">…</div>
 
-<!-- Equivalent to getColor(text, heading) -->
+<!-- background-color: var(--color-text-heading) -->
 <div class="_bg-text-heading">…</div>
 
-<!-- Equivalent to getColor(text, ui) -->
-<div class="_bg-text-ui">…</div>
+<!-- background-color: var(--color-text-inverted) -->
+<div class="_bg-text-inverted">…</div>
 
-<!-- Equivalent to getColor(background, dark) -->
+<!-- background-color: var(--color-background-dark) -->
 <div class="_bg-background-dark">…</div>
 
-<!-- Equivalent to getColor(background, light) -->
+<!-- background-color: var(--color-background-light) -->
 <div class="_bg-background-light">…</div>
 
-<!-- Equivalent to getColor(background, body) -->
+<!-- background-color: var(--color-background-body) -->
 <div class="_bg-background-body">…</div>
 
-<!-- Equivalent to getColor(state, muted) -->
+<!-- background-color: var(--color-state-muted) -->
 <div class="_bg-state-muted">…</div>
 
-<!-- Equivalent to getColor(state, primary) -->
-<div class="_bg-state-primary">…</div>
-
-<!-- Equivalent to getColor(state, success) -->
+<!-- background-color: var(--color-state-success) -->
 <div class="_bg-state-success">…</div>
 
-<!-- Equivalent to getColor(state, warning) -->
+<!-- background-color: var(--color-state-warning) -->
 <div class="_bg-state-warning">…</div>
 
-<!-- Equivalent to getColor(state, error) -->
+<!-- background-color: var(--color-state-error) -->
 <div class="_bg-state-error">…</div>
 
-<!-- Equivalent to getColor(blue, darker) -->
+<!-- background-color: var(--color-blue-darker) -->
 <div class="_bg-blue-darker">…</div>
 
-<!-- Equivalent to getColor(blue, dark) -->
+<!-- background-color: var(--color-blue-dark) -->
 <div class="_bg-blue-dark">…</div>
 
-<!-- Equivalent to getColor(blue, base) -->
+<!-- background-color: var(--color-blue-base) -->
 <div class="_bg-blue-base">…</div>
 
-<!-- Equivalent to getColor(blue, light) -->
+<!-- background-color: var(--color-blue-light) -->
 <div class="_bg-blue-light">…</div>
 
-<!-- Equivalent to getColor(blue, lighter) -->
+<!-- background-color: var(--color-blue-lighter) -->
 <div class="_bg-blue-lighter">…</div>
 
-<!-- Equivalent to getColor(green, darker) -->
+<!-- background-color: var(--color-green-darker) -->
 <div class="_bg-green-darker">…</div>
 
-<!-- Equivalent to getColor(green, dark) -->
+<!-- background-color: var(--color-green-dark) -->
 <div class="_bg-green-dark">…</div>
 
-<!-- Equivalent to getColor(green, base) -->
+<!-- background-color: var(--color-green-base) -->
 <div class="_bg-green-base">…</div>
 
-<!-- Equivalent to getColor(green, light) -->
+<!-- background-color: var(--color-green-light) -->
 <div class="_bg-green-light">…</div>
 
-<!-- Equivalent to getColor(green, lighter) -->
+<!-- background-color: var(--color-green-lighter) -->
 <div class="_bg-green-lighter">…</div>
 
-<!-- Equivalent to getColor(red, darker) -->
+<!-- background-color: var(--color-red-darker) -->
 <div class="_bg-red-darker">…</div>
 
-<!-- Equivalent to getColor(red, dark) -->
+<!-- background-color: var(--color-red-dark) -->
 <div class="_bg-red-dark">…</div>
 
-<!-- Equivalent to getColor(red, base) -->
+<!-- background-color: var(--color-red-base) -->
 <div class="_bg-red-base">…</div>
 
-<!-- Equivalent to getColor(red, light) -->
+<!-- background-color: var(--color-red-light) -->
 <div class="_bg-red-light">…</div>
 
-<!-- Equivalent to getColor(red, lighter) -->
+<!-- background-color: var(--color-red-lighter) -->
 <div class="_bg-red-lighter">…</div>
 
-<!-- Equivalent to getColor(gray, darker) -->
+<!-- background-color: var(--color-gray-darker) -->
 <div class="_bg-gray-darker">…</div>
 
-<!-- Equivalent to getColor(gray, dark) -->
+<!-- background-color: var(--color-gray-dark) -->
 <div class="_bg-gray-dark">…</div>
 
-<!-- Equivalent to getColor(gray, base) -->
+<!-- background-color: var(--color-gray-base) -->
 <div class="_bg-gray-base">…</div>
 
-<!-- Equivalent to getColor(gray, light) -->
+<!-- background-color: var(--color-gray-light) -->
 <div class="_bg-gray-light">…</div>
 
-<!-- Equivalent to getColor(gray, lighter) -->
+<!-- background-color: var(--color-gray-lighter) -->
 <div class="_bg-gray-lighter">…</div>
 ```
 
-## Columns
+### Columns
 
-Is possible to split the content into several columns, up to 12 by default, using the column utilities.
+It is possible to split the content into several columns, up to 12, using the column utilities.
 
-Those classes use the #[a(href='https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layoutsare different') Multicolumn layout], so they are distinct from the grid included in the core of Concise CSS.
+Those classes use the [multi-column layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_multicol_layout).
 
 Also, there is a class to build masonry-type layouts with pure CSS quickly.
 
@@ -410,7 +368,7 @@ Also, there is a class to build masonry-type layouts with pure CSS quickly.
 
 #### Gap between columns
 
-You can set the space between the columns, by default it will have the value of the #[code $gutter] variable.
+You can set the space between the columns; it uses the `--gutter` setting.
 
 ```HTML
 <div class="_col-gap">…</div>
@@ -494,11 +452,11 @@ The `display` properties are also exposed via HTML classes so you can use them i
 <div class="_flex">…</div>
 ```
 
-#### Margins
+### Margins
 
-As with the borders, you have predefined classes to reset or add margins. They will use the value in the spacing variables defined in the [settings file](http://concisecss.com/documentation/core#settings).
+As with the borders, you have predefined classes to reset or add margins. They use the `--spacing-*` values defined in the [settings](../core/settings.ccss).
 
-These variables can be especially useful to keep your CSS clean, by adding margins in your markup depending of the context without having to create extra styles, or a component/element variant.
+These classes can be especially useful to keep your CSS clean, by adding margins in your markup depending of the context without having to create extra styles, or a component/element variant.
 
 #### Reset margins
 
@@ -616,6 +574,28 @@ These variables can be especially useful to keep your CSS clean, by adding margi
 
 <!-- Extra large left margin -->
 <div class="_mlxl">…</div>
+```
+
+### Responsive margins
+
+An opt-in set of margin classes with numbered sizes and breakpoint suffixes. Import it separately:
+
+```scss
+@import 'concise.css/utils/margins-responsive';
+```
+
+Class names are `_` + side + size + optional breakpoint:
+
+- **Sides:** `m` (all), `mt`, `mr`, `mb`, `ml`, `mv` (top and bottom), `mh` (left and right)
+- **Sizes:** `0` (none), `1` (`--spacing-xs`), `2` (`--spacing-s`), `3` (`--spacing-m`), `4` (`--spacing-l`), `5` (`--spacing-xl`)
+- **Breakpoints:** `-s`, `-m`, `-l`, `-xl` apply from that breakpoint up (`--small`, `--medium`, `--large`, `--extra-large`)
+
+```html
+<!-- Small vertical margin, large from medium screens up -->
+<div class="_mv2 _mv4-m">…</div>
+
+<!-- No left margin on small screens, medium from large screens up -->
+<div class="_ml0 _ml3-l">…</div>
 ```
 
 ### Paddings
@@ -760,43 +740,43 @@ Concise Utils also exposes all the values of the `position` property so you can 
 
 ### Type Scale
 
-The first ten sizes in the primary type scale are available to use in HTML; those are built using the `typeScale()` function and are updated depending on your settings.
+The first ten sizes of the type scale are available to use in HTML. They follow the `--type-ratio` setting: size 2 is `1rem`, and each step up multiplies it by the ratio.
 
 ```html
-<!-- Equivalent to typeScale(1) -->
+<!-- Equivalent to font-size: 1 in .ccss -->
 <div class="_ts1">…</div>
 
-<!-- Equivalent to typeScale(2) -->
+<!-- Equivalent to font-size: 2 in .ccss -->
 <div class="_ts2">…</div>
 
-<!-- Equivalent to typeScale(3) -->
+<!-- Equivalent to font-size: 3 in .ccss -->
 <div class="_ts3">…</div>
 
-<!-- Equivalent to typeScale(4) -->
+<!-- Equivalent to font-size: 4 in .ccss -->
 <div class="_ts4">…</div>
 
-<!-- Equivalent to typeScale(5) -->
+<!-- Equivalent to font-size: 5 in .ccss -->
 <div class="_ts5">…</div>
 
-<!-- Equivalent to typeScale(6) -->
+<!-- Equivalent to font-size: 6 in .ccss -->
 <div class="_ts6">…</div>
 
-<!-- Equivalent to typeScale(7) -->
+<!-- Equivalent to font-size: 7 in .ccss -->
 <div class="_ts7">…</div>
 
-<!-- Equivalent to typeScale(8) -->
+<!-- Equivalent to font-size: 8 in .ccss -->
 <div class="_ts8">…</div>
 
-<!-- Equivalent to typeScale(9) -->
+<!-- Equivalent to font-size: 9 in .ccss -->
 <div class="_ts9">…</div>
 
-<!-- Equivalent to typeScale(10) -->
+<!-- Equivalent to font-size: 10 in .ccss -->
 <div class="_ts10">…</div>
 ```
 
 ### Typography
 
-Lastly, Concise Utils offers a variety of helper classes for typography that you can use when prototyping your website or to add styles depending on the context.
+Lastly, there are a variety of helper classes for typography that you can use when prototyping your website or to add styles depending on the context.
 
 ```html
 <!-- Equivalent to font-weight: bold -->
@@ -832,7 +812,7 @@ Lastly, Concise Utils offers a variety of helper classes for typography that you
 <!-- Equivalent to text-decoration: underline -->
 <div class="_underline">…</div>
 
-<!-- Equivalent to letter-spacing: $letter-spacing -->
+<!-- Equivalent to letter-spacing: var(--letter-spacing) -->
 <div class="_letter-spacing">…</div>
 ```
 
@@ -842,22 +822,22 @@ Lastly, Concise Utils offers a variety of helper classes for typography that you
 <!-- Equivalent to font-family: inherit -->
 <div class="_font-family-inherit">…</div>
 
-<!-- Equivalent to font-family: $font-primary -->
+<!-- Equivalent to font-family: var(--font-primary) -->
 <div class="_font-primary">…</div>
 
-<!-- Equivalent to font-family: $font-secondary -->
+<!-- Equivalent to font-family: var(--font-secondary) -->
 <div class="_font-secondary">…</div>
 
-<!-- Equivalent to font-family: $font-mono -->
+<!-- Equivalent to font-family: var(--font-mono) -->
 <div class="_font-mono">…</div>
 
-<!-- Equivalent to font-family: $font-print-primary -->
+<!-- Equivalent to font-family: var(--font-print-primary) -->
 <div class="_font-print">…</div>
 
-<!-- Equivalent to font-family: $font-print-secondary -->
+<!-- Equivalent to font-family: var(--font-print-secondary) -->
 <div class="_font-print-secondary">…</div>
 ```
 
 ## License
 
-MIT - James Kolce
+MIT, see [LICENSE](../LICENSE).
