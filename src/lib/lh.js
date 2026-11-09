@@ -1,45 +1,78 @@
-const postcss = require('postcss')
+/**
+ * lh unit: lengths relative to the root line height, used for vertical rhythm.
+ *
+ * Port of postcss-lh@2 (PostCSS 7) to the PostCSS 8 plugin API.
+ *
+ *   :root { font: 16px / 1.5 sans-serif }   ->   p { margin-bottom: 1lh }
+ *                                                p { margin-bottom: 1.5rem }
+ */
 
 const defaults = {
-    rootSelector: ':root',
-    unit: 'lh',
-    lineHeight: 1.5
+  // Selector where the line height is set
+  rootSelector: ':root',
+  // Unit name used in stylesheets
+  unit: 'lh',
+  // Fallback when the root selector sets no line height
+  lineHeight: 1.5
 }
 
-module.exports = postcss.plugin('lh', (opts = defaults) => {
-    const options = Object.assign(defaults, opts)
+// Captures {1: font-size}{2: unit} / {3: line-height} in a `font` shorthand
+const FONT_SHORTHAND = /(\d*\.?\d+)(r?em|px|pt|%)\s*\/\s*(\d*\.?\d+)\s+/
 
-    return css => {
-        const lineHeight = getLineHeight(css, options)
-        const lhReg = new RegExp('\\d*\\.?\\d+' + options.unit, 'gi')
+const lh = (opts = {}) => {
+  const options = { ...defaults, ...opts }
+  const unitPattern = new RegExp(`(?<![\\w.-])(\\d*\\.?\\d+)${escape(options.unit)}\\b`, 'gi')
 
-        css.replaceValues(lhReg, { fast: options.unit }, (val) => {
-            return lhToRem(parseFloat(val), lineHeight)
-        })
+  return {
+    postcssPlugin: 'concise-lh',
+    // Runs after imports and nesting so every root rule is visible
+    OnceExit (root) {
+      const lineHeight = getLineHeight(root, options)
+
+      root.replaceValues(unitPattern, { fast: options.unit }, (_, value) =>
+        lhToRem(parseFloat(value), lineHeight)
+      )
     }
-})
+  }
+}
+lh.postcss = true
 
-function getLineHeight (css, opts) {
-    // Start with the default line-height
-    let lineHeight = opts.lineHeight
+export default lh
 
-    // Walk over all the root selectors
-    css.walkRules(opts.rootSelector, rule => {
-        // Omit the process if the selector is inside a print media query
-        if (rule.parent && rule.parent.params === 'print') return
+export function getLineHeight (root, { rootSelector, lineHeight }) {
+  let current = Number(lineHeight)
 
-        // Walk over all the font or line-height properties
-        rule.walkDecls(/font$|line-height/, decl => {
-            // Matches {$1:font-size}{$2:unit}/{$3:line-height} when the property is 'font'
-            const fontProps = decl.value.match(/(\d+|\d+?\.\d+)(r?em|px|%)(?:\s*\/\s*)(\d+|\d+?\.\d+)\s+/) || []
+  root.walkRules(rootSelector, rule => {
+    // Print styles have their own rhythm and must not affect the screen one
+    if (isInsidePrint(rule)) return
 
-            lineHeight = fontProps[3] || decl.value
-        })
+    rule.each(node => {
+      if (node.type !== 'decl') return
+
+      if (node.prop === 'line-height') {
+        const value = parseFloat(node.value)
+        if (!Number.isNaN(value)) current = value
+      } else if (node.prop === 'font') {
+        const match = node.value.match(FONT_SHORTHAND)
+        if (match) current = parseFloat(match[3])
+      }
     })
+  })
 
-    return lineHeight
+  return current
 }
 
-function lhToRem(val, lineHeight) {
-    return parseFloat((lineHeight * val).toFixed(3)) + 'rem'
+export function lhToRem (value, lineHeight) {
+  return parseFloat((lineHeight * value).toFixed(3)) + 'rem'
+}
+
+function isInsidePrint (node) {
+  for (let parent = node.parent; parent; parent = parent.parent) {
+    if (parent.type === 'atrule' && parent.name === 'media' && /\bprint\b/.test(parent.params)) return true
+  }
+  return false
+}
+
+function escape (string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }

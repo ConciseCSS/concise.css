@@ -1,1 +1,13 @@
 body { color: #000  }
+
+@media (--a) {
+  selector {
+    property: value;
+  }
+}
+
+@media (--b) {
+  selector {
+    property: value;
+  }
+}

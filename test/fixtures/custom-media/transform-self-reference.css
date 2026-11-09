@@ -1,1 +1,7 @@
-body { color: #000 }
+body { color: #000  }
+
+@media (--a) {
+  selector {
+    property: value;
+  }
+}

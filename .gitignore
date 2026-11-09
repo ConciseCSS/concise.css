@@ -10,3 +10,6 @@ __MACOSX/
 # Log files
 *.log
 *.log.*
+
+# Build output
+/dist

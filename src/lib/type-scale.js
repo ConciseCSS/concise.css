@@ -1,43 +1,56 @@
-const postcss = require('postcss')
+/**
+ * Type scale: unitless `font-size` steps are converted to rem using the
+ * ratio set in `--type-ratio` on the root selector.
+ *
+ *   :root { --type-ratio: 1.2 }   h1 { font-size: 6 }   ->   h1 { font-size: 2.0736rem }
+ *
+ * Step 2 is the base size (1rem); each step up or down multiplies or divides by the ratio.
+ */
 
 const defaults = {
-    rootSelector: ':root',
-    typeRatio: 1.2,
-    ratioProperty: '--type-ratio'
+  rootSelector: ':root',
+  typeRatio: 1.2,
+  ratioProperty: '--type-ratio'
 }
 
-module.exports = postcss.plugin('type-scale', (opts = defaults) => {
-    const options = Object.assign(defaults, opts)
+const STEP = /^\d+$/
 
-    return css => {
-        const typeRatio = getTypeRatio(css, options)
+const typeScale = (opts = {}) => {
+  const options = { ...defaults, ...opts }
 
-        css.walkDecls('font-size', decl => {
-            // Replace only if it's a unitless value
-            if (/\d+$/.test(decl.value)) decl.value = getSize(decl.value, typeRatio)
-        })
+  return {
+    postcssPlugin: 'concise-type-scale',
+    OnceExit (root) {
+      const ratio = getTypeRatio(root, options)
+
+      root.walkDecls('font-size', decl => {
+        const value = decl.value.trim()
+        // `font-size: 0` is a legitimate CSS value, so only positive steps are converted
+        if (STEP.test(value) && Number(value) > 0) decl.value = getSize(Number(value), ratio)
+      })
     }
-})
+  }
+}
+typeScale.postcss = true
 
-function getTypeRatio (css, opts) {
-    // Start with the default ratio
-    let typeRatio = opts.typeRatio
+export default typeScale
 
-    // Walk over all the root selectors
-    css.walkRules(opts.rootSelector, rule => {
+function getTypeRatio (root, { rootSelector, typeRatio, ratioProperty }) {
+  let ratio = Number(typeRatio)
 
-        // Omit the process if the selector is inside a print media query
-        if (rule.parent && rule.parent.params === 'print') return
+  root.walkRules(rootSelector, rule => {
+    // Print styles may use a different ratio that must not affect the screen one
+    if (rule.parent?.type === 'atrule' && /\bprint\b/.test(rule.parent.params)) return
 
-        // Walk over all the font-size rules
-        rule.walkDecls(opts.ratioProperty, decl => {
-            typeRatio = parseFloat(decl.value)
-        })
+    rule.walkDecls(ratioProperty, decl => {
+      const value = parseFloat(decl.value)
+      if (!Number.isNaN(value)) ratio = value
     })
+  })
 
-    return typeRatio
+  return ratio
 }
 
-function getSize(val, ratio) {
-    return parseFloat(Math.pow(ratio, parseInt(val) - 2).toFixed(4)) + 'rem'
+function getSize (step, ratio) {
+  return parseFloat(Math.pow(ratio, step - 2).toFixed(4)) + 'rem'
 }

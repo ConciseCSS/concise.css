@@ -1,25 +1,54 @@
-const postcss = require('postcss');
-const autoprefixer = require('autoprefixer');
-const nested = require('postcss-nested');
-const ifMedia = require('postcss-if-media');
-const stripComments = require('postcss-strip-inline-comments');
-const mediaMinMax = require('postcss-media-minmax');
-const customMedia = require('postcss-custom-media');
-const imports = require('postcss-easy-import');
+/**
+ * Concise CSS: a PostCSS plugin pack.
+ *
+ *   import postcss from 'postcss'
+ *   import scss from 'postcss-scss'
+ *   import concise from 'concise.css'
+ *
+ *   await postcss([concise()]).process(css, { from: 'main.ccss', parser: scss.parse })
+ *
+ * The postcss-scss parser is only needed for `//` comments; everything else works
+ * with the default parser.
+ */
 
-// Custom modules
-const lh = require('./lib/lh');
-const typeScale = require('./lib/type-scale');
+import autoprefixer from 'autoprefixer'
+import customMedia from 'postcss-custom-media'
+import imports from 'postcss-import'
+import mediaMinMax from 'postcss-media-minmax'
+import nested from 'postcss-nested'
+import scss from 'postcss-scss'
 
-module.exports = postcss.plugin('concise', () => {
-  return postcss()
-    .use(imports())
-    .use(stripComments())
-    .use(nested())
-    .use(ifMedia())
-    .use(customMedia())
-    .use(mediaMinMax())
-    .use(lh())
-    .use(typeScale())
-    .use(autoprefixer())
+import ifMedia from './lib/if-media.js'
+import lh from './lib/lh.js'
+import resolve from './lib/resolve.js'
+import stripComments from './lib/strip-comments.js'
+import typeScale from './lib/type-scale.js'
+
+/**
+ * @param {object} [options]
+ * @param {object} [options.import]        options for postcss-import (a custom `resolve` replaces Concise's)
+ * @param {object} [options.lh]            { rootSelector, unit, lineHeight }
+ * @param {object} [options.typeScale]     { rootSelector, typeRatio, ratioProperty }
+ * @param {object|false} [options.autoprefixer]  autoprefixer options, or false to skip it
+ */
+const concise = (options = {}) => ({
+  postcssPlugin: 'concise',
+  plugins: [
+    imports({ resolve, ...options.import }),
+    stripComments(),
+    // Before nested: postcss-nested would read `?if media …` blocks as selectors
+    ifMedia(),
+    nested(),
+    customMedia(),
+    mediaMinMax(),
+    lh(options.lh),
+    typeScale(options.typeScale),
+    ...(options.autoprefixer === false ? [] : [autoprefixer(options.autoprefixer)])
+  ]
 })
+concise.postcss = true
+
+export default concise
+
+/** Parser that understands `//` comments; pass as `parser` when processing .ccss files. */
+export const parser = scss.parse
