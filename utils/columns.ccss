@@ -6,18 +6,25 @@
 // Columns
 // --------------------------------------------------
 
-@for $i from 1 through $num-columns {
-  ._cols-#{$i} {
-    column-count: $i;
-  }
-}
+._cols-1 { column-count: 1; }
+._cols-2 { column-count: 2; }
+._cols-3 { column-count: 3; }
+._cols-4 { column-count: 4; }
+._cols-5 { column-count: 5; }
+._cols-6 { column-count: 6; }
+._cols-7 { column-count: 7; }
+._cols-8 { column-count: 8; }
+._cols-9 { column-count: 9; }
+._cols-10 { column-count: 10; }
+._cols-11 { column-count: 11; }
+._cols-12 { column-count: 12; }
 
 //
 // Column gap
 // --------------------------------------------------
 
 ._col-gap {
-  column-gap: $gutter;
+  column-gap: var(--gutter);
 }
 
 //

@@ -1,5 +1,5 @@
 //
-// Margin classes
+// Padding classes
 // =============================================================================
 
 // Resets
@@ -10,38 +10,38 @@
 ._pl0 { padding-left: 0; }
 
 // All the sides
-._pxs { padding: $spacing-xs; }
-._ps { padding: $spacing-s; }
-._pm { padding: $spacing-m; }
-._pl { padding: $spacing-l; }
-._pxl { padding: $spacing-xl; }
+._pxs { padding: var(--spacing-xs); }
+._ps { padding: var(--spacing-s); }
+._pm { padding: var(--spacing-m); }
+._pl { padding: var(--spacing-l); }
+._pxl { padding: var(--spacing-xl); }
 
 // Extra small
-._ptxs { padding-top: $spacing-xs; }
-._prxs { padding-right: $spacing-xs; }
-._pbxs { padding-bottom: $spacing-xs; }
-._plxs { padding-left: $spacing-xs; }
+._ptxs { padding-top: var(--spacing-xs); }
+._prxs { padding-right: var(--spacing-xs); }
+._pbxs { padding-bottom: var(--spacing-xs); }
+._plxs { padding-left: var(--spacing-xs); }
 
 // Small
-._pts { padding-top: $spacing-s; }
-._prs { padding-right: $spacing-s; }
-._pbs { padding-bottom: $spacing-s; }
-._pls { padding-left: $spacing-s; }
+._pts { padding-top: var(--spacing-s); }
+._prs { padding-right: var(--spacing-s); }
+._pbs { padding-bottom: var(--spacing-s); }
+._pls { padding-left: var(--spacing-s); }
 
 // Medium
-._ptm { padding-top: $spacing-m; }
-._prm { padding-right: $spacing-m; }
-._pbm { padding-bottom: $spacing-m; }
-._plm { padding-left: $spacing-m; }
+._ptm { padding-top: var(--spacing-m); }
+._prm { padding-right: var(--spacing-m); }
+._pbm { padding-bottom: var(--spacing-m); }
+._plm { padding-left: var(--spacing-m); }
 
 // Large
-._ptl { padding-top: $spacing-l; }
-._prl { padding-right: $spacing-l; }
-._pbl { padding-bottom: $spacing-l; }
-._pll { padding-left: $spacing-l; }
+._ptl { padding-top: var(--spacing-l); }
+._prl { padding-right: var(--spacing-l); }
+._pbl { padding-bottom: var(--spacing-l); }
+._pll { padding-left: var(--spacing-l); }
 
 // Extra Large
-._ptxl { padding-top: $spacing-xl; }
-._prxl { padding-right: $spacing-xl; }
-._pbxl { padding-bottom: $spacing-xl; }
-._plxl { padding-left: $spacing-xl; }
+._ptxl { padding-top: var(--spacing-xl); }
+._prxl { padding-right: var(--spacing-xl); }
+._pbxl { padding-bottom: var(--spacing-xl); }
+._plxl { padding-left: var(--spacing-xl); }

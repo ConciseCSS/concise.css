@@ -1,27 +1,23 @@
 /**
- * Concise Utils v1.0.0
- * https://github.com/ConciseCSS/concise-utils
- * MIT license - James Kolce
+ * Concise Utils
+ * Helper classes, prefixed with an underscore (`_`), for prototyping and
+ * context-dependent styles.
+ *
+ * Responsive margins are opt-in:
+ *   @import 'concise.css/utils/margins-responsive';
  */
 
+// Settings (custom properties and media queries); imported only once even
+// when core is imported too
+@import '../core/settings.ccss';
 
-$responsive-margins: false !default;
-//above should be moved to settings
-
-// Concise Utils components
-@if ($responsive-margins) {
-  @import 'utils/margins-responsive';
-} @else {
-  @import 'utils/margins';
-}
-   
-@import 'utils/margins';
-@import 'utils/paddings';
-@import 'utils/borders';
-@import 'utils/colors';
-@import 'utils/hide-show';
-@import 'utils/type-scale';
-@import 'utils/typography';
-@import 'utils/position';
-@import 'utils/display';
-@import 'utils/columns';
+@import 'margins.ccss';
+@import 'paddings.ccss';
+@import 'borders.ccss';
+@import 'colors.ccss';
+@import 'hide-show.ccss';
+@import 'type-scale.ccss';
+@import 'typography.ccss';
+@import 'position.ccss';
+@import 'display.ccss';
+@import 'columns.ccss';

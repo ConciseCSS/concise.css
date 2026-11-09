@@ -1,9 +1,9 @@
-@import 'settings.pcss';
+@import 'settings.ccss';
 
 /* Styles */
-@import 'base.pcss';
-@import 'headings.pcss';
-@import 'lists.pcss';
-@import 'forms.pcss';
-@import 'tables.pcss';
-@import 'print.pcss';
+@import 'base.ccss';
+@import 'headings.ccss';
+@import 'lists.ccss';
+@import 'forms.ccss';
+@import 'tables.ccss';
+@import 'print.ccss';

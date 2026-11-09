@@ -10,38 +10,38 @@
 ._ml0 { margin-left: 0; }
 
 // All the sides
-._mxs { margin: $spacing-xs; }
-._ms { margin: $spacing-s; }
-._mm { margin: $spacing-m; }
-._ml { margin: $spacing-l; }
-._mxl { margin: $spacing-xl; }
+._mxs { margin: var(--spacing-xs); }
+._ms { margin: var(--spacing-s); }
+._mm { margin: var(--spacing-m); }
+._ml { margin: var(--spacing-l); }
+._mxl { margin: var(--spacing-xl); }
 
 // Extra small
-._mtxs { margin-top: $spacing-xs; }
-._mrxs { margin-right: $spacing-xs; }
-._mbxs { margin-bottom: $spacing-xs; }
-._mlxs { margin-left: $spacing-xs; }
+._mtxs { margin-top: var(--spacing-xs); }
+._mrxs { margin-right: var(--spacing-xs); }
+._mbxs { margin-bottom: var(--spacing-xs); }
+._mlxs { margin-left: var(--spacing-xs); }
 
 // Small
-._mts { margin-top: $spacing-s; }
-._mrs { margin-right: $spacing-s; }
-._mbs { margin-bottom: $spacing-s; }
-._mls { margin-left: $spacing-s; }
+._mts { margin-top: var(--spacing-s); }
+._mrs { margin-right: var(--spacing-s); }
+._mbs { margin-bottom: var(--spacing-s); }
+._mls { margin-left: var(--spacing-s); }
 
 // Medium
-._mtm { margin-top: $spacing-m; }
-._mrm { margin-right: $spacing-m; }
-._mbm { margin-bottom: $spacing-m; }
-._mlm { margin-left: $spacing-m; }
+._mtm { margin-top: var(--spacing-m); }
+._mrm { margin-right: var(--spacing-m); }
+._mbm { margin-bottom: var(--spacing-m); }
+._mlm { margin-left: var(--spacing-m); }
 
 // Large
-._mtl { margin-top: $spacing-l; }
-._mrl { margin-right: $spacing-l; }
-._mbl { margin-bottom: $spacing-l; }
-._mll { margin-left: $spacing-l; }
+._mtl { margin-top: var(--spacing-l); }
+._mrl { margin-right: var(--spacing-l); }
+._mbl { margin-bottom: var(--spacing-l); }
+._mll { margin-left: var(--spacing-l); }
 
 // Extra Large
-._mtxl { margin-top: $spacing-xl; }
-._mrxl { margin-right: $spacing-xl; }
-._mbxl { margin-bottom: $spacing-xl; }
-._mlxl { margin-left: $spacing-xl; }
+._mtxl { margin-top: var(--spacing-xl); }
+._mrxl { margin-right: var(--spacing-xl); }
+._mbxl { margin-bottom: var(--spacing-xl); }
+._mlxl { margin-left: var(--spacing-xl); }

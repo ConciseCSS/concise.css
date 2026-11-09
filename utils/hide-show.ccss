@@ -3,21 +3,6 @@
 // =============================================================================
 
 //
-// Mixins
-// ------
-
-@mixin show-conditional {
-  display: block;
-  visibility: visible;
-}
-
-@mixin hide-conditional {
-  display: none;
-  visibility: hidden;
-}
-
-
-//
 // Extra-Small Devices
 // -------------------
 
@@ -28,7 +13,8 @@
 ._hide-xl,
 ._hide-print,
 ._hide-hd {
-  @include show-conditional;
+  display: block;
+  visibility: visible;
 }
 
 ._hide-xs,
@@ -38,7 +24,8 @@
 ._show-xl,
 ._show-print,
 ._show-hd {
-  @include hide-conditional;
+  display: none;
+  visibility: hidden;
 }
 
 
@@ -52,7 +39,8 @@
   ._hide-m,
   ._hide-l,
   ._hide-xl {
-    @include show-conditional;
+    display: block;
+    visibility: visible;
   }
 
   ._hide-s,
@@ -60,7 +48,8 @@
   ._show-m,
   ._show-l,
   ._show-xl {
-    @include hide-conditional;
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -71,19 +60,21 @@
 
 @media (--medium) {
   ._show-m,
+  ._hide-xs,
   ._hide-s,
-  ._hide-xm,
   ._hide-l,
   ._hide-xl {
-    @include show-conditional;
+    display: block;
+    visibility: visible;
   }
 
   ._hide-m,
+  ._show-xs,
   ._show-s,
-  ._show-xm,
   ._show-l,
   ._show-xl {
-    @include hide-conditional;
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -98,7 +89,8 @@
   ._hide-s,
   ._hide-m,
   ._hide-xl {
-    @include show-conditional;
+    display: block;
+    visibility: visible;
   }
 
   ._hide-l,
@@ -106,7 +98,8 @@
   ._show-s,
   ._show-m,
   ._show-xl {
-    @include hide-conditional;
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -121,7 +114,8 @@
   ._hide-s,
   ._hide-m,
   ._hide-l {
-    @include show-conditional;
+    display: block;
+    visibility: visible;
   }
 
   ._hide-xl,
@@ -129,7 +123,25 @@
   ._show-s,
   ._show-m,
   ._show-l {
-    @include hide-conditional;
+    display: none;
+    visibility: hidden;
+  }
+}
+
+
+//
+// Print
+// -----
+
+@media print {
+  ._show-print {
+    display: block;
+    visibility: visible;
+  }
+
+  ._hide-print {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -138,15 +150,14 @@
 // HiDPI and Retina
 // ----------------
 
-@media only screen and (-moz-min-device-pixel-ratio: 1.5),
-only screen and (-o-min-device-pixel-ratio: 3 / 2),
-only screen and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (min-device-pixel-ratio: 1.5) {
+@media (min-resolution: 1.5dppx) {
   ._show-hd {
-    @include show-conditional;
+    display: block;
+    visibility: visible;
   }
 
   ._hide-hd {
-    @include hide-conditional;
+    display: none;
+    visibility: hidden;
   }
 }

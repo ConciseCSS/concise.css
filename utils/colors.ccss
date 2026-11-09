@@ -1,15 +1,89 @@
 //
 // Color classes
 // =============================================================================
+//
+// One text (_c-) and one background (_bg-) class per color in core/settings.ccss
 
-@each $color-name, $color in $colors {
-  @each $color-type, $color-value in $color {
-    ._c-#{$color-name}-#{$color-type} {
-      color: $color-value;
-    }
+// Base
+._c-base-primary { color: var(--color-base-primary); }
+._bg-base-primary { background-color: var(--color-base-primary); }
+._c-base-selection { color: var(--color-base-selection); }
+._bg-base-selection { background-color: var(--color-base-selection); }
+._c-base-lines { color: var(--color-base-lines); }
+._bg-base-lines { background-color: var(--color-base-lines); }
 
-    ._bg-#{$color-name}-#{$color-type} {
-      background-color: $color-value;
-    }
-  }
-}
+// Text
+._c-text-primary { color: var(--color-text-primary); }
+._bg-text-primary { background-color: var(--color-text-primary); }
+._c-text-secondary { color: var(--color-text-secondary); }
+._bg-text-secondary { background-color: var(--color-text-secondary); }
+._c-text-heading { color: var(--color-text-heading); }
+._bg-text-heading { background-color: var(--color-text-heading); }
+._c-text-inverted { color: var(--color-text-inverted); }
+._bg-text-inverted { background-color: var(--color-text-inverted); }
+
+// Background
+._c-background-dark { color: var(--color-background-dark); }
+._bg-background-dark { background-color: var(--color-background-dark); }
+._c-background-light { color: var(--color-background-light); }
+._bg-background-light { background-color: var(--color-background-light); }
+._c-background-body { color: var(--color-background-body); }
+._bg-background-body { background-color: var(--color-background-body); }
+
+// State
+._c-state-muted { color: var(--color-state-muted); }
+._bg-state-muted { background-color: var(--color-state-muted); }
+._c-state-success { color: var(--color-state-success); }
+._bg-state-success { background-color: var(--color-state-success); }
+._c-state-warning { color: var(--color-state-warning); }
+._bg-state-warning { background-color: var(--color-state-warning); }
+._c-state-error { color: var(--color-state-error); }
+._bg-state-error { background-color: var(--color-state-error); }
+
+// Blue
+._c-blue-darker { color: var(--color-blue-darker); }
+._bg-blue-darker { background-color: var(--color-blue-darker); }
+._c-blue-dark { color: var(--color-blue-dark); }
+._bg-blue-dark { background-color: var(--color-blue-dark); }
+._c-blue-base { color: var(--color-blue-base); }
+._bg-blue-base { background-color: var(--color-blue-base); }
+._c-blue-light { color: var(--color-blue-light); }
+._bg-blue-light { background-color: var(--color-blue-light); }
+._c-blue-lighter { color: var(--color-blue-lighter); }
+._bg-blue-lighter { background-color: var(--color-blue-lighter); }
+
+// Green
+._c-green-darker { color: var(--color-green-darker); }
+._bg-green-darker { background-color: var(--color-green-darker); }
+._c-green-dark { color: var(--color-green-dark); }
+._bg-green-dark { background-color: var(--color-green-dark); }
+._c-green-base { color: var(--color-green-base); }
+._bg-green-base { background-color: var(--color-green-base); }
+._c-green-light { color: var(--color-green-light); }
+._bg-green-light { background-color: var(--color-green-light); }
+._c-green-lighter { color: var(--color-green-lighter); }
+._bg-green-lighter { background-color: var(--color-green-lighter); }
+
+// Red
+._c-red-darker { color: var(--color-red-darker); }
+._bg-red-darker { background-color: var(--color-red-darker); }
+._c-red-dark { color: var(--color-red-dark); }
+._bg-red-dark { background-color: var(--color-red-dark); }
+._c-red-base { color: var(--color-red-base); }
+._bg-red-base { background-color: var(--color-red-base); }
+._c-red-light { color: var(--color-red-light); }
+._bg-red-light { background-color: var(--color-red-light); }
+._c-red-lighter { color: var(--color-red-lighter); }
+._bg-red-lighter { background-color: var(--color-red-lighter); }
+
+// Gray
+._c-gray-darker { color: var(--color-gray-darker); }
+._bg-gray-darker { background-color: var(--color-gray-darker); }
+._c-gray-dark { color: var(--color-gray-dark); }
+._bg-gray-dark { background-color: var(--color-gray-dark); }
+._c-gray-base { color: var(--color-gray-base); }
+._bg-gray-base { background-color: var(--color-gray-base); }
+._c-gray-light { color: var(--color-gray-light); }
+._bg-gray-light { background-color: var(--color-gray-light); }
+._c-gray-lighter { color: var(--color-gray-lighter); }
+._bg-gray-lighter { background-color: var(--color-gray-lighter); }

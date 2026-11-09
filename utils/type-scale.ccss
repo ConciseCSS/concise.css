@@ -2,13 +2,13 @@
 // Type scale classes
 // =============================================================================
 
-._ts1 { font-size: typeScale(1); }
-._ts2 { font-size: typeScale(2); }
-._ts3 { font-size: typeScale(3); }
-._ts4 { font-size: typeScale(4); }
-._ts5 { font-size: typeScale(5); }
-._ts6 { font-size: typeScale(6); }
-._ts7 { font-size: typeScale(7); }
-._ts8 { font-size: typeScale(8); }
-._ts9 { font-size: typeScale(9); }
-._ts10 { font-size: typeScale(10); }
+._ts1 { font-size: 1; }
+._ts2 { font-size: 2; }
+._ts3 { font-size: 3; }
+._ts4 { font-size: 4; }
+._ts5 { font-size: 5; }
+._ts6 { font-size: 6; }
+._ts7 { font-size: 7; }
+._ts8 { font-size: 8; }
+._ts9 { font-size: 9; }
+._ts10 { font-size: 10; }

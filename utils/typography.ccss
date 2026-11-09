@@ -14,11 +14,11 @@
 ._text-left { text-align: left; }
 ._text-right { text-align: right; }
 ._underline { text-decoration: underline; }
-._letter-spacing { letter-spacing: $letter-spacing; }
+._letter-spacing { letter-spacing: var(--letter-spacing); }
 
 // Font-families
-._font-primary { font-family: $font-primary; }
-._font-secondary { font-family: $font-secondary; }
-._font-mono { font-family: $font-mono; }
-._font-print { font-family: $font-print-primary; }
-._font-print-secondary { font-family: $font-print-secondary; }
+._font-primary { font-family: var(--font-primary); }
+._font-secondary { font-family: var(--font-secondary); }
+._font-mono { font-family: var(--font-mono); }
+._font-print { font-family: var(--font-print-primary); }
+._font-print-secondary { font-family: var(--font-print-secondary); }
