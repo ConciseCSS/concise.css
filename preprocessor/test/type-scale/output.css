@@ -1,0 +1,9 @@
+:root { --type-ratio: 2; }
+
+h6, small { font-size: 0.5rem; }
+h5 { font-size: 1rem; }
+h4 { font-size: 2rem; }
+h3 { font-size: 4rem; }
+h2 { font-size: 8rem; }
+h1 { font-size: 16rem; }
+.ultraBig { font-size: 262144rem; }

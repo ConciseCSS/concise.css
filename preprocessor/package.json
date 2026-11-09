@@ -1,0 +1,49 @@
+{
+  "name": "@concisecss/preprocessor",
+  "version": "0.1.0",
+  "description": "The Concise CSS Preprocessor",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "ts-node test",
+    "compile": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConciseCSS/preprocessor.git"
+  },
+  "keywords": [
+    "css",
+    "preprocessor",
+    "concise"
+  ],
+  "author": "James Kolce <contact@jameskolce.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ConciseCSS/preprocessor/issues"
+  },
+  "homepage": "https://github.com/ConciseCSS/preprocessor#readme",
+  "dependencies": {
+    "autoprefixer": "^7.1.6",
+    "chalk": "^2.3.0",
+    "postcss": "^6.0.13",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-if-media": "^1.0.3",
+    "postcss-import": "^11.0.0",
+    "postcss-nested": "^2.1.2",
+    "postcss-scss": "^1.0.2",
+    "postcss-strip-inline-comments": "^0.1.5",
+    "globby": "^6.1.0",
+    "is-glob": "^4.0.0",
+    "lodash": "^4.17.4",
+    "object-assign": "^4.0.1",
+    "pify": "^3.0.0",
+    "resolve": "^1.1.7",
+    "postcss-value-parser": "^3.2.3",
+    "read-cache": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.47",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.5.3"
+  }
+}

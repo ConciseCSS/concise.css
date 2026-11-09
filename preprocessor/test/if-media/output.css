@@ -1,0 +1,42 @@
+.test {
+  position: relative;
+}
+
+@media (min-width: 1025px) {
+  .test {
+     margin: 0 1em;
+  }
+}
+@media (min-width: 641px) and (max-width: 1024px) {
+  .test {
+     margin: 0 0.5em;
+  }
+}
+@media (max-width: 640px) {
+  .test {
+     margin: 0 0.3em;
+  }
+}
+
+.test2 {
+  position: relative
+}
+
+@media (min-width: 1025px) {
+  .test2 {
+    color: red;
+    margin: 0 1em;
+  }
+}
+@media (min-width: 641px) and (max-width: 1024px) {
+  .test2 {
+    color: green;
+    margin: 0 0.5em;
+  }
+}
+@media (max-width: 640px) {
+  .test2 {
+    color: blue;
+    margin: 0 0.3em;
+  }
+}
