@@ -3,11 +3,11 @@
 // =============================================================================
 
 .tag-box {
-  background-color: getColor(background, light);
-  color: getColor(text, secondary);
+  background-color: var(--color-background-light);
+  color: var(--color-text-secondary);
   border-radius: 0.2em;
   display: inline-block;
-  font-size: 100% / $scale-ratio;
+  font-size: calc(100% / var(--type-ratio));
   padding: 0 0.5em;
   font-weight: normal;
 
@@ -20,17 +20,25 @@
   //
   // States
   // --------------------------------------------------
-  // Will generate a variant for each state color in the
-  // color palette
+  // One variant for each state color in core/settings.ccss
 
-  @each $color-name, $color in $colors {
-    @each $color-type, $color-value in $color {
-      @if $color-name == "state" {
-        &.-#{$color-type} {
-          background-color: rgba($color-value, .15);
-          color: darken($color-value, 10%);
-        }
-      }
-    }
+  &.-muted {
+    background-color: rgb(from var(--color-state-muted) r g b / 15%);
+    color: hsl(from var(--color-state-muted) h s calc(l - 10));
+  }
+
+  &.-success {
+    background-color: rgb(from var(--color-state-success) r g b / 15%);
+    color: hsl(from var(--color-state-success) h s calc(l - 10));
+  }
+
+  &.-warning {
+    background-color: rgb(from var(--color-state-warning) r g b / 15%);
+    color: hsl(from var(--color-state-warning) h s calc(l - 10));
+  }
+
+  &.-error {
+    background-color: rgb(from var(--color-state-error) r g b / 15%);
+    color: hsl(from var(--color-state-error) h s calc(l - 10));
   }
 }

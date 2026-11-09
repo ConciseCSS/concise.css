@@ -11,48 +11,87 @@ button {
 
   &.-bordered {
     background-color: transparent;
-    border: 1px solid getColor(base, primary);
-    color: getColor(base, primary);
+    border: 1px solid var(--color-base-primary);
+    color: var(--color-base-primary);
 
     &:hover,
     &:focus {
-      background-color: getColor(base, primary);
-      color: getColor(text, inverted);
+      background-color: var(--color-base-primary);
+      color: var(--color-text-inverted);
     }
 
     &[disabled] {
-      border-color: getColor(state, muted);
-      color: getColor(state, muted);
+      border-color: var(--color-state-muted);
+      color: var(--color-state-muted);
 
       &:hover,
       &:focus,
       &:active {
         background-color: transparent;
-        border-color: getColor(state, muted);
-        color: getColor(state, muted);
+        border-color: var(--color-state-muted);
+        color: var(--color-state-muted);
       }
     }
 
     // State variants
-    @each $color-name, $color in $colors {
-      @each $color-type, $color-value in $color {
-        @if $color-name == "state" {
-          &.-#{$color-type} {
-            border-color: $color-value;
-            background-color: transparent;
-            color: $color-value;
+    &.-muted {
+      border-color: var(--color-state-muted);
+      background-color: transparent;
+      color: var(--color-state-muted);
 
-            &:hover,
-            &:focus { background-color: $color-value; }
+      &:hover,
+      &:focus { background-color: var(--color-state-muted); }
 
-            &:active { background-color: lighten($color-value, 5%); }
+      &:active { background-color: hsl(from var(--color-state-muted) h s calc(l + 5)); }
 
-            &:hover,
-            &:focus,
-            &:active { color: getColor(text, inverted); }
-          }
-        }
-      }
+      &:hover,
+      &:focus,
+      &:active { color: var(--color-text-inverted); }
+    }
+
+    &.-success {
+      border-color: var(--color-state-success);
+      background-color: transparent;
+      color: var(--color-state-success);
+
+      &:hover,
+      &:focus { background-color: var(--color-state-success); }
+
+      &:active { background-color: hsl(from var(--color-state-success) h s calc(l + 5)); }
+
+      &:hover,
+      &:focus,
+      &:active { color: var(--color-text-inverted); }
+    }
+
+    &.-warning {
+      border-color: var(--color-state-warning);
+      background-color: transparent;
+      color: var(--color-state-warning);
+
+      &:hover,
+      &:focus { background-color: var(--color-state-warning); }
+
+      &:active { background-color: hsl(from var(--color-state-warning) h s calc(l + 5)); }
+
+      &:hover,
+      &:focus,
+      &:active { color: var(--color-text-inverted); }
+    }
+
+    &.-error {
+      border-color: var(--color-state-error);
+      background-color: transparent;
+      color: var(--color-state-error);
+
+      &:hover,
+      &:focus { background-color: var(--color-state-error); }
+
+      &:active { background-color: hsl(from var(--color-state-error) h s calc(l + 5)); }
+
+      &:hover,
+      &:focus,
+      &:active { color: var(--color-text-inverted); }
     }
   }
 
@@ -60,24 +99,45 @@ button {
   // State variants
   // --------------------------------------------------
 
-  @each $color-name, $color in $colors {
-    @each $color-type, $color-value in $color {
-      @if $color-name == "state" {
-        &.-#{$color-type} {
-          background-color: $color-value;
-          color: getColor(text, inverted);;
+  &.-muted {
+    background-color: var(--color-state-muted);
+    color: var(--color-text-inverted);
 
-          &:hover,
-          &:focus {
-            background-color: lighten($color-value, 5%);
-          }
+    &:hover,
+    &:focus { background-color: hsl(from var(--color-state-muted) h s calc(l + 5)); }
 
-          &:active { background-color: lighten($color-value, 10%); }
-        }
-      }
-    }
+    &:active { background-color: hsl(from var(--color-state-muted) h s calc(l + 10)); }
   }
 
+  &.-success {
+    background-color: var(--color-state-success);
+    color: var(--color-text-inverted);
+
+    &:hover,
+    &:focus { background-color: hsl(from var(--color-state-success) h s calc(l + 5)); }
+
+    &:active { background-color: hsl(from var(--color-state-success) h s calc(l + 10)); }
+  }
+
+  &.-warning {
+    background-color: var(--color-state-warning);
+    color: var(--color-text-inverted);
+
+    &:hover,
+    &:focus { background-color: hsl(from var(--color-state-warning) h s calc(l + 5)); }
+
+    &:active { background-color: hsl(from var(--color-state-warning) h s calc(l + 10)); }
+  }
+
+  &.-error {
+    background-color: var(--color-state-error);
+    color: var(--color-text-inverted);
+
+    &:hover,
+    &:focus { background-color: hsl(from var(--color-state-error) h s calc(l + 5)); }
+
+    &:active { background-color: hsl(from var(--color-state-error) h s calc(l + 10)); }
+  }
 
   //
   // Prefix variant

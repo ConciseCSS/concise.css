@@ -49,9 +49,9 @@
 // --------------------------------------------------
 
 .dropdown-content {
-  background-color: getColor(background, body);
-  border: 1px solid getColor(base, lines);
-  color: getColor(text, primary);
+  background-color: var(--color-background-body);
+  border: 1px solid var(--color-base-lines);
+  color: var(--color-text-primary);
   left: 0;
   margin-top: 0.25lh;
   opacity: 0;
@@ -59,21 +59,21 @@
   pointer-events: auto;
   position: absolute;
   text-align: left;
-  transition-duration: $transition-duration;
+  transition-duration: var(--transition-duration);
   visibility: hidden;
   min-width: 10em;
   z-index: 1;
-  font-size: typeScale(1);
+  font-size: 1;
 
   & > .item {
     list-style-type: none;
     margin: 0;
     padding: 0.25lh 1em;
-    transition: background-color $transition-duration;
+    transition: background-color var(--transition-duration);
     white-space: nowrap;
 
     &:hover,
-    &:focus { background-color: getColor(background, light); }
+    &:focus { background-color: var(--color-background-light); }
   }
 
   & > .text { padding: 0.25lh 1em; }

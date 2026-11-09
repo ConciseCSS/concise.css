@@ -4,12 +4,12 @@
 // Courtesy of Chris Coyier (http://css-tricks.com/css3-progress-bars/)
 
 .progress-bar {
-  background-color: getColor(background, light);
+  background-color: var(--color-background-light);
   border-radius: 3px;
-  box-shadow: inset 0 1px 1px rgba(getColor(base, lines), .25);
+  box-shadow: inset 0 1px 1px rgb(from var(--color-base-lines) r g b / 25%);
   box-sizing: initial;
-  color: getColor(text, inverted);
-  font-size: typeScale(1);
+  color: var(--color-text-inverted);
+  font-size: 1;
   height: 0.5lh;
   line-height: 1.2;
   position: relative;
@@ -17,7 +17,7 @@
   width: 100%;
 
   & > .progress {
-    background-color: getColor(base, primary);
+    background-color: var(--color-base-primary);
     border-radius: 3px;
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
     display: block;
@@ -61,7 +61,7 @@
   // --------------------------------------------------
 
   &.-small {
-    font-size: typeScale(1);
+    font-size: 1;
     height: 10px;
     line-height: 1.2;
   }
@@ -71,7 +71,7 @@
   // --------------------------------------------------
 
   &.-large {
-    font-size: typeScale(2);
+    font-size: 2;
     height: 25px;
     line-height: 1.7;
   }
@@ -98,18 +98,6 @@
 // --------------------------------------------------
 
 @keyframes move {
-  0% { background-position: 0 0; }
-
-  100% { background-position: 50px 50px; }
-}
-
-@-moz-keyframes move {
-  0% { background-position: 0 0; }
-
-  100% { background-position: 50px 50px; }
-}
-
-@-webkit-keyframes move {
   0% { background-position: 0 0; }
 
   100% { background-position: 50px 50px; }

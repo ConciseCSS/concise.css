@@ -3,7 +3,7 @@
 // =============================================================================
 
 .card-box {
-  border: 1px solid getColor(base, lines);
+  border: 1px solid var(--color-base-lines);
   overflow: hidden;
   position: relative;
 
@@ -11,12 +11,12 @@
 
   & > .header { font-weight: bold; }
 
-  & > .footer { font-size: typeScale(1); }
+  & > .footer { font-size: 1; }
 
   & > .header,
   & > .footer {
     padding: 0.5lh 1em;
-    background-color: getColor(background, light);
+    background-color: var(--color-background-light);
   }
 }
 

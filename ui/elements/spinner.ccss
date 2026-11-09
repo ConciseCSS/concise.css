@@ -4,7 +4,7 @@
 
 .spinner {
   animation: rotate .8s infinite linear;
-  border: 3px solid darken(getColor(background, light), 25%);
+  border: 3px solid hsl(from var(--color-background-light) h s calc(l - 25));
   border-radius: 50%;
   border-right-color: transparent;
   height: 40px;

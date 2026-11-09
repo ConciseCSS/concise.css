@@ -3,8 +3,8 @@
 // =============================================================================
 
 .breadcrumb-nav {
-  background-color: getColor(background, light);
-  font-size: typeScale(1);
+  background-color: var(--color-background-light);
+  font-size: 1;
   padding: 0.5lh 1.5em;
   font-weight: bold;
 
@@ -20,7 +20,7 @@
     // Add a separator to all the elements
     // except the last one
     &:not(:last-child):after {
-      color: getColor(base, lines);
+      color: var(--color-base-lines);
       content: "/";
       margin-left: 1em;
     }
@@ -28,7 +28,7 @@
     // Active item
     &.-active,
     &.-active a {
-      color: getColor(text, secondary);
+      color: var(--color-text-secondary);
       font-weight: normal;
     }
   }
