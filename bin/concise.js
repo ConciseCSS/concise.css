@@ -6,7 +6,7 @@ import path from 'node:path'
 import { parseArgs, styleText } from 'node:util'
 import postcss from 'postcss'
 
-import concise, { parser } from '../src/index.js'
+import concise from '../src/index.js'
 
 const pkg = JSON.parse(await fs.readFile(new URL('../package.json', import.meta.url), 'utf8'))
 
@@ -51,7 +51,7 @@ if (flags.version) {
 async function build (input, output) {
   try {
     const css = await fs.readFile(input, 'utf8')
-    const result = await postcss([concise()]).process(css, { from: input, to: output, parser })
+    const result = await postcss([concise()]).process(css, { from: input, to: output })
 
     for (const warning of result.warnings()) console.warn(styleText('yellow', warning.toString()))
 

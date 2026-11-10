@@ -4,9 +4,9 @@
 
 Helper classes that you can use in your markup for fast prototyping or context-dependent styles. They are prefixed with an underscore (`_`) to tell them apart from components and elements.
 
-```scss
+```css
 @import 'concise.css/utils';
-@import 'concise.css/utils/margins-responsive'; // optional, see Responsive margins
+@import 'concise.css/utils/margins-responsive'; /* optional, see Responsive margins */
 ```
 
 Or use the precompiled `dist/utils.css` / `dist/utils.min.css`. Concise Utils imports the [settings](../core/settings.pcss) it needs, so it can be used with or without `concise.css/core`.
@@ -580,7 +580,7 @@ These classes can be especially useful to keep your CSS clean, by adding margins
 
 An opt-in set of margin classes with numbered sizes and breakpoint suffixes. Import it separately:
 
-```scss
+```css
 @import 'concise.css/utils/margins-responsive';
 ```
 

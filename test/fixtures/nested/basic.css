@@ -1,3 +1,4 @@
+/* Nesting is native CSS and passes through unchanged */
 .phone {
   & > .title {
       width: 500px;

@@ -8,7 +8,7 @@ import path from 'node:path'
 import cssnano from 'cssnano'
 import postcss from 'postcss'
 
-import concise, { parser } from '../src/index.js'
+import concise from '../src/index.js'
 
 const root = path.join(import.meta.dirname, '..')
 const dist = path.join(root, 'dist')
@@ -30,7 +30,7 @@ for (const [name, entry] of Object.entries(bundles)) {
   const from = path.join(root, entry)
   const css = await fs.readFile(from, 'utf8')
 
-  const result = await postcss([concise()]).process(css, { from, to: path.join(dist, `${name}.css`), parser })
+  const result = await postcss([concise()]).process(css, { from, to: path.join(dist, `${name}.css`) })
   for (const warning of result.warnings()) console.warn(warning.toString())
 
   const minified = await postcss([cssnano({ preset: 'default' })]).process(result.css, { from: undefined })

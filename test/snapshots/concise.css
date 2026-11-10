@@ -468,6 +468,22 @@ table {
  * A basic user interface kit: components and elements following the RSCSS
  * convention (https://github.com/rstacruz/rscss).
  */
+
+/*
+Settings (custom properties and media queries); imported only once even
+when core is imported too
+*/
+
+/*
+Components
+--------------------------------------------------
+*/
+
+/*
+Alerts
+=============================================================================
+*/
+
 .alert-box {
   background-color: var(--color-background-light);
   border: 1px solid var(--color-base-lines);
@@ -475,6 +491,11 @@ table {
   padding: 0.5rlh 1em;
   position: relative;
   color: var(--color-text-secondary);
+
+  /*
+  Close button
+  --------------------------------------------------
+  */
 
   & > .close {
     color: inherit;
@@ -486,6 +507,12 @@ table {
 
     &:hover { opacity: 1; }
   }
+
+  /*
+  States
+  --------------------------------------------------
+  One variant for each state color in core/settings.pcss
+  */
 
   &.-muted {
     background-color: rgb(from var(--color-state-muted) r g b / 15%);
@@ -519,21 +546,39 @@ table {
     a { color: hsl(from var(--color-state-error) h s calc(l - 20)); }
   }
 }
+
+/*
+Breadcrumbs
+=============================================================================
+*/
+
 .breadcrumb-nav {
   background-color: var(--color-background-light);
   font-size: calc(pow(var(--type-ratio), -1) * 1rem);
   padding: 0.5rlh 1.5em;
   font-weight: bold;
 
+  /*
+  Breadcrumb item
+  --------------------------------------------------
+  */
+
   & > .item {
     display: inline;
     list-style: none;
     margin-right: 1em;
+
+    /*
+    Add a separator to all the elements
+    except the last one
+    */
     &:not(:last-child):after {
       color: var(--color-base-lines);
       content: "/";
       margin-left: 1em;
     }
+
+    /* Active item */
     &.-active,
     &.-active a {
       color: var(--color-text-secondary);
@@ -541,6 +586,12 @@ table {
     }
   }
 }
+
+/*
+Button Groups
+=============================================================================
+*/
+
 .button-group {
   padding: 0;
   display: flex;
@@ -573,6 +624,12 @@ table {
     }
   }
 }
+
+/*
+Cards
+=============================================================================
+*/
+
 .card-box {
   border: 1px solid var(--color-base-lines);
   overflow: hidden;
@@ -597,6 +654,11 @@ table {
   & > .title { margin-top: 0; }
 }
 
+/*
+Dropdowns
+=============================================================================
+*/
+
 .dropdown-button {
   cursor: pointer;
   display: inline-block;
@@ -612,6 +674,11 @@ table {
     }
   }
 
+  /*
+  Hoverable variant
+  --------------------------------------------------
+  */
+
   &.-hover {
     &:hover {
       .dropdown-content {
@@ -620,6 +687,13 @@ table {
       }
     }
   }
+
+  /*
+  Modifiers
+  ---------
+  */
+
+  /* Top */
   &.-top {
     .dropdown-content {
       bottom: 100%;
@@ -628,6 +702,11 @@ table {
     }
   }
 }
+
+/*
+Dropdown content
+--------------------------------------------------
+*/
 
 .dropdown-content {
   background-color: var(--color-background-body);
@@ -660,6 +739,12 @@ table {
   & > .text { padding: 0.25rlh 1em; }
 }
 
+/*
+Progress Bars
+=============================================================================
+Courtesy of Chris Coyier (http://css-tricks.com/css3-progress-bars/)
+*/
+
 .progress-bar {
   background-color: var(--color-background-light);
   border-radius: 3px;
@@ -683,6 +768,11 @@ table {
     position: relative;
   }
 
+  /*
+  Striped variant
+  --------------------------------------------------
+  */
+
   &.-striped {
     & > .progress {
       &:after {
@@ -702,10 +792,17 @@ table {
         z-index: 1;
       }
     }
+
+    /* Animated */
     &.-animated > .progress {
       &:after { animation: move 2s linear infinite; }
     }
   }
+
+  /*
+  Small variant
+  --------------------------------------------------
+  */
 
   &.-small {
     font-size: calc(pow(var(--type-ratio), -1) * 1rem);
@@ -713,11 +810,21 @@ table {
     line-height: 1.2;
   }
 
+  /*
+  Large variant
+  --------------------------------------------------
+  */
+
   &.-large {
     font-size: 1rem;
     height: 25px;
     line-height: 1.7;
   }
+
+  /*
+  Stacked variant
+  --------------------------------------------------
+  */
 
   &.-stacked {
     & > .progress {
@@ -732,11 +839,26 @@ table {
   }
 }
 
+/*
+"Move" animation
+--------------------------------------------------
+*/
+
 @keyframes move {
   0% { background-position: 0 0; }
 
   100% { background-position: 50px 50px; }
 }
+
+/*
+Elements
+--------------------------------------------------
+*/
+
+/*
+Tags
+=============================================================================
+*/
 
 .tag-box {
   background-color: var(--color-background-light);
@@ -747,7 +869,18 @@ table {
   padding: 0 0.5em;
   font-weight: normal;
 
+  /*
+  Rounded variant
+  --------------------------------------------------
+  */
+
   &.-pill { border-radius: 2em; }
+
+  /*
+  States
+  --------------------------------------------------
+  One variant for each state color in core/settings.pcss
+  */
 
   &.-muted {
     background-color: rgb(from var(--color-state-muted) r g b / 15%);
@@ -770,8 +903,18 @@ table {
   }
 }
 
+/*
+Buttons
+=============================================================================
+*/
+
 button {
   overflow: hidden;
+
+  /*
+  Bordered variant
+  --------------------------------------------------
+  */
 
   &.-bordered {
     background-color: transparent;
@@ -796,6 +939,8 @@ button {
         color: var(--color-state-muted);
       }
     }
+
+    /* State variants */
     &.-muted {
       border-color: var(--color-state-muted);
       background-color: transparent;
@@ -857,6 +1002,11 @@ button {
     }
   }
 
+  /*
+  State variants
+  --------------------------------------------------
+  */
+
   &.-muted {
     background-color: var(--color-state-muted);
     color: var(--color-text-inverted);
@@ -897,6 +1047,11 @@ button {
     &:active { background-color: hsl(from var(--color-state-error) h s calc(l + 10)); }
   }
 
+  /*
+  Prefix variant
+  --------------------------------------------------
+  */
+
   &.-prefix {
     padding-left: 0;
 
@@ -908,6 +1063,11 @@ button {
       vertical-align: 0;
     }
   }
+
+  /*
+  Affix variant
+  --------------------------------------------------
+  */
 
   &.-affix {
     padding-right: 0;
@@ -921,6 +1081,11 @@ button {
     }
   }
 }
+
+/*
+Spinner
+=============================================================================
+*/
 
 .spinner {
   animation: rotate .8s infinite linear;
@@ -947,66 +1112,112 @@ button {
  *   @import 'concise.css/utils/margins-responsive';
  */
 
+/*
+Settings (custom properties and media queries); imported only once even
+when core is imported too
+*/
+
+/*
+Margin classes
+=============================================================================
+*/
+
+/* Resets */
 ._m0 { margin: 0; }
 ._mt0 { margin-top: 0; }
 ._mr0 { margin-right: 0; }
 ._mb0 { margin-bottom: 0; }
 ._ml0 { margin-left: 0; }
+
+/* All the sides */
 ._mxs { margin: var(--spacing-xs); }
 ._ms { margin: var(--spacing-s); }
 ._mm { margin: var(--spacing-m); }
 ._ml { margin: var(--spacing-l); }
 ._mxl { margin: var(--spacing-xl); }
+
+/* Extra small */
 ._mtxs { margin-top: var(--spacing-xs); }
 ._mrxs { margin-right: var(--spacing-xs); }
 ._mbxs { margin-bottom: var(--spacing-xs); }
 ._mlxs { margin-left: var(--spacing-xs); }
+
+/* Small */
 ._mts { margin-top: var(--spacing-s); }
 ._mrs { margin-right: var(--spacing-s); }
 ._mbs { margin-bottom: var(--spacing-s); }
 ._mls { margin-left: var(--spacing-s); }
+
+/* Medium */
 ._mtm { margin-top: var(--spacing-m); }
 ._mrm { margin-right: var(--spacing-m); }
 ._mbm { margin-bottom: var(--spacing-m); }
 ._mlm { margin-left: var(--spacing-m); }
+
+/* Large */
 ._mtl { margin-top: var(--spacing-l); }
 ._mrl { margin-right: var(--spacing-l); }
 ._mbl { margin-bottom: var(--spacing-l); }
 ._mll { margin-left: var(--spacing-l); }
+
+/* Extra Large */
 ._mtxl { margin-top: var(--spacing-xl); }
 ._mrxl { margin-right: var(--spacing-xl); }
 ._mbxl { margin-bottom: var(--spacing-xl); }
 ._mlxl { margin-left: var(--spacing-xl); }
+/*
+Padding classes
+=============================================================================
+*/
+
+/* Resets */
 ._p0 { padding: 0; }
 ._pt0 { padding-top: 0; }
 ._pr0 { padding-right: 0; }
 ._pb0 { padding-bottom: 0; }
 ._pl0 { padding-left: 0; }
+
+/* All the sides */
 ._pxs { padding: var(--spacing-xs); }
 ._ps { padding: var(--spacing-s); }
 ._pm { padding: var(--spacing-m); }
 ._pl { padding: var(--spacing-l); }
 ._pxl { padding: var(--spacing-xl); }
+
+/* Extra small */
 ._ptxs { padding-top: var(--spacing-xs); }
 ._prxs { padding-right: var(--spacing-xs); }
 ._pbxs { padding-bottom: var(--spacing-xs); }
 ._plxs { padding-left: var(--spacing-xs); }
+
+/* Small */
 ._pts { padding-top: var(--spacing-s); }
 ._prs { padding-right: var(--spacing-s); }
 ._pbs { padding-bottom: var(--spacing-s); }
 ._pls { padding-left: var(--spacing-s); }
+
+/* Medium */
 ._ptm { padding-top: var(--spacing-m); }
 ._prm { padding-right: var(--spacing-m); }
 ._pbm { padding-bottom: var(--spacing-m); }
 ._plm { padding-left: var(--spacing-m); }
+
+/* Large */
 ._ptl { padding-top: var(--spacing-l); }
 ._prl { padding-right: var(--spacing-l); }
 ._pbl { padding-bottom: var(--spacing-l); }
 ._pll { padding-left: var(--spacing-l); }
+
+/* Extra Large */
 ._ptxl { padding-top: var(--spacing-xl); }
 ._prxl { padding-right: var(--spacing-xl); }
 ._pbxl { padding-bottom: var(--spacing-xl); }
 ._plxl { padding-left: var(--spacing-xl); }
+/*
+Border classes
+=============================================================================
+*/
+
 ._b0 { border: 0; }
 ._bt0 { border-top: 0; }
 ._br0 { border-right: 0; }
@@ -1036,12 +1247,22 @@ button {
 ._br4 { border-right: 4px solid var(--color-base-lines); }
 ._bb4 { border-bottom: 4px solid var(--color-base-lines); }
 ._bl4 { border-left: 4px solid var(--color-base-lines); }
+/*
+Color classes
+=============================================================================
+
+One text (_c-) and one background (_bg-) class per color in core/settings.pcss
+*/
+
+/* Base */
 ._c-base-primary { color: var(--color-base-primary); }
 ._bg-base-primary { background-color: var(--color-base-primary); }
 ._c-base-selection { color: var(--color-base-selection); }
 ._bg-base-selection { background-color: var(--color-base-selection); }
 ._c-base-lines { color: var(--color-base-lines); }
 ._bg-base-lines { background-color: var(--color-base-lines); }
+
+/* Text */
 ._c-text-primary { color: var(--color-text-primary); }
 ._bg-text-primary { background-color: var(--color-text-primary); }
 ._c-text-secondary { color: var(--color-text-secondary); }
@@ -1050,12 +1271,16 @@ button {
 ._bg-text-heading { background-color: var(--color-text-heading); }
 ._c-text-inverted { color: var(--color-text-inverted); }
 ._bg-text-inverted { background-color: var(--color-text-inverted); }
+
+/* Background */
 ._c-background-dark { color: var(--color-background-dark); }
 ._bg-background-dark { background-color: var(--color-background-dark); }
 ._c-background-light { color: var(--color-background-light); }
 ._bg-background-light { background-color: var(--color-background-light); }
 ._c-background-body { color: var(--color-background-body); }
 ._bg-background-body { background-color: var(--color-background-body); }
+
+/* State */
 ._c-state-muted { color: var(--color-state-muted); }
 ._bg-state-muted { background-color: var(--color-state-muted); }
 ._c-state-success { color: var(--color-state-success); }
@@ -1064,6 +1289,8 @@ button {
 ._bg-state-warning { background-color: var(--color-state-warning); }
 ._c-state-error { color: var(--color-state-error); }
 ._bg-state-error { background-color: var(--color-state-error); }
+
+/* Blue */
 ._c-blue-darker { color: var(--color-blue-darker); }
 ._bg-blue-darker { background-color: var(--color-blue-darker); }
 ._c-blue-dark { color: var(--color-blue-dark); }
@@ -1074,6 +1301,8 @@ button {
 ._bg-blue-light { background-color: var(--color-blue-light); }
 ._c-blue-lighter { color: var(--color-blue-lighter); }
 ._bg-blue-lighter { background-color: var(--color-blue-lighter); }
+
+/* Green */
 ._c-green-darker { color: var(--color-green-darker); }
 ._bg-green-darker { background-color: var(--color-green-darker); }
 ._c-green-dark { color: var(--color-green-dark); }
@@ -1084,6 +1313,8 @@ button {
 ._bg-green-light { background-color: var(--color-green-light); }
 ._c-green-lighter { color: var(--color-green-lighter); }
 ._bg-green-lighter { background-color: var(--color-green-lighter); }
+
+/* Red */
 ._c-red-darker { color: var(--color-red-darker); }
 ._bg-red-darker { background-color: var(--color-red-darker); }
 ._c-red-dark { color: var(--color-red-dark); }
@@ -1094,6 +1325,8 @@ button {
 ._bg-red-light { background-color: var(--color-red-light); }
 ._c-red-lighter { color: var(--color-red-lighter); }
 ._bg-red-lighter { background-color: var(--color-red-lighter); }
+
+/* Gray */
 ._c-gray-darker { color: var(--color-gray-darker); }
 ._bg-gray-darker { background-color: var(--color-gray-darker); }
 ._c-gray-dark { color: var(--color-gray-dark); }
@@ -1104,6 +1337,16 @@ button {
 ._bg-gray-light { background-color: var(--color-gray-light); }
 ._c-gray-lighter { color: var(--color-gray-lighter); }
 ._bg-gray-lighter { background-color: var(--color-gray-lighter); }
+/*
+Hide/Show classes
+=============================================================================
+*/
+
+/*
+Extra-Small Devices
+-------------------
+*/
+
 ._show-xs,
 ._hide-s,
 ._hide-m,
@@ -1126,6 +1369,12 @@ button {
   visibility: hidden;
 }
 
+
+/*
+Small Devices
+-------------
+*/
+
 @media (width >= 480px) {
   ._show-s,
   ._hide-xs,
@@ -1145,6 +1394,12 @@ button {
     visibility: hidden;
   }
 }
+
+
+/*
+Medium Devices
+--------------
+*/
 
 @media (width >= 768px) {
   ._show-m,
@@ -1166,6 +1421,12 @@ button {
   }
 }
 
+
+/*
+Large Devices
+-------------
+*/
+
 @media (width >= 960px) {
   ._show-l,
   ._hide-xs,
@@ -1185,6 +1446,12 @@ button {
     visibility: hidden;
   }
 }
+
+
+/*
+Extra-Large Devices
+-------------------
+*/
 
 @media (width >= 1100px) {
   ._show-xl,
@@ -1206,6 +1473,12 @@ button {
   }
 }
 
+
+/*
+Print
+-----
+*/
+
 @media print {
   ._show-print {
     display: block;
@@ -1217,6 +1490,12 @@ button {
     visibility: hidden;
   }
 }
+
+
+/*
+HiDPI and Retina
+----------------
+*/
 
 @media (min-resolution: 1.5dppx) {
   ._show-hd {
@@ -1230,6 +1509,11 @@ button {
   }
 }
 
+/*
+Type scale classes
+=============================================================================
+*/
+
 ._ts1 { font-size: calc(pow(var(--type-ratio), -1) * 1rem); }
 ._ts2 { font-size: 1rem; }
 ._ts3 { font-size: calc(pow(var(--type-ratio), 1) * 1rem); }
@@ -1240,6 +1524,11 @@ button {
 ._ts8 { font-size: calc(pow(var(--type-ratio), 6) * 1rem); }
 ._ts9 { font-size: calc(pow(var(--type-ratio), 7) * 1rem); }
 ._ts10 { font-size: calc(pow(var(--type-ratio), 8) * 1rem); }
+/*
+Typography classes
+=============================================================================
+*/
+
 ._bold { font-weight: bold; }
 ._caps { text-transform: uppercase; }
 ._font-family-inherit { font-family: inherit; }
@@ -1253,19 +1542,41 @@ button {
 ._text-right { text-align: right; }
 ._underline { text-decoration: underline; }
 ._letter-spacing { letter-spacing: var(--letter-spacing); }
+
+/* Font-families */
 ._font-primary { font-family: var(--font-primary); }
 ._font-secondary { font-family: var(--font-secondary); }
 ._font-mono { font-family: var(--font-mono); }
 ._font-print { font-family: var(--font-print-primary); }
 ._font-print-secondary { font-family: var(--font-print-secondary); }
+/*
+Position classes
+=============================================================================
+*/
+
 ._abs { position: absolute; }
 ._rel { position: relative; }
 ._sta { position: static; }
 ._fix { position: fixed; }
+/*
+Display classes
+=============================================================================
+*/
+
 ._inline-block { display: inline-block; }
 ._block { display: block; }
 ._inline { display: inline; }
 ._flex { display: flex; }
+/*
+Column classes
+=============================================================================
+*/
+
+/*
+Columns
+--------------------------------------------------
+*/
+
 ._cols-1 { column-count: 1; }
 ._cols-2 { column-count: 2; }
 ._cols-3 { column-count: 3; }
@@ -1279,9 +1590,19 @@ button {
 ._cols-11 { column-count: 11; }
 ._cols-12 { column-count: 12; }
 
+/*
+Column gap
+--------------------------------------------------
+*/
+
 ._col-gap {
   column-gap: var(--gutter);
 }
+
+/*
+Masonry layout
+--------------------------------------------------
+*/
 
 ._masonry > * {
   display: inline-block;

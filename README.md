@@ -4,7 +4,7 @@
 
 Concise CSS is a lightweight CSS framework and preprocessor. It gives you a solid foundation without the bloat. It has three parts, and you can use only the ones you need:
 
-- **The preprocessor**: a CLI and a PostCSS plugin that compile `.pcss` files. They add imports, `//` comments, a type scale, named breakpoints and inline media queries on top of modern CSS (nesting, range queries, `rlh` units).
+- **The preprocessor**: a CLI and a PostCSS plugin that compile `.pcss` files. They add imports, a type scale, named breakpoints and inline media queries on top of modern CSS (nesting, range queries, `rlh` units).
 - **The styles**: `core` (base styles for HTML elements), `ui` (a small kit of components) and `utils` (helper classes).
 - **Precompiled CSS** for projects that don't need a build step.
 
@@ -22,13 +22,13 @@ Node.js 22.22 or newer is required.
 
 Create a `main.pcss` file:
 
-```scss
-@import 'concise.css';          // core + ui + utils
+```css
+@import 'concise.css';          /* core + ui + utils */
 
-// Your styles
+/* Your styles */
 .hero {
-  margin-bottom: 2rlh;          // two lines of the vertical rhythm (native CSS)
-  font-size: 5;                 // step 5 of the type scale
+  margin-bottom: 2rlh;          /* two lines of the vertical rhythm (native CSS) */
+  font-size: 5;                 /* step 5 of the type scale */
   padding: 1rlh ?if media (--medium);
 }
 ```
@@ -52,13 +52,13 @@ Add `-w` (`--watch`) to recompile when the file, or any file it imports, changes
 
 Import everything or only the parts you need:
 
-```scss
-@import 'concise.css';                          // everything
-@import 'concise.css/core';                     // base styles for HTML elements
-@import 'concise.css/ui';                       // components: see ui/README.md
-@import 'concise.css/utils';                    // helper classes: see utils/README.md
-@import 'concise.css/utils/margins-responsive'; // opt-in responsive margin classes
-@import 'concise.css/core/settings.pcss';       // a single file
+```css
+@import 'concise.css';                          /* everything */
+@import 'concise.css/core';                     /* base styles for HTML elements */
+@import 'concise.css/ui';                       /* components: see ui/README.md */
+@import 'concise.css/utils';                    /* helper classes: see utils/README.md */
+@import 'concise.css/utils/margins-responsive'; /* opt-in responsive margin classes */
+@import 'concise.css/core/settings.pcss';       /* a single file */
 ```
 
 Every part imports the settings it needs, and each file is only included once.
@@ -67,7 +67,7 @@ Every part imports the settings it needs, and each file is only included once.
 
 All settings are custom properties and custom media queries in [`core/settings.pcss`](core/settings.pcss): colors, fonts, spacing, the type ratio and the breakpoints. Override them after importing Concise:
 
-```scss
+```css
 @import 'concise.css';
 
 @custom-media --medium (width >= 900px);
@@ -88,7 +88,6 @@ Colors, fonts, spacing and the type ratio are regular custom properties, so they
 | Feature | Write | Get |
 |---|---|---|
 | Imports | `@import 'partials/header';` | Inlines `partials/header.pcss`, `_header.pcss`, `header.css` or `header/index.pcss`. Bare names are looked up next to the file first, then in `node_modules` |
-| Line comments | `// note` | Removed from the output |
 | Type scale | `font-size: 4` | `calc(pow(var(--type-ratio), 2) * 1rem)`: step 2 is `1rem`, and each step multiplies by `--type-ratio` |
 | Named breakpoints | `@media (--medium) {}` | `@media (width >= 768px) {}` |
 | Inline queries | `padding: 0 ?if media (--small);` | A `@media` block placed right after the rule |
@@ -120,15 +119,6 @@ export default { plugins: [concise()] }
 module.exports = { plugins: [require('concise.css')()] }
 ```
 
-Imported `.pcss` files can always use `//` comments. For `//` comments in the file being processed, pass Concise's parser as well (`parser` is a named export, and also `require('concise.css').parser`):
-
-```js
-import postcss from 'postcss'
-import concise, { parser } from 'concise.css'
-
-const result = await postcss([concise()]).process(css, { from: 'main.pcss', parser })
-```
-
 Options, all optional:
 
 ```js
@@ -147,6 +137,7 @@ The compiled CSS targets current browsers and uses native [nesting](https://deve
   - `getColor(base, primary)` → `var(--color-base-primary)`
   - `$spacing-m` → `var(--spacing-m)`
   - `typeScale(3)` → `font-size: 3`
+  - `// comments` → `/* comments */`
   - loops and mixins → plain CSS
   - `&-suffix` / `&_suffix` selector concatenation → full class names (native nesting can't build selectors from parts)
 - **`lh` unit → `rlh`**: Concise's `lh` unit was the root line height, which is native `rlh`. Replace `1.5lh` with `1.5rlh`. Native `lh` is the element's own line height.

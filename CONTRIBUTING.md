@@ -120,7 +120,7 @@ Concise.CSS project has a `.editorconfig` file, you can install [Editorconfig](h
 
 ## CSS
 
-[Follow @mdo's Code Guide](http://codeguide.co/#css). Stylesheets use the `.pcss` extension and can use `//` comments. Use the settings (`var(--color-*)`, `var(--spacing-*)`, `rlh` units, type scale steps) instead of hard-coded values.
+[Follow @mdo's Code Guide](http://codeguide.co/#css). Stylesheets use the `.pcss` extension and standard `/* */` comments. Use the settings (`var(--color-*)`, `var(--spacing-*)`, `rlh` units, type scale steps) instead of hard-coded values.
 
 ## JavaScript
 

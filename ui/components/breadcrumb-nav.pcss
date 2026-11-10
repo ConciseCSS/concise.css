@@ -1,6 +1,7 @@
-//
-// Breadcrumbs
-// =============================================================================
+/*
+Breadcrumbs
+=============================================================================
+*/
 
 .breadcrumb-nav {
   background-color: var(--color-background-light);
@@ -8,24 +9,27 @@
   padding: 0.5rlh 1.5em;
   font-weight: bold;
 
-  //
-  // Breadcrumb item
-  // --------------------------------------------------
+  /*
+  Breadcrumb item
+  --------------------------------------------------
+  */
 
   & > .item {
     display: inline;
     list-style: none;
     margin-right: 1em;
 
-    // Add a separator to all the elements
-    // except the last one
+    /*
+    Add a separator to all the elements
+    except the last one
+    */
     &:not(:last-child):after {
       color: var(--color-base-lines);
       content: "/";
       margin-left: 1em;
     }
 
-    // Active item
+    /* Active item */
     &.-active,
     &.-active a {
       color: var(--color-text-secondary);

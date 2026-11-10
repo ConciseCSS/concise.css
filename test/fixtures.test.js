@@ -7,7 +7,7 @@ import path from 'node:path'
 import { describe, test } from 'node:test'
 import postcss from 'postcss'
 
-import concise, { parser } from '../src/index.js'
+import concise from '../src/index.js'
 
 const fixtures = path.join(import.meta.dirname, 'fixtures')
 
@@ -16,7 +16,7 @@ const normalize = css => css.replace(/\s+/g, '')
 
 export async function compile (file, options) {
   const css = fs.readFileSync(file, 'utf8')
-  return postcss([concise(options)]).process(css, { from: file, parser })
+  return postcss([concise(options)]).process(css, { from: file })
 }
 
 for (const feature of fs.readdirSync(fixtures).sort()) {

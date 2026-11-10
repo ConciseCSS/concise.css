@@ -3,6 +3,12 @@
  * A basic user interface kit: components and elements following the RSCSS
  * convention (https://github.com/rstacruz/rscss).
  */
+
+/*
+Settings (custom properties and media queries); imported only once even
+when core is imported too
+*/
+
 /*
 Custom media queries
 Use as @media (--medium) { … }
@@ -97,6 +103,17 @@ Use as @media (--medium) { … }
   --color-gray-light: #808080;
   --color-gray-lighter: #999999;
 }
+
+/*
+Components
+--------------------------------------------------
+*/
+
+/*
+Alerts
+=============================================================================
+*/
+
 .alert-box {
   background-color: var(--color-background-light);
   border: 1px solid var(--color-base-lines);
@@ -104,6 +121,11 @@ Use as @media (--medium) { … }
   padding: 0.5rlh 1em;
   position: relative;
   color: var(--color-text-secondary);
+
+  /*
+  Close button
+  --------------------------------------------------
+  */
 
   & > .close {
     color: inherit;
@@ -115,6 +137,12 @@ Use as @media (--medium) { … }
 
     &:hover { opacity: 1; }
   }
+
+  /*
+  States
+  --------------------------------------------------
+  One variant for each state color in core/settings.pcss
+  */
 
   &.-muted {
     background-color: rgb(from var(--color-state-muted) r g b / 15%);
@@ -148,21 +176,39 @@ Use as @media (--medium) { … }
     a { color: hsl(from var(--color-state-error) h s calc(l - 20)); }
   }
 }
+
+/*
+Breadcrumbs
+=============================================================================
+*/
+
 .breadcrumb-nav {
   background-color: var(--color-background-light);
   font-size: calc(pow(var(--type-ratio), -1) * 1rem);
   padding: 0.5rlh 1.5em;
   font-weight: bold;
 
+  /*
+  Breadcrumb item
+  --------------------------------------------------
+  */
+
   & > .item {
     display: inline;
     list-style: none;
     margin-right: 1em;
+
+    /*
+    Add a separator to all the elements
+    except the last one
+    */
     &:not(:last-child):after {
       color: var(--color-base-lines);
       content: "/";
       margin-left: 1em;
     }
+
+    /* Active item */
     &.-active,
     &.-active a {
       color: var(--color-text-secondary);
@@ -170,6 +216,12 @@ Use as @media (--medium) { … }
     }
   }
 }
+
+/*
+Button Groups
+=============================================================================
+*/
+
 .button-group {
   padding: 0;
   display: flex;
@@ -202,6 +254,12 @@ Use as @media (--medium) { … }
     }
   }
 }
+
+/*
+Cards
+=============================================================================
+*/
+
 .card-box {
   border: 1px solid var(--color-base-lines);
   overflow: hidden;
@@ -226,6 +284,11 @@ Use as @media (--medium) { … }
   & > .title { margin-top: 0; }
 }
 
+/*
+Dropdowns
+=============================================================================
+*/
+
 .dropdown-button {
   cursor: pointer;
   display: inline-block;
@@ -241,6 +304,11 @@ Use as @media (--medium) { … }
     }
   }
 
+  /*
+  Hoverable variant
+  --------------------------------------------------
+  */
+
   &.-hover {
     &:hover {
       .dropdown-content {
@@ -249,6 +317,13 @@ Use as @media (--medium) { … }
       }
     }
   }
+
+  /*
+  Modifiers
+  ---------
+  */
+
+  /* Top */
   &.-top {
     .dropdown-content {
       bottom: 100%;
@@ -257,6 +332,11 @@ Use as @media (--medium) { … }
     }
   }
 }
+
+/*
+Dropdown content
+--------------------------------------------------
+*/
 
 .dropdown-content {
   background-color: var(--color-background-body);
@@ -289,6 +369,12 @@ Use as @media (--medium) { … }
   & > .text { padding: 0.25rlh 1em; }
 }
 
+/*
+Progress Bars
+=============================================================================
+Courtesy of Chris Coyier (http://css-tricks.com/css3-progress-bars/)
+*/
+
 .progress-bar {
   background-color: var(--color-background-light);
   border-radius: 3px;
@@ -312,6 +398,11 @@ Use as @media (--medium) { … }
     position: relative;
   }
 
+  /*
+  Striped variant
+  --------------------------------------------------
+  */
+
   &.-striped {
     & > .progress {
       &:after {
@@ -331,10 +422,17 @@ Use as @media (--medium) { … }
         z-index: 1;
       }
     }
+
+    /* Animated */
     &.-animated > .progress {
       &:after { animation: move 2s linear infinite; }
     }
   }
+
+  /*
+  Small variant
+  --------------------------------------------------
+  */
 
   &.-small {
     font-size: calc(pow(var(--type-ratio), -1) * 1rem);
@@ -342,11 +440,21 @@ Use as @media (--medium) { … }
     line-height: 1.2;
   }
 
+  /*
+  Large variant
+  --------------------------------------------------
+  */
+
   &.-large {
     font-size: 1rem;
     height: 25px;
     line-height: 1.7;
   }
+
+  /*
+  Stacked variant
+  --------------------------------------------------
+  */
 
   &.-stacked {
     & > .progress {
@@ -361,11 +469,27 @@ Use as @media (--medium) { … }
   }
 }
 
+/*
+"Move" animation
+--------------------------------------------------
+*/
+
 @keyframes move {
   0% { background-position: 0 0; }
 
   100% { background-position: 50px 50px; }
 }
+
+/*
+Elements
+--------------------------------------------------
+*/
+
+/*
+Tags
+=============================================================================
+*/
+
 .tag-box {
   background-color: var(--color-background-light);
   color: var(--color-text-secondary);
@@ -375,7 +499,18 @@ Use as @media (--medium) { … }
   padding: 0 0.5em;
   font-weight: normal;
 
+  /*
+  Rounded variant
+  --------------------------------------------------
+  */
+
   &.-pill { border-radius: 2em; }
+
+  /*
+  States
+  --------------------------------------------------
+  One variant for each state color in core/settings.pcss
+  */
 
   &.-muted {
     background-color: rgb(from var(--color-state-muted) r g b / 15%);
@@ -397,8 +532,19 @@ Use as @media (--medium) { … }
     color: hsl(from var(--color-state-error) h s calc(l - 10));
   }
 }
+
+/*
+Buttons
+=============================================================================
+*/
+
 button {
   overflow: hidden;
+
+  /*
+  Bordered variant
+  --------------------------------------------------
+  */
 
   &.-bordered {
     background-color: transparent;
@@ -423,6 +569,8 @@ button {
         color: var(--color-state-muted);
       }
     }
+
+    /* State variants */
     &.-muted {
       border-color: var(--color-state-muted);
       background-color: transparent;
@@ -484,6 +632,11 @@ button {
     }
   }
 
+  /*
+  State variants
+  --------------------------------------------------
+  */
+
   &.-muted {
     background-color: var(--color-state-muted);
     color: var(--color-text-inverted);
@@ -524,6 +677,11 @@ button {
     &:active { background-color: hsl(from var(--color-state-error) h s calc(l + 10)); }
   }
 
+  /*
+  Prefix variant
+  --------------------------------------------------
+  */
+
   &.-prefix {
     padding-left: 0;
 
@@ -535,6 +693,11 @@ button {
       vertical-align: 0;
     }
   }
+
+  /*
+  Affix variant
+  --------------------------------------------------
+  */
 
   &.-affix {
     padding-right: 0;
@@ -548,6 +711,12 @@ button {
     }
   }
 }
+
+/*
+Spinner
+=============================================================================
+*/
+
 .spinner {
   animation: rotate .8s infinite linear;
   border: 3px solid hsl(from var(--color-background-light) h s calc(l - 25));

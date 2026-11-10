@@ -2,7 +2,7 @@
 
 A basic user interface kit for Concise CSS: a few components and element variants to help you build websites quicker.
 
-```scss
+```css
 @import 'concise.css/ui';
 ```
 

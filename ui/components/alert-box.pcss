@@ -1,6 +1,7 @@
-//
-// Alerts
-// =============================================================================
+/*
+Alerts
+=============================================================================
+*/
 
 .alert-box {
   background-color: var(--color-background-light);
@@ -10,9 +11,10 @@
   position: relative;
   color: var(--color-text-secondary);
 
-  //
-  // Close button
-  // --------------------------------------------------
+  /*
+  Close button
+  --------------------------------------------------
+  */
 
   & > .close {
     color: inherit;
@@ -25,10 +27,11 @@
     &:hover { opacity: 1; }
   }
 
-  //
-  // States
-  // --------------------------------------------------
-  // One variant for each state color in core/settings.pcss
+  /*
+  States
+  --------------------------------------------------
+  One variant for each state color in core/settings.pcss
+  */
 
   &.-muted {
     background-color: rgb(from var(--color-state-muted) r g b / 15%);

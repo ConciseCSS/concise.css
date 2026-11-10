@@ -5,11 +5,11 @@ import path from 'node:path'
 import { after, describe, test } from 'node:test'
 import postcss from 'postcss'
 
-import concise, { parser } from '../src/index.js'
+import concise from '../src/index.js'
 import resolve from '../src/lib/resolve.js'
 
 const run = async (css, plugins, from = 'input.pcss') =>
-  (await postcss(plugins).process(css, { from, parser })).css.replace(/\s+/g, '')
+  (await postcss(plugins).process(css, { from })).css.replace(/\s+/g, '')
 
 describe('type-scale', () => {
   test('keeps font-size: 0 and non-integer values', async () => {
@@ -62,18 +62,5 @@ describe('resolve', () => {
 
   test('reports every path it tried', () => {
     assert.throws(() => resolve('./missing', from), /Unable to resolve "\.\/missing"[\s\S]*missing\.pcss/)
-  })
-})
-
-describe('default parser', () => {
-  test('imported .pcss files with // comments work without postcss-scss', async () => {
-    const from = path.join(import.meta.dirname, '../concise.pcss')
-    const result = await postcss([concise()]).process(fs.readFileSync(from, 'utf8'), { from })
-    assert.match(result.css, /\._mxs \{ margin: var\(--spacing-xs\); \}/)
-    assert.doesNotMatch(result.css, /^\s*\/\/ /m)
-  })
-
-  test('the plugin exposes the parser for CommonJS users', () => {
-    assert.equal(concise.parser, parser)
   })
 })

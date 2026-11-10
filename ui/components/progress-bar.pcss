@@ -1,7 +1,8 @@
-//
-// Progress Bars
-// =============================================================================
-// Courtesy of Chris Coyier (http://css-tricks.com/css3-progress-bars/)
+/*
+Progress Bars
+=============================================================================
+Courtesy of Chris Coyier (http://css-tricks.com/css3-progress-bars/)
+*/
 
 .progress-bar {
   background-color: var(--color-background-light);
@@ -26,9 +27,10 @@
     position: relative;
   }
 
-  //
-  // Striped variant
-  // --------------------------------------------------
+  /*
+  Striped variant
+  --------------------------------------------------
+  */
 
   &.-striped {
     & > .progress {
@@ -50,15 +52,16 @@
       }
     }
 
-    // Animated
+    /* Animated */
     &.-animated > .progress {
       &:after { animation: move 2s linear infinite; }
     }
   }
 
-  //
-  // Small variant
-  // --------------------------------------------------
+  /*
+  Small variant
+  --------------------------------------------------
+  */
 
   &.-small {
     font-size: 1;
@@ -66,9 +69,10 @@
     line-height: 1.2;
   }
 
-  //
-  // Large variant
-  // --------------------------------------------------
+  /*
+  Large variant
+  --------------------------------------------------
+  */
 
   &.-large {
     font-size: 2;
@@ -76,9 +80,10 @@
     line-height: 1.7;
   }
 
-  //
-  // Stacked variant
-  // --------------------------------------------------
+  /*
+  Stacked variant
+  --------------------------------------------------
+  */
 
   &.-stacked {
     & > .progress {
@@ -93,9 +98,10 @@
   }
 }
 
-//
-// "Move" animation
-// --------------------------------------------------
+/*
+"Move" animation
+--------------------------------------------------
+*/
 
 @keyframes move {
   0% { background-position: 0 0; }

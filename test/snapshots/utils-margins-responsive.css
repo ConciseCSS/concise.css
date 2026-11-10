@@ -1,4 +1,14 @@
 /*
+Responsive margins (opt-in)
+=============================================================================
+
+Not part of utils/index.pcss. Import it on its own:
+  @import 'concise.css/utils/margins-responsive';
+
+Sizes: 0 = none, 1 = xs, 2 = s, 3 = m, 4 = l, 5 = xl (the --spacing-* settings)
+Sides: m (all), mt, mr, mb, ml, mv (vertical), mh (horizontal)
+Suffixes -s, -m, -l, -xl apply from that breakpoint up, e.g. ._mt2-m
+*//*
 Custom media queries
 Use as @media (--medium) { … }
 */

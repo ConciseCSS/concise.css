@@ -7,7 +7,7 @@ import path from 'node:path'
 import { describe, test } from 'node:test'
 import postcss from 'postcss'
 
-import concise, { parser } from '../src/index.js'
+import concise from '../src/index.js'
 
 const root = path.join(import.meta.dirname, '..')
 const snapshots = path.join(import.meta.dirname, 'snapshots')
@@ -32,7 +32,7 @@ describe('styles', () => {
     test(name, async t => {
       const from = path.join(root, entry)
       const result = await postcss([concise()])
-        .process(fs.readFileSync(from, 'utf8'), { from, parser })
+        .process(fs.readFileSync(from, 'utf8'), { from })
 
       // Comments may mention syntax (e.g. "Use as @media (--medium)"), so check without them
       const code = result.css.replace(/\/\*[\s\S]*?\*\//g, '')

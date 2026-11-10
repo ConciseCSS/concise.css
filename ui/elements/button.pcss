@@ -1,13 +1,15 @@
-//
-// Buttons
-// =============================================================================
+/*
+Buttons
+=============================================================================
+*/
 
 button {
   overflow: hidden;
 
-  //
-  // Bordered variant
-  // --------------------------------------------------
+  /*
+  Bordered variant
+  --------------------------------------------------
+  */
 
   &.-bordered {
     background-color: transparent;
@@ -33,7 +35,7 @@ button {
       }
     }
 
-    // State variants
+    /* State variants */
     &.-muted {
       border-color: var(--color-state-muted);
       background-color: transparent;
@@ -95,9 +97,10 @@ button {
     }
   }
 
-  //
-  // State variants
-  // --------------------------------------------------
+  /*
+  State variants
+  --------------------------------------------------
+  */
 
   &.-muted {
     background-color: var(--color-state-muted);
@@ -139,9 +142,10 @@ button {
     &:active { background-color: hsl(from var(--color-state-error) h s calc(l + 10)); }
   }
 
-  //
-  // Prefix variant
-  // --------------------------------------------------
+  /*
+  Prefix variant
+  --------------------------------------------------
+  */
 
   &.-prefix {
     padding-left: 0;
@@ -155,9 +159,10 @@ button {
     }
   }
 
-  //
-  // Affix variant
-  // --------------------------------------------------
+  /*
+  Affix variant
+  --------------------------------------------------
+  */
 
   &.-affix {
     padding-right: 0;
