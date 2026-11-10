@@ -104,10 +104,9 @@ Use as @media (--medium) { … }
   --color-gray-lighter: #999999;
 }
 
-/*
+/*******************************************************************************
 Components
---------------------------------------------------
-*/
+                                                                              */
 
 /*
 Alerts
@@ -122,10 +121,9 @@ Alerts
   position: relative;
   color: var(--color-text-secondary);
 
-  /*
+  /*****************************************************************************
   Close button
-  --------------------------------------------------
-  */
+                                                                              */
 
   & > .close {
     color: inherit;
@@ -138,11 +136,10 @@ Alerts
     &:hover { opacity: 1; }
   }
 
-  /*
+  /*****************************************************************************
   States
-  --------------------------------------------------
   One variant for each state color in core/settings.pcss
-  */
+                                                                              */
 
   &.-muted {
     background-color: rgb(from var(--color-state-muted) r g b / 15%);
@@ -188,10 +185,9 @@ Breadcrumbs
   padding: 0.5rlh 1.5em;
   font-weight: bold;
 
-  /*
+  /*****************************************************************************
   Breadcrumb item
-  --------------------------------------------------
-  */
+                                                                              */
 
   & > .item {
     display: inline;
@@ -304,10 +300,9 @@ Dropdowns
     }
   }
 
-  /*
+  /*****************************************************************************
   Hoverable variant
-  --------------------------------------------------
-  */
+                                                                              */
 
   &.-hover {
     &:hover {
@@ -318,10 +313,9 @@ Dropdowns
     }
   }
 
-  /*
+  /*****************************************************************************
   Modifiers
-  ---------
-  */
+                                                                              */
 
   /* Top */
   &.-top {
@@ -333,10 +327,9 @@ Dropdowns
   }
 }
 
-/*
+/*******************************************************************************
 Dropdown content
---------------------------------------------------
-*/
+                                                                              */
 
 .dropdown-content {
   background-color: var(--color-background-body);
@@ -398,10 +391,9 @@ Courtesy of Chris Coyier (http://css-tricks.com/css3-progress-bars/)
     position: relative;
   }
 
-  /*
+  /*****************************************************************************
   Striped variant
-  --------------------------------------------------
-  */
+                                                                              */
 
   &.-striped {
     & > .progress {
@@ -429,10 +421,9 @@ Courtesy of Chris Coyier (http://css-tricks.com/css3-progress-bars/)
     }
   }
 
-  /*
+  /*****************************************************************************
   Small variant
-  --------------------------------------------------
-  */
+                                                                              */
 
   &.-small {
     font-size: calc(pow(var(--type-ratio), -1) * 1rem);
@@ -440,10 +431,9 @@ Courtesy of Chris Coyier (http://css-tricks.com/css3-progress-bars/)
     line-height: 1.2;
   }
 
-  /*
+  /*****************************************************************************
   Large variant
-  --------------------------------------------------
-  */
+                                                                              */
 
   &.-large {
     font-size: 1rem;
@@ -451,10 +441,9 @@ Courtesy of Chris Coyier (http://css-tricks.com/css3-progress-bars/)
     line-height: 1.7;
   }
 
-  /*
+  /*****************************************************************************
   Stacked variant
-  --------------------------------------------------
-  */
+                                                                              */
 
   &.-stacked {
     & > .progress {
@@ -469,10 +458,9 @@ Courtesy of Chris Coyier (http://css-tricks.com/css3-progress-bars/)
   }
 }
 
-/*
+/*******************************************************************************
 "Move" animation
---------------------------------------------------
-*/
+                                                                              */
 
 @keyframes move {
   0% { background-position: 0 0; }
@@ -480,10 +468,9 @@ Courtesy of Chris Coyier (http://css-tricks.com/css3-progress-bars/)
   100% { background-position: 50px 50px; }
 }
 
-/*
+/*******************************************************************************
 Elements
---------------------------------------------------
-*/
+                                                                              */
 
 /*
 Tags
@@ -499,18 +486,16 @@ Tags
   padding: 0 0.5em;
   font-weight: normal;
 
-  /*
+  /*****************************************************************************
   Rounded variant
-  --------------------------------------------------
-  */
+                                                                              */
 
   &.-pill { border-radius: 2em; }
 
-  /*
+  /*****************************************************************************
   States
-  --------------------------------------------------
   One variant for each state color in core/settings.pcss
-  */
+                                                                              */
 
   &.-muted {
     background-color: rgb(from var(--color-state-muted) r g b / 15%);
@@ -541,10 +526,9 @@ Buttons
 button {
   overflow: hidden;
 
-  /*
+  /*****************************************************************************
   Bordered variant
-  --------------------------------------------------
-  */
+                                                                              */
 
   &.-bordered {
     background-color: transparent;
@@ -632,10 +616,9 @@ button {
     }
   }
 
-  /*
+  /*****************************************************************************
   State variants
-  --------------------------------------------------
-  */
+                                                                              */
 
   &.-muted {
     background-color: var(--color-state-muted);
@@ -677,10 +660,9 @@ button {
     &:active { background-color: hsl(from var(--color-state-error) h s calc(l + 10)); }
   }
 
-  /*
+  /*****************************************************************************
   Prefix variant
-  --------------------------------------------------
-  */
+                                                                              */
 
   &.-prefix {
     padding-left: 0;
@@ -694,10 +676,9 @@ button {
     }
   }
 
-  /*
+  /*****************************************************************************
   Affix variant
-  --------------------------------------------------
-  */
+                                                                              */
 
   &.-affix {
     padding-right: 0;
