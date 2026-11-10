@@ -1,14 +1,14 @@
-.phone_title {
-  width: 500px;
-}
-@media (max-width: 500px) {
-  .phone_title {
-      width: auto
+.phone {
+  & > .title {
+      width: 500px;
+      @media (width <= 500px) {
+          width: auto;
+      }
+      body.-dark & {
+          color: white;
+      }
   }
-}
-body.is_dark .phone_title {
-  color: white;
-}
-.phone img {
-  display: block;
+  img {
+      display: block;
+  }
 }

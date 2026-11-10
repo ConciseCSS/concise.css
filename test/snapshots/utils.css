@@ -35,7 +35,7 @@ Use as @media (--medium) { … }
   --type-ratio: 1.2;
 
   /* Enable margins to all the elements except the first one in each nesting level */
-  --automargin: 1.5rem;
+  --automargin: 1rlh;
 
   /* Font families */
   --font-primary: "Helvetica", "Arial", sans-serif;
@@ -48,11 +48,11 @@ Use as @media (--medium) { … }
   --transition-duration: 150ms;
 
   /* Spacing */
-  --spacing-xs: 0.75rem;
-  --spacing-s: 1.5rem;
-  --spacing-m: 3rem;
-  --spacing-l: 4.5rem;
-  --spacing-xl: 6rem;
+  --spacing-xs: 0.5rlh;
+  --spacing-s: 1rlh;
+  --spacing-m: 2rlh;
+  --spacing-l: 3rlh;
+  --spacing-xl: 4rlh;
 
   /* Space between columns */
   --gutter: 2rem;
@@ -280,7 +280,7 @@ Use as @media (--medium) { … }
   visibility: hidden;
 }
 
-@media (min-width: 480px) {
+@media (width >= 480px) {
   ._show-s,
   ._hide-xs,
   ._hide-m,
@@ -300,7 +300,7 @@ Use as @media (--medium) { … }
   }
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   ._show-m,
   ._hide-xs,
   ._hide-s,
@@ -320,7 +320,7 @@ Use as @media (--medium) { … }
   }
 }
 
-@media (min-width: 960px) {
+@media (width >= 960px) {
   ._show-l,
   ._hide-xs,
   ._hide-s,
@@ -340,7 +340,7 @@ Use as @media (--medium) { … }
   }
 }
 
-@media (min-width: 1100px) {
+@media (width >= 1100px) {
   ._show-xl,
   ._hide-xs,
   ._hide-s,
@@ -384,16 +384,16 @@ Use as @media (--medium) { … }
   }
 }
 
-._ts1 { font-size: 0.8333rem; }
+._ts1 { font-size: calc(pow(var(--type-ratio), -1) * 1rem); }
 ._ts2 { font-size: 1rem; }
-._ts3 { font-size: 1.2rem; }
-._ts4 { font-size: 1.44rem; }
-._ts5 { font-size: 1.728rem; }
-._ts6 { font-size: 2.0736rem; }
-._ts7 { font-size: 2.4883rem; }
-._ts8 { font-size: 2.986rem; }
-._ts9 { font-size: 3.5832rem; }
-._ts10 { font-size: 4.2998rem; }
+._ts3 { font-size: calc(pow(var(--type-ratio), 1) * 1rem); }
+._ts4 { font-size: calc(pow(var(--type-ratio), 2) * 1rem); }
+._ts5 { font-size: calc(pow(var(--type-ratio), 3) * 1rem); }
+._ts6 { font-size: calc(pow(var(--type-ratio), 4) * 1rem); }
+._ts7 { font-size: calc(pow(var(--type-ratio), 5) * 1rem); }
+._ts8 { font-size: calc(pow(var(--type-ratio), 6) * 1rem); }
+._ts9 { font-size: calc(pow(var(--type-ratio), 7) * 1rem); }
+._ts10 { font-size: calc(pow(var(--type-ratio), 8) * 1rem); }
 ._bold { font-weight: bold; }
 ._caps { text-transform: uppercase; }
 ._font-family-inherit { font-family: inherit; }

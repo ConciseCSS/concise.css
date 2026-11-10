@@ -1,10 +1,10 @@
 /**
  * Resolver for postcss-import that understands Concise conventions:
  *
- *   @import 'settings';              ./settings.ccss, ./_settings.ccss, ./settings.css, ./settings/index.ccss …
+ *   @import 'settings';              ./settings.pcss, ./_settings.pcss, ./settings.css, ./settings/index.pcss …
  *   @import './components/button';   same lookup, relative to the importing file
- *   @import 'concise.css/core';      node_modules/concise.css/core/index.ccss
- *   @import 'some-package';          its package.json "style" field, or index.ccss / index.css
+ *   @import 'concise.css/core';      node_modules/concise.css/core/index.pcss
+ *   @import 'some-package';          its package.json "style" field, or index.pcss / index.css
  *
  * Bare names are looked up next to the importing file first, then in node_modules
  * (walking up from the importing file's directory).
@@ -13,7 +13,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-export const EXTENSIONS = ['.ccss', '.css']
+export const EXTENSIONS = ['.pcss', '.css']
 
 export default function resolve (id, basedir) {
   const tried = []

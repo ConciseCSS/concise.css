@@ -8,8 +8,10 @@
  * original order (and therefore specificity) is kept. Declarations that share a
  * query end up in the same @media block.
  *
- * Port of postcss-if-media@1 (PostCSS 7) to the PostCSS 8 plugin API. Must run
- * before postcss-nested, which would otherwise read `?if media …` as a selector.
+ * Inside nested rules the @media block stays nested next to the rule, which
+ * native CSS nesting resolves against the parent selectors.
+ *
+ * Port of postcss-if-media@1 (PostCSS 7) to the PostCSS 8 plugin API.
  */
 
 // {1: value} ?if media {2: query}   (`? media` is accepted as a short form)

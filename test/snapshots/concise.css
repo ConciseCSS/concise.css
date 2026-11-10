@@ -36,7 +36,7 @@ Use as @media (--medium) { … }
   --type-ratio: 1.2;
 
   /* Enable margins to all the elements except the first one in each nesting level */
-  --automargin: 1.5rem;
+  --automargin: 1rlh;
 
   /* Font families */
   --font-primary: "Helvetica", "Arial", sans-serif;
@@ -49,11 +49,11 @@ Use as @media (--medium) { … }
   --transition-duration: 150ms;
 
   /* Spacing */
-  --spacing-xs: 0.75rem;
-  --spacing-s: 1.5rem;
-  --spacing-m: 3rem;
-  --spacing-l: 4.5rem;
-  --spacing-xl: 6rem;
+  --spacing-xs: 0.5rlh;
+  --spacing-s: 1rlh;
+  --spacing-m: 2rlh;
+  --spacing-l: 3rlh;
+  --spacing-xl: 4rlh;
 
   /* Space between columns */
   --gutter: 2rem;
@@ -127,7 +127,7 @@ Use as @media (--medium) { … }
   text-rendering: optimizeLegibility;
 }
 
-@media (min-width: 480px) {
+@media (width >= 480px) {
 
   :root {
   font-size: var(--font-size-large);
@@ -140,10 +140,12 @@ hr {
   border: 0;
 }
 
-nav ol,
-  nav ul { padding-left: 0; }
+nav {
+  ol,
+  ul { padding-left: 0; }
 
-nav li { list-style: none; }
+  li { list-style: none; }
+}
 
 small {
   /* Use the next smaller size in the scale */
@@ -163,12 +165,12 @@ small {
 a {
   color: var(--color-base-primary);
   text-decoration: none;
+
+  &:hover,
+  &:focus { text-decoration: underline; }
+
+  &:hover { outline-width: 0; }
 }
-
-a:hover,
-  a:focus { text-decoration: underline; }
-
-a:hover { outline-width: 0; }
 
 a,
 area,
@@ -182,87 +184,81 @@ textarea,
   touch-action: manipulation;
 }
 
-h1 { font-size: 2.0736rem; }
-h2 { font-size: 1.728rem; }
-h3 { font-size: 1.44rem; }
-h4 { font-size: 1.2rem; }
+h1 { font-size: calc(pow(var(--type-ratio), 4) * 1rem); }
+h2 { font-size: calc(pow(var(--type-ratio), 3) * 1rem); }
+h3 { font-size: calc(pow(var(--type-ratio), 2) * 1rem); }
+h4 { font-size: calc(pow(var(--type-ratio), 1) * 1rem); }
 h5 { font-size: 1rem; }
-h6 { font-size: 0.8333rem; }
+h6 { font-size: calc(pow(var(--type-ratio), -1) * 1rem); }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-text-heading);
   font-family: var(--font-secondary);
   line-height: 1.3;
-}
 
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  small {
     color: inherit;
     vertical-align: 0;
 
     /* Use the next smaller size in the scale */
     font-size: calc(100% / var(--type-ratio));
   }
-
-h1, h2, h3 {
-  margin: 0.75rem 0 0.375rem;
 }
 
-h1 a, h2 a, h3 a {
-    color: inherit;
-  }
+h1, h2, h3 {
+  margin: 0.5rlh 0 0.25rlh;
 
-h1 a:hover,
-    h1 a:focus,
-    h2 a:hover,
-    h2 a:focus,
-    h3 a:hover,
-    h3 a:focus {
+  a {
+    color: inherit;
+
+    &:hover,
+    &:focus {
       color: var(--color-base-primary);
       text-decoration: none;
     }
+  }
+}
 
-h4, h5, h6 { margin: 0.375rem 0; }
+h4, h5, h6 { margin: 0.25rlh 0; }
 
 ul,
 ol {
   padding-left: 1em;
-}
 
-ul ol,
-  ul ul,
-  ol ol,
-  ol ul {
+  ol,
+  ul {
     padding-left: 1.5em;
   }
+}
 
 ol {
   padding-left: 0;
   counter-reset: item;
-}
 
-ol li {
+  li {
     list-style: none;
   }
 
-ol li:before {
+  li:before {
     content: counters(item, ".") ". ";
     counter-increment: item;
     margin-right: 0.2em;
   }
+}
 
 input:not([type="submit"]),
 select,
 textarea {
   width: 100%;
-  font-size: 0.8333rem;
-  min-height: 2.25rem;
-}
+  font-size: calc(pow(var(--type-ratio), -1) * 1rem);
+  min-height: 1.5rlh;
 
-input:not([type="submit"])[disabled], select[disabled], textarea[disabled] {
+  &[disabled] {
     background-color: var(--color-state-muted);
     cursor: not-allowed;
     border: 0;
   }
+}
 
 input:not([type="submit"]):not([type="range"]),
 select,
@@ -288,7 +284,7 @@ input[type="radio"] {
 
 input[type="file"] {
   border: none;
-  line-height: 1.5rem;
+  line-height: 1rlh;
   padding: 0;
 }
 
@@ -297,27 +293,27 @@ select {
   padding-left: 0.5em;
   width: auto;
   min-width: 10em;
-  height: 2.25rem;
-}
+  height: 1.5rlh;
 
-select[disabled] { color: var(--color-text-secondary); }
+  &[disabled] { color: var(--color-text-secondary); }
 
-select[multiple] {
+  &[multiple] {
     height: auto;
     width: 100%;
     padding: 0;
   }
 
-select::-ms-expand { display: none; }
+  &::-ms-expand { display: none; }
 
-select::-ms-value { color: currentColor; }
+  &::-ms-value { color: currentColor; }
 
-select option { padding: 0 0.75em }
+  option { padding: 0 0.75em }
+}
 
 label {
   display: block;
-  font-size: 0.8333rem;
-  line-height: 2.25rem;
+  font-size: calc(pow(var(--type-ratio), -1) * 1rem);
+  line-height: 1.5rlh;
 }
 
 /* Labels are inline with their checkbox and radio elements */
@@ -328,25 +324,28 @@ input[type="radio"] + label {
 }
 table {
   width: 100%;
-}
-table thead,
-  table tfoot {
+
+  thead,
+  tfoot {
     background-color: var(--color-background-light);
     text-align: left;
   }
-table th,
-  table td {
-    line-height: 2.25rem;
+
+  th,
+  td {
+    line-height: 1.5rlh;
     overflow: visible;
     padding: 0 1em;
   }
-table caption {
-    font-size: 0.8333rem;
+
+  caption {
+    font-size: calc(pow(var(--type-ratio), -1) * 1rem);
     font-style: italic;
-    line-height: 3rem;
+    line-height: 2rlh;
     text-align: center;
   }
-@media (min-width: 768px) {
+}
+@media (width >= 768px) {
 
   table {
   width: auto;
@@ -415,19 +414,22 @@ table caption {
     font-size: .57em;
     text-decoration: underline;
     word-wrap: break-word;
-  }
 
-   a[href]:after, a:visited[href]:after {
+   &[href]:after {
      content: " (" attr(href) ")";
      font-size: smaller;
    }
+  }
 
   q:after { content: " (Source: " attr(cite) ")"; }
 
   abbr[title]:after { content: " (" attr(title) ")"; }
-   a:after,
-   a[href^="javascript:"]:after,
-   a[href^="#"]:after { content: ""; }
+
+  a {
+   &:after,
+   &[href^="javascript:"]:after,
+   &[href^="#"]:after { content: ""; }
+  }
 
   pre,
   code {
@@ -451,158 +453,188 @@ table caption {
   ul {
     padding-left: 0;
     list-style: none;
+
+    ul,
+    ul ul { padding-left: 1.5em; }
   }
 
-    ul ul,
-    ul ul ul { padding-left: 1.5em; }
-   ul li, ol li { content: "&raquo; "; }
+  ul,
+  ol {
+   li { content: "&raquo; "; }
+  }
 }
 /**
  * Concise UI
  * A basic user interface kit: components and elements following the RSCSS
- * convention (https://rscss.io).
+ * convention (https://github.com/rstacruz/rscss).
  */
 .alert-box {
   background-color: var(--color-background-light);
   border: 1px solid var(--color-base-lines);
-  font-size: 0.8333rem;
-  padding: 0.75rem 1em;
+  font-size: calc(pow(var(--type-ratio), -1) * 1rem);
+  padding: 0.5rlh 1em;
   position: relative;
   color: var(--color-text-secondary);
-}
-.alert-box > .close {
+
+  & > .close {
     color: inherit;
     position: absolute;
     right: 1em;
     top: 0.8em;
     opacity: 0.5;
     transition: opacity var(--transition-duration);
+
+    &:hover { opacity: 1; }
   }
-.alert-box > .close:hover { opacity: 1; }
-.alert-box.-muted {
+
+  &.-muted {
     background-color: rgb(from var(--color-state-muted) r g b / 15%);
     border-color: rgb(from var(--color-state-muted) r g b / 20%);
     color: hsl(from var(--color-state-muted) h s calc(l - 10));
+
+    a { color: hsl(from var(--color-state-muted) h s calc(l - 20)); }
   }
-.alert-box.-muted a { color: hsl(from var(--color-state-muted) h s calc(l - 20)); }
-.alert-box.-success {
+
+  &.-success {
     background-color: rgb(from var(--color-state-success) r g b / 15%);
     border-color: rgb(from var(--color-state-success) r g b / 20%);
     color: hsl(from var(--color-state-success) h s calc(l - 10));
+
+    a { color: hsl(from var(--color-state-success) h s calc(l - 20)); }
   }
-.alert-box.-success a { color: hsl(from var(--color-state-success) h s calc(l - 20)); }
-.alert-box.-warning {
+
+  &.-warning {
     background-color: rgb(from var(--color-state-warning) r g b / 15%);
     border-color: rgb(from var(--color-state-warning) r g b / 20%);
     color: hsl(from var(--color-state-warning) h s calc(l - 10));
+
+    a { color: hsl(from var(--color-state-warning) h s calc(l - 20)); }
   }
-.alert-box.-warning a { color: hsl(from var(--color-state-warning) h s calc(l - 20)); }
-.alert-box.-error {
+
+  &.-error {
     background-color: rgb(from var(--color-state-error) r g b / 15%);
     border-color: rgb(from var(--color-state-error) r g b / 20%);
     color: hsl(from var(--color-state-error) h s calc(l - 10));
+
+    a { color: hsl(from var(--color-state-error) h s calc(l - 20)); }
   }
-.alert-box.-error a { color: hsl(from var(--color-state-error) h s calc(l - 20)); }
+}
 .breadcrumb-nav {
   background-color: var(--color-background-light);
-  font-size: 0.8333rem;
-  padding: 0.75rem 1.5em;
+  font-size: calc(pow(var(--type-ratio), -1) * 1rem);
+  padding: 0.5rlh 1.5em;
   font-weight: bold;
-}
-.breadcrumb-nav > .item {
+
+  & > .item {
     display: inline;
     list-style: none;
     margin-right: 1em;
-  }
-.breadcrumb-nav > .item:not(:last-child):after {
+    &:not(:last-child):after {
       color: var(--color-base-lines);
       content: "/";
       margin-left: 1em;
     }
-.breadcrumb-nav > .item.-active,
-    .breadcrumb-nav > .item.-active a {
+    &.-active,
+    &.-active a {
       color: var(--color-text-secondary);
       font-weight: normal;
     }
+  }
+}
 .button-group {
   padding: 0;
   display: flex;
-}
-.button-group > li {
+
+  & > li {
     list-style: none;
     border: 1px solid var(--color-base-lines);
-    font-size: 0.8333rem;
-  }
-.button-group > li:first-child { border-radius: 3px 0 0 3px; }
-.button-group > li:last-child { border-radius: 0 3px 3px 0; }
-.button-group > li:not(:last-child) {
+    font-size: calc(pow(var(--type-ratio), -1) * 1rem);
+
+    &:first-child { border-radius: 3px 0 0 3px; }
+    &:last-child { border-radius: 0 3px 3px 0; }
+
+    &:not(:last-child) {
       border-right: 0;
     }
-.button-group .item {
+  }
+
+  .item {
     display: inline-block;
-    line-height: 1.5rem;
+    line-height: 1rlh;
     padding: 0 1em;
     transition: background-color var(--transition-duration);
-  }
-.button-group .item:hover,
-    .button-group .item:focus { background-color: var(--color-background-light); }
-.button-group .item.-active {
+
+    &:hover,
+    &:focus { background-color: var(--color-background-light); }
+
+    &.-active {
       background-color: var(--color-background-light);
       color: var(--color-text-secondary);
     }
+  }
+}
 .card-box {
   border: 1px solid var(--color-base-lines);
   overflow: hidden;
   position: relative;
-}
-.card-box > .image { max-width: 100%; }
-.card-box > .header { font-weight: bold; }
-.card-box > .footer { font-size: 0.8333rem; }
-.card-box > .header,
-  .card-box > .footer {
-    padding: 0.75rem 1em;
+
+  & > .image { max-width: 100%; }
+
+  & > .header { font-weight: bold; }
+
+  & > .footer { font-size: calc(pow(var(--type-ratio), -1) * 1rem); }
+
+  & > .header,
+  & > .footer {
+    padding: 0.5rlh 1em;
     background-color: var(--color-background-light);
   }
-
-.card-content {
-  padding: 1.5rem 1em;
 }
 
-.card-content > .title { margin-top: 0; }
+.card-content {
+  padding: 1rlh 1em;
+
+  & > .title { margin-top: 0; }
+}
 
 .dropdown-button {
   cursor: pointer;
   display: inline-block;
   outline: none;
   position: relative;
-}
 
-.dropdown-button:focus {
+  &:focus {
     pointer-events: none;
-  }
 
-.dropdown-button:focus .dropdown-content {
+    .dropdown-content {
       opacity: 1;
       visibility: visible;
     }
+  }
 
-.dropdown-button.-hover:hover .dropdown-content {
+  &.-hover {
+    &:hover {
+      .dropdown-content {
         opacity: 1;
         visibility: visible;
       }
-
-.dropdown-button.-top .dropdown-content {
+    }
+  }
+  &.-top {
+    .dropdown-content {
       bottom: 100%;
       margin-top: 0;
-      margin-bottom: 0.375rem;
+      margin-bottom: 0.25rlh;
     }
+  }
+}
 
 .dropdown-content {
   background-color: var(--color-background-body);
   border: 1px solid var(--color-base-lines);
   color: var(--color-text-primary);
   left: 0;
-  margin-top: 0.375rem;
+  margin-top: 0.25rlh;
   opacity: 0;
   padding: 0;
   pointer-events: auto;
@@ -612,21 +644,21 @@ table caption {
   visibility: hidden;
   min-width: 10em;
   z-index: 1;
-  font-size: 0.8333rem;
-}
+  font-size: calc(pow(var(--type-ratio), -1) * 1rem);
 
-.dropdown-content > .item {
+  & > .item {
     list-style-type: none;
     margin: 0;
-    padding: 0.375rem 1em;
+    padding: 0.25rlh 1em;
     transition: background-color var(--transition-duration);
     white-space: nowrap;
+
+    &:hover,
+    &:focus { background-color: var(--color-background-light); }
   }
 
-.dropdown-content > .item:hover,
-    .dropdown-content > .item:focus { background-color: var(--color-background-light); }
-
-.dropdown-content > .text { padding: 0.375rem 1em; }
+  & > .text { padding: 0.25rlh 1em; }
+}
 
 .progress-bar {
   background-color: var(--color-background-light);
@@ -634,15 +666,14 @@ table caption {
   box-shadow: inset 0 1px 1px rgb(from var(--color-base-lines) r g b / 25%);
   box-sizing: initial;
   color: var(--color-text-inverted);
-  font-size: 0.8333rem;
-  height: 0.75rem;
+  font-size: calc(pow(var(--type-ratio), -1) * 1rem);
+  height: 0.5rlh;
   line-height: 1.2;
   position: relative;
   text-align: center;
   width: 100%;
-}
 
-.progress-bar > .progress {
+  & > .progress {
     background-color: var(--color-base-primary);
     border-radius: 3px;
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
@@ -652,7 +683,9 @@ table caption {
     position: relative;
   }
 
-.progress-bar.-striped > .progress:after {
+  &.-striped {
+    & > .progress {
+      &:after {
         background-image: linear-gradient(-45deg,
             rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%,
             rgba(255, 255, 255, .2) 50%,
@@ -668,30 +701,36 @@ table caption {
         top: 0;
         z-index: 1;
       }
+    }
+    &.-animated > .progress {
+      &:after { animation: move 2s linear infinite; }
+    }
+  }
 
-.progress-bar.-striped.-animated > .progress:after { animation: move 2s linear infinite; }
-
-.progress-bar.-small {
-    font-size: 0.8333rem;
+  &.-small {
+    font-size: calc(pow(var(--type-ratio), -1) * 1rem);
     height: 10px;
     line-height: 1.2;
   }
 
-.progress-bar.-large {
+  &.-large {
     font-size: 1rem;
     height: 25px;
     line-height: 1.7;
   }
 
-.progress-bar.-stacked > .progress {
+  &.-stacked {
+    & > .progress {
       border-radius: 0;
       display: block;
       float: left;
+
+      &:first-of-type { border-radius: 3px 0 0 3px; }
+
+      &:last-of-type { border-radius: 0 3px 3px 0; }
     }
-
-.progress-bar.-stacked > .progress:first-of-type { border-radius: 3px 0 0 3px; }
-
-.progress-bar.-stacked > .progress:last-of-type { border-radius: 0 3px 3px 0; }
+  }
+}
 
 @keyframes move {
   0% { background-position: 0 0; }
@@ -707,182 +746,181 @@ table caption {
   font-size: calc(100% / var(--type-ratio));
   padding: 0 0.5em;
   font-weight: normal;
-}
 
-.tag-box.-pill { border-radius: 2em; }
+  &.-pill { border-radius: 2em; }
 
-.tag-box.-muted {
+  &.-muted {
     background-color: rgb(from var(--color-state-muted) r g b / 15%);
     color: hsl(from var(--color-state-muted) h s calc(l - 10));
   }
 
-.tag-box.-success {
+  &.-success {
     background-color: rgb(from var(--color-state-success) r g b / 15%);
     color: hsl(from var(--color-state-success) h s calc(l - 10));
   }
 
-.tag-box.-warning {
+  &.-warning {
     background-color: rgb(from var(--color-state-warning) r g b / 15%);
     color: hsl(from var(--color-state-warning) h s calc(l - 10));
   }
 
-.tag-box.-error {
+  &.-error {
     background-color: rgb(from var(--color-state-error) r g b / 15%);
     color: hsl(from var(--color-state-error) h s calc(l - 10));
   }
+}
 
 button {
   overflow: hidden;
-}
 
-button.-bordered {
+  &.-bordered {
     background-color: transparent;
     border: 1px solid var(--color-base-primary);
     color: var(--color-base-primary);
-  }
 
-button.-bordered:hover,
-    button.-bordered:focus {
+    &:hover,
+    &:focus {
       background-color: var(--color-base-primary);
       color: var(--color-text-inverted);
     }
 
-button.-bordered[disabled] {
+    &[disabled] {
       border-color: var(--color-state-muted);
       color: var(--color-state-muted);
-    }
 
-button.-bordered[disabled]:hover,
-      button.-bordered[disabled]:focus,
-      button.-bordered[disabled]:active {
+      &:hover,
+      &:focus,
+      &:active {
         background-color: transparent;
         border-color: var(--color-state-muted);
         color: var(--color-state-muted);
       }
-
-button.-bordered.-muted {
+    }
+    &.-muted {
       border-color: var(--color-state-muted);
       background-color: transparent;
       color: var(--color-state-muted);
+
+      &:hover,
+      &:focus { background-color: var(--color-state-muted); }
+
+      &:active { background-color: hsl(from var(--color-state-muted) h s calc(l + 5)); }
+
+      &:hover,
+      &:focus,
+      &:active { color: var(--color-text-inverted); }
     }
 
-button.-bordered.-muted:hover,
-      button.-bordered.-muted:focus { background-color: var(--color-state-muted); }
-
-button.-bordered.-muted:active { background-color: hsl(from var(--color-state-muted) h s calc(l + 5)); }
-
-button.-bordered.-muted:hover,
-      button.-bordered.-muted:focus,
-      button.-bordered.-muted:active { color: var(--color-text-inverted); }
-
-button.-bordered.-success {
+    &.-success {
       border-color: var(--color-state-success);
       background-color: transparent;
       color: var(--color-state-success);
+
+      &:hover,
+      &:focus { background-color: var(--color-state-success); }
+
+      &:active { background-color: hsl(from var(--color-state-success) h s calc(l + 5)); }
+
+      &:hover,
+      &:focus,
+      &:active { color: var(--color-text-inverted); }
     }
 
-button.-bordered.-success:hover,
-      button.-bordered.-success:focus { background-color: var(--color-state-success); }
-
-button.-bordered.-success:active { background-color: hsl(from var(--color-state-success) h s calc(l + 5)); }
-
-button.-bordered.-success:hover,
-      button.-bordered.-success:focus,
-      button.-bordered.-success:active { color: var(--color-text-inverted); }
-
-button.-bordered.-warning {
+    &.-warning {
       border-color: var(--color-state-warning);
       background-color: transparent;
       color: var(--color-state-warning);
+
+      &:hover,
+      &:focus { background-color: var(--color-state-warning); }
+
+      &:active { background-color: hsl(from var(--color-state-warning) h s calc(l + 5)); }
+
+      &:hover,
+      &:focus,
+      &:active { color: var(--color-text-inverted); }
     }
 
-button.-bordered.-warning:hover,
-      button.-bordered.-warning:focus { background-color: var(--color-state-warning); }
-
-button.-bordered.-warning:active { background-color: hsl(from var(--color-state-warning) h s calc(l + 5)); }
-
-button.-bordered.-warning:hover,
-      button.-bordered.-warning:focus,
-      button.-bordered.-warning:active { color: var(--color-text-inverted); }
-
-button.-bordered.-error {
+    &.-error {
       border-color: var(--color-state-error);
       background-color: transparent;
       color: var(--color-state-error);
+
+      &:hover,
+      &:focus { background-color: var(--color-state-error); }
+
+      &:active { background-color: hsl(from var(--color-state-error) h s calc(l + 5)); }
+
+      &:hover,
+      &:focus,
+      &:active { color: var(--color-text-inverted); }
     }
+  }
 
-button.-bordered.-error:hover,
-      button.-bordered.-error:focus { background-color: var(--color-state-error); }
-
-button.-bordered.-error:active { background-color: hsl(from var(--color-state-error) h s calc(l + 5)); }
-
-button.-bordered.-error:hover,
-      button.-bordered.-error:focus,
-      button.-bordered.-error:active { color: var(--color-text-inverted); }
-
-button.-muted {
+  &.-muted {
     background-color: var(--color-state-muted);
     color: var(--color-text-inverted);
+
+    &:hover,
+    &:focus { background-color: hsl(from var(--color-state-muted) h s calc(l + 5)); }
+
+    &:active { background-color: hsl(from var(--color-state-muted) h s calc(l + 10)); }
   }
 
-button.-muted:hover,
-    button.-muted:focus { background-color: hsl(from var(--color-state-muted) h s calc(l + 5)); }
-
-button.-muted:active { background-color: hsl(from var(--color-state-muted) h s calc(l + 10)); }
-
-button.-success {
+  &.-success {
     background-color: var(--color-state-success);
     color: var(--color-text-inverted);
+
+    &:hover,
+    &:focus { background-color: hsl(from var(--color-state-success) h s calc(l + 5)); }
+
+    &:active { background-color: hsl(from var(--color-state-success) h s calc(l + 10)); }
   }
 
-button.-success:hover,
-    button.-success:focus { background-color: hsl(from var(--color-state-success) h s calc(l + 5)); }
-
-button.-success:active { background-color: hsl(from var(--color-state-success) h s calc(l + 10)); }
-
-button.-warning {
+  &.-warning {
     background-color: var(--color-state-warning);
     color: var(--color-text-inverted);
+
+    &:hover,
+    &:focus { background-color: hsl(from var(--color-state-warning) h s calc(l + 5)); }
+
+    &:active { background-color: hsl(from var(--color-state-warning) h s calc(l + 10)); }
   }
 
-button.-warning:hover,
-    button.-warning:focus { background-color: hsl(from var(--color-state-warning) h s calc(l + 5)); }
-
-button.-warning:active { background-color: hsl(from var(--color-state-warning) h s calc(l + 10)); }
-
-button.-error {
+  &.-error {
     background-color: var(--color-state-error);
     color: var(--color-text-inverted);
+
+    &:hover,
+    &:focus { background-color: hsl(from var(--color-state-error) h s calc(l + 5)); }
+
+    &:active { background-color: hsl(from var(--color-state-error) h s calc(l + 10)); }
   }
 
-button.-error:hover,
-    button.-error:focus { background-color: hsl(from var(--color-state-error) h s calc(l + 5)); }
-
-button.-error:active { background-color: hsl(from var(--color-state-error) h s calc(l + 10)); }
-
-button.-prefix {
+  &.-prefix {
     padding-left: 0;
-  }
 
-button.-prefix .prefix {
+    .prefix {
       background-color: rgba(0,0,0,0.15);
       display: inline-block;
       margin-right: 1.25em;
       padding: 0 1em;
       vertical-align: 0;
     }
-
-button.-affix {
-    padding-right: 0;
   }
 
-button.-affix > .affix {
+  &.-affix {
+    padding-right: 0;
+
+    & > .affix {
       background-color: rgba(0,0,0,0.15);
       display: inline-block;
       margin-left: 1.25em;
       padding: 0 1em;
       vertical-align: 0;
     }
+  }
+}
 
 .spinner {
   animation: rotate .8s infinite linear;
@@ -890,7 +928,7 @@ button.-affix > .affix {
   border-radius: 50%;
   border-right-color: transparent;
   height: 40px;
-  margin: 1.5rem auto;
+  margin: 1rlh auto;
   width: 40px;
 }
 
@@ -1088,7 +1126,7 @@ button.-affix > .affix {
   visibility: hidden;
 }
 
-@media (min-width: 480px) {
+@media (width >= 480px) {
   ._show-s,
   ._hide-xs,
   ._hide-m,
@@ -1108,7 +1146,7 @@ button.-affix > .affix {
   }
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   ._show-m,
   ._hide-xs,
   ._hide-s,
@@ -1128,7 +1166,7 @@ button.-affix > .affix {
   }
 }
 
-@media (min-width: 960px) {
+@media (width >= 960px) {
   ._show-l,
   ._hide-xs,
   ._hide-s,
@@ -1148,7 +1186,7 @@ button.-affix > .affix {
   }
 }
 
-@media (min-width: 1100px) {
+@media (width >= 1100px) {
   ._show-xl,
   ._hide-xs,
   ._hide-s,
@@ -1192,16 +1230,16 @@ button.-affix > .affix {
   }
 }
 
-._ts1 { font-size: 0.8333rem; }
+._ts1 { font-size: calc(pow(var(--type-ratio), -1) * 1rem); }
 ._ts2 { font-size: 1rem; }
-._ts3 { font-size: 1.2rem; }
-._ts4 { font-size: 1.44rem; }
-._ts5 { font-size: 1.728rem; }
-._ts6 { font-size: 2.0736rem; }
-._ts7 { font-size: 2.4883rem; }
-._ts8 { font-size: 2.986rem; }
-._ts9 { font-size: 3.5832rem; }
-._ts10 { font-size: 4.2998rem; }
+._ts3 { font-size: calc(pow(var(--type-ratio), 1) * 1rem); }
+._ts4 { font-size: calc(pow(var(--type-ratio), 2) * 1rem); }
+._ts5 { font-size: calc(pow(var(--type-ratio), 3) * 1rem); }
+._ts6 { font-size: calc(pow(var(--type-ratio), 4) * 1rem); }
+._ts7 { font-size: calc(pow(var(--type-ratio), 5) * 1rem); }
+._ts8 { font-size: calc(pow(var(--type-ratio), 6) * 1rem); }
+._ts9 { font-size: calc(pow(var(--type-ratio), 7) * 1rem); }
+._ts10 { font-size: calc(pow(var(--type-ratio), 8) * 1rem); }
 ._bold { font-weight: bold; }
 ._caps { text-transform: uppercase; }
 ._font-family-inherit { font-family: inherit; }

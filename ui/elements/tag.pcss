@@ -1,0 +1,44 @@
+//
+// Tags
+// =============================================================================
+
+.tag-box {
+  background-color: var(--color-background-light);
+  color: var(--color-text-secondary);
+  border-radius: 0.2em;
+  display: inline-block;
+  font-size: calc(100% / var(--type-ratio));
+  padding: 0 0.5em;
+  font-weight: normal;
+
+  //
+  // Rounded variant
+  // --------------------------------------------------
+
+  &.-pill { border-radius: 2em; }
+
+  //
+  // States
+  // --------------------------------------------------
+  // One variant for each state color in core/settings.pcss
+
+  &.-muted {
+    background-color: rgb(from var(--color-state-muted) r g b / 15%);
+    color: hsl(from var(--color-state-muted) h s calc(l - 10));
+  }
+
+  &.-success {
+    background-color: rgb(from var(--color-state-success) r g b / 15%);
+    color: hsl(from var(--color-state-success) h s calc(l - 10));
+  }
+
+  &.-warning {
+    background-color: rgb(from var(--color-state-warning) r g b / 15%);
+    color: hsl(from var(--color-state-warning) h s calc(l - 10));
+  }
+
+  &.-error {
+    background-color: rgb(from var(--color-state-error) r g b / 15%);
+    color: hsl(from var(--color-state-error) h s calc(l - 10));
+  }
+}

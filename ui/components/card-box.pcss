@@ -1,0 +1,27 @@
+//
+// Cards
+// =============================================================================
+
+.card-box {
+  border: 1px solid var(--color-base-lines);
+  overflow: hidden;
+  position: relative;
+
+  & > .image { max-width: 100%; }
+
+  & > .header { font-weight: bold; }
+
+  & > .footer { font-size: 1; }
+
+  & > .header,
+  & > .footer {
+    padding: 0.5rlh 1em;
+    background-color: var(--color-background-light);
+  }
+}
+
+.card-content {
+  padding: 1rlh 1em;
+
+  & > .title { margin-top: 0; }
+}

@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import { watch as fsWatch } from 'node:fs'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { parseArgs, styleText } from 'node:util'
@@ -9,7 +10,7 @@ import concise, { parser } from '../src/index.js'
 
 const pkg = JSON.parse(await fs.readFile(new URL('../package.json', import.meta.url), 'utf8'))
 
-const USAGE = `Usage: concise compile <input.ccss> <output.css> [options]
+const USAGE = `Usage: concise compile <input.pcss> <output.css> [options]
 
 Options:
   -w, --watch     Recompile when the input or any file it imports changes
@@ -67,25 +68,47 @@ async function build (input, output) {
   }
 }
 
+/**
+ * Watches the directories of the given files rather than the files themselves:
+ * editors that save atomically (write a temporary file, then rename it) replace
+ * the file, which would silently end a watcher attached to the old one.
+ */
 async function watch (input, output, files = [path.resolve(input)]) {
-  const { watch } = await import('chokidar')
-  const watched = new Set(files)
-  const watcher = watch([...watched], { ignoreInitial: true })
+  const watched = new Set()
+  const directories = new Map()
+  const changed = new Set()
+  let timer
+  let building = Promise.resolve()
 
-  watcher.once('ready', () =>
-    log.watch('\nWatching for changes in: ', [...watched].map(file => path.relative('.', file)).join(', '))
-  )
+  const follow = file => {
+    watched.add(file)
+    const dir = path.dirname(file)
+    if (directories.has(dir)) return
 
-  watcher.on('all', async (event, file) => {
-    log.watch(`${event[0].toUpperCase()}${event.slice(1)}: `, path.relative('.', file))
+    const watcher = fsWatch(dir, (event, filename) => {
+      const file = filename && path.join(dir, filename.toString())
+      if (!watched.has(file)) return
+
+      // One save fires several events: wait for them to settle, then build once
+      changed.add(file)
+      clearTimeout(timer)
+      timer = setTimeout(() => { building = building.then(rebuild) }, 50)
+    })
+    watcher.on('error', error => log.error(error.message))
+    directories.set(dir, watcher)
+  }
+
+  const rebuild = async () => {
+    for (const file of changed) log.watch('Change: ', path.relative('.', file))
+    changed.clear()
     process.exitCode = 0
 
     // Follow new imports; files no longer imported are simply ignored until the next run
     for (const dependency of (await build(input, output)) ?? []) {
-      if (!watched.has(dependency)) {
-        watched.add(dependency)
-        watcher.add(dependency)
-      }
+      if (!watched.has(dependency)) follow(dependency)
     }
-  })
+  }
+
+  files.forEach(follow)
+  log.watch('\nWatching for changes in: ', [...watched].map(file => path.relative('.', file)).join(', '))
 }

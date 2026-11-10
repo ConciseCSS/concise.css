@@ -1,0 +1,36 @@
+//
+// Button Groups
+// =============================================================================
+
+.button-group {
+  padding: 0;
+  display: flex;
+
+  & > li {
+    list-style: none;
+    border: 1px solid var(--color-base-lines);
+    font-size: 1;
+
+    &:first-child { border-radius: 3px 0 0 3px; }
+    &:last-child { border-radius: 0 3px 3px 0; }
+
+    &:not(:last-child) {
+      border-right: 0;
+    }
+  }
+
+  .item {
+    display: inline-block;
+    line-height: 1rlh;
+    padding: 0 1em;
+    transition: background-color var(--transition-duration);
+
+    &:hover,
+    &:focus { background-color: var(--color-background-light); }
+
+    &.-active {
+      background-color: var(--color-background-light);
+      color: var(--color-text-secondary);
+    }
+  }
+}

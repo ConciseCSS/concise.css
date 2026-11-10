@@ -15,24 +15,24 @@ after(() => fs.rmSync(tmp, { recursive: true, force: true }))
 describe('cli', () => {
   test('compiles a file, creating missing output directories', () => {
     const output = path.join(tmp, 'nested/dir/out.css')
-    const result = concise('compile', path.join(fixtures, 'imports/basic.ccss'), output)
+    const result = concise('compile', path.join(fixtures, 'imports/basic.pcss'), output)
 
     assert.equal(result.status, 0, result.stderr)
     assert.match(fs.readFileSync(output, 'utf8'), /\.a\s*\{\s*width: auto;[\s\S]*\.b\s*\{/)
   })
 
   test('fails with a readable error on invalid CSS', () => {
-    const input = path.join(tmp, 'broken.ccss')
+    const input = path.join(tmp, 'broken.pcss')
     fs.writeFileSync(input, 'a { color: red')
     const result = concise('compile', input, path.join(tmp, 'broken.css'))
 
     assert.equal(result.status, 1)
-    assert.match(result.stderr, /broken\.ccss:1:1: Unclosed block/)
+    assert.match(result.stderr, /broken\.pcss:1:1: Unclosed block/)
   })
 
   test('rejects unknown commands and missing arguments', () => {
     assert.equal(concise('build', 'a', 'b').status, 1)
-    assert.equal(concise('compile', 'only-input.ccss').status, 1)
+    assert.equal(concise('compile', 'only-input.pcss').status, 1)
   })
 
   test('prints help and version', () => {
@@ -42,8 +42,8 @@ describe('cli', () => {
 
   test('watch mode recompiles when an imported file changes', async () => {
     const dir = fs.mkdtempSync(path.join(tmp, 'watch-'))
-    const input = path.join(dir, 'main.ccss')
-    const partial = path.join(dir, '_part.ccss')
+    const input = path.join(dir, 'main.pcss')
+    const partial = path.join(dir, '_part.pcss')
     const output = path.join(dir, 'out.css')
     fs.writeFileSync(input, "@import 'part';")
     fs.writeFileSync(partial, 'a { color: red }')

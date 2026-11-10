@@ -1,0 +1,80 @@
+//
+// Dropdowns
+// =============================================================================
+
+.dropdown-button {
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  position: relative;
+
+  &:focus {
+    pointer-events: none;
+
+    .dropdown-content {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  //
+  // Hoverable variant
+  // --------------------------------------------------
+
+  &.-hover {
+    &:hover {
+      .dropdown-content {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  //
+  // Modifiers
+  // ---------
+
+  // Top
+  &.-top {
+    .dropdown-content {
+      bottom: 100%;
+      margin-top: 0;
+      margin-bottom: 0.25rlh;
+    }
+  }
+}
+
+//
+// Dropdown content
+// --------------------------------------------------
+
+.dropdown-content {
+  background-color: var(--color-background-body);
+  border: 1px solid var(--color-base-lines);
+  color: var(--color-text-primary);
+  left: 0;
+  margin-top: 0.25rlh;
+  opacity: 0;
+  padding: 0;
+  pointer-events: auto;
+  position: absolute;
+  text-align: left;
+  transition-duration: var(--transition-duration);
+  visibility: hidden;
+  min-width: 10em;
+  z-index: 1;
+  font-size: 1;
+
+  & > .item {
+    list-style-type: none;
+    margin: 0;
+    padding: 0.25rlh 1em;
+    transition: background-color var(--transition-duration);
+    white-space: nowrap;
+
+    &:hover,
+    &:focus { background-color: var(--color-background-light); }
+  }
+
+  & > .text { padding: 0.25rlh 1em; }
+}

@@ -1,4 +1,4 @@
-// Every test/fixtures/<feature>/<case>.ccss is compiled and compared with <case>.css.
+// Every test/fixtures/<feature>/<case>.pcss is compiled and compared with <case>.css.
 // Files starting with `_` are partials used by imports and are not compiled on their own.
 
 import assert from 'node:assert/strict'
@@ -22,10 +22,10 @@ export async function compile (file, options) {
 for (const feature of fs.readdirSync(fixtures).sort()) {
   describe(feature, () => {
     const dir = path.join(fixtures, feature)
-    const cases = fs.readdirSync(dir).filter(file => file.endsWith('.ccss') && !file.startsWith('_')).sort()
+    const cases = fs.readdirSync(dir).filter(file => file.endsWith('.pcss') && !file.startsWith('_')).sort()
 
     for (const file of cases) {
-      const name = path.basename(file, '.ccss')
+      const name = path.basename(file, '.pcss')
 
       test(name, async () => {
         const result = await compile(path.join(dir, file))

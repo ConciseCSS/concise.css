@@ -6,7 +6,7 @@ A basic user interface kit for Concise CSS: a few components and element variant
 @import 'concise.css/ui';
 ```
 
-Or use the precompiled `dist/ui.css` / `dist/ui.min.css`. Concise UI imports the [settings](../core/settings.ccss) it needs, so it can be used with or without `concise.css/core`. Colors follow the `--color-*` settings, including when they change at runtime.
+Or use the precompiled `dist/ui.css` / `dist/ui.min.css`. Concise UI imports the [settings](../core/settings.pcss) it needs, so it can be used with or without `concise.css/core`. Colors follow the `--color-*` settings, including when they change at runtime.
 
 Components follow the [RSCSS](https://rscss.io) convention:
 - components have two-word class names (`.alert-box`);

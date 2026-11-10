@@ -1,0 +1,12 @@
+.a {
+  @media (width >= 600px) {
+    .b {
+      color: red
+    }
+  }
+  @media (width >= 900px) {
+    .b {
+      color: blue
+    }
+  }
+}

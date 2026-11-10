@@ -9,7 +9,7 @@ Helper classes that you can use in your markup for fast prototyping or context-d
 @import 'concise.css/utils/margins-responsive'; // optional, see Responsive margins
 ```
 
-Or use the precompiled `dist/utils.css` / `dist/utils.min.css`. Concise Utils imports the [settings](../core/settings.ccss) it needs, so it can be used with or without `concise.css/core`.
+Or use the precompiled `dist/utils.css` / `dist/utils.min.css`. Concise Utils imports the [settings](../core/settings.pcss) it needs, so it can be used with or without `concise.css/core`.
 
 ## Contents
 
@@ -454,7 +454,7 @@ The `display` properties are also exposed via HTML classes so you can use them i
 
 ### Margins
 
-As with the borders, you have predefined classes to reset or add margins. They use the `--spacing-*` values defined in the [settings](../core/settings.ccss).
+As with the borders, you have predefined classes to reset or add margins. They use the `--spacing-*` values defined in the [settings](../core/settings.pcss).
 
 These classes can be especially useful to keep your CSS clean, by adding margins in your markup depending of the context without having to create extra styles, or a component/element variant.
 
@@ -743,34 +743,34 @@ Concise Utils also exposes all the values of the `position` property so you can 
 The first ten sizes of the type scale are available to use in HTML. They follow the `--type-ratio` setting: size 2 is `1rem`, and each step up multiplies it by the ratio.
 
 ```html
-<!-- Equivalent to font-size: 1 in .ccss -->
+<!-- Equivalent to font-size: 1 in .pcss -->
 <div class="_ts1">…</div>
 
-<!-- Equivalent to font-size: 2 in .ccss -->
+<!-- Equivalent to font-size: 2 in .pcss -->
 <div class="_ts2">…</div>
 
-<!-- Equivalent to font-size: 3 in .ccss -->
+<!-- Equivalent to font-size: 3 in .pcss -->
 <div class="_ts3">…</div>
 
-<!-- Equivalent to font-size: 4 in .ccss -->
+<!-- Equivalent to font-size: 4 in .pcss -->
 <div class="_ts4">…</div>
 
-<!-- Equivalent to font-size: 5 in .ccss -->
+<!-- Equivalent to font-size: 5 in .pcss -->
 <div class="_ts5">…</div>
 
-<!-- Equivalent to font-size: 6 in .ccss -->
+<!-- Equivalent to font-size: 6 in .pcss -->
 <div class="_ts6">…</div>
 
-<!-- Equivalent to font-size: 7 in .ccss -->
+<!-- Equivalent to font-size: 7 in .pcss -->
 <div class="_ts7">…</div>
 
-<!-- Equivalent to font-size: 8 in .ccss -->
+<!-- Equivalent to font-size: 8 in .pcss -->
 <div class="_ts8">…</div>
 
-<!-- Equivalent to font-size: 9 in .ccss -->
+<!-- Equivalent to font-size: 9 in .pcss -->
 <div class="_ts9">…</div>
 
-<!-- Equivalent to font-size: 10 in .ccss -->
+<!-- Equivalent to font-size: 10 in .pcss -->
 <div class="_ts10">…</div>
 ```
 

@@ -14,10 +14,10 @@ const root = path.join(import.meta.dirname, '..')
 const dist = path.join(root, 'dist')
 
 export const bundles = {
-  concise: 'concise.ccss',
-  core: 'core/index.ccss',
-  ui: 'ui/index.ccss',
-  utils: 'utils/index.ccss'
+  concise: 'concise.pcss',
+  core: 'core/index.pcss',
+  ui: 'ui/index.pcss',
+  utils: 'utils/index.pcss'
 }
 
 const { version } = JSON.parse(await fs.readFile(path.join(root, 'package.json'), 'utf8'))

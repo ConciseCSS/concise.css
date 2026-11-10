@@ -5,21 +5,19 @@
  *   import scss from 'postcss-scss'
  *   import concise from 'concise.css'
  *
- *   await postcss([concise()]).process(css, { from: 'main.ccss', parser: scss.parse })
+ *   await postcss([concise()]).process(css, { from: 'main.pcss', parser: scss.parse })
  *
  * The postcss-scss parser is only needed for `//` comments in the file being
- * processed; imported .ccss files are always read with it.
+ * processed; imported .pcss files are always read with it.
+ *
+ * Nesting, range media queries and the `rlh` unit are native CSS and are left as written.
  */
 
-import autoprefixer from 'autoprefixer'
 import customMedia from 'postcss-custom-media'
 import imports from 'postcss-import'
-import mediaMinMax from 'postcss-media-minmax'
-import nested from 'postcss-nested'
 import scss from 'postcss-scss'
 
 import ifMedia from './lib/if-media.js'
-import lh from './lib/lh.js'
 import load from './lib/load.js'
 import resolve from './lib/resolve.js'
 import stripComments from './lib/strip-comments.js'
@@ -27,29 +25,21 @@ import typeScale from './lib/type-scale.js'
 
 /**
  * @param {object} [options]
- * @param {object} [options.import]        options for postcss-import (custom `resolve`/`load` replace Concise's)
- * @param {object} [options.lh]            { rootSelector, unit, lineHeight }
- * @param {object} [options.typeScale]     { rootSelector, typeRatio, ratioProperty }
- * @param {object|false} [options.autoprefixer]  autoprefixer options, or false to skip it
+ * @param {object} [options.import]  options for postcss-import (custom `resolve`/`load` replace Concise's)
  */
 const concise = (options = {}) => ({
   postcssPlugin: 'concise',
   plugins: [
     imports({ resolve, load, ...options.import }),
     stripComments(),
-    // Before nested: postcss-nested would read `?if media …` blocks as selectors
     ifMedia(),
-    nested(),
     customMedia(),
-    mediaMinMax(),
-    lh(options.lh),
-    typeScale(options.typeScale),
-    ...(options.autoprefixer === false ? [] : [autoprefixer(options.autoprefixer)])
+    typeScale()
   ]
 })
 concise.postcss = true
 
-/** Parser that understands `//` comments; pass as `parser` when processing .ccss files. */
+/** Parser that understands `//` comments; pass as `parser` when processing .pcss files. */
 export const parser = scss.parse
 concise.parser = parser
 

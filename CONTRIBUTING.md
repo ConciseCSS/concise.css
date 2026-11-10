@@ -56,7 +56,7 @@ npm install
 npm test
 ```
 
-The test suite compiles the fixtures in `test/fixtures/` (one `.ccss` input and its expected `.css` output per case). It also compares the compiled `core`, `ui` and `utils` stylesheets with the snapshots in `test/snapshots/`.
+The test suite compiles the fixtures in `test/fixtures/` (one `.pcss` input and its expected `.css` output per case). It also compares the compiled `core`, `ui` and `utils` stylesheets with the snapshots in `test/snapshots/`.
 
 **Accept changes to the compiled stylesheets:**
 
@@ -78,8 +78,8 @@ Open `playground/core.html` or `playground/ui.html` to check the result visually
 
 - `bin/concise.js`: the `concise` CLI
 - `src/`: the PostCSS plugin (`src/index.js`) and Concise's own plugins (`src/lib/`)
-- `core/`, `ui/`, `utils/`: the stylesheets, written in `.ccss`
-- `concise.ccss`: imports core, ui and utils
+- `core/`, `ui/`, `utils/`: the stylesheets, written in `.pcss`
+- `concise.pcss`: imports core, ui and utils
 - `test/`: tests, fixtures and snapshots
 - `playground/`: pages for checking the styles visually
 
@@ -120,7 +120,7 @@ Concise.CSS project has a `.editorconfig` file, you can install [Editorconfig](h
 
 ## CSS
 
-[Follow @mdo's Code Guide](http://codeguide.co/#css). Stylesheets use the `.ccss` extension and can use `//` comments. Use the settings (`var(--color-*)`, `var(--spacing-*)`, `lh` units, type scale steps) instead of hard-coded values.
+[Follow @mdo's Code Guide](http://codeguide.co/#css). Stylesheets use the `.pcss` extension and can use `//` comments. Use the settings (`var(--color-*)`, `var(--spacing-*)`, `rlh` units, type scale steps) instead of hard-coded values.
 
 ## JavaScript
 

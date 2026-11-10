@@ -1,0 +1,15 @@
+// Nesting is native CSS and passes through unchanged
+.phone {
+  & > .title {
+      width: 500px;
+      @media (width <= 500px) {
+          width: auto;
+      }
+      body.-dark & {
+          color: white;
+      }
+  }
+  img {
+      display: block;
+  }
+}

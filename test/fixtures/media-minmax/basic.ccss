@@ -1,7 +1,0 @@
-@custom-media --small-viewport (width <= 30em);
-
-@media (--small-viewport) {
-  .element {
-    width: 50%;
-  }
-}
